@@ -164,15 +164,36 @@ class SourceRepository:
             ).fetchall()
         return [self._source(row) for row in rows]
 
-    def list_page(self, page: int = 1, page_size: int = 30, query: str = "") -> tuple[list[Source], int]:
+    def list_page(
+        self,
+        page: int = 1,
+        page_size: int = 30,
+        query: str = "",
+        parse_status: str = "",
+        dify_status: str = "",
+        document_type: str = "",
+        created_from: str = "",
+        created_to: str = "",
+    ) -> tuple[list[Source], int]:
         page = max(1, page)
         page_size = min(max(1, page_size), 100)
-        where = ""
+        clauses: list[str] = []
         params: list[Any] = []
         if query.strip():
             like = f"%{query.strip()}%"
-            where = " WHERE filename LIKE ? OR normalized_filename LIKE ? OR coalesce(standard_title,'') LIKE ?"
+            clauses.append("(filename LIKE ? OR normalized_filename LIKE ? OR coalesce(standard_title,'') LIKE ?)")
             params.extend((like, like, like))
+        for column, value in (("parse_status", parse_status), ("dify_status", dify_status), ("document_type", document_type)):
+            if value.strip():
+                clauses.append(f"{column} = ?")
+                params.append(value.strip())
+        if created_from.strip():
+            clauses.append("created_at >= ?")
+            params.append(created_from.strip())
+        if created_to.strip():
+            clauses.append("created_at <= ?")
+            params.append(created_to.strip())
+        where = " WHERE " + " AND ".join(clauses) if clauses else ""
         with self.connect() as connection:
             total = int(connection.execute(f"SELECT COUNT(*) FROM sources{where}", params).fetchone()[0])
             rows = connection.execute(
@@ -180,6 +201,18 @@ class SourceRepository:
                 (*params, page_size, (page - 1) * page_size),
             ).fetchall()
         return [self._source(row) for row in rows], total
+
+    def stats(self) -> dict[str, int]:
+        with self.connect() as connection:
+            row = connection.execute(
+                """SELECT COUNT(*) AS total,
+                          SUM(CASE WHEN parse_status='success' THEN 1 ELSE 0 END) AS parsed,
+                          SUM(CASE WHEN dify_status='success' THEN 1 ELSE 0 END) AS indexed,
+                          SUM(CASE WHEN parse_status='failed' OR dify_status='failed' OR pdf_platform_status='failed' THEN 1 ELSE 0 END) AS failed,
+                          SUM(CASE WHEN parse_status IN ('pending','processing') OR dify_status IN ('pending','processing') THEN 1 ELSE 0 END) AS processing
+                   FROM sources"""
+            ).fetchone()
+        return {key: int(row[key] or 0) for key in ("total", "parsed", "indexed", "failed", "processing")}
 
     def search(self, terms: list[str], limit: int = 20) -> list[Source]:
         if not terms:

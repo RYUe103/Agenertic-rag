@@ -138,7 +138,7 @@ def test_health_and_ask(tmp_path) -> None:
     with TestClient(app) as client:
         health = client.get("/api/health")
         assert health.status_code == 200
-        assert health.json()["build_version"] == "2026.10.21-glossary-aho-corasick.1"
+        assert health.json()["build_version"] == "2026.10.31-semi-platform-ui.1"
         assert health.json()["ask_concurrency_limit"] == 40
         assert health.json()["agent_engine"] == "langgraph"
         response = client.post("/api/ask", json={"question": "不存在的内容"})
@@ -183,6 +183,37 @@ def test_sources_page_and_markdown_preview(tmp_path, sample_txt) -> None:
         assert client.get(
             f"/api/agents/default/sources/{source_id}/markdown?version=../../etc/passwd"
         ).status_code == 404
+
+
+def test_document_filters_stats_and_task_center_use_persisted_data(tmp_path, sample_txt) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client, sample_txt.open("rb") as handle:
+        response = client.post("/api/ingest", files=[("files", (sample_txt.name, handle, "text/plain"))])
+        assert response.status_code == 202
+
+        successful = client.get(
+            "/api/agents/default/sources/page?page=1&page_size=30&parse_status=success&document_type=txt"
+        )
+        assert successful.status_code == 200
+        assert successful.json()["total"] == 1
+        assert client.get(
+            "/api/agents/default/sources/page?page=1&page_size=30&document_type=pdf"
+        ).json()["total"] == 0
+
+        stats = client.get("/api/agents/default/sources/stats")
+        assert stats.status_code == 200
+        assert stats.json()["total"] == 1
+        assert stats.json()["parsed"] == 1
+
+        created = client.post(
+            "/api/agents/default/ingest-jobs", json={"filenames": ["queued-document.txt"]}
+        )
+        assert created.status_code == 201
+        tasks = client.get("/api/tasks?agent_id=default&task_type=document_ingest")
+        assert tasks.status_code == 200
+        assert tasks.json()["total"] == 1
+        assert tasks.json()["items"][0]["task_id"] == created.json()["job_id"]
+        assert tasks.json()["items"][0]["status"] == "PENDING"
 
 
 def _wait_for_delete_job(client: TestClient, job_id: str) -> dict:

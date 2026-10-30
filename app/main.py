@@ -30,7 +30,7 @@ from app.schemas import (
     IngestJob, KnowledgeBaseInput, KnowledgeBaseView, RetrievalResponse, Source, SourcePage, MarkdownPreviewResponse,
     SourceMetadataUpdate, MetadataBatchRequest,
     BatchIngestCreate, LoginRequest, RewritePreviewRequest, RewritePreviewResponse,
-    DeleteAllSourcesRequest, DeleteJob,
+    DeleteAllSourcesRequest, DeleteJob, TaskPage,
     ModelConnectionInput, ModelConnectionTestResult, ModelConnectionView,
 )
 
@@ -38,7 +38,7 @@ from app.schemas import (
 ROOT = Path(__file__).resolve().parent.parent
 # Keep the public build identifier compatible with existing deployment checks;
 # feature additions are exposed separately in /api/health.
-BUILD_VERSION = "2026.10.21-glossary-aho-corasick.1"
+BUILD_VERSION = "2026.10.31-semi-platform-ui.1"
 logger = logging.getLogger("agentic_rag.ingest")
 
 
@@ -431,16 +431,35 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return authorize_agent(request, agent_id).repository.list(min(max(limit, 1), 500), max(offset, 0))
 
     @app.get("/api/agents/{agent_id}/sources/page", response_model=SourcePage)
-    def page_agent_sources(agent_id: str, request: Request, page: int = 1, page_size: int = 30, query: str = "") -> SourcePage:
+    def page_agent_sources(
+        agent_id: str,
+        request: Request,
+        page: int = 1,
+        page_size: int = 30,
+        query: str = "",
+        parse_status: str = "",
+        dify_status: str = "",
+        document_type: str = "",
+        created_from: str = "",
+        created_to: str = "",
+    ) -> SourcePage:
         agent_runtime = authorize_agent(request, agent_id)
         page = max(1, page)
         page_size = min(max(page_size, 1), 100)
-        items, total = agent_runtime.repository.list_page(page, page_size, query)
+        items, total = agent_runtime.repository.list_page(
+            page, page_size, query, parse_status, dify_status, document_type, created_from, created_to
+        )
         total_pages = max(1, (total + page_size - 1) // page_size)
         if page > total_pages:
             page = total_pages
-            items, _ = agent_runtime.repository.list_page(page, page_size, query)
+            items, _ = agent_runtime.repository.list_page(
+                page, page_size, query, parse_status, dify_status, document_type, created_from, created_to
+            )
         return SourcePage(items=items, page=page, page_size=page_size, total=total, total_pages=total_pages)
+
+    @app.get("/api/agents/{agent_id}/sources/stats")
+    def agent_source_stats(agent_id: str, request: Request) -> dict[str, int]:
+        return authorize_agent(request, agent_id).repository.stats()
 
     @app.get("/api/agents/{agent_id}/sources/{source_id}/markdown", response_model=MarkdownPreviewResponse)
     def preview_agent_markdown(agent_id: str, source_id: str, request: Request, version: str = "document") -> MarkdownPreviewResponse:
@@ -765,6 +784,43 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(404, "任务不存在") from None
         except ValueError as exc:
             raise HTTPException(409, str(exc)) from None
+
+    @app.get("/api/tasks", response_model=TaskPage)
+    def list_tasks(
+        request: Request,
+        page: int = 1,
+        page_size: int = 30,
+        status: str = "",
+        task_type: str = "",
+        agent_id: str = "",
+    ) -> TaskPage:
+        page = max(1, page)
+        page_size = min(max(page_size, 1), 100)
+        visible_agent_ids = {
+            item.agent_id for item in registry.list()
+            if can_use_kb(request, registry.get(item.agent_id).profile.knowledge_base_id)
+        }
+        if agent_id:
+            if agent_id not in visible_agent_ids:
+                raise HTTPException(403, "无权访问该 Agent 的任务")
+            visible_agent_ids = {agent_id}
+        values = []
+        if task_type in {"", "document_ingest"}:
+            values.extend(ingest_queue_repository.task_summaries(visible_agent_ids))
+        if task_type in {"", "document_delete"}:
+            values.extend(delete_queue_repository.task_summaries(visible_agent_ids))
+        if status:
+            expected = status.strip().upper()
+            values = [item for item in values if item.status == expected]
+        values.sort(key=lambda item: item.updated_at, reverse=True)
+        total = len(values)
+        total_pages = max(1, (total + page_size - 1) // page_size)
+        page = min(page, total_pages)
+        start = (page - 1) * page_size
+        return TaskPage(
+            items=values[start:start + page_size], page=page, page_size=page_size,
+            total=total, total_pages=total_pages,
+        )
 
     @app.post("/api/jobs/{job_id}/pause", response_model=IngestJob)
     def pause_batch_ingest(job_id: str, request: Request) -> IngestJob:

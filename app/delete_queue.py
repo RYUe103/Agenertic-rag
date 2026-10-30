@@ -9,7 +9,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any, Callable, Iterator
 
-from app.schemas import DeleteJob, DeleteJobItem, Source
+from app.schemas import DeleteJob, DeleteJobItem, Source, TaskSummary
 
 
 logger = logging.getLogger("agentic_rag.delete")
@@ -118,7 +118,45 @@ class DeleteQueueRepository:
             failed=sum(item.status == "failed" for item in values),
             items=values,
             created_at=job["created_at"],
+            updated_at=job["updated_at"],
         )
+
+    def task_summaries(self, agent_ids: set[str] | None = None) -> list[TaskSummary]:
+        where = ""
+        params: list[Any] = []
+        if agent_ids is not None:
+            if not agent_ids:
+                return []
+            placeholders = ",".join("?" for _ in agent_ids)
+            where = f"WHERE j.agent_id IN ({placeholders})"
+            params.extend(sorted(agent_ids))
+        with self.connect() as connection:
+            rows = connection.execute(
+                f"""SELECT j.*,
+                       COUNT(i.item_id) AS total,
+                       SUM(CASE WHEN i.status IN ('success','failed') THEN 1 ELSE 0 END) AS completed,
+                       SUM(CASE WHEN i.status='success' THEN 1 ELSE 0 END) AS succeeded,
+                       SUM(CASE WHEN i.status='failed' THEN 1 ELSE 0 END) AS failed
+                    FROM delete_jobs j
+                    LEFT JOIN delete_job_items i ON i.job_id=j.job_id
+                    {where}
+                    GROUP BY j.job_id
+                    ORDER BY j.created_at DESC""",
+                params,
+            ).fetchall()
+        summaries: list[TaskSummary] = []
+        for row in rows:
+            raw_status = str(row["status"])
+            failed = int(row["failed"] or 0)
+            status = "RUNNING" if raw_status == "running" else ("FAILED" if failed else "SUCCEEDED")
+            total = int(row["total"] or 0)
+            summaries.append(TaskSummary(
+                task_id=row["job_id"], task_type="document_delete", agent_id=row["agent_id"],
+                title=f"清空资料库 · {row['knowledge_base_name']}", status=status, raw_status=raw_status,
+                total=total, completed=int(row["completed"] or 0), succeeded=int(row["succeeded"] or 0),
+                failed=failed, created_at=row["created_at"], updated_at=row["updated_at"],
+            ))
+        return summaries
 
     def active_for_agent(self, agent_id: str) -> DeleteJob | None:
         with self.connect() as connection:

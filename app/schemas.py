@@ -371,6 +371,7 @@ class IngestJob(BaseModel):
     preview_ready: int = 0
     items: list[JobItem]
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime | None = None
 
 
 class DeleteAllSourcesRequest(BaseModel):
@@ -398,6 +399,34 @@ class DeleteJob(BaseModel):
     failed: int = 0
     items: list[DeleteJobItem] = Field(default_factory=list)
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime | None = None
+
+
+class TaskSummary(BaseModel):
+    task_id: str
+    task_type: Literal["document_ingest", "document_delete"]
+    agent_id: str
+    title: str
+    status: Literal["PENDING", "RUNNING", "SUCCEEDED", "FAILED", "CANCELLED"]
+    raw_status: str
+    total: int = 0
+    completed: int = 0
+    succeeded: int = 0
+    failed: int = 0
+    review_required: int = 0
+    created_at: datetime
+    updated_at: datetime
+    can_pause: bool = False
+    can_resume: bool = False
+    can_retry: bool = False
+
+
+class TaskPage(BaseModel):
+    items: list[TaskSummary]
+    page: int
+    page_size: int
+    total: int
+    total_pages: int
 
 
 class BatchIngestCreate(BaseModel):

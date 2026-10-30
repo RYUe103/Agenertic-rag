@@ -58,6 +58,35 @@ data/
     └── metadata.json
 ```
 
+### Semi Design 前端
+
+管理平台使用 React、TypeScript、Vite 和 Semi Design，前端源码位于 `frontend/`。首次安装依赖并生成生产资源：
+
+```bash
+cd /Users/yooyoung/Documents/ChatGPT/知识库/frontend
+npm install
+npm run build
+```
+
+生产构建会写入项目根目录的 `static/`，由 FastAPI 在 `8765` 端口统一提供页面和 API。日常开发可分别启动后端与 Vite 开发服务器：
+
+```bash
+# 终端一：项目根目录
+./run.sh
+
+# 终端二
+cd frontend
+npm run dev
+```
+
+开发页面默认位于 [http://127.0.0.1:5173](http://127.0.0.1:5173)，`/api` 请求代理到本地后端。提交前运行：
+
+```bash
+cd frontend
+npm run typecheck
+npm run build
+```
+
 ## 配置真实服务
 
 编辑 `.env`：

@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "entries": [
+    {
+      "term": "PWR",
+      "aliases": ["pressurized water reactor", "压水堆"],
+      "data": {"定义": "以承压水作为冷却剂和慢化剂的核反应堆。", "专业": "核工程"}
+    }
+  ]
+}
