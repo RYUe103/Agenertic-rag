@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>标准知识库检索</title>
+  <link rel="stylesheet" href="styles.css?v=20">
+</head>
+<body>
+  <section id="login-screen" class="login-screen">
+    <form id="login-form" class="login-card">
+      <div class="login-brand">SANSUO KB</div>
+      <h1>知识库登录</h1>
+      <p>登录后进入 Agentic RAG 管理与检索平台</p>
+      <label for="login-username">账号<input id="login-username" name="username" autocomplete="username" required autofocus></label>
+      <label for="login-password">密码<input id="login-password" name="password" type="password" autocomplete="current-password" required></label>
+      <div id="login-state" class="form-state" aria-live="polite"></div>
+      <button type="submit" class="primary login-submit">登录</button>
+    </form>
+  </section>
+  <div id="app-shell" hidden>
+  <header>
+    <div><strong>标准知识库</strong><span>Agentic RAG + JIT 检索</span></div>
+    <div class="header-actions"><span id="session-user"></span><span id="health" class="status">检查服务…</span><button id="logout" type="button">退出</button></div>
+  </header>
+  <main>
+    <section class="agent-switcher" aria-label="Agent 选择">
+      <div>
+        <label for="agent-select">当前 Agent</label>
+        <select id="agent-select" disabled></select>
+      </div>
+      <p id="agent-description"></p>
+    </section>
+    <nav aria-label="功能切换">
+      <button class="tab active" data-panel="qa">问答检索</button>
+      <button class="tab" data-panel="ingest">文件入库</button>
+      <button class="tab" data-panel="sources">资料库</button>
+      <button class="tab" data-panel="model-admin">模型连接</button>
+      <button class="tab" data-panel="agent-admin">Agent 管理</button>
+      <button class="tab" data-panel="kb-admin">知识库连接</button>
+    </nav>
+    <section id="qa" class="panel active">
+      <form id="ask-form">
+        <label for="question">问题</label>
+        <div class="question-row">
+          <textarea id="question" required placeholder="例如：JU2000-31231-08 对环境温度有什么要求？"></textarea>
+          <button type="submit" class="primary">检索</button>
+        </div>
+      </form>
+      <div id="ask-state" class="muted"></div>
+      <article id="answer" hidden>
+        <h2>回答</h2><div id="answer-text"></div>
+        <details class="trace-panel" open>
+          <summary><span>Agent 执行轨迹</span><span id="trace-summary" class="trace-summary"></span></summary>
+          <div id="trace" class="trace"></div>
+        </details>
+        <h2>证据与来源</h2><div id="evidences"></div>
+      </article>
+    </section>
+    <section id="ingest" class="panel">
+      <form id="upload-form">
+        <div class="upload-file-field"><label for="files">批量选择文档（最多 2000 个）</label><input id="files" type="file" accept=".pdf,.doc,.docx,.txt,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain" multiple><small id="file-selection-state">尚未选择文件</small></div>
+        <div class="upload-folder-field"><label for="folder-files">或选择整个目录</label><input id="folder-files" type="file" webkitdirectory multiple></div>
+        <div class="upload-options">
+          <label class="check-field"><input id="rewrite-enabled" type="checkbox">使用 AI 改写 Markdown</label>
+          <label class="check-field"><input id="rewrite-review-required" type="checkbox" disabled>改写后预览确认</label>
+          <label class="check-field"><input id="workflow-enabled" type="checkbox">先调用 Dify Workflow</label>
+        </div>
+        <label id="rewrite-prompt-wrap" hidden>改写提示词<textarea id="rewrite-prompt" placeholder="例如：按章节整理并修正 OCR 排版，不要删减任何事实、金额和编号。"></textarea></label>
+        <button type="submit" class="primary">开始入库</button>
+      </form>
+      <div id="job"></div>
+      <section id="rewrite-preview" class="rewrite-preview" hidden>
+        <div class="section-head"><div><h2 id="rewrite-preview-title">AI 改写预览</h2><p class="section-copy">确认前不会上传 Dify。</p></div></div>
+        <label>改写提示词<textarea id="preview-rewrite-prompt"></textarea></label>
+        <div class="rewrite-columns">
+          <div><h3>原始 Markdown</h3><pre id="rewrite-original"></pre></div>
+          <div><h3>改写后 Markdown</h3><pre id="rewrite-result"></pre></div>
+        </div>
+        <div id="rewrite-preview-state" class="form-state"></div>
+        <div class="form-actions"><button id="regenerate-rewrite" type="button">按新提示词重新改写</button><span></span><button id="use-original" type="button">使用原文入库</button><button id="confirm-rewrite" type="button" class="primary">确认并入库</button></div>
+      </section>
+    </section>
+    <section id="sources" class="panel">
+      <div class="section-head"><div><h2>已入库文件</h2><p id="source-count" class="section-copy"></p></div><div class="source-toolbar"><input id="source-query" type="search" placeholder="搜索文件名"><button id="source-search" type="button">搜索</button><button id="batch-metadata" type="button">批量 AI 抽取</button><button id="refresh">刷新</button><button id="clear-sources" type="button" class="danger">清空资料库</button></div></div>
+      <div id="batch-metadata-state" class="form-state"></div>
+      <section id="delete-progress" class="delete-progress" hidden aria-live="polite">
+        <div class="delete-progress-head"><strong id="delete-progress-title">正在清空资料库</strong><span id="delete-progress-count"></span></div>
+        <progress id="delete-progress-bar" value="0" max="1"></progress>
+        <p id="delete-progress-note" class="section-copy"></p>
+        <div id="delete-failures"></div>
+      </section>
+      <div class="table-wrap"><table><thead><tr><th><input id="select-all-sources" type="checkbox"></th><th>文件</th><th>类型</th><th>标准号</th><th>年份</th><th>元数据</th><th>解析</th><th>Dify</th><th>文件平台</th><th></th></tr></thead><tbody id="source-list"></tbody></table></div>
+      <div class="source-pagination"><button id="source-prev" type="button">上一页</button><span id="source-page-state"></span><button id="source-next" type="button">下一页</button><select id="source-page-size" aria-label="每页数量"><option value="15">15 / 页</option><option value="30" selected>30 / 页</option><option value="50">50 / 页</option><option value="100">100 / 页</option></select></div>
+      <section id="markdown-preview" class="markdown-preview" hidden>
+        <div class="preview-head"><div><h2 id="markdown-preview-title">Markdown 预览</h2><p id="markdown-preview-stats" class="section-copy"></p></div><div class="preview-actions"><select id="markdown-version" aria-label="Markdown 版本"></select><button id="markdown-rendered" type="button" class="active">渲染</button><button id="markdown-source" type="button">源码</button><button id="markdown-close" type="button">关闭</button></div></div>
+        <div id="markdown-warning" class="preview-warning" hidden></div>
+        <div id="markdown-preview-body" class="markdown-preview-body markdown-body"></div>
+        <pre id="markdown-preview-source" class="markdown-preview-source" hidden></pre>
+      </section>
+      <dialog id="clear-sources-dialog" class="confirm-dialog">
+        <form id="clear-sources-form">
+          <h2>清空当前资料库</h2>
+          <p>将逐份删除 Dify 文档、本地数据库记录和本地文件。此操作不可恢复。</p>
+          <p class="confirm-warning">仅删除本系统管理且有本地记录的文件，不会删除 Dify 中手工创建的其他文档，也不会删除 Agent、知识库连接或配置。当前 Agent 尚未执行或已暂停的旧入库项会自动取消。</p>
+          <dl class="confirm-summary"><div><dt>知识库</dt><dd id="clear-kb-name"></dd></div><div><dt>文件数</dt><dd id="clear-source-total"></dd></div></dl>
+          <label for="clear-confirmation">输入完整知识库名称以确认</label>
+          <input id="clear-confirmation" autocomplete="off" required>
+          <div id="clear-dialog-state" class="form-state"></div>
+          <div class="form-actions"><span></span><button id="clear-cancel" type="button">取消</button><button id="clear-confirm" type="submit" class="danger" disabled>确认清空</button></div>
+        </form>
+      </dialog>
+      <form id="metadata-form" class="config-form" hidden>
+        <h2 id="metadata-title">文件元数据</h2>
+        <fieldset><legend>系统元数据（只读）</legend><div id="system-metadata-fields" class="metadata-fields"></div></fieldset>
+        <fieldset><legend>自定义元数据</legend>
+        <div id="metadata-fields" class="metadata-fields"></div>
+        <div id="metadata-custom-fields"></div>
+        </fieldset>
+        <div id="metadata-form-state" class="form-state"></div>
+        <div class="form-actions"><span></span><button type="button" id="metadata-reextract">重新 AI 抽取</button><button type="button" id="metadata-cancel">取消</button><button type="submit" class="primary">保存人工修改</button></div>
+      </form>
+    </section>
+    <section id="model-admin" class="panel">
+      <div class="section-head">
+        <div><h2>模型连接</h2><p class="section-copy">统一管理 Planner 和 Answer 模型；数字越小优先级越高。</p></div>
+        <button id="new-model" type="button">新建模型连接</button>
+      </div>
+      <div class="admin-layout">
+        <div class="admin-list" id="model-admin-list"></div>
+        <form id="model-config-form" class="config-form" hidden>
+          <div class="form-grid">
+            <label>连接 ID<input id="model-id" required pattern="[a-z][a-z0-9_-]{0,63}"></label>
+            <label>名称<input id="model-name" required maxlength="100"></label>
+            <label class="full">OpenAI 兼容 Base URL<input id="model-base-url" type="url" required placeholder="http://model.internal:8000/v1"></label>
+            <label>模型名称<input id="model-name-api" required placeholder="qwen3-32b"></label>
+            <label>接口类型<select id="model-api-style"><option value="chat_completions">Chat Completions</option><option value="responses">Responses</option></select></label>
+            <label>单次超时（秒）<input id="model-timeout" type="number" min="1" max="300" value="30"></label>
+            <label>优先级<input id="model-priority" type="number" min="1" max="10000" value="100"></label>
+            <label class="full">API Key<input id="model-api-key" type="password" autocomplete="new-password" placeholder="留空表示保持当前密钥"></label>
+            <label class="check-field"><input id="model-enabled" type="checkbox" checked>启用</label>
+          </div>
+          <p id="model-secret-state" class="secret-state"></p>
+          <div id="model-form-state" class="form-state"></div>
+          <div class="form-actions"><button type="button" id="delete-model" class="danger">删除</button><span></span><button type="button" id="test-model">测试连接</button><button type="button" id="cancel-model">取消</button><button type="submit" class="primary">保存模型</button></div>
+        </form>
+      </div>
+    </section>
+    <section id="agent-admin" class="panel">
+      <div class="section-head">
+        <div><h2>Agent 管理</h2><p class="section-copy">每个 Agent 固定绑定一个知识库，并拥有独立检索策略。</p></div>
+        <button id="new-agent" type="button">新建 Agent</button>
+      </div>
+      <div class="admin-layout">
+        <div class="admin-list" id="agent-admin-list"></div>
+        <form id="agent-config-form" class="config-form" hidden>
+          <div class="form-grid">
+            <label>Agent ID<input id="agent-id" required pattern="[a-z][a-z0-9_-]{0,63}"></label>
+            <label>名称<input id="agent-name" required maxlength="100"></label>
+            <label class="full">描述<input id="agent-config-description" maxlength="500"></label>
+            <label class="full">固定知识库<select id="agent-kb" required></select></label>
+            <label>最大工具调用<input id="agent-max-tools" type="number" min="1" max="30" value="6"></label>
+            <label>最大检索轮数<input id="agent-max-rounds" type="number" min="1" max="10" value="3"></label>
+            <label>回答证据上限<input id="agent-max-evidence" type="number" min="1" max="50" value="12"></label>
+            <label class="check-field"><input id="agent-enabled" type="checkbox" checked>启用</label>
+            <label class="check-field"><input id="agent-default" type="checkbox">设为默认 Agent</label>
+          </div>
+          <fieldset><legend>模型策略</legend>
+            <div class="form-grid">
+              <label>Planner 模型链<select id="agent-planner-models" multiple size="4"></select></label>
+              <label>Answer 模型链<select id="agent-answer-models" multiple size="4"></select></label>
+            </div>
+            <p class="secret-state">可多选；按模型连接的优先级从小到大尝试。429、超时、408 和 5xx 自动切换，400/401/403 不切换。</p>
+          </fieldset>
+          <fieldset><legend>可用工具</legend><div id="agent-tools" class="tool-grid"></div></fieldset>
+          <fieldset class="glossary-editor">
+            <legend>行业术语字典</legend>
+            <div class="glossary-toolbar">
+              <input id="agent-glossary-files" type="file" accept=".json,.md,application/json,text/markdown" multiple>
+              <a href="glossary-template.json" download>下载 JSON 模板</a>
+              <span>支持多个 JSON 字典（entries 内含 term、aliases、data），代码双向匹配，不进入资料库或 Dify。旧 Markdown 字典仍使用模型识别。</span>
+            </div>
+            <div id="agent-glossary-list" class="glossary-list"></div>
+          </fieldset>
+          <label>Planner 提示词<textarea id="agent-prompt" class="prompt-editor"></textarea></label>
+          <div id="agent-form-state" class="form-state"></div>
+          <div class="form-actions"><button type="button" id="delete-agent" class="danger">删除</button><span></span><button type="button" id="cancel-agent">取消</button><button type="submit" class="primary">保存 Agent</button></div>
+        </form>
+      </div>
+    </section>
+    <section id="kb-admin" class="panel">
+      <div class="section-head">
+        <div><h2>知识库连接</h2><p class="section-copy">Dify 负责纯向量检索；通过本系统上传的资料同时支持本地精确检索。</p></div>
+        <button id="new-kb" type="button">新建知识库</button>
+      </div>
+      <div class="admin-layout">
+        <div class="admin-list" id="kb-admin-list"></div>
+        <form id="kb-config-form" class="config-form" hidden>
+          <div class="form-grid">
+            <label>知识库 ID<input id="kb-id" required pattern="[a-z][a-z0-9_-]{0,63}"></label>
+            <label>名称<input id="kb-name" required maxlength="100"></label>
+            <label class="full">描述<input id="kb-description" maxlength="500"></label>
+            <label class="full">Dify API Base URL<input id="kb-base-url" type="url" required value="https://api.dify.ai/v1"></label>
+            <label class="full">Dataset ID<input id="kb-dataset-id" required></label>
+            <label class="full">API Key<input id="kb-api-key" type="password" autocomplete="new-password" placeholder="留空表示保持当前密钥"></label>
+            <label>检索方式<select id="kb-search-method"><option value="semantic_search">纯向量检索</option></select></label>
+            <label>入库分段<select id="kb-chunking-mode"><option value="automatic">Dify 自动切分</option><option value="custom">自定义分隔符</option></select></label>
+            <label>最大切分 Token<input id="kb-chunk-max-tokens" type="number" min="1" max="10000" value="800"></label>
+            <label class="full">自定义分隔符<textarea id="kb-chunk-separator" class="compact-input" placeholder="例如：\n__SPLIT__\n"></textarea></label>
+            <label class="check-field"><input id="kb-enabled" type="checkbox" checked>启用</label>
+          </div>
+          <fieldset><legend>PDF 解析</legend>
+            <div class="form-grid">
+              <label>解析方式<select id="kb-pdf-parser"><option value="default">沿用系统默认</option><option value="local">本地文本 / OCR</option><option value="mineru">MinerU</option><option value="qwenvl">Qwen-VL 看图生成 Markdown</option></select></label>
+              <label class="qwenvl-field">Qwen-VL 模型<input id="kb-qwenvl-model" value="qwen-vl-max"></label>
+              <label class="full qwenvl-field">OpenAI 兼容 Base URL<input id="kb-qwenvl-base-url" type="url" placeholder="https://dashscope.aliyuncs.com/compatible-mode/v1"></label>
+              <label class="full qwenvl-field">API Key<input id="kb-qwenvl-api-key" type="password" autocomplete="new-password" placeholder="留空表示保持当前密钥"></label>
+              <label class="qwenvl-field">短文档页数上限<input id="kb-qwenvl-threshold" type="number" min="1" max="100" value="10"></label>
+              <label class="qwenvl-field">长文档每批页数<input id="kb-qwenvl-batch-pages" type="number" min="1" max="20" value="3"></label>
+              <label class="qwenvl-field">渲染 DPI<input id="kb-qwenvl-dpi" type="number" min="72" max="400" value="200"></label>
+              <label class="full qwenvl-field">短文档提示词<textarea id="kb-qwenvl-short-prompt" class="prompt-editor"></textarea></label>
+              <label class="full qwenvl-field">长文档分批提示词<textarea id="kb-qwenvl-long-prompt" class="prompt-editor"></textarea></label>
+            </div>
+            <p id="kb-qwenvl-state" class="secret-state">Qwen-VL 输出直接作为最终 Markdown；长文档提示词可使用 {{page_start}}、{{page_end}} 和 {{page_total}}。</p>
+          </fieldset>
+          <fieldset><legend>回答模型</legend>
+            <label>Answer 提示词<textarea id="kb-answer-prompt" class="prompt-editor" placeholder="留空使用系统默认回答提示词"></textarea></label>
+            <p class="secret-state">此知识库在本平台生成答案时使用该提示词；证据接口也会返回该值，供外部系统选择使用。</p>
+          </fieldset>
+          <fieldset><legend>源文件平台</legend>
+            <div class="form-grid">
+              <label>平台模式<select id="kb-source-platform-mode"><option value="inherit">继承全局配置</option><option value="local">仅保存本地</option><option value="http">HTTP 文件平台</option><option value="command">命令行适配器</option></select></label>
+              <label class="full source-platform-http">平台 Base URL<input id="kb-source-platform-base-url" type="url" placeholder="http://files.internal/api"></label>
+              <label class="full source-platform-http">平台 API Key<input id="kb-source-platform-api-key" type="password" autocomplete="new-password" placeholder="留空表示保持当前密钥"></label>
+              <label class="full source-platform-command">上传命令（JSON 数组）<input id="kb-source-platform-command" placeholder='["python3","/opt/upload.py"]'></label>
+              <label class="full source-platform-command">访问 URL 模板<input id="kb-source-platform-url-template" placeholder="http://files.internal/view/{file_id}"></label>
+            </div>
+            <p id="kb-source-platform-state" class="secret-state">源文件包括 PDF、Word 和 TXT；Markdown 仍保存本地并上传 Dify。</p>
+          </fieldset>
+          <fieldset><legend>元数据抽取</legend>
+            <label class="check-field"><input id="kb-metadata-ai" type="checkbox" checked>入库前使用 AI 抽取自定义元数据</label>
+            <label>补充抽取提示词<textarea id="kb-metadata-prompt" class="prompt-editor" placeholder="例如：预算金额统一抽取为数字，找不到时不要猜测。"></textarea></label>
+            <label>自定义字段</label><div id="kb-metadata-fields-builder" class="metadata-field-builder"></div><button type="button" id="add-metadata-field">新增自定义字段</button><textarea id="kb-metadata-fields" class="prompt-editor" hidden></textarea>
+            <p class="secret-state">支持 string、number、date、boolean、list。字段只用于筛选和定位，原文仍以 Markdown 为准。</p>
+          </fieldset>
+          <fieldset><legend>Dify Workflow</legend>
+            <label class="check-field"><input id="kb-workflow-enabled" type="checkbox">启用此知识库的默认 Workflow</label>
+            <label>Dify Workflow Base URL<input id="kb-workflow-base-url" type="url" placeholder="https://api.dify.ai"></label>
+            <label>Workflow App API Key<input id="kb-workflow-api-key" type="password" autocomplete="new-password" placeholder="留空表示保持当前密钥"></label>
+            <label>App ID（可选）<input id="kb-workflow-app-id"></label>
+            <label>Markdown 输入变量名<input id="kb-workflow-markdown-input" value="markdown"></label>
+            <label>文件输入变量名<input id="kb-workflow-file-input" value="file"></label>
+            <label>Markdown 输出变量名<input id="kb-workflow-output-field" value="markdown"></label>
+          </fieldset>
+          <p id="kb-secret-state" class="secret-state"></p>
+          <div id="kb-form-state" class="form-state"></div>
+          <div class="form-actions"><button type="button" id="delete-kb" class="danger">删除</button><span></span><button type="button" id="test-kb">测试连接</button><button type="button" id="cancel-kb">取消</button><button type="submit" class="primary">保存知识库</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  </div>
+  <script src="app.js?v=21"></script>
+</body>
+</html>

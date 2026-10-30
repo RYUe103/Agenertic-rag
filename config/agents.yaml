@@ -1,0 +1,25 @@
+default_agent: default
+
+agents:
+  - id: default
+    name: 综合文件助手
+    description: 当前知识库的通用检索 Agent
+    use_legacy_data: true
+    planner_prompt: prompts/default.md
+    dify_base_url_env: DIFY_BASE_URL
+    dify_api_key_env: DIFY_KNOWLEDGE_API_KEY
+    dify_dataset_id_env: DIFY_DATASET_ID
+    allowed_tools:
+      - vector_search
+      - grep_files
+      - keyword_search
+      - find_files
+      - search_within_document
+      - metadata_search
+      - dify_metadata_search
+      - read_full_document
+      - get_adjacent_chunks
+      - get_document_outline
+    max_tool_calls: 6
+    max_retrieval_rounds: 3
+    max_evidence_for_answer: 12

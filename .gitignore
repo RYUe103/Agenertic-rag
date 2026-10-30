@@ -1,0 +1,33 @@
+.env
+.env.*
+!.env.example
+.venv/
+.runtime/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+*.egg-info/
+data/
+!data/.gitkeep
+
+# Local secrets, logs, and OS metadata
+*.log
+.DS_Store
+backups/
+
+# Generated release archives and offline binary dependencies
+*.tar
+*.tar.gz
+*.tgz
+*.zip
+*.whl
+linux-amd64-wheels*/
+offline-glossary-wheels/
+python-linux-*-installer.sh
+nginx-*-bundle/
+ripgrep-*-offline/
+release-*/
+
+# Local diagnostics and generated visual artifacts
+shots/
+patches/
