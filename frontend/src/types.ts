@@ -2,6 +2,7 @@ export interface Session {
   authenticated: boolean;
   username: string;
   is_admin: boolean;
+  permissions?: string[];
 }
 
 export interface Health {
@@ -16,6 +17,7 @@ export interface Health {
   ask_active: number;
   ask_rejected: number;
   ldap_enabled: boolean;
+  mcp_available: boolean;
 }
 
 export interface AgentSummary {
@@ -40,6 +42,9 @@ export interface Source {
   file_hash: string;
   document_type: string;
   mime_type: string;
+  file_size?: number | null;
+  page_count?: number | null;
+  uploaded_by?: string | null;
   standard_no?: string | null;
   standard_title?: string | null;
   standard_year?: number | null;
@@ -81,10 +86,13 @@ export interface MarkdownPreview {
   stats: Record<string, unknown>;
 }
 
+export interface SourceVersion {version_id: string; source_id: string; version_no: number; filename: string; content_hash: string; parser_engine: string; parse_status: string; dify_status: string; created_at: string; message: string; chunking_mode?: string; chunk_max_tokens?: number | null; embedding_model?: string;}
+
 export interface JobItem {
   item_id: string;
   position: number;
   filename: string;
+  expected_size?: number | null;
   source_id?: string | null;
   status: string;
   message: string;
@@ -93,6 +101,7 @@ export interface JobItem {
 
 export interface IngestJob {
   job_id: string;
+  agent_id: string;
   status: string;
   total: number;
   uploaded: number;
@@ -122,7 +131,7 @@ export interface DeleteJob {
 
 export interface TaskSummary {
   task_id: string;
-  task_type: 'document_ingest' | 'document_delete';
+  task_type: 'document_ingest' | 'document_reparse' | 'document_reindex' | 'document_delete';
   agent_id: string;
   title: string;
   status: 'PENDING' | 'RUNNING' | 'SUCCEEDED' | 'FAILED' | 'CANCELLED';
@@ -137,6 +146,7 @@ export interface TaskSummary {
   can_pause: boolean;
   can_resume: boolean;
   can_retry: boolean;
+  can_cancel: boolean;
 }
 
 export interface TaskPage {
@@ -149,6 +159,7 @@ export interface TaskPage {
 
 export interface KnowledgeBase {
   knowledge_base_id: string;
+  tenant_key?: string;
   owner_username: string;
   name: string;
   description: string;

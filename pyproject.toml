@@ -25,6 +25,7 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest>=8,<9", "pytest-asyncio>=0.23,<1"]
+mcp = ["mcp>=1.30,<2"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]

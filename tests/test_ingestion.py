@@ -2,6 +2,8 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+import threading
+import time
 
 from app.ingestion import IngestionService
 from app.metadata import extract_metadata
@@ -25,6 +27,9 @@ def test_ingest_extracts_pages_and_deduplicates(sample_pdf: Path, ingestion: Ing
     assert first.parse_status == "success"
     assert first.dify_status == "success"
     assert first.pdf_platform_status == "success"
+    assert first.file_size == sample_pdf.stat().st_size
+    assert first.page_count == 2
+    assert first.uploaded_by == 'sansuokb'
     assert first.standard_no == "GB/T 1234-2024"
     markdown = Path(first.local_md_path).read_text(encoding="utf-8")
     assert "<!-- page: 1 -->" in markdown
@@ -36,6 +41,47 @@ def test_ingest_extracts_pages_and_deduplicates(sample_pdf: Path, ingestion: Ing
     second, duplicate = ingestion.ingest(sample_pdf)
     assert duplicate is True
     assert second.source_id == first.source_id
+
+
+def test_delete_waits_for_inflight_reindex_across_service_instances(sample_pdf: Path, tmp_path: Path) -> None:
+    repository = SourceRepository(tmp_path / 'sources.db')
+    dify = RecordingDify()
+    first = IngestionService(repository, tmp_path / 'files', dify, RecordingPlatform())
+    second = IngestionService(repository, tmp_path / 'files', dify, RecordingPlatform())
+    source, _ = first.ingest(sample_pdf)
+    entered, release, deleted = threading.Event(), threading.Event(), threading.Event()
+    original_retry = dify.retry_document
+    def slow_retry(*args):
+        entered.set()
+        assert release.wait(5)
+        return original_retry(*args)
+    dify.retry_document = slow_retry
+    errors = []
+    def reindex():
+        try:
+            first.reindex_source(source.source_id)
+        except Exception as exc:
+            errors.append(exc)
+    def delete():
+        try:
+            second.delete_source(source.source_id)
+            deleted.set()
+        except Exception as exc:
+            errors.append(exc)
+    worker = threading.Thread(target=reindex)
+    remover = threading.Thread(target=delete)
+    worker.start()
+    try:
+        assert entered.wait(3)
+        remover.start()
+        time.sleep(0.1)
+        assert not deleted.is_set()
+    finally:
+        release.set()
+        worker.join(5)
+        if remover.ident is not None:
+            remover.join(5)
+    assert deleted.is_set() and not errors
 
 
 def test_reuploads_when_dataset_changes(sample_pdf: Path, ingestion: IngestionService) -> None:
@@ -59,8 +105,9 @@ def test_reuploads_when_dataset_changes(sample_pdf: Path, ingestion: IngestionSe
 def test_reparse_rebuilds_markdown_and_refreshes_dify(sample_pdf: Path, tmp_path: Path) -> None:
     repository = SourceRepository(tmp_path / "reparse.db")
     dify = RecordingDify()
-    service = IngestionService(repository, tmp_path / "files", dify, RecordingPlatform())
+    service = IngestionService(repository, tmp_path / "files", dify, RecordingPlatform(), chunking_mode='custom', chunk_max_tokens=512, embedding_model='embed-v1')
     source, _ = service.ingest(sample_pdf)
+    first_markdown = Path(source.local_md_path).read_text(encoding="utf-8")
 
     class FakeMinerU:
         fallback_on_error = True
@@ -78,6 +125,19 @@ def test_reparse_rebuilds_markdown_and_refreshes_dify(sample_pdf: Path, tmp_path
     assert dify.uploads[-1][2].startswith("<table>")
     metadata = json.loads((Path(updated.source_path).parent / "metadata.json").read_text(encoding="utf-8"))
     assert metadata["parser_engine"] == "mineru"
+    revisions = repository.versions(source.source_id)
+    assert [item['version_no'] for item in revisions] == [2, 1]
+    assert revisions[0]['parser_engine'] == 'mineru'
+    assert revisions[0]['chunking_mode'] == 'custom'
+    assert revisions[0]['chunk_max_tokens'] == 512
+    assert revisions[0]['embedding_model'] == 'embed-v1'
+    assert repository.revision(source.source_id, 1)['markdown'] == first_markdown
+    assert repository.revision(source.source_id, 2)['markdown'].startswith('<table>')
+    assert revisions[0]['content_hash'] != revisions[1]['content_hash']
+    assert revisions[1]['chunking_mode'] == 'custom'
+    assert revisions[1]['embedding_model'] == 'embed-v1'
+    service.retry_failed(source.source_id)
+    assert len(repository.versions(source.source_id)) == 2
 
 
 class RecordingDify:

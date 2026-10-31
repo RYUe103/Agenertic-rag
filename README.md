@@ -89,6 +89,8 @@ npm run build
 
 ## 配置真实服务
 
+外部客户端也可以在“AI 接入”中创建独立的只读 REST 凭据，并限制知识库和工具范围。配置与请求示例见 [外部 REST 接入](docs/EXTERNAL_REST_INTEGRATION.md)。
+
 编辑 `.env`：
 
 ```dotenv
@@ -102,6 +104,13 @@ DIFY_BASE_URL=https://api.dify.ai/v1
 DIFY_KNOWLEDGE_API_KEY=dataset-...
 DIFY_DATASET_ID=...
 DIFY_SEARCH_METHOD=semantic_search
+
+# 官方 MinerU 云端测试（与本地 MinerU 服务二选一）
+MINERU_ENABLED=true
+MINERU_CLOUD_ENABLED=true
+MINERU_URL=https://mineru.net/api
+MINERU_API_KEY=你的_MinerU_API_Key
+MINERU_TIMEOUT_SECONDS=600
 ```
 
 `LLM_BASE_URL` 按 OpenAI 兼容接口的要求配置。`DIFY_BASE_URL` 严格按填写值使用，系统不会自动补 `/v1`；例如内网 Dify 的数据集 API 在 `/api/v1` 时，就填 `http://agent.example/api/v1`。

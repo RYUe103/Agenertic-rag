@@ -3,6 +3,10 @@ from __future__ import annotations
 import re
 import json
 import inspect
+import logging
+import time
+from contextvars import ContextVar
+from collections.abc import Callable
 from collections import defaultdict
 from typing import Literal, TypedDict
 from urllib.parse import urljoin, urlsplit
@@ -67,6 +71,18 @@ class AgentState(TypedDict, total=False):
 
 from app.glossary import GlossaryIndex
 
+logger = logging.getLogger(__name__)
+
+# Per-request values are propagated through LangGraph's execution context.
+agent_execution_context: ContextVar[dict | None] = ContextVar("agent_execution_context", default=None)
+
+
+class ToolApprovalRequired(RuntimeError):
+    def __init__(self, approval_id: str, tool_name: str):
+        super().__init__(f"工具 {tool_name} 等待人工审批")
+        self.approval_id = approval_id
+        self.tool_name = tool_name
+
 
 class AgentService:
     def __init__(
@@ -85,6 +101,7 @@ class AgentService:
         answer_prompt: str = "",
         glossary_documents: list[GlossaryDocument] | None = None,
         answer_llm: LLMClient | None = None,
+        code_executor: Callable[[str], str] | None = None,
     ):
         self.tools = tools
         self.llm = llm
@@ -96,7 +113,7 @@ class AgentService:
         self.agent_name = agent_name
         self.allowed_tools = set(allowed_tools or [
             "vector_search", "grep_files", "keyword_search", "find_files", "search_within_document", "metadata_search",
-            "dify_metadata_search",
+            "dify_metadata_search", "search_bm25", "search_hybrid",
             "read_full_document", "get_adjacent_chunks", "get_document_outline",
         ])
         if "grep_files" in self.allowed_tools:
@@ -107,6 +124,7 @@ class AgentService:
         self.answer_prompt = answer_prompt or LLMClient.DEFAULT_ANSWER_PROMPT
         self.glossary_documents = glossary_documents or []
         self.glossary_index = GlossaryIndex(self.glossary_documents)
+        self.code_executor = code_executor
         self._conversations: dict[str, dict[str, object]] = {}
         self.graph = self._build_graph()
 
@@ -558,17 +576,30 @@ class AgentService:
         return "end" if state.get("evidence_only", False) else "answer"
 
     def _invoke_tool(self, state: AgentState, name: str, *args: object, **kwargs: object) -> object:
+        context = agent_execution_context.get()
+        if context and not context["is_enabled"](name):
+            reason = '已被管理员禁用'
+            state.setdefault("process", []).append(f"{name} {reason}")
+            return []
         if name not in self.allowed_tools and name not in {"read_file_context", "get_source"}:
             state.setdefault("process", []).append(f"{name} 不在当前 Agent 的工具白名单中")
             return []
         if state.get("tool_calls", 0) >= self.max_tool_calls:
             return []
         state["tool_calls"] = state.get("tool_calls", 0) + 1
+        started = time.monotonic()
+        status = "failed"
         try:
             method = getattr(self.tools, name)
             bound = inspect.signature(method).bind(*args, **kwargs)
             bound.apply_defaults()
             parameters = dict(bound.arguments)
+            if context and context.get('requires_approval', lambda _: False)(name):
+                consume = context.get('consume_approval')
+                if consume is None or not consume(name, parameters):
+                    approval_id = context['request_approval'](name, parameters)
+                    raise ToolApprovalRequired(approval_id, name)
+            parameters = dict(parameters)
             if "source_ids" in parameters:
                 scope = parameters["source_ids"]
                 parameters["source_ids"] = "全库" if scope is None else {"数量": len(scope), "示例": scope[:5]}
@@ -576,12 +607,21 @@ class AgentService:
                 f"实际调用 {name}：" + json.dumps(parameters, ensure_ascii=False, default=str)
             )
             result = method(*args, **kwargs)
+            status = "success"
             count = len(result) if isinstance(result, list) else int(result is not None)
             state["process"].append(f"实际返回 {name}：{count} 条")
             return result
+        except ToolApprovalRequired:
+            raise
         except Exception:
             state.setdefault("process", []).append(f"{name} 调用失败，已将失败结果交回 Agent 决策")
             return []
+        finally:
+            if context and name in context["registered_tools"]:
+                try:
+                    context["record"](name, status, int((time.monotonic() - started) * 1000))
+                except Exception:
+                    logger.exception("Unable to record internal agent tool call")
 
 
     def _plan(self, state: AgentState) -> AgentState:
@@ -590,6 +630,12 @@ class AgentService:
             name for name in ["vector_search", "grep_files", "keyword_search", "find_files", "metadata_search", "dify_metadata_search"]
             if name in self.allowed_tools
         ]
+        context = agent_execution_context.get()
+        if context:
+            available = [name for name in available if context["is_enabled"](name)]
+        code_executor = context["code_executor"] if context else self.code_executor
+        if code_executor is not None:
+            available.append("execute_python")
         candidate_ids = state.get("candidate_ids") or []
         if candidate_ids:
             available.extend(name for name in ["search_within_document", "read_full_document", "get_document_outline"] if name in self.allowed_tools)
@@ -599,6 +645,8 @@ class AgentService:
         if segment_refs:
             if "get_adjacent_chunks" in self.allowed_tools:
                 available.append("get_adjacent_chunks")
+        if context:
+            available = [name for name in available if name == "execute_python" or context["is_enabled"](name)]
         pending_query = str(state.get("pending_query") or "").strip()
         if state.get("scope_locked") and pending_query:
             requested_tool = str(state.get("pending_tool") or "grep_files")
@@ -650,7 +698,8 @@ class AgentService:
                 f"已完成文件名、文本元数据和正文的候选搜索；下一步必须对这些候选 source_id 使用 "
                 f"metadata_search 和 custom_sort（{direction_label}），不得再用主题词做 custom_filters"
             )
-        if self.metadata_fields:
+        execution_context = agent_execution_context.get()
+        if self.metadata_fields and (not execution_context or execution_context['is_enabled']('metadata_search')):
             configured_parts = []
             sources = self.tools.repository.list(10000)
             for field in self.metadata_fields:
@@ -675,7 +724,7 @@ class AgentService:
                 if len(parameters) >= 3
                 else self.llm.plan(planning_input, available)
             )
-        fallback = "vector_search" if "vector_search" in available else available[0]
+        fallback = "vector_search" if not available or "vector_search" in available else available[0]
         action = planned.name if planned and planned.name in set(available) else fallback
         arguments: dict[str, object] = dict(planned.arguments) if planned else {"query": query}
         if planned:
@@ -981,6 +1030,17 @@ class AgentService:
                 self._bounded_int(arguments.get("after"), 1, 0, 5),
             ) if source_id and segment_id else []
             state["evidences"].extend(result)
+        elif action == "execute_python":
+            code = str(arguments.get("code") or query).strip()
+            context = agent_execution_context.get()
+            code_executor = context["code_executor"] if context else self.code_executor
+            if code_executor is None:
+                state["process"].append("execute_python 未获得当前请求的 Sandbox 授权")
+            else:
+                state["process"].append("Agent 请求执行受控 Python Sandbox")
+                output = code_executor(code)
+                state["process"].append("Sandbox 执行结果：" + output[:4000])
+                state["is_complete"] = True
         else:
             result = self._invoke_tool(state, "vector_search", query, 10, None, self._scope_ids(state))
             state["evidences"].extend(result)

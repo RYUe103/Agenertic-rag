@@ -3,7 +3,7 @@ from __future__ import annotations
 from datetime import datetime, timezone
 from typing import Any, Literal
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 
 class PdfUploadResult(BaseModel):
@@ -18,6 +18,9 @@ class Source(BaseModel):
     file_hash: str
     document_type: str = "pdf"
     mime_type: str = "application/pdf"
+    file_size: int | None = None
+    page_count: int | None = None
+    uploaded_by: str | None = None
     standard_no: str | None = None
     normalized_standard_no: str | None = None
     standard_title: str | None = None
@@ -86,6 +89,13 @@ class AskRequest(BaseModel):
     history: list[AskHistoryMessage] = Field(default_factory=list, max_length=12)
 
 
+class RetrievalTestRequest(BaseModel):
+    query: str = Field(min_length=1, max_length=4000)
+    search_method: Literal["full_text_search", "semantic_search", "hybrid_search"] = "semantic_search"
+    top_k: int = Field(default=10, ge=1, le=50)
+    metadata_filtering_conditions: dict[str, Any] | None = None
+
+
 class AgentTraceEvent(BaseModel):
     sequence: int
     kind: Literal["route", "decision", "tool", "evaluation", "rewrite", "generation", "verification", "stop", "observation"]
@@ -107,6 +117,7 @@ class RetrievalSource(BaseModel):
 
 
 class AskResponse(BaseModel):
+    run_id: str | None = None
     agent_id: str = "default"
     agent_name: str = "默认助手"
     answer: str
@@ -119,6 +130,7 @@ class AskResponse(BaseModel):
 
 
 class RetrievalResponse(BaseModel):
+    run_id: str | None = None
     agent_id: str
     agent_name: str
     knowledge_base_id: str
@@ -142,6 +154,7 @@ class AgentSummary(BaseModel):
 
 class KnowledgeBaseInput(BaseModel):
     knowledge_base_id: str
+    tenant_key: str = Field(default="", max_length=80)
     name: str = Field(min_length=1, max_length=100)
     description: str = Field(default="", max_length=500)
     answer_prompt: str = Field(default="", max_length=20000)
@@ -152,6 +165,7 @@ class KnowledgeBaseInput(BaseModel):
     chunking_mode: Literal["automatic", "custom"] = "automatic"
     chunk_separator: str = "\n__SPLIT__\n"
     chunk_max_tokens: int = Field(default=800, ge=1, le=10000)
+    embedding_model: str = Field(default="", max_length=200)
     pdf_parser: Literal["default", "local", "mineru", "qwenvl"] = "default"
     qwenvl_base_url: str = ""
     qwenvl_api_key: str | None = Field(default=None, max_length=500)
@@ -171,6 +185,15 @@ class KnowledgeBaseInput(BaseModel):
     metadata_ai_enabled: bool = True
     metadata_extraction_prompt: str = Field(default="", max_length=12000)
     metadata_fields: list["MetadataFieldDefinition"] = Field(default_factory=list, max_length=50)
+
+    @field_validator('metadata_fields')
+    @classmethod
+    def unique_metadata_keys(cls, fields: list["MetadataFieldDefinition"]) -> list["MetadataFieldDefinition"]:
+        keys = [field.key for field in fields]
+        if len(keys) != len(set(keys)):
+            raise ValueError('元数据字段标识不能重复')
+        return fields
+
     workflow_enabled: bool = False
     workflow_base_url: str = ""
     workflow_api_key: str | None = Field(default=None, max_length=500)
@@ -182,6 +205,7 @@ class KnowledgeBaseInput(BaseModel):
 
 class KnowledgeBaseView(BaseModel):
     knowledge_base_id: str
+    tenant_key: str = ""
     owner_user_id: str = "local:sansuokb"
     owner_username: str = "sansuokb"
     name: str
@@ -194,6 +218,7 @@ class KnowledgeBaseView(BaseModel):
     chunking_mode: str = "automatic"
     chunk_separator: str = "\n__SPLIT__\n"
     chunk_max_tokens: int = 800
+    embedding_model: str = ""
     pdf_parser: str = "default"
     qwenvl_base_url: str = ""
     qwenvl_api_key_configured: bool = False
@@ -272,6 +297,22 @@ class MarkdownPreviewResponse(BaseModel):
     stats: dict[str, Any] = Field(default_factory=dict)
 
 
+class SourceVersion(BaseModel):
+    version_id: str
+    source_id: str
+    version_no: int
+    filename: str
+    content_hash: str
+    parser_engine: str
+    parse_status: str
+    dify_status: str
+    created_at: str
+    message: str = ""
+    chunking_mode: str = ""
+    chunk_max_tokens: int | None = None
+    embedding_model: str = ""
+
+
 class GlossaryEntry(BaseModel):
     term: str = Field(min_length=1, max_length=1000)
     aliases: list[str] = Field(default_factory=list)
@@ -320,6 +361,10 @@ class AgentConfigInput(BaseModel):
     name: str = Field(min_length=1, max_length=100)
     description: str = Field(default="", max_length=500)
     knowledge_base_id: str
+    agent_type: Literal["knowledge", "research", "data_analysis", "coding", "supervisor"] = "knowledge"
+    member_agent_ids: list[str] = Field(default_factory=list, max_length=10)
+    supervisor_routing: Literal["all", "auto"] = "all"
+    supervisor_synthesis: Literal["separate", "combined"] = "separate"
     planner_prompt: str = Field(default="", max_length=20000)
     planner_model_ids: list[str] = Field(default_factory=list, max_length=20)
     answer_model_ids: list[str] = Field(default_factory=list, max_length=20)
@@ -354,15 +399,17 @@ class JobItem(BaseModel):
     item_id: str = ""
     position: int = 0
     filename: str
+    expected_size: int | None = None
     source_id: str | None = None
-    status: Literal["pending", "uploaded", "queued", "running", "retrying", "success", "duplicate", "preview_ready", "failed"] = "pending"
+    status: Literal["pending", "uploaded", "queued", "running", "retrying", "success", "duplicate", "preview_ready", "failed", "cancelled"] = "pending"
     message: str = ""
     attempts: int = 0
 
 
 class IngestJob(BaseModel):
     job_id: str
-    status: Literal["uploading", "pending", "running", "paused", "completed"] = "pending"
+    agent_id: str = ""
+    status: Literal["uploading", "pending", "running", "paused", "completed", "cancelling", "cancelled"] = "pending"
     total: int
     uploaded: int = 0
     completed: int = 0
@@ -383,7 +430,7 @@ class DeleteJobItem(BaseModel):
     position: int
     source_id: str
     filename: str
-    status: Literal["pending", "running", "success", "failed"] = "pending"
+    status: Literal["pending", "running", "success", "failed", "cancelled", "unknown"] = "pending"
     message: str = ""
 
 
@@ -392,7 +439,7 @@ class DeleteJob(BaseModel):
     agent_id: str
     knowledge_base_id: str
     knowledge_base_name: str
-    status: Literal["running", "completed"] = "running"
+    status: Literal["running", "completed", "cancelling", "cancelled"] = "running"
     total: int
     completed: int = 0
     succeeded: int = 0
@@ -404,7 +451,7 @@ class DeleteJob(BaseModel):
 
 class TaskSummary(BaseModel):
     task_id: str
-    task_type: Literal["document_ingest", "document_delete"]
+    task_type: Literal["document_ingest", "document_reparse", "document_reindex", "document_delete"]
     agent_id: str
     title: str
     status: Literal["PENDING", "RUNNING", "SUCCEEDED", "FAILED", "CANCELLED"]
@@ -419,6 +466,7 @@ class TaskSummary(BaseModel):
     can_pause: bool = False
     can_resume: bool = False
     can_retry: bool = False
+    can_cancel: bool = False
 
 
 class TaskPage(BaseModel):
@@ -431,10 +479,15 @@ class TaskPage(BaseModel):
 
 class BatchIngestCreate(BaseModel):
     filenames: list[str] = Field(min_length=1, max_length=2000)
+    file_sizes: list[int] | None = Field(default=None, max_length=2000)
     rewrite_enabled: bool = False
     rewrite_prompt: str = Field(default="", max_length=12000)
     rewrite_review_required: bool = False
     workflow_enabled: bool = False
+
+
+class BatchReparseCreate(BaseModel):
+    source_ids: list[str] = Field(min_length=1, max_length=2000)
 
 
 class RewritePreviewRequest(BaseModel):

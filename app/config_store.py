@@ -20,6 +20,7 @@ CREATE TABLE IF NOT EXISTS knowledge_bases (
   knowledge_base_id TEXT PRIMARY KEY,
   owner_user_id TEXT NOT NULL DEFAULT 'local:sansuokb',
   owner_username TEXT NOT NULL DEFAULT 'sansuokb',
+  tenant_key TEXT NOT NULL DEFAULT '',
   name TEXT NOT NULL,
   description TEXT NOT NULL DEFAULT '',
   answer_prompt TEXT NOT NULL DEFAULT '',
@@ -30,6 +31,7 @@ CREATE TABLE IF NOT EXISTS knowledge_bases (
   chunking_mode TEXT NOT NULL DEFAULT 'automatic',
   chunk_separator TEXT NOT NULL DEFAULT '\n__SPLIT__\n',
   chunk_max_tokens INTEGER NOT NULL DEFAULT 800,
+  embedding_model TEXT NOT NULL DEFAULT '',
   pdf_parser TEXT NOT NULL DEFAULT 'default',
   qwenvl_base_url TEXT NOT NULL DEFAULT '',
   qwenvl_model TEXT NOT NULL DEFAULT 'qwen-vl-max',
@@ -182,14 +184,24 @@ class ConfigStore:
                 connection.execute("ALTER TABLE agents ADD COLUMN planner_model_ids TEXT NOT NULL DEFAULT '[]'")
             if "answer_model_ids" not in agent_columns:
                 connection.execute("ALTER TABLE agents ADD COLUMN answer_model_ids TEXT NOT NULL DEFAULT '[]'")
+            if "agent_type" not in agent_columns:
+                connection.execute("ALTER TABLE agents ADD COLUMN agent_type TEXT NOT NULL DEFAULT 'knowledge'")
+            if "member_agent_ids" not in agent_columns:
+                connection.execute("ALTER TABLE agents ADD COLUMN member_agent_ids TEXT NOT NULL DEFAULT '[]'")
+            if "supervisor_routing" not in agent_columns:
+                connection.execute("ALTER TABLE agents ADD COLUMN supervisor_routing TEXT NOT NULL DEFAULT 'all'")
+            if "supervisor_synthesis" not in agent_columns:
+                connection.execute("ALTER TABLE agents ADD COLUMN supervisor_synthesis TEXT NOT NULL DEFAULT 'separate'")
             migrations = {
                 "owner_user_id": "TEXT NOT NULL DEFAULT 'local:sansuokb'",
                 "owner_username": "TEXT NOT NULL DEFAULT 'sansuokb'",
+                "tenant_key": "TEXT NOT NULL DEFAULT ''",
                 "answer_prompt": "TEXT NOT NULL DEFAULT ''",
                 "metadata_ai_enabled": "INTEGER NOT NULL DEFAULT 1",
                 "chunking_mode": "TEXT NOT NULL DEFAULT 'automatic'",
                 "chunk_separator": "TEXT NOT NULL DEFAULT '\n__SPLIT__\n'",
                 "chunk_max_tokens": "INTEGER NOT NULL DEFAULT 800",
+                "embedding_model": "TEXT NOT NULL DEFAULT ''",
                 "pdf_parser": "TEXT NOT NULL DEFAULT 'default'",
                 "qwenvl_base_url": "TEXT NOT NULL DEFAULT ''",
                 "qwenvl_model": "TEXT NOT NULL DEFAULT 'qwen-vl-max'",
@@ -343,18 +355,18 @@ class ConfigStore:
             with self.connect() as connection:
                 connection.execute(
                     """INSERT INTO knowledge_bases
-                    (knowledge_base_id,owner_user_id,owner_username,name,description,answer_prompt,base_url,dataset_id,api_key_env,search_method,chunking_mode,chunk_separator,chunk_max_tokens,
+                    (knowledge_base_id,owner_user_id,owner_username,tenant_key,name,description,answer_prompt,base_url,dataset_id,api_key_env,search_method,chunking_mode,chunk_separator,chunk_max_tokens,embedding_model,
                      pdf_parser,qwenvl_base_url,qwenvl_model,qwenvl_short_prompt,qwenvl_long_prompt,qwenvl_page_threshold,qwenvl_batch_pages,qwenvl_dpi,
                      source_platform_mode,source_platform_base_url,source_platform_command,source_platform_url_template,enabled,use_legacy_data,
                      metadata_ai_enabled,metadata_extraction_prompt,metadata_fields,workflow_enabled,workflow_base_url,
                      workflow_app_id,workflow_markdown_input,workflow_file_input,workflow_output_field)
-                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
+                    VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)
                     ON CONFLICT(knowledge_base_id) DO UPDATE SET
-                    owner_user_id=excluded.owner_user_id,owner_username=excluded.owner_username,name=excluded.name,description=excluded.description,answer_prompt=excluded.answer_prompt,base_url=excluded.base_url,
+                    owner_user_id=excluded.owner_user_id,owner_username=excluded.owner_username,tenant_key=excluded.tenant_key,name=excluded.name,description=excluded.description,answer_prompt=excluded.answer_prompt,base_url=excluded.base_url,
                     dataset_id=excluded.dataset_id,api_key_env=excluded.api_key_env,
                     search_method=excluded.search_method,enabled=excluded.enabled,
                     chunking_mode=excluded.chunking_mode,chunk_separator=excluded.chunk_separator,
-                    chunk_max_tokens=excluded.chunk_max_tokens,
+                    chunk_max_tokens=excluded.chunk_max_tokens,embedding_model=excluded.embedding_model,
                     pdf_parser=excluded.pdf_parser,qwenvl_base_url=excluded.qwenvl_base_url,qwenvl_model=excluded.qwenvl_model,
                     qwenvl_short_prompt=excluded.qwenvl_short_prompt,qwenvl_long_prompt=excluded.qwenvl_long_prompt,
                     qwenvl_page_threshold=excluded.qwenvl_page_threshold,qwenvl_batch_pages=excluded.qwenvl_batch_pages,qwenvl_dpi=excluded.qwenvl_dpi,
@@ -370,8 +382,8 @@ class ConfigStore:
                     workflow_markdown_input=excluded.workflow_markdown_input,workflow_file_input=excluded.workflow_file_input,
                     workflow_output_field=excluded.workflow_output_field""",
                     (
-                        value.knowledge_base_id, owner_user_id or ("local:sansuokb" if owner_username == "sansuokb" else f"ldap:{owner_username}"), owner_username, value.name, value.description, value.answer_prompt, value.base_url,
-                        value.dataset_id, env_name, value.search_method, value.chunking_mode, value.chunk_separator, value.chunk_max_tokens,
+                        value.knowledge_base_id, owner_user_id or ("local:sansuokb" if owner_username == "sansuokb" else f"ldap:{owner_username}"), owner_username, value.tenant_key, value.name, value.description, value.answer_prompt, value.base_url,
+                        value.dataset_id, env_name, value.search_method, value.chunking_mode, value.chunk_separator, value.chunk_max_tokens, value.embedding_model,
                         value.pdf_parser, value.qwenvl_base_url, value.qwenvl_model, value.qwenvl_short_prompt,
                         value.qwenvl_long_prompt, value.qwenvl_page_threshold, value.qwenvl_batch_pages, value.qwenvl_dpi,
                         value.source_platform_mode, value.source_platform_base_url,
@@ -441,6 +453,8 @@ class ConfigStore:
                     int(value.is_default),
                 ),
             )
+            connection.execute("UPDATE agents SET agent_type=?,member_agent_ids=?,supervisor_routing=?,supervisor_synthesis=? WHERE agent_id=?",
+                               (value.agent_type, json.dumps(value.member_agent_ids), value.supervisor_routing, value.supervisor_synthesis, value.agent_id))
             default_count = connection.execute("SELECT COUNT(*) FROM agents WHERE is_default = 1").fetchone()[0]
             if not default_count:
                 connection.execute("UPDATE agents SET is_default = 1 WHERE agent_id = ?", (value.agent_id,))
@@ -464,6 +478,7 @@ class ConfigStore:
         configured = bool(self.secrets.get(str(row["knowledge_base_id"]))) or bool(row.get("api_key_env"))
         return KnowledgeBaseView(
             knowledge_base_id=str(row["knowledge_base_id"]),
+            tenant_key=str(row.get("tenant_key") or ""),
             owner_user_id=str(row.get("owner_user_id") or "local:sansuokb"),
             owner_username=str(row.get("owner_username") or "sansuokb"),
             name=str(row["name"]),
@@ -473,6 +488,7 @@ class ConfigStore:
             chunking_mode=str(row.get("chunking_mode") or "automatic"),
             chunk_separator=str(row.get("chunk_separator") or "\n__SPLIT__\n"),
             chunk_max_tokens=int(row.get("chunk_max_tokens") or 800),
+            embedding_model=str(row.get("embedding_model") or ""),
             pdf_parser=str(row.get("pdf_parser") or "default"),
             qwenvl_base_url=str(row.get("qwenvl_base_url") or ""),
             qwenvl_api_key_configured=bool(self.secrets.get(f"{row['knowledge_base_id']}:qwenvl")),
@@ -514,6 +530,10 @@ class ConfigStore:
         return AgentConfigView(
             agent_id=str(row["agent_id"]), name=str(row["name"]), description=str(row["description"]),
             knowledge_base_id=str(row["knowledge_base_id"]), planner_prompt=str(row["planner_prompt"]),
+            agent_type=str(row.get("agent_type") or "knowledge"),
+            member_agent_ids=json.loads(str(row.get("member_agent_ids") or "[]")),
+            supervisor_routing=str(row.get("supervisor_routing") or "all"),
+            supervisor_synthesis=str(row.get("supervisor_synthesis") or "separate"),
             planner_prompt_custom=bool(row.get("planner_prompt_custom", 0)),
             planner_model_ids=json.loads(str(row.get("planner_model_ids") or "[]")),
             answer_model_ids=json.loads(str(row.get("answer_model_ids") or "[]")),

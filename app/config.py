@@ -31,6 +31,8 @@ class Settings(BaseSettings):
     ocr_command: list[str] = Field(default_factory=list)
     mineru_enabled: bool = False
     mineru_url: str = ""
+    mineru_api_key: str = ""
+    mineru_cloud_enabled: bool = False
     mineru_timeout_seconds: float = 120.0
     mineru_return_content_list: bool = False
     mineru_return_images: bool = False
@@ -50,11 +52,18 @@ class Settings(BaseSettings):
     ldap_user_dn_template: str = ""
     ldap_base_dn: str = ""
     ldap_user_filter: str = "(uid={username})"
+    ldap_group_base_dn: str = ""
+    ldap_group_filter: str = "(member={user_dn})"
+    ldap_group_attribute: str = "cn"
+    ldap_group_role_map: dict[str, str] = Field(default_factory=dict)
     ldap_bind_dn: str = ""
     ldap_bind_password: str = ""
     ldap_timeout_seconds: float = 5.0
     external_api_enabled: bool = False
     external_api_key: str = ""
+    mcp_enabled: bool = True
+    mcp_allowed_hosts: list[str] = Field(default_factory=lambda: ["localhost", "localhost:*", "127.0.0.1", "127.0.0.1:*", "testserver"])
+    mcp_allowed_origins: list[str] = Field(default_factory=list)
     ingest_worker_count: int = 3
     ingest_upload_batch_size: int = 25
     ingest_max_files_per_job: int = 2000

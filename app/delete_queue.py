@@ -47,12 +47,10 @@ class DeleteQueueRepository:
         with self.connect() as connection:
             connection.execute("PRAGMA foreign_keys = ON")
             connection.executescript(SCHEMA)
-            connection.execute(
-                "UPDATE delete_job_items SET status='pending',message='服务重启，等待继续删除' WHERE status='running'"
-            )
-            connection.execute(
-                "UPDATE delete_jobs SET status='running' WHERE status!='completed'"
-            )
+            connection.execute("""UPDATE delete_job_items SET status='unknown',message='服务重启，删除结果未知，请检查文档'
+                                  WHERE status='running' AND job_id IN (SELECT job_id FROM delete_jobs WHERE status='cancelling')""")
+            connection.execute("UPDATE delete_jobs SET status='cancelled' WHERE status='cancelling'")
+            connection.execute("UPDATE delete_job_items SET status='pending',message='服务重启，等待继续删除' WHERE status='running'")
 
     @contextmanager
     def connect(self) -> Iterator[sqlite3.Connection]:
@@ -71,13 +69,14 @@ class DeleteQueueRepository:
         knowledge_base_name: str,
         sources: list[Source],
     ) -> DeleteJob:
-        if self.active_for_agent(agent_id) is not None:
-            raise ValueError("当前 Agent 已有清空任务正在执行")
         job_id = f"delete_{uuid.uuid4().hex}"
         now = datetime.now(timezone.utc).isoformat()
         status = "running" if sources else "completed"
         with self.connect() as connection:
             connection.execute("PRAGMA foreign_keys = ON")
+            connection.execute('BEGIN IMMEDIATE')
+            if connection.execute("SELECT 1 FROM delete_jobs WHERE knowledge_base_id=? AND status IN ('running','cancelling') LIMIT 1", (knowledge_base_id,)).fetchone():
+                raise ValueError('当前知识库已有删除任务正在执行')
             connection.execute(
                 "INSERT INTO delete_jobs VALUES (?,?,?,?,?,?,?)",
                 (job_id, agent_id, knowledge_base_id, knowledge_base_name, status, now, now),
@@ -105,7 +104,7 @@ class DeleteQueueRepository:
         if job is None:
             raise KeyError(job_id)
         values = [DeleteJobItem(**dict(item)) for item in items]
-        completed = sum(item.status in {"success", "failed"} for item in values)
+        completed = sum(item.status in {"success", "failed", "cancelled", "unknown"} for item in values)
         return DeleteJob(
             job_id=job_id,
             agent_id=job["agent_id"],
@@ -134,7 +133,7 @@ class DeleteQueueRepository:
             rows = connection.execute(
                 f"""SELECT j.*,
                        COUNT(i.item_id) AS total,
-                       SUM(CASE WHEN i.status IN ('success','failed') THEN 1 ELSE 0 END) AS completed,
+                       SUM(CASE WHEN i.status IN ('success','failed','cancelled','unknown') THEN 1 ELSE 0 END) AS completed,
                        SUM(CASE WHEN i.status='success' THEN 1 ELSE 0 END) AS succeeded,
                        SUM(CASE WHEN i.status='failed' THEN 1 ELSE 0 END) AS failed
                     FROM delete_jobs j
@@ -148,23 +147,40 @@ class DeleteQueueRepository:
         for row in rows:
             raw_status = str(row["status"])
             failed = int(row["failed"] or 0)
-            status = "RUNNING" if raw_status == "running" else ("FAILED" if failed else "SUCCEEDED")
+            status = "RUNNING" if raw_status in {"running", "cancelling"} else ("CANCELLED" if raw_status == "cancelled" else ("FAILED" if failed else "SUCCEEDED"))
             total = int(row["total"] or 0)
             summaries.append(TaskSummary(
                 task_id=row["job_id"], task_type="document_delete", agent_id=row["agent_id"],
-                title=f"清空资料库 · {row['knowledge_base_name']}", status=status, raw_status=raw_status,
+                title=f"删除文档 · {row['knowledge_base_name']}", status=status, raw_status=raw_status,
                 total=total, completed=int(row["completed"] or 0), succeeded=int(row["succeeded"] or 0),
-                failed=failed, created_at=row["created_at"], updated_at=row["updated_at"],
+                failed=failed, created_at=row["created_at"], updated_at=row["updated_at"], can_cancel=raw_status == "running",
             ))
         return summaries
 
     def active_for_agent(self, agent_id: str) -> DeleteJob | None:
         with self.connect() as connection:
             row = connection.execute(
-                "SELECT job_id FROM delete_jobs WHERE agent_id=? AND status='running' ORDER BY created_at DESC LIMIT 1",
+                "SELECT job_id FROM delete_jobs WHERE agent_id=? AND status IN ('running','cancelling') ORDER BY created_at DESC LIMIT 1",
                 (agent_id,),
             ).fetchone()
         return self.get(row["job_id"]) if row else None
+
+    def active_for_knowledge_base(self, knowledge_base_id: str) -> bool:
+        with self.connect() as connection:
+            return connection.execute("SELECT 1 FROM delete_jobs WHERE knowledge_base_id=? AND status IN ('running','cancelling') LIMIT 1", (knowledge_base_id,)).fetchone() is not None
+
+    def cancel(self, job_id: str) -> DeleteJob:
+        with self.connect() as connection:
+            connection.execute("BEGIN IMMEDIATE")
+            job = connection.execute("SELECT status FROM delete_jobs WHERE job_id=?", (job_id,)).fetchone()
+            if job is None:
+                raise KeyError(job_id)
+            if job["status"] != "running":
+                raise ValueError("当前任务不能取消")
+            connection.execute("UPDATE delete_job_items SET status='cancelled',message='已取消，未执行删除' WHERE job_id=? AND status='pending'", (job_id,))
+            running = connection.execute("SELECT 1 FROM delete_job_items WHERE job_id=? AND status='running' LIMIT 1", (job_id,)).fetchone()
+            connection.execute("UPDATE delete_jobs SET status=?,updated_at=? WHERE job_id=?", ("cancelling" if running else "cancelled", datetime.now(timezone.utc).isoformat(), job_id))
+        return self.get(job_id)
 
     def claim(self) -> dict[str, Any] | None:
         connection = sqlite3.connect(self.db_path, timeout=15, isolation_level=None)
@@ -192,6 +208,7 @@ class DeleteQueueRepository:
 
     def finish(self, item_id: str, status: str, message: str) -> None:
         with self.connect() as connection:
+            connection.execute("BEGIN IMMEDIATE")
             row = connection.execute(
                 "SELECT job_id FROM delete_job_items WHERE item_id=?", (item_id,)
             ).fetchone()
@@ -208,7 +225,7 @@ class DeleteQueueRepository:
             ).fetchone()
             if pending is None:
                 connection.execute(
-                    "UPDATE delete_jobs SET status='completed',updated_at=? WHERE job_id=?",
+                    "UPDATE delete_jobs SET status=CASE WHEN status='cancelling' THEN 'cancelled' ELSE 'completed' END,updated_at=? WHERE job_id=?",
                     (datetime.now(timezone.utc).isoformat(), job_id),
                 )
         job = self.get(job_id)

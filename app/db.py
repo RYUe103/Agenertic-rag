@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import hashlib
 import sqlite3
 from contextlib import contextmanager
 from datetime import datetime, timezone
@@ -56,6 +57,20 @@ CREATE INDEX IF NOT EXISTS idx_sources_filename ON sources(normalized_filename);
 CREATE INDEX IF NOT EXISTS idx_sources_standard ON sources(normalized_standard_no);
 CREATE INDEX IF NOT EXISTS idx_sources_year ON sources(standard_year);
 CREATE INDEX IF NOT EXISTS idx_sources_dify_document ON sources(dify_document_id);
+CREATE TABLE IF NOT EXISTS source_versions (
+  version_id TEXT PRIMARY KEY, source_id TEXT NOT NULL, version_no INTEGER NOT NULL,
+  filename TEXT NOT NULL, markdown_path TEXT NOT NULL, parse_status TEXT NOT NULL,
+  dify_status TEXT NOT NULL, created_at TEXT NOT NULL, message TEXT NOT NULL DEFAULT '',
+  UNIQUE(source_id, version_no)
+);
+CREATE TABLE IF NOT EXISTS source_revisions (
+  revision_id TEXT PRIMARY KEY, source_id TEXT NOT NULL, version_no INTEGER NOT NULL,
+  filename TEXT NOT NULL, markdown TEXT NOT NULL, content_hash TEXT NOT NULL,
+  parse_status TEXT NOT NULL, dify_status TEXT NOT NULL, parser_engine TEXT NOT NULL,
+  created_at TEXT NOT NULL, message TEXT NOT NULL,
+  chunking_mode TEXT NOT NULL DEFAULT '', chunk_max_tokens INTEGER, embedding_model TEXT NOT NULL DEFAULT '',
+  UNIQUE(source_id, version_no)
+);
 """
 
 
@@ -67,6 +82,9 @@ class SourceRepository:
             connection.executescript(SCHEMA)
             columns = {row[1] for row in connection.execute("PRAGMA table_info(sources)").fetchall()}
             migrations = {
+                "file_size": "INTEGER",
+                "page_count": "INTEGER",
+                "uploaded_by": "TEXT",
                 "document_type": "TEXT NOT NULL DEFAULT 'pdf'",
                 "mime_type": "TEXT NOT NULL DEFAULT 'application/pdf'",
                 "local_source_path": "TEXT NOT NULL DEFAULT ''",
@@ -88,6 +106,14 @@ class SourceRepository:
                     connection.execute(f"ALTER TABLE sources ADD COLUMN {name} {definition}")
             connection.execute("UPDATE sources SET local_source_path = local_pdf_path WHERE local_source_path = ''")
             connection.execute("UPDATE sources SET local_extracted_md_path = local_md_path WHERE local_extracted_md_path = ''")
+            revision_columns = {row[1] for row in connection.execute("PRAGMA table_info(source_revisions)").fetchall()}
+            for name, definition in {
+                'chunking_mode': "TEXT NOT NULL DEFAULT ''",
+                'chunk_max_tokens': 'INTEGER',
+                'embedding_model': "TEXT NOT NULL DEFAULT ''",
+            }.items():
+                if name not in revision_columns:
+                    connection.execute(f"ALTER TABLE source_revisions ADD COLUMN {name} {definition}")
 
     @contextmanager
     def connect(self) -> Iterator[sqlite3.Connection]:
@@ -121,6 +147,34 @@ class SourceRepository:
             )
         return self.get(source_id)
 
+    def versions(self, source_id: str) -> list[dict[str, Any]]:
+        with self.connect() as connection:
+            rows = connection.execute('''SELECT revision_id AS version_id,source_id,version_no,filename,
+                content_hash,parse_status,dify_status,parser_engine,created_at,message,
+                chunking_mode,chunk_max_tokens,embedding_model FROM source_revisions
+                WHERE source_id=? ORDER BY version_no DESC''', (source_id,)).fetchall()
+        return [dict(row) for row in rows]
+
+    def save_revision(self, source: Source, markdown: str, parser_engine: str, message: str,
+                      chunking_mode: str = '', chunk_max_tokens: int | None = None, embedding_model: str = '') -> None:
+        with self.connect() as connection:
+            connection.execute('BEGIN IMMEDIATE')
+            next_no = connection.execute('SELECT COALESCE(MAX(version_no), 0) + 1 FROM source_revisions WHERE source_id=?', (source.source_id,)).fetchone()[0]
+            connection.execute('''INSERT INTO source_revisions
+                (revision_id,source_id,version_no,filename,markdown,content_hash,parse_status,dify_status,parser_engine,created_at,message,chunking_mode,chunk_max_tokens,embedding_model)
+                VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',
+                               (f'{source.source_id}:r{next_no}', source.source_id, next_no, source.filename,
+                                markdown, hashlib.sha256(markdown.encode('utf-8')).hexdigest(), source.parse_status,
+                                source.dify_status, parser_engine, datetime.now(timezone.utc).isoformat(), message,
+                                chunking_mode, chunk_max_tokens, embedding_model))
+
+    def revision(self, source_id: str, version_no: int) -> dict[str, Any]:
+        with self.connect() as connection:
+            row = connection.execute('SELECT * FROM source_revisions WHERE source_id=? AND version_no=?', (source_id, version_no)).fetchone()
+        if row is None:
+            raise KeyError(version_no)
+        return dict(row)
+
     def get(self, source_id: str) -> Source:
         with self.connect() as connection:
             row = connection.execute(
@@ -147,6 +201,11 @@ class SourceRepository:
     def delete(self, source_id: str) -> None:
         with self.connect() as connection:
             cursor = connection.execute("DELETE FROM sources WHERE source_id = ?", (source_id,))
+            if cursor.rowcount:
+                connection.execute("DELETE FROM source_revisions WHERE source_id = ?", (source_id,))
+                connection.execute("DELETE FROM source_versions WHERE source_id = ?", (source_id,))
+            connection.execute("DELETE FROM source_revisions WHERE source_id = ?", (source_id,))
+            connection.execute("DELETE FROM source_versions WHERE source_id = ?", (source_id,))
         if cursor.rowcount == 0:
             raise KeyError(source_id)
 

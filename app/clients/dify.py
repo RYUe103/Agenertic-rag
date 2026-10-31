@@ -127,9 +127,10 @@ class DifyClient:
         )
         return list(result.get("data") or [])
 
-    def retrieve(self, query: str, top_k: int = 10, metadata_filtering_conditions: dict[str, Any] | None = None) -> list[VectorHit]:
+    def retrieve(self, query: str, top_k: int = 10, metadata_filtering_conditions: dict[str, Any] | None = None,
+                 search_method: str | None = None) -> list[VectorHit]:
         retrieval_model: dict[str, Any] = {
-            "search_method": self.search_method,
+            "search_method": search_method or self.search_method,
             "reranking_enable": False,
             "top_k": top_k,
             "score_threshold_enabled": False,
@@ -207,7 +208,8 @@ class MockDifyClient:
     def list_documents(self, keyword: str = "", page: int = 1, limit: int = 20) -> list[dict[str, Any]]:
         return []
 
-    def retrieve(self, query: str, top_k: int = 10, metadata_filtering_conditions: dict[str, Any] | None = None) -> list[VectorHit]:
+    def retrieve(self, query: str, top_k: int = 10, metadata_filtering_conditions: dict[str, Any] | None = None,
+                 search_method: str | None = None) -> list[VectorHit]:
         return []
 
     def get_segments(

@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import time
+import threading
+import base64
 from pathlib import Path
 
 from fastapi.testclient import TestClient
@@ -8,7 +10,7 @@ from starlette.requests import Request
 
 from app.config import Settings
 from app.config_store import FileSecretStore
-from app.auth import hash_password
+from app.auth import SessionManager, hash_password
 from app.main import _source_base_url, create_app
 
 
@@ -41,6 +43,43 @@ def test_source_base_url_preserves_reverse_proxy_port_and_prefix(tmp_path) -> No
     assert _source_base_url(request, offline_settings(tmp_path)) == "http://10.2.108.71:1030/kb/"
 
 
+def test_knowledge_metadata_configuration_updates_runtime_and_rejects_duplicates(tmp_path) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client:
+        config = client.get('/api/admin/knowledge-bases').json()[0]
+        config['metadata_fields'] = [{'key': 'project_name', 'label': '项目名称', 'value_type': 'string', 'description': '项目'}]
+        config['metadata_ai_enabled'] = True
+        config['metadata_extraction_prompt'] = '提取项目名称'
+        url = '/api/admin/knowledge-bases/' + config['knowledge_base_id']
+        response = client.put(url, json=config)
+        assert response.status_code == 200
+        assert response.json()['metadata_fields'] == config['metadata_fields']
+        runtime = app.state.registry.get('@kb:' + config['knowledge_base_id'])
+        assert runtime.ingestion.metadata_fields[0].key == 'project_name'
+        assert runtime.ingestion.metadata_prompt == '提取项目名称'
+        config['metadata_fields'].append(dict(config['metadata_fields'][0]))
+        assert client.put(url, json=config).status_code == 422
+        assert len(client.get('/api/admin/knowledge-bases').json()[0]['metadata_fields']) == 1
+
+
+def test_knowledge_statistics_are_real_and_scoped_to_access(tmp_path, sample_txt) -> None:
+    settings = offline_settings(tmp_path)
+    settings.auth_enabled = True
+    app = create_app(settings)
+    sessions = SessionManager(settings.admin_username, settings.admin_password_hash, settings.auth_session_hours)
+    with TestClient(app) as client:
+        client.cookies.set(sessions.cookie_name, sessions.create('sansuokb', True, 'local'))
+        with sample_txt.open('rb') as handle:
+            assert client.post('/api/ingest', files=[('files', (sample_txt.name, handle, 'text/plain'))]).status_code == 202
+        result = client.get('/api/knowledge-bases/statistics')
+        assert result.status_code == 200
+        default = next(item for item in result.json() if item['knowledge_base_id'] == 'default-kb')
+        assert default['documents']['total'] == 1 and default['documents']['indexed'] == 1
+        assert default['chunk_count'] is None
+        client.cookies.set(sessions.cookie_name, sessions.create('alice', False, 'ldap'))
+        assert client.get('/api/knowledge-bases/statistics').json() == []
+
+
 def test_source_base_url_prefers_configured_public_url(tmp_path) -> None:
     settings = offline_settings(tmp_path)
     settings.app_public_base_url = "http://10.2.108.71:1030/kb"
@@ -69,6 +108,138 @@ def test_login_protects_application_api(tmp_path) -> None:
 
         assert client.post("/api/auth/logout").status_code == 204
         assert client.get("/api/agents").status_code == 401
+
+
+def test_sandbox_policy_and_run_records_are_scoped_to_users(tmp_path, monkeypatch) -> None:
+    from app.sandbox import SandboxStore
+
+    settings = offline_settings(tmp_path)
+    settings.auth_enabled = True
+    app = create_app(settings)
+    sessions = SessionManager(settings.admin_username, settings.admin_password_hash, settings.auth_session_hours)
+    monkeypatch.setattr(SandboxStore, '_execute', staticmethod(lambda *args: ('done', '', 'success', [('report.txt', b'private')])) )
+    payload = {'name': 'analysis', 'language': 'python', 'code': 'print(1)'}
+    with TestClient(app) as client:
+        client.cookies.set(sessions.cookie_name, sessions.create('sansuokb', True, 'local'))
+        policy = client.get('/api/admin/sandbox/policy').json()
+        policy['enabled'] = True
+        assert client.put('/api/admin/sandbox/policy', json=policy).status_code == 200
+        client.cookies.set(sessions.cookie_name, sessions.create('alice', False, 'ldap'))
+        assert client.get('/api/admin/sandbox/policy').status_code == 403
+        assert client.post('/api/sandbox/runs', json=payload).status_code == 403
+        client.cookies.set(sessions.cookie_name, sessions.create('sansuokb', True, 'local'))
+        policy['allow_users'] = True
+        assert client.put('/api/admin/sandbox/policy', json=policy).status_code == 200
+        client.cookies.set(sessions.cookie_name, sessions.create('alice', False, 'ldap'))
+        created = client.post('/api/sandbox/runs', json=payload)
+        assert created.status_code == 201
+        run_id = created.json()['id']
+        artifact_id = created.json()['artifacts'][0]['id']
+        assert client.get(f'/api/sandbox/runs/{run_id}').json()['stdout'] == 'done'
+        assert client.get(f'/api/sandbox/runs/{run_id}/artifacts/{artifact_id}').content == b'private'
+        client.cookies.set(sessions.cookie_name, sessions.create('bob', False, 'ldap'))
+        assert client.get('/api/sandbox/runs').json() == []
+        assert client.get(f'/api/sandbox/runs/{run_id}').status_code == 404
+        assert client.get(f'/api/sandbox/runs/{run_id}/artifacts/{artifact_id}').status_code == 404
+
+
+def test_sandbox_document_selection_checks_knowledge_base_authorization(tmp_path, monkeypatch) -> None:
+    from app.sandbox import SandboxStore
+
+    settings = offline_settings(tmp_path)
+    settings.auth_enabled = True
+    app = create_app(settings)
+    sessions = SessionManager(settings.admin_username, settings.admin_password_hash, settings.auth_session_hours)
+    captured = []
+    monkeypatch.setattr(SandboxStore, '_execute', staticmethod(lambda command, container, payload, timeout, marker: (captured.append(payload) or '', '', 'success', [])))
+    with TestClient(app) as client:
+        client.cookies.set(sessions.cookie_name, sessions.create('sansuokb', True, 'local'))
+        policy = client.get('/api/admin/sandbox/policy').json()
+        policy.update(enabled=True, allow_users=True, allow_documents=True)
+        assert client.put('/api/admin/sandbox/policy', json=policy).status_code == 200
+        client.cookies.set(sessions.cookie_name, sessions.create('alice', False, 'ldap'))
+        assert client.post('/api/admin/knowledge-bases', json={'knowledge_base_id': 'alice-kb', 'name': 'Alice', 'dataset_id': 'dataset', 'api_key': 'key'}).status_code == 200
+        directory = tmp_path / 'document'
+        directory.mkdir()
+        (directory / 'document.md').write_text('secret document', encoding='utf-8')
+        app.state.registry.get('@kb:alice-kb').repository.create({'source_id': 'src_one', 'filename': 'one.pdf', 'normalized_filename': 'one.pdf', 'file_hash': 'one', 'local_pdf_path': str(directory / 'source.pdf'), 'local_md_path': str(directory / 'document.md')})
+        payload = {'name': 'read', 'language': 'python', 'code': 'pass', 'agent_id': '@kb:alice-kb', 'source_ids': ['src_one']}
+        assert client.post('/api/sandbox/runs', json=payload).status_code == 201
+        assert 'secret document' in captured[0]
+        client.cookies.set(sessions.cookie_name, sessions.create('bob', False, 'ldap'))
+        assert client.post('/api/sandbox/runs', json=payload).status_code == 403
+        assert len(captured) == 1
+
+
+def test_knowledge_base_owner_and_dify_credentials(tmp_path) -> None:
+    settings = offline_settings(tmp_path)
+    settings.auth_enabled = True
+    settings.dify_base_url = "https://dify.example/v1"
+    settings.dify_dataset_id = "global-dataset"
+    app = create_app(settings)
+    sessions = SessionManager(settings.admin_username, settings.admin_password_hash, settings.auth_session_hours)
+    value = {"knowledge_base_id": "alice-kb", "name": "Alice", "dataset_id": "alice-dataset", "api_key": "alice-key", "use_legacy_data": True}
+    with TestClient(app) as client:
+        client.cookies.set(sessions.cookie_name, sessions.create("alice", False, "ldap"))
+        created = client.post("/api/admin/knowledge-bases", json=value)
+        assert created.status_code == 200
+        assert created.json()["dataset_id"] == "alice-dataset"
+        assert created.json()["owner_username"] == "alice"
+        assert client.get("/api/knowledge-bases").json()[0]["can_write_documents"] is True
+        row = app.state.registry.store.get_knowledge_base("alice-kb")
+        assert not row["use_legacy_data"]
+        assert app.state.registry.store.secrets.get("alice-kb") == "alice-key"
+        client.cookies.set(sessions.cookie_name, sessions.create("bob", False, "ldap"))
+        assert client.post("/api/admin/knowledge-bases", json=value).status_code == 400
+        assert client.put("/api/admin/knowledge-bases/alice-kb", json=value).status_code == 403
+        client.cookies.set(sessions.cookie_name, sessions.create("sansuokb", True, "local"))
+        updated = client.put("/api/admin/knowledge-bases/alice-kb", json=value)
+        assert updated.status_code == 200
+        assert updated.json()["owner_username"] == "alice"
+
+
+def test_shared_agent_routes_are_scoped_to_selected_knowledge_base(tmp_path) -> None:
+    settings = offline_settings(tmp_path)
+    settings.auth_enabled = True
+    app = create_app(settings)
+    sessions = SessionManager(settings.admin_username, settings.admin_password_hash, settings.auth_session_hours)
+    with TestClient(app) as client:
+        client.cookies.set(sessions.cookie_name, sessions.create("alice", False, "ldap"))
+        created = client.post("/api/admin/knowledge-bases", json={
+            "knowledge_base_id": "alice-kb", "name": "Alice", "dataset_id": "alice-dataset", "api_key": "alice-key",
+        })
+        assert created.status_code == 200
+        bases = client.get("/api/knowledge-bases").json()
+        assert bases == [{"knowledge_base_id": "alice-kb", "name": "Alice", "runtime_id": "@kb:alice-kb", "can_write_documents": True}]
+        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/page").status_code == 200
+        response = client.post("/api/agents/%40kb%3Aalice-kb/retrieve", json={"question": "测试"})
+        assert response.status_code == 200
+        assert response.json()["knowledge_base_id"] == "alice-kb"
+        tools = client.get("/api/knowledge-bases/alice-kb/tools")
+        assert tools.status_code == 200
+        assert any(item["name"] == "find_files" and item["read_only"] for item in tools.json())
+        tested = client.post("/api/knowledge-bases/alice-kb/tools/find_files/test", json={"query": "不存在"})
+        assert tested.status_code == 200
+        assert tested.json() == {"items": [], "count": 0}
+        assert client.post("/api/knowledge-bases/alice-kb/tools/find_files/test", json={"unexpected": 1}).status_code == 422
+        job = client.post("/api/agents/%40kb%3Aalice-kb/ingest-jobs", json={"filenames": ["test.txt"]})
+        assert job.status_code == 201
+        job_id = job.json()["job_id"]
+        assert app.state.ingest_queue_repository.job_record(job_id)["agent_id"] == "@kb:alice-kb"
+        assert client.get(f"/api/jobs/{job_id}").status_code == 200
+        client.cookies.set(sessions.cookie_name, sessions.create("bob", False, "ldap"))
+        assert client.get("/api/knowledge-bases").json() == []
+        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/page").status_code == 403
+        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/any/segments").status_code == 403
+        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/any/outline").status_code == 403
+        assert client.get("/api/knowledge-bases/alice-kb/tools").status_code == 403
+        assert client.get(f"/api/jobs/{job_id}").status_code == 403
+        assert client.post(f"/api/jobs/{job_id}/cancel").status_code == 403
+        assert client.get("/api/sources").status_code == 403
+        assert client.post("/api/ask", json={"question": "测试"}).status_code == 403
+        assert client.delete("/api/admin/agents/default").status_code == 403
+    restarted = create_app(settings)
+    assert restarted.state.registry.get("@kb:alice-kb").profile.knowledge_base_id == "alice-kb"
 
 
 def test_external_api_key_is_scoped_to_read_only_qa(tmp_path) -> None:
@@ -125,6 +296,114 @@ def test_external_api_key_is_scoped_to_read_only_qa(tmp_path) -> None:
         assert admin.json()["detail"] == "请先登录"
 
 
+def test_openai_compatible_api_reuses_agent_runtime(tmp_path) -> None:
+    settings = offline_settings(tmp_path)
+    settings.external_api_enabled = True
+    settings.external_api_key = "openai-secret"
+    app = create_app(settings)
+    with TestClient(app) as client:
+        assert client.get('/v1/models').status_code == 401
+        models = client.get('/v1/models', headers={'Authorization': 'Bearer openai-secret'})
+        assert models.status_code == 200 and models.json()['data'][0]['id'] == 'default'
+        response = client.post('/v1/chat/completions', headers={'Authorization': 'Bearer openai-secret'}, json={
+            'model': 'default', 'messages': [{'role': 'user', 'content': '测试检索'}], 'stream': False,
+        })
+        assert response.status_code == 200
+        assert response.json()['object'] == 'chat.completion'
+        assert response.json()['choices'][0]['message']['role'] == 'assistant'
+        assert 'usage' not in response.json()
+        headers = {'Authorization': 'Bearer openai-secret'}
+        url = '/v1/chat/completions'
+        message = [{'role': 'user', 'content': '测试'}]
+        assert client.post(url, headers=headers, json={'model': 'missing', 'messages': message}).status_code == 404
+        assert client.post(url, headers=headers, json={'model': 'default', 'messages': message, 'stream': True}).status_code == 400
+        assert client.post(url, headers=headers, json={'messages': [{'role': 'assistant', 'content': '测试'}]}).status_code == 400
+        assert client.post(url, headers=headers, json={'messages': [{'role': [], 'content': '测试'}]}).status_code == 400
+        assert client.post(url, headers=headers, json={'messages': [{'role': 'user', 'content': ['测试']}]}).status_code == 400
+
+
+def test_write_document_tool_requires_write_permission_and_approval(tmp_path) -> None:
+    settings = offline_settings(tmp_path)
+    app = create_app(settings)
+    with TestClient(app) as client:
+        agent = client.get('/api/admin/agents').json()[0]
+        agent['allowed_tools'] = list(dict.fromkeys([*agent['allowed_tools'], 'delete_document']))
+        assert client.put('/api/admin/agents/' + agent['agent_id'], json=agent).status_code == 200
+        url = '/api/knowledge-bases/default-kb/tools/delete_document'
+        args = {'source_id': 'src_missing'}
+        assert client.post(url + '/test', json=args).status_code == 403
+        approval = client.post(url + '/approvals', json=args)
+        assert approval.status_code == 201
+        assert client.post('/api/admin/tool-approvals/' + approval.json()['id'] + '/approve').status_code == 200
+        response = client.post(url + '/test', headers={'X-Approval-Id': approval.json()['id']}, json=args)
+        assert response.status_code == 404
+
+
+def test_upload_document_tool_creates_async_ingest_job(tmp_path) -> None:
+    import base64
+    settings = offline_settings(tmp_path)
+    app = create_app(settings)
+    with TestClient(app) as client:
+        agent = client.get('/api/admin/agents').json()[0]
+        agent['allowed_tools'] = list(dict.fromkeys([*agent['allowed_tools'], 'upload_document']))
+        assert client.put('/api/admin/agents/' + agent['agent_id'], json=agent).status_code == 200
+        url = '/api/knowledge-bases/default-kb/tools/upload_document'
+        args = {'filename': 'tool-upload.txt', 'content_base64': base64.b64encode(b'hello from tool' * 3000).decode(), 'mime_type': 'text/plain'}
+        approval = client.post(url + '/approvals', json=args)
+        assert approval.status_code == 201
+        approval_id = approval.json()['id']
+        assert client.post('/api/admin/tool-approvals/' + approval_id + '/approve').status_code == 200
+        response = client.post(url + '/test', headers={'X-Approval-Id': approval_id}, json=args)
+        assert response.status_code == 200
+        assert response.json()['status'] == 'ingest_queued'
+
+
+def test_document_status_tool_returns_real_status(tmp_path) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client:
+        agent = client.get('/api/admin/agents').json()[0]
+        agent['allowed_tools'] = list(dict.fromkeys([*agent['allowed_tools'], 'get_document_status']))
+        assert client.put('/api/admin/agents/' + agent['agent_id'], json=agent).status_code == 200
+        repo = app.state.registry.get('@kb:default-kb').repository
+        repo.create({'source_id': 'src_status', 'filename': 'status.txt', 'normalized_filename': 'status.txt',
+                     'file_hash': 'status', 'local_pdf_path': str(tmp_path / 'status.txt'), 'local_md_path': str(tmp_path / 'status.md')})
+        result = client.post('/api/knowledge-bases/default-kb/tools/get_document_status/test', json={'source_id': 'src_status'})
+        assert result.status_code == 200
+        assert result.json()['items'][0]['parse_status'] == 'pending'
+
+
+def test_extract_table_and_export_csv_are_real_tools(tmp_path) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client:
+        agent = client.get('/api/admin/agents').json()[0]
+        agent['allowed_tools'] = list(dict.fromkeys([*agent['allowed_tools'], 'extract_table', 'export_csv', 'export_excel', 'analyze_data']))
+        assert client.put('/api/admin/agents/' + agent['agent_id'], json=agent).status_code == 200
+        repo = app.state.registry.get('@kb:default-kb').repository
+        md = tmp_path / 'table.md'; md.write_text('| 名称 | 数值 |\n| --- | ---: |\n| A | 1 |\n', encoding='utf-8')
+        repo.create({'source_id': 'src_table', 'filename': 'table.md', 'normalized_filename': 'table.md',
+                     'file_hash': 'table', 'local_pdf_path': str(tmp_path / 'table.pdf'), 'local_md_path': str(md)})
+        table = client.post('/api/knowledge-bases/default-kb/tools/extract_table/test', json={'source_id': 'src_table'})
+        assert table.status_code == 200
+        assert '| 名称 | 数值 |' in table.json()['items'][0]['content']
+        exported = client.post('/api/knowledge-bases/default-kb/tools/export_csv/test', json={
+            'columns': ['名称', '数值'], 'rows': [['A', 1], ['B', 2]],
+        })
+        assert exported.status_code == 200
+        assert exported.json()['items'][0]['content'] == '名称,数值\r\nA,1\r\nB,2\r\n'
+        excel = client.post('/api/knowledge-bases/default-kb/tools/export_excel/test', json={
+            'filename': 'rows.xlsx', 'columns': ['名称', '数值'], 'rows': [['A', 1]],
+        })
+        assert excel.status_code == 200
+        assert excel.json()['items'][0]['filename'] == 'rows.xlsx'
+        assert base64.b64decode(excel.json()['items'][0]['content_base64']).startswith(b'PK')
+        analysis = client.post('/api/knowledge-bases/default-kb/tools/analyze_data/test', json={
+            'columns': ['名称', '数值'], 'rows': [['A', 1], ['B', 3], ['C', '']]
+        })
+        assert analysis.status_code == 200
+        assert analysis.json()['items'][0]['row_count'] == 3
+        assert analysis.json()['items'][0]['columns'][1]['average'] == 2.0
+
+
 def test_linux_file_secret_store_persists_and_hides_values(tmp_path) -> None:
     path = tmp_path / "secrets.json"
     FileSecretStore(path).set("kb:source-platform", "platform-secret")
@@ -167,7 +446,37 @@ def test_upload_preserves_original_filename(tmp_path, sample_pdf) -> None:
         assert answer.json()["evidence_insufficient"] is True
 
 
-def test_sources_page_and_markdown_preview(tmp_path, sample_txt) -> None:
+def test_upload_recovery_persists_sizes_and_rejects_mismatch(tmp_path) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client:
+        path = '/api/agents/default/ingest-jobs'
+        assert client.post(path, json={'filenames': ['one.txt'], 'file_sizes': []}).status_code == 400
+        created = client.post(path, json={'filenames': ['one.txt'], 'file_sizes': [5]})
+        job_id = created.json()['job_id']
+        saved = client.get(f'/api/jobs/{job_id}').json()
+        assert saved['agent_id'] == 'default' and saved['items'][0]['expected_size'] == 5
+        upload = f'/api/jobs/{job_id}/upload-batch'
+        assert client.post(upload, data={'positions': '[0]'}, files=[('files', ('one.txt', b'shorter', 'text/plain'))]).status_code == 400
+        assert client.get(f'/api/jobs/{job_id}').json()['items'][0]['status'] == 'pending'
+        assert client.post(upload, data={'positions': '[0]'}, files=[('files', ('one.txt', b'hello', 'text/plain'))]).status_code == 200
+
+
+def test_upload_batch_can_be_retried_before_start(tmp_path) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client:
+        created = client.post('/api/agents/default/ingest-jobs', json={'filenames': ['one.txt', 'two.txt']})
+        job_id = created.json()['job_id']
+        path = f'/api/jobs/{job_id}/upload-batch'
+        assert client.post(path, data={'positions': '[0]'}, files=[('files', ('one.txt', b'first', 'text/plain'))]).status_code == 200
+        retried = client.post(path, data={'positions': '[0]'}, files=[('files', ('one.txt', b'first', 'text/plain'))])
+        assert retried.status_code == 200 and retried.json()['uploaded'] == 1
+        second = client.post(path, data={'positions': '[1]'}, files=[('files', ('two.txt', b'second', 'text/plain'))])
+        assert second.status_code == 200 and second.json()['uploaded'] == 2
+        assert client.post(f'/api/jobs/{job_id}/cancel').json()['status'] == 'cancelled'
+        assert client.post(path, data={'positions': '[1]'}, files=[('files', ('two.txt', b'second', 'text/plain'))]).status_code == 409
+
+
+def test_sources_page_and_markdown_preview(tmp_path, sample_txt, monkeypatch) -> None:
     app = create_app(offline_settings(tmp_path))
     with TestClient(app) as client, sample_txt.open("rb") as handle:
         response = client.post("/api/ingest", files=[("files", (sample_txt.name, handle, "text/plain"))])
@@ -176,6 +485,11 @@ def test_sources_page_and_markdown_preview(tmp_path, sample_txt) -> None:
         assert page["total"] == 1
         assert page["total_pages"] == 1
         source_id = page["items"][0]["source_id"]
+        versions = client.get(f"/api/agents/default/sources/{source_id}/versions").json()
+        assert len(versions) == 1 and versions[0]["version_no"] == 1
+        snapshot = client.get(f"/api/agents/default/sources/{source_id}/versions/1")
+        assert snapshot.status_code == 200 and "预算说明" in snapshot.json()["markdown"]
+        assert client.get(f"/api/agents/default/sources/{source_id}/versions/999").status_code == 404
         preview = client.get(f"/api/agents/default/sources/{source_id}/markdown?version=document")
         assert preview.status_code == 200
         assert "预算说明" in preview.json()["markdown"]
@@ -183,6 +497,101 @@ def test_sources_page_and_markdown_preview(tmp_path, sample_txt) -> None:
         assert client.get(
             f"/api/agents/default/sources/{source_id}/markdown?version=../../etc/passwd"
         ).status_code == 404
+        source = app.state.registry.get("default").repository.get(source_id)
+        Path(source.local_md_path).write_text("<!-- page: 1 -->\n# 第一章\n内容\n<!-- page: 2 -->\n## 第二节\n索引正文", encoding="utf-8")
+        outline = client.get(f"/api/agents/default/sources/{source_id}/outline")
+        assert outline.status_code == 200
+        assert "第一章" in outline.json()["outline"]
+        assert [item["page"] for item in outline.json()["headings"]] == [1, 2]
+        calls = []
+        def segments(document_id, keyword, page, limit):
+            calls.append((document_id, keyword, page, limit))
+            return [{"id": "seg-1", "content": "索引正文", "position": 1, "status": "completed", "private": "hidden"}]
+        monkeypatch.setattr(app.state.registry.get("default").dify, "get_segments", segments)
+        result = client.get(f"/api/agents/default/sources/{source_id}/segments?page=2&page_size=1&keyword=索引")
+        assert result.status_code == 200
+        assert result.json()["items"][0]["content"] == "索引正文"
+        assert result.json()["items"][0]["page"] == 2
+        assert result.json()["items"][0]["chapter"] == "第一章 / 第二节"
+        assert "private" not in result.text and result.json()["may_have_more"]
+        assert calls == [(source.dify_document_id, "索引", 2, 1)]
+        assert client.get("/api/agents/default/sources/missing/segments").status_code == 404
+
+
+def test_reparse_job_runs_in_background_and_appears_in_tasks(tmp_path, sample_txt, monkeypatch) -> None:
+    app = create_app(offline_settings(tmp_path))
+    entered, release = threading.Event(), threading.Event()
+    with TestClient(app) as client, sample_txt.open("rb") as handle:
+        assert client.post("/api/ingest", files=[("files", (sample_txt.name, handle, "text/plain"))]).status_code == 202
+        source_id = client.get("/api/sources").json()[0]["source_id"]
+        ingestion = app.state.registry.get("default").ingestion
+        original = ingestion.reparse_source
+        def slow_reparse(source_id, source_platform_user="sansuokb"):
+            entered.set()
+            assert release.wait(5)
+            return original(source_id, source_platform_user=source_platform_user)
+        monkeypatch.setattr(ingestion, "reparse_source", slow_reparse)
+        try:
+            created = client.post("/api/agents/default/reparse-jobs", json={"source_ids": [source_id, source_id]})
+            assert created.status_code == 202 and created.json()["total"] == 1
+            job_id = created.json()["job_id"]
+            assert entered.wait(3)
+            assert client.post("/api/agents/default/reparse-jobs", json={"source_ids": [source_id]}).status_code == 409
+            tasks = client.get("/api/tasks", params={"task_type": "document_reparse", "agent_id": "default"}).json()
+            assert tasks["total"] == 1 and tasks["items"][0]["status"] == "RUNNING"
+        finally:
+            release.set()
+        deadline = time.monotonic() + 5
+        while time.monotonic() < deadline:
+            job = client.get(f"/api/jobs/{job_id}").json()
+            if job["status"] == "completed":
+                break
+            time.sleep(0.05)
+        assert job["status"] == "completed" and job["succeeded"] == 1
+
+
+def test_reindex_job_uses_existing_markdown_and_appears_in_tasks(tmp_path, sample_txt, monkeypatch) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client, sample_txt.open('rb') as handle:
+        assert client.post('/api/ingest', files=[('files', (sample_txt.name, handle, 'text/plain'))]).status_code == 202
+        source_id = client.get('/api/sources').json()[0]['source_id']
+        runtime = app.state.registry.get('default')
+        source = runtime.repository.update(source_id, pdf_platform_status='failed')
+        before = Path(source.local_md_path).read_text(encoding='utf-8')
+        revisions = runtime.repository.versions(source_id)
+        submissions = []
+        monkeypatch.setattr(runtime.dify, 'retry_document', lambda document_id, path, name: submissions.append(Path(path).read_text(encoding='utf-8')) or True)
+        monkeypatch.setattr('app.ingestion.document_to_markdown', lambda *args, **kwargs: (_ for _ in ()).throw(AssertionError('must not parse')))
+        response = client.post('/api/agents/default/reindex-jobs', json={'source_ids': [source_id, source_id]})
+        assert response.status_code == 202 and response.json()['total'] == 1
+        job_id = response.json()['job_id']
+        deadline = time.monotonic() + 5
+        while time.monotonic() < deadline:
+            job = client.get('/api/jobs/' + job_id).json()
+            if job['status'] == 'completed':
+                break
+            time.sleep(0.05)
+        assert job['succeeded'] == 1
+        assert submissions == [before]
+        assert runtime.repository.versions(source_id) == revisions
+        tasks = client.get('/api/tasks', params={'agent_id': 'default', 'task_type': 'document_reindex'}).json()
+        assert tasks['total'] == 1 and tasks['items'][0]['status'] == 'SUCCEEDED'
+
+
+def test_batch_delete_creates_persisted_task_and_checks_active_ingest(tmp_path, sample_txt) -> None:
+    app = create_app(offline_settings(tmp_path))
+    with TestClient(app) as client, sample_txt.open('rb') as handle:
+        assert client.post('/api/ingest', files=[('files', (sample_txt.name, handle, 'text/plain'))]).status_code == 202
+        source_id = client.get('/api/sources').json()[0]['source_id']
+        queued = client.post('/api/agents/default/ingest-jobs', json={'filenames': ['waiting.txt']}).json()
+        url = '/api/agents/default/sources/delete-batch'
+        assert client.post(url, json={'source_ids': [source_id]}).status_code == 409
+        assert client.post('/api/jobs/' + queued['job_id'] + '/cancel').status_code == 200
+        assert client.post(url, json={'source_ids': ['missing']}).status_code == 404
+        result = client.post(url, json={'source_ids': [source_id, source_id]})
+        assert result.status_code == 202 and result.json()['total'] == 1
+        tasks = client.get('/api/tasks', params={'agent_id': 'default', 'task_type': 'document_delete'}).json()
+        assert tasks['total'] == 1 and tasks['items'][0]['task_id'] == result.json()['job_id']
 
 
 def test_document_filters_stats_and_task_center_use_persisted_data(tmp_path, sample_txt) -> None:

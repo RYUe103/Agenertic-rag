@@ -1,6 +1,6 @@
 import { Button, Dropdown, Select, Tooltip, Typography } from '@douyinfe/semi-ui';
 import {
-  IconArticle, IconBriefcase, IconChevronDown, IconClear, IconCloud, IconExit,
+  IconArticle, IconBriefcase, IconChevronDown, IconCloud, IconExit,
   IconFile, IconHome, IconList, IconMoon, IconSearch, IconServer, IconSetting, IconSun, IconUpload,
 } from '@douyinfe/semi-icons';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
@@ -15,12 +15,20 @@ const navItems = [
   {to: '/tasks', label: '任务中心', icon: <IconList />},
   {to: '/knowledge', label: '知识库', icon: <IconArticle />},
   {to: '/qa', label: '问答检索', icon: <IconSearch />},
+  {to: '/tools', label: '工具中心', icon: <IconSetting />},
+  {to: '/integrations', label: 'AI 接入', icon: <IconCloud />},
+  {to: '/agent-runs', label: 'Agent 执行', icon: <IconList />},
+  {to: '/sandbox', label: 'Sandbox', icon: <IconServer />},
 ];
 
 const adminItems = [
   {to: '/agents', label: 'Agent 管理', icon: <IconBriefcase />},
   {to: '/models', label: '模型连接', icon: <IconCloud />},
   {to: '/capabilities', label: '平台能力', icon: <IconServer />},
+  {to: '/audit', label: '审计日志', icon: <IconList />, adminOnly: true},
+  {to: '/monitoring', label: '运行监控', icon: <IconServer />, adminOnly: true},
+  {to: '/access', label: '用户与权限', icon: <IconBriefcase />, adminOnly: true},
+  {to: '/organizations', label: '组织与租户', icon: <IconBriefcase />, adminOnly: true},
 ];
 
 const pageTitles: Record<string, [string, string]> = {
@@ -29,15 +37,23 @@ const pageTitles: Record<string, [string, string]> = {
   '/upload': ['上传文档', '批量提交文件，后台完成解析与索引'],
   '/tasks': ['任务中心', '跟踪入库、重试和删除任务'],
   '/knowledge': ['知识库', '管理知识连接、解析与分块策略'],
-  '/qa': ['问答检索', '使用当前 Agent 验证知识检索与引用'],
+  '/qa': ['问答检索', '检索当前知识库并查看引用'],
+  '/tools': ['工具中心', '查看和测试当前知识库授权的检索工具'],
+  '/integrations': ['AI 接入', '管理外部客户端及授权范围'],
+  '/agent-runs': ['Agent 执行', '查看问答与检索的执行记录'],
   '/agents': ['Agent 管理', '查看 Agent 的知识库与工具授权'],
   '/models': ['模型连接', '管理 Planner 与 Answer 模型链'],
   '/capabilities': ['平台能力', '已实现服务与后端接口缺口'],
+  '/audit': ['审计日志', '查看平台操作记录'],
+  '/sandbox': ['Sandbox', '配置受控代码执行与查看执行记录'],
+  '/monitoring': ['运行监控', '查看真实采集的 API、任务和 Agent 指标'],
+  '/access': ['用户与权限', '管理角色、权限和用户绑定'],
+  '/organizations': ['组织与租户', '管理组织、租户和成员关系'],
 };
 
 export function AppShell({onLogout}: {onLogout: () => void}) {
   const location = useLocation();
-  const {session, agents, activeAgentId, activeAgent, setActiveAgentId, loadingAgents} = usePlatform();
+  const {session, agents, activeAgentId, setActiveAgentId, loadingAgents} = usePlatform();
   const title = pageTitles[location.pathname] || pageTitles['/'];
   const [dark, setDark] = useState(localStorage.getItem('theme-mode') === 'dark');
 
@@ -59,7 +75,7 @@ export function AppShell({onLogout}: {onLogout: () => void}) {
           <div className="nav-group-label">工作台</div>
           {navItems.map(item => <NavLink key={item.to} to={item.to} end={item.to === '/'} aria-label={item.label} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>{item.icon}<span className="nav-label">{item.label}</span></NavLink>)}
           <div className="nav-group-label">配置与能力</div>
-          {adminItems.map(item => <NavLink key={item.to} to={item.to} aria-label={item.label} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>{item.icon}<span className="nav-label">{item.label}</span></NavLink>)}
+          {adminItems.filter(item => !item.adminOnly || session.is_admin).map(item => <NavLink key={item.to} to={item.to} aria-label={item.label} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>{item.icon}<span className="nav-label">{item.label}</span></NavLink>)}
         </nav>
         <div className="sidebar-footer">
           <Dropdown trigger="click" position="topLeft" render={
@@ -77,11 +93,10 @@ export function AppShell({onLogout}: {onLogout: () => void}) {
         <header className="topbar">
           <div className="page-heading"><Typography.Title heading={4}>{title[0]}</Typography.Title><Typography.Text type="tertiary">{title[1]}</Typography.Text></div>
           <div className="topbar-actions">
-            <span className="agent-label">当前 Agent</span>
-            <Select value={activeAgentId || undefined} loading={loadingAgents} onChange={value => setActiveAgentId(String(value))} className="agent-select" emptyContent="暂无 Agent">
+            <span className="agent-label">当前知识库</span>
+            <Select value={activeAgentId || undefined} loading={loadingAgents} onChange={value => setActiveAgentId(String(value))} className="agent-select" emptyContent="暂无知识库">
               {agents.map(agent => <Select.Option key={agent.agent_id} value={agent.agent_id}>{agent.name}</Select.Option>)}
             </Select>
-            <Tooltip content={activeAgent?.description || '当前 Agent 未配置描述'}><Button icon={<IconClear />} theme="borderless" aria-label="Agent 说明" /></Tooltip>
             <Tooltip content={dark ? '切换为浅色主题' : '切换为深色主题'}><Button icon={dark ? <IconSun /> : <IconMoon />} theme="borderless" onClick={() => setDark(value => !value)} aria-label="切换主题" /></Tooltip>
           </div>
         </header>

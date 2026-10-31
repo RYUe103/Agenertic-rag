@@ -13,6 +13,7 @@ from dotenv import dotenv_values
 from pydantic import BaseModel, Field, field_validator
 
 from app.agent import AgentService
+from app.supervisor import SupervisorService
 from app.clients.dify import DifyClient, MockDifyClient
 from app.clients.llm import LLMClient
 from app.clients.llm_pool import LLMModelPool
@@ -23,7 +24,7 @@ from app.config_store import ConfigStore, FileSecretStore, KeychainSecretStore, 
 from app.db import SourceRepository
 from app.ingestion import IngestionService
 from app.ocr import OcrProvider
-from app.mineru import MinerUClient
+from app.mineru import MinerUClient, MinerUCloudClient
 from app.qwenvl import QwenVLClient
 from app.retrieval import RetrievalTools
 from app.schemas import (
@@ -35,8 +36,9 @@ from app.schemas import (
 
 DEFAULT_TOOLS = [
     "vector_search", "grep_files", "keyword_search", "find_files", "search_within_document", "metadata_search",
-    "dify_metadata_search",
-    "read_full_document", "get_adjacent_chunks", "get_document_outline",
+    "dify_metadata_search", "search_bm25", "search_hybrid",
+    "read_full_document", "get_document", "read_document_section", "get_document_page", "get_document_table", "get_document_status", "get_adjacent_chunks", "get_document_outline",
+    "search_knowledge", "upload_document", "delete_document", "parse_document", "rebuild_document_index", "extract_table", "export_csv", "export_excel", "analyze_data",
 ]
 
 
@@ -78,7 +80,7 @@ class AgentRuntime:
     dify: object
     tools: RetrievalTools
     ingestion: IngestionService
-    agent: AgentService
+    agent: AgentService | SupervisorService
     owner_username: str = "sansuokb"
 
 
@@ -123,14 +125,17 @@ class AgentRegistry:
         else:
             self._migrate_legacy_planner_prompts()
         self._agents: dict[str, AgentRuntime] = {}
+        self._knowledge_runtimes: dict[str, AgentRuntime] = {}
         self.default_agent_id = ""
         self._rebuild()
 
     def get(self, agent_id: str) -> AgentRuntime:
         with self._lock:
-            if agent_id not in self._agents:
-                raise KeyError(agent_id)
-            return self._agents[agent_id]
+            if agent_id in self._agents:
+                return self._agents[agent_id]
+            if agent_id in self._knowledge_runtimes:
+                return self._knowledge_runtimes[agent_id]
+            raise KeyError(agent_id)
 
     def default(self) -> AgentRuntime:
         return self.get(self.default_agent_id)
@@ -145,7 +150,7 @@ class AgentRegistry:
 
     def runtimes(self) -> list[AgentRuntime]:
         with self._lock:
-            return list(self._agents.values())
+            return list(self._agents.values()) + list(self._knowledge_runtimes.values())
 
     def list_knowledge_bases(self, owner_username: str | None = None) -> list[KnowledgeBaseView]:
         default_prompt = LLMClient.DEFAULT_ANSWER_PROMPT
@@ -238,14 +243,45 @@ class AgentRegistry:
             update={"answer_prompt": LLMClient.DEFAULT_ANSWER_PROMPT}
         )
 
+    def create_knowledge_base(self, value: KnowledgeBaseInput, owner_username: str, owner_user_id: str) -> KnowledgeBaseView:
+        with self._lock:
+            try:
+                self.store.get_knowledge_base(value.knowledge_base_id)
+            except KeyError:
+                return self.save_knowledge_base(value, owner_username, owner_user_id)
+            raise ValueError("知识库 ID 已存在")
+
     def delete_knowledge_base(self, knowledge_base_id: str) -> None:
         self.store.delete_knowledge_base(knowledge_base_id)
+        self._rebuild()
 
     def save_agent(self, value: AgentConfigInput) -> AgentConfigView:
         validate_identifier(value.agent_id, "Agent")
         value.allowed_tools = validate_tools(value.allowed_tools)
         value.planner_model_ids = self._validate_model_ids(value.planner_model_ids, "Planner")
         value.answer_model_ids = self._validate_model_ids(value.answer_model_ids, "Answer")
+        value.member_agent_ids = list(dict.fromkeys(value.member_agent_ids))
+        configs = {item.agent_id: item for item in self.store.list_agents()}
+        configs[value.agent_id] = value
+        for supervisor in configs.values():
+            if supervisor.agent_type != "supervisor":
+                if supervisor.member_agent_ids:
+                    raise ValueError("只有 Supervisor 可以配置专业 Agent")
+                continue
+            if not supervisor.enabled:
+                continue
+            if not supervisor.member_agent_ids:
+                raise ValueError("启用的 Supervisor 至少需要一个专业 Agent")
+            if len(supervisor.member_agent_ids) > min(supervisor.max_tool_calls, supervisor.max_evidence_for_answer):
+                raise ValueError("Supervisor 的工具调用和证据上限不能小于成员数量")
+            for member_id in supervisor.member_agent_ids:
+                member = configs.get(member_id)
+                if not member or not member.enabled or member.agent_type == "supervisor" or member_id == supervisor.agent_id:
+                    raise ValueError("Supervisor 成员必须是已启用的专业 Agent")
+                if member.knowledge_base_id != supervisor.knowledge_base_id:
+                    raise ValueError("Supervisor 成员必须绑定同一知识库")
+                if not set(member.allowed_tools) & set(supervisor.allowed_tools):
+                    raise ValueError("Supervisor 与每个成员至少需要一个共同授权的工具")
         kb = self.store.get_knowledge_base(value.knowledge_base_id)
         if value.enabled and not bool(kb["enabled"]):
             raise ValueError("启用的 Agent 不能绑定已停用知识库")
@@ -264,6 +300,8 @@ class AgentRegistry:
         return result
 
     def delete_agent(self, agent_id: str) -> None:
+        if any(item.enabled and agent_id in item.member_agent_ids for item in self.store.list_agents()):
+            raise ValueError("该 Agent 仍被 Supervisor 使用，请先移除")
         self.store.delete_agent(agent_id)
         self._rebuild()
 
@@ -295,6 +333,37 @@ class AgentRegistry:
             configured_default = next((item.agent_id for item in enabled_configs if item.is_default and item.agent_id in built), None)
             self._agents = built
             self.default_agent_id = configured_default or next(iter(built))
+            shared_profile = built[self.default_agent_id].profile
+            self._knowledge_runtimes = {}
+            for kb_id, kb in kb_rows.items():
+                if bool(kb["enabled"]):
+                    runtime_id = f"@kb:{kb_id}"
+                    profile = shared_profile.model_copy(update={"agent_id": runtime_id, "knowledge_base_id": kb_id})
+                    self._knowledge_runtimes[runtime_id] = self._build_runtime(profile, kb)
+            configs = {item.agent_id: item for item in enabled_configs}
+            for runtime in [*self._agents.values(), *self._knowledge_runtimes.values()]:
+                if runtime.profile.agent_type == "supervisor":
+                    runtime.agent = self._build_supervisor(runtime, configs)
+
+    def _build_supervisor(self, runtime: AgentRuntime, configs: dict[str, AgentConfigView]) -> SupervisorService:
+        base = runtime.agent
+        assert isinstance(base, AgentService)
+        members = [configs[member_id] for member_id in runtime.profile.member_agent_ids]
+        budget = runtime.profile.max_tool_calls // len(members)
+        evidence_budget = runtime.profile.max_evidence_for_answer // len(members)
+        specialists = [AgentService(
+            runtime.tools, self._model_pool(member.planner_model_ids, "planner"),
+            min(member.max_tool_calls, budget), min(member.max_retrieval_rounds, runtime.profile.max_retrieval_rounds),
+            min(member.max_evidence_for_answer, evidence_budget), agent_id=member.agent_id, agent_name=member.name,
+            allowed_tools=[name for name in member.allowed_tools if name in base.allowed_tools],
+            planner_prompt=self._planner_prompt(member), metadata_fields=base.metadata_fields,
+            knowledge_base_id=base.knowledge_base_id, answer_prompt=base.answer_prompt,
+            glossary_documents=member.glossary_documents, answer_llm=self._model_pool(member.answer_model_ids, "answer"),
+        ) for member in members]
+        candidates = [{"id": member.agent_id, "name": member.name, "type": member.agent_type,
+                       "description": member.description} for member in members]
+        return SupervisorService(base, specialists, candidates, runtime.profile.supervisor_routing,
+                                 runtime.profile.supervisor_synthesis)
 
     def _build_runtime(self, profile: AgentConfigView, kb: dict[str, object]) -> AgentRuntime:
         data_dir = self.settings.app_data_dir if bool(kb["use_legacy_data"]) else self.settings.app_data_dir / "knowledge_bases" / str(kb["knowledge_base_id"])
@@ -320,11 +389,14 @@ class AgentRegistry:
         if parser_mode == "mineru" or (parser_mode == "default" and self.settings.mineru_enabled):
             if not self.settings.mineru_url:
                 raise ValueError(f"知识库 {kb['knowledge_base_id']} 选择了 MinerU，但 MINERU_URL 未配置")
-            mineru = MinerUClient(
-                self.settings.mineru_url, self.settings.mineru_timeout_seconds,
-                self.settings.mineru_return_content_list, self.settings.mineru_return_images,
-                self.settings.mineru_fallback_on_error,
-            )
+            if self.settings.mineru_cloud_enabled or self.settings.mineru_url.rstrip('/').endswith('mineru.net/api'):
+                mineru = MinerUCloudClient(self.settings.mineru_url, self.settings.mineru_api_key, self.settings.mineru_timeout_seconds)
+            else:
+                mineru = MinerUClient(
+                    self.settings.mineru_url, self.settings.mineru_timeout_seconds,
+                    self.settings.mineru_return_content_list, self.settings.mineru_return_images,
+                    self.settings.mineru_fallback_on_error,
+                )
         vision = None
         if parser_mode == "qwenvl":
             vision = QwenVLClient(
@@ -341,6 +413,7 @@ class AgentRegistry:
             [api_key, self._source_platform_key(str(kb["knowledge_base_id"])), self.settings.pdf_platform_api_key,
              self.store.secrets.get(f"{kb['knowledge_base_id']}:qwenvl")], self.ocr,
             planner_llm, metadata_fields, bool(kb.get("metadata_ai_enabled", 1)), str(kb.get("metadata_extraction_prompt") or ""), workflow, mineru, vision,
+            str(kb.get('chunking_mode') or ''), int(kb.get('chunk_max_tokens') or 0) or None, str(kb.get('embedding_model') or ''),
         )
         agent = AgentService(
             tools, planner_llm, profile.max_tool_calls, profile.max_retrieval_rounds,

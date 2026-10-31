@@ -7,6 +7,7 @@ import json
 import secrets
 import time
 from dataclasses import dataclass
+from typing import Any
 
 
 @dataclass(frozen=True)
@@ -14,6 +15,12 @@ class AuthenticatedUser:
     username: str
     is_admin: bool = False
     auth_source: str = "local"
+
+
+@dataclass(frozen=True)
+class LdapAuthentication:
+    username: str
+    groups: tuple[str, ...] = ()
 
 
 def hash_password(password: str, iterations: int = 310_000) -> str:
@@ -87,7 +94,9 @@ class LdapAuthenticator:
 
     def __init__(self, enabled: bool, server_url: str, user_dn_template: str = "",
                  bind_dn: str = "", bind_password: str = "", timeout: float = 5.0,
-                 base_dn: str = "", user_filter: str = "(uid={username})"):
+                 base_dn: str = "", user_filter: str = "(uid={username})",
+                 group_base_dn: str = "", group_filter: str = "(member={user_dn})",
+                 group_attribute: str = "cn"):
         self.enabled = enabled
         self.server_url = server_url.strip()
         self.user_dn_template = user_dn_template.strip()
@@ -96,23 +105,58 @@ class LdapAuthenticator:
         self.timeout = timeout
         self.base_dn = base_dn.strip()
         self.user_filter = user_filter or "(uid={username})"
+        self.group_base_dn = group_base_dn.strip()
+        self.group_filter = group_filter or "(member={user_dn})"
+        self.group_attribute = group_attribute.strip() or "cn"
 
     def authenticate(self, username: str, password: str) -> bool:
+        return self.authenticate_with_groups(username, password) is not None
+
+    def authenticate_with_groups(self, username: str, password: str) -> LdapAuthentication | None:
         if not self.enabled or not self.server_url or not username or not password:
-            return False
+            return None
         try:
             import ldap3
+            from ldap3.utils.conv import escape_filter_chars
+            from ldap3.utils.dn import escape_rdn
             server = ldap3.Server(self.server_url, connect_timeout=self.timeout, get_info=ldap3.NONE)
-            user_dn = self.user_dn_template.format(username=username) if self.user_dn_template else username
+            user_dn = self.user_dn_template.format(username=escape_rdn(username)) if self.user_dn_template else username
             if self.bind_dn and self.base_dn:
                 search = ldap3.Connection(server, user=self.bind_dn, password=self.bind_password, receive_timeout=self.timeout, auto_bind=False)
                 if not search.bind():
-                    return False
-                search.search(self.base_dn, self.user_filter.format(username=username), attributes=["entryDN"])
-                if not search.entries:
-                    return False
-                user_dn = str(search.entries[0].entry_dn)
+                    return None
+                search.search(self.base_dn, self.user_filter.format(username=escape_filter_chars(username)), attributes=["entryDN", "memberOf"])
+                if len(search.entries) != 1:
+                    return None
+                entry = search.entries[0]
+                user_dn = str(entry.entry_dn)
+                groups = self._entry_groups(entry)
+                if self.group_base_dn:
+                    group_filter = self.group_filter.format(user_dn=escape_filter_chars(user_dn), username=escape_filter_chars(username))
+                    search.search(self.group_base_dn, group_filter, attributes=[self.group_attribute])
+                    for group_entry in search.entries:
+                        groups.extend(self._entry_groups(group_entry, self.group_attribute))
+            else:
+                groups = []
             connection = ldap3.Connection(server, user=user_dn, password=password, receive_timeout=self.timeout, auto_bind=False)
-            return bool(connection.bind())
+            return LdapAuthentication(username, tuple(dict.fromkeys(groups))) if connection.bind() else None
         except Exception:
-            return False
+            return None
+
+    @staticmethod
+    def _entry_groups(entry: Any, attribute: str = "memberOf") -> list[str]:
+        try:
+            raw = entry.entry_attributes_as_dict.get(attribute, [])
+        except Exception:
+            raw = []
+        if isinstance(raw, str):
+            raw = [raw]
+        result = []
+        for value in raw or []:
+            text = str(value).strip()
+            if not text:
+                continue
+            if attribute.casefold() == "memberof":
+                text = text.split(",", 1)[0].split("=", 1)[-1]
+            result.append(text)
+        return result

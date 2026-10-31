@@ -22,6 +22,28 @@ CHINESE_HEADING = re.compile(r"^([一二三四五六七八九十百]+、\s*.+)$"
 NUMBERED_HEADING = re.compile(r"^(\d+(?:\.\d+)*\.?)(?:\s+(.+))?$")
 
 
+def locate_exact_segment(markdown: str, content: str) -> tuple[int | None, str | None]:
+    """Locate a segment only when its text appears exactly once in the parsed document."""
+    needle = content.strip()
+    if not needle:
+        return None, None
+    position = markdown.find(needle)
+    if position < 0 or markdown.find(needle, position + 1) >= 0:
+        return None, None
+    page = None
+    headings: dict[int, str] = {}
+    for line in markdown[:position].splitlines():
+        marker = PAGE_MARKER.search(line)
+        if marker:
+            page = int(marker.group(1))
+        match = re.match(r"^(#{1,6})\s+(.+?)\s*#*$", line)
+        if match:
+            level = len(match.group(1))
+            headings = {key: value for key, value in headings.items() if key < level}
+            headings[level] = match.group(2)
+    return (None if PAGE_MARKER.search(needle) else page), " / ".join(headings.values()) or None
+
+
 class RetrievalTools:
     def __init__(self, repository: SourceRepository, dify: object, grep_timeout: float = 5.0):
         self.repository = repository
@@ -393,6 +415,56 @@ class RetrievalTools:
         line_count = max(1, len(content.splitlines()))
         return self._evidence(source, content, "local_full_document", 1, line_count, None, "全文")
 
+    def get_document(self, source_id: str, max_chars: int = 30000) -> Evidence:
+        return self.read_full_document(source_id, max_chars)
+
+    def get_document_page(self, source_id: str, page: int, max_chars: int = 6000) -> list[Evidence]:
+        return self.read_pages(source_id, [page], max_chars)
+
+    def read_document_section(self, source_id: str, heading: str, max_chars: int = 12000) -> Evidence:
+        source = self.repository.get(source_id)
+        path = Path(source.local_md_path)
+        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
+        needle = heading.strip().casefold()
+        start = next((index for index, line in enumerate(lines) if line.lstrip('# ').strip().casefold() == needle), None)
+        if start is None:
+            return self._evidence(source, "", "document_section")
+        level = len(lines[start]) - len(lines[start].lstrip('#')) if lines[start].lstrip().startswith('#') else 99
+        end = len(lines)
+        for index in range(start + 1, len(lines)):
+            line = lines[index]
+            if line.lstrip().startswith('#') and len(line) - len(line.lstrip('#')) <= level:
+                end = index
+                break
+        return self._evidence(source, "\n".join(lines[start:end])[:max_chars], "document_section", start + 1, end, None, heading)
+
+    def get_document_table(self, source_id: str, table_index: int = 0, max_chars: int = 12000) -> Evidence:
+        source = self.repository.get(source_id)
+        lines = Path(source.local_md_path).read_text(encoding="utf-8", errors="replace").splitlines()
+        tables: list[list[str]] = []
+        index = 0
+        while index < len(lines) - 1:
+            separator = lines[index + 1].replace('|', '').replace(':', '').replace('-', '').replace(' ', '')
+            if '|' in lines[index] and '|' in lines[index + 1] and not separator:
+                rows = [lines[index], lines[index + 1]]
+                index += 2
+                while index < len(lines) and '|' in lines[index] and lines[index].strip():
+                    rows.append(lines[index]); index += 1
+                tables.append(rows)
+            else:
+                index += 1
+        content = '\n'.join(tables[table_index])[:max_chars] if 0 <= table_index < len(tables) else ''
+        return self._evidence(source, content, "document_table")
+
+    def extract_table(self, source_id: str, table_index: int = 0, max_chars: int = 12000) -> Evidence:
+        return self.get_document_table(source_id, table_index, max_chars)
+
+    def get_document_status(self, source_id: str) -> dict[str, object]:
+        source = self.repository.get(source_id)
+        return {"source_id": source.source_id, "filename": source.filename, "status": source.status,
+                "parse_status": source.parse_status, "dify_status": source.dify_status,
+                "file_size": source.file_size, "page_count": source.page_count}
+
     def search_within_document(self, source_id: str, query: str, limit: int = 30) -> list[Evidence]:
         keywords = self._query_terms(query)
         return self.grep_files(keywords, [source_id], True, False, min(max(limit, 1), 100))
@@ -646,6 +718,39 @@ class RetrievalTools:
                     source, hit.content, "vector", score=hit.score, segment_id=hit.segment_id
                 ))
         return evidences[:requested_top_k]
+
+    def search_bm25(
+        self, query: str, top_k: int = 10,
+        metadata_filtering_conditions: dict[str, object] | None = None,
+    ) -> list[Evidence]:
+        return self._dify_mode_search(query, top_k, metadata_filtering_conditions, "full_text_search", "bm25")
+
+    def search_hybrid(
+        self, query: str, top_k: int = 10,
+        metadata_filtering_conditions: dict[str, object] | None = None,
+    ) -> list[Evidence]:
+        return self._dify_mode_search(query, top_k, metadata_filtering_conditions, "hybrid_search", "hybrid")
+
+    def search_knowledge(
+        self, query: str, top_k: int = 10,
+        metadata_filtering_conditions: dict[str, object] | None = None,
+    ) -> list[Evidence]:
+        return self.search_hybrid(query, top_k, metadata_filtering_conditions)
+
+    def _dify_mode_search(
+        self, query: str, top_k: int, conditions: dict[str, object] | None, method: str, retrieval_type: str,
+    ) -> list[Evidence]:
+        limit = min(max(top_k, 1), 50)
+        hits = self.dify.retrieve(query, limit, conditions, search_method=method)
+        results = []
+        for hit in hits:
+            source = self.repository.by_dify_document(hit.document_id) if hit.document_id else None
+            if source is None and hit.document_name:
+                candidates = self.find_files(hit.document_name, 1)
+                source = candidates[0] if candidates else None
+            if source is not None:
+                results.append(self._evidence(source, hit.content, retrieval_type, score=hit.score, segment_id=hit.segment_id))
+        return results[:limit]
 
     def dify_metadata_search(
         self,

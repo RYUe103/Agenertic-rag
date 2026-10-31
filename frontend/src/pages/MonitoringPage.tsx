@@ -1,0 +1,19 @@
+import { useEffect, useState } from 'react';
+import { Button, Card, Table, Tag, Toast, Typography } from '@douyinfe/semi-ui';
+import { IconRefresh } from '@douyinfe/semi-icons';
+import { api } from '../api/client';
+import { formatDate } from '../utils/format';
+
+interface Monitoring {request_count: number; items: {method: string; path: string; calls: number; avg_ms: number; failures: number; last_called_at: string}[]; queue: {running: number; pending: number; failed: number}; tool_calls: {calls: number; succeeded: number; failed: number; avg_duration_ms: number}; agent_runs: {runs: number; succeeded: number; failed: number; avg_duration_ms: number}; sandbox_resources: {status: string; message?: string; cpu_percent_peak?: number; memory_bytes_peak?: number; pids_peak?: number};}
+
+export function MonitoringPage() {
+  const [data, setData] = useState<Monitoring | null>(null);
+  const [loading, setLoading] = useState(false);
+  async function load() { setLoading(true); try { setData(await api<Monitoring>('/api/admin/monitoring')); } catch (error) { Toast.error(error instanceof Error ? error.message : '监控数据加载失败'); } finally { setLoading(false); } }
+  useEffect(() => {void load();}, []);
+  return <div className="page-stack"><section className="toolbar-row"><Typography.Text type="tertiary">仅展示后端实际采集的数据，不使用模拟指标。</Typography.Text><Button icon={<IconRefresh />} loading={loading} onClick={() => void load()}>刷新</Button></section>
+    {data && <><section className="metric-grid"><Card><Typography.Text type="tertiary">API 请求</Typography.Text><Typography.Title heading={3}>{data.request_count}</Typography.Title></Card><Card><Typography.Text type="tertiary">Agent 执行</Typography.Text><Typography.Title heading={3}>{data.agent_runs.runs}</Typography.Title><Typography.Text type="tertiary">平均 {Math.round(data.agent_runs.avg_duration_ms)} ms</Typography.Text></Card><Card><Typography.Text type="tertiary">工具调用</Typography.Text><Typography.Title heading={3}>{data.tool_calls.calls}</Typography.Title><Typography.Text type="tertiary">失败 {data.tool_calls.failed}</Typography.Text></Card><Card><Typography.Text type="tertiary">任务队列</Typography.Text><Typography.Title heading={3}>{data.queue.running}</Typography.Title><Typography.Text type="tertiary">运行中 / 待处理 {data.queue.pending}</Typography.Text></Card></section>
+    <section className="content-section"><Typography.Title heading={5}>Sandbox 资源</Typography.Title>{data.sandbox_resources.status === 'collected' ? <Typography.Text type="tertiary">CPU 峰值 {data.sandbox_resources.cpu_percent_peak?.toFixed(1)}% · 内存峰值 {Math.round((data.sandbox_resources.memory_bytes_peak || 0) / 1024 / 1024)} MB · 进程峰值 {data.sandbox_resources.pids_peak}</Typography.Text> : <><Tag color="grey">未采集</Tag><Typography.Text type="tertiary"> {data.sandbox_resources.message}</Typography.Text></>}</section>
+    <section className="content-section flush-section"><div className="section-heading"><Typography.Title heading={5}>API 调用明细</Typography.Title></div><Table dataSource={data.items} rowKey="path" pagination={false} empty="暂无请求指标"><Table.Column title="方法" dataIndex="method" width={90} /><Table.Column title="路径" dataIndex="path" /><Table.Column title="调用次数" dataIndex="calls" width={110} /><Table.Column title="平均耗时" dataIndex="avg_ms" width={120} render={value => `${Math.round(Number(value))} ms`} /><Table.Column title="失败次数" dataIndex="failures" width={110} /><Table.Column title="最近调用" dataIndex="last_called_at" width={190} render={value => formatDate(String(value))} /></Table></section></>}
+  </div>;
+}

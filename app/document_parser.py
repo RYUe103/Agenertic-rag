@@ -38,32 +38,32 @@ def document_to_markdown(
     path: Path, document_type: str, ocr: OcrProvider | None = None, mineru: MinerUClient | None = None,
     vision: QwenVLClient | None = None, artifact_dir: Path | None = None,
 ) -> tuple[str, dict[str, object]]:
-    if document_type == "pdf":
-        if vision is not None:
-            return vision.parse(path, artifact_dir or path.parent)
-        if mineru is not None:
-            try:
-                markdown, metadata = mineru.parse(path, artifact_dir or path.parent)
-                return markdown, metadata
-            except Exception as exc:
-                if not mineru.fallback_on_error:
-                    raise RuntimeError(f"MinerU 解析失败且已禁止本地回退：{exc}") from exc
-                # Keep the local parser/OCR fallback available when MinerU is unavailable.
-                fallback_markdown, empty_pages = pdf_to_markdown(path, ocr)
-                metadata = {
-                    "parser_engine": "local_fallback", "parser_requested": "mineru",
-                    "pages_without_text": empty_pages, "mineru_error": str(exc)[:500],
-                }
-                return fallback_markdown, metadata
-        markdown, empty_pages = pdf_to_markdown(path, ocr)
-        return markdown, {"parser_engine": "local", "parser_requested": "local", "pages_without_text": empty_pages}
-    if document_type == "docx":
-        return docx_to_markdown(path), {}
-    if document_type == "doc":
-        return doc_to_markdown(path), {"converted_for_parsing": "docx"}
-    if document_type == "txt":
-        return txt_to_markdown(path), {"text_encoding": detect_text_encoding(path)}
-    raise ValueError(f"不支持的文档类型：{document_type}")
+    if vision is not None and document_type == "pdf":
+        return vision.parse(path, artifact_dir or path.parent)
+
+    def local_parse() -> tuple[str, dict[str, object]]:
+        if document_type == "pdf":
+            markdown, empty_pages = pdf_to_markdown(path, ocr)
+            return markdown, {"parser_engine": "local", "parser_requested": "local", "pages_without_text": empty_pages}
+        if document_type == "docx":
+            return docx_to_markdown(path), {"parser_engine": "local", "parser_requested": "local"}
+        if document_type == "doc":
+            return doc_to_markdown(path), {"parser_engine": "local", "parser_requested": "local", "converted_for_parsing": "docx"}
+        if document_type == "txt":
+            return txt_to_markdown(path), {"parser_engine": "local", "parser_requested": "local", "text_encoding": detect_text_encoding(path)}
+        raise ValueError(f"不支持的文档类型：{document_type}")
+
+    if mineru is not None:
+        try:
+            markdown, metadata = mineru.parse(path, artifact_dir or path.parent)
+            return markdown, metadata
+        except Exception as exc:
+            if not mineru.fallback_on_error:
+                raise RuntimeError(f"MinerU 解析失败且已禁止本地回退：{exc}") from exc
+            fallback_markdown, fallback_metadata = local_parse()
+            fallback_metadata.update({"parser_engine": "local_fallback", "parser_requested": "mineru", "mineru_error": str(exc)[:500]})
+            return fallback_markdown, fallback_metadata
+    return local_parse()
 
 
 def detect_text_encoding(path: Path) -> str:

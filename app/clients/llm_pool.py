@@ -95,6 +95,9 @@ class LLMModelPool:
     def plan(self, question: str, available_tools: list[str], planner_prompt: str = "") -> ToolCall | None:
         return self._call("plan", question, available_tools, planner_prompt, retry_on_none=True)
 
+    def route_specialists(self, question: str, candidates: list[dict[str, str]]) -> list[str] | None:
+        return self._call("route_specialists", question, candidates, retry_on_none=True)
+
     def answer(self, question: str, evidences: list[Evidence], answer_prompt: str = "") -> str:
         return self._call("answer", question, evidences, answer_prompt)
 

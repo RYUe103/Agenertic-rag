@@ -16,6 +16,14 @@ const QaPage = lazy(() => import('./pages/QaPage').then(module => ({default: mod
 const AgentsPage = lazy(() => import('./pages/AgentsPage').then(module => ({default: module.AgentsPage})));
 const ModelsPage = lazy(() => import('./pages/ModelsPage').then(module => ({default: module.ModelsPage})));
 const CapabilitiesPage = lazy(() => import('./pages/CapabilitiesPage').then(module => ({default: module.CapabilitiesPage})));
+const ToolsPage = lazy(() => import('./pages/ToolsPage').then(module => ({default: module.ToolsPage})));
+const IntegrationsPage = lazy(() => import('./pages/IntegrationsPage').then(module => ({default: module.IntegrationsPage})));
+const AgentRunsPage = lazy(() => import('./pages/AgentRunsPage').then(module => ({default: module.AgentRunsPage})));
+const AuditPage = lazy(() => import('./pages/AuditPage').then(module => ({default: module.AuditPage})));
+const SandboxPage = lazy(() => import('./pages/SandboxPage').then(module => ({default: module.SandboxPage})));
+const MonitoringPage = lazy(() => import('./pages/MonitoringPage').then(module => ({default: module.MonitoringPage})));
+const AccessPage = lazy(() => import('./pages/AccessPage').then(module => ({default: module.AccessPage})));
+const OrganizationsPage = lazy(() => import('./pages/OrganizationsPage').then(module => ({default: module.OrganizationsPage})));
 
 export function App() {
   const [session, setSession] = useState<Session | null>(null);
@@ -24,7 +32,7 @@ export function App() {
   useEffect(() => {
     api<Session>('/api/auth/session')
       .then(setSession)
-      .catch(() => setSession({authenticated: false, username: '', is_admin: false}))
+      .catch(() => setSession({authenticated: false, username: '', is_admin: false, permissions: []}))
       .finally(() => setLoading(false));
   }, []);
 
@@ -44,6 +52,14 @@ export function App() {
           <Route path="agents" element={<AgentsPage />} />
           <Route path="models" element={<ModelsPage />} />
           <Route path="capabilities" element={<CapabilitiesPage />} />
+          <Route path="tools" element={<ToolsPage />} />
+          <Route path="integrations" element={<IntegrationsPage />} />
+          <Route path="agent-runs" element={<AgentRunsPage />} />
+          <Route path="audit" element={session.is_admin ? <AuditPage /> : <Navigate to="/" replace />} />
+          <Route path="sandbox" element={<SandboxPage />} />
+          <Route path="monitoring" element={session.is_admin ? <MonitoringPage /> : <Navigate to="/" replace />} />
+          <Route path="access" element={session.is_admin ? <AccessPage /> : <Navigate to="/" replace />} />
+          <Route path="organizations" element={session.is_admin ? <OrganizationsPage /> : <Navigate to="/" replace />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Route>
       </Routes></Suspense>

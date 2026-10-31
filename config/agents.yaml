@@ -17,7 +17,18 @@ agents:
       - search_within_document
       - metadata_search
       - dify_metadata_search
+      - search_bm25
+      - search_hybrid
       - read_full_document
+      - get_document
+      - read_document_section
+      - get_document_page
+      - get_document_table
+      - extract_table
+      - export_csv
+      - export_excel
+      - analyze_data
+      - get_document_status
       - get_adjacent_chunks
       - get_document_outline
     max_tool_calls: 6
