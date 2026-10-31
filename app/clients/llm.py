@@ -307,6 +307,45 @@ class LLMClient:
         if isinstance(exc, LLMRequestError):
             raise exc
 
+    def react(self, messages, tools, max_tokens=2000):
+        """Native tool calling, retaining assistant/tool turns (no fixed planner)."""
+        from langchain_core.messages import AIMessage
+        from langchain_core.messages.utils import convert_to_openai_messages
+        wire = convert_to_openai_messages(messages)
+        if self.api_style == 'responses':
+            inputs = []
+            for message in wire:
+                if message['role'] == 'tool':
+                    inputs.append({'type':'function_call_output','call_id':message['tool_call_id'],'output':message['content']})
+                else:
+                    if message.get('content'):
+                        inputs.append({'role':message['role'],'content':message['content']})
+                    for call in message.get('tool_calls',[]):
+                        inputs.append({'type':'function_call','call_id':call['id'],**call['function']})
+            response=self._post('/v1/responses',dict(model=self.model,input=inputs,
+                tools=[{'type':'function',**t['function']} for t in tools],max_output_tokens=max_tokens))
+            calls=[{'id':i['call_id'],'function':{'name':i['name'],'arguments':i['arguments']}}
+                   for i in response.get('output',[]) if i.get('type')=='function_call']
+            content=''.join(c.get('text','') for i in response.get('output',[]) for c in i.get('content',[])
+                            if c.get('type')=='output_text')
+        else:
+            body=dict(model=self.model,messages=wire,temperature=0,max_tokens=max_tokens)
+            if tools: body.update(tools=tools,tool_choice='auto')
+            response=self._post('/v1/chat/completions',body)
+            message=response['choices'][0]['message'];content=message.get('content') or ''
+            calls=message.get('tool_calls',[])
+        valid, invalid=[],[]
+        for call in calls:
+            f=call['function']
+            try:
+                args=json.loads(f.get('arguments') or '{}')
+                if not isinstance(args,dict): raise ValueError()
+                valid.append(dict(id=call['id'],name=f['name'],args=args,type='tool_call'))
+            except (ValueError,TypeError):
+                invalid.append(dict(id=call.get('id'),name=f.get('name'),args=f.get('arguments'),error='invalid_json'))
+        return AIMessage(content=content,tool_calls=valid,invalid_tool_calls=invalid,
+                         response_metadata={'model':self.model,'usage':response.get('usage',{})})
+
     def extract_metadata(
         self,
         filename: str,

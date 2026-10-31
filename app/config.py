@@ -44,6 +44,12 @@ class Settings(BaseSettings):
     agent_max_tool_calls: int = 6
     agent_max_retrieval_rounds: int = 3
     agent_max_evidence_for_answer: int = 12
+    agent_max_iterations: int = Field(default=12, ge=1, le=60)
+    agent_total_seconds: float = Field(default=180, ge=1, le=1800)
+    agent_tool_seconds: float = Field(default=30, ge=.05, le=120)
+    agent_context_chars: int = Field(default=48000, ge=1000, le=200000)
+    agent_output_chars: int = Field(default=16000, ge=500, le=50000)
+    agent_consecutive_failures: int = Field(default=3, ge=1, le=10)
     request_timeout_seconds: float = 30.0
     grep_timeout_seconds: float = 5.0
     auth_enabled: bool = True

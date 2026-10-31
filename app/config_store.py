@@ -176,6 +176,10 @@ class ConfigStore:
             connection.executescript(CONTROL_SCHEMA)
             columns = {row[1] for row in connection.execute("PRAGMA table_info(knowledge_bases)").fetchall()}
             agent_columns = {row[1] for row in connection.execute("PRAGMA table_info(agents)").fetchall()}
+            if 'runtime_mode' not in agent_columns:
+                connection.execute("ALTER TABLE agents ADD COLUMN runtime_mode TEXT NOT NULL DEFAULT 'legacy'")
+            if 'react_tools' not in agent_columns:
+                connection.execute("ALTER TABLE agents ADD COLUMN react_tools TEXT")
             if "planner_prompt_custom" not in agent_columns:
                 connection.execute("ALTER TABLE agents ADD COLUMN planner_prompt_custom INTEGER NOT NULL DEFAULT 0")
             if "glossary_documents" not in agent_columns:
@@ -461,6 +465,8 @@ class ConfigStore:
             )
             connection.execute("UPDATE agents SET agent_type=?,member_agent_ids=?,supervisor_routing=?,supervisor_synthesis=? WHERE agent_id=?",
                                (value.agent_type, json.dumps(value.member_agent_ids), value.supervisor_routing, value.supervisor_synthesis, value.agent_id))
+            connection.execute('UPDATE agents SET runtime_mode=?,react_tools=? WHERE agent_id=?',
+                               (value.runtime_mode,json.dumps(value.react_tools),value.agent_id))
             default_count = connection.execute("SELECT COUNT(*) FROM agents WHERE is_default = 1").fetchone()[0]
             if not default_count:
                 connection.execute("UPDATE agents SET is_default = 1 WHERE agent_id = ?", (value.agent_id,))
@@ -537,6 +543,8 @@ class ConfigStore:
             agent_id=str(row["agent_id"]), name=str(row["name"]), description=str(row["description"]),
             knowledge_base_id=str(row["knowledge_base_id"]), planner_prompt=str(row["planner_prompt"]),
             agent_type=str(row.get("agent_type") or "knowledge"),
+            runtime_mode=str(row.get('runtime_mode') or 'legacy'),
+            **({'react_tools':json.loads(str(row['react_tools']))} if row.get('react_tools') is not None else {}),
             member_agent_ids=json.loads(str(row.get("member_agent_ids") or "[]")),
             supervisor_routing=str(row.get("supervisor_routing") or "all"),
             supervisor_synthesis=str(row.get("supervisor_synthesis") or "separate"),

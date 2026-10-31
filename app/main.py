@@ -646,6 +646,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         if settings.v2_rerank_url and settings.v2_rerank_model and not settings.app_mock_external_services else None)
     app.include_router(retrieval_router(authorize_document_read, lambda request:user_id(current_user(request)),
         authorize_v2_tool, tool_configs, tool_calls, tool_approvals, v2_reranker))
+    from app.agent_v2.api import AgentAPI, RunRequest as ReActRequest
+    def react_authorize_read(request,agent_id):
+        if settings.auth_enabled and current_user(request).auth_source!='api_key':
+            fresh=sessions.user(request.cookies.get(sessions.cookie_name))
+            if fresh is None or user_id(fresh)!=user_id(current_user(request)):
+                raise PermissionError('session_expired')
+        return authorize_document_read(request,agent_id)
+    react_api=AgentAPI(settings,registry,react_authorize_read,lambda request:user_id(current_user(request)),
+        authorize_v2_tool,tool_configs,tool_calls,tool_approvals,ask_concurrency,v2_reranker)
+    app.include_router(react_api.router())
 
     @app.get("/api/agents", response_model=list[AgentSummary])
     def list_agents(request: Request) -> list[AgentSummary]:
@@ -1236,6 +1246,20 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(409, str(exc)) from None
 
     async def execute_agent(agent_runtime: AgentRuntime, value: AskRequest, http_request: Request, operation: str, approved_approval_id: str | None = None, integration: dict | None = None) -> AskResponse | RetrievalResponse:
+        if agent_runtime.profile.agent_type=='supervisor' and any(
+            registry.get(member).profile.runtime_mode=='react_v2' for member in agent_runtime.profile.member_agent_ids):
+            raise HTTPException(409,'当前 Supervisor 使用 legacy 成员执行；react_v2 成员请通过独立入口调用')
+        if (value.runtime_mode or agent_runtime.profile.runtime_mode)=='react_v2':
+            if integration is not None or operation!='ask':
+                raise HTTPException(409,'此入口暂仅支持 legacy；react_v2 请使用已认证的 Agent API')
+            runtime_v2=react_api.prepare(http_request,ReActRequest(agent_id=agent_runtime.profile.agent_id,
+                question=value.question,conversation_id=value.conversation_id))
+            result=await react_api.execute(runtime_v2,question=value.question,conversation=value.conversation_id)
+            if result['status']=='waiting_approval':
+                pending=next(e for e in reversed(result['events']) if e['type']=='approval_required')
+                raise HTTPException(409,{'message':'Agent 等待人工审批','runtime_mode':'react_v2',
+                    'thread_id':result['thread_id'],'run_id':result['run_id'],'approval_id':pending['approval_id']})
+            return react_api.legacy_response(result,agent_runtime.profile)
         owner = user_id(current_user(http_request))
         kb_id = agent_runtime.profile.knowledge_base_id
         conversation_key = json.dumps([owner, kb_id, value.conversation_id], ensure_ascii=True, separators=(",", ":"))

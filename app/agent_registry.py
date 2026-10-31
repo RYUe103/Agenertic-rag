@@ -256,6 +256,8 @@ class AgentRegistry:
         self._rebuild()
 
     def save_agent(self, value: AgentConfigInput) -> AgentConfigView:
+        if value.agent_type=='supervisor' and value.runtime_mode=='react_v2':
+            raise ValueError('Supervisor 保持 legacy，请单独调用 ReAct Agent')
         validate_identifier(value.agent_id, "Agent")
         value.allowed_tools = validate_tools(value.allowed_tools)
         value.planner_model_ids = self._validate_model_ids(value.planner_model_ids, "Planner")

@@ -44,3 +44,22 @@ export function queryString(values: Record<string, string | number | undefined |
   const value = params.toString();
   return value ? `?${value}` : '';
 }
+
+export async function agentStream(path: string, body: unknown, receive: (event: Record<string, any>) => void): Promise<void> {
+  const response = await fetch(path, {method: 'POST', credentials: 'same-origin',
+    headers: {'Content-Type': 'application/json'}, body: body === undefined ? undefined : JSON.stringify(body)});
+  if (!response.ok || !response.body) throw new ApiError(`Agent 请求失败（${response.status}）`, response.status);
+  const reader = response.body.getReader(); const decoder = new TextDecoder(); let buffer = '';
+  try {
+    for (;;) {
+      const {value, done} = await reader.read();
+      buffer += decoder.decode(value, {stream: !done});
+      let end: number;
+      while ((end = buffer.indexOf('\n\n')) >= 0) {
+        const frame = buffer.slice(0, end); buffer = buffer.slice(end + 2);
+        if (frame.startsWith('data: ')) receive(JSON.parse(frame.slice(6)));
+      }
+      if (done) break;
+    }
+  } finally { reader.releaseLock(); }
+}

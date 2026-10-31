@@ -101,6 +101,9 @@ class LLMModelPool:
     def answer(self, question: str, evidences: list[Evidence], answer_prompt: str = "") -> str:
         return self._call("answer", question, evidences, answer_prompt)
 
+    def react(self, messages, tools, max_tokens=2000):
+        return self._call('react', messages, tools, max_tokens)
+
     def expand_query_with_glossary(self, question: str, documents: list[GlossaryDocument]) -> dict[str, Any] | None:
         return self._call("expand_query_with_glossary", question, documents)
 

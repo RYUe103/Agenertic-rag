@@ -87,6 +87,7 @@ class AskRequest(BaseModel):
     question: str = Field(min_length=1, max_length=4000)
     conversation_id: str = Field(default="default", min_length=1, max_length=120)
     history: list[AskHistoryMessage] = Field(default_factory=list, max_length=12)
+    runtime_mode: Literal['legacy','react_v2'] | None = None
 
 
 class RetrievalTestRequest(BaseModel):
@@ -127,6 +128,8 @@ class AskResponse(BaseModel):
     tool_calls: int
     evidence_insufficient: bool = False
     sources: list[RetrievalSource] = Field(default_factory=list)
+    runtime_mode: str = 'legacy'
+    thread_id: str | None = None
 
 
 class RetrievalResponse(BaseModel):
@@ -362,6 +365,17 @@ class AgentConfigInput(BaseModel):
     description: str = Field(default="", max_length=500)
     knowledge_base_id: str
     agent_type: Literal["knowledge", "research", "data_analysis", "coding", "supervisor"] = "knowledge"
+    runtime_mode: Literal['legacy','react_v2'] = 'legacy'
+    react_tools: list[str] = Field(default_factory=lambda: [
+        'v2.search_knowledge','v2.find_document','v2.read_document','v2.read_document_section',
+        'v2.read_document_table','v2.find_exact_text','v2.expand_evidence','v2.calculate'], max_length=18)
+
+    @field_validator('react_tools')
+    @classmethod
+    def validate_react_tools(cls, values):
+        from app.retrieval_v2.tools import DESCRIPTIONS
+        if set(values)-set(DESCRIPTIONS): raise ValueError('Unknown V2 tool')
+        return list(dict.fromkeys(values))
     member_agent_ids: list[str] = Field(default_factory=list, max_length=10)
     supervisor_routing: Literal["all", "auto"] = "all"
     supervisor_synthesis: Literal["separate", "combined"] = "separate"

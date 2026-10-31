@@ -19,6 +19,8 @@ interface AgentConfig {
   answer_model_ids: string[];
   glossary_documents: unknown[];
   allowed_tools: string[];
+  runtime_mode?: 'legacy' | 'react_v2';
+  react_tools?: string[];
   max_tool_calls: number;
   max_retrieval_rounds: number;
   max_evidence_for_answer: number;
@@ -33,6 +35,7 @@ const toolOptions = [
   'vector_search', 'grep_files', 'keyword_search', 'find_files', 'search_within_document',
   'metadata_search', 'dify_metadata_search', 'search_knowledge', 'search_bm25', 'upload_document', 'delete_document', 'parse_document', 'rebuild_document_index', 'search_hybrid', 'read_full_document', 'get_document', 'read_document_section', 'get_document_page', 'get_document_table', 'extract_table', 'export_csv', 'export_excel', 'analyze_data', 'get_document_status', 'get_adjacent_chunks', 'get_document_outline',
 ];
+const reactTools = ['search_knowledge','find_document','read_document','read_document_section','read_document_table','find_exact_text','expand_evidence','calculate'].map(name => `v2.${name}`);
 
 export function AgentsPage() {
   const {reloadAgents} = usePlatform();
@@ -98,6 +101,8 @@ export function AgentsPage() {
           <Form.Select field="planner_model_ids" label="Planner 模型链" multiple>{models.map(item => <Form.Select.Option key={item.model_connection_id} value={item.model_connection_id}>{item.name}</Form.Select.Option>)}</Form.Select>
           <Form.Select field="answer_model_ids" label="Answer 模型链" multiple>{models.map(item => <Form.Select.Option key={item.model_connection_id} value={item.model_connection_id}>{item.name}</Form.Select.Option>)}</Form.Select>
           <Form.Select field="allowed_tools" label="授权工具" multiple className="full-span">{toolOptions.map(tool => <Form.Select.Option key={tool} value={tool}>{tool}</Form.Select.Option>)}</Form.Select>
+          <Form.Select field="runtime_mode" initValue={editing?.runtime_mode || 'legacy'} label="执行模式"><Form.Select.Option value="legacy">Legacy</Form.Select.Option><Form.Select.Option value="react_v2">ReAct V2</Form.Select.Option></Form.Select>
+          <Form.Select field="react_tools" initValue={editing?.react_tools || reactTools} label="ReAct 授权工具" multiple className="full-span">{Array.from(new Set([...reactTools, ...(editing?.react_tools || [])])).map(tool => <Form.Select.Option key={tool} value={tool}>{tool}</Form.Select.Option>)}</Form.Select>
           <Form.TextArea field="planner_prompt" label="Planner 提示词" className="full-span" autosize rows={8} />
           <Form.InputNumber field="max_tool_calls" label="最大工具调用" min={1} max={30} /><Form.InputNumber field="max_retrieval_rounds" label="最大检索轮数" min={1} max={10} /><Form.InputNumber field="max_evidence_for_answer" label="回答证据上限" min={1} max={50} /><Form.Switch field="enabled" label="启用 Agent" /><Form.Switch field="is_default" label="设为默认 Agent" />
         </div>

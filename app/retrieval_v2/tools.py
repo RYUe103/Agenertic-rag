@@ -6,6 +6,7 @@ from typing import Any
 from pydantic import Field
 from .models import StrictModel, Scope, Filters, RetrievalRequest
 from .evidence import EvidenceResolver, text_window
+from .calculations import CalculationInput, calculate
 
 
 class ReadInput(StrictModel):
@@ -34,6 +35,7 @@ class ToolOutput(StrictModel):
 
 
 HIGH = {
+    'calculate':'使用已验证 evidence.content 或本轮用户给定数字进行 Decimal 运算。值唯一时省略 start/end，由服务器精确定位；重复值才提供偏移。不知道单位时不要编造。',
     'search_knowledge':'自动规划并检索知识，返回已验证原文证据',
     'find_document':'检索并聚合候选文档，返回来源排名',
     'read_document':'按 Unicode 偏移分页读取指定文档版本',
@@ -56,7 +58,7 @@ SEARCH={'search_knowledge','find_document','find_exact_text','search_bm25','sear
 def input_schema(name):
     if name not in DESCRIPTIONS:
         raise KeyError(name)
-    return RetrievalRequest if name[3:] in SEARCH else ReadInput
+    return CalculationInput if name == 'v2.calculate' else RetrievalRequest if name[3:] in SEARCH else ReadInput
 
 
 def catalog():
@@ -74,24 +76,30 @@ class ToolService:
         self.retrieval,self.configurations,self.audit = retrieval,configurations,audit
         self.authorize_tool,self.actor,self.channel,self.approvals=authorize_tool,actor,channel,approvals
 
-    def invoke(self, name, arguments, approval_id=None):
+    def preflight(self, name, arguments):
+        model=input_schema(name).model_validate(arguments)
+        kbs=[s.knowledge_base_id for s in model.scopes] if isinstance(model,RetrievalRequest) else [model.knowledge_base_id]
+        config=self.configurations.get(name)
+        if not config['enabled']:
+            raise PermissionError('tool_disabled')
+        self.authorize_tool('tool.invoke' if name[3:] in HIGH else 'tool.advanced')
+        self.authorize_tool(str(config.get('permission','tool.invoke')))
+        for kb in kbs:
+            self.retrieval.access.authorize_kb(kb)
+        return model, kbs, config
+
+    def invoke(self, name, arguments, approval_id=None, *, calculation_context=None):
         started=time.monotonic(); status='failed'; kbs=[]
         try:
-            model=input_schema(name).model_validate(arguments)
-            kbs=[s.knowledge_base_id for s in model.scopes] if isinstance(model,RetrievalRequest) else [model.knowledge_base_id]
-            config=self.configurations.get(name)
-            if not config['enabled']:
-                raise PermissionError('tool_disabled')
-            self.authorize_tool('tool.invoke' if name[3:] in HIGH else 'tool.advanced')
-            self.authorize_tool(str(config.get('permission','tool.invoke')))
-            for kb in kbs:
-                self.retrieval.access.authorize_kb(kb)
+            model, kbs, config=self.preflight(name,arguments)
             if config.get('requires_approval'):
                 if len(kbs)!=1 or not self.approvals or not approval_id or not self.approvals.consume(
                         approval_id,self.actor,kbs[0],name,model.model_dump()):
                     raise PermissionError('approval_required')
             tool=name[3:]
-            if isinstance(model,RetrievalRequest):
+            if isinstance(model,CalculationInput):
+                data=calculate(model,calculation_context)
+            elif isinstance(model,RetrievalRequest):
                 modes={'search_bm25':'lexical','search_vector':'vector','find_exact_text':'exact','grep_chunks':'exact'}
                 if tool in modes:
                     model=RetrievalRequest.model_validate({**model.model_dump(),'mode':modes[tool]})
@@ -157,6 +165,13 @@ class ToolService:
                 if tool=='read_document':
                     text,finished=text_window(conn,vid,value.start,value.max_chars,deadline)
                     result.update(content=text,start=value.start,next_start=None if finished else value.start+len(text))
+                    # Navigation handles let high-level Agents select a section/table.
+                    outline=[]
+                    for row in conn.execute("SELECT id,kind,substr(json_extract(payload,'$.title'),1,200) AS title,json_extract(payload,'$.block_id') AS block_id FROM document_nodes WHERE version_id=? AND kind IN ('sections','tables') ORDER BY ordinal,id LIMIT 101",(vid,)):
+                        if time.monotonic()>=deadline: raise TimeoutError()
+                        outline.append({'id':row['id'],'kind':row['kind'],'title':row['title'] or '',
+                                        'block_id':row['block_id']})
+                    result.update(outline=outline[:100],outline_partial=len(outline)>100)
                 else:
                     kind={'read_document_section':'blocks','get_document_page':'blocks',
                           'get_document_outline':'sections','get_table_cells':'cells',
@@ -187,16 +202,20 @@ class ToolService:
                     rows=conn.execute('SELECT id,ordinal,length(payload) AS chars FROM document_nodes WHERE '+
                         ' AND '.join(clauses)+' ORDER BY '+order+' LIMIT ? OFFSET ?',
                         (*args,value.limit+1,value.start if kind=='cells' else 0)).fetchall()
-                    items=[];size=0
+                    items=[];size=0;budget_partial=False
                     for row in rows[:value.limit]:
                         if time.monotonic()>=deadline: raise TimeoutError()
                         size+=row['chars']
-                        if size>value.max_chars: raise OverflowError('output_budget')
+                        if size>value.max_chars:
+                            if not items: raise OverflowError('output_budget')
+                            budget_partial=True
+                            break
                         item=json.loads(conn.execute('SELECT payload FROM document_nodes WHERE id=?',(row['id'],)).fetchone()[0])
                         items.append(item)
-                    result.update(items=items,partial=len(rows)>value.limit,
-                        next_after=rows[value.limit-1]['ordinal'] if len(rows)>value.limit and kind!='cells' else None,
-                        next_start=value.start+value.limit if len(rows)>value.limit and kind=='cells' else None)
+                    partial=len(rows)>value.limit or budget_partial
+                    result.update(items=items,partial=partial,
+                        next_after=rows[len(items)-1]['ordinal'] if partial and kind!='cells' else None,
+                        next_start=value.start+len(items) if partial and kind=='cells' else None)
         if self.retrieval.access.scope(repo,requested,Filters())!=scope:
             raise PermissionError('scope_changed')
         if time.monotonic()>deadline: raise TimeoutError()

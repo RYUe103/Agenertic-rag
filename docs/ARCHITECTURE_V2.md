@@ -1,6 +1,16 @@
 # Knowledge Runtime V2
 
-截至 2026-11-01，第三阶段统一检索、Evidence Resolver 与 Tool API V2 已实现，详见 [UNIFIED_RETRIEVAL_V2.md](UNIFIED_RETRIEVAL_V2.md) 和本文末尾增量。第二阶段索引与运维方案见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)。下文保留早期设计记录；固定字符 Chunk 已由结构感知 Builder 取代。第四、第五阶段未实施。
+截至 2026-11-01，第四阶段 opt-in ReAct Runtime 已实现，详见 [REACT_AGENT_V2.md](REACT_AGENT_V2.md) 与 [REACT_AGENT_ACCEPTANCE.md](REACT_AGENT_ACCEPTANCE.md)。第三阶段见 [UNIFIED_RETRIEVAL_V2.md](UNIFIED_RETRIEVAL_V2.md)，第二阶段见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)。下文保留早期设计记录；固定字符 Chunk 已由结构感知 Builder 取代。第五阶段未实施。
+
+## 第四阶段增量
+
+Session/Thread → StateGraph(agent → approval → 官方 ToolNode → observe → agent；无调用时 validate → END)。LLM 原生调用共享 V2 ToolService，不复制检索实现。原文事实仍来自 Document Repository，EvidenceResolver 重核版本和 locator。
+
+正式持久化使用官方 SqliteSaver，独立 agent-v2/checkpoints.db；executions.db 保存 Thread 归属、调用回执与审批绑定。原 ToolApprovalStore 一次性审批与 LangGraph interrupt/Command(resume) 衔接。OS flock 防止本机多进程同 Thread 覆盖，恢复时重新认证和校验当前 scope，不信任旧权限。
+
+七个高层工具加 v2.calculate，十个高级工具继续受 tool.advanced 和 Agent react_tools 白名单控制。安全 Decimal 计算只接受可复核来源值。范围/内容 hash/locator/引用重新验证，引用通过不等于语义答案正确。
+
+默认 legacy，新模式独立可回滚；前端只加必要 SSE/模式/审批恢复。控制库添加 runtime_mode/react_tools，旧会话与旧工具保留。Supervisor 本阶段只支持 legacy，禁止通过其隐式调用新模式成员。MCP/外部 API 全量迁移和旧工具退役没有实施。
 
 ## 第二阶段架构增量
 

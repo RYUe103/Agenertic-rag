@@ -7,10 +7,20 @@
 | 1 | 已实现并验证 | 版本化 Document Repository、原文结构、平台 Chunk Builder、读取服务、迁移兼容 |
 | 2 | 主体与补强已实现并验证 | Tantivy BM25、Exact 续查、原子发布/ACK、完整回滚校验、租约 GC、版本化尾块修复 |
 | 3 | 已实现并完成本地验收；同语料真实向量验收待联调 | Unified Retrieval、确定性规划、RRF、可替换 Reranker、Evidence Resolver、17 个 Tool API V2 |
-| 4 | 未开始 | LangGraph ReAct + ToolNode、表格计算、证据验证、checkpoint 工具恢复 |
+| 4 | opt-in 核心已实现，真实模型效果有限制 | LangGraph ReAct + ToolNode、SQLite checkpoint、审批恢复、证据复核、安全计算，见专项验收 |
 | 5 | 未开始 | MCP/REST 统一迁移、旧工具退役、全链路评测和性能优化 |
 
-当前架构见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)，第三阶段接口见 [UNIFIED_RETRIEVAL_V2.md](UNIFIED_RETRIEVAL_V2.md)。本次停止在第三阶段，不自动执行第四阶段。
+当前架构见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)，第四阶段见 [REACT_AGENT_V2.md](REACT_AGENT_V2.md) 和 [REACT_AGENT_ACCEPTANCE.md](REACT_AGENT_ACCEPTANCE.md)。本次停止在第四阶段，不自动执行第五阶段。以下第三阶段记录保留为历史。
+
+## 第四阶段（2026-11-01）
+
+- 从 9f0c479 继续，同一开发分支，默认 legacy 不变。StateGraph、官方 ToolNode、共享 ToolService、官方 SqliteSaver 和 interrupt/Command(resume) 已实现。
+- Thread owner/范围绑定、本机多进程锁、审批参数/配置/版本重核、一次性消费和调用回执；未接入旧写工具。
+- 七个高层知识工具加 Decimal 计算，十个底层工具继续受 tool.advanced 保护。
+- 实际独立 Python 进程恢复测试，以及真实 qwen-plus 审批重启、章节读取、结构表格计算；失败样本保留，引用有效性不等于答案正确率。
+- 前端必要 SSE/模式/取消/审批继续兼容，旧接口/数据保留。Supervisor 含新模式成员时拒绝隐式回退。
+- 没有正式 corpus 迁移、Dify 写入；生产历史向量映射限制仍在。
+- 第五阶段未开始：MCP/外部 REST 全量统一、旧工具退役、规模评测、ReAct 记录合并展示和语义支持/标准适用性验证仍待单独授权。
 
 ## 第三阶段验收（2026-11-01）
 

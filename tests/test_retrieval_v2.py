@@ -250,7 +250,7 @@ def test_tools_read_governance_audit_and_large_inputs(setup,tmp_path):
     config=ToolConfigStore(tmp_path/'tools'); audit=ToolCallStore(tmp_path/'calls')
     tools=ToolService(service,config,audit,lambda p:None,'user')
     values={'knowledge_base_id':'kb','document_id':'a'}
-    assert len(catalog())==17
+    assert len(catalog())==18  # 17 knowledge tools plus governed Decimal calculation.
     assert tools.invoke('v2.read_document',values).data['content']
     assert tools.invoke('v2.get_document_outline',values).data['items']
     chunk=repo.documents.nodes('a','chunks')[0]
