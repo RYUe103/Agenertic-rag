@@ -5,14 +5,26 @@
 | 阶段 | 状态 | 内容 |
 | --- | --- | --- |
 | 1 | 已实现并验证 | 版本化 Document Repository、原文结构、平台 Chunk Builder、读取服务、迁移兼容 |
-| 2 | 已实现并验证 | Tantivy BM25、Exact/Grep、结构感知 Chunk、代次发布、增量与墓碑处理 |
+| 2 | 主体与补强已实现并验证 | Tantivy BM25、Exact 续查、原子发布/ACK、完整回滚校验、租约 GC、版本化尾块修复 |
 | 3 | 未开始 | Unified Retrieval、自动规划、RRF、可替换 Reranker、Tool API V2 |
 | 4 | 未开始 | LangGraph ReAct + ToolNode、表格计算、证据验证、checkpoint 工具恢复 |
 | 5 | 未开始 | MCP/REST 统一迁移、旧工具退役、全链路评测和性能优化 |
 
 当前架构见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)，第二阶段操作说明见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)。完成第二阶段后停止，只有用户明确要求“执行第三阶段”才能继续。
 
-## 第二阶段实际验收
+## 第二阶段补强验收（2026-11-01）
+
+- 开发基线 a803ff3，仍在 `codex/v2-document-repository`；main 未改动。
+- 完整回归 `.runtime/bin/python -m pytest -q`：269 passed、0 failed、7 条第三方弃用警告。新增补强测试 40 项，含真实 Tantivy、2001 文档 Exact、撤权/版本失效、发布竞态及跨进程租约清理。
+- 原 100 PDF / 100 question_id 固定复测，Chunk 951 → 468；结构 v3 消除重复递减尾块，保留旧结构 v2。
+- 原文输入 SHA256 和 Markdown 字节保持不变；Hit@1/5/10 从 79%/89%/90% 变为 79%/90%/92%，MRR@10 从 0.832083 变为 0.837179。仅为来源 PDF 命中，不是答案正确率。
+- 2001 份 synthetic 记录覆盖不同 ID、年份、标题、长度和 120 行表格；与真实 PDF 测试分开，未调用 Dify。
+- 完整性能、运行边界、7 份实际业务文档副本检查、迁移/运维风险及 Git 状态见 [补强验收报告](SEARCH_HARDENING_ACCEPTANCE_2026-11-01.md)；原 10 道未命中题见 [逐题归因](SEARCH_MISSES_2026-11-01.md)。
+- 未进行 Linux AMD64、Docker、离线打包或内网服务验收，未额外收集真实 PDF。正式数据库未迁移。
+
+阶段 3 未开始。停止于本次补强，只有用户明确要求“执行第三阶段”才继续。
+
+## 第二阶段主体历史验收（2026-10-31）
 
 - 在第一阶段提交 f53e64b 基础上修改，分支仍为 codex/v2-document-repository，main 未改动。
 - `.runtime/bin/python -m pytest tests/test_local_search.py -q`：26 项新增检索测试通过；使用真实 Tantivy，非 mock BM25。

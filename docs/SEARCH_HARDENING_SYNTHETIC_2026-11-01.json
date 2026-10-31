@@ -1,0 +1,105 @@
+{
+  "kind": "synthetic",
+  "documents": 2001,
+  "chunks": 34915,
+  "markdown_bytes": 4346655,
+  "markdown_chars": 3629067,
+  "sqlite_bytes": 255922176,
+  "active_index_bytes": 6675750,
+  "total_index_bytes": 13745154,
+  "retained_generations": [
+    {
+      "id": "fd09a93717904166bdc6668ac83d87d6",
+      "status": "ready",
+      "error": null,
+      "bytes": 6621970
+    },
+    {
+      "id": "2d6755f1ae564b14891ff349bcced240",
+      "status": "superseded",
+      "error": null,
+      "bytes": 7123184
+    },
+    {
+      "id": "4e045dbd4aef43feafdf58bbd88cc6d3",
+      "status": "retired",
+      "error": null,
+      "bytes": 0
+    },
+    {
+      "id": "6a808dcb94e646b1ae404b682e2a1bcb",
+      "status": "retired",
+      "error": null,
+      "bytes": 0
+    },
+    {
+      "id": "52fc9fddb5174bdbafce24f33fc73fb8",
+      "status": "retired",
+      "error": null,
+      "bytes": 0
+    }
+  ],
+  "parse_and_repository_seconds": 7.830814207998628,
+  "full_index_seconds": 16.881374290998792,
+  "incremental_index_seconds": 0.5996739999973215,
+  "operational_update_noop": true,
+  "operational_sync_seconds": 0.354465791999246,
+  "batch_metadata_documents": 100,
+  "batch_metadata_write_seconds": 0.0622628330020234,
+  "batch_metadata_index_seconds": 1.276606792001985,
+  "delete_repository_seconds": 0.001640458001929801,
+  "delete_index_seconds": 0.42862474999856204,
+  "rebuild_seconds": 16.968267417003517,
+  "restart_load_seconds": 0.029515375004848465,
+  "restart_process_wall_seconds": 0.38661375000083353,
+  "query_count": 100,
+  "query_p50_ms": 933.9911459974246,
+  "query_p95_ms": 1008.1906249979511,
+  "exact": [
+    {
+      "query": "2019",
+      "regex_mode": false,
+      "pages": 4,
+      "scanned_chars": 3634658,
+      "hits": 398,
+      "seconds": 3.3683150419965386,
+      "complete": true,
+      "last_reason": null
+    },
+    {
+      "query": "__ABSENT_ACCEPTANCE_SENTINEL__",
+      "regex_mode": false,
+      "pages": 2,
+      "scanned_chars": 3629096,
+      "hits": 0,
+      "seconds": 1.6141096249994007,
+      "complete": true,
+      "last_reason": null
+    },
+    {
+      "query": "UNIQUE-[0-9]{5}",
+      "regex_mode": true,
+      "pages": 21,
+      "scanned_chars": 3659399,
+      "hits": 2001,
+      "seconds": 15.892658625001786,
+      "complete": true,
+      "last_reason": null
+    }
+  ],
+  "peak_rss_bytes": 184172544,
+  "environment": {
+    "platform": "macOS-15.6-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+    "hardware": "Apple M4"
+  },
+  "boundaries": "Warm OS cache. Queries include SQLite and per-document authorization. Build excludes parsing/import. Peak RSS covers import/index/query in this process. Restart is new process, warm OS cache. No Dify/MinerU calls.",
+  "quality": {},
+  "records": [],
+  "baseline_sha256": "34459dfc5e1cc16f020b763eb54018bf82dc9f0bb033bca85a6cd2c49cef31a3",
+  "business_smoke": [],
+  "builder_versions": [
+    "structure-v3-cfb1af48b26c"
+  ]
+}

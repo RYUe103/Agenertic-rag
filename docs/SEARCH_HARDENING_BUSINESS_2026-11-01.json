@@ -1,0 +1,195 @@
+{
+  "kind": "business",
+  "documents": 7,
+  "chunks": 162,
+  "markdown_bytes": 132691,
+  "markdown_chars": 120566,
+  "sqlite_bytes": 7397376,
+  "active_index_bytes": 125445,
+  "total_index_bytes": 383753,
+  "retained_generations": [
+    {
+      "id": "466969a6b5d64f1eb60c0d67fce68d15",
+      "status": "ready",
+      "error": null,
+      "bytes": 120479
+    },
+    {
+      "id": "6db85f68f6ea44a8b12a541c56972c1c",
+      "status": "superseded",
+      "error": null,
+      "bytes": 263274
+    },
+    {
+      "id": "ac9b5ba764a74c5f815b5137c602f35b",
+      "status": "retired",
+      "error": null,
+      "bytes": 0
+    },
+    {
+      "id": "ccac4d3bf1f64e1a8803ba62a06d0627",
+      "status": "retired",
+      "error": null,
+      "bytes": 0
+    },
+    {
+      "id": "710d20e96f914204b117f888efa67aec",
+      "status": "retired",
+      "error": null,
+      "bytes": 0
+    }
+  ],
+  "parse_and_repository_seconds": 0.050073124999471474,
+  "full_index_seconds": 0.24094787499780068,
+  "incremental_index_seconds": 0.08195187499950407,
+  "operational_update_noop": true,
+  "operational_sync_seconds": 0.0029528749946621247,
+  "batch_metadata_documents": 7,
+  "batch_metadata_write_seconds": 0.00516066700220108,
+  "batch_metadata_index_seconds": 0.21989262499846518,
+  "delete_repository_seconds": 0.0006998749959166162,
+  "delete_index_seconds": 0.03399937500216765,
+  "rebuild_seconds": 0.2109720410007867,
+  "restart_load_seconds": 0.006856540996523108,
+  "restart_process_wall_seconds": 0.34564258300088113,
+  "query_count": 100,
+  "query_p50_ms": 12.291499999264488,
+  "query_p95_ms": 14.307958997960668,
+  "exact": [
+    {
+      "query": "2019",
+      "regex_mode": false,
+      "pages": 1,
+      "scanned_chars": 120566,
+      "hits": 2,
+      "seconds": 0.005897082999581471,
+      "complete": true,
+      "last_reason": null
+    },
+    {
+      "query": "__ABSENT_ACCEPTANCE_SENTINEL__",
+      "regex_mode": false,
+      "pages": 1,
+      "scanned_chars": 120566,
+      "hits": 0,
+      "seconds": 0.004497458001424093,
+      "complete": true,
+      "last_reason": null
+    },
+    {
+      "query": "\\d+\\.\\d+%",
+      "regex_mode": true,
+      "pages": 1,
+      "scanned_chars": 120566,
+      "hits": 0,
+      "seconds": 0.005687374999979511,
+      "complete": true,
+      "last_reason": null
+    }
+  ],
+  "peak_rss_bytes": 186679296,
+  "environment": {
+    "platform": "macOS-15.6-arm64-arm-64bit-Mach-O",
+    "machine": "arm64",
+    "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 11:23:37) [Clang 14.0.6 ]",
+    "hardware": "Apple M4"
+  },
+  "boundaries": "Warm OS cache. Queries include SQLite and per-document authorization. Build excludes parsing/import. Peak RSS covers import/index/query in this process. Restart is new process, warm OS cache. No Dify/MinerU calls.",
+  "quality": {},
+  "records": [
+    {
+      "id": "src_54972a88d6ad468593e56a596a6b74ff",
+      "status": "complete"
+    },
+    {
+      "id": "src_8295dc2fedaf42448f297b3bb25b3aab",
+      "status": "complete"
+    },
+    {
+      "id": "src_d5b2abe165754f13821b479bba6c201e",
+      "status": "complete"
+    },
+    {
+      "id": "src_994ac06676cf409db3b85420ac390388",
+      "status": "complete"
+    },
+    {
+      "id": "src_e58bc17193424c939f4107e3f9f5933f",
+      "status": "complete"
+    },
+    {
+      "id": "src_1da7926aec054fc4ba7b28da4ed3e1f8",
+      "status": "complete"
+    },
+    {
+      "id": "src_e4fc545c0e2c4e3fb71c6dec8c2e2790",
+      "status": "complete"
+    }
+  ],
+  "baseline_sha256": "34459dfc5e1cc16f020b763eb54018bf82dc9f0bb033bca85a6cd2c49cef31a3",
+  "business_smoke": [
+    {
+      "query": "篮球",
+      "bm25_hits": 1,
+      "exact_hits": 5,
+      "exact_partial": false
+    },
+    {
+      "query": "秋游",
+      "bm25_hits": 10,
+      "exact_hits": 6,
+      "exact_partial": false
+    },
+    {
+      "query": "Token",
+      "bm25_hits": 3,
+      "exact_hits": 14,
+      "exact_partial": false
+    },
+    {
+      "query": "API",
+      "bm25_hits": 3,
+      "exact_hits": 15,
+      "exact_partial": false
+    },
+    {
+      "query": "risk",
+      "bm25_hits": 10,
+      "exact_hits": 100,
+      "exact_partial": true
+    },
+    {
+      "query": "NIST",
+      "bm25_hits": 10,
+      "exact_hits": 76,
+      "exact_partial": false
+    },
+    {
+      "query": "Artificial intelligence",
+      "bm25_hits": 8,
+      "exact_hits": 10,
+      "exact_partial": false
+    },
+    {
+      "query": "预算",
+      "bm25_hits": 7,
+      "exact_hits": 9,
+      "exact_partial": false
+    },
+    {
+      "query": "活动",
+      "bm25_hits": 10,
+      "exact_hits": 76,
+      "exact_partial": false
+    },
+    {
+      "query": "安全",
+      "bm25_hits": 10,
+      "exact_hits": 27,
+      "exact_partial": false
+    }
+  ],
+  "builder_versions": [
+    "structure-v3-cfb1af48b26c"
+  ]
+}
