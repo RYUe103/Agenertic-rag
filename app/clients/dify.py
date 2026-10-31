@@ -99,12 +99,14 @@ class DifyClient:
         mime_type = mimetypes.guess_type(name)[0] or "application/octet-stream"
         try:
             with file_path.open("rb") as handle:
-                self._request(
+                result = self._request(
                     "POST",
                     f"/datasets/{self.dataset_id}/documents/{document_id}/update-by-file",
                     data=data,
                     files={"file": (name, handle, mime_type)},
                 )
+            if (result.get('document') or {}).get('id') != document_id:
+                raise RuntimeError('Dify update response Document ID mismatch')
             return True
         except httpx.HTTPStatusError as exc:
             if exc.response.status_code == 400 and "Document is not available" in exc.response.text:
@@ -198,7 +200,7 @@ class MockDifyClient:
         return "completed"
 
     def document_info(self, document_id: str) -> dict[str, Any]:
-        return {"id": document_id, "indexing_status": "completed", "error": None}
+        return {"id": document_id, "indexing_status": "completed", "error": None, "enabled": True, "archived": False}
 
     def retry_document(self, document_id: str, file_path: Path, name: str) -> bool:
         return True

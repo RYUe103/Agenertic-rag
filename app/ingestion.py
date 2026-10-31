@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import shutil
+import tempfile
 import threading
 from app.document_lock import document_lock
 from functools import wraps
@@ -261,12 +262,18 @@ class IngestionService:
         # Dify document to be updated even if its previous indexing succeeded.
         needs_dify_refresh = rewrite_enabled or workflow_enabled or force_reparse or force_reindex or version_published
         if needs_new_document or needs_dify_refresh or source.dify_status in {"pending", "failed"}:
+            submission = None
             try:
                 if source.parse_status != "success" or not Path(source.local_md_path).exists():
                     raise RuntimeError("本地 Markdown 尚未解析成功")
-                dify_path = Path(source.local_md_path)
+                version = self.repository.documents.version(source_id)
+                submitted = version.markdown.encode('utf-8')
+                submission = self.repository.documents.begin_dify_submission(source_id, self.dify.dataset_id, submitted)
                 dify_name = f"{Path(source.filename).stem}.md"
-                with tracked_stage('dify_submit'):
+                with tracked_stage('dify_submit'), tempfile.TemporaryDirectory(prefix='rag-dify-') as temporary:
+                    # Upload immutable version bytes, not a mutable working Markdown file.
+                    dify_path = Path(temporary) / 'document.md'
+                    dify_path.write_bytes(submitted)
                     if needs_new_document:
                         document_id = self.dify.upload_document(dify_path, dify_name)
                     else:
@@ -274,10 +281,11 @@ class IngestionService:
                         reused = self.dify.retry_document(document_id, dify_path, dify_name)
                         if not reused:
                             document_id = self.dify.upload_document(dify_path, dify_name)
-                source = self.repository.update(
-                    source_id, dify_status="processing", dify_dataset_id=self.dify.dataset_id, dify_document_id=document_id
-                )
+                self.repository.documents.acknowledge_dify_submission(source_id, submission.id, document_id)
+                source = self.repository.get(source_id)
             except Exception as exc:
+                if submission is not None:
+                    self.repository.documents.mark_dify_uncertain(submission.id)
                 errors.append(f"Dify 上传失败: {exc}")
                 source = self.repository.update(source_id, dify_status="failed")
         source = self.repository.get(source_id)
@@ -288,13 +296,13 @@ class IngestionService:
                     info = self.dify.document_info(source.dify_document_id)
                 indexing_status = str((info or {}).get("indexing_status", "unknown"))
                 if indexing_status == "completed":
-                    source = self.repository.update(source_id, dify_status="success")
+                    source = self.repository.documents.observe_dify_status(source_id,self.dify.dataset_id,source.dify_document_id,info)
                 elif indexing_status == "error":
                     detail = str((info or {}).get("error") or "未知索引错误")
                     errors.append(f"Dify 索引失败: {detail}")
-                    source = self.repository.update(source_id, dify_status="failed")
+                    source = self.repository.documents.observe_dify_status(source_id,self.dify.dataset_id,source.dify_document_id,info)
                 else:
-                    source = self.repository.update(source_id, dify_status="processing")
+                    source = self.repository.documents.observe_dify_status(source_id,self.dify.dataset_id,source.dify_document_id,info)
             except Exception as exc:
                 errors.append(f"Dify 状态查询失败: {exc}")
         if not force_reindex and source.pdf_platform_status != "success":
@@ -464,6 +472,9 @@ class IngestionService:
             conn.execute('INSERT OR IGNORE INTO document_deletions VALUES(?,?,?)',
                          (source_id,source.model_dump_json(),'pending'))
             conn.execute('UPDATE documents SET deleted=1 WHERE id=?', (source_id,))
+            conn.execute('''UPDATE external_index_mappings SET payload=json_set(payload,'$.status','deleted')
+                WHERE version_id IN (SELECT id FROM document_versions WHERE document_id=?)
+                AND json_extract(payload,'$.adapter')='dify' ''',(source_id,))
             self.repository.documents.mark_search_dirty(conn,source_id)
         remote_document = (
             source.dify_document_id
@@ -504,11 +515,13 @@ class IngestionService:
             return self.repository.update(source_id, error_message=message)
         indexing_status = str((info or {}).get("indexing_status", "unknown"))
         if indexing_status == "completed":
-            return self.repository.update(source_id, dify_status="success", error_message=None)
+            self.repository.documents.observe_dify_status(source_id,self.dify.dataset_id,source.dify_document_id,info)
+            return self.repository.update(source_id, error_message=None)
         if indexing_status == "error":
             detail = str((info or {}).get("error") or "未知索引错误")
-            return self.repository.update(source_id, dify_status="failed", error_message=f"Dify 索引失败: {detail}")
-        return self.repository.update(source_id, dify_status="processing")
+            self.repository.documents.observe_dify_status(source_id,self.dify.dataset_id,source.dify_document_id,info)
+            return self.repository.update(source_id, error_message=f"Dify 索引失败: {detail}")
+        return self.repository.documents.observe_dify_status(source_id,self.dify.dataset_id,source.dify_document_id,info)
 
     def _write_metadata(self, source: Source, parser_metadata: dict[str, object] | None = None) -> None:
         path = Path(source.source_path).parent / "metadata.json"

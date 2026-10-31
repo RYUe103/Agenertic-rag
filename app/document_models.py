@@ -106,3 +106,13 @@ class ExternalIndexMapping(BaseModel):
     chunk_id: str | None = None
     dataset_id: str | None = None
     builder_version: str | None = None
+    binding_method: str | None = None
+    source_content_hash: str | None = None
+    submitted_content_hash: str | None = None
+    submission_id: str | None = None
+    remote_revision: str | None = None
+    remote_status: str | None = None
+    remote_enabled: bool | None = None
+    remote_archived: bool | None = None
+    range_start: int | None = None
+    range_end: int | None = None

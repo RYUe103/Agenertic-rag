@@ -115,7 +115,10 @@ class FakeVector:
 def mapped_vector(repo, text='U-10Zr reactor performance.', **segment):
     vid=repo.documents.version('a').id
     repo.documents.put_mapping('a',ExternalIndexMapping(id='map',version_id=vid,adapter='dify',
-        index_version=vid,status='completed',external_document_id='remote',dataset_id='dataset'))
+        index_version=vid,status='completed',external_document_id='remote',dataset_id='dataset',
+        binding_method='upload_ack',remote_status='completed',remote_enabled=True,remote_archived=False,
+        source_content_hash=repo.documents.version('a').content_hash,
+        submitted_content_hash=repo.documents.version('a').content_hash))
     return {'dataset_id':'dataset','external':{'score':.9,'segment':{'id':'segment',
         'document_id':'remote','enabled':True,'status':'completed','content':text,**segment}}}
 

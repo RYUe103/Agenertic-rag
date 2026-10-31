@@ -74,21 +74,43 @@ class EvidenceResolver:
         if seg.get('enabled') is not True or seg.get('status')!='completed' or seg.get('error'):
             raise VerificationError('segment_not_ready')
         matches = []
+        identity_mappings=[]
+        global_identities={row['document_id'] for row in mappings
+            if (lambda m:m.get('adapter')=='dify' and m.get('dataset_id')==candidate['dataset_id']
+                and m.get('external_document_id')==ext_doc and m.get('status') not in {'superseded','deleted'})(json.loads(row['payload']))}
+        if len(global_identities)>1:
+            raise VerificationError('ambiguous_document_identity')
         for row in mappings:
             doc = row['document_id']
             if doc not in self.scope:
                 continue
             mapping = json.loads(row['payload'])
             if (mapping.get('adapter')=='dify' and mapping.get('dataset_id')==candidate['dataset_id']
+                and mapping.get('external_document_id')==ext_doc):
+                identity_mappings.append((doc,mapping))
+            if (mapping.get('adapter')=='dify' and mapping.get('dataset_id')==candidate['dataset_id']
                 and mapping.get('external_document_id')==ext_doc
                 and mapping.get('status') in {'completed','ready','indexed','success'}
                 and mapping.get('version_id')==self.scope[doc]['version_id']):
+                if (mapping.get('binding_method') not in {'upload_ack','remote_file_sha256'} or
+                    mapping.get('source_content_hash')!=self.scope[doc]['content_hash'] or
+                    mapping.get('submitted_content_hash')!=self.scope[doc]['content_hash'] or
+                    mapping.get('remote_status')!='completed' or mapping.get('remote_enabled') is not True or
+                    mapping.get('remote_archived') is not False):
+                    continue
                 if mapping.get('external_segment_id') not in (None,seg['id']):
                     continue
                 matches.append((doc,mapping))
         identities = {(doc,m['version_id']) for doc,m in matches}
+        if len({doc for doc,_ in identity_mappings})>1:
+            raise VerificationError('ambiguous_document_identity')
         if len(identities)!=1:
-            raise VerificationError('ambiguous_or_missing_version_mapping')
+            if not identity_mappings:raise VerificationError('outside_scope_or_missing_identity_mapping')
+            if not any(m['version_id']==self.scope[d]['version_id'] for d,m in identity_mappings):
+                raise VerificationError('stale_version_mapping')
+            if any(m.get('binding_method') not in {'upload_ack','remote_file_sha256'} for _,m in identity_mappings):
+                raise VerificationError('legacy_binding_unverified')
+            raise VerificationError('mapping_not_ready_or_hash_mismatch')
         doc,vid = next(iter(identities))
         content = seg.get('content')
         if not isinstance(content,str) or not content.strip() or len(content)>12000:
@@ -101,12 +123,22 @@ class EvidenceResolver:
             if row and json.loads(row[0])['content']==content:
                 return {**base,'chunk_id':cid}
             raise VerificationError('explicit_mapping_content_mismatch')
+        ranges={(m.get('range_start'),m.get('range_end')) for _,m in matches
+                if m.get('external_segment_id')==seg['id'] and m.get('range_start') is not None}
+        if ranges:
+            if len(ranges)!=1:raise VerificationError('ambiguous_explicit_range')
+            a,b=next(iter(ranges))
+            if not isinstance(a,int) or not isinstance(b,int) or a<0 or b-a!=len(content):
+                raise VerificationError('invalid_explicit_range')
+            text,_=text_window(conn,vid,a,len(content),self.deadline)
+            if text!=content:raise VerificationError('explicit_mapping_content_mismatch')
+            return {**base,'start':a,'end':b,'matched_ranges':[dict(start=a,end=b)]}
         if self.scope[doc]['markdown_bytes']>4_000_000:
             raise VerificationError('verification_budget_exceeded')
         text,_ = text_window(conn,vid,0,4_000_001,self.deadline)
         start = text.find(content)
-        if start<0 or text.find(content,start+1)>=0:
-            raise VerificationError('text_not_unique_or_absent')
+        if start<0:raise VerificationError('text_absent_from_version')
+        if text.find(content,start+1)>=0:raise VerificationError('text_multiple_occurrences')
         end = start+len(content)
         # Segment may be only part of a chunk; use the smallest containing unit,
         # but return Repository content, preserving the exact matched range.

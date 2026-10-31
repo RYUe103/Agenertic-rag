@@ -151,7 +151,7 @@ class SourceRepository:
                 f"UPDATE sources SET {assignments} WHERE source_id = ?",
                 (*values.values(), source_id),
             )
-            if 'dify_status' in values or 'dify_document_id' in values:
+            if 'dify_status' in values or 'dify_document_id' in values or 'dify_dataset_id' in values:
                 row = connection.execute('SELECT * FROM sources WHERE source_id=?', (source_id,)).fetchone()
                 if row:
                     self.documents.sync_mapping(connection, self._source(row))
@@ -224,6 +224,10 @@ class SourceRepository:
 
     def delete(self, source_id: str) -> None:
         with self.connect() as connection:
+            connection.execute('BEGIN IMMEDIATE')
+            connection.execute('''UPDATE external_index_mappings SET payload=json_set(payload,'$.status','deleted')
+                WHERE version_id IN (SELECT id FROM document_versions WHERE document_id=?)
+                AND json_extract(payload,'$.adapter')='dify' ''',(source_id,))
             connection.execute('UPDATE documents SET deleted=1 WHERE id=?', (source_id,))
             self.documents.mark_search_dirty(connection,source_id)
             connection.execute("UPDATE document_deletions SET status='deleted' WHERE document_id=?", (source_id,))

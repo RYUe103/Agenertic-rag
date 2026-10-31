@@ -9,6 +9,7 @@ from .document_lock import document_lock
 from .document_chunks import ChunkBuildRepository
 from .chunk_builder import ChunkConfig
 from dataclasses import asdict
+from .dify_mapping import DifyMappingRepository
 
 
 SCHEMA = '''
@@ -38,7 +39,7 @@ CREATE TABLE IF NOT EXISTS document_backfill_errors(
 '''
 
 
-class DocumentRepository(ChunkBuildRepository):
+class DocumentRepository(ChunkBuildRepository, DifyMappingRepository):
     def __init__(self, sources, knowledge_base_id):
         self.sources = sources
         self.knowledge_base_id = knowledge_base_id
@@ -116,15 +117,48 @@ class DocumentRepository(ChunkBuildRepository):
     def sync_mapping(self, conn, source, version_id=None):
         row = conn.execute('SELECT current_version_id FROM documents WHERE id=? AND deleted=0', (source.source_id,)).fetchone()
         version_id = version_id or (row[0] if row else None)
-        if not version_id or not source.dify_document_id:
+        if not version_id:
+            return
+        if not source.dify_document_id:
+            conn.execute('''UPDATE external_index_mappings SET payload=json_set(payload,'$.status','superseded')
+                WHERE version_id=? AND json_extract(payload,'$.adapter')='dify'
+                AND json_extract(payload,'$.external_document_id') IS NOT NULL''',(version_id,))
+            return
+        # Generic Source status updates are not upload receipts. Preserve explicit
+        # attempt mappings and never attach an older remote ID to a new version.
+        existing = conn.execute('SELECT id,payload FROM external_index_mappings WHERE version_id=?', (version_id,)).fetchall()
+        receipts=[(row['id'],json.loads(row['payload'])) for row in existing
+                  if json.loads(row['payload']).get('adapter')=='dify' and
+                  (json.loads(row['payload']).get('submission_id') or
+                   json.loads(row['payload']).get('binding_method')=='remote_file_sha256')]
+        if receipts:
+            for ident,value in receipts:
+                if not value.get('external_document_id') or value.get('status') in {'superseded','deleted','uncertain'}:
+                    continue
+                if value.get('external_document_id')!=source.dify_document_id or value.get('dataset_id')!=source.dify_dataset_id:
+                    value['status']='superseded'
+                elif source.dify_status in {'failed','pending','processing'} and value.get('status')=='completed':
+                    # Negative state updates can revoke trust, never grant it.
+                    value['status']='failed' if source.dify_status=='failed' else 'processing'
+                conn.execute('UPDATE external_index_mappings SET payload=? WHERE id=?',(json.dumps(value),ident))
             return
         for old in conn.execute('SELECT id,payload FROM external_index_mappings WHERE version_id != ?', (version_id,)).fetchall():
             payload = json.loads(old['payload'])
             if payload.get('adapter') == 'dify' and payload.get('external_document_id') == source.dify_document_id and payload.get('dataset_id') == source.dify_dataset_id:
                 payload['status'] = 'superseded'
                 conn.execute('UPDATE external_index_mappings SET payload=? WHERE id=?', (json.dumps(payload), old['id']))
-        mapping = ExternalIndexMapping(id=f'{version_id}:dify', version_id=version_id,
-            adapter='dify', index_version=version_id, status=source.dify_status,
+        legacy_id=f'{version_id}:dify'
+        prior=conn.execute('SELECT payload FROM external_index_mappings WHERE id=?',(legacy_id,)).fetchone()
+        if prior:
+            old=json.loads(prior[0])
+            if old.get('external_document_id')!=source.dify_document_id or old.get('dataset_id')!=source.dify_dataset_id:
+                old['id']=legacy_id+':history:'+hashlib.sha256(prior[0].encode()).hexdigest()[:24]
+                old['status']='superseded'
+                conn.execute('INSERT OR IGNORE INTO external_index_mappings VALUES(?,?,?)',
+                             (old['id'],version_id,json.dumps(old)))
+        mapping = ExternalIndexMapping(id=legacy_id, version_id=version_id,
+            adapter='dify', index_version=version_id, status='legacy_unverified',
+            binding_method='legacy_source_pointer',remote_status=source.dify_status,
             external_document_id=source.dify_document_id, dataset_id=source.dify_dataset_id)
         conn.execute('INSERT OR REPLACE INTO external_index_mappings VALUES(?,?,?)',
                      (mapping.id, version_id, mapping.model_dump_json()))
