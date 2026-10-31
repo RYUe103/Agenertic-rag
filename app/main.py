@@ -152,6 +152,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     async def lifespan(_: FastAPI):
         ingest_queue.start()
         delete_queue.start()
+        from app.search.worker import IndexWorker
+        index_worker = IndexWorker(registry) if settings.local_index_enabled and not settings.app_mock_external_services else None
+        if index_worker:
+            index_worker.start()
         try:
             async with AsyncExitStack() as stack:
                 if mcp_manager is not None:
@@ -160,6 +164,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         finally:
             ingest_queue.shutdown()
             delete_queue.shutdown()
+            if index_worker:
+                index_worker.shutdown()
             ask_concurrency.shutdown()
 
     app = FastAPI(title="Agentic RAG + JIT 文件检索", version=BUILD_VERSION, lifespan=lifespan)
@@ -628,6 +634,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(403, '缺少权限：document.read')
         return value
     app.include_router(document_router(authorize_document_read, require_kb_write))
+    from app.search.api import search_router
+    app.include_router(search_router(authorize_document_read, require_kb_write))
 
     @app.get("/api/agents", response_model=list[AgentSummary])
     def list_agents(request: Request) -> list[AgentSummary]:

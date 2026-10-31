@@ -1,5 +1,7 @@
 """Phase 1 read API. Authorization is shared with existing tenant/knowledge-base policy."""
 from fastapi import APIRouter, HTTPException, Request, Response
+from fastapi.encoders import jsonable_encoder
+import json
 from app.document_repository import DocumentReadService
 
 
@@ -17,7 +19,10 @@ def document_router(authorize_agent, require_write):
 
     def read(request, kb, doc, operation, **kwargs):
         try:
-            return service(request, kb).read(operation, doc, **kwargs)
+            result=service(request, kb).read(operation, doc, **kwargs)
+            if operation != 'artifact' and len(json.dumps(jsonable_encoder(result),ensure_ascii=False))>2_000_000:
+                raise HTTPException(413,'结果过大，请使用 text/chunks/blocks 分页读取')
+            return result
         except KeyError:
             raise HTTPException(404, '文档、版本或结构不存在') from None
 
@@ -58,8 +63,19 @@ def document_router(authorize_agent, require_write):
 
     @router.get('/{doc}/blocks')
     def blocks(kb: str, doc: str, request: Request, version_id: str | None = None,
-               page: int | None = None, section_id: str | None = None):
-        return read(request, kb, doc, 'located_blocks', version_id=version_id, page=page, section_id=section_id)
+               page: int | None = None, section_id: str | None = None, after: int = -1, limit: int = 200):
+        return read(request, kb, doc, 'located_blocks', version_id=version_id, page=page, section_id=section_id,after=after,limit=limit)
+
+    @router.get('/{doc}/chunks')
+    def chunks(kb: str, doc: str, request: Request, version_id: str | None = None,
+               builder_version: str | None = None, after: int = -1, limit: int = 100):
+        return read(request,kb,doc,'chunks_page',version_id=version_id,builder_version=builder_version,after=after,limit=limit)
+
+    @router.get('/{doc}/text')
+    def text(kb: str, doc: str, request: Request, version_id: str | None = None, start: int = 0, limit: int = 100000):
+        if start<0 or not 1<=limit<=100000:
+            raise HTTPException(400,'start 必须非负，limit 必须为 1..100000')
+        return read(request,kb,doc,'text_window',version_id=version_id,start=start,limit=limit)
 
     @router.get('/{doc}/tables')
     def tables(kb: str, doc: str, request: Request, version_id: str | None = None, query: str = ''):

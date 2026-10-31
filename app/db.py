@@ -152,9 +152,11 @@ class SourceRepository:
                 row = connection.execute('SELECT * FROM sources WHERE source_id=?', (source_id,)).fetchone()
                 if row:
                     self.documents.sync_mapping(connection, self._source(row))
+            self.documents.mark_search_dirty(connection,source_id)
         return self.get(source_id)
 
     def versions(self, source_id: str) -> list[dict[str, Any]]:
+        self.get(source_id)
         with self.connect() as connection:
             rows = connection.execute('''SELECT revision_id AS version_id,source_id,version_no,filename,
                 content_hash,parse_status,dify_status,parser_engine,created_at,message,
@@ -183,14 +185,17 @@ class SourceRepository:
                                     'embedding_model': embedding_model}, self.documents._artifacts(source))
 
     def revision(self, source_id: str, version_no: int) -> dict[str, Any]:
+        self.get(source_id)
         with self.connect() as connection:
             row = connection.execute('SELECT * FROM source_revisions WHERE source_id=? AND version_no=?', (source_id, version_no)).fetchone()
         if row is None:
             raise KeyError(version_no)
         return dict(row)
 
-    def get(self, source_id: str) -> Source:
+    def get(self, source_id: str, include_deleting: bool = False) -> Source:
         with self.connect() as connection:
+            if not include_deleting and connection.execute('SELECT 1 FROM document_deletions WHERE document_id=?', (source_id,)).fetchone():
+                raise KeyError(source_id)
             row = connection.execute(
                 "SELECT * FROM sources WHERE source_id = ?", (source_id,)
             ).fetchone()
@@ -201,20 +206,22 @@ class SourceRepository:
     def by_hash(self, file_hash: str) -> Source | None:
         with self.connect() as connection:
             row = connection.execute(
-                "SELECT * FROM sources WHERE file_hash = ?", (file_hash,)
+                "SELECT * FROM sources WHERE file_hash = ? AND source_id NOT IN (SELECT document_id FROM document_deletions)", (file_hash,)
             ).fetchone()
         return self._source(row) if row else None
 
     def by_dify_document(self, document_id: str) -> Source | None:
         with self.connect() as connection:
             row = connection.execute(
-                "SELECT * FROM sources WHERE dify_document_id = ?", (document_id,)
+                "SELECT * FROM sources WHERE dify_document_id = ? AND source_id NOT IN (SELECT document_id FROM document_deletions)", (document_id,)
             ).fetchone()
         return self._source(row) if row else None
 
     def delete(self, source_id: str) -> None:
         with self.connect() as connection:
             connection.execute('UPDATE documents SET deleted=1 WHERE id=?', (source_id,))
+            self.documents.mark_search_dirty(connection,source_id)
+            connection.execute("UPDATE document_deletions SET status='deleted' WHERE document_id=?", (source_id,))
             cursor = connection.execute("DELETE FROM sources WHERE source_id = ?", (source_id,))
             if cursor.rowcount:
                 connection.execute("DELETE FROM source_revisions WHERE source_id = ?", (source_id,))
@@ -227,14 +234,14 @@ class SourceRepository:
     def list(self, limit: int = 100, offset: int = 0) -> list[Source]:
         with self.connect() as connection:
             rows = connection.execute(
-                "SELECT * FROM sources ORDER BY created_at DESC LIMIT ? OFFSET ?", (limit, offset)
+                "SELECT * FROM sources WHERE source_id NOT IN (SELECT document_id FROM document_deletions) ORDER BY created_at DESC LIMIT ? OFFSET ?", (limit, offset)
             ).fetchall()
         return [self._source(row) for row in rows]
 
     def list_all(self) -> list[Source]:
         with self.connect() as connection:
             rows = connection.execute(
-                "SELECT * FROM sources ORDER BY created_at DESC"
+                "SELECT * FROM sources WHERE source_id NOT IN (SELECT document_id FROM document_deletions) ORDER BY created_at DESC"
             ).fetchall()
         return [self._source(row) for row in rows]
 
@@ -251,7 +258,7 @@ class SourceRepository:
     ) -> tuple[list[Source], int]:
         page = max(1, page)
         page_size = min(max(1, page_size), 100)
-        clauses: list[str] = []
+        clauses: list[str] = ['source_id NOT IN (SELECT document_id FROM document_deletions)']
         params: list[Any] = []
         if query.strip():
             like = f"%{query.strip()}%"
@@ -297,7 +304,7 @@ class SourceRepository:
             like = f"%{term}%"
             clauses.append("(normalized_filename LIKE ? OR normalized_standard_no LIKE ? OR lower(coalesce(standard_title,'')) LIKE lower(?))")
             params.extend((like, like, like))
-        sql = "SELECT * FROM sources WHERE " + " OR ".join(clauses) + " ORDER BY standard_year DESC, filename LIMIT ?"
+        sql = "SELECT * FROM sources WHERE source_id NOT IN (SELECT document_id FROM document_deletions) AND (" + " OR ".join(clauses) + ") ORDER BY standard_year DESC, filename LIMIT ?"
         params.append(limit)
         with self.connect() as connection:
             rows = connection.execute(sql, params).fetchall()

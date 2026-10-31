@@ -6,6 +6,9 @@ from pathlib import Path
 from .document_models import Document, DocumentVersion, ExternalIndexMapping
 from .document_structure import build_structure
 from .document_lock import document_lock
+from .document_chunks import ChunkBuildRepository
+from .chunk_builder import ChunkConfig
+from dataclasses import asdict
 
 
 SCHEMA = '''
@@ -35,12 +38,13 @@ CREATE TABLE IF NOT EXISTS document_backfill_errors(
 '''
 
 
-class DocumentRepository:
+class DocumentRepository(ChunkBuildRepository):
     def __init__(self, sources, knowledge_base_id):
         self.sources = sources
         self.knowledge_base_id = knowledge_base_id
         with sources.connect() as conn:
             conn.executescript(SCHEMA)
+            self.init_chunk_schema(conn)
             existing = conn.execute('SELECT DISTINCT knowledge_base_id FROM documents').fetchall()
             if any(row[0] != knowledge_base_id for row in existing):
                 raise ValueError('Repository knowledge base mismatch')
@@ -83,17 +87,27 @@ class DocumentRepository:
                       version.content_hash, version.builder_version, json.dumps(version.provenance, ensure_ascii=False)))
         for kind, nodes in structure.items():
             for ordinal, node in enumerate(nodes):
+                if kind == 'chunks':
+                    conn.execute('INSERT INTO retrieval_chunks VALUES(?,?,?,?,?,?,?)',
+                        (node.id,version_id,node.builder_version,ordinal,node.locator.start,node.locator.end,node.model_dump_json()))
+                    continue
                 conn.execute('INSERT INTO document_nodes VALUES(?,?,?,?,?)',
                              (node.id, version_id, kind, ordinal, node.model_dump_json()))
+                if kind == 'blocks':
+                    self.store_locations(conn, node.id, version_id, node.locator.model_dump())
                 if kind == 'tables':
                     for cell in node.cells:
                         conn.execute('INSERT INTO document_nodes VALUES(?,?,?,?,?)',
                                      (cell.id, version_id, 'cells', ordinal, json.dumps({**cell.model_dump(), 'table_id': node.id})))
+        config = ChunkConfig()
+        conn.execute('INSERT INTO chunk_builds VALUES(?,?,?,?)',(version_id,config.version,json.dumps(asdict(config)),'ready'))
+        conn.execute('INSERT INTO chunk_selection VALUES(?,?)',(version_id,config.version))
         for name, content in artifacts.items():
             digest = hashlib.sha256(content).hexdigest()
             conn.execute('INSERT OR IGNORE INTO document_artifacts VALUES(?,?)', (digest, content))
             conn.execute('INSERT INTO document_version_artifacts VALUES(?,?,?)', (version_id, name, digest))
         conn.execute('UPDATE documents SET current_version_id=? WHERE id=?', (version_id, source.source_id))
+        self.mark_search_dirty(conn, source.source_id)
         # Historical external IDs are only attached when their version association is known.
         if provenance.get('current_mapping') and source.dify_document_id:
             self.sync_mapping(conn, source, version_id)
@@ -183,6 +197,8 @@ class DocumentRepository:
         # Sources remain the membership and deletion authority during compatibility period.
         source = self.sources.get(document_id)
         with self.sources.connect() as conn:
+            if conn.execute('SELECT 1 FROM documents WHERE id=? AND deleted=1', (document_id,)).fetchone():
+                raise KeyError(document_id)
             row = conn.execute('SELECT * FROM documents WHERE id=? AND knowledge_base_id=? AND deleted=0',
                                (document_id, self.knowledge_base_id)).fetchone()
         if not row:
@@ -200,6 +216,25 @@ class DocumentRepository:
             raise KeyError(version_id)
         return DocumentVersion(**{**dict(row), 'provenance': json.loads(row['provenance'])})
 
+    def resolve_version_id(self, document_id, version_id=None):
+        doc=self.document(document_id)
+        with self.sources.connect() as conn:
+            row=conn.execute('SELECT id FROM document_versions WHERE id=? AND document_id=?',
+                             (version_id or doc.current_version_id,document_id)).fetchone()
+        if not row:
+            raise KeyError(version_id)
+        return row[0]
+
+    def text_window(self, document_id, version_id=None, start=0, limit=100000):
+        vid=self.resolve_version_id(document_id,version_id)
+        if start<0 or not 1<=limit<=20_000_000:
+            raise ValueError('Invalid text range')
+        with self.sources.connect() as conn:
+            row=conn.execute('SELECT substr(markdown,?,?),length(markdown) FROM document_versions WHERE id=?',
+                             (start+1,limit,vid)).fetchone()
+        return {'version_id':vid,'start':start,'content':row[0],'total_chars':row[1],
+                'next_start':start+len(row[0]) if start+len(row[0])<row[1] else None}
+
     def versions(self, document_id):
         self.document(document_id)
         with self.sources.connect() as conn:
@@ -207,34 +242,51 @@ class DocumentRepository:
         return [self.version(document_id, row[0]) for row in rows]
 
     def nodes(self, document_id, kind, version_id=None):
-        version = self.version(document_id, version_id)
+        vid = self.resolve_version_id(document_id, version_id)
+        if kind == 'chunks' and self.selected_builder(vid):
+            return list(self.iter_chunks(document_id,vid))
         with self.sources.connect() as conn:
-            rows = conn.execute('SELECT payload FROM document_nodes WHERE version_id=? AND kind=? ORDER BY ordinal', (version.id, kind)).fetchall()
+            rows = conn.execute('SELECT payload FROM document_nodes WHERE version_id=? AND kind=? ORDER BY ordinal', (vid, kind)).fetchall()
         return [json.loads(row[0]) for row in rows]
 
     def node(self, document_id, node_id, version_id=None):
-        version = self.version(document_id, version_id)
+        vid = self.resolve_version_id(document_id, version_id)
         with self.sources.connect() as conn:
-            row = conn.execute('SELECT payload FROM document_nodes WHERE id=? AND version_id=?', (node_id, version.id)).fetchone()
+            row = conn.execute('SELECT payload FROM document_nodes WHERE id=? AND version_id=?', (node_id, vid)).fetchone()
+            if row is None:
+                row = conn.execute('SELECT payload FROM retrieval_chunks WHERE id=? AND version_id=?', (node_id,vid)).fetchone()
         if row is None:
             raise KeyError(node_id)
         return json.loads(row[0])
 
     def adjacent_chunks(self, document_id, chunk_id, version_id=None, before=1, after=1):
-        chunks = self.nodes(document_id, 'chunks', version_id)
-        index = next((i for i, chunk in enumerate(chunks) if chunk['id'] == chunk_id), None)
-        if index is None:
+        vid = self.resolve_version_id(document_id, version_id)
+        chunk = self.node(document_id,chunk_id,vid)
+        if 'builder_version' not in chunk:
             raise KeyError(chunk_id)
-        return chunks[max(0, index-min(max(before, 0), 20)):index+min(max(after, 0), 20)+1]
+        low, high = chunk['ordinal']-min(max(before,0),20), chunk['ordinal']+min(max(after,0),20)
+        with self.sources.connect() as conn:
+            if ':build:' in chunk_id:
+                rows = conn.execute('SELECT payload FROM retrieval_chunks WHERE version_id=? AND builder_version=? AND ordinal BETWEEN ? AND ? ORDER BY ordinal',
+                                    (vid,chunk['builder_version'],low,high))
+            else:
+                rows = conn.execute("SELECT payload FROM document_nodes WHERE version_id=? AND kind='chunks' AND ordinal BETWEEN ? AND ? ORDER BY ordinal", (vid,low,high))
+            return [json.loads(r[0]) for r in rows]
 
-    def located_blocks(self, document_id, version_id=None, page=None, section_id=None):
+    def located_blocks(self, document_id, version_id=None, page=None, section_id=None, after=-1, limit=200):
+        vid = self.resolve_version_id(document_id, version_id)
         if section_id:
             section = self.node(document_id, section_id, version_id)
             if 'title' not in section:
                 raise KeyError(section_id)
-        return [block for block in self.nodes(document_id, 'blocks', version_id)
-                if (page is None or page in block['locator']['page_numbers'])
-                and (section_id is None or section_id in block['locator']['section_ids'])]
+        clauses, args = ["n.version_id=?", "n.kind='blocks'", 'n.ordinal>?'], [vid,after]
+        for kind, value in (('page_numbers',page),('section_ids',section_id)):
+            if value is not None:
+                clauses.append('EXISTS(SELECT 1 FROM node_locations l WHERE l.node_id=n.id AND l.version_id=n.version_id AND l.kind=? AND l.value=?)')
+                args.extend([kind,str(value)])
+        with self.sources.connect() as conn:
+            rows = conn.execute('SELECT payload FROM document_nodes n WHERE '+' AND '.join(clauses)+' ORDER BY ordinal LIMIT ?', (*args,min(max(limit,1),500)))
+            return [json.loads(r[0]) for r in rows]
 
     def mappings(self, document_id, version_id=None):
         version = self.version(document_id, version_id)
@@ -255,9 +307,14 @@ class DocumentRepository:
             raise KeyError(name)
         return bytes(row[0])
 
-    def iter_chunks(self, document_id, version_id=None):
+    def iter_chunks(self, document_id, version_id=None, builder_version=None):
         """Stage 2 index input: stable version/builder IDs and source locators."""
-        yield from self.nodes(document_id, 'chunks', version_id)
+        version = self.version(document_id, version_id)
+        builder_version = builder_version or self.selected_builder(version.id)
+        after = -1
+        while rows := self.chunks_page(document_id,version.id,builder_version,after):
+            yield from rows
+            after = rows[-1]['ordinal']
 
     def put_mapping(self, document_id, mapping: ExternalIndexMapping):
         """Record an adapter's acknowledged index generation; does not perform indexing."""
@@ -284,7 +341,7 @@ class DocumentRepository:
 class DocumentReadService:
     """All business reads call a live authorization callback, including old versions."""
     READS = {'document', 'version', 'versions', 'nodes', 'node', 'adjacent_chunks',
-             'located_blocks', 'mappings', 'artifacts', 'artifact'}
+             'located_blocks', 'mappings', 'artifacts', 'artifact', 'chunks_page', 'chunks_by_ids', 'text_window'}
 
     def __init__(self, repository, authorize):
         self.repository = repository

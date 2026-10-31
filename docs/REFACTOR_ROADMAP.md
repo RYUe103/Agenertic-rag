@@ -1,18 +1,32 @@
-# V2 重构路线与第一阶段验收
+# V2 重构路线与阶段验收
 
 2026-10-31，开发分支 `codex/v2-document-repository`，基线为 `codex/platform-frontend-upgrade` 的 `9691b39`，未改 main。
 
 | 阶段 | 状态 | 内容 |
 | --- | --- | --- |
 | 1 | 已实现并验证 | 版本化 Document Repository、原文结构、平台 Chunk Builder、读取服务、迁移兼容 |
-| 2 | 未开始，等待明确授权 | Tantivy BM25、Exact/Grep 独立索引、增量与墓碑处理 |
+| 2 | 已实现并验证 | Tantivy BM25、Exact/Grep、结构感知 Chunk、代次发布、增量与墓碑处理 |
 | 3 | 未开始 | Unified Retrieval、自动规划、RRF、可替换 Reranker、Tool API V2 |
 | 4 | 未开始 | LangGraph ReAct + ToolNode、表格计算、证据验证、checkpoint 工具恢复 |
 | 5 | 未开始 | MCP/REST 统一迁移、旧工具退役、全链路评测和性能优化 |
 
-第一阶段的 Schema、API、备份与回滚方式见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)。只有用户明确要求“执行第二阶段”才能继续。
+当前架构见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)，第二阶段操作说明见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)。完成第二阶段后停止，只有用户明确要求“执行第三阶段”才能继续。
 
-## 实际验证
+## 第二阶段实际验收
+
+- 在第一阶段提交 f53e64b 基础上修改，分支仍为 codex/v2-document-repository，main 未改动。
+- `.runtime/bin/python -m pytest tests/test_local_search.py -q`：26 项新增检索测试通过；使用真实 Tantivy，非 mock BM25。
+- 全套 `.runtime/bin/python -m pytest -q`：229 passed、0 failed，7 条第三方弃用警告；`git diff --check` 通过。
+- macOS ARM64 / Python 3.13.5 和 Linux ARM64 / Python 3.11 的 Tantivy 写入、查询、重新打开索引实际通过。AMD64 wheel 已核验，AMD64 容器镜像下载超时，运行验证未完成。
+- 100 份真实 PDF、951 Chunk；原 Markdown 504791 字节、有效索引 409996 字节；全量构建 1.054 秒，查询 P50/P95 为 54.514/61.465 ms。
+- 100 道 TAT-DQA 来源标注问题，Top-1/5/10 Chunk 结果中的正确 PDF 命中率为 79%/89%/90%；MRR@10=0.832083。不是问答准确率。逐题数据见 LOCAL_SEARCH_BENCHMARK_2026-10-31.json。
+- 当前运行数据库未自动迁移或部署；测试数据在 data/local-search-benchmark-phase2-validated 隔离目录，未向 MinerU/Dify 上传本次测试文件。
+- 现有业务 sources.db 的隔离副本重复回填成功：7 个文档、309 个结构化 Chunk，第二次 Tantivy 同步为 noop。原业务数据库保持原样。
+- 删除回归按新要求更新：Dify 删除失败保留原文件以便重试，同时普通读取必须立即拒绝。没有放宽旧权限。
+
+第三阶段尚未实现：统一自动检索规划、RRF、Reranker 和 Tool API V2。第四、第五阶段保持未开始。
+
+## 第一阶段历史验证
 
 - `.runtime/bin/python -m pytest -q`：最终 203 passed，0 failed，7 条第三方弃用警告（21.79 秒）。其中新增 Repository 测试 19 项。
 - `cd frontend && npm run build`：TypeScript 和 Vite 构建通过；仍有现有 UI 依赖包超过 500 kB 的体积警告，构建产物同步到 static。

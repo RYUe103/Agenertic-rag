@@ -24,10 +24,12 @@ def source(repo, root, text, name='s'):
 
 
 def test_structure_lossless_chunks_and_locators():
-    text = '<!-- page: 2 -->\n# Title\n\n' + 'alpha ' * 700 + '\n\n## Sub\nbody\n'
+    text = '<!-- page: 2 -->\n# Title\n\n' + 'alpha sentence. ' * 700 + '\n\n## Sub\nbody\n'
     data = build_structure(text, 'v1')
     assert ''.join(b.content for b in data['blocks']) == text
-    assert ''.join(c.content for c in data['chunks']) == text
+    assert data['chunks'][0].locator.start == 0
+    assert data['chunks'][-1].locator.end == len(text)
+    assert all(a.locator.end >= b.locator.start for a,b in zip(data['chunks'],data['chunks'][1:]))
     assert len(data['chunks']) >= 3
     assert len(data['sections']) == 2
     assert data['sections'][1].parent_id == data['sections'][0].id
@@ -111,7 +113,7 @@ def test_cross_document_version_and_node_ids_rejected(tmp_path):
 
 def test_adjacent_page_and_section_reads(tmp_path):
     repo = SourceRepository(tmp_path/'db')
-    source(repo, tmp_path/'files', '<!-- page: 3 -->\n# Intro\n' + 'x' * 4000)
+    source(repo, tmp_path/'files', '<!-- page: 3 -->\n# Intro\n' + 'Sentence. ' * 400)
     chunks = list(repo.documents.iter_chunks('s'))
     assert len(repo.documents.adjacent_chunks('s', chunks[1]['id'])) == 3
     assert repo.documents.located_blocks('s', page=3)
@@ -228,7 +230,7 @@ def test_legacy_revisions_migrate_when_current_file_missing(tmp_path):
     repo.save_revision(s, 'latest', 'local', 'second')
     # Simulate a pre-V2 database, retaining only the original legacy history.
     with repo.connect() as conn:
-        for table in ('documents', 'document_versions', 'document_nodes', 'document_version_artifacts'):
+        for table in ('documents', 'document_versions', 'document_nodes', 'document_version_artifacts', 'retrieval_chunks', 'chunk_builds', 'chunk_selection'):
             conn.execute('DELETE FROM ' + table)
     Path(s.local_md_path).unlink()
     repo.documents.backfill('s')

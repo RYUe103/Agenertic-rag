@@ -424,8 +424,15 @@ class RetrievalTools:
         section = next((s for s in sections if s['title'].casefold() == heading.strip().casefold()), None)
         if section is None:
             return self._evidence(source, "", "document_section")
-        blocks = self.repository.documents.located_blocks(source_id, section_id=section['id'])
-        return self._evidence(source, ''.join(b['content'] for b in blocks)[:max_chars], 'document_section', location=heading)
+        parts, after, size = [], -1, 0
+        while size < min(max_chars,100000):
+            blocks = self.repository.documents.located_blocks(source_id,section_id=section['id'],after=after)
+            if not blocks:
+                break
+            parts.extend(b['content'] for b in blocks)
+            size += sum(len(b['content']) for b in blocks)
+            after = blocks[-1]['ordinal']
+        return self._evidence(source, ''.join(parts)[:max_chars], 'document_section', location=heading)
 
     def get_document_table(self, source_id: str, table_index: int = 0, max_chars: int = 12000) -> Evidence:
         source = self.repository.get(source_id)

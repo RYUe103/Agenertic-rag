@@ -1,4 +1,14 @@
-# Knowledge Runtime V2：第一阶段
+# Knowledge Runtime V2
+
+截至 2026-10-31，第二阶段已实现。当前检索架构、Schema 2、结构化 Chunk 规则、Tantivy/Exact 接口、权限及运维方案见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)。下文保留第一阶段设计记录；其中固定 1800 字符 Chunk 已由结构感知 Builder 取代，已有旧 Chunk 保留兼容。Tantivy 与 Exact 已落地，混合检索及后续 Agent 重构仍未实施。
+
+## 第二阶段架构增量
+
+原文 Repository → 独立 Chunk Build → Tantivy 派生索引代次。业务检索经 LocalSearchService 授权后调用 BM25 或 Exact；不经过 Dify 执行 BM25。新增检索构建和结构关系表位于原 sources.db，没有建立平行的原文 Repository。DocumentVersion 不随分块配置改变，Chunk ID 包含原文版本和 Builder 版本。
+
+索引管理器采用复制旧代次、文档级增量写入、计数/哈希校验、SQLite 发布指针的机制；读服务在新代次发布前继续读取旧代次。删除先记录墓碑和可重试意图，再执行外部清理。详细版本边界、回滚约束和性能局限见上述运维文档。
+
+## 第一阶段历史设计
 
 实施日期：2026-10-31。范围仅为原文 Repository、结构化版本、迁移和读取服务。默认 Agent 仍使用现有执行图。
 

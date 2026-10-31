@@ -21,6 +21,9 @@ dependencies = [
   "python-dotenv>=1,<2",
   "ldap3>=2.9,<3",
   "pyahocorasick==2.2.0",
+  "tantivy==0.27.0",
+  "jieba==0.42.1",
+  "regex==2024.11.6",
 ]
 
 [project.optional-dependencies]

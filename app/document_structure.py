@@ -2,6 +2,7 @@
 import re
 from html.parser import HTMLParser
 from .document_models import Block, Chunk, EvidenceLocator, Page, Section, Table, TableCell
+from .chunk_builder import build_chunks
 
 
 class CellParser(HTMLParser):
@@ -163,15 +164,6 @@ def build_structure(markdown: str, version_id: str, content_list=None):
         if item.get('coordinate_system') and isinstance(bbox, list) and len(bbox) == 4:
             block.locator.bbox = bbox
             block.locator.coordinate_system = item['coordinate_system']
-    chunks = []
-    for start in range(0, len(markdown), 1800):
-        end = min(start + 1800, len(markdown))
-        linked = [b for b in blocks if b.locator.start < end and b.locator.end > start]
-        def collect(key):
-            return list(dict.fromkeys(v for b in linked for v in getattr(b.locator, key)))
-        chunks.append(Chunk(id=f'{version_id}:chunk:{len(chunks)}', version_id=version_id,
-                            ordinal=len(chunks), content=markdown[start:end],
-                            locator=EvidenceLocator(version_id=version_id, block_ids=[b.id for b in linked],
-                            page_numbers=collect('page_numbers'), section_ids=collect('section_ids'),
-                            table_ids=collect('table_ids'), start=start, end=end)))
+    chunks = [Chunk(**c) for c in build_chunks(markdown,version_id,
+        [b.model_dump() for b in blocks],[s.model_dump() for s in sections],[t.model_dump() for t in tables])]
     return {'pages': list(pages.values()), 'sections': sections, 'blocks': blocks, 'chunks': chunks, 'tables': tables}

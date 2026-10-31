@@ -65,6 +65,12 @@ class Chunk(BaseModel):
     content: str
     locator: EvidenceLocator
     builder_version: str = 'chars-1800-v1'
+    section_titles: list[str] = Field(default_factory=list)
+    table_id: str | None = None
+    cell_ids: list[str] = Field(default_factory=list)
+    table_rows: list[int] = Field(default_factory=list)
+    table_caption: str | None = None
+    content_is_projection: bool = False
 
 
 class TableCell(BaseModel):
@@ -99,3 +105,4 @@ class ExternalIndexMapping(BaseModel):
     external_segment_id: str | None = None
     chunk_id: str | None = None
     dataset_id: str | None = None
+    builder_version: str | None = None

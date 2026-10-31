@@ -447,7 +447,24 @@ class IngestionService:
 
     @document_operation(exclusive=True)
     def delete_source(self, source_id: str) -> None:
-        source = self.repository.get(source_id)
+        try:
+            source = self.repository.get(source_id, include_deleting=True)
+        except KeyError:
+            with self.repository.connect() as conn:
+                done = conn.execute("SELECT 1 FROM document_deletions WHERE document_id=? AND status='deleted'", (source_id,)).fetchone()
+            if done:
+                return
+            raise
+        source_dir = Path(source.source_path).resolve().parent
+        files_dir = self.files_dir.resolve()
+        if source_dir.parent != files_dir or source_dir.name != source.source_id:
+            raise RuntimeError("拒绝删除知识库文件目录之外的路径")
+        # Durable deny-first intent; source row stays available only to cleanup retries.
+        with self.repository.connect() as conn:
+            conn.execute('INSERT OR IGNORE INTO document_deletions VALUES(?,?,?)',
+                         (source_id,source.model_dump_json(),'pending'))
+            conn.execute('UPDATE documents SET deleted=1 WHERE id=?', (source_id,))
+            self.repository.documents.mark_search_dirty(conn,source_id)
         remote_document = (
             source.dify_document_id
             and source.dify_dataset_id == getattr(self.dify, "dataset_id", None)
@@ -455,10 +472,6 @@ class IngestionService:
         )
         if remote_document and hasattr(self.dify, "delete_document"):
             self.dify.delete_document(source.dify_document_id)
-        source_dir = Path(source.source_path).resolve().parent
-        files_dir = self.files_dir.resolve()
-        if source_dir.parent != files_dir or source_dir.name != source.source_id:
-            raise RuntimeError("拒绝删除知识库文件目录之外的路径")
         if source_dir.exists():
             shutil.rmtree(source_dir)
         self.repository.delete(source_id)

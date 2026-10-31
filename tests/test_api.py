@@ -1,4 +1,5 @@
 from __future__ import annotations
+import pytest
 
 import time
 import threading
@@ -697,8 +698,13 @@ def test_bulk_clear_keeps_local_source_when_dify_delete_fails(tmp_path) -> None:
 
         assert completed["failed"] == 1
         assert "Dify refused deletion" in completed["items"][0]["message"]
-        assert runtime.repository.get(source.source_id).filename == "keep.txt"
+        assert runtime.repository.get(source.source_id, include_deleting=True).filename == "keep.txt"
+        with pytest.raises(KeyError):
+            runtime.repository.get(source.source_id)
         assert Path(source.source_path).exists()
+        runtime.ingestion.dify.delete_document = lambda _: None
+        assert client.delete(f'/api/agents/default/sources/{source.source_id}').status_code == 204
+        assert not Path(source.source_path).exists()
 
 
 def test_bulk_clear_only_affects_selected_agent_knowledge_base(tmp_path) -> None:

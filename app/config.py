@@ -14,6 +14,7 @@ class Settings(BaseSettings):
     app_data_dir: Path = Path("data")
     agent_config_path: Path = Path("config/agents.yaml")
     app_mock_external_services: bool = True
+    local_index_enabled: bool = True
     llm_base_url: str = ""
     llm_api_key: str = ""
     llm_model: str = ""
