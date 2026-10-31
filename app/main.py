@@ -636,6 +636,16 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.include_router(document_router(authorize_document_read, require_kb_write))
     from app.search.api import search_router
     app.include_router(search_router(authorize_document_read, require_kb_write, lambda request: user_id(current_user(request))))
+    from app.retrieval_v2.api import retrieval_router
+    def authorize_v2_tool(request, permission):
+        user = current_user(request)
+        if not user.is_admin and user.auth_source != 'api_key' and permission not in access.permissions(user_id(user), user.is_admin):
+            raise HTTPException(403, '缺少权限：'+permission)
+    from app.retrieval_v2.reranker import HTTPReranker
+    v2_reranker = (HTTPReranker(settings.v2_rerank_url, settings.v2_rerank_api_key, settings.v2_rerank_model)
+        if settings.v2_rerank_url and settings.v2_rerank_model and not settings.app_mock_external_services else None)
+    app.include_router(retrieval_router(authorize_document_read, lambda request:user_id(current_user(request)),
+        authorize_v2_tool, tool_configs, tool_calls, tool_approvals, v2_reranker))
 
     @app.get("/api/agents", response_model=list[AgentSummary])
     def list_agents(request: Request) -> list[AgentSummary]:

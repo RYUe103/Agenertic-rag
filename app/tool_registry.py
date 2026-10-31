@@ -55,6 +55,9 @@ TOOL_CATEGORIES = {
     "extract_table": "数据", "export_csv": "数据", "export_excel": "数据", "analyze_data": "数据",
 }
 
+from app.retrieval_v2.tools import DESCRIPTIONS as V2_DESCRIPTIONS
+TOOL_DESCRIPTIONS.update(V2_DESCRIPTIONS)
+
 TOOL_READ_ONLY = {name: True for name in TOOL_DESCRIPTIONS}
 for _name in ("upload_document", "delete_document", "parse_document", "rebuild_document_index"):
     TOOL_READ_ONLY[_name] = False
@@ -258,6 +261,9 @@ class ToolConfigStore:
 
 @lru_cache
 def input_model(name: str):
+    if name in V2_DESCRIPTIONS:
+        from app.retrieval_v2.tools import input_schema
+        return input_schema(name)
     if name not in TOOL_DESCRIPTIONS:
         raise KeyError(name)
     static = {"export_csv": ExportCsvInput, "export_excel": ExportExcelInput, "analyze_data": AnalyzeDataInput, "upload_document": UploadDocumentInput, "delete_document": DeleteDocumentInput, "parse_document": ParseDocumentInput,
@@ -277,8 +283,14 @@ def input_model(name: str):
 
 def describe_tools(allowed: set[str], configs: dict[str, dict[str, object]] | None = None) -> list[dict[str, object]]:
     configs = configs or {}
-    return [{"name": name, "description": description, "category": TOOL_CATEGORIES.get(name, "知识检索"), "read_only": TOOL_READ_ONLY.get(name, True),
+    result = [{"name": name, "description": description, "category": TOOL_CATEGORIES.get(name, "知识检索"), "read_only": TOOL_READ_ONLY.get(name, True),
              "input_schema": input_model(name).model_json_schema(), "output_schema": ({"type": "object", "properties": {"filename": {"type": "string"}, "content_type": {"type": "string"}, "content": {"type": "string"}, "content_base64": {"type": "string"}, "count": {"type": "integer"}}} if name in {"export_csv", "export_excel"} else {"type": "object", "properties": {"items": {"type": "array"}, "count": {"type": "integer"}}}),
              "required_permission": str(configs.get(name, {}).get("permission", "tool.invoke")),
              "requires_approval": name in WRITE_TOOLS or bool(configs.get(name, {}).get("requires_approval", False)), "enabled": bool(configs.get(name, {}).get("enabled", True))}
             for name, description in TOOL_DESCRIPTIONS.items() if name in allowed]
+    from app.retrieval_v2.tools import catalog
+    definitions = {item['name']:item for item in catalog()}
+    for item in result:
+        if item['name'] in definitions:
+            item.update(definitions[item['name']])
+    return result

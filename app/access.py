@@ -6,7 +6,7 @@ from pathlib import Path
 from pydantic import BaseModel, Field
 
 
-PERMISSIONS = ('knowledge.read', 'document.read', 'document.write', 'tool.invoke', 'mcp.use', 'code.execute', 'sandbox.use', 'admin')
+PERMISSIONS = ('knowledge.read', 'document.read', 'document.write', 'tool.invoke', 'tool.advanced', 'mcp.use', 'code.execute', 'sandbox.use', 'admin')
 
 
 class RoleInput(BaseModel):

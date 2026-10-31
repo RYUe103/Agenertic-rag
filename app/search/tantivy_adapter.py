@@ -65,6 +65,10 @@ class TantivyAdapter:
         for name in ('page','table_id'):
             if filters.get(name) is not None:
                 clauses.append((tantivy.Occur.Must,tantivy.Query.term_query(self.schema,name,str(filters[name]))))
+        if 'chunk_ids' in filters:
+            if not filters['chunk_ids']:
+                return []
+            clauses.append((tantivy.Occur.Must,tantivy.Query.term_set_query(self.schema,'chunk_id',filters['chunk_ids'])))
         searcher = self.index.searcher()
         result = searcher.search(tantivy.Query.boolean_query(clauses),limit=top_k)
         hits = []
