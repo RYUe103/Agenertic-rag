@@ -1,0 +1,859 @@
+{
+  "boundary": "One isolated historical formal-ingestion document. Real read-only Dify. No production writes.",
+  "manifest_sha256": "6efe996c43d915e3651784937cfa904ed78047536b9077c398c6aec4b2c4e94a",
+  "remote_enabled_manifest_matches": 7,
+  "source_proof": {
+    "local_payload_sha256": "1491a965a83f32675d2e50c93b18d7539fa735c84d1f61f492ebedb0db355677",
+    "remote_original_sha256": "1491a965a83f32675d2e50c93b18d7539fa735c84d1f61f492ebedb0db355677",
+    "remote_document": "046b0818194c8a5ba00ee4775cb48d7c91207fecea8568ea34bd9169cb9dc305",
+    "remote_file": "5bc2e2cd691b8f52f053f3d01acf9707d8701485952ee3529b34defbd97fe83a",
+    "source": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+    "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+    "status": "completed",
+    "bytes": 2983,
+    "remote_enabled": true,
+    "remote_archived": false,
+    "binding": "remote_file_sha256"
+  },
+  "modes": {
+    "lexical": {
+      "status": "ok",
+      "diagnostics": {
+        "backends": {
+          "isolated-formal-evidence:lexical": {
+            "status": "ok",
+            "elapsed_ms": 4.318958999647293,
+            "candidate_count": 8,
+            "verified_count": 8,
+            "candidates_truncated": false
+          }
+        },
+        "authorization_ms": 1.0572499959380366,
+        "evidence_ms": 0.7693340012338012,
+        "fusion_ms": 0.1793749979697168,
+        "reranker": {
+          "status": "disabled",
+          "elapsed_ms": 0
+        },
+        "candidate_count": 8,
+        "deduplicated": 0,
+        "rejected": {},
+        "total_ms": 6.941999999980908,
+        "context_chars": 2918,
+        "deadline_exceeded": false
+      },
+      "results": [
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "e905482fd960b5fca896532fb8766b8fd2b0138f805f7c385a0841f53910195c",
+          "content_sha256": "2855a1b5fd686abab9a24292fe5cfea123c538ffc1babdddb590b178ea84ce1f",
+          "content_chars": 393,
+          "verification_status": "verified_current",
+          "fused_score": 0.01639344262295082,
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 19.71537208557129,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 396,
+            "end": 789,
+            "page_numbers": [],
+            "block_ids": [
+              "4bfa0ef30a0f3bad2b45d76a768971f5723eaec9b075cf0d9797c2e1148be359",
+              "41777a7b99c9f05cdeba7a8683146b0d36dfa8c811eae1f1b1f0ea717b9f3945",
+              "ac4ed861500417af1e7653df0a56bbbdec523c0e6904650c9e792393b36f3abd",
+              "5c099ab4e20802f3cf9e267e2d26f3586a4b0fc102422a24b3c89627734e8a74",
+              "db2936a5a032d77ba3e4ba272abce9b04ba0509fab574ea2bbdbe7971cad3201",
+              "36a2a9dea02a6944b96940c0ccd17734cf5c85a868d155193aa249bb68d986a2",
+              "da8c8992cd7385d1d6ff373d01a03071cf11dcb17d04d8506bade8f76a362915"
+            ],
+            "section_ids": [
+              "61a057369c876a3e3755652235457268fcd87cd9220ba26097aed1cfcf596405"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "59cd69f40634d815a40e2ed87924a4f09b75efdf110e1b8517e9d1a260f94243",
+          "content_sha256": "f919cd07bdd586239e82a1bb6d937d889a55fc1db3fc543ca489b6768590dd4b",
+          "content_chars": 360,
+          "verification_status": "verified_current",
+          "fused_score": 0.016129032258064516,
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 13.175830841064453,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 36,
+            "end": 396,
+            "page_numbers": [],
+            "block_ids": [
+              "0e3b212e5ec3b327b3bffcef8cfbd76fab704f58e9b8472b7dd2a72f93af6f76"
+            ],
+            "section_ids": [
+              "61a057369c876a3e3755652235457268fcd87cd9220ba26097aed1cfcf596405"
+            ],
+            "table_ids": [
+              "d3fe612dd4c50ae6c0f1a8afd1f38383ade5d48dc0952e6c866f132b6ac896b4"
+            ]
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "bb4ed5487567d584ddcc76d583b6bdcb0363dabff7b4705c07b7976078c87ca4",
+          "content_sha256": "6f5c312d04230ab5a435260d440101808833d029589036330b604a53038ba5b0",
+          "content_chars": 250,
+          "verification_status": "verified_current",
+          "fused_score": 0.015873015873015872,
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 11.553417205810547,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 2309,
+            "end": 2559,
+            "page_numbers": [],
+            "block_ids": [
+              "89039d577330ede3e6cecbc0364976510431bcc96b07904cf886976f30d30609",
+              "bd4ebcb84d3049618631748b538e8d5257a7f7d099ffb53d3b23700b10e75990",
+              "afb8b3ce093f74666e14aee634c6adf8ccf8123dafc758988cae57abec1c7132"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "c4a580cfb0aa5a003e0d767911bb839e4fce7dd428739cbb5820f96d11691ac3",
+          "content_sha256": "0632f2a54ff1c1c8544e0022ed43b0efd90e20918c113a2fadfa3da0218fc75a",
+          "content_chars": 113,
+          "verification_status": "verified_current",
+          "fused_score": 0.015625,
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 6.7315778732299805,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 2011,
+            "end": 2124,
+            "page_numbers": [],
+            "block_ids": [
+              "a0e99124f481bd4578355646b127d8ca8837bc50925bb09e645838ee9d6d0e88",
+              "ead684f7828e342f84f94ee2ce3bd2f946934f3580eae62fd98a23f21a64ff60",
+              "30d920f897227a15ecc0060b260e44b2de496fff693acd94dae80eeae8b5f6ad"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "3224d42c2f1021e9b2e57d00651f558f132299613a25d73b997c8d91b4317fe1",
+          "content_sha256": "6babb38c26d2de6df671b50df6f52a1618dfe077de65af35cb67238577b17209",
+          "content_chars": 1124,
+          "verification_status": "verified_current",
+          "fused_score": 0.015384615384615385,
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 5.33841609954834,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 887,
+            "end": 2011,
+            "page_numbers": [],
+            "block_ids": [
+              "2dea811dabfbf137bfb99a7c6cbb57bf7e60d0304881bf3548e1850ac9f523d8"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": [
+              "c27e422c0ae593f75601401286122d43973d02db39aa658281dd43861e2e5894"
+            ]
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "9869b055edf04ab688817c7338ed6ae235ced35bc3e03dd3cbf4b0d76d9c837f",
+          "content_sha256": "0aa5c3064f44c3ea8373d012e55490f091785c91a8a0114830d43af3f4d04f71",
+          "content_chars": 98,
+          "verification_status": "verified_current",
+          "fused_score": 0.015151515151515152,
+          "source_adapter": "lexical",
+          "source_rank": 6,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 6,
+              "score": 4.7902631759643555,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 789,
+            "end": 887,
+            "page_numbers": [],
+            "block_ids": [
+              "617d8999dbde1812520d7edd5a1e7017d9f49540a36da1b53075665cccf50bda",
+              "2ae66b58873cd120432ce8426d81a983e41ed523e63d40d33114cb366bcd4b2e",
+              "ea9b756b974131e8f445fbbdc74d34009856b6a6e157a8d6df9526ed30411d99",
+              "bf766540b82cf9ca7246f43240b99cbbff826179c93d44856e0a47c27c7269c8"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "2086d3cb7fed0d5c5607129d4f4b085ce0ff35dc52691978d6fbeaf2bd86b259",
+          "content_sha256": "46913d077f15b19d03dcbc012816ce843bef64799dddb7b0139f2e4080ee45bd",
+          "content_chars": 185,
+          "verification_status": "verified_current",
+          "fused_score": 0.014925373134328358,
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 2.0562825202941895,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 2124,
+            "end": 2309,
+            "page_numbers": [],
+            "block_ids": [
+              "c383610fb8fa06820a03569160c2042d02c7217692250e97479193fb217c9262"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": [
+              "cd53164f4bbaea6d7c260f49a13a06e3053a84be8c710285b3d0b4a9fd45ab41"
+            ]
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "af31014c2fcc4be92ee138f81f014d6a8e4e1508cf30809387ae8cffbe6fcc6e",
+          "content_sha256": "20ee64a65e4440b8c552e8d4a32e3aec6c40bd01bca4a864addf5f82b4385a7d",
+          "content_chars": 395,
+          "verification_status": "verified_current",
+          "fused_score": 0.014705882352941176,
+          "source_adapter": "lexical",
+          "source_rank": 8,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 8,
+              "score": 1.7755258083343506,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 2584,
+            "end": 2979,
+            "page_numbers": [],
+            "block_ids": [
+              "98d88b5fd594f39599af4fd8cdf98a450e715e2b75b03c5f75bdc5adcef2ec24"
+            ],
+            "section_ids": [
+              "e8d30cdaf007cf747e7307ef247568bd853d7492e21f01ae9227bc6d69ac2045"
+            ],
+            "table_ids": [
+              "f0d30eb29fbd80837b1d2998cdf737ddb1ea295d80a2ca3c348f76ca158fd7a0"
+            ]
+          },
+          "matched_ranges": []
+        }
+      ]
+    },
+    "vector": {
+      "status": "degraded",
+      "diagnostics": {
+        "backends": {
+          "isolated-formal-evidence:vector": {
+            "status": "ok",
+            "elapsed_ms": 2152.5745000035386,
+            "candidate_count": 63,
+            "verified_count": 2,
+            "candidates_truncated": false,
+            "scope_filter": "local_verified_mapping_after_remote_top_k"
+          }
+        },
+        "authorization_ms": 0.3184580054949038,
+        "evidence_ms": 3.3610829996177927,
+        "fusion_ms": 0.0657499986118637,
+        "reranker": {
+          "status": "disabled",
+          "elapsed_ms": 0
+        },
+        "candidate_count": 63,
+        "deduplicated": 0,
+        "rejected": {
+          "unverified_external": 61,
+          "external_text_absent_from_version": 7,
+          "external_outside_scope_or_missing_identity_mapping": 54
+        },
+        "total_ms": 2157.0507080032257,
+        "context_chars": 149,
+        "deadline_exceeded": false
+      },
+      "results": [
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "639be938e139aa0c20997d76aa7d27fc6e555e537c7a1efbebfad9c8dca43704",
+          "content_sha256": "b7d73b4853cf5a7858f1b93a2f513f2a491316bbe5ff9c4e63bb48661728fca9",
+          "content_chars": 36,
+          "verification_status": "verified_current",
+          "fused_score": 0.0125,
+          "source_adapter": "vector",
+          "source_rank": 20,
+          "provenance": [
+            {
+              "adapter": "vector",
+              "rank": 20,
+              "score": 0.42683667,
+              "generation": null
+            }
+          ],
+          "locator": {
+            "start": 0,
+            "end": 36,
+            "page_numbers": [],
+            "block_ids": [
+              "311b06be1b54706dfbf27ad0cc28e5c26ae1c1e6d65595a4ca7c792dc086b11f",
+              "3e35bddbc19314216264655cf6aa3ee6e06f2b1db41c481dcc9419670be2599d"
+            ],
+            "section_ids": [
+              "61a057369c876a3e3755652235457268fcd87cd9220ba26097aed1cfcf596405"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": [
+            {
+              "start": 3,
+              "end": 34
+            }
+          ]
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "c4a580cfb0aa5a003e0d767911bb839e4fce7dd428739cbb5820f96d11691ac3",
+          "content_sha256": "0632f2a54ff1c1c8544e0022ed43b0efd90e20918c113a2fadfa3da0218fc75a",
+          "content_chars": 113,
+          "verification_status": "verified_current",
+          "fused_score": 0.00847457627118644,
+          "source_adapter": "vector",
+          "source_rank": 58,
+          "provenance": [
+            {
+              "adapter": "vector",
+              "rank": 58,
+              "score": 0.32570654,
+              "generation": null
+            }
+          ],
+          "locator": {
+            "start": 2011,
+            "end": 2124,
+            "page_numbers": [],
+            "block_ids": [
+              "a0e99124f481bd4578355646b127d8ca8837bc50925bb09e645838ee9d6d0e88",
+              "ead684f7828e342f84f94ee2ce3bd2f946934f3580eae62fd98a23f21a64ff60",
+              "30d920f897227a15ecc0060b260e44b2de496fff693acd94dae80eeae8b5f6ad"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": [
+            {
+              "start": 2012,
+              "end": 2122
+            }
+          ]
+        }
+      ]
+    },
+    "hybrid": {
+      "status": "degraded",
+      "diagnostics": {
+        "backends": {
+          "isolated-formal-evidence:exact": {
+            "status": "ok",
+            "elapsed_ms": 4.352292002295144,
+            "candidate_count": 2,
+            "verified_count": 2,
+            "candidates_truncated": false
+          },
+          "isolated-formal-evidence:vector": {
+            "status": "ok",
+            "elapsed_ms": 2111.419125001703,
+            "candidate_count": 63,
+            "verified_count": 2,
+            "candidates_truncated": false,
+            "scope_filter": "local_verified_mapping_after_remote_top_k"
+          },
+          "isolated-formal-evidence:lexical": {
+            "status": "ok",
+            "elapsed_ms": 7.955415996548254,
+            "candidate_count": 8,
+            "verified_count": 8,
+            "candidates_truncated": false
+          }
+        },
+        "authorization_ms": 3.14437500492204,
+        "evidence_ms": 8.865083997079637,
+        "fusion_ms": 0.6502920005004853,
+        "reranker": {
+          "status": "disabled",
+          "elapsed_ms": 0
+        },
+        "candidate_count": 73,
+        "deduplicated": 3,
+        "rejected": {
+          "unverified_external": 61,
+          "external_text_absent_from_version": 7,
+          "external_outside_scope_or_missing_identity_mapping": 54
+        },
+        "total_ms": 2126.515959003882,
+        "context_chars": 2954,
+        "deadline_exceeded": false
+      },
+      "results": [
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "e905482fd960b5fca896532fb8766b8fd2b0138f805f7c385a0841f53910195c",
+          "content_sha256": "2855a1b5fd686abab9a24292fe5cfea123c538ffc1babdddb590b178ea84ce1f",
+          "content_chars": 393,
+          "verification_status": "verified_current",
+          "fused_score": 0.0360655737704918,
+          "source_adapter": "exact",
+          "source_rank": 1,
+          "provenance": [
+            {
+              "adapter": "exact",
+              "rank": 1,
+              "score": null,
+              "generation": null
+            },
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 19.71537208557129,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 396,
+            "end": 789,
+            "page_numbers": [],
+            "block_ids": [
+              "4bfa0ef30a0f3bad2b45d76a768971f5723eaec9b075cf0d9797c2e1148be359",
+              "41777a7b99c9f05cdeba7a8683146b0d36dfa8c811eae1f1b1f0ea717b9f3945",
+              "ac4ed861500417af1e7653df0a56bbbdec523c0e6904650c9e792393b36f3abd",
+              "5c099ab4e20802f3cf9e267e2d26f3586a4b0fc102422a24b3c89627734e8a74",
+              "db2936a5a032d77ba3e4ba272abce9b04ba0509fab574ea2bbdbe7971cad3201",
+              "36a2a9dea02a6944b96940c0ccd17734cf5c85a868d155193aa249bb68d986a2",
+              "da8c8992cd7385d1d6ff373d01a03071cf11dcb17d04d8506bade8f76a362915"
+            ],
+            "section_ids": [
+              "61a057369c876a3e3755652235457268fcd87cd9220ba26097aed1cfcf596405"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": [
+            {
+              "start": 635,
+              "end": 646
+            }
+          ]
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "c4a580cfb0aa5a003e0d767911bb839e4fce7dd428739cbb5820f96d11691ac3",
+          "content_sha256": "0632f2a54ff1c1c8544e0022ed43b0efd90e20918c113a2fadfa3da0218fc75a",
+          "content_chars": 113,
+          "verification_status": "verified_current",
+          "fused_score": 0.02409957627118644,
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 6.7315778732299805,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            },
+            {
+              "adapter": "vector",
+              "rank": 58,
+              "score": 0.32570654,
+              "generation": null
+            }
+          ],
+          "locator": {
+            "start": 2011,
+            "end": 2124,
+            "page_numbers": [],
+            "block_ids": [
+              "a0e99124f481bd4578355646b127d8ca8837bc50925bb09e645838ee9d6d0e88",
+              "ead684f7828e342f84f94ee2ce3bd2f946934f3580eae62fd98a23f21a64ff60",
+              "30d920f897227a15ecc0060b260e44b2de496fff693acd94dae80eeae8b5f6ad"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": [
+            {
+              "start": 2012,
+              "end": 2122
+            }
+          ]
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "59cd69f40634d815a40e2ed87924a4f09b75efdf110e1b8517e9d1a260f94243",
+          "content_sha256": "f919cd07bdd586239e82a1bb6d937d889a55fc1db3fc543ca489b6768590dd4b",
+          "content_chars": 360,
+          "verification_status": "verified_current",
+          "fused_score": 0.016129032258064516,
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 13.175830841064453,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 36,
+            "end": 396,
+            "page_numbers": [],
+            "block_ids": [
+              "0e3b212e5ec3b327b3bffcef8cfbd76fab704f58e9b8472b7dd2a72f93af6f76"
+            ],
+            "section_ids": [
+              "61a057369c876a3e3755652235457268fcd87cd9220ba26097aed1cfcf596405"
+            ],
+            "table_ids": [
+              "d3fe612dd4c50ae6c0f1a8afd1f38383ade5d48dc0952e6c866f132b6ac896b4"
+            ]
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "bb4ed5487567d584ddcc76d583b6bdcb0363dabff7b4705c07b7976078c87ca4",
+          "content_sha256": "6f5c312d04230ab5a435260d440101808833d029589036330b604a53038ba5b0",
+          "content_chars": 250,
+          "verification_status": "verified_current",
+          "fused_score": 0.015873015873015872,
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 11.553417205810547,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 2309,
+            "end": 2559,
+            "page_numbers": [],
+            "block_ids": [
+              "89039d577330ede3e6cecbc0364976510431bcc96b07904cf886976f30d30609",
+              "bd4ebcb84d3049618631748b538e8d5257a7f7d099ffb53d3b23700b10e75990",
+              "afb8b3ce093f74666e14aee634c6adf8ccf8123dafc758988cae57abec1c7132"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "3224d42c2f1021e9b2e57d00651f558f132299613a25d73b997c8d91b4317fe1",
+          "content_sha256": "6babb38c26d2de6df671b50df6f52a1618dfe077de65af35cb67238577b17209",
+          "content_chars": 1124,
+          "verification_status": "verified_current",
+          "fused_score": 0.015384615384615385,
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 5.33841609954834,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 887,
+            "end": 2011,
+            "page_numbers": [],
+            "block_ids": [
+              "2dea811dabfbf137bfb99a7c6cbb57bf7e60d0304881bf3548e1850ac9f523d8"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": [
+              "c27e422c0ae593f75601401286122d43973d02db39aa658281dd43861e2e5894"
+            ]
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "9869b055edf04ab688817c7338ed6ae235ced35bc3e03dd3cbf4b0d76d9c837f",
+          "content_sha256": "0aa5c3064f44c3ea8373d012e55490f091785c91a8a0114830d43af3f4d04f71",
+          "content_chars": 98,
+          "verification_status": "verified_current",
+          "fused_score": 0.015151515151515152,
+          "source_adapter": "lexical",
+          "source_rank": 6,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 6,
+              "score": 4.7902631759643555,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 789,
+            "end": 887,
+            "page_numbers": [],
+            "block_ids": [
+              "617d8999dbde1812520d7edd5a1e7017d9f49540a36da1b53075665cccf50bda",
+              "2ae66b58873cd120432ce8426d81a983e41ed523e63d40d33114cb366bcd4b2e",
+              "ea9b756b974131e8f445fbbdc74d34009856b6a6e157a8d6df9526ed30411d99",
+              "bf766540b82cf9ca7246f43240b99cbbff826179c93d44856e0a47c27c7269c8"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "2086d3cb7fed0d5c5607129d4f4b085ce0ff35dc52691978d6fbeaf2bd86b259",
+          "content_sha256": "46913d077f15b19d03dcbc012816ce843bef64799dddb7b0139f2e4080ee45bd",
+          "content_chars": 185,
+          "verification_status": "verified_current",
+          "fused_score": 0.014925373134328358,
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 2.0562825202941895,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 2124,
+            "end": 2309,
+            "page_numbers": [],
+            "block_ids": [
+              "c383610fb8fa06820a03569160c2042d02c7217692250e97479193fb217c9262"
+            ],
+            "section_ids": [
+              "7f8079318457c9beb0de8287e6b9ec338288275a9b039eb5d9d27e04e967cd18"
+            ],
+            "table_ids": [
+              "cd53164f4bbaea6d7c260f49a13a06e3053a84be8c710285b3d0b4a9fd45ab41"
+            ]
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "af31014c2fcc4be92ee138f81f014d6a8e4e1508cf30809387ae8cffbe6fcc6e",
+          "content_sha256": "20ee64a65e4440b8c552e8d4a32e3aec6c40bd01bca4a864addf5f82b4385a7d",
+          "content_chars": 395,
+          "verification_status": "verified_current",
+          "fused_score": 0.014705882352941176,
+          "source_adapter": "lexical",
+          "source_rank": 8,
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 8,
+              "score": 1.7755258083343506,
+              "generation": "0856fa9633ac43fc8fdceb607afe5e8d"
+            }
+          ],
+          "locator": {
+            "start": 2584,
+            "end": 2979,
+            "page_numbers": [],
+            "block_ids": [
+              "98d88b5fd594f39599af4fd8cdf98a450e715e2b75b03c5f75bdc5adcef2ec24"
+            ],
+            "section_ids": [
+              "e8d30cdaf007cf747e7307ef247568bd853d7492e21f01ae9227bc6d69ac2045"
+            ],
+            "table_ids": [
+              "f0d30eb29fbd80837b1d2998cdf737ddb1ea295d80a2ca3c348f76ca158fd7a0"
+            ]
+          },
+          "matched_ranges": []
+        },
+        {
+          "document": "9cf384de9d2577ad6c914b7081ba9f6e1c29462769850c35b1a04ef4513a87db",
+          "version": "90269f15a4347df41ff5252ff09aa3e9fc08e83b292c18db65bbe9298117c249",
+          "chunk": "639be938e139aa0c20997d76aa7d27fc6e555e537c7a1efbebfad9c8dca43704",
+          "content_sha256": "b7d73b4853cf5a7858f1b93a2f513f2a491316bbe5ff9c4e63bb48661728fca9",
+          "content_chars": 36,
+          "verification_status": "verified_current",
+          "fused_score": 0.0125,
+          "source_adapter": "vector",
+          "source_rank": 20,
+          "provenance": [
+            {
+              "adapter": "vector",
+              "rank": 20,
+              "score": 0.42683667,
+              "generation": null
+            }
+          ],
+          "locator": {
+            "start": 0,
+            "end": 36,
+            "page_numbers": [],
+            "block_ids": [
+              "311b06be1b54706dfbf27ad0cc28e5c26ae1c1e6d65595a4ca7c792dc086b11f",
+              "3e35bddbc19314216264655cf6aa3ee6e06f2b1db41c481dcc9419670be2599d"
+            ],
+            "section_ids": [
+              "61a057369c876a3e3755652235457268fcd87cd9220ba26097aed1cfcf596405"
+            ],
+            "table_ids": []
+          },
+          "matched_ranges": [
+            {
+              "start": 3,
+              "end": 34
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "true_hybrid_verified": true,
+  "question_id": "tatqa_test_9063",
+  "query_sha256": "2345296abe5f2d283f1b6960fae71938bb75ca46b3d7238c53be597612b1834a",
+  "after_version_change": {
+    "status": "insufficient_evidence",
+    "diagnostics": {
+      "backends": {
+        "isolated-formal-evidence:vector": {
+          "status": "ok",
+          "elapsed_ms": 1996.6196669993224,
+          "candidate_count": 63,
+          "verified_count": 0,
+          "candidates_truncated": false,
+          "scope_filter": "local_verified_mapping_after_remote_top_k"
+        }
+      },
+      "authorization_ms": 0.9146669981419109,
+      "evidence_ms": 2.570208001998253,
+      "fusion_ms": 0.013292003131937236,
+      "reranker": {
+        "status": "disabled",
+        "elapsed_ms": 0
+      },
+      "candidate_count": 63,
+      "deduplicated": 0,
+      "rejected": {
+        "unverified_external": 63,
+        "external_stale_version_mapping": 9,
+        "external_outside_scope_or_missing_identity_mapping": 54
+      },
+      "total_ms": 2001.3728749981965,
+      "context_chars": 0,
+      "deadline_exceeded": false
+    },
+    "results": []
+  },
+  "permission_revocation": "denied"
+}

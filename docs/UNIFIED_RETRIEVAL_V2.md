@@ -50,7 +50,21 @@
 
 核对来源为 Dify 官方 OpenAPI `https://docs.dify.ai/en/api-reference/openapi_service.json` 的 RetrievalModel 与 retrieve endpoint。官方模型支持 metadata_filtering_conditions，但无法保证每套部署具备同一字段定义，也没有明确的任意本地 document-ID allowlist 或 retrieve 分页。因此当前适配器不猜测远端过滤配置：远端 Top-K 后必须经过本地授权映射和元数据/位置过滤，诊断标记 `local_verified_mapping_after_remote_top_k`。这可能不足 Top-K，不能宣称向量候选已在远端按本地 ACL 预过滤。
 
-远端匹配先要求 dataset + document + 本地 version 的唯一稳定映射，以及 segment enabled/completed。本地历史 `success` 与完成状态兼容；superseded 不可用。Segment ID 绝不当作 Chunk ID。显式 segment→chunk 映射还须验证内容一致；否则仅允许在指定版本中**完全一致且唯一出现**的原文子串，最大校验 4 MB。没有模糊字符串推断页码。定位成功后恢复 Repository 原文，无法确定的候选不进入最终证据，仅保留安全失败计数及原因。
+远端匹配要求 dataset + document + 本地 version 的唯一稳定映射、上传来源证明、source/submitted内容哈希、remote enabled且非archived，以及segment enabled/completed。历史 `success` 字样本身不构成版本来源证明；legacy、superseded、disabled、uncertain均不可作为可信候选。Segment ID 绝不当作 Chunk ID。显式 segment→chunk 或原文range还须逐字验证内容；否则仅允许在指定版本中**完全一致且唯一出现**的原文子串，最大校验4MB。没有模糊字符串推断页码。定位成功后恢复Repository原文，无法确定的候选仅留下安全诊断。
+
+### 第三阶段补强：上传回执与历史映射
+
+`DocumentRepository` 复用现有external_index_mappings存储上传尝试，不创建平行文档库。新增可空JSON字段 binding_method、source_content_hash、submitted_content_hash、submission_id、remote_revision、remote_status、remote_enabled、remote_archived、range_start/end。旧记录可读但默认为未验证；没有正式生产库迁移。
+
+入库顺序为：发布不可变DocumentVersion → `begin_dify_submission`固定版本/哈希且撤销旧映射 → 从版本字节生成临时.md上传 → `acknowledge_dify_submission`原子保存真实Document ID及Source指针 → `observe_dify_status`确认同一远端身份和索引状态。generic Source.update和sync_mapping不能把成功状态搬到新版本。
+
+上传结果不明会保留submitting/uncertain，不自动创建另一份远端文档。`reconcile_dify_submission`要求下载的远端原始文件hash与预备提交hash完全相同、远端文档已完成，才可恢复丢失回执。不能凭文件名补回。HTTP update响应ID与请求不一致也按不明确结果处理。
+
+历史修复为显式 `verify_legacy_dify_file`：既有source记录的dataset/document指针 + 已认证的远端原文件下载 + 同一原文件ID前后不变 + 文件SHA256等于当前版本hash。只写调用方指定的Repository。禁用文档可保留来源证明，但mapping仍为disabled，不自动启用远端。4MB下载/校验预算由验收脚本与Evidence层限制。该方法没有挂在普通读取或自动启动流程中。
+
+已发现Dify列表和详情接口原文件信息分别位于data_source_detail_dict / data_source_info，统一解析。观察到远端原文件ID变更后置stale，普通状态刷新不能重新授信。文档删除、Source身份变更或失败会撤销相关回执；旧legacy指针变更保留历史记录，不覆盖丢失。
+
+真实只读验收见 [映射闭环报告](DIFY_MAPPING_ACCEPTANCE_2026-11-01.md)。当前业务7份文档全部被远端禁用；闭环使用历史正式上传清单中的一份已启用Markdown，在隔离Repository中恢复，不修改生产库、不上传/启用/删除远端文件。Vector返回63候选、2条通过严格校验，Hybrid有真实lexical+vector融合；这不是全库Recall或答案准确率验收。
 
 现网探测是公开 Dify 云 API，不是内网部署验收；没有向真实知识库上传任何文件。
 

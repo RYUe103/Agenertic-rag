@@ -14,6 +14,17 @@
 
 ## 第三阶段验收（2026-11-01）
 
+### 第三阶段 Dify 映射补强
+
+- 基于第三阶段 `76a7e3e` / `65bd7f9`，本次补强了上传回执、固定版本/内容hash、索引状态/禁用状态、丢失回执恢复、严格历史来源验证和失败细分类。
+- 复查原三问120候选全部来自当前本地Repository之外；本地7份对应远端文档全部disabled。扩大到Top100每问返回63条，仍没有这7份。不能通过放宽Evidence验证或按文件名绑定解决。
+- 从历史正式入库manifest找到7份仍enabled的文档；以其中一份保存的MinerU Markdown与远端原上传文件全字节SHA256一致，在隔离Repository恢复映射。真实Vector63候选/2证据，真实Hybrid包含lexical+vector共同贡献的RRF证据；换版后旧证据0条，撤权拒绝。
+- 完整回归343 passed、0 failed；新增34项。没有生产数据库迁移和任何Dify上传、启用或删除。
+- 同语料100题Vector/Hybrid Recall、答案质量、内网服务验收仍未完成。第四阶段可对接已验证的核心接口，但生产7文档的启用/来源迁移需单独授权处理。
+- 详见 [映射闭环验收](DIFY_MAPPING_ACCEPTANCE_2026-11-01.md)。本次仍停在第三阶段，不开始ReAct/ToolNode或checkpoint。
+
+### 第三阶段初次交付记录
+
 - 基于 `a6c2421`，仍在 `codex/v2-document-repository`；没有改 main、迁移生产文档或上传 Dify 数据。
 - 统一多 KB 检索、批量权限快照与最终重核、独立 Tantivy/Vector/Exact、加权 RRF、文档聚合、多样性、受限上下文、可插拔重排和原文版本校验已实现。
 - V2 工具共 17 个，独立 API 与内部服务复用同一核心，接入已有工具配置、一次性审批与调用审计；底层工具新增 `tool.advanced` 权限。

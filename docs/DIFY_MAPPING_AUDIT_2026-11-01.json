@@ -1,0 +1,162 @@
+{
+  "boundary": "Read-only real Dify; local reconciliation only in isolated clone; no source bodies, names, credentials or signed URLs",
+  "original_versions": 0,
+  "original_mappings": 0,
+  "local_documents": 7,
+  "remote_documents": 24,
+  "known_remote_documents": 7,
+  "remote_index_states": {
+    "completed": 24
+  },
+  "known_remote_disabled": 7,
+  "outside_remote_enabled": 7,
+  "request_spacing_seconds": 4.0,
+  "remote_duplicate_name_count": 0,
+  "rejection_audit": [
+    {
+      "query": "预算",
+      "candidates": 40,
+      "unique_remote_documents": 6,
+      "primary_reasons": {
+        "outside_local_repository": 40
+      },
+      "elapsed_ms": 7200.6306249968475,
+      "top_k_saturated": true,
+      "expanded_top100_candidates": 63,
+      "known_documents_in_top100": 0
+    },
+    {
+      "query": "Token",
+      "candidates": 40,
+      "unique_remote_documents": 7,
+      "primary_reasons": {
+        "outside_local_repository": 40
+      },
+      "elapsed_ms": 8393.634624997503,
+      "top_k_saturated": true,
+      "expanded_top100_candidates": 63,
+      "known_documents_in_top100": 0
+    },
+    {
+      "query": "API",
+      "candidates": 40,
+      "unique_remote_documents": 7,
+      "primary_reasons": {
+        "outside_local_repository": 40
+      },
+      "elapsed_ms": 6903.25566699903,
+      "top_k_saturated": true,
+      "expanded_top100_candidates": 63,
+      "known_documents_in_top100": 0
+    }
+  ],
+  "source_audit": [
+    {
+      "document": "351cb66156a8cb722c26e31c8742de1f316d8f16bb847ecf3468d75c3b006363",
+      "remote_document": "6fef02e69ceaf0a4d0153f333b411e941004379010cb0dbb5416c628bff18b9f",
+      "version": "68da3ff028d36dae6c509bbc6adb5cbcf12130151c900a02e352cc96cafb712e",
+      "local_content_hash": "572d1e6aa00dcf4a330310864be34e11287980ec3c9c56a9455e1ef53d466f6f",
+      "source_dataset_matches": true,
+      "remote_index_status": "completed",
+      "remote_enabled": false,
+      "remote_archived": false,
+      "remote_original_hash": "572d1e6aa00dcf4a330310864be34e11287980ec3c9c56a9455e1ef53d466f6f",
+      "remote_bytes": 6443,
+      "submitted_equals_local": true,
+      "original_equals_local_source": false,
+      "outcome": "binding_verified_but_remote_disabled"
+    },
+    {
+      "document": "2b5dc7c676c999c27531d1c597c69e4803483021dad4329a36b6e9a2098ad46f",
+      "remote_document": "1c31e4aacc47514cc4986e5981171c199d6408a30bd51ef94f00bd9facfd17da",
+      "version": "faeceb5ba3f0c6d752043df0e3500c1db197867aa2b7a2d22eff4114cc63717a",
+      "local_content_hash": "c004df9d278e60ef758a553c6e87dca4af85792bd071eab422b16759724570fe",
+      "source_dataset_matches": true,
+      "remote_index_status": "completed",
+      "remote_enabled": false,
+      "remote_archived": false,
+      "remote_original_hash": "c004df9d278e60ef758a553c6e87dca4af85792bd071eab422b16759724570fe",
+      "remote_bytes": 3794,
+      "submitted_equals_local": true,
+      "original_equals_local_source": false,
+      "outcome": "binding_verified_but_remote_disabled"
+    },
+    {
+      "document": "599aa1a6f3feefa653e9d3af86dccc3638f67c9ec2a9040c3d28d19e65eb9ad0",
+      "remote_document": "78694e0b75fa52d9cd8436052484efcf6261e5fea8866476178dbe9e2ece095a",
+      "version": "7212a2995d812ee461b9ed0e55f75de33a19b325bd500cdc7c6059608ff6aa71",
+      "local_content_hash": "7100ffd86c0e9264a93dd3f37d81cb91655723669ca28de9a2a2928799be24e4",
+      "source_dataset_matches": true,
+      "remote_index_status": "completed",
+      "remote_enabled": false,
+      "remote_archived": false,
+      "remote_original_hash": "7100ffd86c0e9264a93dd3f37d81cb91655723669ca28de9a2a2928799be24e4",
+      "remote_bytes": 3889,
+      "submitted_equals_local": true,
+      "original_equals_local_source": false,
+      "outcome": "binding_verified_but_remote_disabled"
+    },
+    {
+      "document": "31e9908c0247e19b1abf290f98e01e11217e19128e7301259dfb6b388e7b9ea7",
+      "remote_document": "b555f2dfe9c1323087deb3415b386c438e9540dfa0ef826aab1ac71d33bcf4bb",
+      "version": "b04598511bdd6f90e2899fd825760242b0977f71996a2f431f3fd61475e05155",
+      "local_content_hash": "91af29ae4fb22a69fece39249211aed5db83a25b5b145c1a1121fa972397d927",
+      "source_dataset_matches": true,
+      "remote_index_status": "completed",
+      "remote_enabled": false,
+      "remote_archived": false,
+      "remote_original_hash": "3ccabe08a5195a49c6860d3deeb5a351971f9092d3595729092237fb4710d1e1",
+      "remote_bytes": 163124,
+      "submitted_equals_local": false,
+      "original_equals_local_source": true,
+      "outcome": "remote_original_not_current_markdown"
+    },
+    {
+      "document": "6103e8e6f824c690c924ef122131c7e0088a0d3393b732be844305c4008e47e0",
+      "remote_document": "e5f0d7be6145398a638c5f06d0409ec6839e8e2da4cc28d351763ce99c786c39",
+      "version": "ff78bd3b63fcaabce96c95fc582751ca78a87f7c418a8e07ab6bf80acb292624",
+      "local_content_hash": "604d6ce00d34f78368b3c67dd3def17581c60a4cd954b10dcb75b634a3d9325b",
+      "source_dataset_matches": true,
+      "remote_index_status": "completed",
+      "remote_enabled": false,
+      "remote_archived": false,
+      "remote_original_hash": "7f3780238085adcc74a01f208d500e1bbf2ffc67a6b3fb6058b1b6ecef2599de",
+      "remote_bytes": 1138511,
+      "submitted_equals_local": false,
+      "original_equals_local_source": true,
+      "outcome": "remote_original_not_current_markdown"
+    },
+    {
+      "document": "caa9ebc626169cea3475dc3f4e40440ea48c0bb222bf4c87d91a5e884d627ac2",
+      "remote_document": "06fe5935351572a67f6575be0fee4a219adaffbb5c3da12b6c820a71b727c9b0",
+      "version": "a321243dd22e3e4045d4affd4650027878f4c4a34aada65537063cd95ae51c61",
+      "local_content_hash": "568fc39e2c828dfc5b505e6dfc8e953732139187bbaebc61d973afec3fafbd97",
+      "source_dataset_matches": true,
+      "remote_index_status": "completed",
+      "remote_enabled": false,
+      "remote_archived": false,
+      "remote_original_hash": "7576edb531d9848825814ee88e28b1795d3a84b435b4b797d3670eafdc4a89f1",
+      "remote_bytes": 1946127,
+      "submitted_equals_local": false,
+      "original_equals_local_source": true,
+      "outcome": "remote_original_not_current_markdown"
+    },
+    {
+      "document": "acce5a93de8423e9f93d809b469ec2b0d4a1fe38aa50ddddd34a66ae59cd76d1",
+      "remote_document": "210ffe94065e2f1a628415e7afe3508615f8dc93bb9a7e386e38f371cf5d06bf",
+      "version": "6c4e112c42795edd0e0f0a0bef2bce01a27ef1571b1bd57ca0933f95c19c0a6c",
+      "local_content_hash": "240f6852eb20cd5ae029d47114f3561eefec92759cdc1d1f45925ce2bceb2d79",
+      "source_dataset_matches": true,
+      "remote_index_status": "completed",
+      "remote_enabled": false,
+      "remote_archived": false,
+      "remote_original_hash": "45876355a74342dd696506724eaf4bfd0e49bde60cb82debd17b486ce155174b",
+      "remote_bytes": 127822,
+      "submitted_equals_local": false,
+      "original_equals_local_source": true,
+      "outcome": "remote_original_not_current_markdown"
+    }
+  ],
+  "closure": [],
+  "true_hybrid_verified": false
+}
