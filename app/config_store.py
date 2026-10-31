@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS knowledge_bases (
   api_key_env TEXT,
   search_method TEXT NOT NULL DEFAULT 'semantic_search',
   chunking_mode TEXT NOT NULL DEFAULT 'automatic',
-  chunk_separator TEXT NOT NULL DEFAULT '\n__SPLIT__\n',
+  chunk_separator TEXT NOT NULL DEFAULT '\n\n',
   chunk_max_tokens INTEGER NOT NULL DEFAULT 800,
   embedding_model TEXT NOT NULL DEFAULT '',
   pdf_parser TEXT NOT NULL DEFAULT 'default',
@@ -199,7 +199,7 @@ class ConfigStore:
                 "answer_prompt": "TEXT NOT NULL DEFAULT ''",
                 "metadata_ai_enabled": "INTEGER NOT NULL DEFAULT 1",
                 "chunking_mode": "TEXT NOT NULL DEFAULT 'automatic'",
-                "chunk_separator": "TEXT NOT NULL DEFAULT '\n__SPLIT__\n'",
+                "chunk_separator": "TEXT NOT NULL DEFAULT '\n\n'",
                 "chunk_max_tokens": "INTEGER NOT NULL DEFAULT 800",
                 "embedding_model": "TEXT NOT NULL DEFAULT ''",
                 "pdf_parser": "TEXT NOT NULL DEFAULT 'default'",
@@ -227,6 +227,12 @@ class ConfigStore:
                 if name not in columns:
                     connection.execute(f"ALTER TABLE knowledge_bases ADD COLUMN {name} {definition}")
             connection.execute("UPDATE knowledge_bases SET owner_user_id='local:sansuokb', owner_username='sansuokb' WHERE owner_user_id IS NULL OR owner_user_id='' ")
+            connection.execute('''CREATE TABLE IF NOT EXISTS legacy_chunk_configuration(
+                knowledge_base_id TEXT PRIMARY KEY, chunking_mode TEXT, chunk_separator TEXT, chunk_max_tokens INTEGER)''')
+            connection.execute('''INSERT OR IGNORE INTO legacy_chunk_configuration
+                SELECT knowledge_base_id,chunking_mode,chunk_separator,chunk_max_tokens FROM knowledge_bases
+                WHERE instr(chunk_separator, '__SPLIT__') > 0''')
+            connection.execute("UPDATE knowledge_bases SET chunking_mode='automatic',chunk_separator=? WHERE instr(chunk_separator, '__SPLIT__') > 0", ('\n\n',))
 
     @contextmanager
     def connect(self) -> Iterator[sqlite3.Connection]:
@@ -486,7 +492,7 @@ class ConfigStore:
             answer_prompt_custom=bool(str(row.get("answer_prompt") or "").strip()), base_url=str(row["base_url"]),
             dataset_id=str(row["dataset_id"]), search_method=str(row["search_method"]),
             chunking_mode=str(row.get("chunking_mode") or "automatic"),
-            chunk_separator=str(row.get("chunk_separator") or "\n__SPLIT__\n"),
+            chunk_separator=str(row.get("chunk_separator") or "\n\n"),
             chunk_max_tokens=int(row.get("chunk_max_tokens") or 800),
             embedding_model=str(row.get("embedding_model") or ""),
             pdf_parser=str(row.get("pdf_parser") or "default"),

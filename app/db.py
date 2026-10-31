@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS source_revisions (
 
 
 class SourceRepository:
-    def __init__(self, db_path: Path):
+    def __init__(self, db_path: Path, knowledge_base_id: str = 'default-kb'):
         self.db_path = db_path
         self.db_path.parent.mkdir(parents=True, exist_ok=True)
         with self.connect() as connection:
@@ -115,6 +115,9 @@ class SourceRepository:
                 if name not in revision_columns:
                     connection.execute(f"ALTER TABLE source_revisions ADD COLUMN {name} {definition}")
 
+        from app.document_repository import DocumentRepository
+        self.documents = DocumentRepository(self, knowledge_base_id)
+
     @contextmanager
     def connect(self) -> Iterator[sqlite3.Connection]:
         connection = sqlite3.connect(self.db_path, timeout=15)
@@ -145,6 +148,10 @@ class SourceRepository:
                 f"UPDATE sources SET {assignments} WHERE source_id = ?",
                 (*values.values(), source_id),
             )
+            if 'dify_status' in values or 'dify_document_id' in values:
+                row = connection.execute('SELECT * FROM sources WHERE source_id=?', (source_id,)).fetchone()
+                if row:
+                    self.documents.sync_mapping(connection, self._source(row))
         return self.get(source_id)
 
     def versions(self, source_id: str) -> list[dict[str, Any]]:
@@ -159,7 +166,10 @@ class SourceRepository:
                       chunking_mode: str = '', chunk_max_tokens: int | None = None, embedding_model: str = '') -> None:
         with self.connect() as connection:
             connection.execute('BEGIN IMMEDIATE')
-            next_no = connection.execute('SELECT COALESCE(MAX(version_no), 0) + 1 FROM source_revisions WHERE source_id=?', (source.source_id,)).fetchone()[0]
+            next_no = max(
+                connection.execute('SELECT COALESCE(MAX(version_no), 0) + 1 FROM source_revisions WHERE source_id=?', (source.source_id,)).fetchone()[0],
+                connection.execute('SELECT COALESCE(MAX(version_no), 0) + 1 FROM document_versions WHERE document_id=?', (source.source_id,)).fetchone()[0],
+            )
             connection.execute('''INSERT INTO source_revisions
                 (revision_id,source_id,version_no,filename,markdown,content_hash,parse_status,dify_status,parser_engine,created_at,message,chunking_mode,chunk_max_tokens,embedding_model)
                 VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?)''',
@@ -167,6 +177,10 @@ class SourceRepository:
                                 markdown, hashlib.sha256(markdown.encode('utf-8')).hexdigest(), source.parse_status,
                                 source.dify_status, parser_engine, datetime.now(timezone.utc).isoformat(), message,
                                 chunking_mode, chunk_max_tokens, embedding_model))
+            self.documents.publish(connection, source, f'{source.source_id}:r{next_no}', next_no, markdown,
+                                   {'parser_engine': parser_engine, 'message': message,
+                                    'legacy_chunking_mode': chunking_mode, 'legacy_chunk_max_tokens': chunk_max_tokens,
+                                    'embedding_model': embedding_model}, self.documents._artifacts(source))
 
     def revision(self, source_id: str, version_no: int) -> dict[str, Any]:
         with self.connect() as connection:
@@ -200,6 +214,7 @@ class SourceRepository:
 
     def delete(self, source_id: str) -> None:
         with self.connect() as connection:
+            connection.execute('UPDATE documents SET deleted=1 WHERE id=?', (source_id,))
             cursor = connection.execute("DELETE FROM sources WHERE source_id = ?", (source_id,))
             if cursor.rowcount:
                 connection.execute("DELETE FROM source_revisions WHERE source_id = ?", (source_id,))

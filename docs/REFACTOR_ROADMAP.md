@@ -1,0 +1,41 @@
+# V2 重构路线与第一阶段验收
+
+2026-10-31，开发分支 `codex/v2-document-repository`，基线为 `codex/platform-frontend-upgrade` 的 `9691b39`，未改 main。
+
+| 阶段 | 状态 | 内容 |
+| --- | --- | --- |
+| 1 | 已实现并验证 | 版本化 Document Repository、原文结构、平台 Chunk Builder、读取服务、迁移兼容 |
+| 2 | 未开始，等待明确授权 | Tantivy BM25、Exact/Grep 独立索引、增量与墓碑处理 |
+| 3 | 未开始 | Unified Retrieval、自动规划、RRF、可替换 Reranker、Tool API V2 |
+| 4 | 未开始 | LangGraph ReAct + ToolNode、表格计算、证据验证、checkpoint 工具恢复 |
+| 5 | 未开始 | MCP/REST 统一迁移、旧工具退役、全链路评测和性能优化 |
+
+第一阶段的 Schema、API、备份与回滚方式见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)。只有用户明确要求“执行第二阶段”才能继续。
+
+## 实际验证
+
+- `.runtime/bin/python -m pytest -q`：最终 203 passed，0 failed，7 条第三方弃用警告（21.79 秒）。其中新增 Repository 测试 19 项。
+- `cd frontend && npm run build`：TypeScript 和 Vite 构建通过；仍有现有 UI 依赖包超过 500 kB 的体积警告，构建产物同步到 static。
+- `git diff --check`：通过。
+- 本地现有 `data/sources.db` 曾复制到临时目录进行两次实际回填：7 个源文档均成功，重复执行后仍为 7 个版本、1038 个结构节点，原业务数据库未迁移。该记录是本地历史数据验证，不是内网服务验收。
+
+新增 Repository 测试覆盖：新 PDF/DOCX/TXT 的本地解析入库；旧修订和当前原文回填；重复迁移、重启、故障回滚重试；重解析和普通重试版本稳定性；旧版本读取与删除限制；Markdown/HTML 表格、DOCX 合并单元格；页码、章节、Block/Chunk 定位及邻接；MinerU 位置保守处理；跨文档/知识库 ID 拒绝、租户权限撤销；映射状态与 Chunk 归属；旧分隔符不参与 Chunk 构建。全套回归包含旧 Agent、工具、接口、权限和队列测试。
+
+测试期间修复了两个隔离问题：mock 模式仍初始化外部 MinerU，以及模型池会继承本机配置发起真实 LLM 请求。现在 mock 模式保留模型绑定但禁用真实密钥。工具开关回归改为比较禁用前后调用次数，避免假设一次 Agent 请求只调用一次该工具，仍验证禁用后无新增执行。
+
+## 核心实现位置
+
+- `app/document_models.py`、`document_structure.py`：模型、表格规范化、独立 Chunk Builder。
+- `app/document_repository.py`、`document_lock.py`：事务存储、回填、映射、读取服务、跨进程互斥。
+- `app/document_api.py`、`main.py`：统一读取入口和现有授权规则。
+- `app/db.py`、`ingestion.py`：旧修订和 V2 原子发布、重解析/重试/删除衔接。
+- `app/mineru.py`、`document_parser.py`：结构产物保留、DOCX 合并表格。
+- `app/retrieval.py`：旧全文/章节/表格读取切换到 Repository。
+- `app/config_store.py`、`clients/dify.py`、`schemas.py`、知识库前端：旧分隔符迁移和默认值移除。
+- `scripts/backfill_documents_v2.py`：备份后回填；`tests/test_document_repository.py`：独立验收测试。
+
+## 后续依赖与保留事项
+
+第二阶段直接调用 `index_manifest`、`version`、`iter_chunks`、`put_mapping` 和 `mappings`。BM25 已明确选定 Tantivy，不能换成 bm25s 或 Dify full_text_search；精确文本、标准编号、正则匹配作为独立能力保留。Dify 只作为向量适配器的最终约束在后续迁移完成，本阶段保留旧接口。
+
+真正的审批 checkpoint 恢复继续列入第四阶段：稳定 thread_id、持久化 checkpointer、interrupt/resume、重复恢复与写入幂等。当前仍是旧的重新执行语义。改写文档等新写入工具、表格计算、混合检索和 MCP 统一迁移均没有提前实施。

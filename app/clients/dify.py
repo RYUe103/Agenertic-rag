@@ -19,7 +19,7 @@ class DifyClient:
         timeout: float = 30,
         search_method: str = "semantic_search",
         chunking_mode: str = "automatic",
-        chunk_separator: str = "\n__SPLIT__\n",
+        chunk_separator: str = "\n\n",
         chunk_max_tokens: int = 800,
     ):
         # The configured base URL is the complete Dify API base.  Keep its path
@@ -29,8 +29,9 @@ class DifyClient:
         self.dataset_id = dataset_id
         self.timeout = timeout
         self.search_method = search_method
-        self.chunking_mode = chunking_mode
-        self.chunk_separator = chunk_separator
+        # Legacy separator is accepted for old clients, but no longer drives segmentation.
+        self.chunking_mode = 'automatic' if '__SPLIT__' in chunk_separator else chunking_mode
+        self.chunk_separator = '\n\n' if '__SPLIT__' in chunk_separator else chunk_separator
         self.chunk_max_tokens = chunk_max_tokens
 
     @property

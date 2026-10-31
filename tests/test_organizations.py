@@ -215,11 +215,13 @@ def test_agent_tool_switch_and_call_statistics_apply_in_graph(tmp_path, monkeypa
         stats = client.get("/api/knowledge-bases/tool-kb/tools").json()
         assert sum(tool["statistics"]["calls"] for tool in stats) > 0
         name = seen[0][0]
+        previous_calls = client.get(f"/api/knowledge-bases/tool-kb/tools/{name}/calls").json()
+        previous_agent_count = sum(call["channel"] == "agent" for call in previous_calls)
         assert client.put(f"/api/admin/tools/{name}", json={"enabled": False}).status_code == 200
         seen.clear()
         assert client.post("/api/agents/%40kb%3Atool-kb/retrieve", json={"question": "查找 ABC 文件"}).status_code == 200
         calls = client.get(f"/api/knowledge-bases/tool-kb/tools/{name}/calls").json()
-        assert sum(call["channel"] == "agent" for call in calls) == 1
+        assert sum(call["channel"] == "agent" for call in calls) == previous_agent_count
 
 
 def test_parallel_agent_requests_keep_execution_permissions_separate(tmp_path, monkeypatch) -> None:

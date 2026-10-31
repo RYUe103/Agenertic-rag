@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import shutil
 import threading
-import fcntl
+from app.document_lock import document_lock
 from functools import wraps
 import uuid
 import logging
@@ -71,30 +71,13 @@ class JobStore:
             callback(self._jobs[job_id])
 
 
-_document_lock_state = threading.local()
-
-
-def document_operation(exclusive: bool = False):
+def document_operation(exclusive: bool = True):
     def decorate(method):
         @wraps(method)
         def locked(self, *args, **kwargs):
-            lock_path = self.files_dir.resolve().parent / '.document-operations.lock'
-            held = getattr(_document_lock_state, 'held', None)
-            if held is None:
-                held = _document_lock_state.held = {}
-            if lock_path in held:
-                if exclusive and not held[lock_path]:
-                    raise RuntimeError('不能在文档共享操作中升级为删除操作')
+            lock_path = self.repository.db_path.resolve().parent / '.document-operations.lock'
+            with document_lock(lock_path, exclusive):
                 return method(self, *args, **kwargs)
-            lock_path.parent.mkdir(parents=True, exist_ok=True)
-            with lock_path.open('a') as handle:
-                fcntl.flock(handle.fileno(), fcntl.LOCK_EX if exclusive else fcntl.LOCK_SH)
-                held[lock_path] = exclusive
-                try:
-                    return method(self, *args, **kwargs)
-                finally:
-                    del held[lock_path]
-                    fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
         return locked
     return decorate
 
@@ -168,6 +151,9 @@ class IngestionService:
     def retry_failed(self, source_id: str, rewrite_enabled: bool = False, rewrite_prompt: str = "", workflow_enabled: bool = False, rewrite_review_required: bool = False, force_reparse: bool = False, source_platform_user: str = "sansuokb", revision_message: str = "", force_reindex: bool = False) -> Source:
         source = self.repository.get(source_id)
         errors: list[str] = []
+        # Preserve legacy content and parser artifacts before any overwrite.
+        if Path(source.local_md_path).is_file():
+            self.repository.documents.backfill(source_id)
         revision_pending = bool(revision_message)
         parser_engine = ""
         # A rewrite or workflow request is an explicit request to rebuild the
@@ -252,13 +238,28 @@ class IngestionService:
             source = self.repository.update(source_id, error_message=None)
             self._write_metadata(source)
             return source
+        # Publish local facts before external requests: an index outage must not lose a version.
+        version_published = False
+        if source.parse_status == "success" and not revision_pending:
+            # Recover a crash after the parsed file/status was saved but before publication.
+            try:
+                current_markdown = self.repository.documents.version(source_id).markdown
+            except KeyError:
+                current_markdown = None
+            revision_pending = current_markdown != Path(source.local_md_path).read_text(encoding="utf-8")
+        if revision_pending and source.parse_status == "success":
+            self.repository.save_revision(source, Path(source.local_md_path).read_text(encoding="utf-8"), parser_engine,
+                                          revision_message or ("重新解析" if force_reparse else "文档解析"),
+                                          self.chunking_mode, self.chunk_max_tokens, self.embedding_model)
+            revision_pending = False
+            version_published = True
         needs_new_document = (
             source.dify_dataset_id != self.dify.dataset_id
             or not source.dify_document_id
         )
         # Rewriting/workflow processing changes document.md. Force the derived
         # Dify document to be updated even if its previous indexing succeeded.
-        needs_dify_refresh = rewrite_enabled or workflow_enabled or force_reparse or force_reindex
+        needs_dify_refresh = rewrite_enabled or workflow_enabled or force_reparse or force_reindex or version_published
         if needs_new_document or needs_dify_refresh or source.dify_status in {"pending", "failed"}:
             try:
                 if source.parse_status != "success" or not Path(source.local_md_path).exists():
@@ -314,10 +315,8 @@ class IngestionService:
                 )
         source = self.repository.update(source_id, error_message=redact_error("; ".join(errors), self.secrets) or None)
         self._write_metadata(source)
-        if revision_pending and source.parse_status == "success":
-            self.repository.save_revision(source, Path(source.local_md_path).read_text(encoding="utf-8"), parser_engine,
-                                          revision_message or ("重新解析" if force_reparse else "文档解析"),
-                                          self.chunking_mode, self.chunk_max_tokens, self.embedding_model)
+        with self.repository.connect() as connection:
+            self.repository.documents.sync_mapping(connection, source)
         return source
 
     @document_operation()
@@ -395,6 +394,7 @@ class IngestionService:
         if not preview_path.exists():
             raise ValueError("改写预览文件不存在，请重新生成")
         final_markdown = preview_path.read_text(encoding="utf-8")
+        self.repository.documents.backfill(source_id)
         Path(source.local_md_path).write_text(final_markdown, encoding="utf-8")
         source = self.repository.update(
             source_id,
@@ -413,6 +413,7 @@ class IngestionService:
         if not original_path.exists():
             raise ValueError("原始 Markdown 不存在")
         original = original_path.read_text(encoding="utf-8")
+        self.repository.documents.backfill(source_id)
         Path(source.local_md_path).write_text(original, encoding="utf-8")
         source = self.repository.update(
             source_id,

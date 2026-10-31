@@ -42,10 +42,14 @@ class MinerUClient:
                 payload = response.json()
             except ValueError as exc:
                 raise RuntimeError(f"MinerU 返回的不是 JSON：{response.text[:300]!r}") from exc
-        output_dir = artifact_dir or pdf_path.parent
+        output_dir = artifact_dir or file_path.parent
         output_dir.mkdir(parents=True, exist_ok=True)
         response_path = output_dir / "mineru-response.json"
         response_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
+        if isinstance(payload, dict):
+            content_list = payload.get('content_list') or payload.get('contentList')
+            if isinstance(content_list, list):
+                (output_dir / 'mineru-content-list.json').write_text(json.dumps(content_list, ensure_ascii=False), encoding='utf-8')
 
         markdown, response_field = _find_markdown(payload)
         if not markdown and isinstance(payload, dict):
@@ -79,13 +83,14 @@ class MinerUCloudClient:
     extraction result; this adapter polls until the Markdown result is ready.
     """
 
-    def __init__(self, base_url: str, api_key: str, timeout: float = 600, poll_seconds: float = 2.0):
+    def __init__(self, base_url: str, api_key: str, timeout: float = 600, poll_seconds: float = 2.0, fallback_on_error: bool = False):
         if not base_url.strip() or not api_key.strip():
             raise ValueError("MinerU 云端模式需要 MINERU_URL 和 MINERU_API_KEY")
         self.base_url = base_url.rstrip("/")
         self.api_key = api_key.strip()
         self.timeout = max(float(timeout), 30.0)
         self.poll_seconds = max(float(poll_seconds), 0.2)
+        self.fallback_on_error = fallback_on_error
 
     def parse(self, file_path: Path, artifact_dir: Path | None = None) -> tuple[str, dict[str, Any]]:
         headers = {"Authorization": f"Bearer {self.api_key}"}
@@ -120,7 +125,7 @@ class MinerUCloudClient:
                 time.sleep(self.poll_seconds)
             if not result_payload or not _cloud_result_ready(result_payload):
                 raise TimeoutError("MinerU 云端解析超时")
-        markdown = _cloud_markdown(result_payload, file_path)
+        markdown = _cloud_markdown(result_payload, file_path, artifact_dir or file_path.parent)
         if not markdown:
             raise RuntimeError("MinerU 云端结果中没有找到 Markdown 内容")
         output_dir = artifact_dir or file_path.parent
@@ -152,7 +157,7 @@ def _cloud_result_ready(payload: Any) -> bool:
     return bool(statuses & {"done", "success", "completed", "failed", "error"})
 
 
-def _cloud_markdown(payload: Any, file_path: Path) -> str:
+def _cloud_markdown(payload: Any, file_path: Path, artifact_dir: Path | None = None) -> str:
     for item in _cloud_results(payload):
         for key in ("md_content", "markdown", "md", "text"):
             if isinstance(item.get(key), str) and item[key].strip():
@@ -164,7 +169,13 @@ def _cloud_markdown(payload: Any, file_path: Path) -> str:
             response = httpx.get(value, timeout=120)
             response.raise_for_status()
             if key.endswith("zip_url") or response.content[:2] == b"PK":
+                if artifact_dir:
+                    artifact_dir.mkdir(parents=True, exist_ok=True)
+                    (artifact_dir / 'mineru-result.zip').write_bytes(response.content)
                 with zipfile.ZipFile(io.BytesIO(response.content)) as archive:
+                    lists = [name for name in archive.namelist() if name.endswith('_content_list.json')]
+                    if artifact_dir and len(lists) == 1:
+                        (artifact_dir / 'mineru-content-list.json').write_bytes(archive.read(lists[0]))
                     candidates = [name for name in archive.namelist() if name.casefold().endswith(".md")]
                     if candidates:
                         return archive.read(candidates[0]).decode("utf-8", errors="replace")

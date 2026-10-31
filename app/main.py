@@ -620,6 +620,15 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         except KeyError:
             raise HTTPException(404, "Agent 不存在") from None
 
+    from app.document_api import document_router
+    def authorize_document_read(request: Request, agent_id: str) -> AgentRuntime:
+        value = authorize_agent(request, agent_id)
+        user = current_user(request)
+        if not user.is_admin and user.auth_source != 'api_key' and 'document.read' not in access.permissions(user_id(user), user.is_admin):
+            raise HTTPException(403, '缺少权限：document.read')
+        return value
+    app.include_router(document_router(authorize_document_read, require_kb_write))
+
     @app.get("/api/agents", response_model=list[AgentSummary])
     def list_agents(request: Request) -> list[AgentSummary]:
         user = current_user(request)

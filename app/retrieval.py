@@ -404,11 +404,8 @@ class RetrievalTools:
     def read_full_document(self, source_id: str, max_chars: int = 30000) -> Evidence:
         """Read the complete local Markdown for an already identified source."""
         source = self.repository.get(source_id)
-        path = Path(source.local_md_path)
-        if not path.exists():
-            raise FileNotFoundError(f"本地 Markdown 不存在：{path}")
         bounded = min(max(int(max_chars), 1000), 100000)
-        content = path.read_text(encoding="utf-8", errors="replace")
+        content = self.repository.documents.version(source_id).markdown
         total_chars = len(content)
         if total_chars > bounded:
             content = content[:bounded].rstrip() + f"\n\n[文档内容已截断，原文共 {total_chars} 个字符]"
@@ -423,37 +420,17 @@ class RetrievalTools:
 
     def read_document_section(self, source_id: str, heading: str, max_chars: int = 12000) -> Evidence:
         source = self.repository.get(source_id)
-        path = Path(source.local_md_path)
-        lines = path.read_text(encoding="utf-8", errors="replace").splitlines()
-        needle = heading.strip().casefold()
-        start = next((index for index, line in enumerate(lines) if line.lstrip('# ').strip().casefold() == needle), None)
-        if start is None:
+        sections = self.repository.documents.nodes(source_id, 'sections')
+        section = next((s for s in sections if s['title'].casefold() == heading.strip().casefold()), None)
+        if section is None:
             return self._evidence(source, "", "document_section")
-        level = len(lines[start]) - len(lines[start].lstrip('#')) if lines[start].lstrip().startswith('#') else 99
-        end = len(lines)
-        for index in range(start + 1, len(lines)):
-            line = lines[index]
-            if line.lstrip().startswith('#') and len(line) - len(line.lstrip('#')) <= level:
-                end = index
-                break
-        return self._evidence(source, "\n".join(lines[start:end])[:max_chars], "document_section", start + 1, end, None, heading)
+        blocks = self.repository.documents.located_blocks(source_id, section_id=section['id'])
+        return self._evidence(source, ''.join(b['content'] for b in blocks)[:max_chars], 'document_section', location=heading)
 
     def get_document_table(self, source_id: str, table_index: int = 0, max_chars: int = 12000) -> Evidence:
         source = self.repository.get(source_id)
-        lines = Path(source.local_md_path).read_text(encoding="utf-8", errors="replace").splitlines()
-        tables: list[list[str]] = []
-        index = 0
-        while index < len(lines) - 1:
-            separator = lines[index + 1].replace('|', '').replace(':', '').replace('-', '').replace(' ', '')
-            if '|' in lines[index] and '|' in lines[index + 1] and not separator:
-                rows = [lines[index], lines[index + 1]]
-                index += 2
-                while index < len(lines) and '|' in lines[index] and lines[index].strip():
-                    rows.append(lines[index]); index += 1
-                tables.append(rows)
-            else:
-                index += 1
-        content = '\n'.join(tables[table_index])[:max_chars] if 0 <= table_index < len(tables) else ''
+        tables = self.repository.documents.nodes(source_id, 'tables')
+        content = tables[table_index]['raw'][:max_chars] if 0 <= table_index < len(tables) else ''
         return self._evidence(source, content, "document_table")
 
     def extract_table(self, source_id: str, table_index: int = 0, max_chars: int = 12000) -> Evidence:

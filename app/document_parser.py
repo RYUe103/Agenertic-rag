@@ -3,6 +3,7 @@ from __future__ import annotations
 import re
 import subprocess
 import tempfile
+from html import escape
 from pathlib import Path
 from typing import Iterator
 
@@ -121,18 +122,37 @@ def docx_to_markdown(path: Path) -> str:
             parts.append(f"<!-- paragraph: {paragraph_no} -->\n{prefix}{text}")
             continue
 
+        # Preserve merge geometry when the DOCX grid repeats the same XML cell.
+        grid = {}
+        for r, row in enumerate(block.rows):
+            for c, cell in enumerate(row.cells):
+                entry = grid.setdefault(cell._tc, {'text': cell.text, 'positions': []})
+                entry['positions'].append((r, c))
+        if any(len(entry['positions']) > 1 for entry in grid.values()):
+            html_rows = [[] for _ in block.rows]
+            for entry in grid.values():
+                positions = entry['positions']
+                r, c = min(positions)
+                rs = max(p[0] for p in positions) - r + 1
+                cs = max(p[1] for p in positions) - c + 1
+                html_rows[r].append((c, f'<td rowspan="{rs}" colspan="{cs}">{escape(entry["text"])}</td>'))
+            parts.append('<table>\n' + '\n'.join('<tr>' + ''.join(value for _, value in sorted(row)) + '</tr>' for row in html_rows) + '\n</table>')
+            continue
         rows = [[_escape_table_cell(cell.text) for cell in row.cells] for row in block.rows]
         rows = [row for row in rows if any(row)]
         if not rows:
             continue
         width = max(len(row) for row in rows)
         normalized = [row + [""] * (width - len(row)) for row in rows]
+        table_lines = []
         for row_index, row in enumerate(normalized):
             table_row_no += 1
-            parts.append(f"<!-- table-row: {table_row_no} -->")
-            parts.append("| " + " | ".join(row) + " |")
+            if row_index != 0:
+                table_lines.append(f"<!-- table-row: {table_row_no} -->")
+            table_lines.append("| " + " | ".join(row) + " |")
             if row_index == 0:
-                parts.append("| " + " | ".join("---" for _ in range(width)) + " |")
+                table_lines.append("| " + " | ".join("---" for _ in range(width)) + " |")
+        parts.append('\n'.join(table_lines))
 
     for label, sections in (("页眉", document.sections), ("页脚", document.sections)):
         values: list[str] = []

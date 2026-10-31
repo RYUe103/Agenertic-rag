@@ -163,7 +163,7 @@ class KnowledgeBaseInput(BaseModel):
     api_key: str | None = Field(default=None, max_length=500)
     search_method: Literal["semantic_search"] = "semantic_search"
     chunking_mode: Literal["automatic", "custom"] = "automatic"
-    chunk_separator: str = "\n__SPLIT__\n"
+    chunk_separator: str = "\n\n"
     chunk_max_tokens: int = Field(default=800, ge=1, le=10000)
     embedding_model: str = Field(default="", max_length=200)
     pdf_parser: Literal["default", "local", "mineru", "qwenvl"] = "default"
@@ -216,7 +216,7 @@ class KnowledgeBaseView(BaseModel):
     dataset_id: str
     search_method: str
     chunking_mode: str = "automatic"
-    chunk_separator: str = "\n__SPLIT__\n"
+    chunk_separator: str = "\n\n"
     chunk_max_tokens: int = 800
     embedding_model: str = ""
     pdf_parser: str = "default"

@@ -102,7 +102,7 @@ export function KnowledgePage() {
 
   const initialValues = editing || {
     name: '', dataset_id: '',
-    search_method: 'semantic_search', chunking_mode: 'automatic', chunk_separator: '\n__SPLIT__\n',
+    search_method: 'semantic_search', chunking_mode: 'automatic', chunk_separator: '\n\n',
     chunk_max_tokens: 800, pdf_parser: 'default', enabled: true,
   };
 

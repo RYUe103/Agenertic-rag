@@ -369,7 +369,7 @@ class AgentRegistry:
         data_dir = self.settings.app_data_dir if bool(kb["use_legacy_data"]) else self.settings.app_data_dir / "knowledge_bases" / str(kb["knowledge_base_id"])
         files_dir = data_dir / "files"
         files_dir.mkdir(parents=True, exist_ok=True)
-        repository = SourceRepository(data_dir / "sources.db")
+        repository = SourceRepository(data_dir / "sources.db", str(kb["knowledge_base_id"]))
         dify = self._client_for_row(kb)
         tools = RetrievalTools(repository, dify, self.settings.grep_timeout_seconds)
         api_key = self.store.resolve_api_key(str(kb["knowledge_base_id"]), self._environment)
@@ -386,11 +386,12 @@ class AgentRegistry:
                 )
         parser_mode = str(kb.get("pdf_parser") or "default")
         mineru = None
-        if parser_mode == "mineru" or (parser_mode == "default" and self.settings.mineru_enabled):
+        if not self.settings.app_mock_external_services and (parser_mode == "mineru" or (parser_mode == "default" and self.settings.mineru_enabled)):
             if not self.settings.mineru_url:
                 raise ValueError(f"知识库 {kb['knowledge_base_id']} 选择了 MinerU，但 MINERU_URL 未配置")
             if self.settings.mineru_cloud_enabled or self.settings.mineru_url.rstrip('/').endswith('mineru.net/api'):
-                mineru = MinerUCloudClient(self.settings.mineru_url, self.settings.mineru_api_key, self.settings.mineru_timeout_seconds)
+                mineru = MinerUCloudClient(self.settings.mineru_url, self.settings.mineru_api_key, self.settings.mineru_timeout_seconds,
+                                           fallback_on_error=self.settings.mineru_fallback_on_error)
             else:
                 mineru = MinerUClient(
                     self.settings.mineru_url, self.settings.mineru_timeout_seconds,
@@ -438,7 +439,7 @@ class AgentRegistry:
         return DifyClient(
             str(kb["base_url"]), api_key, str(kb["dataset_id"]), self.settings.request_timeout_seconds,
             str(kb["search_method"]), str(kb.get("chunking_mode") or "automatic"),
-            str(kb.get("chunk_separator") or "\n__SPLIT__\n"), int(kb.get("chunk_max_tokens") or 800),
+            str(kb.get("chunk_separator") or "\n\n"), int(kb.get("chunk_max_tokens") or 800),
         )
 
     def _source_platform_for_row(self, kb: dict[str, object]) -> PdfPlatformClient:
@@ -502,7 +503,7 @@ class AgentRegistry:
                 continue
             model_id = str(row["model_connection_id"])
             clients.append((model_id, LLMClient(
-                str(row["base_url"]), self.store.resolve_model_api_key(model_id, self._environment),
+                str(row["base_url"]), "" if self.settings.app_mock_external_services else self.store.resolve_model_api_key(model_id, self._environment),
                 str(row["model"]), str(row["api_style"]), float(row["timeout_seconds"]),
             )))
         return LLMModelPool(clients, role)
