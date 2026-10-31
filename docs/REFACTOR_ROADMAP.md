@@ -6,11 +6,21 @@
 | --- | --- | --- |
 | 1 | 已实现并验证 | 版本化 Document Repository、原文结构、平台 Chunk Builder、读取服务、迁移兼容 |
 | 2 | 主体与补强已实现并验证 | Tantivy BM25、Exact 续查、原子发布/ACK、完整回滚校验、租约 GC、版本化尾块修复 |
-| 3 | 未开始 | Unified Retrieval、自动规划、RRF、可替换 Reranker、Tool API V2 |
+| 3 | 已实现并完成本地验收；同语料真实向量验收待联调 | Unified Retrieval、确定性规划、RRF、可替换 Reranker、Evidence Resolver、17 个 Tool API V2 |
 | 4 | 未开始 | LangGraph ReAct + ToolNode、表格计算、证据验证、checkpoint 工具恢复 |
 | 5 | 未开始 | MCP/REST 统一迁移、旧工具退役、全链路评测和性能优化 |
 
-当前架构见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)，第二阶段操作说明见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)。完成第二阶段后停止，只有用户明确要求“执行第三阶段”才能继续。
+当前架构见 [ARCHITECTURE_V2.md](ARCHITECTURE_V2.md)，第三阶段接口见 [UNIFIED_RETRIEVAL_V2.md](UNIFIED_RETRIEVAL_V2.md)。本次停止在第三阶段，不自动执行第四阶段。
+
+## 第三阶段验收（2026-11-01）
+
+- 基于 `a6c2421`，仍在 `codex/v2-document-repository`；没有改 main、迁移生产文档或上传 Dify 数据。
+- 统一多 KB 检索、批量权限快照与最终重核、独立 Tantivy/Vector/Exact、加权 RRF、文档聚合、多样性、受限上下文、可插拔重排和原文版本校验已实现。
+- V2 工具共 17 个，独立 API 与内部服务复用同一核心，接入已有工具配置、一次性审批与调用审计；底层工具新增 `tool.advanced` 权限。
+- 完整测试 309 passed，0 failed；100 PDF/100 问题 Hit@1/5/10 保持 79%/90%/92%，8 道遗留未命中未恢复，无排名质量提升声明。
+- 2001 文档/34915 Chunk 同轮 P95：旧路径 775.65 ms，V2 57.47 ms；此为 warm-cache 本机 synthetic 测量。
+- 真实 Dify semantic API 已探测，24 份远端文档不能与冻结100份语料对照；三次真实查询共120候选未通过本地版本映射，未作为可信证据返回。真实向量/混合质量验收、实际模型重排和人工证据标注仍待完成。
+- 完整边界与报告见 [第三阶段验收](UNIFIED_RETRIEVAL_ACCEPTANCE_2026-11-01.md)。第四阶段只在用户明确授权后开始，接口为 `ToolService.invoke` / `catalog` / `UnifiedRetrievalService.search`。
 
 ## 第二阶段补强验收（2026-11-01）
 
@@ -22,7 +32,7 @@
 - 完整性能、运行边界、7 份实际业务文档副本检查、迁移/运维风险及 Git 状态见 [补强验收报告](SEARCH_HARDENING_ACCEPTANCE_2026-11-01.md)；原 10 道未命中题见 [逐题归因](SEARCH_MISSES_2026-11-01.md)。
 - 未进行 Linux AMD64、Docker、离线打包或内网服务验收，未额外收集真实 PDF。正式数据库未迁移。
 
-阶段 3 未开始。停止于本次补强，只有用户明确要求“执行第三阶段”才继续。
+以上为第二阶段补强当时的验收记录；第三阶段状态以本文顶部为准。
 
 ## 第二阶段主体历史验收（2026-10-31）
 
@@ -36,7 +46,7 @@
 - 现有业务 sources.db 的隔离副本重复回填成功：7 个文档、309 个结构化 Chunk，第二次 Tantivy 同步为 noop。原业务数据库保持原样。
 - 删除回归按新要求更新：Dify 删除失败保留原文件以便重试，同时普通读取必须立即拒绝。没有放宽旧权限。
 
-第三阶段尚未实现：统一自动检索规划、RRF、Reranker 和 Tool API V2。第四、第五阶段保持未开始。
+第二阶段主体交付时尚未实现统一检索；现第三阶段已按顶部记录实施。第四、第五阶段保持未开始。
 
 ## 第一阶段历史验证
 

@@ -1,0 +1,70 @@
+{
+  "kind": "synthetic",
+  "documents": 2001,
+  "chunks": 34915,
+  "baseline_sha256": "34459dfc5e1cc16f020b763eb54018bf82dc9f0bb033bca85a6cd2c49cef31a3",
+  "records": [],
+  "environment": {
+    "platform": "macOS-15.6-arm64-arm-64bit-Mach-O",
+    "python": "3.13.5"
+  },
+  "results": {
+    "phase2_local": {
+      "p50_ms": 640.9232914993481,
+      "p95_ms": 775.6487500009825,
+      "query_count": 100
+    },
+    "v2_lexical_unlimited_document_cap": {
+      "p50_ms": 46.67054149831529,
+      "p95_ms": 84.42262499738717,
+      "query_count": 100
+    },
+    "v2_lexical_diverse": {
+      "p50_ms": 43.379916500271065,
+      "p95_ms": 57.46754199935822,
+      "query_count": 100
+    }
+  },
+  "component_timings": {
+    "authorization_ms": {
+      "p50_ms": 16.01237450086046,
+      "p95_ms": 19.291333999717608
+    },
+    "evidence_ms": {
+      "p50_ms": 2.4152914993464947,
+      "p95_ms": 10.13500000408385
+    },
+    "fusion_ms": {
+      "p50_ms": 0.5176875019969884,
+      "p95_ms": 0.5740830019931309
+    },
+    "total_ms": {
+      "p50_ms": 42.83752099945559,
+      "p95_ms": 56.60445900139166
+    }
+  },
+  "evidence_integrity": {
+    "returned": 1000,
+    "verified_rate": 1.0,
+    "version_consistency": 1.0,
+    "duplicate_rate": 0.0,
+    "nonempty_query_rate": 1.0,
+    "evidence_recall": null,
+    "correct_table_recall": null,
+    "annotation_status": "No gold source spans; verification is integrity, not relevance or answer accuracy"
+  },
+  "judgments": {
+    "phase2_local": [],
+    "v2_lexical_unlimited_document_cap": [],
+    "v2_lexical_diverse": []
+  },
+  "remaining_eight": {
+    "phase2_local": [],
+    "v2_lexical_unlimited_document_cap": [],
+    "v2_lexical_diverse": []
+  },
+  "vector": "not_evaluated_same_corpus_not_verified",
+  "hybrid": "not_evaluated_no_comparable_real_vector_results",
+  "reranker": "none",
+  "conditions": "Fresh frozen corpus, original questions/split. Warm cache. Same live snapshot/permissions; no production data mutations. No score tuning on test cases."
+}

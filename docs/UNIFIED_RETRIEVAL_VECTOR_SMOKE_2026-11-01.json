@@ -1,0 +1,108 @@
+{
+  "kind": "real_dify_read_only_smoke",
+  "local_sources": 7,
+  "queries": [
+    {
+      "query": "预算",
+      "status": "insufficient_evidence",
+      "verified_results": 0,
+      "diagnostics": {
+        "backends": {
+          "default-kb:vector": {
+            "status": "ok",
+            "elapsed_ms": 4195.446666002681,
+            "candidate_count": 40,
+            "verified_count": 0,
+            "candidates_truncated": false,
+            "scope_filter": "local_verified_mapping_after_remote_top_k"
+          }
+        },
+        "authorization_ms": 0.9206250033457763,
+        "evidence_ms": 1.073999999789521,
+        "fusion_ms": 0.005791000148747116,
+        "reranker": {
+          "status": "disabled",
+          "elapsed_ms": 0
+        },
+        "candidate_count": 40,
+        "deduplicated": 0,
+        "rejected": {
+          "unverified_external": 40,
+          "external_ambiguous_or_missing_version_mapping": 40
+        },
+        "total_ms": 4200.3604999990785,
+        "context_chars": 0,
+        "deadline_exceeded": false
+      }
+    },
+    {
+      "query": "Token",
+      "status": "insufficient_evidence",
+      "verified_results": 0,
+      "diagnostics": {
+        "backends": {
+          "default-kb:vector": {
+            "status": "ok",
+            "elapsed_ms": 2475.4522910006926,
+            "candidate_count": 40,
+            "verified_count": 0,
+            "candidates_truncated": false,
+            "scope_filter": "local_verified_mapping_after_remote_top_k"
+          }
+        },
+        "authorization_ms": 0.4273330050637014,
+        "evidence_ms": 0.7834170028218068,
+        "fusion_ms": 0.005000001692678779,
+        "reranker": {
+          "status": "disabled",
+          "elapsed_ms": 0
+        },
+        "candidate_count": 40,
+        "deduplicated": 0,
+        "rejected": {
+          "unverified_external": 40,
+          "external_ambiguous_or_missing_version_mapping": 40
+        },
+        "total_ms": 2477.313500006858,
+        "context_chars": 0,
+        "deadline_exceeded": false
+      }
+    },
+    {
+      "query": "API",
+      "status": "insufficient_evidence",
+      "verified_results": 0,
+      "diagnostics": {
+        "backends": {
+          "default-kb:vector": {
+            "status": "ok",
+            "elapsed_ms": 3642.142958000477,
+            "candidate_count": 40,
+            "verified_count": 0,
+            "candidates_truncated": false,
+            "scope_filter": "local_verified_mapping_after_remote_top_k"
+          }
+        },
+        "authorization_ms": 0.39666600059717894,
+        "evidence_ms": 0.9114999993471429,
+        "fusion_ms": 0.00875000114319846,
+        "reranker": {
+          "status": "disabled",
+          "elapsed_ms": 0
+        },
+        "candidate_count": 40,
+        "deduplicated": 0,
+        "rejected": {
+          "unverified_external": 40,
+          "external_ambiguous_or_missing_version_mapping": 40
+        },
+        "total_ms": 3644.9608330003684,
+        "context_chars": 0,
+        "deadline_exceeded": false
+      }
+    }
+  ],
+  "boundary": "Isolated local copy. No uploads. Existing corpus does not equal frozen 100-PDF benchmark.",
+  "remote_documents": 24,
+  "remote_has_more": false
+}

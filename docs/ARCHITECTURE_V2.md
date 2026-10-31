@@ -1,6 +1,6 @@
 # Knowledge Runtime V2
 
-截至 2026-11-01，第二阶段主体及补强已实现。当前检索架构、Schema 2、结构化 Chunk 规则、Tantivy/Exact 接口、权限及运维方案见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)，补强验收见 [SEARCH_HARDENING_ACCEPTANCE_2026-11-01.md](SEARCH_HARDENING_ACCEPTANCE_2026-11-01.md)。下文保留第一阶段设计记录；其中固定 1800 字符 Chunk 已由结构感知 Builder 取代，已有旧 Chunk 保留兼容。Tantivy 与 Exact 已落地，混合检索及后续 Agent 重构仍未实施。
+截至 2026-11-01，第三阶段统一检索、Evidence Resolver 与 Tool API V2 已实现，详见 [UNIFIED_RETRIEVAL_V2.md](UNIFIED_RETRIEVAL_V2.md) 和本文末尾增量。第二阶段索引与运维方案见 [LOCAL_SEARCH_V2.md](LOCAL_SEARCH_V2.md)。下文保留早期设计记录；固定字符 Chunk 已由结构感知 Builder 取代。第四、第五阶段未实施。
 
 ## 第二阶段架构增量
 
@@ -102,3 +102,13 @@ PYTHONPATH=. .runtime/bin/python scripts/backfill_documents_v2.py \
 - 当前 Chunk 固定字符长度，可能切开表格；可通过 table_id 读取完整表格。尚无分页式大规模节点遍历或性能容量承诺。
 - 普通读请求可惰性回填旧文档，首次读取耗时可能增加；正式部署建议先执行备份回填脚本。
 - 未接入真实内网 MinerU/Dify 验收；外部联调与第二至五阶段均未完成。
+
+## 第三阶段增量（2026-11-01）
+
+新增 `app/retrieval_v2/`：Repository → 实时授权快照 → 确定性 Planner → 独立 Tantivy / Dify semantic / Exact → EvidenceResolver → RRF / 可选模型重排 → 文档多样性与上下文 → 最终权限/版本/映射重核。统一工具服务为后续 Agent 与 MCP 的共同入口。
+
+`/api/v2/retrieval/search`、`/api/v2/retrieval/tools` 和工具调用入口已可用，17 个只读工具分高/低两层，复用治理与审计。低层要求 `tool.advanced`。旧执行图、旧工具及旧接口保留。没有 Document Repository 表的破坏性迁移；新工具配置幂等初始化。
+
+原文证据必须验证 Chunk/version/Block/section/table 归属与原文一致性；Dify segment 不能当作本地 Chunk。当前语料的真实 Dify 映射不足，拒绝未验证候选是显式降级，不能理解为没有相关知识。
+
+详见 [第三阶段接口](UNIFIED_RETRIEVAL_V2.md)、[验收](UNIFIED_RETRIEVAL_ACCEPTANCE_2026-11-01.md)。上文保留前两阶段架构记录。第四阶段 ReAct、checkpoint 与第五阶段全面迁移未实施。

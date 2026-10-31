@@ -1,0 +1,1414 @@
+[
+  {
+    "question_id": "tatqa_test_9083",
+    "question": "What was the value of Net operating loss carryforwards for aci-worldwide-inc in the financial year 2018?",
+    "gold_context": "The deferred tax assets and liabilities result from differences in the timing of the recognition of certain income and expense items for tax and financial accounting purposes. The sources of these differences at each balance sheet date are as follows (in thousands):\n\n|                          | December 31,     |       |\n|--------------------------|------------------|-------|\n|                          | 2019             | 2018  |\n| Net operating loss carryforwards | $23,030         | $25,745 |\n| Tax credits              | 52,902           | 43,838 |\n| Compensation             | 18,791           | 15,934 |\n| Deferred revenue         | 25,599           | 27,587 |\n| Research and development expense deferral | —               | 12,631 |\n| Other                    | 4,065            | 5,393  |\n| Gross deferred income tax assets | 124,387          | 131,128 |\n| Less: valuation allowance | (7,653)          | (20,415) |\n| Net deferred income tax assets | $116,734         | $110,713 |\n| Deferred income tax liabilities: |                       |       |\n| Depreciation and amortization | $(52,978)        | $(60,872) |\n| Deferred revenue         | (44,198)         | (54,508) |\n| Total deferred income tax liabilities | (97,176)         | (115,380) |\n| Net deferred income taxes | $19,558          | $(4,667) |\n\nDeferred income taxes / liabilities included in the balance sheet are:\n\n- Deferred income tax asset – noncurrent | $51,611 | $27,048\n- Deferred income tax liability – noncurrent | $(32,053) | $(31,715)\n- Net deferred income taxes | $19,558 | $(4,667)\n\nIn assessing the realizability of deferred tax assets, the Company considers whether it is more likely than not that some portion or all of the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is dependent upon the generation of future taxable income during the periods in which those temporary differences become deductible. The Company considers projected future taxable income, carryback opportunities, and tax planning strategies in making this assessment. Based upon the level of historical taxable income and projections for future taxable income over the periods which the deferred tax assets are deductible, the Company believes it is more likely than not that it will realize the benefits of these deductible differences, net of the valuation allowances recorded. During the year ended December 31, 2019, the Company decreased its valuation allowance by $12.8 million which relates to a reduction in the valuation allowance on U.S. foreign tax credits offset by an increase in valuation allowance on foreign net operating losses.\n\nAt December 31, 2019, the Company had domestic federal tax net operating losses (“NOLs”) of $65.9 million, which will begin to expire in 2020. The Company had deferred tax assets equal to $1.4 million related to domestic tax NOLs which will begin to expire in 2020. The Company does not have any valuation allowance against the federal tax NOLs but has provided a $1.2 million valuation allowance against the deferred tax asset associated with the state NOLs. The Company had foreign tax NOLs of $30.4 million, of which $28.1 million may be utilized over an indefinite life, with the remainder expiring over the next 17 years. The Company has provided a $0.7 million valuation allowance against the deferred tax asset associated with the foreign NOLs.\n\nThe unrecognized tax benefit at December 31, 2019 and 2018, was $29.0 million and $28.4 million, respectively, of which $22.4 million and $22.6 million, respectively, are included in other noncurrent liabilities in the consolidated balance sheets. Of the total",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 14.9821195602417,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "<!-- page: 1 -->\n81 \n \nThe deferred tax assets and liabilities result from differences in the timing of the recognition of certain income and expense items for \ntax and financial accounting purposes. The sources of these differences at each balance sheet date are as follows (in thousands): \n \nDecember 31, \n \n2019 \n2018 \nDeferred income tax assets: \n \n  \nNet operating loss carryforwards \n$ \n23,030  $ \n25,745  \nTax credits \n52,902  \n43,838  \nCompensation \n18,791  \n15,934  \nDeferred revenue \n25,599  \n27,587  \nResearch and development expense deferral \n—  \n12,631  \nOther \n4,065  \n5,393  \nGross deferred income tax assets \n124,387  \n131,128  \nLess: valuation allowance \n(7,653 ) \n(20,415 ) \nNet deferred income tax assets \n$ \n116,734  $ \n110,713  \nDeferred income tax liabilities: \n \n  \nDepreciation and amortization \n$ \n(52,978 ) $ \n(60,872 ) \nDeferred revenue \n(44,198 ) \n(54,508 ) \nTotal deferred income tax liabilities \n(97,176 ) \n(115,380 ) \nNet deferred income taxes \n$ \n19,558  $ \n(4,667 ) \nDeferred income taxes / liabilities included in the balance sheet are: \n \n  \nDeferred income tax asset – noncurrent \n$ \n51,611  $ \n27,048  \nDeferred income tax liability – noncurrent \n(32,053 ) \n(31,715 ) \nNet deferred income taxes \n$ \n19,558  $ \n(4,667 ) \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:0",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:1",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:2",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:3",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:4",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:5",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:6",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:7",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:8",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:9",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:10",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:11",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:12",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:13",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:14",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:15",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:16",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:17"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 1259
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 14.9821195602417,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:2",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 10.932957649230957,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": "At December 31, 2019, the Company had domestic federal tax net operating losses (“NOLs”) of $65.9 million, which will begin to \nexpire in 2020. The Company had deferred tax assets equal to $1.4 million related to domestic state tax NOLs which will begin to \nexpire in 2020. The Company does not have any valuation allowance against the federal tax NOLs but has provided a $1.2 million \nvaluation allowance against the deferred tax asset associated with the state NOLs. The Company had foreign tax NOLs of $30.4 \nmillion, of which $28.1 million may be utilized over an indefinite life, with the remainder expiring over the next 17 years. The \nCompany has provided a $0.7 million valuation allowance against the deferred tax asset associated with the foreign NOLs. \n \nThe Company had U.S. foreign tax credit carryforwards at December 31, 2019, of $40.7 million, for which an $1.2 million valuation \nallowance has been provided. The U.S. foreign tax credits will begin to expire in 2022. The Company had foreign tax credit \ncarryforwards in other foreign jurisdictions at December 31, 2019, of $1.9 million, of which $1.3 million may be utilized over an \nindefinite life, with the remainder expiring over the next seven years. The Company has provided a $1.2 million valuation allowance \nagainst the tax benefit associated with these foreign credits. The Company also has domestic federal and state general business tax \ncredit carryforwards at December 31, 2019, of $15.7 million and $0.8 million, respectively, which will begin to expire in 2020 and \n2022, respectively. \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:20",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:21",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:22",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:23"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 2350,
+          "end": 3923
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 10.932957649230957,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:1",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": 7.827363967895508,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content": "In assessing the realizability of deferred tax assets, the Company considers whether it is more likely than not that some portion or all \nof the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is dependent upon the generation of \nfuture taxable income during the periods in which those temporary differences become deductible. The Company considers \nprojected future taxable income, carryback opportunities, and tax planning strategies in making this assessment. Based upon the \nlevel of historical taxable income and projections for future taxable income over the periods which the deferred tax assets are \ndeductible, the Company believes it is more likely than not that it will realize the benefits of these deductible differences, net of the \nvaluation allowances recorded. During the year ended December 31, 2019, the Company decreased its valuation allowance by $12.8 \nmillion which relates to a reduction in the valuation allowance on U.S. foreign tax credits offset by an increase in valuation \nallowance on foreign net operating losses. \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:18",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:19"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 1259,
+          "end": 2350
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 7.827363967895508,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "question_id": "tatqa_test_9084",
+    "question": "What was the change in tax credits between 2018 and 2019 for aci-worldwide-inc?",
+    "gold_context": "The deferred tax assets and liabilities result from differences in the timing of the recognition of certain income and expense items for tax and financial accounting purposes. The sources of these differences at each balance sheet date are as follows (in thousands):\n\n|                          | December 31,     |       |\n|--------------------------|------------------|-------|\n|                          | 2019             | 2018  |\n| Net operating loss carryforwards | $23,030         | $25,745 |\n| Tax credits              | 52,902           | 43,838 |\n| Compensation             | 18,791           | 15,934 |\n| Deferred revenue         | 25,599           | 27,587 |\n| Research and development expense deferral | —               | 12,631 |\n| Other                    | 4,065            | 5,393  |\n| Gross deferred income tax assets | 124,387          | 131,128 |\n| Less: valuation allowance | (7,653)          | (20,415) |\n| Net deferred income tax assets | $116,734         | $110,713 |\n| Deferred income tax liabilities: |                       |       |\n| Depreciation and amortization | $(52,978)        | $(60,872) |\n| Deferred revenue         | (44,198)         | (54,508) |\n| Total deferred income tax liabilities | (97,176)         | (115,380) |\n| Net deferred income taxes | $19,558          | $(4,667) |\n\nDeferred income taxes / liabilities included in the balance sheet are:\n\n- Deferred income tax asset – noncurrent | $51,611 | $27,048\n- Deferred income tax liability – noncurrent | $(32,053) | $(31,715)\n- Net deferred income taxes | $19,558 | $(4,667)\n\nIn assessing the realizability of deferred tax assets, the Company considers whether it is more likely than not that some portion or all of the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is dependent upon the generation of future taxable income during the periods in which those temporary differences become deductible. The Company considers projected future taxable income, carryback opportunities, and tax planning strategies in making this assessment. Based upon the level of historical taxable income and projections for future taxable income over the periods which the deferred tax assets are deductible, the Company believes it is more likely than not that it will realize the benefits of these deductible differences, net of the valuation allowances recorded. During the year ended December 31, 2019, the Company decreased its valuation allowance by $12.8 million which relates to a reduction in the valuation allowance on U.S. foreign tax credits offset by an increase in valuation allowance on foreign net operating losses.\n\nAt December 31, 2019, the Company had domestic federal tax net operating losses (“NOLs”) of $65.9 million, which will begin to expire in 2020. The Company had deferred tax assets equal to $1.4 million related to domestic tax NOLs which will begin to expire in 2020. The Company does not have any valuation allowance against the federal tax NOLs but has provided a $1.2 million valuation allowance against the deferred tax asset associated with the state NOLs. The Company had foreign tax NOLs of $30.4 million, of which $28.1 million may be utilized over an indefinite life, with the remainder expiring over the next 17 years. The Company has provided a $0.7 million valuation allowance against the deferred tax asset associated with the foreign NOLs.\n\nThe unrecognized tax benefit at December 31, 2019 and 2018, was $29.0 million and $28.4 million, respectively, of which $22.4 million and $22.6 million, respectively, are included in other noncurrent liabilities in the consolidated balance sheets. Of the total",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:2",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 11.943412780761719,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "At December 31, 2019, the Company had domestic federal tax net operating losses (“NOLs”) of $65.9 million, which will begin to \nexpire in 2020. The Company had deferred tax assets equal to $1.4 million related to domestic state tax NOLs which will begin to \nexpire in 2020. The Company does not have any valuation allowance against the federal tax NOLs but has provided a $1.2 million \nvaluation allowance against the deferred tax asset associated with the state NOLs. The Company had foreign tax NOLs of $30.4 \nmillion, of which $28.1 million may be utilized over an indefinite life, with the remainder expiring over the next 17 years. The \nCompany has provided a $0.7 million valuation allowance against the deferred tax asset associated with the foreign NOLs. \n \nThe Company had U.S. foreign tax credit carryforwards at December 31, 2019, of $40.7 million, for which an $1.2 million valuation \nallowance has been provided. The U.S. foreign tax credits will begin to expire in 2022. The Company had foreign tax credit \ncarryforwards in other foreign jurisdictions at December 31, 2019, of $1.9 million, of which $1.3 million may be utilized over an \nindefinite life, with the remainder expiring over the next seven years. The Company has provided a $1.2 million valuation allowance \nagainst the tax benefit associated with these foreign credits. The Company also has domestic federal and state general business tax \ncredit carryforwards at December 31, 2019, of $15.7 million and $0.8 million, respectively, which will begin to expire in 2020 and \n2022, respectively. \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:20",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:21",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:22",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:23"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 2350,
+          "end": 3923
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 11.943412780761719,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 11.74583911895752,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": "<!-- page: 1 -->\n81 \n \nThe deferred tax assets and liabilities result from differences in the timing of the recognition of certain income and expense items for \ntax and financial accounting purposes. The sources of these differences at each balance sheet date are as follows (in thousands): \n \nDecember 31, \n \n2019 \n2018 \nDeferred income tax assets: \n \n  \nNet operating loss carryforwards \n$ \n23,030  $ \n25,745  \nTax credits \n52,902  \n43,838  \nCompensation \n18,791  \n15,934  \nDeferred revenue \n25,599  \n27,587  \nResearch and development expense deferral \n—  \n12,631  \nOther \n4,065  \n5,393  \nGross deferred income tax assets \n124,387  \n131,128  \nLess: valuation allowance \n(7,653 ) \n(20,415 ) \nNet deferred income tax assets \n$ \n116,734  $ \n110,713  \nDeferred income tax liabilities: \n \n  \nDepreciation and amortization \n$ \n(52,978 ) $ \n(60,872 ) \nDeferred revenue \n(44,198 ) \n(54,508 ) \nTotal deferred income tax liabilities \n(97,176 ) \n(115,380 ) \nNet deferred income taxes \n$ \n19,558  $ \n(4,667 ) \nDeferred income taxes / liabilities included in the balance sheet are: \n \n  \nDeferred income tax asset – noncurrent \n$ \n51,611  $ \n27,048  \nDeferred income tax liability – noncurrent \n(32,053 ) \n(31,715 ) \nNet deferred income taxes \n$ \n19,558  $ \n(4,667 ) \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:0",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:1",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:2",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:3",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:4",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:5",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:6",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:7",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:8",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:9",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:10",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:11",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:12",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:13",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:14",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:15",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:16",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:17"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 1259
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 11.74583911895752,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:1",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": 10.97917366027832,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content": "In assessing the realizability of deferred tax assets, the Company considers whether it is more likely than not that some portion or all \nof the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is dependent upon the generation of \nfuture taxable income during the periods in which those temporary differences become deductible. The Company considers \nprojected future taxable income, carryback opportunities, and tax planning strategies in making this assessment. Based upon the \nlevel of historical taxable income and projections for future taxable income over the periods which the deferred tax assets are \ndeductible, the Company believes it is more likely than not that it will realize the benefits of these deductible differences, net of the \nvaluation allowances recorded. During the year ended December 31, 2019, the Company decreased its valuation allowance by $12.8 \nmillion which relates to a reduction in the valuation allowance on U.S. foreign tax credits offset by an increase in valuation \nallowance on foreign net operating losses. \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:18",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:19"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 1259,
+          "end": 2350
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 10.97917366027832,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "question_id": "tatqa_test_9085",
+    "question": "What was the change in compensation between 2018 and 2019 for aci-worldwide-inc?",
+    "gold_context": "The deferred tax assets and liabilities result from differences in the timing of the recognition of certain income and expense items for tax and financial accounting purposes. The sources of these differences at each balance sheet date are as follows (in thousands):\n\n|                          | December 31,     |       |\n|--------------------------|------------------|-------|\n|                          | 2019             | 2018  |\n| Net operating loss carryforwards | $23,030         | $25,745 |\n| Tax credits              | 52,902           | 43,838 |\n| Compensation             | 18,791           | 15,934 |\n| Deferred revenue         | 25,599           | 27,587 |\n| Research and development expense deferral | —               | 12,631 |\n| Other                    | 4,065            | 5,393  |\n| Gross deferred income tax assets | 124,387          | 131,128 |\n| Less: valuation allowance | (7,653)          | (20,415) |\n| Net deferred income tax assets | $116,734         | $110,713 |\n| Deferred income tax liabilities: |                       |       |\n| Depreciation and amortization | $(52,978)        | $(60,872) |\n| Deferred revenue         | (44,198)         | (54,508) |\n| Total deferred income tax liabilities | (97,176)         | (115,380) |\n| Net deferred income taxes | $19,558          | $(4,667) |\n\nDeferred income taxes / liabilities included in the balance sheet are:\n\n- Deferred income tax asset – noncurrent | $51,611 | $27,048\n- Deferred income tax liability – noncurrent | $(32,053) | $(31,715)\n- Net deferred income taxes | $19,558 | $(4,667)\n\nIn assessing the realizability of deferred tax assets, the Company considers whether it is more likely than not that some portion or all of the deferred tax assets will not be realized. The ultimate realization of deferred tax assets is dependent upon the generation of future taxable income during the periods in which those temporary differences become deductible. The Company considers projected future taxable income, carryback opportunities, and tax planning strategies in making this assessment. Based upon the level of historical taxable income and projections for future taxable income over the periods which the deferred tax assets are deductible, the Company believes it is more likely than not that it will realize the benefits of these deductible differences, net of the valuation allowances recorded. During the year ended December 31, 2019, the Company decreased its valuation allowance by $12.8 million which relates to a reduction in the valuation allowance on U.S. foreign tax credits offset by an increase in valuation allowance on foreign net operating losses.\n\nAt December 31, 2019, the Company had domestic federal tax net operating losses (“NOLs”) of $65.9 million, which will begin to expire in 2020. The Company had deferred tax assets equal to $1.4 million related to domestic tax NOLs which will begin to expire in 2020. The Company does not have any valuation allowance against the federal tax NOLs but has provided a $1.2 million valuation allowance against the deferred tax asset associated with the state NOLs. The Company had foreign tax NOLs of $30.4 million, of which $28.1 million may be utilized over an indefinite life, with the remainder expiring over the next 17 years. The Company has provided a $0.7 million valuation allowance against the deferred tax asset associated with the foreign NOLs.\n\nThe unrecognized tax benefit at December 31, 2019 and 2018, was $29.0 million and $28.4 million, respectively, of which $22.4 million and $22.6 million, respectively, are included in other noncurrent liabilities in the consolidated balance sheets. Of the total",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 6.644317626953125,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "<!-- page: 1 -->\n81 \n \nThe deferred tax assets and liabilities result from differences in the timing of the recognition of certain income and expense items for \ntax and financial accounting purposes. The sources of these differences at each balance sheet date are as follows (in thousands): \n \nDecember 31, \n \n2019 \n2018 \nDeferred income tax assets: \n \n  \nNet operating loss carryforwards \n$ \n23,030  $ \n25,745  \nTax credits \n52,902  \n43,838  \nCompensation \n18,791  \n15,934  \nDeferred revenue \n25,599  \n27,587  \nResearch and development expense deferral \n—  \n12,631  \nOther \n4,065  \n5,393  \nGross deferred income tax assets \n124,387  \n131,128  \nLess: valuation allowance \n(7,653 ) \n(20,415 ) \nNet deferred income tax assets \n$ \n116,734  $ \n110,713  \nDeferred income tax liabilities: \n \n  \nDepreciation and amortization \n$ \n(52,978 ) $ \n(60,872 ) \nDeferred revenue \n(44,198 ) \n(54,508 ) \nTotal deferred income tax liabilities \n(97,176 ) \n(115,380 ) \nNet deferred income taxes \n$ \n19,558  $ \n(4,667 ) \nDeferred income taxes / liabilities included in the balance sheet are: \n \n  \nDeferred income tax asset – noncurrent \n$ \n51,611  $ \n27,048  \nDeferred income tax liability – noncurrent \n(32,053 ) \n(31,715 ) \nNet deferred income taxes \n$ \n19,558  $ \n(4,667 ) \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:0",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:1",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:2",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:3",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:4",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:5",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:6",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:7",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:8",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:9",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:10",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:11",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:12",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:13",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:14",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:15",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:16",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:17"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 1259
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 6.644317626953125,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:3",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 6.621151924133301,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": "The unrecognized tax benefit at December 31, 2019 and 2018, was $29.0 million and $28.4 million, respectively, of which $22.4 \nmillion and $22.6 million, respectively, are included in other noncurrent liabilities in the consolidated balance sheets. Of the total \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:24"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 3923,
+          "end": 4186
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 6.621151924133301,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_ce7c2739d2d51a3201afce33",
+        "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+        "document_name": "0551beccb943904e051f6f2a1519bd3a.pdf",
+        "chunk_id": "pdf_ce7c2739d2d51a3201afce33:r1:build:structure-v3-cfb1af48b26c:chunk:2",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": 3.8832993507385254,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content": "At December 31, 2019, the Company had domestic federal tax net operating losses (“NOLs”) of $65.9 million, which will begin to \nexpire in 2020. The Company had deferred tax assets equal to $1.4 million related to domestic state tax NOLs which will begin to \nexpire in 2020. The Company does not have any valuation allowance against the federal tax NOLs but has provided a $1.2 million \nvaluation allowance against the deferred tax asset associated with the state NOLs. The Company had foreign tax NOLs of $30.4 \nmillion, of which $28.1 million may be utilized over an indefinite life, with the remainder expiring over the next 17 years. The \nCompany has provided a $0.7 million valuation allowance against the deferred tax asset associated with the foreign NOLs. \n \nThe Company had U.S. foreign tax credit carryforwards at December 31, 2019, of $40.7 million, for which an $1.2 million valuation \nallowance has been provided. The U.S. foreign tax credits will begin to expire in 2022. The Company had foreign tax credit \ncarryforwards in other foreign jurisdictions at December 31, 2019, of $1.9 million, of which $1.3 million may be utilized over an \nindefinite life, with the remainder expiring over the next seven years. The Company has provided a $1.2 million valuation allowance \nagainst the tax benefit associated with these foreign credits. The Company also has domestic federal and state general business tax \ncredit carryforwards at December 31, 2019, of $15.7 million and $0.8 million, respectively, which will begin to expire in 2020 and \n2022, respectively. \n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_ce7c2739d2d51a3201afce33:r1",
+          "block_ids": [
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:20",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:21",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:22",
+            "pdf_ce7c2739d2d51a3201afce33:r1:block:23"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 2350,
+          "end": 3923
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 3.8832993507385254,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "question_id": "tatqa_test_9097",
+    "question": "What is the increase or decrease in Consolidated Communications Holdings Inc.'s Net income (loss) from 2018 to 2019?",
+    "gold_context": "In addition to the results reported in accordance with accounting principles generally accepted in the United States (\"US GAAP\" or \"GAAP\"), we also use certain non-GAAP measures such as EBITDA and adjusted EBITDA to evaluate operating performance and to facilitate the comparison of our historical results and trends. These financial measures are not a measure of financial performance under US GAAP and should not be considered in isolation or as a substitute for net income (loss) as a measure of performance and net cash provided by operating activities as a measure of liquidity. They are not, on their own, necessarily indicative of cash available to fund cash needs as determined in accordance with GAAP. The calculation of these non-GAAP measures may not be comparable to similarly titled measures used by other companies. Reconciliations of these non-GAAP measures to the most directly comparable financial measures presented in accordance with GAAP are provided below.\n\nEBITDA is defined as net earnings before interest expense, income taxes, and depreciation and amortization. Adjusted EBITDA is comprised of EBITDA, adjusted for certain items as permitted or required under our credit facility as described in the reconciliations below. These measures are a common measure of operating performance in the telecommunications industry and are useful, with other data, as a means to evaluate our ability to fund our estimated uses of cash.\n\nThe following tables are a reconciliation of net income (loss) to Adjusted EBITDA:\n\n|                      | 2019     | 2018     | 2017     | 2016     | 2015     |\n|----------------------|----------|----------|----------|----------|----------|\n| Net income (loss)    | $(20.0)  | $(50.5)  | $65.3    | $15.2    | $(0.7)   |\n| Add (subtract):      |          |          |          |          |          |\n| Interest expense, net of interest income | 136.7    | 134.5    | 129.8    | 76.8     | 79.6     |\n| Income tax expense (benefit) | (3.7)    | (24.1)   | (124.9)  | 23.0     | 2.8      |\n| Depreciation and amortization | 381.2    | 432.6    | 291.8    | 174.0    | 179.9    |\n| EBITDA               | 494.2    | 492.5    | 362.0    | 289.0    | 261.6    |\n\nAdjustments to EBITDA:\n\n|                      | 2019    | 2018    | 2017    | 2016    | 2015    |\n|----------------------|---------|---------|---------|---------|---------|\n| Other, net (a)       | (8.8)   | 0.6     | 19.3    | (25.5)  | (22.3)  |\n| Investment distributions (b) | 35.8    | 39.1    | 30.0    | 32.1    | 45.3    |\n| (Gain) loss on extinguishment of debt (c) | (4.5)   | —       | —       | 6.6     | 41.2    |\n| Loss on impairment (d) | —       | 0.6     | —       | —       | —       |\n| Non-cash, stock-based compensation (e) | 6.8     | 5.1     | 2.8     | 3.0     | 3.1     |\n| Adjusted EBITDA      | $523.5  | $537.3  | $414.1  | $305.8  | $328.9  |\n\n(a) Other, net includes the equity earnings from our investments, dividend income, income attributable to noncontrolling interests in subsidiaries, acquisition and transaction related costs including severance, non-cash pension and post-retirement benefits and certain other miscellaneous items.\n\n(b) Includes all cash dividends and other cash distributions received from our investments.\n\n(c) Represents the redemption premium (discount) and write-off of unamortized debt issuance costs in connection with the redemption or retirement of our debt obligations.\n\n(d) Represents intangible asset impairment charges recognized during the period.\n\n(e) Represents compensation expenses in connection with the issuance of stock awards, which because of their non-cash nature, these expenses are excluded from adjusted EBITDA.",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_c7453ca7f408b0e4bd6f5b9b",
+        "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+        "document_name": "06f4135ecdf57596ac473ab26bbe4b21.pdf",
+        "chunk_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 13.605693817138672,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "<!-- page: 1 -->\nTable of Contents\n30\n(4) In addition to the results reported in accordance with accounting principles generally accepted in the United States (“US\nGAAP” or “GAAP”), we also use certain non-GAAP measures such as EBITDA and adjusted EBITDA to evaluate\noperating performance and to facilitate the comparison of our historical results and trends.  These financial measures are\nnot a measure of financial performance under US GAAP and should not be considered in isolation or as a substitute for\nnet income (loss) as a measure of performance and net cash provided by operating activities as a measure of liquidity.\n They are not, on their own, necessarily indicative of cash available to fund cash needs as determined in accordance with\nGAAP.  The calculation of these non-GAAP measures may not be comparable to similarly titled measures used by other\ncompanies.  Reconciliations of these non-GAAP measures to the most directly comparable financial measures presented\nin accordance with GAAP are provided below.\nEBITDA is defined as net earnings before interest expense, income taxes, and depreciation and amortization.  Adjusted\nEBITDA is comprised of EBITDA, adjusted for certain items as permitted or required under our credit facility as\ndescribed in the reconciliations below.  These measures are a common measure of operating performance in the\ntelecommunications industry and are useful, with other data, as a means to evaluate our ability to fund our estimated\nuses of cash.\nThe following tables are a reconciliation of net income (loss) to Adjusted EBITDA:\nYear Ended December 31,\n \n(In millions, unaudited)\n2019\n    \n2018\n    \n2017\n    \n2016\n    \n2015\n \nNet income (loss)\n$ (20.0)\n$ (50.5)\n$\n 65.3\n$\n 15.2\n$\n (0.7)\nAdd (subtract):\nInterest expense, net of interest income\n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+          "block_ids": [
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:0",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:1",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:2",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:3",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:4",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:5",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:6",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:7",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:8",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:9",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:10",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:11",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:12",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:13",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:14"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 1796
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 13.605693817138672,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_c7453ca7f408b0e4bd6f5b9b",
+        "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+        "document_name": "06f4135ecdf57596ac473ab26bbe4b21.pdf",
+        "chunk_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1:build:structure-v3-cfb1af48b26c:chunk:1",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 10.326600074768066,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": " 136.7\n \n 134.5\n \n 129.8\n \n 76.8\n \n 79.6\nIncome tax expense (benefit)\n \n (3.7)\n \n (24.1)\n  (124.9)\n \n 23.0\n \n 2.8\nDepreciation and amortization\n \n 381.2\n \n 432.6\n \n 291.8\n  174.0\n  179.9\nEBITDA\n \n 494.2\n \n 492.5\n \n 362.0\n  289.0\n  261.6\nAdjustments to EBITDA:\nOther, net (a)\n \n (8.8)\n \n 0.6\n \n 19.3\n  (25.5)\n  (22.3)\nInvestment distributions (b)\n \n 35.8\n \n 39.1\n \n 30.0\n \n 32.1\n \n 45.3\n(Gain) loss on extinguishment of debt (c)\n \n (4.5)\n \n —\n \n —\n \n 6.6\n \n 41.2\nLoss on impairment (d)\n \n —\n \n —\n \n —\n \n 0.6\n \n —\nNon-cash, stock-based compensation (e)\n \n 6.8\n \n 5.1\n \n 2.8\n \n 3.0\n \n 3.1\nAdjusted EBITDA\n$ 523.5\n$ 537.3\n$ 414.1\n$ 305.8\n$ 328.9\n(a)\nOther, net includes the equity earnings from our investments, dividend income, income attributable to noncontrolling\ninterests in subsidiaries, acquisition and transaction related costs including severance, non-cash pension and post-\nretirement benefits and certain other miscellaneous items.\n(b)\nIncludes all cash dividends and other cash distributions received from our investments.\n(c)\nRepresents the redemption premium (discount) and write-off of unamortized debt issuance costs in connection with the\nredemption or retirement of our debt obligations.\n(d)\nRepresents intangible asset impairment charges recognized during the period.\n(e)\nRepresents compensation expenses in connection with the issuance of stock awards, which because of their non-cash\nnature, these expenses are excluded from adjusted EBITDA.\n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+          "block_ids": [
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:15",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:16",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:17",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:18",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:19",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:20",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:21",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:22",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:23",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:24",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:25",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:26",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:27",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:28",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:29",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:30",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:31",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:32",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:33",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:34",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:35",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:36",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:37",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:38",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:39",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:40",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:41",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:42",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:43",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:44",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:45",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:46",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:47",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:48",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:49",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:50",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:51",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:52",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:53",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:54",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:55",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:56",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:57",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:58",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:59",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:60",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:61",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:62",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:63",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:64",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:65",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:66",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:67",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:68",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:69",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:70",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:71",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:72",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:73",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:74",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:75",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:76",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:77",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:78",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:79",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:80",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:81",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:82",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:83",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:84",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:85",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:86",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:87",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:88",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:89"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 1796,
+          "end": 3255
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 10.326600074768066,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "question_id": "tatqa_test_9098",
+    "question": "What is the increase/decrease in Interest expense, net of interest income for Consolidated Communications Holdings, Inc. from 2018 to 2019?",
+    "gold_context": "In addition to the results reported in accordance with accounting principles generally accepted in the United States (\"US GAAP\" or \"GAAP\"), we also use certain non-GAAP measures such as EBITDA and adjusted EBITDA to evaluate operating performance and to facilitate the comparison of our historical results and trends. These financial measures are not a measure of financial performance under US GAAP and should not be considered in isolation or as a substitute for net income (loss) as a measure of performance and net cash provided by operating activities as a measure of liquidity. They are not, on their own, necessarily indicative of cash available to fund cash needs as determined in accordance with GAAP. The calculation of these non-GAAP measures may not be comparable to similarly titled measures used by other companies. Reconciliations of these non-GAAP measures to the most directly comparable financial measures presented in accordance with GAAP are provided below.\n\nEBITDA is defined as net earnings before interest expense, income taxes, and depreciation and amortization. Adjusted EBITDA is comprised of EBITDA, adjusted for certain items as permitted or required under our credit facility as described in the reconciliations below. These measures are a common measure of operating performance in the telecommunications industry and are useful, with other data, as a means to evaluate our ability to fund our estimated uses of cash.\n\nThe following tables are a reconciliation of net income (loss) to Adjusted EBITDA:\n\n|                      | 2019     | 2018     | 2017     | 2016     | 2015     |\n|----------------------|----------|----------|----------|----------|----------|\n| Net income (loss)    | $(20.0)  | $(50.5)  | $65.3    | $15.2    | $(0.7)   |\n| Add (subtract):      |          |          |          |          |          |\n| Interest expense, net of interest income | 136.7    | 134.5    | 129.8    | 76.8     | 79.6     |\n| Income tax expense (benefit) | (3.7)    | (24.1)   | (124.9)  | 23.0     | 2.8      |\n| Depreciation and amortization | 381.2    | 432.6    | 291.8    | 174.0    | 179.9    |\n| EBITDA               | 494.2    | 492.5    | 362.0    | 289.0    | 261.6    |\n\nAdjustments to EBITDA:\n\n|                      | 2019    | 2018    | 2017    | 2016    | 2015    |\n|----------------------|---------|---------|---------|---------|---------|\n| Other, net (a)       | (8.8)   | 0.6     | 19.3    | (25.5)  | (22.3)  |\n| Investment distributions (b) | 35.8    | 39.1    | 30.0    | 32.1    | 45.3    |\n| (Gain) loss on extinguishment of debt (c) | (4.5)   | —       | —       | 6.6     | 41.2    |\n| Loss on impairment (d) | —       | 0.6     | —       | —       | —       |\n| Non-cash, stock-based compensation (e) | 6.8     | 5.1     | 2.8     | 3.0     | 3.1     |\n| Adjusted EBITDA      | $523.5  | $537.3  | $414.1  | $305.8  | $328.9  |\n\n(a) Other, net includes the equity earnings from our investments, dividend income, income attributable to noncontrolling interests in subsidiaries, acquisition and transaction related costs including severance, non-cash pension and post-retirement benefits and certain other miscellaneous items.\n\n(b) Includes all cash dividends and other cash distributions received from our investments.\n\n(c) Represents the redemption premium (discount) and write-off of unamortized debt issuance costs in connection with the redemption or retirement of our debt obligations.\n\n(d) Represents intangible asset impairment charges recognized during the period.\n\n(e) Represents compensation expenses in connection with the issuance of stock awards, which because of their non-cash nature, these expenses are excluded from adjusted EBITDA.",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_c7453ca7f408b0e4bd6f5b9b",
+        "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+        "document_name": "06f4135ecdf57596ac473ab26bbe4b21.pdf",
+        "chunk_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 15.214681625366211,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "<!-- page: 1 -->\nTable of Contents\n30\n(4) In addition to the results reported in accordance with accounting principles generally accepted in the United States (“US\nGAAP” or “GAAP”), we also use certain non-GAAP measures such as EBITDA and adjusted EBITDA to evaluate\noperating performance and to facilitate the comparison of our historical results and trends.  These financial measures are\nnot a measure of financial performance under US GAAP and should not be considered in isolation or as a substitute for\nnet income (loss) as a measure of performance and net cash provided by operating activities as a measure of liquidity.\n They are not, on their own, necessarily indicative of cash available to fund cash needs as determined in accordance with\nGAAP.  The calculation of these non-GAAP measures may not be comparable to similarly titled measures used by other\ncompanies.  Reconciliations of these non-GAAP measures to the most directly comparable financial measures presented\nin accordance with GAAP are provided below.\nEBITDA is defined as net earnings before interest expense, income taxes, and depreciation and amortization.  Adjusted\nEBITDA is comprised of EBITDA, adjusted for certain items as permitted or required under our credit facility as\ndescribed in the reconciliations below.  These measures are a common measure of operating performance in the\ntelecommunications industry and are useful, with other data, as a means to evaluate our ability to fund our estimated\nuses of cash.\nThe following tables are a reconciliation of net income (loss) to Adjusted EBITDA:\nYear Ended December 31,\n \n(In millions, unaudited)\n2019\n    \n2018\n    \n2017\n    \n2016\n    \n2015\n \nNet income (loss)\n$ (20.0)\n$ (50.5)\n$\n 65.3\n$\n 15.2\n$\n (0.7)\nAdd (subtract):\nInterest expense, net of interest income\n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+          "block_ids": [
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:0",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:1",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:2",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:3",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:4",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:5",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:6",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:7",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:8",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:9",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:10",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:11",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:12",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:13",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:14"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 1796
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 15.214681625366211,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_c7453ca7f408b0e4bd6f5b9b",
+        "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+        "document_name": "06f4135ecdf57596ac473ab26bbe4b21.pdf",
+        "chunk_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1:build:structure-v3-cfb1af48b26c:chunk:1",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 9.031133651733398,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": " 136.7\n \n 134.5\n \n 129.8\n \n 76.8\n \n 79.6\nIncome tax expense (benefit)\n \n (3.7)\n \n (24.1)\n  (124.9)\n \n 23.0\n \n 2.8\nDepreciation and amortization\n \n 381.2\n \n 432.6\n \n 291.8\n  174.0\n  179.9\nEBITDA\n \n 494.2\n \n 492.5\n \n 362.0\n  289.0\n  261.6\nAdjustments to EBITDA:\nOther, net (a)\n \n (8.8)\n \n 0.6\n \n 19.3\n  (25.5)\n  (22.3)\nInvestment distributions (b)\n \n 35.8\n \n 39.1\n \n 30.0\n \n 32.1\n \n 45.3\n(Gain) loss on extinguishment of debt (c)\n \n (4.5)\n \n —\n \n —\n \n 6.6\n \n 41.2\nLoss on impairment (d)\n \n —\n \n —\n \n —\n \n 0.6\n \n —\nNon-cash, stock-based compensation (e)\n \n 6.8\n \n 5.1\n \n 2.8\n \n 3.0\n \n 3.1\nAdjusted EBITDA\n$ 523.5\n$ 537.3\n$ 414.1\n$ 305.8\n$ 328.9\n(a)\nOther, net includes the equity earnings from our investments, dividend income, income attributable to noncontrolling\ninterests in subsidiaries, acquisition and transaction related costs including severance, non-cash pension and post-\nretirement benefits and certain other miscellaneous items.\n(b)\nIncludes all cash dividends and other cash distributions received from our investments.\n(c)\nRepresents the redemption premium (discount) and write-off of unamortized debt issuance costs in connection with the\nredemption or retirement of our debt obligations.\n(d)\nRepresents intangible asset impairment charges recognized during the period.\n(e)\nRepresents compensation expenses in connection with the issuance of stock awards, which because of their non-cash\nnature, these expenses are excluded from adjusted EBITDA.\n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_c7453ca7f408b0e4bd6f5b9b:r1",
+          "block_ids": [
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:15",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:16",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:17",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:18",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:19",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:20",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:21",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:22",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:23",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:24",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:25",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:26",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:27",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:28",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:29",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:30",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:31",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:32",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:33",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:34",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:35",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:36",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:37",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:38",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:39",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:40",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:41",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:42",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:43",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:44",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:45",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:46",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:47",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:48",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:49",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:50",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:51",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:52",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:53",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:54",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:55",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:56",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:57",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:58",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:59",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:60",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:61",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:62",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:63",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:64",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:65",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:66",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:67",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:68",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:69",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:70",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:71",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:72",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:73",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:74",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:75",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:76",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:77",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:78",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:79",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:80",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:81",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:82",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:83",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:84",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:85",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:86",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:87",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:88",
+            "pdf_c7453ca7f408b0e4bd6f5b9b:r1:block:89"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 1796,
+          "end": 3255
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 9.031133651733398,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "question_id": "tatqa_test_9119",
+    "question": "What is the difference in revenue between 2018 and 2017 for Micron Technology Inc. as reported in their 2019 financial data?",
+    "gold_context": "ITEM 6. SELECTED FINANCIAL DATA\n\n|                      | 2019   | 2018   | 2017   | 2016   | 2015   |\n|----------------------|--------|--------|--------|--------|--------|\n|                      | (in millions, except per share amounts) |        |        |        |        |\n| Revenue              | $23,406| $30,391| $20,322| $12,399| $16,192|\n| Gross margin         | 10,702 | 17,891 | 8,436  | 2,505  | 5,215  |\n| Operating income     | 7,376  | 14,994 | 5,868  | 168    | 2,998  |\n| Net income (loss)    | 6,358  | 14,138 | 5,090  | (275)  | 2,899  |\n| Net income (loss) attributable to Micron | 6,313 | 14,135 | 5,089  | (276)  | 2,899  |\n| Diluted earnings (loss) per share | 5.51  | 11.51  | 4.41   | (0.27) | 2.47   |\n|                       |        |        |        |        |        |\n| Cash and short-term investments | 7,955 | 6,802  | 5,428  | 4,398  | 3,521  |\n| Total current assets  | 16,503 | 16,039 | 12,457 | 9,495  | 8,596  |\n| Property, plant, and equipment | 28,240| 23,672 | 19,431 | 14,686 | 10,554 |\n| Total assets          | 48,887 | 43,376 | 35,336 | 27,540 | 24,143 |\n| Total current liabilities | 6,390 | 5,754  | 5,334  | 4,835  | 3,905  |\n| Long-term debt        | 4,541  | 3,777  | 9,872  | 9,154  | 6,252  |\n| Total Micron shareholders' equity | 35,881| 32,294 | 18,621 | 12,080 | 12,302 |\n| Noncontrolling interests in subsidiaries | 889  | 870   | 849    | 848    | 937    |\n| Total equity          | 36,770 | 33,164 | 19,470 | 12,928 | 13,239 |\n\nIn December 2016, we acquired the 67% remaining interest in Inotera and began consolidating Inotera's operating results. In the periods presented above through December 2016, Inotera sold DRAM products exclusively to us through supply agreements. The cash paid for the Inotera Acquisition was funded, in part, with a term loan of 80 billion New Taiwan dollars and $986 million from the sale of 58 million shares of our common stock. See \"Item 8. Financial Statements and Supplementary Data – Notes to Consolidated Financial Statements – Acquisition of Inotera.\"\n\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND RESULTS OF OPERATIONS\n\nThis discussion should be read in conjunction with the consolidated financial statements and accompanying notes for the year ended August 29, 2019. All period references are to our fiscal periods unless otherwise indicated. Our fiscal year is the 52 or 53-week period ending on the Thursday closest to August 31. Our fiscal 2019, 2018, and 2017 each contain 52 weeks. All tabular dollar amounts are in millions, except per share amounts.\n\nFor an overview of our business, see \"Part I – Item 1. Business – Overview.\"",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_923f5f6da273c0c97be9e682",
+        "version_id": "pdf_923f5f6da273c0c97be9e682:r1",
+        "document_name": "0ad31a3d0f7aff9ffd4d3a6ebbcb40f1.pdf",
+        "chunk_id": "pdf_923f5f6da273c0c97be9e682:r1:build:structure-v3-cfb1af48b26c:chunk:1",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 15.043014526367188,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "(in millions, except per share amounts)\nRevenue\n$\n23,406\n$\n30,391\n$\n20,322\n$\n12,399\n$\n16,192\nGross margin\n10,702\n17,891\n8,436\n2,505\n5,215\nOperating income\n7,376\n14,994\n5,868\n168\n2,998\nNet income (loss)\n6,358\n14,138\n5,090\n(275)\n2,899\nNet income (loss) attributable to Micron\n6,313\n14,135\n5,089\n(276)\n2,899\nDiluted earnings (loss) per share\n5.51\n11.51\n4.41\n(0.27)\n2.47\nCash and short-term investments\n7,955\n6,802\n5,428\n4,398\n3,521\nTotal current assets\n16,503\n16,039\n12,457\n9,495\n8,596\nProperty, plant, and equipment\n28,240\n23,672\n19,431\n14,686\n10,554\nTotal assets\n48,887\n43,376\n35,336\n27,540\n24,143\nTotal current liabilities\n6,390\n5,754\n5,334\n4,835\n3,905\nLong-term debt\n4,541\n3,777\n9,872\n9,154\n6,252\nTotal Micron shareholders' equity\n35,881\n32,294\n18,621\n12,080\n12,302\nNoncontrolling interests in subsidiaries\n889\n870\n849\n848\n937\nTotal equity\n36,770\n33,164\n19,470\n12,928\n13,239\nIn December 2016, we acquired the 67% remaining interest in Inotera and began consolidating Inotera's operating results. \nIn the periods presented above through December 2016, Inotera sold DRAM products exclusively to us through supply \nagreements. The cash paid for the Inotera Acquisition was funded, in part, with a term loan of 80 billion New Taiwan dollars \nand $986 million from the sale of 58 million shares of our common stock. See \"Item 8. Financial Statements and \nSupplementary Data – Notes to Consolidated Financial Statements – Acquisition of Inotera.\"\nITEM 7. MANAGEMENT'S DISCUSSION AND ANALYSIS OF FINANCIAL CONDITION AND \nRESULTS OF OPERATIONS\nThis discussion should be read in conjunction with the consolidated financial statements and accompanying notes for the \nyear ended August 29, 2019. All period references are to our fiscal periods unless otherwise indicated. Our fiscal year is the 52 \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_923f5f6da273c0c97be9e682:r1",
+          "block_ids": [
+            "pdf_923f5f6da273c0c97be9e682:r1:block:5"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 81,
+          "end": 1870
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 15.043014526367188,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_923f5f6da273c0c97be9e682",
+        "version_id": "pdf_923f5f6da273c0c97be9e682:r1",
+        "document_name": "0ad31a3d0f7aff9ffd4d3a6ebbcb40f1.pdf",
+        "chunk_id": "pdf_923f5f6da273c0c97be9e682:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 11.61430549621582,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": "<!-- page: 1 -->\n31\nITEM 6. SELECTED FINANCIAL DATA\n \n2019\n2018\n2017\n2016\n2015\n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_923f5f6da273c0c97be9e682:r1",
+          "block_ids": [
+            "pdf_923f5f6da273c0c97be9e682:r1:block:0",
+            "pdf_923f5f6da273c0c97be9e682:r1:block:1",
+            "pdf_923f5f6da273c0c97be9e682:r1:block:2",
+            "pdf_923f5f6da273c0c97be9e682:r1:block:3",
+            "pdf_923f5f6da273c0c97be9e682:r1:block:4"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 81
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 11.61430549621582,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_923f5f6da273c0c97be9e682",
+        "version_id": "pdf_923f5f6da273c0c97be9e682:r1",
+        "document_name": "0ad31a3d0f7aff9ffd4d3a6ebbcb40f1.pdf",
+        "chunk_id": "pdf_923f5f6da273c0c97be9e682:r1:build:structure-v3-cfb1af48b26c:chunk:2",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": 8.038213729858398,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content": "year ended August 29, 2019. All period references are to our fiscal periods unless otherwise indicated. Our fiscal year is the 52 \nor 53-week period ending on the Thursday closest to August 31. Our fiscal 2019, 2018, and 2017 each contain 52 weeks. All \ntabular dollar amounts are in millions, except per share amounts.\nFor an overview of our business, see \"Part I – Item 1. Business – Overview.\"\n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_923f5f6da273c0c97be9e682:r1",
+          "block_ids": [
+            "pdf_923f5f6da273c0c97be9e682:r1:block:5"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 1739,
+          "end": 2136
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 8.038213729858398,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "question_id": "tatqa_test_9144",
+    "question": "What is the sum of total revenue for the years 2017 and 2018 as reported by Avalara in their 2019 financial report?",
+    "gold_context": "The provision for income taxes for the year ended December 31, 2019 was $1.0 million compared to a benefit from income taxes of $1.0 million for the year ended December 31, 2018. The effective income tax rate was 1.9% for the year ended December 31, 2019 compared to a benefit of 1.3% for the year ended December 31, 2018. For the year ended December 31, 2019, the income tax expense related primarily to foreign tax jurisdictions. The income tax benefit for the year ended December 31, 2018 was due primarily to the determination that indefinite lived goodwill would provide a source of income to realize indefinite lived deferred tax assets, resulting in a tax benefit of $0.9 million.\n\nWe have assessed our ability to realize our deferred tax assets and have recorded a valuation allowance against such assets to the extent that, based on the weight of all available evidence, it is more likely than not that all or a portion of the deferred tax assets will not be realized. In assessing the likelihood of future realization of our deferred tax assets, we placed significant weight on our history of generating U.S. tax losses, including in 2019. As a result, we have a full valuation allowance against our net deferred tax assets, including net operating loss carryforwards, and tax credits related primarily to research and development. We expect to maintain a full valuation allowance for the foreseeable future.\n\n### Provision for (Benefit from) Income Taxes\n\n|                      | As Reported (ASC 606) | Impacts from Adoption | Without Adoption (ASC 605) | As Reported (ASC 605) | % Change       |\n|----------------------|-----------------------|-----------------------|---------------------------|-----------------------|----------------|\n| Provision for (benefit from) income taxes | $955 | — | $955 | $(976) | -198% |\n\n### Year Ended December 31, 2018 Compared to Year Ended December 31, 2017\n\n**Revenue**\n\n|                      | For the Year Ended December 31, 2018 | For the Year Ended December 31, 2017 | Change |\n|----------------------|-------------------------------------|-------------------------------------|--------|\n|                      | Amount                             | Percentage                          |\n|                      | (dollars in thousands)             |                                    |\n| Revenue:             |                                    |                                    |\n| Subscription and returns | $254,056                         | $199,942                           | $54,114| 27%                        |\n| Professional services | 18,042                             | 13,217                             | 4,825  | 37%                        |\n| Total revenue        | $272,098                           | $213,159                           | $58,939| 28%                        |\n\nTotal revenue for the year ended December 31, 2018 increased by $58.9 million, or 28%, compared to the year ended December 31, 2017. Subscription and returns revenue for the year ended December 31, 2018 increased by $54.1 million, or 27%, compared to the year ended December 31, 2017. Professional services revenue for the year ended December 31, 2018 increased by $4.8 million, or 37%, compared to the year ended December 31, 2017. Growth in total revenue was due primarily to increased demand for our products and services from both new and existing customers. Of the increase in total revenue for the year ended December 31, 2018 compared to 2017, approximately $29.6 million was attributable to existing customers, approximately $28.3 million was attributable to new customers, and approximately $1.1 million was due to interest income on funds held for customers. Total subscription and returns revenue for 2018 included $1.2 million related to our cross-border transactions technology acquired in May 2018.",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_74f503c1f6ffee117ea63bc0",
+        "version_id": "pdf_74f503c1f6ffee117ea63bc0:r1",
+        "document_name": "0e9c79da0db8e0e9f5e58f9c2bdf6bb8.pdf",
+        "chunk_id": "pdf_74f503c1f6ffee117ea63bc0:r1:build:structure-v3-cfb1af48b26c:chunk:2",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 14.731395721435547,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "18,042     \n13,217     \n4,825     \n37%\nTotal revenue\n  $\n272,098    $\n213,159    $\n58,939     \n28%\n \nTotal revenue for the year ended December 31, 2018 increased by $58.9 million, or 28%, compared to the year ended December 31, 2017. Subscription\nand returns revenue for the year ended December 31, 2018 increased by $54.1 million, or 27%, compared to the year ended December 31, 2017. Professional\nservices revenue for the year ended December 31, 2018 increased by $4.8 million, or 37%, compared to the year ended December 31, 2017. Growth in total\nrevenue was due primarily to increased demand for our products and services from both new and existing customers. Of the increase in total revenue for the year\nended December 31, 2018 compared to 2017, approximately $29.6 million was attributable to existing customers, approximately $28.3 million was attributable to\nnew customers, and approximately $1.1 million was due to interest income on funds held for customers. Total subscription and returns revenue for 2018 included\n$1.2 million related to our cross-border transactions technology acquired in May 2018.\n48\n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_74f503c1f6ffee117ea63bc0:r1",
+          "block_ids": [
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:72",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:73",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:74"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 2172,
+          "end": 3289
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 14.731395721435547,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_74f503c1f6ffee117ea63bc0",
+        "version_id": "pdf_74f503c1f6ffee117ea63bc0:r1",
+        "document_name": "0e9c79da0db8e0e9f5e58f9c2bdf6bb8.pdf",
+        "chunk_id": "pdf_74f503c1f6ffee117ea63bc0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 12.053510665893555,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": "<!-- page: 1 -->\n \nProvision for (Benefit from) Income Taxes\n \n \n \nFor the Year Ended December 31,\n  \n \n \n \n \n2019\n  \n2018\n  \n% Change\n \n \n \nAs Reported\n(ASC 606)\n  \nImpacts from\nAdoption\n  \nWithout\nAdoption\n(ASC 605)\n  \nAs Reported\n(ASC 605)\n  \nAs\nReported\n \n \nWithout\nAdoption\n \n \n \n(dollars in thousands)\n    \n \n   \n \nProvision for (benefit from) income taxes\n  $\n955    $\n—    $\n955    $\n(976)    \n-198%   \n-198%\n \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_74f503c1f6ffee117ea63bc0:r1",
+          "block_ids": [
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:0",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:1",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:2",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:3",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:4",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:5",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:6",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:7",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:8",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:9",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:10",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:11",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:12",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:13",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:14",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:15",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:16",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:17",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:18",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:19",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:20",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:21",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:22",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:23",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:24",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:25",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:26",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:27",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:28",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:29",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:30",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:31",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:32",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:33",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:34",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:35",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:36",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:37",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:38",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:39",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:40",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:41"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 419
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 12.053510665893555,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_74f503c1f6ffee117ea63bc0",
+        "version_id": "pdf_74f503c1f6ffee117ea63bc0:r1",
+        "document_name": "0e9c79da0db8e0e9f5e58f9c2bdf6bb8.pdf",
+        "chunk_id": "pdf_74f503c1f6ffee117ea63bc0:r1:build:structure-v3-cfb1af48b26c:chunk:1",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": 11.168002128601074,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content": "The provision for income taxes for the year ended December 31, 2019 was $1.0 million compared to a benefit from income taxes of $1.0 million for the\nyear ended December 31, 2018. The effective income tax rate was 1.9% for the year ended December 31, 2019 compared to a benefit of 1.3% for the year ended\nDecember 31, 2018. For the year ended December 31, 2019, the income tax expense related primarily to foreign tax jurisdictions. The income tax benefit for the\nyear ended December 31, 2018 was due primarily to the determination that indefinite lived goodwill would provide a source of income to realize indefinite lived\ndeferred tax assets, resulting in a tax benefit of $0.9 million.\nWe have assessed our ability to realize our deferred tax assets and have recorded a valuation allowance against such assets to the extent that, based on the\nweight of all available evidence, it is more likely than not that all or a portion of the deferred tax assets will not be realized. In assessing the likelihood of future\nrealization of our deferred tax assets, we placed significant weight on our history of generating U.S. tax losses, including in 2019. As a result, we have a full\nvaluation allowance against our net deferred tax assets, including net operating loss carryforwards, and tax credits related primarily to research and development.\nWe expect to maintain a full valuation allowance for the foreseeable future.\nYear Ended December 31, 2018 Compared to Year Ended December 31, 2017\nRevenue\n \n \n \nFor the Year Ended December 31,\n  \nChange\n \n \n \n2018\n  \n2017\n  \nAmount\n  \nPercentage\n \n \n \n(dollars in thousands)\n \nRevenue:\n   \n      \n        \n     \n  \nSubscription and returns\n  $\n254,056    $\n199,942    $\n54,114     \n27%\nProfessional services\n   \n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_74f503c1f6ffee117ea63bc0:r1",
+          "block_ids": [
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:42",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:43",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:44",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:45",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:46",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:47",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:48",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:49",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:50",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:51",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:52",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:53",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:54",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:55",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:56",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:57",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:58",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:59",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:60",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:61",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:62",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:63",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:64",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:65",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:66",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:67",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:68",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:69",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:70",
+            "pdf_74f503c1f6ffee117ea63bc0:r1:block:71"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 419,
+          "end": 2172
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 11.168002128601074,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "question_id": "tatqa_test_9157",
+    "question": "What is the percentage change in Roper Technologies' total long-term debt from 2018 to 2019?",
+    "gold_context": "utilization. The Company has approximately $33.7 of tax-effected state net operating loss carryforwards (without regard to federal benefit of state). Some of these net operating loss carryforwards have an indefinite carryforward period, and those that do not will begin to expire in 2020 if not utilized. The state net operating loss carryforwards are primarily related to Florida and New Jersey, but the Company has smaller net operating losses in various other states. The Company has approximately $65.6 of tax-effected foreign net operating loss carryforwards. Some of these net operating loss carryforwards have an indefinite carryforward period, and those that do not will begin to expire in 2020 if not utilized. The foreign net operating loss carryforwards increased from 2018 to 2019 primarily due to the recognition of a discrete tax benefit of $41.0 in connection with a foreign restructuring plan allowing the future realization of net operating losses. Additionally, the Company has $5.0 of U.S. federal and state research and development tax credit carryforwards (without regard to federal benefit of state). Some of these research and development credit carryforwards have an indefinite carryforward period, and those that do not will begin to expire in 2020 if not utilized.\n\nAs of December 31, 2019, the Company determined that a total valuation allowance of $36.3 was necessary to reduce U.S. federal and state deferred tax assets by $15.4 and foreign deferred tax assets by $20.9, where it was more likely than not that all of such deferred tax assets will not be realized. As of December 31, 2019, the Company believes it is more likely than not that the remaining net deferred tax assets will be realized based on the Company’s estimates of future taxable income and any applicable tax-planning strategies within various tax jurisdictions. The Company recognizes in the Consolidated Financial Statements only those tax positions determined to be “more likely than not” of being sustained upon examination based on the technical merits of the positions. A reconciliation of the beginning and ending amount of unrecognized tax benefits is as follows:\n\n|                        | 2019     | 2018      | 2017     |\n|------------------------|----------|-----------|----------|\n| Beginning balance      |          | $63.6     | $52.2    | $38.7    |\n| Additions for tax positions of prior periods | 2.9      | 2.4       | 2.8      |\n| Additions for tax positions of the current period | 4.2      | 6.9       | 4.2      |\n| Additions due to acquisitions | 1.9      | 4.4       |          |\n| Reductions for tax positions of prior periods | (0.3)    | (0.4)     | (1.1)    |\n| Reductions attributable to settlements with taxing authorities | —       | —         | (1.5)    |\n| Reductions attributable to lapses of applicable statute of limitations | (2.5)    | (1.9)     | (2.8)    |\n| Ending balance         |          | $69.8     | $63.6    | $52.2    |\n\nThe total amount of unrecognized tax benefits that, if recognized, would impact the effective tax rate is $68.2. Interest and penalties related to unrecognized tax benefits were $1.8 in 2019 and are classified as a component of income tax expense. Accrued interest and penalties were $8.7 at December 31, 2019 and $6.9 at December 31, 2018. During the next twelve months, it is reasonably possible that the unrecognized tax benefits may decrease by a net $6.3, mainly due to anticipated statute of limitations lapses in various jurisdictions. The Company and its subsidiaries are subject to examinations for U.S. federal income tax as well as income tax in various state, city and foreign jurisdictions. The Company’s federal income tax returns for 2016 through the current period remain open to examination and the relevant state, city and foreign statutes vary. The Company does not expect the assessment of any significant additional tax in excess of amounts reserved.\n\nThe Tax Act was signed into U.S. law on December 22, 2017. The Tax Act contains provisions which impact the Company’s income taxes including a reduction in the U.S. federal corporate income tax rate from 35% to 21%, a one-time deemed mandatory repatriation tax imposed on all undistributed foreign earnings, and the introduction of a modified territorial taxation system. The SEC released Staff Accounting Bulletin No. 118 (“SAB 118”) on December 22, 2017 to provide guidance where the accounting under ASC 740, “Income Taxes,” is incomplete for certain income tax effects of the Tax Act upon issuance of financial statements for the reporting period in which the Tax Act was enacted. SAB 118 provides that if a company could determine a reasonable estimate, that estimate should be reported as a provisional amount and adjusted during a measurement period. If a company is unable to determine a reasonable estimate, no related provisional amounts would be recorded until a reasonable estimate can be determined, within the measurement period. The measurement period extends until all necessary information has been obtained, prepared, and analyzed, but no longer than 12-months from the date of enactment of the Tax Act.\n\nThe Company intends to distribute all historical unremitting foreign earnings up to the amount of excess foreign cash, as well as all future foreign earnings that can be repatriated without incremental U.S. federal tax cost. Any remaining outside basis differences relating to the Company’s investments in foreign subsidiaries are no longer expected to be material and will be indefinitely reinvested.\n\n(8) LONG-TERM DEBT\n\nOn September 23, 2016, Roper entered into a five-year $2.5 billion unsecured credit facility, as amended December 2, 2016, (the “2016 Facility”) with JPMorgan Chase Bank, N.A., as administrative agent, and a syndicate of lenders, which replaced its previous $1.85 billion unsecured credit facility dated as of July 27, 2012, as amended as of October 28, 2015 (the “2012 Facility”). The 2016 Facility comprises a five year $2.5 billion revolving credit facility, which includes availability of up to $150.0 for letters of credit. Roper may also, subject to compliance with specified conditions, request term loans or additional revolving credit commitments in an aggregate amount not to exceed $500.0. At December 31, 2019, there were $0.0 of outstanding borrowings under the 2016 Facility.\nThe 2016 Facility contains affirmative and negative covenants which, among other things, limit Roper’s ability to incur new debt, enter into certain mergers and acquisitions, sell assets and grant liens, make restricted payments (including the payment of dividends on our common stock) and capital expenditures, or change its line of business. Roper is also subject to financial covenants which require the Company to limit its consolidated total leverage ratio to and maintain a consolidated interest coverage ratio. The most restrictive covenant is the consolidated total leverage ratio which is limited to 3.50 to 1.\n\nThe 2016 Facility provides that the consolidated total leverage ratio may be increased, no more than twice during the term of the 2016 Facility, to 4.00 to 1 for a consecutive four quarter fiscal period per increase (or, for any portion of such four quarter fiscal period in which the maximum would be 4.25 to 1). In conjunction with the Deltek acquisition in December of 2016, we increased the maximum consolidated total leverage ratio covenant to 4.25 to 1 through June 30, 2017 and 4.00 to 1 through December 31, 2017.\n\nThe Company was in compliance with its debt covenants throughout the years ended December 31, 2019 and 2018.\n\nOn August 26, 2019, the Company completed a public offering of $500.0 aggregate principal amount of 2.35% senior unsecured notes due September 15, 2024 and $700.0 aggregate principal amount of 2.95% senior unsecured notes due September 15, 2029 (the “2019 Offering”). The notes bear interest at a fixed rate and are payable semi-annually in arrears on March 15 and September 15 of each year, beginning March 15, 2020. The net proceeds were used to fund a portion of the purchase of iPipeline Holdings, Inc.\n\nOn August 28, 2018, the Company completed a public offering of $700.0 aggregate principal amount of 3.65% senior unsecured notes due September 15, 2023 and $800.0 aggregate principal amount of 4.20% senior unsecured notes due September 15, 2028 (the “2018 Offering”). The notes bear interest at a fixed rate and are payable semi-annually in arrears on March 15 and September 15 of each year, beginning March 15, 2019.\n\nOn December 19, 2016, the Company completed a public offering of $500.0 aggregate principal amount of 2.80% senior unsecured notes due December 15, 2021 and $700.0 aggregate principal amount of 3.80% senior unsecured notes due December 15, 2026. The notes bear interest at a fixed rate and are payable semi-annually in arrears on June 15 and December 15 of each year, beginning June 15, 2017.\n\nOn December 7, 2015, the Company completed a public offering of $600.0 aggregate principal amount of 3.00% senior unsecured notes due December 15, 2020 and $300.0 aggregate principal amount of 3.85% senior unsecured notes due December 15, 2025. The notes bear interest at a fixed rate and are payable semi-annually in arrears on June 15 and December 15 of each year, beginning June 15, 2016.\n\nOn November 21, 2012, the Company completed a public offering of $500.0 aggregate principal amount of 3.125% senior unsecured notes due November 15, 2022. The notes bear interest at a fixed rate and are payable semi-annually in arrears on May 15 and November 15 of each year, beginning May 15, 2013.\n\nIn September 2009, the Company completed a public offering of $500.0 aggregate principal amount of 6.25% senior unsecured notes due September 1, 2019 (the “2019 Notes”). During 2018 a portion of the net proceeds of the 2018 Offering were used to redeem all of the $500.0 of outstanding 2019 Notes. The Company incurred a debt extinguishment charge in connection with the redemption of the 2019 Notes of $15.9, which represents the make-whole premium and unamortized deferred financing costs.\n\nRoper may redeem some or all of these notes at any time or from time to time, at 100% of their principal amount, plus a make-whole premium based on a spread to U.S. Treasury securities.\n\nThe Company’s senior notes are unsecured senior obligations of the Company and rank equally in right of payment with all of Roper’s existing and future secured and unsecured indebtedness. The notes are effectively subordinated to any of its existing and future secured indebtedness to the extent of the value of the collateral securing such indebtedness. The notes are not guaranteed by any of Roper’s subsidiaries and are effectively subordinated to all existing and future indebtedness and other liabilities of Roper’s subsidiaries.\n\nTotal debt at December 31 consisted of the following:\n\n| Debt                                      | 2019 ($mm) | 2018 ($mm) |\n|-------------------------------------------|------------|------------|\n| 2016 Facility                             | —          | 865.0      |\n| $600 3.000% senior notes due 2020          | $600.0     | 600.0      |\n| $500 2.800% senior notes due 2021          | $500.0     | 500.0      |\n| $500 3.125% senior notes due 2022          | $500.0     | 500.0      |\n| $700 3.650% senior notes due 2023          | /130.0     | 700.0      |\n| $500 2.350% senior notes due 2024          | —          | /540.0     |\n| $300 3.850% senior notes due 2025          | $300.0     |            |\n| $700 3.800% senior notes due 2026          | $700.0     |            |\n| $800 4.200% senior notes due 2028          | $800.0     | 800.0      |\n| $700 2.950% senior notes due 2029          | $700.0     |            |\n| Other                                     | 7.7        | 3.0        |\n| Total debt                                | $4,673.1   | $4,940.2   |\n| Less current portion                      | $602.2     | 1.5        |",
+    "status": "pending_human_review_not_gold",
+    "candidates": [
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_23df9d1dfbb3c2f02cec64ee",
+        "version_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1",
+        "document_name": "1291daaa275e574a7fd08db3068b388a.pdf",
+        "chunk_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1:build:structure-v3-cfb1af48b26c:chunk:4",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": 29.278099060058594,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content": "The Company intends to distribute all historical unremitted foreign earnings up to the amount of excess foreign cash, as well as all \nfuture foreign earnings that can be repatriated without incremental U.S. federal tax cost. Any remaining outside basis differences \nrelating to the Company’s investments in foreign subsidiaries are no longer expected to be material and will be indeﬁnitely reinvested.\n(8)  LONG-TERM DEBT\nOn September 23, 2016, Roper entered into a ﬁve-year $2.5 billion unsecured credit facility, as amended December 2, 2016, (the \n“2016 Facility”) with JPMorgan Chase Bank, N.A., as administrative agent, and a syndicate of lenders, which replaced its previous\n$1.85 billion unsecured credit facility dated as of July 27, 2012, as amended as of October 28, 2015 (the “2012 Facility”). The 2016 \nFacility comprises a ﬁve year $2.5 billion revolving credit facility, which includes availability of up to $150.0 for letters of credit. Roper \nmay also, subject to compliance with speciﬁed conditions, request term loans or additional revolving credit commitments in an \naggregate amount not to exceed $500.0. At December 31, 2019, there were $0.0 of outstanding borrowings under the 2016 Facility.\n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1",
+          "block_ids": [
+            "pdf_23df9d1dfbb3c2f02cec64ee:r1:block:1"
+          ],
+          "page_numbers": [
+            1
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 4918,
+          "end": 6131
+        },
+        "page_numbers": [
+          1
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 29.278099060058594,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_23df9d1dfbb3c2f02cec64ee",
+        "version_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1",
+        "document_name": "1291daaa275e574a7fd08db3068b388a.pdf",
+        "chunk_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1:build:structure-v3-cfb1af48b26c:chunk:6",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": 23.03716468811035,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content": "ROPER TECHNOLOGIES   •   2019 ANNUAL REPORT\n46\nThe 2016 Facility contains afﬁrmative and negative covenants which, among other things, limit Roper’s ability to incur new debt, \nenter into certain mergers and acquisitions, sell assets and grant liens, make restricted payments (including the payment of divi-\ndends on our common stock) and capital expenditures, or change its line of business. Roper is also subject to ﬁnancial covenants \nwhich require the Company to limit its consolidated total leverage ratio and to maintain a consolidated interest coverage ratio. The \nmost restrictive covenant is the consolidated total leverage ratio which is limited to 3.50 to 1.\nThe 2016 Facility provides that the consolidated total leverage ratio may be increased, no more than twice during the term of the \n2016 Facility, to 4.00 to 1 for a consecutive four quarter ﬁscal period per increase (or, for any portion of such four quarter ﬁscal \nperiod in which the maximum would be 4.25 to 1). In conjunction with the Deltek acquisition in December of 2016, we increased the \nmaximum consolidated total leverage ratio covenant to 4.25 to 1 through June 30, 2017 and 4.00 to 1 through December 31, 2017.\nThe Company was in compliance with its debt covenants throughout the years ended December 31, 2019 and 2018.\nOn August 26, 2019, the Company completed a public offering of $500.0 aggregate principal amount of 2.35% senior unsecured\nnotes due September 15, 2024 and $700.0 aggregate principal amount of 2.95% senior unsecured notes due September 15, 2029 \n(the “2019 Offering”). The notes bear interest at a ﬁxed rate and are payable semi-annually in arrears on March 15 and September \n15 of each year, beginning March 15, 2020. ",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1",
+          "block_ids": [
+            "pdf_23df9d1dfbb3c2f02cec64ee:r1:block:5"
+          ],
+          "page_numbers": [
+            2
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 6150,
+          "end": 7871
+        },
+        "page_numbers": [
+          2
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 23.03716468811035,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      },
+      {
+        "knowledge_base_id": "benchmark",
+        "document_id": "pdf_23df9d1dfbb3c2f02cec64ee",
+        "version_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1",
+        "document_name": "1291daaa275e574a7fd08db3068b388a.pdf",
+        "chunk_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1:build:structure-v3-cfb1af48b26c:chunk:9",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": 20.36852264404297,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content": "500.0\n500.0\n$700   3.650% senior notes due 2023\n700.0\n700.0\n$500   2.350% senior notes due 2024\n500.0\n—\n$300   3.850% senior notes due 2025\n300.0\n300.0\n$700   3.800% senior notes due 2026\n700.0\n700.0\n$800   4.200% senior notes due 2028\n800.0\n800.0\n$700   2.950% senior notes due 2029\n700.0\n—\nOther\n7.7\n3.0\nLess unamortized debt issuance costs\n(32.4)\n(26.3)\nTotal debt\n5,275.3\n4,941.7\nLess current portion\n602.2\n1.5\nLong-term debt\n$ 4,673.1\n$ 4,940.2\n",
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "pdf_23df9d1dfbb3c2f02cec64ee:r1",
+          "block_ids": [
+            "pdf_23df9d1dfbb3c2f02cec64ee:r1:block:5"
+          ],
+          "page_numbers": [
+            2
+          ],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 10925,
+          "end": 11375
+        },
+        "page_numbers": [
+          2
+        ],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "19591a9178294cc6922205df67effc91",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 20.36852264404297,
+            "generation": "19591a9178294cc6922205df67effc91"
+          }
+        ]
+      }
+    ]
+  }
+]
