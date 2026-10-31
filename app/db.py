@@ -140,10 +140,13 @@ class SourceRepository:
         return self.get(values["source_id"])
 
     def update(self, source_id: str, **values: Any) -> Source:
+        from app.search.snapshot import metadata
         values = self._serialize(values)
         values["updated_at"] = datetime.now(timezone.utc).isoformat()
         assignments = ", ".join(f"{name} = ?" for name in values)
         with self.connect() as connection:
+            connection.execute('BEGIN IMMEDIATE')
+            before = connection.execute('SELECT * FROM sources WHERE source_id=?', (source_id,)).fetchone()
             connection.execute(
                 f"UPDATE sources SET {assignments} WHERE source_id = ?",
                 (*values.values(), source_id),
@@ -152,7 +155,9 @@ class SourceRepository:
                 row = connection.execute('SELECT * FROM sources WHERE source_id=?', (source_id,)).fetchone()
                 if row:
                     self.documents.sync_mapping(connection, self._source(row))
-            self.documents.mark_search_dirty(connection,source_id)
+            after = connection.execute('SELECT * FROM sources WHERE source_id=?', (source_id,)).fetchone()
+            if before and after and metadata(before) != metadata(after):
+                self.documents.mark_search_dirty(connection,source_id)
         return self.get(source_id)
 
     def versions(self, source_id: str) -> list[dict[str, Any]]:

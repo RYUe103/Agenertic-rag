@@ -635,7 +635,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         return value
     app.include_router(document_router(authorize_document_read, require_kb_write))
     from app.search.api import search_router
-    app.include_router(search_router(authorize_document_read, require_kb_write))
+    app.include_router(search_router(authorize_document_read, require_kb_write, lambda request: user_id(current_user(request))))
 
     @app.get("/api/agents", response_model=list[AgentSummary])
     def list_agents(request: Request) -> list[AgentSummary]:

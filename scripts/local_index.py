@@ -11,8 +11,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--database',type=Path,required=True)
     parser.add_argument('--knowledge-base',required=True)
-    parser.add_argument('action',choices=['sync','rebuild','status','bm25','exact'])
+    parser.add_argument('action',choices=['sync','rebuild','status','bm25','exact','cleanup'])
     parser.add_argument('--query',default='')
+    parser.add_argument('--continuation')
     args = parser.parse_args()
     if not args.database.is_file():
         parser.error('Database does not exist')
@@ -23,10 +24,12 @@ def main():
             raise RuntimeError(f'Backfill failed for {len(failures)} documents')
         result = IndexManager(repo).sync(full=args.action=='rebuild')
     elif args.action == 'status':
-        result = IndexManager(repo).state()
+        result = IndexManager(repo).status()
+    elif args.action == 'cleanup':
+        result = IndexManager(repo).cleanup()
     else:
-        service = LocalSearchService(repo,lambda kb,doc: repo.document(doc))
-        result = service.search(args.query) if args.action=='bm25' else service.exact(args.query)
+        service = LocalSearchService(repo,lambda kb,doc: repo.document(doc), 'local-operator')
+        result = service.search(args.query) if args.action=='bm25' else service.exact(args.query, continuation=args.continuation)
     print(json.dumps(result,ensure_ascii=False,indent=2))
 
 

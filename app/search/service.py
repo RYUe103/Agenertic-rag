@@ -2,12 +2,17 @@
 from .index_manager import IndexManager
 from .exact_search import exact_search
 from .tokenization import positions
+from .snapshot import snapshot
+from .exact_search import ContinuationInvalid
+import secrets
+import time
 
 
 class LocalSearchService:
-    def __init__(self, repository, authorize):
+    def __init__(self, repository, authorize, principal=None):
         self.repo = repository
         self.authorize = authorize
+        self.principal = principal or secrets.token_hex(24)
         manager = getattr(repository,'_local_index_manager',None)
         if manager is None:
             repository._local_index_manager = manager = IndexManager(repository)
@@ -47,7 +52,11 @@ class LocalSearchService:
     def search(self, query, top_k=10, document_ids=None, filters=None):
         if not query.strip() or len(query)>512:
             raise ValueError('Query must contain 1..512 characters')
-        adapter,manifest,generation = self.manager.open_current()
+        with self.manager.reader() as opened:
+            return self._search(opened, query, top_k, document_ids, filters)
+
+    def _search(self, opened, query, top_k, document_ids, filters):
+        adapter,manifest,generation = opened
         scope = self.scope(manifest,document_ids,filters)
         hits = adapter.search(query,scope,min(max(top_k,1),100),filters or {})
         results = []
@@ -78,27 +87,56 @@ class LocalSearchService:
                 'matches':positions(chunk['content'],query),
                 'match_coordinate':'chunk_projection' if chunk.get('content_is_projection') else 'chunk_text',
                 'builder_version':chunk['builder_version']})
-        return {'generation_id':generation,'results':results,'authorized_documents':len(scope)}
+        latest, dirty = self.manager._snapshot()
+        for hit in results:
+            if hit['document_id'] not in latest['documents']:
+                raise RuntimeError('Document removed during search; retry')
+            self.authorize(self.repo.knowledge_base_id, hit['document_id'])
+        return {'generation_id':generation,'results':results,'authorized_documents':len(scope),
+                'stale':manifest != latest['documents'] or bool(dirty)}
 
-    def exact(self, query, document_ids=None, versions=None, **kwargs):
-        # Exact scan does not need a healthy Tantivy index.
-        manifest = {}
-        for doc in self.repo.index_manifest():
-            if doc['deleted'] or not doc['current_version_id']:
-                continue
-            if document_ids is not None and doc['id'] not in document_ids:
+    def _exact_scope(self, document_ids, versions, filters):
+        if set(filters or {})-{'document_type', 'metadata'}:
+            raise ValueError('Exact filters support document_type and metadata')
+        with self.repo.sources.connect() as conn:
+            conn.execute('BEGIN')
+            manifest = snapshot(conn, self.repo.knowledge_base_id, bounded_scope=True, document_ids=document_ids)['documents']
+        wanted = set(document_ids) if document_ids is not None else None
+        allowed = {}
+        for doc, spec in manifest.items():
+            if wanted is not None and doc not in wanted:
                 continue
             try:
-                self.authorize(self.repo.knowledge_base_id,doc['id'])
-                vid = self.repo.resolve_version_id(doc['id'],(versions or {}).get(doc['id']))
+                self.authorize(self.repo.knowledge_base_id, doc)
             except (PermissionError,KeyError):
                 continue
-            builder = self.repo.selected_builder(vid)
-            manifest[doc['id']] = dict(version_id=vid,builder_version=builder,metadata={})
-            if len(manifest)>100:
-                raise ValueError('Exact scan requires a scope of at most 100 documents')
-        result = exact_search(self.repo,manifest,query,**kwargs)
+            meta = spec['metadata']
+            if filters and filters.get('document_type') and meta['document_type'] != filters['document_type']:
+                continue
+            if any(meta.get(k) != v for k, v in (filters or {}).get('metadata', {}).items()):
+                continue
+            if versions and doc in versions:
+                vid = self.repo.resolve_version_id(doc, versions[doc])
+                spec = {**spec, 'version_id':vid, 'builder_version':self.repo.selected_builder(vid)}
+            allowed[doc] = spec
+        return allowed
+
+    def exact(self, query, document_ids=None, versions=None, filters=None, **kwargs):
+        # Scope preparation is reported separately from the bounded scan budget.
+        if not isinstance((filters or {}).get('metadata', {}), dict):
+            raise ValueError('Metadata filters must be an object')
+        started = time.monotonic()
+        manifest = self._exact_scope(document_ids, versions, filters)
+        prepared = time.monotonic()-started
+        result = exact_search(self.repo, manifest, query, principal=self.principal,
+            binding_options=dict(document_ids=sorted(set(document_ids)) if document_ids is not None else None,
+                                 versions=versions or {}, filters=filters or {}), **kwargs)
+        # Catch concurrent mutation/revocation, including changes to non-hit scope.
+        if self._exact_scope(document_ids, versions, filters) != manifest:
+            raise ContinuationInvalid('Scope or permissions changed during scan; restart search')
         for hit in result['results']:
             self.authorize(self.repo.knowledge_base_id,hit['document_id'])
             self.repo.document(hit['document_id'])
+        result['scope_seconds'] = prepared
+        result['elapsed_seconds'] = time.monotonic()-started
         return result

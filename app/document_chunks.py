@@ -19,6 +19,8 @@ CREATE TABLE IF NOT EXISTS node_locations(version_id TEXT,node_id TEXT,kind TEXT
  PRIMARY KEY(node_id,kind,value));
 CREATE INDEX IF NOT EXISTS node_location_lookup ON node_locations(version_id,kind,value,node_id);
 CREATE TABLE IF NOT EXISTS search_changes(document_id TEXT PRIMARY KEY,revision INTEGER NOT NULL DEFAULT 1);
+CREATE TABLE IF NOT EXISTS search_revisions(document_id TEXT PRIMARY KEY,revision INTEGER NOT NULL);
+INSERT OR IGNORE INTO search_revisions SELECT document_id,revision FROM search_changes;
 CREATE TABLE IF NOT EXISTS document_deletions(document_id TEXT PRIMARY KEY,source_json TEXT NOT NULL,status TEXT NOT NULL);
 '''
 
@@ -39,8 +41,10 @@ class ChunkBuildRepository:
 
     @staticmethod
     def mark_search_dirty(conn, document_id):
-        conn.execute('''INSERT INTO search_changes(document_id) VALUES(?)
+        conn.execute('''INSERT INTO search_revisions VALUES(?,1)
             ON CONFLICT(document_id) DO UPDATE SET revision=revision+1''', (document_id,))
+        conn.execute('''INSERT OR REPLACE INTO search_changes
+            SELECT document_id,revision FROM search_revisions WHERE document_id=?''', (document_id,))
 
     def rebuild_chunks(self, document_id, version_id=None, config=ChunkConfig(), activate=True):
         with document_lock(self.sources.db_path.parent/'.document-operations.lock'):

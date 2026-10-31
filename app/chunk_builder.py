@@ -9,12 +9,12 @@ from dataclasses import asdict, dataclass
 class ChunkConfig:
     size: int = 1800
     overlap: int = 180
-    algorithm: str = 'structure-v2'
+    algorithm: str = 'structure-v3'
 
     def __post_init__(self):
         if not 200 <= self.size <= 16000 or not 0 <= self.overlap <= self.size // 3:
             raise ValueError('size must be 200..16000; overlap must be <= size/3')
-        if self.algorithm != 'structure-v2':
+        if self.algorithm not in {'structure-v2', 'structure-v3'}:
             raise ValueError('Unsupported builder algorithm')
 
     @property
@@ -98,6 +98,11 @@ def build_chunks(markdown, version_id, blocks, sections, tables, config=ChunkCon
                 while right+1 < len(boundaries) and boundaries[right+1]-boundaries[left] <= config.size:
                     right += 1
                 emit(boundaries[left], boundaries[right], [block])
+                # v2 kept rewinding overlap after already reaching the block end,
+                # emitting many redundant shrinking suffix chunks. Keep v2
+                # reproducible; new builds stop at the final complete window.
+                if config.algorithm == 'structure-v3' and right == len(boundaries)-1:
+                    break
                 new_left = right
                 while new_left-1 > left and boundaries[right]-boundaries[new_left-1] <= config.overlap:
                     new_left -= 1
