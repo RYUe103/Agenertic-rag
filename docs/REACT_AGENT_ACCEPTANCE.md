@@ -1,5 +1,7 @@
 # 第四阶段 ReAct Agent 验收
 
+> 2026-11-01 引用补强已完成，最新结果见 `REACT_CITATION_HARDENING.md`。本文以下 426 项和原真实模型结果保留为历史基线；新的短 Source、结构化 claims、一次修复、显示状态和测试结果以补强报告为准。第五阶段仍未开始。
+
 日期：2026-11-01。仓库 RYUe103/Agenertic-rag，分支 `codex/v2-document-repository`，基线 `9f0c479`。代码提交 **`3153d068f1bda47bc48dd4974c609cb645c80d7d`**，已成功推送同名远端分支。本文和完整测试输出作为后续报告提交推送；报告提交自身 SHA 由 git log 查看，避免循环哈希。main 未改。
 
 ## 结论与范围

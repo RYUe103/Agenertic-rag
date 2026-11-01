@@ -1,11 +1,12 @@
 # ReAct Agent V2
 
-2026-11-01。第四阶段，基线 `9f0c479`。默认仍为 legacy；没有生产文档迁移、重新解析或远端上传。
+2026-11-01。第四阶段，初始基线 `9f0c479`，引用补强基线 `b76e95c`。默认仍为 legacy；没有生产文档迁移、重新解析或远端上传。下文初始设计后的“引用补强协议”更新了引用格式、消息传输、预算和前端行为。
 
 ## 执行图与工具
 
 ```text
 START → agent ──无工具/预算终止──→ validate → END
+                                  └→ repair（最多一次）→ validate
            │
            └→ approval → tools (官方 ToolNode) → observe → agent
                  └ interrupt → SQLite checkpoint → Command(resume=...) → 原暂停节点
@@ -78,3 +79,19 @@ REST 直接 calculate 没有服务器来源上下文时拒绝，不信任客户�
 原 ask 接口可传 runtime_mode=react_v2 或设置 Agent.runtime_mode，响应转成原 AskResponse 并增加 thread_id/runtime_mode。默认 legacy；显式 legacy 回退。独立 react_tools 白名单避免将旧写工具自动授权，旧 allowed_tools 继续限制 legacy。控制库只新增兼容字段，本次未对正式 control.db 启动迁移。
 
 前端实际为 React/Vite（不是 Docusaurus）。只改问答与 Agent 设置页：模式、SSE、取消、既有管理员页面审批后恢复、版本内容链接。Supervisor 保持 legacy，react_v2 Supervisor 配置拒绝，含新模式成员的旧 Supervisor 请求拒绝隐式回退。integration 入口仍 legacy，未做第五阶段迁移。新运行状态走 Thread API，审计 channel=agent-react-v2；旧 AgentRuns 列表尚未合并新 Thread 记录。
+
+## 引用补强协议（2026-11-01，替代上文初始引用约定）
+
+服务端保留 ev_<stable_hash> 身份，observe 串行按工具顺序分配本轮 S1/S2，精确身份去重、增量编号；sources/visible_evidence 进入官方 checkpoint，每个新 Run 清空。旧 ID 只保留可信本轮兼容路径和 calculate 参数用途。
+
+模型优先输出 `{"claims":[{"text":"结论","source_ids":["S1"]}]}`，兼容 `[S1]`，不接受模型 `[1]` 作为授权。服务器解析、映射并重新 Registry.load，生成编号正文 `[1]`、claims 与 citation_metadata。不存在编号、不可见证据、撤权/删除/换版、locator 改变均拒绝；原有页码、章节/表编号和 URL 检查保留。来源链接只由服务器按真实版本生成。普通问候沿用无引用例外；用户纯数字计算由服务器渲染。citation_validation 不证明语义正确，answer_correctness 始终独立。
+
+工具回执和 ToolMessage.artifact 保留内部 _evidence/_scope_checks/trace，模型 content 仅含有界片段、来源编号、状态、导航和计算结果；Chat Completions/Responses 转换器均不传 artifact。输出预算删减展示时保留内部记录，并记录可见数量；不可见的证据不得直接引用。find_document 仍只提供文档候选，不制造正文证据。
+
+缺引用、未知编号或结构格式失败且存在当前可信证据时，validate 先 checkpoint 修复决策，再进入一次 repair。仅提供原问题、草稿、重新验证的片段与 Source；不重新执行工具，不机械追加来源。repair 复用 calls 回执，崩溃留下 running 记录时拒绝重发。修复后再次严格验证；撤权/删除/过期不进入修复。未验证草稿从会话消息中移除，仅在私有修复状态中暂存，结束清空，避免污染下一轮历史。旧 react_v2.1 checkpoint 的预算缺省字段和内部 ToolMessage 有按读取兼容路径，不迁移生产库。
+
+新增 `agent_citation_repair=true`、`agent_total_tokens=120000`、`agent_completion_tokens=2000`。首次生成和修复共用字符、总耗时、迭代和 token 预算：UTF-8 wire 内容与工具 schema 字节数作为保守输入估计，预留 max_tokens；有 provider usage 时累计真实计量，缺失时累计估计。不是特定模型 tokenizer 的精确预估；超时后远端实际计费可能无法获知。
+
+新增诊断事件只含计数/受控原因码：tool_candidate_count、registered_evidence_count、registration_rejections、model_visible_evidence_count、final_citation_count、citation_validation_reason、output_truncated、context_chars、prompt_tokens/completion_tokens，以及修复是否尝试/成功。原运行 completed 语义不变；AskResponse 另有 citation_validation、answer_validation、answer_displayable、trusted_evidence_count。answer_displayable=false 时 answer 只保留安全拒答提示，前端可显示提示，不展示未验证草稿。
+
+来源列表和正文编号同序；悬停显示原文/页码，点击跳到对应来源卡片，再访问授权版本链接。ReAct Markdown 删除模型链接和图片，只给服务器认可的编号建立锚点；DOMPurify/React 安全渲染和 legacy 行为保留。完整结果见 `REACT_CITATION_HARDENING.md`。
