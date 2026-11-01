@@ -1,0 +1,99 @@
+{
+  "question_id": "rgb_zh_0047",
+  "description": "Unique persisted message versions across ALL checkpoints, including pre-validation drafts and tool artifacts. First-seen chronological order; these are runtime records, not HTTP packet captures. Generated safe final messages may also be present.",
+  "checkpoints": [
+    {
+      "id": "1f1d605a-d961-6d7a-bfff-6b9a8f2ad4ed",
+      "timestamp": "2026-11-01T15:05:30.067284+00:00",
+      "step": -1,
+      "new_message_hashes": []
+    },
+    {
+      "id": "1f1d605a-d963-6abc-8000-c313d9990b7e",
+      "timestamp": "2026-11-01T15:05:30.068030+00:00",
+      "step": 0,
+      "new_message_hashes": [
+        "c2ecc78f6543e19f1570b1ff02711804880b848341aa5d1e9154339b41779286"
+      ]
+    },
+    {
+      "id": "1f1d605a-e67b-63c6-8001-6dcca4f3281f",
+      "timestamp": "2026-11-01T15:05:31.440802+00:00",
+      "step": 1,
+      "new_message_hashes": [
+        "1678b3f1e349eb2adc0e1ffe07ea7a95cf444d297b18d3979e4bbcc4cb5fa8fc"
+      ]
+    },
+    {
+      "id": "1f1d605a-e681-60dc-8002-734ad42097ea",
+      "timestamp": "2026-11-01T15:05:31.443167+00:00",
+      "step": 2,
+      "new_message_hashes": [
+        "49ecf0743d14b307fb864908084ea7c99944c1187ac7ea767cce46f692dda298"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "record_sha256": "c2ecc78f6543e19f1570b1ff02711804880b848341aa5d1e9154339b41779286",
+      "first_checkpoint": "1f1d605a-d963-6abc-8000-c313d9990b7e",
+      "message": {
+        "type": "human",
+        "data": {
+          "content": "《小时代》的作者是谁？",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "df5092d2-fa37-4302-ad0f-1be94bbbe416"
+        }
+      }
+    },
+    {
+      "record_sha256": "1678b3f1e349eb2adc0e1ffe07ea7a95cf444d297b18d3979e4bbcc4cb5fa8fc",
+      "first_checkpoint": "1f1d605a-e67b-63c6-8001-6dcca4f3281f",
+      "message": {
+        "type": "ai",
+        "data": {
+          "content": "《小时代》的作者是郭敬明。",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "model": "qwen-plus",
+            "usage": {
+              "total_tokens": 8449,
+              "completion_tokens": 11,
+              "prompt_tokens": 8438,
+              "prompt_tokens_details": {
+                "cached_tokens": 8384
+              }
+            }
+          },
+          "type": "ai",
+          "name": null,
+          "id": "2fe3bd64-a5c1-4580-8a32-7d99a142a238",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": null
+        }
+      }
+    },
+    {
+      "record_sha256": "49ecf0743d14b307fb864908084ea7c99944c1187ac7ea767cce46f692dda298",
+      "first_checkpoint": "1f1d605a-e681-60dc-8002-734ad42097ea",
+      "message": {
+        "type": "ai",
+        "data": {
+          "content": "证据不足或引用未通过复核，无法给出可靠结论。",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "ai",
+          "name": null,
+          "id": "2fe3bd64-a5c1-4580-8a32-7d99a142a238",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": null
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,2958 @@
+{
+  "question_id": "rgb_zh_0004",
+  "result": {
+    "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+    "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:1",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:2",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:3",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "context_chars": 1187,
+        "prompt_tokens": 8440,
+        "completion_tokens": 79,
+        "total_tokens": 8519,
+        "context_compaction_count": 0,
+        "context_chars_before": 1187,
+        "context_chars_after": 1187,
+        "estimated_input_tokens": 12118,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1472,
+        "remaining_run_tokens": 111481,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8440,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3678
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:4",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1187
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:5",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "tool_call_id": "call_d127eb9fdcc24412b6b774",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:6",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "tool_call_id": "call_d127eb9fdcc24412b6b774",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:7",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_d127eb9fdcc24412b6b774",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 10,
+        "output_chars_before": 74664,
+        "output_chars_after": 13976,
+        "removed_chars": 60688,
+        "document_metadata_chars": 22745,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 19837,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:8",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:9",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:10",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "context_chars": 15219,
+        "prompt_tokens": 15168,
+        "completion_tokens": 213,
+        "total_tokens": 15381,
+        "context_compaction_count": 0,
+        "context_chars_before": 15219,
+        "context_chars_after": 15219,
+        "estimated_input_tokens": 21380,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 8532,
+        "evidence_tokens": 3154,
+        "history_tokens": 2202,
+        "remaining_run_tokens": 96100,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15168,
+        "usage_source": "provider",
+        "estimation_error_tokens": -6212
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:11",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "model_visible_evidence_count": 10,
+        "context_chars": 15219
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:12",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "citation_validation_reason": [
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:13",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "context_chars": 2651,
+        "prompt_tokens": 1699,
+        "completion_tokens": 36,
+        "total_tokens": 1735,
+        "context_compaction_count": 0,
+        "context_chars_before": 2651,
+        "context_chars_after": 2651,
+        "estimated_input_tokens": 3959,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 3959,
+        "remaining_run_tokens": 94365,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 1699,
+        "usage_source": "provider",
+        "estimation_error_tokens": -2260
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:14",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:15",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "delta": "首趟RCEP班列的起点是南宁国际铁路港 [1] [2] [3] [4]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:16",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73",
+        "final_citation_count": 4,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_28e1234af5564d328df0f621ffe9d11f:80b622ae7e9c439c87cbcff59e56e5b4:17",
+        "run_id": "run_28e1234af5564d328df0f621ffe9d11f",
+        "thread_id": "thread_b6e264c55f8248869f6351016c34aa73"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 25307,
+      "completion_tokens": 328,
+      "total_tokens": 25635
+    },
+    "elapsed_seconds": 9.966001958004199,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 10,
+      "output_truncated": true,
+      "context_chars": 15219,
+      "prompt_tokens": 25307,
+      "completion_tokens": 328,
+      "total_tokens": 25635,
+      "context_compaction_count": 0,
+      "context_chars_before": 2651,
+      "context_chars_after": 2651,
+      "estimated_input_tokens": 3959,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 3959,
+      "remaining_run_tokens": 94365,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 1699,
+      "usage_source": "provider",
+      "estimation_error_tokens": -2260,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_d127eb9fdcc24412b6b774",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 10,
+          "output_chars_before": 74664,
+          "output_chars_after": 13976,
+          "removed_chars": 60688,
+          "document_metadata_chars": 22745,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 19837,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 2651,
+      "repair_visible_evidence_count": 10,
+      "final_citation_count": 4,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "首趟RCEP班列的起点是南宁国际铁路港 [1] [2] [3] [4]",
+      "citations": {
+        "ev_3169f137e81a148b": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_dc3e4e8909eae7688aea133c",
+          "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+          "document_name": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+          "chunk_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "Sep 19, 2022 ... 我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发冯登海 ... 平陆运河起点位于南宁横州市西津库区平塘江口(央广网发横州市融媒体 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+            "block_ids": [
+              "rgb_doc_dc3e4e8909eae7688aea133c:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 96
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 26.813953399658203,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_67dc8caae948cc7d": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_e49bff663ae9685967907486",
+          "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+          "document_name": "rgb_doc_e49bff663ae9685967907486.txt",
+          "chunk_id": "rgb_doc_e49bff663ae9685967907486:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "RCEP生效后首趟国际货运班列从广西南宁启程",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+            "block_ids": [
+              "rgb_doc_e49bff663ae9685967907486:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 22
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 22.301280975341797,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_44d143b226c93db2": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_6ff1361c760702c06ab54b39",
+          "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+          "document_name": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+          "chunk_id": "rgb_doc_6ff1361c760702c06ab54b39:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "source_score": null,
+          "fused_score": 0.015625,
+          "rerank_score": null,
+          "content": "2022年1月1日零点刚过，随着汽笛声响，满载800多吨货物的X9101次集装箱班列从南宁国际铁路港开出，一路朝着终点站越南河内进发。  \t这是RCEP(区域全面经济伙伴关系协定)生效后，我国首趟开往RCEP成员国的国际货运班列。    \t我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发 冯登海 摄)  \t“南宁国际铁路港自2018年5月开通运营以来，累计到发货物1218万吨，每年到发货物量约270万吨。”广西宁铁国际物流有限公司总经理宋坚强介绍。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+            "block_ids": [
+              "rgb_doc_6ff1361c760702c06ab54b39:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 237
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 20.4993896484375,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_7f4d97054b8815ad": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_20fdea7f84e78d67897cec3c",
+          "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+          "document_name": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+          "chunk_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "班列发车。人民网 吴明江摄  \t人民网南宁1月1日电 （吴明江）2022年1月1日凌晨00:05，一趟满载货物的货运班列从南宁国际铁路港启程，开赴越南河内。这是《区域全面经济伙伴关系协定》（RCEP协定）生效后首趟开往RCEP成员国的国际货运班列。    \t该趟国际货运班列共23个40英尺集装箱、2个20英尺集装箱，货物包括电子元件、日用百货、化工产品等一般贸易和跨境电商货物，总重800多吨，货值达1000多万美元，将于28小时后抵达越南河内。    \t列车开行仪式现场。人民网 吴明江摄",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+            "block_ids": [
+              "rgb_doc_20fdea7f84e78d67897cec3c:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 246
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 17.855762481689453,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "首趟RCEP班列的起点是南宁国际铁路港",
+          "source_ids": [
+            "S1",
+            "S3",
+            "S4",
+            "S5"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_3169f137e81a148b"
+        },
+        {
+          "number": 2,
+          "source_id": "S3",
+          "evidence_id": "ev_67dc8caae948cc7d"
+        },
+        {
+          "number": 3,
+          "source_id": "S4",
+          "evidence_id": "ev_44d143b226c93db2"
+        },
+        {
+          "number": 4,
+          "source_id": "S5",
+          "evidence_id": "ev_7f4d97054b8815ad"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_d127eb9fdcc24412b6b774",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "首趟RCEP班列 起点",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dc3e4e8909eae7688aea133c",
+            "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+            "document_name": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+            "chunk_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 26.813953399658203,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Sep 19, 2022 ... 我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发冯登海 ... 平陆运河起点位于南宁横州市西津库区平塘江口(央广网发横州市融媒体 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+              "block_ids": [
+                "rgb_doc_dc3e4e8909eae7688aea133c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 26.813953399658203,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e20fe21074da8b2d9f60a43",
+            "version_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1",
+            "document_name": "rgb_doc_4e20fe21074da8b2d9f60a43.txt",
+            "chunk_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 22.47161293029785,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Jan 1, 2021 ... 6月23日，满载防疫物资的中欧班列抵达法国巴黎东南郊的瓦朗通，此次班列是中法首趟抗疫物资专列。新华社记者徐永春摄. 站在新起点上，习近平主席为 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1",
+              "block_ids": [
+                "rgb_doc_4e20fe21074da8b2d9f60a43:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 22.47161293029785,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e49bff663ae9685967907486",
+            "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+            "document_name": "rgb_doc_e49bff663ae9685967907486.txt",
+            "chunk_id": "rgb_doc_e49bff663ae9685967907486:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 22.301280975341797,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "RCEP生效后首趟国际货运班列从广西南宁启程",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+              "block_ids": [
+                "rgb_doc_e49bff663ae9685967907486:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 22
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 22.301280975341797,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6ff1361c760702c06ab54b39",
+            "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+            "document_name": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+            "chunk_id": "rgb_doc_6ff1361c760702c06ab54b39:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 20.4993896484375,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "2022年1月1日零点刚过，随着汽笛声响，满载800多吨货物的X9101次集装箱班列从南宁国际铁路港开出，一路朝着终点站越南河内进发。  \t这是RCEP(区域全面经济伙伴关系协定)生效后，我国首趟开往RCEP成员国的国际货运班列。    \t我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发 冯登海 摄)  \t“南宁国际铁路港自2018年5月开通运营以来，累计到发货物1218万吨，每年到发货物量约270万吨。”广西宁铁国际物流有限公司总经理宋坚强介绍。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+              "block_ids": [
+                "rgb_doc_6ff1361c760702c06ab54b39:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 237
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 20.4993896484375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20fdea7f84e78d67897cec3c",
+            "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+            "document_name": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+            "chunk_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 17.855762481689453,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "班列发车。人民网 吴明江摄  \t人民网南宁1月1日电 （吴明江）2022年1月1日凌晨00:05，一趟满载货物的货运班列从南宁国际铁路港启程，开赴越南河内。这是《区域全面经济伙伴关系协定》（RCEP协定）生效后首趟开往RCEP成员国的国际货运班列。    \t该趟国际货运班列共23个40英尺集装箱、2个20英尺集装箱，货物包括电子元件、日用百货、化工产品等一般贸易和跨境电商货物，总重800多吨，货值达1000多万美元，将于28小时后抵达越南河内。    \t列车开行仪式现场。人民网 吴明江摄",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+              "block_ids": [
+                "rgb_doc_20fdea7f84e78d67897cec3c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 246
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 17.855762481689453,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3ed8fb785118faf7bd643fd5",
+            "version_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1",
+            "document_name": "rgb_doc_3ed8fb785118faf7bd643fd5.txt",
+            "chunk_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 15.090520858764648,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "Jul 27, 2022 ... 自2014年11月18日，首趟“义新欧”中欧班列(义乌—马德里)从义乌开出后，截至目前，义乌已开通17个方向的点对点国际铁路货运直达班列线路，联通亚欧大陆约50 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1",
+              "block_ids": [
+                "rgb_doc_3ed8fb785118faf7bd643fd5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 101
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.090520858764648,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6f8777dc6870beed8270011d",
+            "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+            "document_name": "rgb_doc_6f8777dc6870beed8270011d.txt",
+            "chunk_id": "rgb_doc_6f8777dc6870beed8270011d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 10.374868392944336,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "来自东盟等多个国家的货物通过海运入境，再经铁路港进入到云南、贵州、四川、重庆等地。  \tRCEP协定生效后，进出口货物的成本降低了，运输时间也缩短了。中国南宁―越南河内班列运行时间之前需要72小时，目前仅需约24小时，运行时长减少40多个小时，基本实现了次日可达。  \t东盟水果更是实现了从海运、陆运到空运的飞跃，加速度进入中国市场。  \t今年5月13日，广西对RCEP成员国水果进口航线正式通航，进一步扩大了南宁乃至广西在中国进口生鲜方面的影响力。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+              "block_ids": [
+                "rgb_doc_6f8777dc6870beed8270011d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 225
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 10.374868392944336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_53bf9914612de95f1d1ca98b",
+            "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+            "document_name": "rgb_doc_53bf9914612de95f1d1ca98b.txt",
+            "chunk_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 9.908673286437988,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "“一带一路”走深走实，国际经贸合作开拓新局。2021年，中国与“一带一路”沿线国家进出口额比上年增长23.6%，对“一带一路”沿线国家投资增长7.9%，中欧班列开行超过1.5万列，增长22%。截至2022年1月，中国已与147个国家、32个国际组织签署200多份共建“一带一路”合作文件。2021年中国等15个国家完成《区域全面经济伙伴关系协定》（RCEP）核准，RCEP于2022年1月1日正式生效。15个签署协定的国家总人口、经济体量、贸易总额均约占全球总量的30%，全球最大的自由贸易区形成。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+              "block_ids": [
+                "rgb_doc_53bf9914612de95f1d1ca98b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 249
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 9.908673286437988,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_381b5113cc888f55f7a531ed",
+            "version_id": "rgb_doc_381b5113cc888f55f7a531ed:r1",
+            "document_name": "rgb_doc_381b5113cc888f55f7a531ed.txt",
+            "chunk_id": "rgb_doc_381b5113cc888f55f7a531ed:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 8.86217212677002,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "2021年，成都中欧班列累计新增俄罗斯圣彼得堡、荷兰阿姆斯特丹、英国费利克斯托、波兰格但斯克、德国罗斯托克、英国伊明汉姆等11个站点，有效扩大了中欧班列海外布局范围。 自开行至今，成渝两地累计开行中欧班列超1.8万列，实现进出口贸易额超7000亿元，已成为全国开行量最多、开行最均衡、运输货值最高、货源结构最优、区域合作最广泛、运输最稳定的中欧班列，成渝两地正在携手将中欧班列（成渝）打造成为全国中欧班列第一品牌。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_381b5113cc888f55f7a531ed:r1",
+              "block_ids": [
+                "rgb_doc_381b5113cc888f55f7a531ed:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 207
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 8.86217212677002,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_666c0ea532a1a43f3b24d2d2",
+            "version_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1",
+            "document_name": "rgb_doc_666c0ea532a1a43f3b24d2d2.txt",
+            "chunk_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 8.67641830444336,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "通过‘湾区海铁通’连接中欧班列与海上丝绸之路海运航线，开展以铁路运输为纽带的多式联运业务，将‘湾区号’中欧班列的始发地拓展到深圳海运港口及公路口岸，打通‘一带’与‘一路’联接的最后一公里。” 江苏中欧班列开行数量创新高 2021年，江苏中欧班列克服计划紧张、口岸拥堵、疫情反复等诸多影响，累计开行1800列，同比增长29%，提前32天完成全年开行目标，开行数量创历史新高；班列进出口货值达到255.5亿元人民币，同比增长67.7%。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1",
+              "block_ids": [
+                "rgb_doc_666c0ea532a1a43f3b24d2d2:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 216
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 8.67641830444336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dc3e4e8909eae7688aea133c",
+            "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+            "document_name": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_dc3e4e8909eae7688aea133c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e20fe21074da8b2d9f60a43",
+            "version_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1",
+            "document_name": "rgb_doc_4e20fe21074da8b2d9f60a43.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_4e20fe21074da8b2d9f60a43:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4e20fe21074da8b2d9f60a43.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e49bff663ae9685967907486",
+            "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+            "document_name": "rgb_doc_e49bff663ae9685967907486.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_e49bff663ae9685967907486:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e49bff663ae9685967907486.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6ff1361c760702c06ab54b39",
+            "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+            "document_name": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_6ff1361c760702c06ab54b39:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20fdea7f84e78d67897cec3c",
+            "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+            "document_name": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_20fdea7f84e78d67897cec3c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3ed8fb785118faf7bd643fd5",
+            "version_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1",
+            "document_name": "rgb_doc_3ed8fb785118faf7bd643fd5.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_3ed8fb785118faf7bd643fd5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3ed8fb785118faf7bd643fd5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6f8777dc6870beed8270011d",
+            "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+            "document_name": "rgb_doc_6f8777dc6870beed8270011d.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_6f8777dc6870beed8270011d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6f8777dc6870beed8270011d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_53bf9914612de95f1d1ca98b",
+            "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+            "document_name": "rgb_doc_53bf9914612de95f1d1ca98b.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_53bf9914612de95f1d1ca98b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_53bf9914612de95f1d1ca98b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_381b5113cc888f55f7a531ed",
+            "version_id": "rgb_doc_381b5113cc888f55f7a531ed:r1",
+            "document_name": "rgb_doc_381b5113cc888f55f7a531ed.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_381b5113cc888f55f7a531ed:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_381b5113cc888f55f7a531ed.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_666c0ea532a1a43f3b24d2d2",
+            "version_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1",
+            "document_name": "rgb_doc_666c0ea532a1a43f3b24d2d2.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_666c0ea532a1a43f3b24d2d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_666c0ea532a1a43f3b24d2d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fdc283fa2a6f3f902ca65675",
+            "version_id": "rgb_doc_fdc283fa2a6f3f902ca65675:r1",
+            "document_name": "rgb_doc_fdc283fa2a6f3f902ca65675.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_fdc283fa2a6f3f902ca65675:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fdc283fa2a6f3f902ca65675.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1aa22f1d0943317d697c592e",
+            "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+            "document_name": "rgb_doc_1aa22f1d0943317d697c592e.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_1aa22f1d0943317d697c592e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1aa22f1d0943317d697c592e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e2451701b5f062aa24e9e89",
+            "version_id": "rgb_doc_1e2451701b5f062aa24e9e89:r1",
+            "document_name": "rgb_doc_1e2451701b5f062aa24e9e89.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_1e2451701b5f062aa24e9e89:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e2451701b5f062aa24e9e89.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b30ef89fb14cfbf11befa28d",
+            "version_id": "rgb_doc_b30ef89fb14cfbf11befa28d:r1",
+            "document_name": "rgb_doc_b30ef89fb14cfbf11befa28d.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_b30ef89fb14cfbf11befa28d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b30ef89fb14cfbf11befa28d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7fd3eb88ea554565fdaedb3f",
+            "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+            "document_name": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e07c7bd7775c813bb11fd06",
+            "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+            "document_name": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_9e07c7bd7775c813bb11fd06:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c04bf6bc551b703809e76b42",
+            "version_id": "rgb_doc_c04bf6bc551b703809e76b42:r1",
+            "document_name": "rgb_doc_c04bf6bc551b703809e76b42.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_c04bf6bc551b703809e76b42:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c04bf6bc551b703809e76b42.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_176faf41b38333db7afed2ba",
+            "version_id": "rgb_doc_176faf41b38333db7afed2ba:r1",
+            "document_name": "rgb_doc_176faf41b38333db7afed2ba.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_176faf41b38333db7afed2ba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_176faf41b38333db7afed2ba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9ba7e63346aa8f2e91d3147a",
+            "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+            "document_name": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9eb3810f81240816964eab3a",
+            "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+            "document_name": "rgb_doc_9eb3810f81240816964eab3a.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_9eb3810f81240816964eab3a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9eb3810f81240816964eab3a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_58e95ba02b20ccd7b243f1e2",
+            "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+            "document_name": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5985275b58e261a691cf8d4",
+            "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+            "document_name": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_a5985275b58e261a691cf8d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2f7ea6937b2c9626c0f872f",
+            "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+            "document_name": "rgb_doc_f2f7ea6937b2c9626c0f872f.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f2f7ea6937b2c9626c0f872f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_725aa303b33e83e755a40852",
+            "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+            "document_name": "rgb_doc_725aa303b33e83e755a40852.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_725aa303b33e83e755a40852:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_725aa303b33e83e755a40852.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5dab03436e0c23948863ac66",
+            "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+            "document_name": "rgb_doc_5dab03436e0c23948863ac66.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_5dab03436e0c23948863ac66:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5dab03436e0c23948863ac66.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8cc17e2115bd14cf7df0b46f",
+            "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+            "document_name": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65cc97ba94e1c7887d5bd1c5",
+            "version_id": "rgb_doc_65cc97ba94e1c7887d5bd1c5:r1",
+            "document_name": "rgb_doc_65cc97ba94e1c7887d5bd1c5.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_65cc97ba94e1c7887d5bd1c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_65cc97ba94e1c7887d5bd1c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e31a3ce833e2da4dee698d5",
+            "version_id": "rgb_doc_1e31a3ce833e2da4dee698d5:r1",
+            "document_name": "rgb_doc_1e31a3ce833e2da4dee698d5.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_1e31a3ce833e2da4dee698d5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e31a3ce833e2da4dee698d5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f45d33a5821b93bb64aba1a",
+            "version_id": "rgb_doc_8f45d33a5821b93bb64aba1a:r1",
+            "document_name": "rgb_doc_8f45d33a5821b93bb64aba1a.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_8f45d33a5821b93bb64aba1a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8f45d33a5821b93bb64aba1a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e67a54a707ad5087ad42ad2",
+            "version_id": "rgb_doc_1e67a54a707ad5087ad42ad2:r1",
+            "document_name": "rgb_doc_1e67a54a707ad5087ad42ad2.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_1e67a54a707ad5087ad42ad2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e67a54a707ad5087ad42ad2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ae4d2265ab1b3859158f63c0",
+            "version_id": "rgb_doc_ae4d2265ab1b3859158f63c0:r1",
+            "document_name": "rgb_doc_ae4d2265ab1b3859158f63c0.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_ae4d2265ab1b3859158f63c0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ae4d2265ab1b3859158f63c0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_db917d55267ef5faf0695915",
+            "version_id": "rgb_doc_db917d55267ef5faf0695915:r1",
+            "document_name": "rgb_doc_db917d55267ef5faf0695915.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_db917d55267ef5faf0695915:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_db917d55267ef5faf0695915.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f84995dad43360881d884d07",
+            "version_id": "rgb_doc_f84995dad43360881d884d07:r1",
+            "document_name": "rgb_doc_f84995dad43360881d884d07.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_f84995dad43360881d884d07:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f84995dad43360881d884d07.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c3c60f33b3f95472d5120f9",
+            "version_id": "rgb_doc_1c3c60f33b3f95472d5120f9:r1",
+            "document_name": "rgb_doc_1c3c60f33b3f95472d5120f9.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_1c3c60f33b3f95472d5120f9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c3c60f33b3f95472d5120f9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_57c287d6dfb6cd39bb7c99a8",
+            "version_id": "rgb_doc_57c287d6dfb6cd39bb7c99a8:r1",
+            "document_name": "rgb_doc_57c287d6dfb6cd39bb7c99a8.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_57c287d6dfb6cd39bb7c99a8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_57c287d6dfb6cd39bb7c99a8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_88c72c91d7bc336aa2e7ed1d",
+            "version_id": "rgb_doc_88c72c91d7bc336aa2e7ed1d:r1",
+            "document_name": "rgb_doc_88c72c91d7bc336aa2e7ed1d.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_88c72c91d7bc336aa2e7ed1d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_88c72c91d7bc336aa2e7ed1d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6931fa34788fb775f7fca443",
+            "version_id": "rgb_doc_6931fa34788fb775f7fca443:r1",
+            "document_name": "rgb_doc_6931fa34788fb775f7fca443.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_6931fa34788fb775f7fca443:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6931fa34788fb775f7fca443.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_27e79b6c6622ef5c01624815",
+            "version_id": "rgb_doc_27e79b6c6622ef5c01624815:r1",
+            "document_name": "rgb_doc_27e79b6c6622ef5c01624815.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_27e79b6c6622ef5c01624815:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_27e79b6c6622ef5c01624815.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c3d33407e5a32ff6695cab5e",
+            "version_id": "rgb_doc_c3d33407e5a32ff6695cab5e:r1",
+            "document_name": "rgb_doc_c3d33407e5a32ff6695cab5e.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_c3d33407e5a32ff6695cab5e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c3d33407e5a32ff6695cab5e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_429a224523f4c0ac7b10fbea",
+            "version_id": "rgb_doc_429a224523f4c0ac7b10fbea:r1",
+            "document_name": "rgb_doc_429a224523f4c0ac7b10fbea.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_429a224523f4c0ac7b10fbea:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_429a224523f4c0ac7b10fbea.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 8.828125006402843,
+              "candidate_count": 40,
+              "verified_count": 40,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.342209000256844,
+          "evidence_ms": 1.7746669909683987,
+          "fusion_ms": 0.5522080027731135,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 40,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 36.05204199266154,
+          "context_chars": 1690,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_3169f137e81a148b",
+          "ev_eb3aa5c032177477",
+          "ev_67dc8caae948cc7d",
+          "ev_44d143b226c93db2",
+          "ev_7f4d97054b8815ad",
+          "ev_541d4b4b50a10a4a",
+          "ev_d889135c5170fc92",
+          "ev_3f065aaaa2df729e",
+          "ev_debc4796be274ff7",
+          "ev_43707764d15c1ad5"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_3169f137e81a148b",
+            "content": "Sep 19, 2022 ... 我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发冯登海 ... 平陆运河起点位于南宁横州市西津库区平塘江口(央广网发横州市融媒体 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dc3e4e8909eae7688aea133c",
+            "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+            "document_name": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+            "chunk_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+              "block_ids": [
+                "rgb_doc_dc3e4e8909eae7688aea133c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 26.813953399658203,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "dc3e4e8909eae7688aea133c200e0af05cc36442ee21d29c278916770899ea4b",
+            "scope_digest": "9dc82a6637da670ac5d1fc5b6553f674f8d27fc1b6edd595c140f71115229f9b",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_ba28572d36d01d99401f",
+                "source_id": "S1",
+                "evidence_id": "ev_3169f137e81a148b",
+                "raw_text": "19",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Sep 19, 2022 ... 我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发冯登",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_8670d4402f2b4050a2dd",
+                "source_id": "S1",
+                "evidence_id": "ev_3169f137e81a148b",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Sep 19, 2022 ... 我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发冯登海 ... ",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_eb3aa5c032177477",
+            "content": "Jan 1, 2021 ... 6月23日，满载防疫物资的中欧班列抵达法国巴黎东南郊的瓦朗通，此次班列是中法首趟抗疫物资专列。新华社记者徐永春摄. 站在新起点上，习近平主席为 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e20fe21074da8b2d9f60a43",
+            "version_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1",
+            "document_name": "rgb_doc_4e20fe21074da8b2d9f60a43.txt",
+            "chunk_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1",
+              "block_ids": [
+                "rgb_doc_4e20fe21074da8b2d9f60a43:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 22.47161293029785,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 91,
+            "content_hash": "4e20fe21074da8b2d9f60a436de31a9344242c72bb77a8d800bd2b1c0d5f4c5d",
+            "scope_digest": "71ffd29626862fcf41f54c03d226555d0d77dc94a6cb73fa8e659ff0a42a4a39",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_16d2a78fa8c44351863d",
+                "source_id": "S2",
+                "evidence_id": "ev_eb3aa5c032177477",
+                "raw_text": "1",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2021 ... 6月23日，满载防疫物资的中欧班列抵达法国巴黎东南郊的瓦朗通，此次班列是中",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_7011f09a6fc330d44155",
+                "source_id": "S2",
+                "evidence_id": "ev_eb3aa5c032177477",
+                "raw_text": "2021",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2021 ... 6月23日，满载防疫物资的中欧班列抵达法国巴黎东南郊的瓦朗通，此次班列是中法首趟抗疫物",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_67dc8caae948cc7d",
+            "content": "RCEP生效后首趟国际货运班列从广西南宁启程",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e49bff663ae9685967907486",
+            "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+            "document_name": "rgb_doc_e49bff663ae9685967907486.txt",
+            "chunk_id": "rgb_doc_e49bff663ae9685967907486:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+              "block_ids": [
+                "rgb_doc_e49bff663ae9685967907486:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 22
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 22.301280975341797,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 22,
+            "content_hash": "e49bff663ae96859679074869e5446b55f1f218c6867cda41ad196ab652d9ff6",
+            "scope_digest": "7cad7d3e49abc8b3fd10e932a3b6305a093763f4e5f328b437369fd8b1ae834c",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_44d143b226c93db2",
+            "content": "2022年1月1日零点刚过，随着汽笛声响，满载800多吨货物的X9101次集装箱班列从南宁国际铁路港开出，一路朝着终点站越南河内进发。  \t这是RCEP(区域全面经济伙伴关系协定)生效后，我国首趟开往RCEP成员国的国际货运班列。    \t我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出(央广网发 冯登海 摄)  \t“南宁国际铁路港自2018年5月开通运营以来，累计到发货物1218万吨，每年到发货物量约270万吨。”广西宁铁国际物流有限公司总经理宋坚强介绍。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6ff1361c760702c06ab54b39",
+            "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+            "document_name": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+            "chunk_id": "rgb_doc_6ff1361c760702c06ab54b39:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+              "block_ids": [
+                "rgb_doc_6ff1361c760702c06ab54b39:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 237
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 20.4993896484375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 237,
+            "content_hash": "6ff1361c760702c06ab54b39f65eb7cec9f678a8a624948e77bc65ef45a71d8d",
+            "scope_digest": "5da86169bc076b46b2f10db352101676864e50cf1b46c23cc9cb71ffe0a56f7f",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_7f4d97054b8815ad",
+            "content": "班列发车。人民网 吴明江摄  \t人民网南宁1月1日电 （吴明江）2022年1月1日凌晨00:05，一趟满载货物的货运班列从南宁国际铁路港启程，开赴越南河内。这是《区域全面经济伙伴关系协定》（RCEP协定）生效后首趟开往RCEP成员国的国际货运班列。    \t该趟国际货运班列共23个40英尺集装箱、2个20英尺集装箱，货物包括电子元件、日用百货、化工产品等一般贸易和跨境电商货物，总重800多吨，货值达1000多万美元，将于28小时后抵达越南河内。    \t列车开行仪式现场。人民网 吴明江摄",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20fdea7f84e78d67897cec3c",
+            "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+            "document_name": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+            "chunk_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+              "block_ids": [
+                "rgb_doc_20fdea7f84e78d67897cec3c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 246
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 17.855762481689453,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 246,
+            "content_hash": "20fdea7f84e78d67897cec3c1fc8f89725d0a76d786c862c4cb9fc43e7b92569",
+            "scope_digest": "a6395d323f8d733c5c9763754c5e73b268611dd228ee44e3ace2a11b34792cd8",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_85149252c43f4c0fb174",
+                "source_id": "S5",
+                "evidence_id": "ev_7f4d97054b8815ad",
+                "raw_text": "05",
+                "start": 46,
+                "end": 48,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "班列发车。人民网 吴明江摄  \t人民网南宁1月1日电 （吴明江）2022年1月1日凌晨00:05，一趟满载货物的货运班列从南宁国际铁路港启程，开赴越南河内。这是《区域全面经济伙伴关系协定》（R",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_541d4b4b50a10a4a",
+            "content": "Jul 27, 2022 ... 自2014年11月18日，首趟“义新欧”中欧班列(义乌—马德里)从义乌开出后，截至目前，义乌已开通17个方向的点对点国际铁路货运直达班列线路，联通亚欧大陆约50 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3ed8fb785118faf7bd643fd5",
+            "version_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1",
+            "document_name": "rgb_doc_3ed8fb785118faf7bd643fd5.txt",
+            "chunk_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1",
+              "block_ids": [
+                "rgb_doc_3ed8fb785118faf7bd643fd5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 101
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.090520858764648,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 101,
+            "content_hash": "3ed8fb785118faf7bd643fd5dfeec0063ad8e8052f0f982904b00649ceb21a69",
+            "scope_digest": "2ace56f3c13a2e1a485007922cc18a62075b10f03a51228018c7182900ef363d",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_19d1f7b51833a82c39a0",
+                "source_id": "S6",
+                "evidence_id": "ev_541d4b4b50a10a4a",
+                "raw_text": "27",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 27, 2022 ... 自2014年11月18日，首趟“义新欧”中欧班列(义乌—马德里)从义乌开出",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_bb686d215d6f2afd7784",
+                "source_id": "S6",
+                "evidence_id": "ev_541d4b4b50a10a4a",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 27, 2022 ... 自2014年11月18日，首趟“义新欧”中欧班列(义乌—马德里)从义乌开出后，截至目前",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d889135c5170fc92",
+            "content": "来自东盟等多个国家的货物通过海运入境，再经铁路港进入到云南、贵州、四川、重庆等地。  \tRCEP协定生效后，进出口货物的成本降低了，运输时间也缩短了。中国南宁―越南河内班列运行时间之前需要72小时，目前仅需约24小时，运行时长减少40多个小时，基本实现了次日可达。  \t东盟水果更是实现了从海运、陆运到空运的飞跃，加速度进入中国市场。  \t今年5月13日，广西对RCEP成员国水果进口航线正式通航，进一步扩大了南宁乃至广西在中国进口生鲜方面的影响力。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6f8777dc6870beed8270011d",
+            "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+            "document_name": "rgb_doc_6f8777dc6870beed8270011d.txt",
+            "chunk_id": "rgb_doc_6f8777dc6870beed8270011d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+              "block_ids": [
+                "rgb_doc_6f8777dc6870beed8270011d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 225
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 10.374868392944336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 225,
+            "content_hash": "6f8777dc6870beed8270011d45fa5b3b39e462bb74e3a65420bcda08359bcdaa",
+            "scope_digest": "9aa6a30198b191844cd2087387a867abf58228b191f037dfe70dd610cd3ecee7",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_3f065aaaa2df729e",
+            "content": "“一带一路”走深走实，国际经贸合作开拓新局。2021年，中国与“一带一路”沿线国家进出口额比上年增长23.6%，对“一带一路”沿线国家投资增长7.9%，中欧班列开行超过1.5万列，增长22%。截至2022年1月，中国已与147个国家、32个国际组织签署200多份共建“一带一路”合作文件。2021年中国等15个国家完成《区域全面经济伙伴关系协定》（RCEP）核准，RCEP于2022年1月1日正式生效。15个签署协定的国家总人口、经济体量、贸易总额均约占全球总量的30%，全球最大的自由贸易区形成。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_53bf9914612de95f1d1ca98b",
+            "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+            "document_name": "rgb_doc_53bf9914612de95f1d1ca98b.txt",
+            "chunk_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+              "block_ids": [
+                "rgb_doc_53bf9914612de95f1d1ca98b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 249
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 9.908673286437988,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 249,
+            "content_hash": "53bf9914612de95f1d1ca98bb991ff092b48fbae6b5fa4c8158a54735157e67a",
+            "scope_digest": "aafc79454ceb31754d529f3e736108fe61fd7273e3718d6da76aa2dfadf136e6",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_debc4796be274ff7",
+            "content": "2021年，成都中欧班列累计新增俄罗斯圣彼得堡、荷兰阿姆斯特丹、英国费利克斯托、波兰格但斯克、德国罗斯托克、英国伊明汉姆等11个站点，有效扩大了中欧班列海外布局范围。 自开行至今，成渝两地累计开行中欧班列超1.8万列，实现进出口贸易额超7000亿元，已成为全国开行量最多、开行最均衡、运输货值最高、货源结构最优、区域合作最广泛、运输最稳定的中欧班列，成渝两地正在携手将中欧班列（成渝）打造成为全国中欧班列第一品牌。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_381b5113cc888f55f7a531ed",
+            "version_id": "rgb_doc_381b5113cc888f55f7a531ed:r1",
+            "document_name": "rgb_doc_381b5113cc888f55f7a531ed.txt",
+            "chunk_id": "rgb_doc_381b5113cc888f55f7a531ed:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_381b5113cc888f55f7a531ed:r1",
+              "block_ids": [
+                "rgb_doc_381b5113cc888f55f7a531ed:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 207
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 8.86217212677002,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 207,
+            "content_hash": "381b5113cc888f55f7a531ed12a0c698e0a2a43b03d6435c3e0ec4e5481ed1c8",
+            "scope_digest": "680fe77c5784bab8dfc44fec9e71819be43d50b0f5470072778bd56ebb08c857",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_43707764d15c1ad5",
+            "content": "通过‘湾区海铁通’连接中欧班列与海上丝绸之路海运航线，开展以铁路运输为纽带的多式联运业务，将‘湾区号’中欧班列的始发地拓展到深圳海运港口及公路口岸，打通‘一带’与‘一路’联接的最后一公里。” 江苏中欧班列开行数量创新高 2021年，江苏中欧班列克服计划紧张、口岸拥堵、疫情反复等诸多影响，累计开行1800列，同比增长29%，提前32天完成全年开行目标，开行数量创历史新高；班列进出口货值达到255.5亿元人民币，同比增长67.7%。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_666c0ea532a1a43f3b24d2d2",
+            "version_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1",
+            "document_name": "rgb_doc_666c0ea532a1a43f3b24d2d2.txt",
+            "chunk_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1",
+              "block_ids": [
+                "rgb_doc_666c0ea532a1a43f3b24d2d2:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 216
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 8.67641830444336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 216,
+            "content_hash": "666c0ea532a1a43f3b24d2d2c3e4286a8258b4069910ae563b91e726c9e65373",
+            "scope_digest": "41693d32905353ac5992ce46bf96ecdd822994686a076184405dda1a1141d9ff",
+            "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_3169f137e81a148b",
+      "ev_eb3aa5c032177477",
+      "ev_67dc8caae948cc7d",
+      "ev_44d143b226c93db2",
+      "ev_7f4d97054b8815ad",
+      "ev_541d4b4b50a10a4a",
+      "ev_d889135c5170fc92",
+      "ev_3f065aaaa2df729e",
+      "ev_debc4796be274ff7",
+      "ev_43707764d15c1ad5"
+    ],
+    "evidence": {
+      "ev_3169f137e81a148b": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_dc3e4e8909eae7688aea133c",
+        "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+        "document_name": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+        "chunk_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+          "block_ids": [
+            "rgb_doc_dc3e4e8909eae7688aea133c:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 26.813953399658203,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "dc3e4e8909eae7688aea133c200e0af05cc36442ee21d29c278916770899ea4b",
+        "scope_digest": "9dc82a6637da670ac5d1fc5b6553f674f8d27fc1b6edd595c140f71115229f9b",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_eb3aa5c032177477": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4e20fe21074da8b2d9f60a43",
+        "version_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1",
+        "document_name": "rgb_doc_4e20fe21074da8b2d9f60a43.txt",
+        "chunk_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4e20fe21074da8b2d9f60a43:r1",
+          "block_ids": [
+            "rgb_doc_4e20fe21074da8b2d9f60a43:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 91
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 22.47161293029785,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 91,
+        "content_hash": "4e20fe21074da8b2d9f60a436de31a9344242c72bb77a8d800bd2b1c0d5f4c5d",
+        "scope_digest": "71ffd29626862fcf41f54c03d226555d0d77dc94a6cb73fa8e659ff0a42a4a39",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_67dc8caae948cc7d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_e49bff663ae9685967907486",
+        "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+        "document_name": "rgb_doc_e49bff663ae9685967907486.txt",
+        "chunk_id": "rgb_doc_e49bff663ae9685967907486:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+          "block_ids": [
+            "rgb_doc_e49bff663ae9685967907486:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 22
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 22.301280975341797,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 22,
+        "content_hash": "e49bff663ae96859679074869e5446b55f1f218c6867cda41ad196ab652d9ff6",
+        "scope_digest": "7cad7d3e49abc8b3fd10e932a3b6305a093763f4e5f328b437369fd8b1ae834c",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_44d143b226c93db2": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_6ff1361c760702c06ab54b39",
+        "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+        "document_name": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+        "chunk_id": "rgb_doc_6ff1361c760702c06ab54b39:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+          "block_ids": [
+            "rgb_doc_6ff1361c760702c06ab54b39:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 237
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 20.4993896484375,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 237,
+        "content_hash": "6ff1361c760702c06ab54b39f65eb7cec9f678a8a624948e77bc65ef45a71d8d",
+        "scope_digest": "5da86169bc076b46b2f10db352101676864e50cf1b46c23cc9cb71ffe0a56f7f",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_7f4d97054b8815ad": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_20fdea7f84e78d67897cec3c",
+        "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+        "document_name": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+        "chunk_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+          "block_ids": [
+            "rgb_doc_20fdea7f84e78d67897cec3c:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 246
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 17.855762481689453,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 246,
+        "content_hash": "20fdea7f84e78d67897cec3c1fc8f89725d0a76d786c862c4cb9fc43e7b92569",
+        "scope_digest": "a6395d323f8d733c5c9763754c5e73b268611dd228ee44e3ace2a11b34792cd8",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_541d4b4b50a10a4a": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_3ed8fb785118faf7bd643fd5",
+        "version_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1",
+        "document_name": "rgb_doc_3ed8fb785118faf7bd643fd5.txt",
+        "chunk_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_3ed8fb785118faf7bd643fd5:r1",
+          "block_ids": [
+            "rgb_doc_3ed8fb785118faf7bd643fd5:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 101
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 15.090520858764648,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 101,
+        "content_hash": "3ed8fb785118faf7bd643fd5dfeec0063ad8e8052f0f982904b00649ceb21a69",
+        "scope_digest": "2ace56f3c13a2e1a485007922cc18a62075b10f03a51228018c7182900ef363d",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d889135c5170fc92": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_6f8777dc6870beed8270011d",
+        "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+        "document_name": "rgb_doc_6f8777dc6870beed8270011d.txt",
+        "chunk_id": "rgb_doc_6f8777dc6870beed8270011d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+          "block_ids": [
+            "rgb_doc_6f8777dc6870beed8270011d:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 225
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 10.374868392944336,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 225,
+        "content_hash": "6f8777dc6870beed8270011d45fa5b3b39e462bb74e3a65420bcda08359bcdaa",
+        "scope_digest": "9aa6a30198b191844cd2087387a867abf58228b191f037dfe70dd610cd3ecee7",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_3f065aaaa2df729e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_53bf9914612de95f1d1ca98b",
+        "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+        "document_name": "rgb_doc_53bf9914612de95f1d1ca98b.txt",
+        "chunk_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+          "block_ids": [
+            "rgb_doc_53bf9914612de95f1d1ca98b:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 249
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 9.908673286437988,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 249,
+        "content_hash": "53bf9914612de95f1d1ca98bb991ff092b48fbae6b5fa4c8158a54735157e67a",
+        "scope_digest": "aafc79454ceb31754d529f3e736108fe61fd7273e3718d6da76aa2dfadf136e6",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_debc4796be274ff7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_381b5113cc888f55f7a531ed",
+        "version_id": "rgb_doc_381b5113cc888f55f7a531ed:r1",
+        "document_name": "rgb_doc_381b5113cc888f55f7a531ed.txt",
+        "chunk_id": "rgb_doc_381b5113cc888f55f7a531ed:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_381b5113cc888f55f7a531ed:r1",
+          "block_ids": [
+            "rgb_doc_381b5113cc888f55f7a531ed:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 207
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 8.86217212677002,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 207,
+        "content_hash": "381b5113cc888f55f7a531ed12a0c698e0a2a43b03d6435c3e0ec4e5481ed1c8",
+        "scope_digest": "680fe77c5784bab8dfc44fec9e71819be43d50b0f5470072778bd56ebb08c857",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_43707764d15c1ad5": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_666c0ea532a1a43f3b24d2d2",
+        "version_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1",
+        "document_name": "rgb_doc_666c0ea532a1a43f3b24d2d2.txt",
+        "chunk_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_666c0ea532a1a43f3b24d2d2:r1",
+          "block_ids": [
+            "rgb_doc_666c0ea532a1a43f3b24d2d2:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 216
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 8.67641830444336,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 216,
+        "content_hash": "666c0ea532a1a43f3b24d2d2c3e4286a8258b4069910ae563b91e726c9e65373",
+        "scope_digest": "41693d32905353ac5992ce46bf96ecdd822994686a076184405dda1a1141d9ff",
+        "trace_id": "db95f739453f4ca092ea20a7d5bffc96",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_3169f137e81a148b",
+      "S2": "ev_eb3aa5c032177477",
+      "S3": "ev_67dc8caae948cc7d",
+      "S4": "ev_44d143b226c93db2",
+      "S5": "ev_7f4d97054b8815ad",
+      "S6": "ev_541d4b4b50a10a4a",
+      "S7": "ev_d889135c5170fc92",
+      "S8": "ev_3f065aaaa2df729e",
+      "S9": "ev_debc4796be274ff7",
+      "S10": "ev_43707764d15c1ad5"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

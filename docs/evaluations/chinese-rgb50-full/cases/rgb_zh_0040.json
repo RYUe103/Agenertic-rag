@@ -1,0 +1,3649 @@
+{
+  "question_id": "rgb_zh_0040",
+  "result": {
+    "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+    "run_id": "run_258ff0353b4846638ac40191ffa54359",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:1",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:2",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:3",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "context_chars": 1187,
+        "prompt_tokens": 8438,
+        "completion_tokens": 47,
+        "total_tokens": 8485,
+        "context_compaction_count": 0,
+        "context_chars_before": 1187,
+        "context_chars_after": 1187,
+        "estimated_input_tokens": 12116,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1470,
+        "remaining_run_tokens": 111515,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8438,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3678
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:4",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1187
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:5",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "tool_call_id": "call_0e3477ae6865483c8d5d47",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:6",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "tool_call_id": "call_0e3477ae6865483c8d5d47",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:7",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_0e3477ae6865483c8d5d47",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 8,
+        "output_chars_before": 99266,
+        "output_chars_after": 15113,
+        "removed_chars": 84153,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:8",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:9",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:10",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "context_chars": 16300,
+        "prompt_tokens": 15395,
+        "completion_tokens": 116,
+        "total_tokens": 15511,
+        "context_compaction_count": 0,
+        "context_chars_before": 16300,
+        "context_chars_after": 16300,
+        "estimated_input_tokens": 20856,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7982,
+        "evidence_tokens": 1294,
+        "history_tokens": 2228,
+        "remaining_run_tokens": 96004,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15395,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5461
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:11",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "model_visible_evidence_count": 8,
+        "context_chars": 16300
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:12",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "citation_validation_reason": [
+          "invalid_claim_structure",
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "answer_started",
+        "sequence": 13,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:13",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 14,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:14",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "delta": "证据不足或引用未通过复核，无法给出可靠结论。"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 15,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:15",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a",
+        "final_citation_count": 0,
+        "citation_validation_reason": [
+          "no_cited_evidence"
+        ],
+        "repair_attempted": true,
+        "repair_success": false
+      },
+      {
+        "type": "completed",
+        "sequence": 16,
+        "event_id": "run_258ff0353b4846638ac40191ffa54359:b851a8d865fd4aa18d203a0d823f1c05:16",
+        "run_id": "run_258ff0353b4846638ac40191ffa54359",
+        "thread_id": "thread_23a732b860c0482eb24acc036b21489a"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 2,
+    "usage": {
+      "prompt_tokens": 23833,
+      "completion_tokens": 163,
+      "total_tokens": 23996
+    },
+    "elapsed_seconds": 20.97523816699686,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 8,
+      "output_truncated": true,
+      "context_chars": 16300,
+      "prompt_tokens": 23833,
+      "completion_tokens": 163,
+      "total_tokens": 23996,
+      "context_compaction_count": 0,
+      "context_chars_before": 16300,
+      "context_chars_after": 16300,
+      "estimated_input_tokens": 20856,
+      "tool_schema_tokens": 10646,
+      "observation_tokens": 7982,
+      "evidence_tokens": 1294,
+      "history_tokens": 2228,
+      "remaining_run_tokens": 96004,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 15395,
+      "usage_source": "provider",
+      "estimation_error_tokens": -5461,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_0e3477ae6865483c8d5d47",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 8,
+          "output_chars_before": 99266,
+          "output_chars_after": 15113,
+          "removed_chars": 84153,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "invalid_claim_structure",
+        "no_cited_evidence"
+      ],
+      "final_citation_count": 0,
+      "citation_validation_reason": [
+        "no_cited_evidence"
+      ]
+    },
+    "result": {
+      "answer": "证据不足或引用未通过复核，无法给出可靠结论。",
+      "citations": {},
+      "validation_errors": [
+        "no_cited_evidence"
+      ],
+      "citation_validation": "rejected",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": true,
+      "claims": [],
+      "citation_metadata": [],
+      "answer_validation": "insufficient_evidence",
+      "answer_displayable": false,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": false,
+      "stop_reason": "citation_repair_failed",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_0e3477ae6865483c8d5d47",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2015赛季中超冠军",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_72f0e6af7710c0b1185cfd97",
+            "version_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1",
+            "document_name": "rgb_doc_72f0e6af7710c0b1185cfd97.txt",
+            "chunk_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 23.330013275146484,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助江苏苏宁 ... 江苏苏宁，随队获得2015赛季中超联赛及亚冠冠军、2016赛季中超冠军， 在队 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1",
+              "block_ids": [
+                "rgb_doc_72f0e6af7710c0b1185cfd97:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 23.330013275146484,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_71415011d9b3e0d2b0d641a3",
+            "version_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1",
+            "document_name": "rgb_doc_71415011d9b3e0d2b0d641a3.txt",
+            "chunk_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 23.167146682739258,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助广州恒大 ... 广州恒大，随队获得2015赛季中超联赛及亚冠冠军、2016赛季中超冠军， 在队 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1",
+              "block_ids": [
+                "rgb_doc_71415011d9b3e0d2b0d641a3:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 23.167146682739258,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b23314de28370cf3ae5d49a1",
+            "version_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1",
+            "document_name": "rgb_doc_b23314de28370cf3ae5d49a1.txt",
+            "chunk_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 21.980485916137695,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "Nov 2, 2017 ... 如果恒大和上港能在2018赛季上演精彩激烈的第三季交锋，无疑能让中超竞争更 ... 由于恒大是三线作战，上港只需要一线作战，2015赛季中超冠军的天平， ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1",
+              "block_ids": [
+                "rgb_doc_b23314de28370cf3ae5d49a1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 21.980485916137695,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c520b6e202a6b25c14a2d0",
+            "version_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1",
+            "document_name": "rgb_doc_65c520b6e202a6b25c14a2d0.txt",
+            "chunk_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 20.840003967285156,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "Sep 18, 2015 ... 转眼间，2015赛季中国足球超级联赛已经到了最后5轮的“收官”阶段，相比于 ... 考虑到未来中超卫冕冠军将遭遇“魔鬼赛程”，上港远未到缴械投降的时候。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1",
+              "block_ids": [
+                "rgb_doc_65c520b6e202a6b25c14a2d0:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 20.840003967285156,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9f691bd40e0201ee82d499d9",
+            "version_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1",
+            "document_name": "rgb_doc_9f691bd40e0201ee82d499d9.txt",
+            "chunk_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 20.345741271972656,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Dec 21, 2015 ... 江苏苏宁今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆转，无缘创造更好 ... 2015赛季中超联赛冠军奖杯. 2015赛季亚冠联赛冠军奖杯.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1",
+              "block_ids": [
+                "rgb_doc_9f691bd40e0201ee82d499d9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 20.345741271972656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8e63adc488c5e79ca1e4975",
+            "version_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1",
+            "document_name": "rgb_doc_c8e63adc488c5e79ca1e4975.txt",
+            "chunk_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 20.345741271972656,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "Dec 21, 2015 ... 广州恒大今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆转，无缘创造更好 ... 2015赛季中超联赛冠军奖杯. 2015赛季亚冠联赛冠军奖杯.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1",
+              "block_ids": [
+                "rgb_doc_c8e63adc488c5e79ca1e4975:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 20.345741271972656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_13969fac3e76fccbd14c230c",
+            "version_id": "rgb_doc_13969fac3e76fccbd14c230c:r1",
+            "document_name": "rgb_doc_13969fac3e76fccbd14c230c.txt",
+            "chunk_id": "rgb_doc_13969fac3e76fccbd14c230c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 19.297685623168945,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "本届联赛将有包括连续四届卫冕冠军江苏苏宁淘宝在内的16支球队参加。 ... 2015赛季中超的外援注册方案为4＋1，即每队可注册五名外援，其中至少有一人必须是持有亚足联 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_13969fac3e76fccbd14c230c:r1",
+              "block_ids": [
+                "rgb_doc_13969fac3e76fccbd14c230c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 19.297685623168945,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95b86effd33eb5138dcf1f30",
+            "version_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1",
+            "document_name": "rgb_doc_95b86effd33eb5138dcf1f30.txt",
+            "chunk_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 19.104965209960938,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "Mar 6, 2015 ... 虽然联赛开始后他们将不得不双线作战，但由于纸面实力都不俗，4支球队都是新赛季中超冠军的有力争夺者。 提到争冠，不得不提的是上海上港，在埃里克森 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1",
+              "block_ids": [
+                "rgb_doc_95b86effd33eb5138dcf1f30:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 19.104965209960938,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d17f8b6f15f10818c119f104",
+            "version_id": "rgb_doc_d17f8b6f15f10818c119f104:r1",
+            "document_name": "rgb_doc_d17f8b6f15f10818c119f104.txt",
+            "chunk_id": "rgb_doc_d17f8b6f15f10818c119f104:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 19.104965209960938,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "本届联赛将有包括连续四届卫冕冠军广州恒大淘宝在内的16支球队参加。 ... 2015赛季中超的外援注册方案为4＋1，即每队可注册五名外援，其中至少有一人必须是持有亚足联 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_d17f8b6f15f10818c119f104:r1",
+              "block_ids": [
+                "rgb_doc_d17f8b6f15f10818c119f104:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 19.104965209960938,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2ef019ae7e1711775ae1d5a",
+            "version_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1",
+            "document_name": "rgb_doc_f2ef019ae7e1711775ae1d5a.txt",
+            "chunk_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 17.637292861938477,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "2015赛季亚足联冠军联赛，简称2015年亚冠联赛，是2015年亚洲足球俱乐部最高等级的赛事。该赛季是第34届亚洲俱乐部顶级足球杯赛，也是第13届亚足联冠军联赛， ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1",
+              "block_ids": [
+                "rgb_doc_f2ef019ae7e1711775ae1d5a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 85
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 17.637292861938477,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_72f0e6af7710c0b1185cfd97",
+            "version_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1",
+            "document_name": "rgb_doc_72f0e6af7710c0b1185cfd97.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_72f0e6af7710c0b1185cfd97:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_72f0e6af7710c0b1185cfd97.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_71415011d9b3e0d2b0d641a3",
+            "version_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1",
+            "document_name": "rgb_doc_71415011d9b3e0d2b0d641a3.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_71415011d9b3e0d2b0d641a3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_71415011d9b3e0d2b0d641a3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b23314de28370cf3ae5d49a1",
+            "version_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1",
+            "document_name": "rgb_doc_b23314de28370cf3ae5d49a1.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_b23314de28370cf3ae5d49a1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b23314de28370cf3ae5d49a1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c520b6e202a6b25c14a2d0",
+            "version_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1",
+            "document_name": "rgb_doc_65c520b6e202a6b25c14a2d0.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_65c520b6e202a6b25c14a2d0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_65c520b6e202a6b25c14a2d0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9f691bd40e0201ee82d499d9",
+            "version_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1",
+            "document_name": "rgb_doc_9f691bd40e0201ee82d499d9.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_9f691bd40e0201ee82d499d9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9f691bd40e0201ee82d499d9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8e63adc488c5e79ca1e4975",
+            "version_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1",
+            "document_name": "rgb_doc_c8e63adc488c5e79ca1e4975.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_c8e63adc488c5e79ca1e4975:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c8e63adc488c5e79ca1e4975.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_13969fac3e76fccbd14c230c",
+            "version_id": "rgb_doc_13969fac3e76fccbd14c230c:r1",
+            "document_name": "rgb_doc_13969fac3e76fccbd14c230c.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_13969fac3e76fccbd14c230c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_13969fac3e76fccbd14c230c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95b86effd33eb5138dcf1f30",
+            "version_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1",
+            "document_name": "rgb_doc_95b86effd33eb5138dcf1f30.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_95b86effd33eb5138dcf1f30:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_95b86effd33eb5138dcf1f30.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d17f8b6f15f10818c119f104",
+            "version_id": "rgb_doc_d17f8b6f15f10818c119f104:r1",
+            "document_name": "rgb_doc_d17f8b6f15f10818c119f104.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_d17f8b6f15f10818c119f104:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d17f8b6f15f10818c119f104.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2ef019ae7e1711775ae1d5a",
+            "version_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1",
+            "document_name": "rgb_doc_f2ef019ae7e1711775ae1d5a.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_f2ef019ae7e1711775ae1d5a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f2ef019ae7e1711775ae1d5a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bb52136dd73a29e575916015",
+            "version_id": "rgb_doc_bb52136dd73a29e575916015:r1",
+            "document_name": "rgb_doc_bb52136dd73a29e575916015.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_bb52136dd73a29e575916015:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bb52136dd73a29e575916015.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_792bf959522ce8d4c29a7ae2",
+            "version_id": "rgb_doc_792bf959522ce8d4c29a7ae2:r1",
+            "document_name": "rgb_doc_792bf959522ce8d4c29a7ae2.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_792bf959522ce8d4c29a7ae2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_792bf959522ce8d4c29a7ae2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ffbd48c8c95af76fbf16f4c5",
+            "version_id": "rgb_doc_ffbd48c8c95af76fbf16f4c5:r1",
+            "document_name": "rgb_doc_ffbd48c8c95af76fbf16f4c5.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_ffbd48c8c95af76fbf16f4c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ffbd48c8c95af76fbf16f4c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5f0faaa499e6953c6f89b4fd",
+            "version_id": "rgb_doc_5f0faaa499e6953c6f89b4fd:r1",
+            "document_name": "rgb_doc_5f0faaa499e6953c6f89b4fd.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_5f0faaa499e6953c6f89b4fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5f0faaa499e6953c6f89b4fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e5c17e99f754381268909d1a",
+            "version_id": "rgb_doc_e5c17e99f754381268909d1a:r1",
+            "document_name": "rgb_doc_e5c17e99f754381268909d1a.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_e5c17e99f754381268909d1a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e5c17e99f754381268909d1a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_140f691d4b644c4d333dc781",
+            "version_id": "rgb_doc_140f691d4b644c4d333dc781:r1",
+            "document_name": "rgb_doc_140f691d4b644c4d333dc781.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_140f691d4b644c4d333dc781:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_140f691d4b644c4d333dc781.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_34abfbfd6d7e2b0c1068aed6",
+            "version_id": "rgb_doc_34abfbfd6d7e2b0c1068aed6:r1",
+            "document_name": "rgb_doc_34abfbfd6d7e2b0c1068aed6.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_34abfbfd6d7e2b0c1068aed6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_34abfbfd6d7e2b0c1068aed6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4122bd2106e5fc73b7358869",
+            "version_id": "rgb_doc_4122bd2106e5fc73b7358869:r1",
+            "document_name": "rgb_doc_4122bd2106e5fc73b7358869.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_4122bd2106e5fc73b7358869:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4122bd2106e5fc73b7358869.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0239ba8740fbaa2c27de5887",
+            "version_id": "rgb_doc_0239ba8740fbaa2c27de5887:r1",
+            "document_name": "rgb_doc_0239ba8740fbaa2c27de5887.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_0239ba8740fbaa2c27de5887:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0239ba8740fbaa2c27de5887.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_42a0bf0e34603cd8654b1539",
+            "version_id": "rgb_doc_42a0bf0e34603cd8654b1539:r1",
+            "document_name": "rgb_doc_42a0bf0e34603cd8654b1539.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_42a0bf0e34603cd8654b1539:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_42a0bf0e34603cd8654b1539.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8a78251e7990d3029fbd22d1",
+            "version_id": "rgb_doc_8a78251e7990d3029fbd22d1:r1",
+            "document_name": "rgb_doc_8a78251e7990d3029fbd22d1.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_8a78251e7990d3029fbd22d1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8a78251e7990d3029fbd22d1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_85c8d1a04f33d69bc91a4bf0",
+            "version_id": "rgb_doc_85c8d1a04f33d69bc91a4bf0:r1",
+            "document_name": "rgb_doc_85c8d1a04f33d69bc91a4bf0.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_85c8d1a04f33d69bc91a4bf0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_85c8d1a04f33d69bc91a4bf0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4b2771b14fb6d8a9b5bf2f36",
+            "version_id": "rgb_doc_4b2771b14fb6d8a9b5bf2f36:r1",
+            "document_name": "rgb_doc_4b2771b14fb6d8a9b5bf2f36.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_4b2771b14fb6d8a9b5bf2f36:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4b2771b14fb6d8a9b5bf2f36.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2ea297345eb127050743a295",
+            "version_id": "rgb_doc_2ea297345eb127050743a295:r1",
+            "document_name": "rgb_doc_2ea297345eb127050743a295.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_2ea297345eb127050743a295:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2ea297345eb127050743a295.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_67df8e4e784df0542cc6f751",
+            "version_id": "rgb_doc_67df8e4e784df0542cc6f751:r1",
+            "document_name": "rgb_doc_67df8e4e784df0542cc6f751.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_67df8e4e784df0542cc6f751:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_67df8e4e784df0542cc6f751.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bedfa9fd5d3ad3154eefbbad",
+            "version_id": "rgb_doc_bedfa9fd5d3ad3154eefbbad:r1",
+            "document_name": "rgb_doc_bedfa9fd5d3ad3154eefbbad.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_bedfa9fd5d3ad3154eefbbad:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bedfa9fd5d3ad3154eefbbad.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ce118734f3fe7ad56cf441e1",
+            "version_id": "rgb_doc_ce118734f3fe7ad56cf441e1:r1",
+            "document_name": "rgb_doc_ce118734f3fe7ad56cf441e1.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_ce118734f3fe7ad56cf441e1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ce118734f3fe7ad56cf441e1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e5131e6fe09fd537699b85c7",
+            "version_id": "rgb_doc_e5131e6fe09fd537699b85c7:r1",
+            "document_name": "rgb_doc_e5131e6fe09fd537699b85c7.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_e5131e6fe09fd537699b85c7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e5131e6fe09fd537699b85c7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_57bc5f687f51302a386b06e7",
+            "version_id": "rgb_doc_57bc5f687f51302a386b06e7:r1",
+            "document_name": "rgb_doc_57bc5f687f51302a386b06e7.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_57bc5f687f51302a386b06e7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_57bc5f687f51302a386b06e7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_25f1ed5de8dcf76b67e037b5",
+            "version_id": "rgb_doc_25f1ed5de8dcf76b67e037b5:r1",
+            "document_name": "rgb_doc_25f1ed5de8dcf76b67e037b5.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_25f1ed5de8dcf76b67e037b5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_25f1ed5de8dcf76b67e037b5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_92569ba7721516dc4220ff9f",
+            "version_id": "rgb_doc_92569ba7721516dc4220ff9f:r1",
+            "document_name": "rgb_doc_92569ba7721516dc4220ff9f.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_92569ba7721516dc4220ff9f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_92569ba7721516dc4220ff9f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3a8dae851b0dd341821df92a",
+            "version_id": "rgb_doc_3a8dae851b0dd341821df92a:r1",
+            "document_name": "rgb_doc_3a8dae851b0dd341821df92a.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_3a8dae851b0dd341821df92a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3a8dae851b0dd341821df92a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4a07c9905a7bab5b3e644dca",
+            "version_id": "rgb_doc_4a07c9905a7bab5b3e644dca:r1",
+            "document_name": "rgb_doc_4a07c9905a7bab5b3e644dca.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_4a07c9905a7bab5b3e644dca:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4a07c9905a7bab5b3e644dca.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a8580cfb6d5dd1ffc706c71b",
+            "version_id": "rgb_doc_a8580cfb6d5dd1ffc706c71b:r1",
+            "document_name": "rgb_doc_a8580cfb6d5dd1ffc706c71b.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_a8580cfb6d5dd1ffc706c71b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a8580cfb6d5dd1ffc706c71b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d937add63d5f4171a35ae610",
+            "version_id": "rgb_doc_d937add63d5f4171a35ae610:r1",
+            "document_name": "rgb_doc_d937add63d5f4171a35ae610.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_d937add63d5f4171a35ae610:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d937add63d5f4171a35ae610.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_db55a4379024d6ebf090e007",
+            "version_id": "rgb_doc_db55a4379024d6ebf090e007:r1",
+            "document_name": "rgb_doc_db55a4379024d6ebf090e007.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_db55a4379024d6ebf090e007:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_db55a4379024d6ebf090e007.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5eac6dcd1e62db6aa7d44c05",
+            "version_id": "rgb_doc_5eac6dcd1e62db6aa7d44c05:r1",
+            "document_name": "rgb_doc_5eac6dcd1e62db6aa7d44c05.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_5eac6dcd1e62db6aa7d44c05:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5eac6dcd1e62db6aa7d44c05.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c550af81d37231630877870a",
+            "version_id": "rgb_doc_c550af81d37231630877870a:r1",
+            "document_name": "rgb_doc_c550af81d37231630877870a.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_c550af81d37231630877870a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c550af81d37231630877870a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62db3d904b3185ef9a91e517",
+            "version_id": "rgb_doc_62db3d904b3185ef9a91e517:r1",
+            "document_name": "rgb_doc_62db3d904b3185ef9a91e517.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_62db3d904b3185ef9a91e517:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62db3d904b3185ef9a91e517.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_70d682e586d85ddc198886d1",
+            "version_id": "rgb_doc_70d682e586d85ddc198886d1:r1",
+            "document_name": "rgb_doc_70d682e586d85ddc198886d1.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_70d682e586d85ddc198886d1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_70d682e586d85ddc198886d1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_085f54edad8f49d39de4acba",
+            "version_id": "rgb_doc_085f54edad8f49d39de4acba:r1",
+            "document_name": "rgb_doc_085f54edad8f49d39de4acba.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_085f54edad8f49d39de4acba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_085f54edad8f49d39de4acba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_941bfcd4a7cdbe5d81935bf4",
+            "version_id": "rgb_doc_941bfcd4a7cdbe5d81935bf4:r1",
+            "document_name": "rgb_doc_941bfcd4a7cdbe5d81935bf4.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_941bfcd4a7cdbe5d81935bf4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_941bfcd4a7cdbe5d81935bf4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7311fdcc11652c294b00f3d4",
+            "version_id": "rgb_doc_7311fdcc11652c294b00f3d4:r1",
+            "document_name": "rgb_doc_7311fdcc11652c294b00f3d4.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_7311fdcc11652c294b00f3d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7311fdcc11652c294b00f3d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f47af0d883adeaa2e58e1cc",
+            "version_id": "rgb_doc_2f47af0d883adeaa2e58e1cc:r1",
+            "document_name": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_2f47af0d883adeaa2e58e1cc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_914783c5e4454e57b562e66c",
+            "version_id": "rgb_doc_914783c5e4454e57b562e66c:r1",
+            "document_name": "rgb_doc_914783c5e4454e57b562e66c.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_914783c5e4454e57b562e66c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_914783c5e4454e57b562e66c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_810c19bc30fef5261aefaccb",
+            "version_id": "rgb_doc_810c19bc30fef5261aefaccb:r1",
+            "document_name": "rgb_doc_810c19bc30fef5261aefaccb.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_810c19bc30fef5261aefaccb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_810c19bc30fef5261aefaccb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_34e7f355f645f5a2a9e13e33",
+            "version_id": "rgb_doc_34e7f355f645f5a2a9e13e33:r1",
+            "document_name": "rgb_doc_34e7f355f645f5a2a9e13e33.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_34e7f355f645f5a2a9e13e33:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_34e7f355f645f5a2a9e13e33.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5994b251830078755c17ce3a",
+            "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+            "document_name": "rgb_doc_5994b251830078755c17ce3a.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_5994b251830078755c17ce3a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5994b251830078755c17ce3a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d242a3e5923d8ee3f5e64847",
+            "version_id": "rgb_doc_d242a3e5923d8ee3f5e64847:r1",
+            "document_name": "rgb_doc_d242a3e5923d8ee3f5e64847.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_d242a3e5923d8ee3f5e64847:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d242a3e5923d8ee3f5e64847.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_94a2383dde131575959d237c",
+            "version_id": "rgb_doc_94a2383dde131575959d237c:r1",
+            "document_name": "rgb_doc_94a2383dde131575959d237c.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_94a2383dde131575959d237c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_94a2383dde131575959d237c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b316a8dd5b0e7ff35a9ae22d",
+            "version_id": "rgb_doc_b316a8dd5b0e7ff35a9ae22d:r1",
+            "document_name": "rgb_doc_b316a8dd5b0e7ff35a9ae22d.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_b316a8dd5b0e7ff35a9ae22d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b316a8dd5b0e7ff35a9ae22d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6a113e20b403924d411baf87",
+            "version_id": "rgb_doc_6a113e20b403924d411baf87:r1",
+            "document_name": "rgb_doc_6a113e20b403924d411baf87.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_6a113e20b403924d411baf87:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6a113e20b403924d411baf87.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_913e09f6597b1abda7d48de8",
+            "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+            "document_name": "rgb_doc_913e09f6597b1abda7d48de8.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_913e09f6597b1abda7d48de8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_913e09f6597b1abda7d48de8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edefae16ce302fad80cb9fb1",
+            "version_id": "rgb_doc_edefae16ce302fad80cb9fb1:r1",
+            "document_name": "rgb_doc_edefae16ce302fad80cb9fb1.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_edefae16ce302fad80cb9fb1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edefae16ce302fad80cb9fb1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_28d2ebc41fc535f33b980d36",
+            "version_id": "rgb_doc_28d2ebc41fc535f33b980d36:r1",
+            "document_name": "rgb_doc_28d2ebc41fc535f33b980d36.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_28d2ebc41fc535f33b980d36:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_28d2ebc41fc535f33b980d36.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bbef35f58fd5b412a96809d4",
+            "version_id": "rgb_doc_bbef35f58fd5b412a96809d4:r1",
+            "document_name": "rgb_doc_bbef35f58fd5b412a96809d4.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_bbef35f58fd5b412a96809d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bbef35f58fd5b412a96809d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9cfee50b3792109de34de6ce",
+            "version_id": "rgb_doc_9cfee50b3792109de34de6ce:r1",
+            "document_name": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_9cfee50b3792109de34de6ce:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_26f6fa3941c4db8eb69b0812",
+            "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+            "document_name": "rgb_doc_26f6fa3941c4db8eb69b0812.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_26f6fa3941c4db8eb69b0812:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_26f6fa3941c4db8eb69b0812.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55889ee96060e9acd52a9a15",
+            "version_id": "rgb_doc_55889ee96060e9acd52a9a15:r1",
+            "document_name": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_55889ee96060e9acd52a9a15:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_17d9cbe0df0e655839d77fec",
+            "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+            "document_name": "rgb_doc_17d9cbe0df0e655839d77fec.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_17d9cbe0df0e655839d77fec:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_17d9cbe0df0e655839d77fec.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21bcce2fd0f77387227aae9d",
+            "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+            "document_name": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_21bcce2fd0f77387227aae9d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_347cb467ca623f06c8a243e0",
+            "version_id": "rgb_doc_347cb467ca623f06c8a243e0:r1",
+            "document_name": "rgb_doc_347cb467ca623f06c8a243e0.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_347cb467ca623f06c8a243e0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_347cb467ca623f06c8a243e0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_97c1dcc33c57fe566b08ed43",
+            "version_id": "rgb_doc_97c1dcc33c57fe566b08ed43:r1",
+            "document_name": "rgb_doc_97c1dcc33c57fe566b08ed43.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_97c1dcc33c57fe566b08ed43:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_97c1dcc33c57fe566b08ed43.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55c5f39c7081265514e153ac",
+            "version_id": "rgb_doc_55c5f39c7081265514e153ac:r1",
+            "document_name": "rgb_doc_55c5f39c7081265514e153ac.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_55c5f39c7081265514e153ac:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_55c5f39c7081265514e153ac.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_91ef7f4471ce8c656f992611",
+            "version_id": "rgb_doc_91ef7f4471ce8c656f992611:r1",
+            "document_name": "rgb_doc_91ef7f4471ce8c656f992611.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_91ef7f4471ce8c656f992611:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_91ef7f4471ce8c656f992611.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7ea1f856617ac1cfa84af186",
+            "version_id": "rgb_doc_7ea1f856617ac1cfa84af186:r1",
+            "document_name": "rgb_doc_7ea1f856617ac1cfa84af186.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_7ea1f856617ac1cfa84af186:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7ea1f856617ac1cfa84af186.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2ca58b06a97168e3a281b71b",
+            "version_id": "rgb_doc_2ca58b06a97168e3a281b71b:r1",
+            "document_name": "rgb_doc_2ca58b06a97168e3a281b71b.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_2ca58b06a97168e3a281b71b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2ca58b06a97168e3a281b71b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aeb4808f6b6f764f982d05fe",
+            "version_id": "rgb_doc_aeb4808f6b6f764f982d05fe:r1",
+            "document_name": "rgb_doc_aeb4808f6b6f764f982d05fe.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_aeb4808f6b6f764f982d05fe:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aeb4808f6b6f764f982d05fe.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_10153a23524fa0aff7bbf0ff",
+            "version_id": "rgb_doc_10153a23524fa0aff7bbf0ff:r1",
+            "document_name": "rgb_doc_10153a23524fa0aff7bbf0ff.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_10153a23524fa0aff7bbf0ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_10153a23524fa0aff7bbf0ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6f4ffd5c15ff49e7257a74a",
+            "version_id": "rgb_doc_b6f4ffd5c15ff49e7257a74a:r1",
+            "document_name": "rgb_doc_b6f4ffd5c15ff49e7257a74a.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_b6f4ffd5c15ff49e7257a74a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6f4ffd5c15ff49e7257a74a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1691dde8c0469936093952f1",
+            "version_id": "rgb_doc_1691dde8c0469936093952f1:r1",
+            "document_name": "rgb_doc_1691dde8c0469936093952f1.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_1691dde8c0469936093952f1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1691dde8c0469936093952f1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c77c6f6ef0fcc42c65985c5",
+            "version_id": "rgb_doc_5c77c6f6ef0fcc42c65985c5:r1",
+            "document_name": "rgb_doc_5c77c6f6ef0fcc42c65985c5.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_5c77c6f6ef0fcc42c65985c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5c77c6f6ef0fcc42c65985c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e3fdcbf9d554dd0bba6c0ef",
+            "version_id": "rgb_doc_9e3fdcbf9d554dd0bba6c0ef:r1",
+            "document_name": "rgb_doc_9e3fdcbf9d554dd0bba6c0ef.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_9e3fdcbf9d554dd0bba6c0ef:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9e3fdcbf9d554dd0bba6c0ef.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6ad1141d0e61f5221c57caa2",
+            "version_id": "rgb_doc_6ad1141d0e61f5221c57caa2:r1",
+            "document_name": "rgb_doc_6ad1141d0e61f5221c57caa2.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_6ad1141d0e61f5221c57caa2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6ad1141d0e61f5221c57caa2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_eeca7bd362e672d651662d06",
+            "version_id": "rgb_doc_eeca7bd362e672d651662d06:r1",
+            "document_name": "rgb_doc_eeca7bd362e672d651662d06.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_eeca7bd362e672d651662d06:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_eeca7bd362e672d651662d06.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fdc283fa2a6f3f902ca65675",
+            "version_id": "rgb_doc_fdc283fa2a6f3f902ca65675:r1",
+            "document_name": "rgb_doc_fdc283fa2a6f3f902ca65675.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_fdc283fa2a6f3f902ca65675:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fdc283fa2a6f3f902ca65675.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6cc7ac64b90a952a45a58c36",
+            "version_id": "rgb_doc_6cc7ac64b90a952a45a58c36:r1",
+            "document_name": "rgb_doc_6cc7ac64b90a952a45a58c36.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_6cc7ac64b90a952a45a58c36:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6cc7ac64b90a952a45a58c36.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62dfa43a5286512295e0baf9",
+            "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+            "document_name": "rgb_doc_62dfa43a5286512295e0baf9.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_62dfa43a5286512295e0baf9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62dfa43a5286512295e0baf9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9edcb4b3631628c37c399da7",
+            "version_id": "rgb_doc_9edcb4b3631628c37c399da7:r1",
+            "document_name": "rgb_doc_9edcb4b3631628c37c399da7.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_9edcb4b3631628c37c399da7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9edcb4b3631628c37c399da7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_433e66dc98b4ae8ac412f6cd",
+            "version_id": "rgb_doc_433e66dc98b4ae8ac412f6cd:r1",
+            "document_name": "rgb_doc_433e66dc98b4ae8ac412f6cd.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_433e66dc98b4ae8ac412f6cd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_433e66dc98b4ae8ac412f6cd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 9.015624993480742,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.110625004628673,
+          "evidence_ms": 2.227749995654449,
+          "fusion_ms": 1.1147920013172552,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 36.551208002492785,
+          "context_chars": 931,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_4910b288777b9c61",
+          "ev_52f977eee065b5ae",
+          "ev_5664610be24b9f80",
+          "ev_462112e3631b4738",
+          "ev_0e9504e53ca28ab2",
+          "ev_c86449bd204229f9",
+          "ev_b04527990c48316b",
+          "ev_62b3d71cad62a8b4",
+          "ev_190ada9c7f726eea",
+          "ev_977ea667c5ecaeac"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_4910b288777b9c61",
+            "content": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助江苏苏宁 ... 江苏苏宁，随队获得2015赛季中超联赛及亚冠冠军、2016赛季中超冠军， 在队 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_72f0e6af7710c0b1185cfd97",
+            "version_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1",
+            "document_name": "rgb_doc_72f0e6af7710c0b1185cfd97.txt",
+            "chunk_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1",
+              "block_ids": [
+                "rgb_doc_72f0e6af7710c0b1185cfd97:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 23.330013275146484,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "72f0e6af7710c0b1185cfd975bd7bad52d788ef3ad68344a8428d513f272ec2b",
+            "scope_digest": "145fb1e128ad693484fc08c586589621c487412ef39da9550778e7c2b15db29f",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_6164c96077a014b487bf",
+                "source_id": "S1",
+                "evidence_id": "ev_4910b288777b9c61",
+                "raw_text": "9",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助江苏苏宁 ...",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d6de87ae02204db6adf8",
+                "source_id": "S1",
+                "evidence_id": "ev_4910b288777b9c61",
+                "raw_text": "2018",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助江苏苏宁 ... 江苏苏宁，",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_52f977eee065b5ae",
+            "content": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助广州恒大 ... 广州恒大，随队获得2015赛季中超联赛及亚冠冠军、2016赛季中超冠军， 在队 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_71415011d9b3e0d2b0d641a3",
+            "version_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1",
+            "document_name": "rgb_doc_71415011d9b3e0d2b0d641a3.txt",
+            "chunk_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1",
+              "block_ids": [
+                "rgb_doc_71415011d9b3e0d2b0d641a3:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 23.167146682739258,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "71415011d9b3e0d2b0d641a3b7526cb77bba3bd725a552caaa48f2ed2e712b3c",
+            "scope_digest": "79bde0d9b9fa08d70d782c72af2b633355c77e88edf9bc4c39fd6bb823eba7f8",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_c264538c86b4ad9ad7ac",
+                "source_id": "S2",
+                "evidence_id": "ev_52f977eee065b5ae",
+                "raw_text": "9",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助广州恒大 ...",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_7a8c4425d45bf1214754",
+                "source_id": "S2",
+                "evidence_id": "ev_52f977eee065b5ae",
+                "raw_text": "2018",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Oct 9, 2018 ... 在队两年多，孔卡率领球队夺得3次中超冠军，而最辉煌的是帮助广州恒大 ... 广州恒大，",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_5664610be24b9f80",
+            "content": "Nov 2, 2017 ... 如果恒大和上港能在2018赛季上演精彩激烈的第三季交锋，无疑能让中超竞争更 ... 由于恒大是三线作战，上港只需要一线作战，2015赛季中超冠军的天平， ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b23314de28370cf3ae5d49a1",
+            "version_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1",
+            "document_name": "rgb_doc_b23314de28370cf3ae5d49a1.txt",
+            "chunk_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1",
+              "block_ids": [
+                "rgb_doc_b23314de28370cf3ae5d49a1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 21.980485916137695,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "b23314de28370cf3ae5d49a12ceedc3dc6b5eb385cf9fdd72806b596bbbe9a98",
+            "scope_digest": "2155bc38350cec11f05b72e14042f9b8b5bd5161f7a7c3c1938d4147b740d4c3",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_4a4eee42c567b2d9f239",
+                "source_id": "S3",
+                "evidence_id": "ev_5664610be24b9f80",
+                "raw_text": "2",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Nov 2, 2017 ... 如果恒大和上港能在2018赛季上演精彩激烈的第三季交锋，无疑能让中超竞争更",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d82a33e5788d5c778326",
+                "source_id": "S3",
+                "evidence_id": "ev_5664610be24b9f80",
+                "raw_text": "2017",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Nov 2, 2017 ... 如果恒大和上港能在2018赛季上演精彩激烈的第三季交锋，无疑能让中超竞争更 ... 由",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_462112e3631b4738",
+            "content": "Sep 18, 2015 ... 转眼间，2015赛季中国足球超级联赛已经到了最后5轮的“收官”阶段，相比于 ... 考虑到未来中超卫冕冠军将遭遇“魔鬼赛程”，上港远未到缴械投降的时候。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c520b6e202a6b25c14a2d0",
+            "version_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1",
+            "document_name": "rgb_doc_65c520b6e202a6b25c14a2d0.txt",
+            "chunk_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1",
+              "block_ids": [
+                "rgb_doc_65c520b6e202a6b25c14a2d0:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 20.840003967285156,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 93,
+            "content_hash": "65c520b6e202a6b25c14a2d02c5e271a99ba78deaba59dca4365bc1610136478",
+            "scope_digest": "ee1d4ed23bc4ab2e4eb789453fac22ef8e7f427f86ad3d0c7389860ef4039f1b",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_0ded9edc20231e33a804",
+                "source_id": "S4",
+                "evidence_id": "ev_462112e3631b4738",
+                "raw_text": "18",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Sep 18, 2015 ... 转眼间，2015赛季中国足球超级联赛已经到了最后5轮的“收官”阶段，相比于",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_e84d1f1412c554e95ace",
+                "source_id": "S4",
+                "evidence_id": "ev_462112e3631b4738",
+                "raw_text": "2015",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Sep 18, 2015 ... 转眼间，2015赛季中国足球超级联赛已经到了最后5轮的“收官”阶段，相比于 ... 考",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_0e9504e53ca28ab2",
+            "content": "Dec 21, 2015 ... 江苏苏宁今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆转，无缘创造更好 ... 2015赛季中超联赛冠军奖杯. 2015赛季亚冠联赛冠军奖杯.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9f691bd40e0201ee82d499d9",
+            "version_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1",
+            "document_name": "rgb_doc_9f691bd40e0201ee82d499d9.txt",
+            "chunk_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1",
+              "block_ids": [
+                "rgb_doc_9f691bd40e0201ee82d499d9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 20.345741271972656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "9f691bd40e0201ee82d499d95ae1f91040d8912f830baf8f40c4ef43e83b46eb",
+            "scope_digest": "a44aeff22d51a9acf0bfb3f12677f24ab06981dd19ee1de862abee98a166f7b4",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_c637ab4a6031e341c9db",
+                "source_id": "S5",
+                "evidence_id": "ev_0e9504e53ca28ab2",
+                "raw_text": "21",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 21, 2015 ... 江苏苏宁今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_471d4171b2e3bdeb073e",
+                "source_id": "S5",
+                "evidence_id": "ev_0e9504e53ca28ab2",
+                "raw_text": "2015",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 21, 2015 ... 江苏苏宁今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆转，无缘创造",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_c86449bd204229f9",
+            "content": "Dec 21, 2015 ... 广州恒大今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆转，无缘创造更好 ... 2015赛季中超联赛冠军奖杯. 2015赛季亚冠联赛冠军奖杯.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8e63adc488c5e79ca1e4975",
+            "version_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1",
+            "document_name": "rgb_doc_c8e63adc488c5e79ca1e4975.txt",
+            "chunk_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1",
+              "block_ids": [
+                "rgb_doc_c8e63adc488c5e79ca1e4975:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 20.345741271972656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "c8e63adc488c5e79ca1e49754e38d5bb7ebfa82a6d0094746d7556b47b07fcf5",
+            "scope_digest": "137766b0eb874fc18e59045c0866c948f1bbe13b59c213b56dbbd12288297c59",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_fbbaaab7b1cc24b60b0f",
+                "source_id": "S6",
+                "evidence_id": "ev_c86449bd204229f9",
+                "raw_text": "21",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 21, 2015 ... 广州恒大今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_fd0504b82d0cc594a3a8",
+                "source_id": "S6",
+                "evidence_id": "ev_c86449bd204229f9",
+                "raw_text": "2015",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 21, 2015 ... 广州恒大今天下午在2015世俱杯季军争夺战中1比2输遭J联赛冠军广岛三箭逆转，无缘创造",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b04527990c48316b",
+            "content": "本届联赛将有包括连续四届卫冕冠军江苏苏宁淘宝在内的16支球队参加。 ... 2015赛季中超的外援注册方案为4＋1，即每队可注册五名外援，其中至少有一人必须是持有亚足联 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_13969fac3e76fccbd14c230c",
+            "version_id": "rgb_doc_13969fac3e76fccbd14c230c:r1",
+            "document_name": "rgb_doc_13969fac3e76fccbd14c230c.txt",
+            "chunk_id": "rgb_doc_13969fac3e76fccbd14c230c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_13969fac3e76fccbd14c230c:r1",
+              "block_ids": [
+                "rgb_doc_13969fac3e76fccbd14c230c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 19.297685623168945,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 88,
+            "content_hash": "13969fac3e76fccbd14c230c5fdce1e46f7d34b5ed937282b721f29679478532",
+            "scope_digest": "0d6f630df3ec2aeb9a29efc057002530833fe40e08ab4e2d56b93bf616075efc",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_bcf2b8d530a021c085dd",
+                "source_id": "S7",
+                "evidence_id": "ev_b04527990c48316b",
+                "raw_text": "1",
+                "start": 56,
+                "end": 57,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "连续四届卫冕冠军江苏苏宁淘宝在内的16支球队参加。 ... 2015赛季中超的外援注册方案为4＋1，即每队可注册五名外援，其中至少有一人必须是持有亚足联 ...",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_62b3d71cad62a8b4",
+            "content": "Mar 6, 2015 ... 虽然联赛开始后他们将不得不双线作战，但由于纸面实力都不俗，4支球队都是新赛季中超冠军的有力争夺者。 提到争冠，不得不提的是上海上港，在埃里克森 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95b86effd33eb5138dcf1f30",
+            "version_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1",
+            "document_name": "rgb_doc_95b86effd33eb5138dcf1f30.txt",
+            "chunk_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1",
+              "block_ids": [
+                "rgb_doc_95b86effd33eb5138dcf1f30:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 19.104965209960938,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 91,
+            "content_hash": "95b86effd33eb5138dcf1f30c6170a97df13b0a3408e19016d18141497fbf701",
+            "scope_digest": "5c1dc7c45b8e3aa43810b412868bea24556b2ae9b29449fa80d4dbf260d64c9d",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_3e1c4c4b78d30d3a4ad2",
+                "source_id": "S8",
+                "evidence_id": "ev_62b3d71cad62a8b4",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 6, 2015 ... 虽然联赛开始后他们将不得不双线作战，但由于纸面实力都不俗，4支球队都是新赛",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_44808a951a3a192c1a03",
+                "source_id": "S8",
+                "evidence_id": "ev_62b3d71cad62a8b4",
+                "raw_text": "2015",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 6, 2015 ... 虽然联赛开始后他们将不得不双线作战，但由于纸面实力都不俗，4支球队都是新赛季中超冠军的",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_190ada9c7f726eea",
+            "content": "本届联赛将有包括连续四届卫冕冠军广州恒大淘宝在内的16支球队参加。 ... 2015赛季中超的外援注册方案为4＋1，即每队可注册五名外援，其中至少有一人必须是持有亚足联 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d17f8b6f15f10818c119f104",
+            "version_id": "rgb_doc_d17f8b6f15f10818c119f104:r1",
+            "document_name": "rgb_doc_d17f8b6f15f10818c119f104.txt",
+            "chunk_id": "rgb_doc_d17f8b6f15f10818c119f104:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_d17f8b6f15f10818c119f104:r1",
+              "block_ids": [
+                "rgb_doc_d17f8b6f15f10818c119f104:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 19.104965209960938,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 88,
+            "content_hash": "d17f8b6f15f10818c119f10436580528f49aa45424c9da9a61160ac554e07fbc",
+            "scope_digest": "06aa0d5407ac42a93e56bafb149225a192555c462873f91eadc168ad6c925590",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_65602ddc3c5f871ceee8",
+                "source_id": "S9",
+                "evidence_id": "ev_190ada9c7f726eea",
+                "raw_text": "1",
+                "start": 56,
+                "end": 57,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "连续四届卫冕冠军广州恒大淘宝在内的16支球队参加。 ... 2015赛季中超的外援注册方案为4＋1，即每队可注册五名外援，其中至少有一人必须是持有亚足联 ...",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_977ea667c5ecaeac",
+            "content": "2015赛季亚足联冠军联赛，简称2015年亚冠联赛，是2015年亚洲足球俱乐部最高等级的赛事。该赛季是第34届亚洲俱乐部顶级足球杯赛，也是第13届亚足联冠军联赛， ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2ef019ae7e1711775ae1d5a",
+            "version_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1",
+            "document_name": "rgb_doc_f2ef019ae7e1711775ae1d5a.txt",
+            "chunk_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1",
+              "block_ids": [
+                "rgb_doc_f2ef019ae7e1711775ae1d5a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 85
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 17.637292861938477,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 85,
+            "content_hash": "f2ef019ae7e1711775ae1d5af3ecad45a164f874a50bf6c43e0d0ba9b79c3da2",
+            "scope_digest": "651b9a0b5e0298151464d5b5e0e2bebb3dbe4fe5a3a6a7d605df347144ffe907",
+            "trace_id": "57e2313f8b82452ca75ac979021166de",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_0e9504e53ca28ab2",
+      "ev_462112e3631b4738",
+      "ev_4910b288777b9c61",
+      "ev_52f977eee065b5ae",
+      "ev_5664610be24b9f80",
+      "ev_62b3d71cad62a8b4",
+      "ev_b04527990c48316b",
+      "ev_c86449bd204229f9"
+    ],
+    "evidence": {
+      "ev_4910b288777b9c61": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_72f0e6af7710c0b1185cfd97",
+        "version_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1",
+        "document_name": "rgb_doc_72f0e6af7710c0b1185cfd97.txt",
+        "chunk_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_72f0e6af7710c0b1185cfd97:r1",
+          "block_ids": [
+            "rgb_doc_72f0e6af7710c0b1185cfd97:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 23.330013275146484,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "72f0e6af7710c0b1185cfd975bd7bad52d788ef3ad68344a8428d513f272ec2b",
+        "scope_digest": "145fb1e128ad693484fc08c586589621c487412ef39da9550778e7c2b15db29f",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_52f977eee065b5ae": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_71415011d9b3e0d2b0d641a3",
+        "version_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1",
+        "document_name": "rgb_doc_71415011d9b3e0d2b0d641a3.txt",
+        "chunk_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_71415011d9b3e0d2b0d641a3:r1",
+          "block_ids": [
+            "rgb_doc_71415011d9b3e0d2b0d641a3:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 23.167146682739258,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "71415011d9b3e0d2b0d641a3b7526cb77bba3bd725a552caaa48f2ed2e712b3c",
+        "scope_digest": "79bde0d9b9fa08d70d782c72af2b633355c77e88edf9bc4c39fd6bb823eba7f8",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_5664610be24b9f80": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b23314de28370cf3ae5d49a1",
+        "version_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1",
+        "document_name": "rgb_doc_b23314de28370cf3ae5d49a1.txt",
+        "chunk_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b23314de28370cf3ae5d49a1:r1",
+          "block_ids": [
+            "rgb_doc_b23314de28370cf3ae5d49a1:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 21.980485916137695,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "b23314de28370cf3ae5d49a12ceedc3dc6b5eb385cf9fdd72806b596bbbe9a98",
+        "scope_digest": "2155bc38350cec11f05b72e14042f9b8b5bd5161f7a7c3c1938d4147b740d4c3",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_462112e3631b4738": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_65c520b6e202a6b25c14a2d0",
+        "version_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1",
+        "document_name": "rgb_doc_65c520b6e202a6b25c14a2d0.txt",
+        "chunk_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_65c520b6e202a6b25c14a2d0:r1",
+          "block_ids": [
+            "rgb_doc_65c520b6e202a6b25c14a2d0:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 93
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 20.840003967285156,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 93,
+        "content_hash": "65c520b6e202a6b25c14a2d02c5e271a99ba78deaba59dca4365bc1610136478",
+        "scope_digest": "ee1d4ed23bc4ab2e4eb789453fac22ef8e7f427f86ad3d0c7389860ef4039f1b",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_0e9504e53ca28ab2": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9f691bd40e0201ee82d499d9",
+        "version_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1",
+        "document_name": "rgb_doc_9f691bd40e0201ee82d499d9.txt",
+        "chunk_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9f691bd40e0201ee82d499d9:r1",
+          "block_ids": [
+            "rgb_doc_9f691bd40e0201ee82d499d9:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 20.345741271972656,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "9f691bd40e0201ee82d499d95ae1f91040d8912f830baf8f40c4ef43e83b46eb",
+        "scope_digest": "a44aeff22d51a9acf0bfb3f12677f24ab06981dd19ee1de862abee98a166f7b4",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_c86449bd204229f9": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_c8e63adc488c5e79ca1e4975",
+        "version_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1",
+        "document_name": "rgb_doc_c8e63adc488c5e79ca1e4975.txt",
+        "chunk_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_c8e63adc488c5e79ca1e4975:r1",
+          "block_ids": [
+            "rgb_doc_c8e63adc488c5e79ca1e4975:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 20.345741271972656,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "c8e63adc488c5e79ca1e49754e38d5bb7ebfa82a6d0094746d7556b47b07fcf5",
+        "scope_digest": "137766b0eb874fc18e59045c0866c948f1bbe13b59c213b56dbbd12288297c59",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b04527990c48316b": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_13969fac3e76fccbd14c230c",
+        "version_id": "rgb_doc_13969fac3e76fccbd14c230c:r1",
+        "document_name": "rgb_doc_13969fac3e76fccbd14c230c.txt",
+        "chunk_id": "rgb_doc_13969fac3e76fccbd14c230c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_13969fac3e76fccbd14c230c:r1",
+          "block_ids": [
+            "rgb_doc_13969fac3e76fccbd14c230c:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 88
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 19.297685623168945,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 88,
+        "content_hash": "13969fac3e76fccbd14c230c5fdce1e46f7d34b5ed937282b721f29679478532",
+        "scope_digest": "0d6f630df3ec2aeb9a29efc057002530833fe40e08ab4e2d56b93bf616075efc",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_62b3d71cad62a8b4": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_95b86effd33eb5138dcf1f30",
+        "version_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1",
+        "document_name": "rgb_doc_95b86effd33eb5138dcf1f30.txt",
+        "chunk_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_95b86effd33eb5138dcf1f30:r1",
+          "block_ids": [
+            "rgb_doc_95b86effd33eb5138dcf1f30:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 91
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 19.104965209960938,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 91,
+        "content_hash": "95b86effd33eb5138dcf1f30c6170a97df13b0a3408e19016d18141497fbf701",
+        "scope_digest": "5c1dc7c45b8e3aa43810b412868bea24556b2ae9b29449fa80d4dbf260d64c9d",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_190ada9c7f726eea": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_d17f8b6f15f10818c119f104",
+        "version_id": "rgb_doc_d17f8b6f15f10818c119f104:r1",
+        "document_name": "rgb_doc_d17f8b6f15f10818c119f104.txt",
+        "chunk_id": "rgb_doc_d17f8b6f15f10818c119f104:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_d17f8b6f15f10818c119f104:r1",
+          "block_ids": [
+            "rgb_doc_d17f8b6f15f10818c119f104:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 88
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 19.104965209960938,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 88,
+        "content_hash": "d17f8b6f15f10818c119f10436580528f49aa45424c9da9a61160ac554e07fbc",
+        "scope_digest": "06aa0d5407ac42a93e56bafb149225a192555c462873f91eadc168ad6c925590",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_977ea667c5ecaeac": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_f2ef019ae7e1711775ae1d5a",
+        "version_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1",
+        "document_name": "rgb_doc_f2ef019ae7e1711775ae1d5a.txt",
+        "chunk_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_f2ef019ae7e1711775ae1d5a:r1",
+          "block_ids": [
+            "rgb_doc_f2ef019ae7e1711775ae1d5a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 85
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 17.637292861938477,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 85,
+        "content_hash": "f2ef019ae7e1711775ae1d5af3ecad45a164f874a50bf6c43e0d0ba9b79c3da2",
+        "scope_digest": "651b9a0b5e0298151464d5b5e0e2bebb3dbe4fe5a3a6a7d605df347144ffe907",
+        "trace_id": "57e2313f8b82452ca75ac979021166de",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_4910b288777b9c61",
+      "S2": "ev_52f977eee065b5ae",
+      "S3": "ev_5664610be24b9f80",
+      "S4": "ev_462112e3631b4738",
+      "S5": "ev_0e9504e53ca28ab2",
+      "S6": "ev_c86449bd204229f9",
+      "S7": "ev_b04527990c48316b",
+      "S8": "ev_62b3d71cad62a8b4",
+      "S9": "ev_190ada9c7f726eea",
+      "S10": "ev_977ea667c5ecaeac"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": "citation_repair_failed"
+  },
+  "generation_status": "completed"
+}

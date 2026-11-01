@@ -1,0 +1,3856 @@
+{
+  "question_id": "rgb_zh_0014",
+  "result": {
+    "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+    "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:1",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:2",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:3",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "context_chars": 1189,
+        "prompt_tokens": 8440,
+        "completion_tokens": 53,
+        "total_tokens": 8493,
+        "context_compaction_count": 0,
+        "context_chars_before": 1189,
+        "context_chars_after": 1189,
+        "estimated_input_tokens": 12115,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1469,
+        "remaining_run_tokens": 111507,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8440,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3675
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:4",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1189
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:5",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "tool_call_id": "call_aa29f92da38842f6bd6489",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:6",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "tool_call_id": "call_aa29f92da38842f6bd6489",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:7",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_aa29f92da38842f6bd6489",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 9,
+        "output_chars_before": 99575,
+        "output_chars_after": 14468,
+        "removed_chars": 85107,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:8",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:9",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:10",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "context_chars": 15657,
+        "prompt_tokens": 15174,
+        "completion_tokens": 201,
+        "total_tokens": 15375,
+        "context_compaction_count": 0,
+        "context_chars_before": 15657,
+        "context_chars_after": 15657,
+        "estimated_input_tokens": 21779,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 8996,
+        "evidence_tokens": 3304,
+        "history_tokens": 2137,
+        "remaining_run_tokens": 96132,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15174,
+        "usage_source": "provider",
+        "estimation_error_tokens": -6605
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:11",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "model_visible_evidence_count": 9,
+        "context_chars": 15657
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:12",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "citation_validation_reason": [
+          "invalid_claim_structure",
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:13",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "context_chars": 2869,
+        "prompt_tokens": 1687,
+        "completion_tokens": 120,
+        "total_tokens": 1807,
+        "context_compaction_count": 0,
+        "context_chars_before": 2869,
+        "context_chars_after": 2869,
+        "estimated_input_tokens": 4051,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 4051,
+        "remaining_run_tokens": 94325,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 1687,
+        "usage_source": "provider",
+        "estimation_error_tokens": -2364
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:14",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:15",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "delta": "美国2021年GDP实际增长率为5.7%。 [1] [2] [3] [4]\n\n美国2021年GDP名义增长率为10.24%。 [1]\n\n美国2021年第四季度GDP年增长率为6.9%。 [2]\n\n美国2021年第四季度GDP同比增长5.5%。 [5]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:16",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746",
+        "final_citation_count": 5,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_ca1f026c358043c19bdca1214db4fa36:bdc29f01893045d396fb8e04da10c7df:17",
+        "run_id": "run_ca1f026c358043c19bdca1214db4fa36",
+        "thread_id": "thread_eadddca079cf42d8b1ea2cffb416c746"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 25301,
+      "completion_tokens": 374,
+      "total_tokens": 25675
+    },
+    "elapsed_seconds": 11.019363750005141,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 9,
+      "output_truncated": true,
+      "context_chars": 15657,
+      "prompt_tokens": 25301,
+      "completion_tokens": 374,
+      "total_tokens": 25675,
+      "context_compaction_count": 0,
+      "context_chars_before": 2869,
+      "context_chars_after": 2869,
+      "estimated_input_tokens": 4051,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 4051,
+      "remaining_run_tokens": 94325,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 1687,
+      "usage_source": "provider",
+      "estimation_error_tokens": -2364,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_aa29f92da38842f6bd6489",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 9,
+          "output_chars_before": 99575,
+          "output_chars_after": 14468,
+          "removed_chars": 85107,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "invalid_claim_structure",
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 2869,
+      "repair_visible_evidence_count": 9,
+      "final_citation_count": 5,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "美国2021年GDP实际增长率为5.7%。 [1] [2] [3] [4]\n\n美国2021年GDP名义增长率为10.24%。 [1]\n\n美国2021年第四季度GDP年增长率为6.9%。 [2]\n\n美国2021年第四季度GDP同比增长5.5%。 [5]",
+      "citations": {
+        "ev_cc8cea5a0e609fcf": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+          "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+          "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+          "chunk_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "5%，进入负增长，基数较低，所以在2020年低基数影响下，2021年美国GDP实现了较高的增长率。 同时，美国GDP数据也公布了，根据统计，2021年美国GDP总量首次突破23万亿美元大关，达到23.03万亿美元，依然是全球第一大经济体，要知道2020年美国GDP为20.89万亿美元，GDP增量超过2万亿美元。  但是，如果按照正常计算，美国GDP增长率应该是10.24%，为什么GDP增长率却是5.7%？事实上，10.24%属于名义增速，其中包括了通胀水平等因素，抛开这些因素之后就会得出GDP实际增长率，也就是5.7%。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+            "block_ids": [
+              "rgb_doc_e71f6e32b9abe8a66a634e91:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 263
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 18.85466766357422,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_bcec114c13a6e77c": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_4f1f76f5ba656fdc752b98fd",
+          "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+          "document_name": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+          "chunk_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "source_score": null,
+          "fused_score": 0.015625,
+          "rerank_score": null,
+          "content": "尽管受到新冠疫情的困扰，但美国经济持续增长，2021年第四季度国内生产总值（GDP）达到6.9%的年增长率，超过经济学家增长5.5%的预期，这一增长速度是37年来最强劲的。与此同时，股市、房市大幅度增长，通货膨胀率也快速上涨，失业率则处于历史低位。 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5.7%，GDP总额达到22.99万亿美元。此外，个人消费支出增长了7.9%（个人消费占GDP三分之二的分量）、国内私人资本投资增加了9.5%，成为GDP增长的重要动力。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+            "block_ids": [
+              "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 246
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 16.32990264892578,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_3bbae644657e84aa": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_bb23abe95eb45731ad9ed4a0",
+          "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+          "document_name": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+          "chunk_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "Feb 11, 2022 ... 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5.7%，GDP总额达到22.99万亿美元。此外，个人消费支出增长了7.9%（个人消费占GDP三分之 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+            "block_ids": [
+              "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 107
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 16.27951431274414,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_63e8683fa81051b6": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_44366bbec32b58cd43a37160",
+          "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+          "document_name": "rgb_doc_44366bbec32b58cd43a37160.txt",
+          "chunk_id": "rgb_doc_44366bbec32b58cd43a37160:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 6,
+          "source_score": null,
+          "fused_score": 0.015151515151515152,
+          "rerank_score": null,
+          "content": "9%，就会是一个比正常水平略高的增长率。 再者，2021年美国经济实现了5.7%的高增长，是1985年以来的最高纪录，但应该注意的是，这是在2020年出现经济下降3.4%后的恢复性增长，两年平均增长率只有1%，还低于美国的长期平均增长率。特别需要指出的是，美国为扭转2020年下降势头并在2021年实现经济增长，付出了巨大的代价。一是美国财政连续两年出现大规模赤字，根据美国财政部及行政管理和预算局发布的联合报告，2020和2021两个财年的赤字分别高达3.13万亿美元和2.77万亿美元，为美国历史上赤字规模最大的两个年份，赤字占GDP的比例分别高达15.2%和12.4%。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+            "block_ids": [
+              "rgb_doc_44366bbec32b58cd43a37160:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 288
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 6,
+              "score": 15.561494827270508,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_32b257de833142ca": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_dbd77de4ad9eecd838648bba",
+          "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+          "document_name": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+          "chunk_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 8,
+          "source_score": null,
+          "fused_score": 0.014705882352941176,
+          "rerank_score": null,
+          "content": "1月中下旬，中美两国官方统计机构先后发布2021年第四季度及全年国民经济核算数据，引起各国经济分析机构和国际机构的广泛关注。比较有代表性的一种观点认为，中国第四季度经济增长明显下降，而美国第四季度经济增长明显超出预期，因此，美国的增长态势好于中国。本人认为有必要对上述观点进行解析。 首先，直接将中美两国经济数据进行比较，似乎美国经济增速明显超过中国。据中国国家统计局发布的数据，2021年第四季度中国GDP同比增长4.0%，而据美国商务部经济分析局发布的数据，当季美国GDP同比增长5.5%，增长率确实高于中国。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+            "block_ids": [
+              "rgb_doc_dbd77de4ad9eecd838648bba:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 257
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 8,
+              "score": 14.538639068603516,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "美国2021年GDP实际增长率为5.7%。",
+          "source_ids": [
+            "S1",
+            "S4",
+            "S5",
+            "S6"
+          ]
+        },
+        {
+          "text": "美国2021年GDP名义增长率为10.24%。",
+          "source_ids": [
+            "S1"
+          ]
+        },
+        {
+          "text": "美国2021年第四季度GDP年增长率为6.9%。",
+          "source_ids": [
+            "S4"
+          ]
+        },
+        {
+          "text": "美国2021年第四季度GDP同比增长5.5%。",
+          "source_ids": [
+            "S8"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_cc8cea5a0e609fcf"
+        },
+        {
+          "number": 2,
+          "source_id": "S4",
+          "evidence_id": "ev_bcec114c13a6e77c"
+        },
+        {
+          "number": 3,
+          "source_id": "S5",
+          "evidence_id": "ev_3bbae644657e84aa"
+        },
+        {
+          "number": 4,
+          "source_id": "S6",
+          "evidence_id": "ev_63e8683fa81051b6"
+        },
+        {
+          "number": 5,
+          "source_id": "S8",
+          "evidence_id": "ev_32b257de833142ca"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_aa29f92da38842f6bd6489",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "美国 2021年 GDP 增长率",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+            "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+            "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "chunk_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 18.85466766357422,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "5%，进入负增长，基数较低，所以在2020年低基数影响下，2021年美国GDP实现了较高的增长率。 同时，美国GDP数据也公布了，根据统计，2021年美国GDP总量首次突破23万亿美元大关，达到23.03万亿美元，依然是全球第一大经济体，要知道2020年美国GDP为20.89万亿美元，GDP增量超过2万亿美元。  但是，如果按照正常计算，美国GDP增长率应该是10.24%，为什么GDP增长率却是5.7%？事实上，10.24%属于名义增速，其中包括了通胀水平等因素，抛开这些因素之后就会得出GDP实际增长率，也就是5.7%。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+              "block_ids": [
+                "rgb_doc_e71f6e32b9abe8a66a634e91:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 263
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 18.85466766357422,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a6512fe92edbcc22bca2bc25",
+            "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+            "document_name": "rgb_doc_a6512fe92edbcc22bca2bc25.txt",
+            "chunk_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 18.004901885986328,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "7%。但两国统计机构在数据表达方式上习惯不同，中国直接公布GDP的季度环比增长率，而美国公布的是季度环比增长率折合年率的数据。此外，2021年第四季度美国能够实现较高增长，很大程度上是受到补充库存的影响。按照2012年不变价计算，2021年四季度美国GDP（折合年率）环比增加3271亿美元，其中库存增加2403亿美元，对GDP增长的贡献率达到73.5%。2021年四季度库存增加额占当季GDP比例略高于0.9%，而本世纪以来美国各季度库存增加额占GDP比例的平均值为0.2%。如果库存比例与平均值持平，则2021年第四季度的GDP环比增长率仅为0.7%，折合年率为2.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+              "block_ids": [
+                "rgb_doc_a6512fe92edbcc22bca2bc25:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 285
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 18.004901885986328,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18b56746e9f57e0e24bca4b5",
+            "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+            "document_name": "rgb_doc_18b56746e9f57e0e24bca4b5.txt",
+            "chunk_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 17.693256378173828,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "但应该看到的是，2020-2021年期间，由于受疫情影响，两国经济增长率都出现了很大波动，季度经济增长率都曾出现较大幅度下降，且两国经济恢复步调存在差异。为此，以2019年四季度为基期，观察两年平均增长率，似乎更能反映增长态势。美国2020-2021年第四季度的季度平均增长率为1.6%，而中国为5.2%，比美国高出不少。其中的主要原因，是2020年第四季度美国经济刚刚出现恢复。 其次，2021年第四季度中美两国GDP环比增长率比较接近，且美国的增长受到补充库存的较大影响。2021年三、四季度中国GDP环比增长率分别为0.7%和1.6%，美国分别为0.6%和1.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+              "block_ids": [
+                "rgb_doc_18b56746e9f57e0e24bca4b5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 283
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 17.693256378173828,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4f1f76f5ba656fdc752b98fd",
+            "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+            "document_name": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+            "chunk_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 16.32990264892578,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "尽管受到新冠疫情的困扰，但美国经济持续增长，2021年第四季度国内生产总值（GDP）达到6.9%的年增长率，超过经济学家增长5.5%的预期，这一增长速度是37年来最强劲的。与此同时，股市、房市大幅度增长，通货膨胀率也快速上涨，失业率则处于历史低位。 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5.7%，GDP总额达到22.99万亿美元。此外，个人消费支出增长了7.9%（个人消费占GDP三分之二的分量）、国内私人资本投资增加了9.5%，成为GDP增长的重要动力。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+              "block_ids": [
+                "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 246
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 16.32990264892578,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bb23abe95eb45731ad9ed4a0",
+            "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+            "document_name": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+            "chunk_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 16.27951431274414,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Feb 11, 2022 ... 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5.7%，GDP总额达到22.99万亿美元。此外，个人消费支出增长了7.9%（个人消费占GDP三分之 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+              "block_ids": [
+                "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 107
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 16.27951431274414,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_44366bbec32b58cd43a37160",
+            "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+            "document_name": "rgb_doc_44366bbec32b58cd43a37160.txt",
+            "chunk_id": "rgb_doc_44366bbec32b58cd43a37160:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 15.561494827270508,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "9%，就会是一个比正常水平略高的增长率。 再者，2021年美国经济实现了5.7%的高增长，是1985年以来的最高纪录，但应该注意的是，这是在2020年出现经济下降3.4%后的恢复性增长，两年平均增长率只有1%，还低于美国的长期平均增长率。特别需要指出的是，美国为扭转2020年下降势头并在2021年实现经济增长，付出了巨大的代价。一是美国财政连续两年出现大规模赤字，根据美国财政部及行政管理和预算局发布的联合报告，2020和2021两个财年的赤字分别高达3.13万亿美元和2.77万亿美元，为美国历史上赤字规模最大的两个年份，赤字占GDP的比例分别高达15.2%和12.4%。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+              "block_ids": [
+                "rgb_doc_44366bbec32b58cd43a37160:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 288
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.561494827270508,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb",
+            "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+            "document_name": "rgb_doc_3491d8ca8e8c31a7ad3009eb.txt",
+            "chunk_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 14.80256462097168,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "信贷资产质量及拨备的变化情况需保持关注。2021 年以 ... 度来看，一季度GDP 稳定增长；二季度GDP ... 收入增速为实际增长率，表中其他指标增速均为名义增长率；4.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+              "block_ids": [
+                "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 14.80256462097168,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dbd77de4ad9eecd838648bba",
+            "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+            "document_name": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+            "chunk_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 14.538639068603516,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "1月中下旬，中美两国官方统计机构先后发布2021年第四季度及全年国民经济核算数据，引起各国经济分析机构和国际机构的广泛关注。比较有代表性的一种观点认为，中国第四季度经济增长明显下降，而美国第四季度经济增长明显超出预期，因此，美国的增长态势好于中国。本人认为有必要对上述观点进行解析。 首先，直接将中美两国经济数据进行比较，似乎美国经济增速明显超过中国。据中国国家统计局发布的数据，2021年第四季度中国GDP同比增长4.0%，而据美国商务部经济分析局发布的数据，当季美国GDP同比增长5.5%，增长率确实高于中国。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+              "block_ids": [
+                "rgb_doc_dbd77de4ad9eecd838648bba:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 257
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 14.538639068603516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+            "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+            "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "chunk_id": "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 13.994449615478516,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "GDP 增长率（年百分比） - Macao SAR, China from The World Bank: Data. ... 人均GDP增长（年增长率） ... 中国澳门特别行政区.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+              "block_ids": [
+                "rgb_doc_2fee0cf6aa6787537f752901:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 13.994449615478516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18c8cf89f1f10ee17515614d",
+            "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+            "document_name": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "chunk_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 13.878862380981445,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "Jan 31, 2022 ... 在我国GDP数据公布后不久，美国也公布了2021年的相关数据。1月27日，美国GDP增速公布，2021年美国GDP同比增长5.7%，这一数据创下了上世纪80年代以来的 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+              "block_ids": [
+                "rgb_doc_18c8cf89f1f10ee17515614d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 104
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 13.878862380981445,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+            "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+            "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a6512fe92edbcc22bca2bc25",
+            "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+            "document_name": "rgb_doc_a6512fe92edbcc22bca2bc25.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_a6512fe92edbcc22bca2bc25:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a6512fe92edbcc22bca2bc25.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18b56746e9f57e0e24bca4b5",
+            "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+            "document_name": "rgb_doc_18b56746e9f57e0e24bca4b5.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_18b56746e9f57e0e24bca4b5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_18b56746e9f57e0e24bca4b5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4f1f76f5ba656fdc752b98fd",
+            "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+            "document_name": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bb23abe95eb45731ad9ed4a0",
+            "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+            "document_name": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_44366bbec32b58cd43a37160",
+            "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+            "document_name": "rgb_doc_44366bbec32b58cd43a37160.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_44366bbec32b58cd43a37160:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_44366bbec32b58cd43a37160.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb",
+            "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+            "document_name": "rgb_doc_3491d8ca8e8c31a7ad3009eb.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3491d8ca8e8c31a7ad3009eb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dbd77de4ad9eecd838648bba",
+            "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+            "document_name": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_dbd77de4ad9eecd838648bba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+            "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+            "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18c8cf89f1f10ee17515614d",
+            "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+            "document_name": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_18c8cf89f1f10ee17515614d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a2ead64db42d5110155e663a",
+            "version_id": "rgb_doc_a2ead64db42d5110155e663a:r1",
+            "document_name": "rgb_doc_a2ead64db42d5110155e663a.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_a2ead64db42d5110155e663a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a2ead64db42d5110155e663a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0ee5246a050da25af6a0f0d5",
+            "version_id": "rgb_doc_0ee5246a050da25af6a0f0d5:r1",
+            "document_name": "rgb_doc_0ee5246a050da25af6a0f0d5.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_0ee5246a050da25af6a0f0d5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0ee5246a050da25af6a0f0d5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_918cf5cb1b29696b006a1928",
+            "version_id": "rgb_doc_918cf5cb1b29696b006a1928:r1",
+            "document_name": "rgb_doc_918cf5cb1b29696b006a1928.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_918cf5cb1b29696b006a1928:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_918cf5cb1b29696b006a1928.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e3a126399952ad99f6ea810d",
+            "version_id": "rgb_doc_e3a126399952ad99f6ea810d:r1",
+            "document_name": "rgb_doc_e3a126399952ad99f6ea810d.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_e3a126399952ad99f6ea810d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e3a126399952ad99f6ea810d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dda3bd4afb6818359a4feaae",
+            "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+            "document_name": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_dda3bd4afb6818359a4feaae:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9b2a640b73c972bd90f6d20e",
+            "version_id": "rgb_doc_9b2a640b73c972bd90f6d20e:r1",
+            "document_name": "rgb_doc_9b2a640b73c972bd90f6d20e.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_9b2a640b73c972bd90f6d20e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9b2a640b73c972bd90f6d20e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d52ed00f0896129db0683f29",
+            "version_id": "rgb_doc_d52ed00f0896129db0683f29:r1",
+            "document_name": "rgb_doc_d52ed00f0896129db0683f29.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_d52ed00f0896129db0683f29:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d52ed00f0896129db0683f29.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_29bcfe678ae952c4158c59d7",
+            "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+            "document_name": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_29bcfe678ae952c4158c59d7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7",
+            "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+            "document_name": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a6e92de36bc3703504365253",
+            "version_id": "rgb_doc_a6e92de36bc3703504365253:r1",
+            "document_name": "rgb_doc_a6e92de36bc3703504365253.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_a6e92de36bc3703504365253:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a6e92de36bc3703504365253.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9abfbf592994a6a89a7e68ee",
+            "version_id": "rgb_doc_9abfbf592994a6a89a7e68ee:r1",
+            "document_name": "rgb_doc_9abfbf592994a6a89a7e68ee.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_9abfbf592994a6a89a7e68ee:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9abfbf592994a6a89a7e68ee.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2e45c9ef03942da70a7fee82",
+            "version_id": "rgb_doc_2e45c9ef03942da70a7fee82:r1",
+            "document_name": "rgb_doc_2e45c9ef03942da70a7fee82.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_2e45c9ef03942da70a7fee82:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2e45c9ef03942da70a7fee82.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_346b847dea621ef8c0c45754",
+            "version_id": "rgb_doc_346b847dea621ef8c0c45754:r1",
+            "document_name": "rgb_doc_346b847dea621ef8c0c45754.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_346b847dea621ef8c0c45754:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_346b847dea621ef8c0c45754.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e79fb46c69dd15624c4741f9",
+            "version_id": "rgb_doc_e79fb46c69dd15624c4741f9:r1",
+            "document_name": "rgb_doc_e79fb46c69dd15624c4741f9.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_e79fb46c69dd15624c4741f9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e79fb46c69dd15624c4741f9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f1b47bcc11191aa4afea9971",
+            "version_id": "rgb_doc_f1b47bcc11191aa4afea9971:r1",
+            "document_name": "rgb_doc_f1b47bcc11191aa4afea9971.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_f1b47bcc11191aa4afea9971:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f1b47bcc11191aa4afea9971.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fdafe677f6c16c2bd58a43fb",
+            "version_id": "rgb_doc_fdafe677f6c16c2bd58a43fb:r1",
+            "document_name": "rgb_doc_fdafe677f6c16c2bd58a43fb.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_fdafe677f6c16c2bd58a43fb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fdafe677f6c16c2bd58a43fb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1a1afdc5c2c22f9caa881b00",
+            "version_id": "rgb_doc_1a1afdc5c2c22f9caa881b00:r1",
+            "document_name": "rgb_doc_1a1afdc5c2c22f9caa881b00.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_1a1afdc5c2c22f9caa881b00:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1a1afdc5c2c22f9caa881b00.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_248fbdf402b62988143bf340",
+            "version_id": "rgb_doc_248fbdf402b62988143bf340:r1",
+            "document_name": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_248fbdf402b62988143bf340:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_19daf54bc00d9fdd27749748",
+            "version_id": "rgb_doc_19daf54bc00d9fdd27749748:r1",
+            "document_name": "rgb_doc_19daf54bc00d9fdd27749748.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_19daf54bc00d9fdd27749748:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_19daf54bc00d9fdd27749748.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5f2489820ff57882da88b164",
+            "version_id": "rgb_doc_5f2489820ff57882da88b164:r1",
+            "document_name": "rgb_doc_5f2489820ff57882da88b164.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_5f2489820ff57882da88b164:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5f2489820ff57882da88b164.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21fb19122c0a869fd1a5fa96",
+            "version_id": "rgb_doc_21fb19122c0a869fd1a5fa96:r1",
+            "document_name": "rgb_doc_21fb19122c0a869fd1a5fa96.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_21fb19122c0a869fd1a5fa96:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_21fb19122c0a869fd1a5fa96.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b892bc3c40bee13ac4c24cc6",
+            "version_id": "rgb_doc_b892bc3c40bee13ac4c24cc6:r1",
+            "document_name": "rgb_doc_b892bc3c40bee13ac4c24cc6.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_b892bc3c40bee13ac4c24cc6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b892bc3c40bee13ac4c24cc6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_263a632f8e79e7c89a12d182",
+            "version_id": "rgb_doc_263a632f8e79e7c89a12d182:r1",
+            "document_name": "rgb_doc_263a632f8e79e7c89a12d182.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_263a632f8e79e7c89a12d182:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_263a632f8e79e7c89a12d182.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_457dde7b584a887d20075539",
+            "version_id": "rgb_doc_457dde7b584a887d20075539:r1",
+            "document_name": "rgb_doc_457dde7b584a887d20075539.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_457dde7b584a887d20075539:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_457dde7b584a887d20075539.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dd36f790f45e3033187af454",
+            "version_id": "rgb_doc_dd36f790f45e3033187af454:r1",
+            "document_name": "rgb_doc_dd36f790f45e3033187af454.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_dd36f790f45e3033187af454:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dd36f790f45e3033187af454.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7ffb990716f9280f3e934ffe",
+            "version_id": "rgb_doc_7ffb990716f9280f3e934ffe:r1",
+            "document_name": "rgb_doc_7ffb990716f9280f3e934ffe.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_7ffb990716f9280f3e934ffe:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7ffb990716f9280f3e934ffe.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_85e23f35b1dd7f1de8e87cee",
+            "version_id": "rgb_doc_85e23f35b1dd7f1de8e87cee:r1",
+            "document_name": "rgb_doc_85e23f35b1dd7f1de8e87cee.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_85e23f35b1dd7f1de8e87cee:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_85e23f35b1dd7f1de8e87cee.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_367808c5ac996bbefd4b19c8",
+            "version_id": "rgb_doc_367808c5ac996bbefd4b19c8:r1",
+            "document_name": "rgb_doc_367808c5ac996bbefd4b19c8.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_367808c5ac996bbefd4b19c8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_367808c5ac996bbefd4b19c8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_40e8de130b63429ef44fc724",
+            "version_id": "rgb_doc_40e8de130b63429ef44fc724:r1",
+            "document_name": "rgb_doc_40e8de130b63429ef44fc724.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_40e8de130b63429ef44fc724:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_40e8de130b63429ef44fc724.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e7a0631eb2e568bb4c9f7cba",
+            "version_id": "rgb_doc_e7a0631eb2e568bb4c9f7cba:r1",
+            "document_name": "rgb_doc_e7a0631eb2e568bb4c9f7cba.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_e7a0631eb2e568bb4c9f7cba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e7a0631eb2e568bb4c9f7cba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3ab7d2cb28a2b1382feec2fb",
+            "version_id": "rgb_doc_3ab7d2cb28a2b1382feec2fb:r1",
+            "document_name": "rgb_doc_3ab7d2cb28a2b1382feec2fb.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_3ab7d2cb28a2b1382feec2fb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3ab7d2cb28a2b1382feec2fb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a79ca1663d948f9923cda6d9",
+            "version_id": "rgb_doc_a79ca1663d948f9923cda6d9:r1",
+            "document_name": "rgb_doc_a79ca1663d948f9923cda6d9.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_a79ca1663d948f9923cda6d9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a79ca1663d948f9923cda6d9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dc3273ce271938cf6a1a672a",
+            "version_id": "rgb_doc_dc3273ce271938cf6a1a672a:r1",
+            "document_name": "rgb_doc_dc3273ce271938cf6a1a672a.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_dc3273ce271938cf6a1a672a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dc3273ce271938cf6a1a672a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2df885ad352a6119e27b9e03",
+            "version_id": "rgb_doc_2df885ad352a6119e27b9e03:r1",
+            "document_name": "rgb_doc_2df885ad352a6119e27b9e03.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_2df885ad352a6119e27b9e03:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2df885ad352a6119e27b9e03.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_533b8e252631593112419e6a",
+            "version_id": "rgb_doc_533b8e252631593112419e6a:r1",
+            "document_name": "rgb_doc_533b8e252631593112419e6a.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_533b8e252631593112419e6a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_533b8e252631593112419e6a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9cfee50b3792109de34de6ce",
+            "version_id": "rgb_doc_9cfee50b3792109de34de6ce:r1",
+            "document_name": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_9cfee50b3792109de34de6ce:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f188048a3c18149034666dd",
+            "version_id": "rgb_doc_2f188048a3c18149034666dd:r1",
+            "document_name": "rgb_doc_2f188048a3c18149034666dd.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_2f188048a3c18149034666dd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f188048a3c18149034666dd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b5a69046e67b344a72fa9da3",
+            "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+            "document_name": "rgb_doc_b5a69046e67b344a72fa9da3.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_b5a69046e67b344a72fa9da3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b5a69046e67b344a72fa9da3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6b591824ec8c915d1ff002eb",
+            "version_id": "rgb_doc_6b591824ec8c915d1ff002eb:r1",
+            "document_name": "rgb_doc_6b591824ec8c915d1ff002eb.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_6b591824ec8c915d1ff002eb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6b591824ec8c915d1ff002eb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4454f18fdc92e318110231de",
+            "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+            "document_name": "rgb_doc_4454f18fdc92e318110231de.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_4454f18fdc92e318110231de:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4454f18fdc92e318110231de.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1f83874be30f60a7b4b852d0",
+            "version_id": "rgb_doc_1f83874be30f60a7b4b852d0:r1",
+            "document_name": "rgb_doc_1f83874be30f60a7b4b852d0.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_1f83874be30f60a7b4b852d0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1f83874be30f60a7b4b852d0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5265881a3f44c4b97d0119c7",
+            "version_id": "rgb_doc_5265881a3f44c4b97d0119c7:r1",
+            "document_name": "rgb_doc_5265881a3f44c4b97d0119c7.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_5265881a3f44c4b97d0119c7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5265881a3f44c4b97d0119c7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_622b512c4978fbb03529aa7b",
+            "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+            "document_name": "rgb_doc_622b512c4978fbb03529aa7b.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_622b512c4978fbb03529aa7b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_622b512c4978fbb03529aa7b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a926b100a5dca0086e7d8f01",
+            "version_id": "rgb_doc_a926b100a5dca0086e7d8f01:r1",
+            "document_name": "rgb_doc_a926b100a5dca0086e7d8f01.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_a926b100a5dca0086e7d8f01:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a926b100a5dca0086e7d8f01.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f",
+            "version_id": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f:r1",
+            "document_name": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_e3bae1a8f0f6c6f1187cbe2f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1add5c0f31c4c745fb641ce1",
+            "version_id": "rgb_doc_1add5c0f31c4c745fb641ce1:r1",
+            "document_name": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_1add5c0f31c4c745fb641ce1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a86e4ed9a2f1b3dbf2022f61",
+            "version_id": "rgb_doc_a86e4ed9a2f1b3dbf2022f61:r1",
+            "document_name": "rgb_doc_a86e4ed9a2f1b3dbf2022f61.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_a86e4ed9a2f1b3dbf2022f61:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a86e4ed9a2f1b3dbf2022f61.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_193c56c7173a6b46f689ad43",
+            "version_id": "rgb_doc_193c56c7173a6b46f689ad43:r1",
+            "document_name": "rgb_doc_193c56c7173a6b46f689ad43.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_193c56c7173a6b46f689ad43:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_193c56c7173a6b46f689ad43.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_310f640724d7285a1623a3f3",
+            "version_id": "rgb_doc_310f640724d7285a1623a3f3:r1",
+            "document_name": "rgb_doc_310f640724d7285a1623a3f3.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_310f640724d7285a1623a3f3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_310f640724d7285a1623a3f3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_414d20429d14bda37640e503",
+            "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+            "document_name": "rgb_doc_414d20429d14bda37640e503.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_414d20429d14bda37640e503:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_414d20429d14bda37640e503.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_adc32aa55967eeab1aa8f0c0",
+            "version_id": "rgb_doc_adc32aa55967eeab1aa8f0c0:r1",
+            "document_name": "rgb_doc_adc32aa55967eeab1aa8f0c0.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_adc32aa55967eeab1aa8f0c0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_adc32aa55967eeab1aa8f0c0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2aac16b04b6b504d981934cc",
+            "version_id": "rgb_doc_2aac16b04b6b504d981934cc:r1",
+            "document_name": "rgb_doc_2aac16b04b6b504d981934cc.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_2aac16b04b6b504d981934cc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2aac16b04b6b504d981934cc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bf6f784ff737326df906d25e",
+            "version_id": "rgb_doc_bf6f784ff737326df906d25e:r1",
+            "document_name": "rgb_doc_bf6f784ff737326df906d25e.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_bf6f784ff737326df906d25e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bf6f784ff737326df906d25e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b0b945fe09a621cbf7e21cde",
+            "version_id": "rgb_doc_b0b945fe09a621cbf7e21cde:r1",
+            "document_name": "rgb_doc_b0b945fe09a621cbf7e21cde.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_b0b945fe09a621cbf7e21cde:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b0b945fe09a621cbf7e21cde.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_86d26025ab28d83ff4c8b9b5",
+            "version_id": "rgb_doc_86d26025ab28d83ff4c8b9b5:r1",
+            "document_name": "rgb_doc_86d26025ab28d83ff4c8b9b5.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_86d26025ab28d83ff4c8b9b5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_86d26025ab28d83ff4c8b9b5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_df837a8805599d7e0a4a5732",
+            "version_id": "rgb_doc_df837a8805599d7e0a4a5732:r1",
+            "document_name": "rgb_doc_df837a8805599d7e0a4a5732.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_df837a8805599d7e0a4a5732:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_df837a8805599d7e0a4a5732.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ebc89a9575d1df2151796afd",
+            "version_id": "rgb_doc_ebc89a9575d1df2151796afd:r1",
+            "document_name": "rgb_doc_ebc89a9575d1df2151796afd.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_ebc89a9575d1df2151796afd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ebc89a9575d1df2151796afd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20f270e4459c97f07c0b2a9a",
+            "version_id": "rgb_doc_20f270e4459c97f07c0b2a9a:r1",
+            "document_name": "rgb_doc_20f270e4459c97f07c0b2a9a.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_20f270e4459c97f07c0b2a9a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_20f270e4459c97f07c0b2a9a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ae7757fce264a89b8b4edf89",
+            "version_id": "rgb_doc_ae7757fce264a89b8b4edf89:r1",
+            "document_name": "rgb_doc_ae7757fce264a89b8b4edf89.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_ae7757fce264a89b8b4edf89:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ae7757fce264a89b8b4edf89.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b15a61c7543c4250cdaf25e5",
+            "version_id": "rgb_doc_b15a61c7543c4250cdaf25e5:r1",
+            "document_name": "rgb_doc_b15a61c7543c4250cdaf25e5.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_b15a61c7543c4250cdaf25e5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b15a61c7543c4250cdaf25e5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fc1fd577e370895efd6d48d1",
+            "version_id": "rgb_doc_fc1fd577e370895efd6d48d1:r1",
+            "document_name": "rgb_doc_fc1fd577e370895efd6d48d1.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_fc1fd577e370895efd6d48d1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fc1fd577e370895efd6d48d1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_342a04f742f2ce8f3246319a",
+            "version_id": "rgb_doc_342a04f742f2ce8f3246319a:r1",
+            "document_name": "rgb_doc_342a04f742f2ce8f3246319a.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_342a04f742f2ce8f3246319a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_342a04f742f2ce8f3246319a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5197eeb297fb3cdf4ad72ecc",
+            "version_id": "rgb_doc_5197eeb297fb3cdf4ad72ecc:r1",
+            "document_name": "rgb_doc_5197eeb297fb3cdf4ad72ecc.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_5197eeb297fb3cdf4ad72ecc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5197eeb297fb3cdf4ad72ecc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_72c1cbf1f569bde301bb4a46",
+            "version_id": "rgb_doc_72c1cbf1f569bde301bb4a46:r1",
+            "document_name": "rgb_doc_72c1cbf1f569bde301bb4a46.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_72c1cbf1f569bde301bb4a46:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_72c1cbf1f569bde301bb4a46.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_09870f877e542bc6e3ef7ed3",
+            "version_id": "rgb_doc_09870f877e542bc6e3ef7ed3:r1",
+            "document_name": "rgb_doc_09870f877e542bc6e3ef7ed3.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_09870f877e542bc6e3ef7ed3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_09870f877e542bc6e3ef7ed3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4fec974fe744a73264650ddd",
+            "version_id": "rgb_doc_4fec974fe744a73264650ddd:r1",
+            "document_name": "rgb_doc_4fec974fe744a73264650ddd.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_4fec974fe744a73264650ddd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4fec974fe744a73264650ddd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3c14d116f748a4893eaebec5",
+            "version_id": "rgb_doc_3c14d116f748a4893eaebec5:r1",
+            "document_name": "rgb_doc_3c14d116f748a4893eaebec5.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_3c14d116f748a4893eaebec5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3c14d116f748a4893eaebec5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_826c1d7fd85766362a743543",
+            "version_id": "rgb_doc_826c1d7fd85766362a743543:r1",
+            "document_name": "rgb_doc_826c1d7fd85766362a743543.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_826c1d7fd85766362a743543:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_826c1d7fd85766362a743543.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bbfaf3046e90a51a847ad9fc",
+            "version_id": "rgb_doc_bbfaf3046e90a51a847ad9fc:r1",
+            "document_name": "rgb_doc_bbfaf3046e90a51a847ad9fc.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_bbfaf3046e90a51a847ad9fc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bbfaf3046e90a51a847ad9fc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9d69dacbb032eb6c09fbb957",
+            "version_id": "rgb_doc_9d69dacbb032eb6c09fbb957:r1",
+            "document_name": "rgb_doc_9d69dacbb032eb6c09fbb957.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_9d69dacbb032eb6c09fbb957:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9d69dacbb032eb6c09fbb957.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            },
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 10.779541989904828,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            }
+          },
+          "authorization_ms": 10.85912500275299,
+          "evidence_ms": 2.0979580003768206,
+          "fusion_ms": 1.037624999298714,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 35.54199999780394,
+          "context_chars": 2013,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_cc8cea5a0e609fcf",
+          "ev_20e754a4a5a160b2",
+          "ev_491237df87b8dcbc",
+          "ev_bcec114c13a6e77c",
+          "ev_3bbae644657e84aa",
+          "ev_63e8683fa81051b6",
+          "ev_a207730c73d57273",
+          "ev_32b257de833142ca",
+          "ev_4d3bdf76a0d3f206",
+          "ev_757d289684d5f21c"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_cc8cea5a0e609fcf",
+            "content": "5%，进入负增长，基数较低，所以在2020年低基数影响下，2021年美国GDP实现了较高的增长率。 同时，美国GDP数据也公布了，根据统计，2021年美国GDP总量首次突破23万亿美元大关，达到23.03万亿美元，依然是全球第一大经济体，要知道2020年美国GDP为20.89万亿美元，GDP增量超过2万亿美元。  但是，如果按照正常计算，美国GDP增长率应该是10.24%，为什么GDP增长率却是5.7%？事实上，10.24%属于名义增速，其中包括了通胀水平等因素，抛开这些因素之后就会得出GDP实际增长率，也就是5.7%。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+            "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+            "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "chunk_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+              "block_ids": [
+                "rgb_doc_e71f6e32b9abe8a66a634e91:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 263
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 18.85466766357422,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 263,
+            "content_hash": "e71f6e32b9abe8a66a634e916f27b24cb0b4e9feb3c07eae4a5aca3e62591053",
+            "scope_digest": "fd2705f7cd8fbdd28a535469f6f05bdc860faf5f7213f6198e58fe0c3e51a2b7",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_03ef6dcf8568c143e0b9",
+                "source_id": "S1",
+                "evidence_id": "ev_cc8cea5a0e609fcf",
+                "raw_text": "5",
+                "start": 0,
+                "end": 1,
+                "unit": "%",
+                "unit_start": 1,
+                "unit_end": 2,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "5%，进入负增长，基数较低，所以在2020年低基数影响下，2021年美国GDP实现了较高的增长率。",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_1f121a2b8dc13a43b7d3",
+                "source_id": "S1",
+                "evidence_id": "ev_cc8cea5a0e609fcf",
+                "raw_text": "10.24",
+                "start": 208,
+                "end": 213,
+                "unit": "%",
+                "unit_start": 213,
+                "unit_end": 214,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "，如果按照正常计算，美国GDP增长率应该是10.24%，为什么GDP增长率却是5.7%？事实上，10.24%属于名义增速，其中包括了通胀水平等因素，抛开这些因素之后就会得出GDP实际增长率，也就是5.7",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_20e754a4a5a160b2",
+            "content": "7%。但两国统计机构在数据表达方式上习惯不同，中国直接公布GDP的季度环比增长率，而美国公布的是季度环比增长率折合年率的数据。此外，2021年第四季度美国能够实现较高增长，很大程度上是受到补充库存的影响。按照2012年不变价计算，2021年四季度美国GDP（折合年率）环比增加3271亿美元，其中库存增加2403亿美元，对GDP增长的贡献率达到73.5%。2021年四季度库存增加额占当季GDP比例略高于0.9%，而本世纪以来美国各季度库存增加额占GDP比例的平均值为0.2%。如果库存比例与平均值持平，则2021年第四季度的GDP环比增长率仅为0.7%，折合年率为2.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a6512fe92edbcc22bca2bc25",
+            "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+            "document_name": "rgb_doc_a6512fe92edbcc22bca2bc25.txt",
+            "chunk_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+              "block_ids": [
+                "rgb_doc_a6512fe92edbcc22bca2bc25:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 285
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 18.004901885986328,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 285,
+            "content_hash": "a6512fe92edbcc22bca2bc250877e979c63ffc51a6b4477c0ae838ec9618c097",
+            "scope_digest": "3e09802ad3c03dfce1affc2322e1a59188369d034ac41d41352a49f01f35f93f",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_e99335b13eec08204281",
+                "source_id": "S2",
+                "evidence_id": "ev_20e754a4a5a160b2",
+                "raw_text": "7",
+                "start": 0,
+                "end": 1,
+                "unit": "%",
+                "unit_start": 1,
+                "unit_end": 2,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "7%。但两国统计机构在数据表达方式上习惯不同，中国直接公布GDP的季度环比增长率，而美国公布的是季",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_491237df87b8dcbc",
+            "content": "但应该看到的是，2020-2021年期间，由于受疫情影响，两国经济增长率都出现了很大波动，季度经济增长率都曾出现较大幅度下降，且两国经济恢复步调存在差异。为此，以2019年四季度为基期，观察两年平均增长率，似乎更能反映增长态势。美国2020-2021年第四季度的季度平均增长率为1.6%，而中国为5.2%，比美国高出不少。其中的主要原因，是2020年第四季度美国经济刚刚出现恢复。 其次，2021年第四季度中美两国GDP环比增长率比较接近，且美国的增长受到补充库存的较大影响。2021年三、四季度中国GDP环比增长率分别为0.7%和1.6%，美国分别为0.6%和1.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18b56746e9f57e0e24bca4b5",
+            "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+            "document_name": "rgb_doc_18b56746e9f57e0e24bca4b5.txt",
+            "chunk_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+              "block_ids": [
+                "rgb_doc_18b56746e9f57e0e24bca4b5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 283
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 17.693256378173828,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 283,
+            "content_hash": "18b56746e9f57e0e24bca4b5113b42232516936dcd933088e03ac5261c285973",
+            "scope_digest": "15faa3119d9984640e96d01740b87863760224412475c496d6ba8098a253ffb6",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_1c6f4d59fe38d7b8d745",
+                "source_id": "S3",
+                "evidence_id": "ev_491237df87b8dcbc",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "但应该看到的是，2020-2021年期间，由于受疫情影响，两国经济增长率都出现了很大波动，季度经济增长率都曾出现较大幅度",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_bcec114c13a6e77c",
+            "content": "尽管受到新冠疫情的困扰，但美国经济持续增长，2021年第四季度国内生产总值（GDP）达到6.9%的年增长率，超过经济学家增长5.5%的预期，这一增长速度是37年来最强劲的。与此同时，股市、房市大幅度增长，通货膨胀率也快速上涨，失业率则处于历史低位。 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5.7%，GDP总额达到22.99万亿美元。此外，个人消费支出增长了7.9%（个人消费占GDP三分之二的分量）、国内私人资本投资增加了9.5%，成为GDP增长的重要动力。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4f1f76f5ba656fdc752b98fd",
+            "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+            "document_name": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+            "chunk_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+              "block_ids": [
+                "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 246
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 16.32990264892578,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 246,
+            "content_hash": "4f1f76f5ba656fdc752b98fdbef8fbde6836814373a7fd01eac7a5465ae7a10b",
+            "scope_digest": "10e9f0eeef02f8df7121cabd190a8f4658ffbd2b0909e08e33ab5da548a299ef",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_3bbae644657e84aa",
+            "content": "Feb 11, 2022 ... 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5.7%，GDP总额达到22.99万亿美元。此外，个人消费支出增长了7.9%（个人消费占GDP三分之 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bb23abe95eb45731ad9ed4a0",
+            "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+            "document_name": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+            "chunk_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+              "block_ids": [
+                "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 107
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 16.27951431274414,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 107,
+            "content_hash": "bb23abe95eb45731ad9ed4a05a6bd3112b31d575f7e738ae23c8160d1c1b6599",
+            "scope_digest": "2a7197d23cfbdeca83f6965514baba96cff1e7e89f307fcb87a097f565e8bf83",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_c34214f06d891d3d73fa",
+                "source_id": "S5",
+                "evidence_id": "ev_3bbae644657e84aa",
+                "raw_text": "11",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 11, 2022 ... 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_af13484f4e2e9a2c3844",
+                "source_id": "S5",
+                "evidence_id": "ev_3bbae644657e84aa",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 11, 2022 ... 美国商务部所属经济统计局（BEA）数据显示，2021年全年GDP增长率为5.7%，GD",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_63e8683fa81051b6",
+            "content": "9%，就会是一个比正常水平略高的增长率。 再者，2021年美国经济实现了5.7%的高增长，是1985年以来的最高纪录，但应该注意的是，这是在2020年出现经济下降3.4%后的恢复性增长，两年平均增长率只有1%，还低于美国的长期平均增长率。特别需要指出的是，美国为扭转2020年下降势头并在2021年实现经济增长，付出了巨大的代价。一是美国财政连续两年出现大规模赤字，根据美国财政部及行政管理和预算局发布的联合报告，2020和2021两个财年的赤字分别高达3.13万亿美元和2.77万亿美元，为美国历史上赤字规模最大的两个年份，赤字占GDP的比例分别高达15.2%和12.4%。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_44366bbec32b58cd43a37160",
+            "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+            "document_name": "rgb_doc_44366bbec32b58cd43a37160.txt",
+            "chunk_id": "rgb_doc_44366bbec32b58cd43a37160:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+              "block_ids": [
+                "rgb_doc_44366bbec32b58cd43a37160:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 288
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.561494827270508,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 288,
+            "content_hash": "44366bbec32b58cd43a37160e039014f8f08818f36373c2286270bf1a526cc08",
+            "scope_digest": "941a6efa51544af5e77132b215fb3f997f805b7cf1987f0e274aa24f8c098ff2",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_f87adf389affaea2cbbe",
+                "source_id": "S6",
+                "evidence_id": "ev_63e8683fa81051b6",
+                "raw_text": "9",
+                "start": 0,
+                "end": 1,
+                "unit": "%",
+                "unit_start": 1,
+                "unit_end": 2,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "9%，就会是一个比正常水平略高的增长率。 再者，2021年美国经济实现了5.7%的高增长，是198",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a207730c73d57273",
+            "content": "信贷资产质量及拨备的变化情况需保持关注。2021 年以 ... 度来看，一季度GDP 稳定增长；二季度GDP ... 收入增速为实际增长率，表中其他指标增速均为名义增长率；4.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb",
+            "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+            "document_name": "rgb_doc_3491d8ca8e8c31a7ad3009eb.txt",
+            "chunk_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+              "block_ids": [
+                "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 14.80256462097168,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 88,
+            "content_hash": "3491d8ca8e8c31a7ad3009eb413b6d0d8068d4064bb088a5a29e7814c68fa884",
+            "scope_digest": "5a13c3290ba521f4ee901a3a2ad4673afe959f8dc2fa55d4c9dde36c1eff7387",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9ca014ef801879760ff2",
+                "source_id": "S7",
+                "evidence_id": "ev_a207730c73d57273",
+                "raw_text": "2021",
+                "start": 20,
+                "end": 24,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "信贷资产质量及拨备的变化情况需保持关注。2021 年以 ... 度来看，一季度GDP 稳定增长；二季度GDP ... 收入增速为实际增长率，表中",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_616853883919614678d5",
+                "source_id": "S7",
+                "evidence_id": "ev_a207730c73d57273",
+                "raw_text": "4",
+                "start": 86,
+                "end": 87,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "度GDP 稳定增长；二季度GDP ... 收入增速为实际增长率，表中其他指标增速均为名义增长率；4.",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_32b257de833142ca",
+            "content": "1月中下旬，中美两国官方统计机构先后发布2021年第四季度及全年国民经济核算数据，引起各国经济分析机构和国际机构的广泛关注。比较有代表性的一种观点认为，中国第四季度经济增长明显下降，而美国第四季度经济增长明显超出预期，因此，美国的增长态势好于中国。本人认为有必要对上述观点进行解析。 首先，直接将中美两国经济数据进行比较，似乎美国经济增速明显超过中国。据中国国家统计局发布的数据，2021年第四季度中国GDP同比增长4.0%，而据美国商务部经济分析局发布的数据，当季美国GDP同比增长5.5%，增长率确实高于中国。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dbd77de4ad9eecd838648bba",
+            "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+            "document_name": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+            "chunk_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+              "block_ids": [
+                "rgb_doc_dbd77de4ad9eecd838648bba:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 257
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 14.538639068603516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 257,
+            "content_hash": "dbd77de4ad9eecd838648bbacf8a62d1e7cf71842448af847f141a7e0afadeaa",
+            "scope_digest": "443200c4eb94d88aafeb8e2df01d4593fe1367d209d56c1a6fd58f8ea3076aa2",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_4d3bdf76a0d3f206",
+            "content": "GDP 增长率（年百分比） - Macao SAR, China from The World Bank: Data. ... 人均GDP增长（年增长率） ... 中国澳门特别行政区.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+            "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+            "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "chunk_id": "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+              "block_ids": [
+                "rgb_doc_2fee0cf6aa6787537f752901:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 13.994449615478516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "2fee0cf6aa6787537f75290167d9d0c41715b83bc1e835402c54dcdf2704faea",
+            "scope_digest": "af416b8e08cb4449743274f2aa38f2e2d3b643c430be1e92c2df2f897d13e6c1",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_757d289684d5f21c",
+            "content": "Jan 31, 2022 ... 在我国GDP数据公布后不久，美国也公布了2021年的相关数据。1月27日，美国GDP增速公布，2021年美国GDP同比增长5.7%，这一数据创下了上世纪80年代以来的 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18c8cf89f1f10ee17515614d",
+            "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+            "document_name": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "chunk_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+              "block_ids": [
+                "rgb_doc_18c8cf89f1f10ee17515614d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 104
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 13.878862380981445,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 104,
+            "content_hash": "18c8cf89f1f10ee17515614db62cc002f850c5dab9079236a9b0f0edeebe1a9c",
+            "scope_digest": "e7e3883bdd31ea1e2f31e3cc103b8ac4c048d3b124c5daf24ea11f1397af1ebb",
+            "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9319f734d2dd4bcc5c73",
+                "source_id": "S10",
+                "evidence_id": "ev_757d289684d5f21c",
+                "raw_text": "31",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 31, 2022 ... 在我国GDP数据公布后不久，美国也公布了2021年的相关数据。1月27日，",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_783c7d8adac973b1584b",
+                "source_id": "S10",
+                "evidence_id": "ev_757d289684d5f21c",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 31, 2022 ... 在我国GDP数据公布后不久，美国也公布了2021年的相关数据。1月27日，美国GDP增",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_cc8cea5a0e609fcf",
+      "ev_20e754a4a5a160b2",
+      "ev_491237df87b8dcbc",
+      "ev_bcec114c13a6e77c",
+      "ev_3bbae644657e84aa",
+      "ev_63e8683fa81051b6",
+      "ev_a207730c73d57273",
+      "ev_32b257de833142ca",
+      "ev_4d3bdf76a0d3f206"
+    ],
+    "evidence": {
+      "ev_cc8cea5a0e609fcf": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+        "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+        "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+        "chunk_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+          "block_ids": [
+            "rgb_doc_e71f6e32b9abe8a66a634e91:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 263
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 18.85466766357422,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 263,
+        "content_hash": "e71f6e32b9abe8a66a634e916f27b24cb0b4e9feb3c07eae4a5aca3e62591053",
+        "scope_digest": "fd2705f7cd8fbdd28a535469f6f05bdc860faf5f7213f6198e58fe0c3e51a2b7",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_20e754a4a5a160b2": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_a6512fe92edbcc22bca2bc25",
+        "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+        "document_name": "rgb_doc_a6512fe92edbcc22bca2bc25.txt",
+        "chunk_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+          "block_ids": [
+            "rgb_doc_a6512fe92edbcc22bca2bc25:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 285
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 18.004901885986328,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 285,
+        "content_hash": "a6512fe92edbcc22bca2bc250877e979c63ffc51a6b4477c0ae838ec9618c097",
+        "scope_digest": "3e09802ad3c03dfce1affc2322e1a59188369d034ac41d41352a49f01f35f93f",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_491237df87b8dcbc": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_18b56746e9f57e0e24bca4b5",
+        "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+        "document_name": "rgb_doc_18b56746e9f57e0e24bca4b5.txt",
+        "chunk_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+          "block_ids": [
+            "rgb_doc_18b56746e9f57e0e24bca4b5:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 283
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 17.693256378173828,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 283,
+        "content_hash": "18b56746e9f57e0e24bca4b5113b42232516936dcd933088e03ac5261c285973",
+        "scope_digest": "15faa3119d9984640e96d01740b87863760224412475c496d6ba8098a253ffb6",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_bcec114c13a6e77c": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4f1f76f5ba656fdc752b98fd",
+        "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+        "document_name": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+        "chunk_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+          "block_ids": [
+            "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 246
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 16.32990264892578,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 246,
+        "content_hash": "4f1f76f5ba656fdc752b98fdbef8fbde6836814373a7fd01eac7a5465ae7a10b",
+        "scope_digest": "10e9f0eeef02f8df7121cabd190a8f4658ffbd2b0909e08e33ab5da548a299ef",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_3bbae644657e84aa": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_bb23abe95eb45731ad9ed4a0",
+        "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+        "document_name": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+        "chunk_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+          "block_ids": [
+            "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 107
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 16.27951431274414,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 107,
+        "content_hash": "bb23abe95eb45731ad9ed4a05a6bd3112b31d575f7e738ae23c8160d1c1b6599",
+        "scope_digest": "2a7197d23cfbdeca83f6965514baba96cff1e7e89f307fcb87a097f565e8bf83",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_63e8683fa81051b6": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_44366bbec32b58cd43a37160",
+        "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+        "document_name": "rgb_doc_44366bbec32b58cd43a37160.txt",
+        "chunk_id": "rgb_doc_44366bbec32b58cd43a37160:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+          "block_ids": [
+            "rgb_doc_44366bbec32b58cd43a37160:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 288
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 15.561494827270508,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 288,
+        "content_hash": "44366bbec32b58cd43a37160e039014f8f08818f36373c2286270bf1a526cc08",
+        "scope_digest": "941a6efa51544af5e77132b215fb3f997f805b7cf1987f0e274aa24f8c098ff2",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a207730c73d57273": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb",
+        "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+        "document_name": "rgb_doc_3491d8ca8e8c31a7ad3009eb.txt",
+        "chunk_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+          "block_ids": [
+            "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 88
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 14.80256462097168,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 88,
+        "content_hash": "3491d8ca8e8c31a7ad3009eb413b6d0d8068d4064bb088a5a29e7814c68fa884",
+        "scope_digest": "5a13c3290ba521f4ee901a3a2ad4673afe959f8dc2fa55d4c9dde36c1eff7387",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_32b257de833142ca": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_dbd77de4ad9eecd838648bba",
+        "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+        "document_name": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+        "chunk_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+          "block_ids": [
+            "rgb_doc_dbd77de4ad9eecd838648bba:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 257
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 14.538639068603516,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 257,
+        "content_hash": "dbd77de4ad9eecd838648bbacf8a62d1e7cf71842448af847f141a7e0afadeaa",
+        "scope_digest": "443200c4eb94d88aafeb8e2df01d4593fe1367d209d56c1a6fd58f8ea3076aa2",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_4d3bdf76a0d3f206": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+        "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+        "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+        "chunk_id": "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+          "block_ids": [
+            "rgb_doc_2fee0cf6aa6787537f752901:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 13.994449615478516,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "2fee0cf6aa6787537f75290167d9d0c41715b83bc1e835402c54dcdf2704faea",
+        "scope_digest": "af416b8e08cb4449743274f2aa38f2e2d3b643c430be1e92c2df2f897d13e6c1",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_757d289684d5f21c": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_18c8cf89f1f10ee17515614d",
+        "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+        "document_name": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+        "chunk_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+          "block_ids": [
+            "rgb_doc_18c8cf89f1f10ee17515614d:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 104
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 13.878862380981445,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 104,
+        "content_hash": "18c8cf89f1f10ee17515614db62cc002f850c5dab9079236a9b0f0edeebe1a9c",
+        "scope_digest": "e7e3883bdd31ea1e2f31e3cc103b8ac4c048d3b124c5daf24ea11f1397af1ebb",
+        "trace_id": "bec8d1dfd52b49eb9d0a576a1f30142b",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_cc8cea5a0e609fcf",
+      "S2": "ev_20e754a4a5a160b2",
+      "S3": "ev_491237df87b8dcbc",
+      "S4": "ev_bcec114c13a6e77c",
+      "S5": "ev_3bbae644657e84aa",
+      "S6": "ev_63e8683fa81051b6",
+      "S7": "ev_a207730c73d57273",
+      "S8": "ev_32b257de833142ca",
+      "S9": "ev_4d3bdf76a0d3f206",
+      "S10": "ev_757d289684d5f21c"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

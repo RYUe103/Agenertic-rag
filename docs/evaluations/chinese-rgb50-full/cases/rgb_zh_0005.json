@@ -1,0 +1,3247 @@
+{
+  "question_id": "rgb_zh_0005",
+  "result": {
+    "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+    "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:1",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:2",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:3",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "context_chars": 1192,
+        "prompt_tokens": 8440,
+        "completion_tokens": 49,
+        "total_tokens": 8489,
+        "context_compaction_count": 0,
+        "context_chars_before": 1192,
+        "context_chars_after": 1192,
+        "estimated_input_tokens": 12133,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1487,
+        "remaining_run_tokens": 111511,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8440,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3693
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:4",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1192
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:5",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "tool_call_id": "call_ad385e1e318a4d18952570",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:6",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "tool_call_id": "call_ad385e1e318a4d18952570",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:7",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_ad385e1e318a4d18952570",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 10,
+        "output_chars_before": 74009,
+        "output_chars_after": 13819,
+        "removed_chars": 60190,
+        "document_metadata_chars": 22745,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 19837,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:8",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:9",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:10",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "context_chars": 15011,
+        "prompt_tokens": 14924,
+        "completion_tokens": 328,
+        "total_tokens": 15252,
+        "context_compaction_count": 0,
+        "context_chars_before": 15011,
+        "context_chars_after": 15011,
+        "estimated_input_tokens": 20566,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7755,
+        "evidence_tokens": 2250,
+        "history_tokens": 2165,
+        "remaining_run_tokens": 96259,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 14924,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5642
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:11",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "model_visible_evidence_count": 10,
+        "context_chars": 15011
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:12",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "citation_validation_reason": [
+          "invalid_claim_structure",
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:13",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "context_chars": 2556,
+        "prompt_tokens": 1430,
+        "completion_tokens": 186,
+        "total_tokens": 1616,
+        "context_compaction_count": 0,
+        "context_chars_before": 2556,
+        "context_chars_after": 2556,
+        "estimated_input_tokens": 3417,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 3417,
+        "remaining_run_tokens": 94643,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 1430,
+        "usage_source": "provider",
+        "estimation_error_tokens": -1987
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:14",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:15",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "delta": "香港第七届立法会选举共有90个议席。 [1] [2] [3] [4] [5] [6] [7] [8]\n\n这90个议席包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。 [2] [3] [7]\n\n第七届立法会是完善香港特区选举制度后的首次立法会选举。 [1] [2] [3] [4] [5] [6] [7]\n\n2021年3月11日，全国人民代表大会通过《关于完善香港特别行政区选举制度的决定》，将立法会议席增加至90个。 [9]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:16",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff",
+        "final_citation_count": 9,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_0fd1c175072c4e369d13dd4db7c579e7:ead0c49c3c724f6c83c2a5981f37cfd3:17",
+        "run_id": "run_0fd1c175072c4e369d13dd4db7c579e7",
+        "thread_id": "thread_0e565210b8a64becacf10828940bfbff"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 24794,
+      "completion_tokens": 563,
+      "total_tokens": 25357
+    },
+    "elapsed_seconds": 14.830424166008015,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 10,
+      "output_truncated": true,
+      "context_chars": 15011,
+      "prompt_tokens": 24794,
+      "completion_tokens": 563,
+      "total_tokens": 25357,
+      "context_compaction_count": 0,
+      "context_chars_before": 2556,
+      "context_chars_after": 2556,
+      "estimated_input_tokens": 3417,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 3417,
+      "remaining_run_tokens": 94643,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 1430,
+      "usage_source": "provider",
+      "estimation_error_tokens": -1987,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_ad385e1e318a4d18952570",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 10,
+          "output_chars_before": 74009,
+          "output_chars_after": 13819,
+          "removed_chars": 60190,
+          "document_metadata_chars": 22745,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 19837,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "invalid_claim_structure",
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 2556,
+      "repair_visible_evidence_count": 10,
+      "final_citation_count": 9,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "香港第七届立法会选举共有90个议席。 [1] [2] [3] [4] [5] [6] [7] [8]\n\n这90个议席包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。 [2] [3] [7]\n\n第七届立法会是完善香港特区选举制度后的首次立法会选举。 [1] [2] [3] [4] [5] [6] [7]\n\n2021年3月11日，全国人民代表大会通过《关于完善香港特别行政区选举制度的决定》，将立法会议席增加至90个。 [9]",
+      "citations": {
+        "ev_7b14a60046d0ee0a": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_47dde5f5103a280a945ac125",
+          "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+          "document_name": "rgb_doc_47dde5f5103a280a945ac125.txt",
+          "chunk_id": "rgb_doc_47dde5f5103a280a945ac125:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "12月19日，香港顺利举行完善选举制度后首次立法会选举投票，工作人员点票现场。新华社记者 吕小炜 摄 　　新华社香港12月20日电（记者查文晔）香港特区第七届立法会功能团体界别选举的30个议席20日上午揭晓。至此，第七届立法会90个议席全部顺利产生。 　　此次选举是完善香港特区选举制度后的首次立法会选举。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+            "block_ids": [
+              "rgb_doc_47dde5f5103a280a945ac125:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 153
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 43.14016342163086,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_5f0e5008b12b5518": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_0233ec2b221785d5f9e8a388",
+          "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+          "document_name": "rgb_doc_0233ec2b221785d5f9e8a388.txt",
+          "chunk_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "香港特区第七届立法会选举投票于12月19日23时左右结束。经过点票,香港选举事务处于20日公布第七届立法会分区直接选举界别、选举委员会界别和功能团体界别投票结果。 第七届立法会90个议席已全部顺利产生,其中包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+            "block_ids": [
+              "rgb_doc_0233ec2b221785d5f9e8a388:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 145
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 42.041664123535156,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_d26db20b86bfea4f": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_4d7c131b103aa56046211f76",
+          "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+          "document_name": "rgb_doc_4d7c131b103aa56046211f76.txt",
+          "chunk_id": "rgb_doc_4d7c131b103aa56046211f76:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "12月19日，香港顺利举行完善选举制度后首次立法会选举投票，工作人员点票现场。（新华社记者 吕小炜 摄） 　　香港特区第七届立法会功能团体界别选举的30个议席12月20日上午揭晓。至此，第七届立法会90个议席全部顺利产生。 　　此次选举是完善香港特区选举制度后的首次立法会选举。根据全国人大常委会修订的《中华人民共和国香港特别行政区基本法附件二香港特别行政区立法会的产生办法和表决程序》，新一届香港特区立法会由90名议员组成，其中包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+            "block_ids": [
+              "rgb_doc_4d7c131b103aa56046211f76:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 257
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 40.2661247253418,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_bbe33495e194623e": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_375e92c84d20844f9ad90ce9",
+          "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+          "document_name": "rgb_doc_375e92c84d20844f9ad90ce9.txt",
+          "chunk_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "source_score": null,
+          "fused_score": 0.015625,
+          "rerank_score": null,
+          "content": "Jan 1, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+            "block_ids": [
+              "rgb_doc_375e92c84d20844f9ad90ce9:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 95
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 39.66551971435547,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_d21c5ed3c198470a": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_8fae86bfc772b22b693d1a7a",
+          "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+          "document_name": "rgb_doc_8fae86bfc772b22b693d1a7a.txt",
+          "chunk_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "Jan 3, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+            "block_ids": [
+              "rgb_doc_8fae86bfc772b22b693d1a7a:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 95
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 39.66551971435547,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_d3eff52fb71d74de": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_20d6787ed6faa39536af74a1",
+          "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+          "document_name": "rgb_doc_20d6787ed6faa39536af74a1.txt",
+          "chunk_id": "rgb_doc_20d6787ed6faa39536af74a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 6,
+          "source_score": null,
+          "fused_score": 0.015151515151515152,
+          "rerank_score": null,
+          "content": "Dec 20, 2021 ... 至此，第七届立法会90个议席全部顺利产生。 此次选举是完善香港特区选举制度后的首次立法会选举。根据全国人大常委会修订的《中华人民共和国香港特别 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+            "block_ids": [
+              "rgb_doc_20d6787ed6faa39536af74a1:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 92
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 6,
+              "score": 39.362648010253906,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_ace6f650b39a5e9e": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_da76432b9b4ed0d24da22632",
+          "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+          "document_name": "rgb_doc_da76432b9b4ed0d24da22632.txt",
+          "chunk_id": "rgb_doc_da76432b9b4ed0d24da22632:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+            "block_ids": [
+              "rgb_doc_da76432b9b4ed0d24da22632:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 110
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 37.65963363647461,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_824dd82257c95d2c": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_7d240a6a7038273f0553c3d6",
+          "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+          "document_name": "rgb_doc_7d240a6a7038273f0553c3d6.txt",
+          "chunk_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 10,
+          "source_score": null,
+          "fused_score": 0.014285714285714285,
+          "rerank_score": null,
+          "content": "Dec 22, 2021 ... 选举委员会产生的议员，比较能够照顾全体利益，也包括国家的利益。 新的选举制度引入了充分竞争。 香港特区第七届立法会选举当选议员陈勇. 总共90个议席里 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+            "block_ids": [
+              "rgb_doc_7d240a6a7038273f0553c3d6:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 96
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 10,
+              "score": 36.44332504272461,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_3aedf83bb748deaa": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_160a93b420988903e9e58c45",
+          "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+          "document_name": "rgb_doc_160a93b420988903e9e58c45.txt",
+          "chunk_id": "rgb_doc_160a93b420988903e9e58c45:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 8,
+          "source_score": null,
+          "fused_score": 0.014705882352941176,
+          "rerank_score": null,
+          "content": "2021年3月11日，中华人民共和国全国人民代表大会通过《关于完善香港特别行政区选举制度的决定》，立法会议席增加至90个，同时大幅修改议席构成。现时的立法会届别为第七届 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+            "block_ids": [
+              "rgb_doc_160a93b420988903e9e58c45:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 88
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 8,
+              "score": 37.553585052490234,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "香港第七届立法会选举共有90个议席。",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7",
+            "S10"
+          ]
+        },
+        {
+          "text": "这90个议席包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+          "source_ids": [
+            "S2",
+            "S3",
+            "S7"
+          ]
+        },
+        {
+          "text": "第七届立法会是完善香港特区选举制度后的首次立法会选举。",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ]
+        },
+        {
+          "text": "2021年3月11日，全国人民代表大会通过《关于完善香港特别行政区选举制度的决定》，将立法会议席增加至90个。",
+          "source_ids": [
+            "S8"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_7b14a60046d0ee0a"
+        },
+        {
+          "number": 2,
+          "source_id": "S2",
+          "evidence_id": "ev_5f0e5008b12b5518"
+        },
+        {
+          "number": 3,
+          "source_id": "S3",
+          "evidence_id": "ev_d26db20b86bfea4f"
+        },
+        {
+          "number": 4,
+          "source_id": "S4",
+          "evidence_id": "ev_bbe33495e194623e"
+        },
+        {
+          "number": 5,
+          "source_id": "S5",
+          "evidence_id": "ev_d21c5ed3c198470a"
+        },
+        {
+          "number": 6,
+          "source_id": "S6",
+          "evidence_id": "ev_d3eff52fb71d74de"
+        },
+        {
+          "number": 7,
+          "source_id": "S7",
+          "evidence_id": "ev_ace6f650b39a5e9e"
+        },
+        {
+          "number": 8,
+          "source_id": "S10",
+          "evidence_id": "ev_824dd82257c95d2c"
+        },
+        {
+          "number": 9,
+          "source_id": "S8",
+          "evidence_id": "ev_3aedf83bb748deaa"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_ad385e1e318a4d18952570",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "香港第七届立法会选举 议席数量",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_47dde5f5103a280a945ac125",
+            "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+            "document_name": "rgb_doc_47dde5f5103a280a945ac125.txt",
+            "chunk_id": "rgb_doc_47dde5f5103a280a945ac125:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 43.14016342163086,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "12月19日，香港顺利举行完善选举制度后首次立法会选举投票，工作人员点票现场。新华社记者 吕小炜 摄 　　新华社香港12月20日电（记者查文晔）香港特区第七届立法会功能团体界别选举的30个议席20日上午揭晓。至此，第七届立法会90个议席全部顺利产生。 　　此次选举是完善香港特区选举制度后的首次立法会选举。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+              "block_ids": [
+                "rgb_doc_47dde5f5103a280a945ac125:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 153
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 43.14016342163086,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0233ec2b221785d5f9e8a388",
+            "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+            "document_name": "rgb_doc_0233ec2b221785d5f9e8a388.txt",
+            "chunk_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 42.041664123535156,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "香港特区第七届立法会选举投票于12月19日23时左右结束。经过点票,香港选举事务处于20日公布第七届立法会分区直接选举界别、选举委员会界别和功能团体界别投票结果。 第七届立法会90个议席已全部顺利产生,其中包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+              "block_ids": [
+                "rgb_doc_0233ec2b221785d5f9e8a388:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 145
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 42.041664123535156,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4d7c131b103aa56046211f76",
+            "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+            "document_name": "rgb_doc_4d7c131b103aa56046211f76.txt",
+            "chunk_id": "rgb_doc_4d7c131b103aa56046211f76:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 40.2661247253418,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "12月19日，香港顺利举行完善选举制度后首次立法会选举投票，工作人员点票现场。（新华社记者 吕小炜 摄） 　　香港特区第七届立法会功能团体界别选举的30个议席12月20日上午揭晓。至此，第七届立法会90个议席全部顺利产生。 　　此次选举是完善香港特区选举制度后的首次立法会选举。根据全国人大常委会修订的《中华人民共和国香港特别行政区基本法附件二香港特别行政区立法会的产生办法和表决程序》，新一届香港特区立法会由90名议员组成，其中包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+              "block_ids": [
+                "rgb_doc_4d7c131b103aa56046211f76:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 257
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 40.2661247253418,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_375e92c84d20844f9ad90ce9",
+            "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+            "document_name": "rgb_doc_375e92c84d20844f9ad90ce9.txt",
+            "chunk_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 39.66551971435547,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "Jan 1, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+              "block_ids": [
+                "rgb_doc_375e92c84d20844f9ad90ce9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 39.66551971435547,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8fae86bfc772b22b693d1a7a",
+            "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+            "document_name": "rgb_doc_8fae86bfc772b22b693d1a7a.txt",
+            "chunk_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 39.66551971435547,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Jan 3, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+              "block_ids": [
+                "rgb_doc_8fae86bfc772b22b693d1a7a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 39.66551971435547,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20d6787ed6faa39536af74a1",
+            "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+            "document_name": "rgb_doc_20d6787ed6faa39536af74a1.txt",
+            "chunk_id": "rgb_doc_20d6787ed6faa39536af74a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 39.362648010253906,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "Dec 20, 2021 ... 至此，第七届立法会90个议席全部顺利产生。 此次选举是完善香港特区选举制度后的首次立法会选举。根据全国人大常委会修订的《中华人民共和国香港特别 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+              "block_ids": [
+                "rgb_doc_20d6787ed6faa39536af74a1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 39.362648010253906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da76432b9b4ed0d24da22632",
+            "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+            "document_name": "rgb_doc_da76432b9b4ed0d24da22632.txt",
+            "chunk_id": "rgb_doc_da76432b9b4ed0d24da22632:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 37.65963363647461,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+              "block_ids": [
+                "rgb_doc_da76432b9b4ed0d24da22632:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 110
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 37.65963363647461,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_160a93b420988903e9e58c45",
+            "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+            "document_name": "rgb_doc_160a93b420988903e9e58c45.txt",
+            "chunk_id": "rgb_doc_160a93b420988903e9e58c45:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 37.553585052490234,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "2021年3月11日，中华人民共和国全国人民代表大会通过《关于完善香港特别行政区选举制度的决定》，立法会议席增加至90个，同时大幅修改议席构成。现时的立法会届别为第七届 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+              "block_ids": [
+                "rgb_doc_160a93b420988903e9e58c45:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 37.553585052490234,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e15f8d1c70371ac27be4b20d",
+            "version_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1",
+            "document_name": "rgb_doc_e15f8d1c70371ac27be4b20d.txt",
+            "chunk_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 36.756168365478516,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "林郑月娥就香港特区第六任行政长官选举结果发表声明2022-05-08 ... 香港特区第七届立法会选举选委会界别40个议席全部产生2021-12-20 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1",
+              "block_ids": [
+                "rgb_doc_e15f8d1c70371ac27be4b20d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 79
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 36.756168365478516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d240a6a7038273f0553c3d6",
+            "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+            "document_name": "rgb_doc_7d240a6a7038273f0553c3d6.txt",
+            "chunk_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 36.44332504272461,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "Dec 22, 2021 ... 选举委员会产生的议员，比较能够照顾全体利益，也包括国家的利益。 新的选举制度引入了充分竞争。 香港特区第七届立法会选举当选议员陈勇. 总共90个议席里 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+              "block_ids": [
+                "rgb_doc_7d240a6a7038273f0553c3d6:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 36.44332504272461,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_47dde5f5103a280a945ac125",
+            "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+            "document_name": "rgb_doc_47dde5f5103a280a945ac125.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_47dde5f5103a280a945ac125:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_47dde5f5103a280a945ac125.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0233ec2b221785d5f9e8a388",
+            "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+            "document_name": "rgb_doc_0233ec2b221785d5f9e8a388.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_0233ec2b221785d5f9e8a388:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0233ec2b221785d5f9e8a388.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4d7c131b103aa56046211f76",
+            "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+            "document_name": "rgb_doc_4d7c131b103aa56046211f76.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_4d7c131b103aa56046211f76:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4d7c131b103aa56046211f76.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_375e92c84d20844f9ad90ce9",
+            "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+            "document_name": "rgb_doc_375e92c84d20844f9ad90ce9.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_375e92c84d20844f9ad90ce9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_375e92c84d20844f9ad90ce9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8fae86bfc772b22b693d1a7a",
+            "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+            "document_name": "rgb_doc_8fae86bfc772b22b693d1a7a.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_8fae86bfc772b22b693d1a7a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8fae86bfc772b22b693d1a7a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20d6787ed6faa39536af74a1",
+            "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+            "document_name": "rgb_doc_20d6787ed6faa39536af74a1.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_20d6787ed6faa39536af74a1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_20d6787ed6faa39536af74a1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da76432b9b4ed0d24da22632",
+            "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+            "document_name": "rgb_doc_da76432b9b4ed0d24da22632.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_da76432b9b4ed0d24da22632:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_da76432b9b4ed0d24da22632.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_160a93b420988903e9e58c45",
+            "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+            "document_name": "rgb_doc_160a93b420988903e9e58c45.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_160a93b420988903e9e58c45:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_160a93b420988903e9e58c45.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e15f8d1c70371ac27be4b20d",
+            "version_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1",
+            "document_name": "rgb_doc_e15f8d1c70371ac27be4b20d.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_e15f8d1c70371ac27be4b20d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e15f8d1c70371ac27be4b20d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d240a6a7038273f0553c3d6",
+            "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+            "document_name": "rgb_doc_7d240a6a7038273f0553c3d6.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_7d240a6a7038273f0553c3d6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7d240a6a7038273f0553c3d6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8b2824ffe5fba383e506ddef",
+            "version_id": "rgb_doc_8b2824ffe5fba383e506ddef:r1",
+            "document_name": "rgb_doc_8b2824ffe5fba383e506ddef.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_8b2824ffe5fba383e506ddef:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8b2824ffe5fba383e506ddef.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8ad59e91b4e2d1a85e169da3",
+            "version_id": "rgb_doc_8ad59e91b4e2d1a85e169da3:r1",
+            "document_name": "rgb_doc_8ad59e91b4e2d1a85e169da3.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_8ad59e91b4e2d1a85e169da3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8ad59e91b4e2d1a85e169da3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ac35c0d4e5bc472213a138a1",
+            "version_id": "rgb_doc_ac35c0d4e5bc472213a138a1:r1",
+            "document_name": "rgb_doc_ac35c0d4e5bc472213a138a1.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_ac35c0d4e5bc472213a138a1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ac35c0d4e5bc472213a138a1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b5c08481572fdc1039b84c9e",
+            "version_id": "rgb_doc_b5c08481572fdc1039b84c9e:r1",
+            "document_name": "rgb_doc_b5c08481572fdc1039b84c9e.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_b5c08481572fdc1039b84c9e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b5c08481572fdc1039b84c9e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d9df20f5d3bf558930358e4d",
+            "version_id": "rgb_doc_d9df20f5d3bf558930358e4d:r1",
+            "document_name": "rgb_doc_d9df20f5d3bf558930358e4d.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_d9df20f5d3bf558930358e4d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d9df20f5d3bf558930358e4d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f809a261c403d88e0f931364",
+            "version_id": "rgb_doc_f809a261c403d88e0f931364:r1",
+            "document_name": "rgb_doc_f809a261c403d88e0f931364.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_f809a261c403d88e0f931364:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f809a261c403d88e0f931364.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5fbdaf637d74cb3da2749641",
+            "version_id": "rgb_doc_5fbdaf637d74cb3da2749641:r1",
+            "document_name": "rgb_doc_5fbdaf637d74cb3da2749641.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_5fbdaf637d74cb3da2749641:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5fbdaf637d74cb3da2749641.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_03e72f1a594c252967f7ca8d",
+            "version_id": "rgb_doc_03e72f1a594c252967f7ca8d:r1",
+            "document_name": "rgb_doc_03e72f1a594c252967f7ca8d.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_03e72f1a594c252967f7ca8d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_03e72f1a594c252967f7ca8d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fac5b7f93da999bd118f70a6",
+            "version_id": "rgb_doc_fac5b7f93da999bd118f70a6:r1",
+            "document_name": "rgb_doc_fac5b7f93da999bd118f70a6.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_fac5b7f93da999bd118f70a6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fac5b7f93da999bd118f70a6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_412bc2b286203354b13919e5",
+            "version_id": "rgb_doc_412bc2b286203354b13919e5:r1",
+            "document_name": "rgb_doc_412bc2b286203354b13919e5.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_412bc2b286203354b13919e5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_412bc2b286203354b13919e5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5e2dafc051a3bccc78f78be8",
+            "version_id": "rgb_doc_5e2dafc051a3bccc78f78be8:r1",
+            "document_name": "rgb_doc_5e2dafc051a3bccc78f78be8.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_5e2dafc051a3bccc78f78be8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5e2dafc051a3bccc78f78be8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b84501f3f7bf45c3a2b8ad7f",
+            "version_id": "rgb_doc_b84501f3f7bf45c3a2b8ad7f:r1",
+            "document_name": "rgb_doc_b84501f3f7bf45c3a2b8ad7f.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_b84501f3f7bf45c3a2b8ad7f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b84501f3f7bf45c3a2b8ad7f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0ebc1e0e72a8eb27f187e91f",
+            "version_id": "rgb_doc_0ebc1e0e72a8eb27f187e91f:r1",
+            "document_name": "rgb_doc_0ebc1e0e72a8eb27f187e91f.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_0ebc1e0e72a8eb27f187e91f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0ebc1e0e72a8eb27f187e91f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f5c26856dff3d15bd5b52afd",
+            "version_id": "rgb_doc_f5c26856dff3d15bd5b52afd:r1",
+            "document_name": "rgb_doc_f5c26856dff3d15bd5b52afd.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_f5c26856dff3d15bd5b52afd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f5c26856dff3d15bd5b52afd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e5fb6105ea5ed7ac5bbcb4af",
+            "version_id": "rgb_doc_e5fb6105ea5ed7ac5bbcb4af:r1",
+            "document_name": "rgb_doc_e5fb6105ea5ed7ac5bbcb4af.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_e5fb6105ea5ed7ac5bbcb4af:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e5fb6105ea5ed7ac5bbcb4af.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a059171e79c3516747b9494b",
+            "version_id": "rgb_doc_a059171e79c3516747b9494b:r1",
+            "document_name": "rgb_doc_a059171e79c3516747b9494b.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_a059171e79c3516747b9494b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a059171e79c3516747b9494b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71cfaba339e4cceec3af672",
+            "version_id": "rgb_doc_e71cfaba339e4cceec3af672:r1",
+            "document_name": "rgb_doc_e71cfaba339e4cceec3af672.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_e71cfaba339e4cceec3af672:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e71cfaba339e4cceec3af672.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6d6141a0bdf60816f52936c",
+            "version_id": "rgb_doc_b6d6141a0bdf60816f52936c:r1",
+            "document_name": "rgb_doc_b6d6141a0bdf60816f52936c.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_b6d6141a0bdf60816f52936c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6d6141a0bdf60816f52936c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f3afd6f3fc269a6ba792c21d",
+            "version_id": "rgb_doc_f3afd6f3fc269a6ba792c21d:r1",
+            "document_name": "rgb_doc_f3afd6f3fc269a6ba792c21d.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_f3afd6f3fc269a6ba792c21d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f3afd6f3fc269a6ba792c21d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_758f0b1818931855bca2f8b9",
+            "version_id": "rgb_doc_758f0b1818931855bca2f8b9:r1",
+            "document_name": "rgb_doc_758f0b1818931855bca2f8b9.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_758f0b1818931855bca2f8b9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_758f0b1818931855bca2f8b9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3fc0fc602b1b288712a4909d",
+            "version_id": "rgb_doc_3fc0fc602b1b288712a4909d:r1",
+            "document_name": "rgb_doc_3fc0fc602b1b288712a4909d.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_3fc0fc602b1b288712a4909d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3fc0fc602b1b288712a4909d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7c1c67318b5fbc9156586136",
+            "version_id": "rgb_doc_7c1c67318b5fbc9156586136:r1",
+            "document_name": "rgb_doc_7c1c67318b5fbc9156586136.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_7c1c67318b5fbc9156586136:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7c1c67318b5fbc9156586136.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5fa5b44bf82edf765814169",
+            "version_id": "rgb_doc_a5fa5b44bf82edf765814169:r1",
+            "document_name": "rgb_doc_a5fa5b44bf82edf765814169.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_a5fa5b44bf82edf765814169:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a5fa5b44bf82edf765814169.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7e9b0490057a75e088d3a6ff",
+            "version_id": "rgb_doc_7e9b0490057a75e088d3a6ff:r1",
+            "document_name": "rgb_doc_7e9b0490057a75e088d3a6ff.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_7e9b0490057a75e088d3a6ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7e9b0490057a75e088d3a6ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8bdc77116c5b25b81a25bdd1",
+            "version_id": "rgb_doc_8bdc77116c5b25b81a25bdd1:r1",
+            "document_name": "rgb_doc_8bdc77116c5b25b81a25bdd1.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_8bdc77116c5b25b81a25bdd1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8bdc77116c5b25b81a25bdd1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0a2dd47bf537594f9c0320da",
+            "version_id": "rgb_doc_0a2dd47bf537594f9c0320da:r1",
+            "document_name": "rgb_doc_0a2dd47bf537594f9c0320da.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_0a2dd47bf537594f9c0320da:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0a2dd47bf537594f9c0320da.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ce52a7c3adad472608bc89d4",
+            "version_id": "rgb_doc_ce52a7c3adad472608bc89d4:r1",
+            "document_name": "rgb_doc_ce52a7c3adad472608bc89d4.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_ce52a7c3adad472608bc89d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ce52a7c3adad472608bc89d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d11aff9904a5c3a784e051f4",
+            "version_id": "rgb_doc_d11aff9904a5c3a784e051f4:r1",
+            "document_name": "rgb_doc_d11aff9904a5c3a784e051f4.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_d11aff9904a5c3a784e051f4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d11aff9904a5c3a784e051f4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_715f47340f3ac9f1f010875e",
+            "version_id": "rgb_doc_715f47340f3ac9f1f010875e:r1",
+            "document_name": "rgb_doc_715f47340f3ac9f1f010875e.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_715f47340f3ac9f1f010875e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_715f47340f3ac9f1f010875e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0b4c0c3cf52b8cb8bae8558a",
+            "version_id": "rgb_doc_0b4c0c3cf52b8cb8bae8558a:r1",
+            "document_name": "rgb_doc_0b4c0c3cf52b8cb8bae8558a.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_0b4c0c3cf52b8cb8bae8558a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0b4c0c3cf52b8cb8bae8558a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 9.179583008517511,
+              "candidate_count": 40,
+              "verified_count": 40,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.32683299551718,
+          "evidence_ms": 1.2809999898308888,
+          "fusion_ms": 0.5567909975070506,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 40,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 35.72829099721275,
+          "context_chars": 1210,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_7b14a60046d0ee0a",
+          "ev_5f0e5008b12b5518",
+          "ev_d26db20b86bfea4f",
+          "ev_bbe33495e194623e",
+          "ev_d21c5ed3c198470a",
+          "ev_d3eff52fb71d74de",
+          "ev_ace6f650b39a5e9e",
+          "ev_3aedf83bb748deaa",
+          "ev_d97022fb148034c0",
+          "ev_824dd82257c95d2c"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_7b14a60046d0ee0a",
+            "content": "12月19日，香港顺利举行完善选举制度后首次立法会选举投票，工作人员点票现场。新华社记者 吕小炜 摄 　　新华社香港12月20日电（记者查文晔）香港特区第七届立法会功能团体界别选举的30个议席20日上午揭晓。至此，第七届立法会90个议席全部顺利产生。 　　此次选举是完善香港特区选举制度后的首次立法会选举。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_47dde5f5103a280a945ac125",
+            "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+            "document_name": "rgb_doc_47dde5f5103a280a945ac125.txt",
+            "chunk_id": "rgb_doc_47dde5f5103a280a945ac125:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+              "block_ids": [
+                "rgb_doc_47dde5f5103a280a945ac125:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 153
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 43.14016342163086,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 153,
+            "content_hash": "47dde5f5103a280a945ac12537b06753882b8581bfc3a52902a4768f00a4ab62",
+            "scope_digest": "d5231e18015d97c9fe741902519803e8bdaf34c3c2954726696ef4a267432361",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_5f0e5008b12b5518",
+            "content": "香港特区第七届立法会选举投票于12月19日23时左右结束。经过点票,香港选举事务处于20日公布第七届立法会分区直接选举界别、选举委员会界别和功能团体界别投票结果。 第七届立法会90个议席已全部顺利产生,其中包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0233ec2b221785d5f9e8a388",
+            "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+            "document_name": "rgb_doc_0233ec2b221785d5f9e8a388.txt",
+            "chunk_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+              "block_ids": [
+                "rgb_doc_0233ec2b221785d5f9e8a388:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 145
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 42.041664123535156,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 145,
+            "content_hash": "0233ec2b221785d5f9e8a388ded62a0baa54cb2ee2b4e165537f0833dad275c5",
+            "scope_digest": "b637bb185a4cddac527e838e05c4f625d340da9eb673924094aec6d06e5237bf",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d26db20b86bfea4f",
+            "content": "12月19日，香港顺利举行完善选举制度后首次立法会选举投票，工作人员点票现场。（新华社记者 吕小炜 摄） 　　香港特区第七届立法会功能团体界别选举的30个议席12月20日上午揭晓。至此，第七届立法会90个议席全部顺利产生。 　　此次选举是完善香港特区选举制度后的首次立法会选举。根据全国人大常委会修订的《中华人民共和国香港特别行政区基本法附件二香港特别行政区立法会的产生办法和表决程序》，新一届香港特区立法会由90名议员组成，其中包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4d7c131b103aa56046211f76",
+            "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+            "document_name": "rgb_doc_4d7c131b103aa56046211f76.txt",
+            "chunk_id": "rgb_doc_4d7c131b103aa56046211f76:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+              "block_ids": [
+                "rgb_doc_4d7c131b103aa56046211f76:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 257
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 40.2661247253418,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 257,
+            "content_hash": "4d7c131b103aa56046211f76173e2cf6dd3c9bd63389face5c96991e81bffcaf",
+            "scope_digest": "9012b895db5463bc097344138c7ba08492e39052a50bfcbba005bdb13a9dcc1c",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_bbe33495e194623e",
+            "content": "Jan 1, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_375e92c84d20844f9ad90ce9",
+            "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+            "document_name": "rgb_doc_375e92c84d20844f9ad90ce9.txt",
+            "chunk_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+              "block_ids": [
+                "rgb_doc_375e92c84d20844f9ad90ce9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 39.66551971435547,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 95,
+            "content_hash": "375e92c84d20844f9ad90ce91c81383f25c8a978b4b8d5613086ac73c0369cea",
+            "scope_digest": "a8225638c084fdd132649779c942f6ab3cb4d46d8de4c61e3cd9af51f0ef761b",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_8a920507db96673a8364",
+                "source_id": "S4",
+                "evidence_id": "ev_bbe33495e194623e",
+                "raw_text": "1",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_51aed0768067ec15ad31",
+                "source_id": "S4",
+                "evidence_id": "ev_bbe33495e194623e",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d21c5ed3c198470a",
+            "content": "Jan 3, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8fae86bfc772b22b693d1a7a",
+            "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+            "document_name": "rgb_doc_8fae86bfc772b22b693d1a7a.txt",
+            "chunk_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+              "block_ids": [
+                "rgb_doc_8fae86bfc772b22b693d1a7a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 39.66551971435547,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 95,
+            "content_hash": "8fae86bfc772b22b693d1a7a3e511907c64c7904c9354a7e9284e90f873688f9",
+            "scope_digest": "edd90326cb033522fd83f38b6387ce50617b7721214a0c07cfbb0324d2767490",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_398d2a2c5f095f1a6dd7",
+                "source_id": "S5",
+                "evidence_id": "ev_d21c5ed3c198470a",
+                "raw_text": "3",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 3, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_5d58c79438e02e2d3e73",
+                "source_id": "S5",
+                "evidence_id": "ev_d21c5ed3c198470a",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 3, 2022 ... 香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d3eff52fb71d74de",
+            "content": "Dec 20, 2021 ... 至此，第七届立法会90个议席全部顺利产生。 此次选举是完善香港特区选举制度后的首次立法会选举。根据全国人大常委会修订的《中华人民共和国香港特别 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20d6787ed6faa39536af74a1",
+            "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+            "document_name": "rgb_doc_20d6787ed6faa39536af74a1.txt",
+            "chunk_id": "rgb_doc_20d6787ed6faa39536af74a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+              "block_ids": [
+                "rgb_doc_20d6787ed6faa39536af74a1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 39.362648010253906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "20d6787ed6faa39536af74a12c9c4259685f0f079b4f557dd7ead559939e8627",
+            "scope_digest": "cc26a9adb4026abacfd4548d77ead0992a339552733af8b75d3afa6c60e7f4da",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_e5b424944a1a797c77b6",
+                "source_id": "S6",
+                "evidence_id": "ev_d3eff52fb71d74de",
+                "raw_text": "20",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 20, 2021 ... 至此，第七届立法会90个议席全部顺利产生。 此次选举是完善香港特区选举制度",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d7a4e3540d0bbc5af7f1",
+                "source_id": "S6",
+                "evidence_id": "ev_d3eff52fb71d74de",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 20, 2021 ... 至此，第七届立法会90个议席全部顺利产生。 此次选举是完善香港特区选举制度后的首次立法",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_ace6f650b39a5e9e",
+            "content": "香港特区第七届立法会选举投票于2021年12月19日顺利结束，这是完善香港特区选举制度后的首次立法会选举。153名候选人竞选90个议席，包括选举委员会选举的议员40人、功能团体选举的议员30人和分区直接选举的议员20人。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da76432b9b4ed0d24da22632",
+            "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+            "document_name": "rgb_doc_da76432b9b4ed0d24da22632.txt",
+            "chunk_id": "rgb_doc_da76432b9b4ed0d24da22632:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+              "block_ids": [
+                "rgb_doc_da76432b9b4ed0d24da22632:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 110
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 37.65963363647461,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 110,
+            "content_hash": "da76432b9b4ed0d24da22632668064fb4a09c5531ee9274c0eb5b16016aaec39",
+            "scope_digest": "396300c71795ca8be940d80091811993a7142c4b7b975bed7319b5f9b517e14d",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_3aedf83bb748deaa",
+            "content": "2021年3月11日，中华人民共和国全国人民代表大会通过《关于完善香港特别行政区选举制度的决定》，立法会议席增加至90个，同时大幅修改议席构成。现时的立法会届别为第七届 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_160a93b420988903e9e58c45",
+            "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+            "document_name": "rgb_doc_160a93b420988903e9e58c45.txt",
+            "chunk_id": "rgb_doc_160a93b420988903e9e58c45:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+              "block_ids": [
+                "rgb_doc_160a93b420988903e9e58c45:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 88
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 37.553585052490234,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 88,
+            "content_hash": "160a93b420988903e9e58c451624d212685f1b847a1f47f74b67fa01ddf2966c",
+            "scope_digest": "49a41a4be05644ac43634dc296bb9ab30963b4970c8aeb37eebe6ae7b2c2cd0e",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d97022fb148034c0",
+            "content": "林郑月娥就香港特区第六任行政长官选举结果发表声明2022-05-08 ... 香港特区第七届立法会选举选委会界别40个议席全部产生2021-12-20 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e15f8d1c70371ac27be4b20d",
+            "version_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1",
+            "document_name": "rgb_doc_e15f8d1c70371ac27be4b20d.txt",
+            "chunk_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1",
+              "block_ids": [
+                "rgb_doc_e15f8d1c70371ac27be4b20d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 79
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 36.756168365478516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 79,
+            "content_hash": "e15f8d1c70371ac27be4b20d788f80df78bbd2be54ddf67ae1f6b72b022884e4",
+            "scope_digest": "a0e6ee3b7bf9a649035b2f1ce2640ea10db475b7bc89b4fa8d82352b664f8a7d",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_824dd82257c95d2c",
+            "content": "Dec 22, 2021 ... 选举委员会产生的议员，比较能够照顾全体利益，也包括国家的利益。 新的选举制度引入了充分竞争。 香港特区第七届立法会选举当选议员陈勇. 总共90个议席里 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d240a6a7038273f0553c3d6",
+            "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+            "document_name": "rgb_doc_7d240a6a7038273f0553c3d6.txt",
+            "chunk_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+              "block_ids": [
+                "rgb_doc_7d240a6a7038273f0553c3d6:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 36.44332504272461,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "7d240a6a7038273f0553c3d669560cf4d1bf6bbad823a03f91fab51d444563b5",
+            "scope_digest": "2ca8de984bab382eea9546be93411ed5911728b08dc8d5bea8ab756eed220225",
+            "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_345ac71dab39ea8d3195",
+                "source_id": "S10",
+                "evidence_id": "ev_824dd82257c95d2c",
+                "raw_text": "22",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 22, 2021 ... 选举委员会产生的议员，比较能够照顾全体利益，也包括国家的利益。 新的选举制",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ea124a7e0643c603c668",
+                "source_id": "S10",
+                "evidence_id": "ev_824dd82257c95d2c",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 22, 2021 ... 选举委员会产生的议员，比较能够照顾全体利益，也包括国家的利益。 新的选举制度引入了充分",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_7b14a60046d0ee0a",
+      "ev_5f0e5008b12b5518",
+      "ev_d26db20b86bfea4f",
+      "ev_bbe33495e194623e",
+      "ev_d21c5ed3c198470a",
+      "ev_d3eff52fb71d74de",
+      "ev_ace6f650b39a5e9e",
+      "ev_3aedf83bb748deaa",
+      "ev_d97022fb148034c0",
+      "ev_824dd82257c95d2c"
+    ],
+    "evidence": {
+      "ev_7b14a60046d0ee0a": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_47dde5f5103a280a945ac125",
+        "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+        "document_name": "rgb_doc_47dde5f5103a280a945ac125.txt",
+        "chunk_id": "rgb_doc_47dde5f5103a280a945ac125:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_47dde5f5103a280a945ac125:r1",
+          "block_ids": [
+            "rgb_doc_47dde5f5103a280a945ac125:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 153
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 43.14016342163086,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 153,
+        "content_hash": "47dde5f5103a280a945ac12537b06753882b8581bfc3a52902a4768f00a4ab62",
+        "scope_digest": "d5231e18015d97c9fe741902519803e8bdaf34c3c2954726696ef4a267432361",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_5f0e5008b12b5518": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_0233ec2b221785d5f9e8a388",
+        "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+        "document_name": "rgb_doc_0233ec2b221785d5f9e8a388.txt",
+        "chunk_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_0233ec2b221785d5f9e8a388:r1",
+          "block_ids": [
+            "rgb_doc_0233ec2b221785d5f9e8a388:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 145
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 42.041664123535156,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 145,
+        "content_hash": "0233ec2b221785d5f9e8a388ded62a0baa54cb2ee2b4e165537f0833dad275c5",
+        "scope_digest": "b637bb185a4cddac527e838e05c4f625d340da9eb673924094aec6d06e5237bf",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d26db20b86bfea4f": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4d7c131b103aa56046211f76",
+        "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+        "document_name": "rgb_doc_4d7c131b103aa56046211f76.txt",
+        "chunk_id": "rgb_doc_4d7c131b103aa56046211f76:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4d7c131b103aa56046211f76:r1",
+          "block_ids": [
+            "rgb_doc_4d7c131b103aa56046211f76:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 257
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 40.2661247253418,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 257,
+        "content_hash": "4d7c131b103aa56046211f76173e2cf6dd3c9bd63389face5c96991e81bffcaf",
+        "scope_digest": "9012b895db5463bc097344138c7ba08492e39052a50bfcbba005bdb13a9dcc1c",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_bbe33495e194623e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_375e92c84d20844f9ad90ce9",
+        "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+        "document_name": "rgb_doc_375e92c84d20844f9ad90ce9.txt",
+        "chunk_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_375e92c84d20844f9ad90ce9:r1",
+          "block_ids": [
+            "rgb_doc_375e92c84d20844f9ad90ce9:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 95
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 39.66551971435547,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 95,
+        "content_hash": "375e92c84d20844f9ad90ce91c81383f25c8a978b4b8d5613086ac73c0369cea",
+        "scope_digest": "a8225638c084fdd132649779c942f6ab3cb4d46d8de4c61e3cd9af51f0ef761b",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d21c5ed3c198470a": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_8fae86bfc772b22b693d1a7a",
+        "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+        "document_name": "rgb_doc_8fae86bfc772b22b693d1a7a.txt",
+        "chunk_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_8fae86bfc772b22b693d1a7a:r1",
+          "block_ids": [
+            "rgb_doc_8fae86bfc772b22b693d1a7a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 95
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 39.66551971435547,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 95,
+        "content_hash": "8fae86bfc772b22b693d1a7a3e511907c64c7904c9354a7e9284e90f873688f9",
+        "scope_digest": "edd90326cb033522fd83f38b6387ce50617b7721214a0c07cfbb0324d2767490",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d3eff52fb71d74de": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_20d6787ed6faa39536af74a1",
+        "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+        "document_name": "rgb_doc_20d6787ed6faa39536af74a1.txt",
+        "chunk_id": "rgb_doc_20d6787ed6faa39536af74a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_20d6787ed6faa39536af74a1:r1",
+          "block_ids": [
+            "rgb_doc_20d6787ed6faa39536af74a1:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 39.362648010253906,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "20d6787ed6faa39536af74a12c9c4259685f0f079b4f557dd7ead559939e8627",
+        "scope_digest": "cc26a9adb4026abacfd4548d77ead0992a339552733af8b75d3afa6c60e7f4da",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_ace6f650b39a5e9e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_da76432b9b4ed0d24da22632",
+        "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+        "document_name": "rgb_doc_da76432b9b4ed0d24da22632.txt",
+        "chunk_id": "rgb_doc_da76432b9b4ed0d24da22632:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_da76432b9b4ed0d24da22632:r1",
+          "block_ids": [
+            "rgb_doc_da76432b9b4ed0d24da22632:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 110
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 37.65963363647461,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 110,
+        "content_hash": "da76432b9b4ed0d24da22632668064fb4a09c5531ee9274c0eb5b16016aaec39",
+        "scope_digest": "396300c71795ca8be940d80091811993a7142c4b7b975bed7319b5f9b517e14d",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_3aedf83bb748deaa": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_160a93b420988903e9e58c45",
+        "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+        "document_name": "rgb_doc_160a93b420988903e9e58c45.txt",
+        "chunk_id": "rgb_doc_160a93b420988903e9e58c45:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+          "block_ids": [
+            "rgb_doc_160a93b420988903e9e58c45:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 88
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 37.553585052490234,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 88,
+        "content_hash": "160a93b420988903e9e58c451624d212685f1b847a1f47f74b67fa01ddf2966c",
+        "scope_digest": "49a41a4be05644ac43634dc296bb9ab30963b4970c8aeb37eebe6ae7b2c2cd0e",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d97022fb148034c0": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_e15f8d1c70371ac27be4b20d",
+        "version_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1",
+        "document_name": "rgb_doc_e15f8d1c70371ac27be4b20d.txt",
+        "chunk_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_e15f8d1c70371ac27be4b20d:r1",
+          "block_ids": [
+            "rgb_doc_e15f8d1c70371ac27be4b20d:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 79
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 36.756168365478516,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 79,
+        "content_hash": "e15f8d1c70371ac27be4b20d788f80df78bbd2be54ddf67ae1f6b72b022884e4",
+        "scope_digest": "a0e6ee3b7bf9a649035b2f1ce2640ea10db475b7bc89b4fa8d82352b664f8a7d",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_824dd82257c95d2c": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_7d240a6a7038273f0553c3d6",
+        "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+        "document_name": "rgb_doc_7d240a6a7038273f0553c3d6.txt",
+        "chunk_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_7d240a6a7038273f0553c3d6:r1",
+          "block_ids": [
+            "rgb_doc_7d240a6a7038273f0553c3d6:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 36.44332504272461,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "7d240a6a7038273f0553c3d669560cf4d1bf6bbad823a03f91fab51d444563b5",
+        "scope_digest": "2ca8de984bab382eea9546be93411ed5911728b08dc8d5bea8ab756eed220225",
+        "trace_id": "a680f375697b4d8eac09ad7a2a1b05bb",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_7b14a60046d0ee0a",
+      "S2": "ev_5f0e5008b12b5518",
+      "S3": "ev_d26db20b86bfea4f",
+      "S4": "ev_bbe33495e194623e",
+      "S5": "ev_d21c5ed3c198470a",
+      "S6": "ev_d3eff52fb71d74de",
+      "S7": "ev_ace6f650b39a5e9e",
+      "S8": "ev_3aedf83bb748deaa",
+      "S9": "ev_d97022fb148034c0",
+      "S10": "ev_824dd82257c95d2c"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

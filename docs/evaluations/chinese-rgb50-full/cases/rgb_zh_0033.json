@@ -1,0 +1,3189 @@
+{
+  "question_id": "rgb_zh_0033",
+  "result": {
+    "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+    "run_id": "run_5a2d302710774351a6edd148b492277a",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:1",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:2",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:3",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "context_chars": 1190,
+        "prompt_tokens": 8442,
+        "completion_tokens": 78,
+        "total_tokens": 8520,
+        "context_compaction_count": 0,
+        "context_chars_before": 1190,
+        "context_chars_after": 1190,
+        "estimated_input_tokens": 12133,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1487,
+        "remaining_run_tokens": 111480,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8442,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3691
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:4",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1190
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:5",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "tool_call_id": "call_1a3ff37449934348aacac4",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:6",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "tool_call_id": "call_1a3ff37449934348aacac4",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:7",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_1a3ff37449934348aacac4",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 9,
+        "output_chars_before": 76145,
+        "output_chars_after": 14343,
+        "removed_chars": 61802,
+        "document_metadata_chars": 22745,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 19837,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:8",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:9",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:10",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "context_chars": 15578,
+        "prompt_tokens": 15157,
+        "completion_tokens": 140,
+        "total_tokens": 15297,
+        "context_compaction_count": 0,
+        "context_chars_before": 15578,
+        "context_chars_after": 15578,
+        "estimated_input_tokens": 21059,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 8130,
+        "evidence_tokens": 2009,
+        "history_tokens": 2283,
+        "remaining_run_tokens": 96183,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15157,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5902
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:11",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "model_visible_evidence_count": 9,
+        "context_chars": 15578
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:12",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "citation_validation_reason": [
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:13",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "context_chars": 1872,
+        "prompt_tokens": 1136,
+        "completion_tokens": 91,
+        "total_tokens": 1227,
+        "context_compaction_count": 0,
+        "context_chars_before": 1872,
+        "context_chars_after": 1872,
+        "estimated_input_tokens": 2722,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 2722,
+        "remaining_run_tokens": 94956,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 1136,
+        "usage_source": "provider",
+        "estimation_error_tokens": -1586
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:14",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:15",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "delta": "《踏冰逐梦》的总导演是刘正 [1] [2] [3] [4]\n\n姚滨担纲《踏冰逐梦》相关职务（具体职务未明确） [3] [4]\n\n张丹、张昊领衔主演《踏冰逐梦》 [5] [6]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:16",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e",
+        "final_citation_count": 6,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_5a2d302710774351a6edd148b492277a:da79e036a2bc4c45a03843828c6d59f6:17",
+        "run_id": "run_5a2d302710774351a6edd148b492277a",
+        "thread_id": "thread_8d35f35989574459b2f59257ab054b0e"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 24735,
+      "completion_tokens": 309,
+      "total_tokens": 25044
+    },
+    "elapsed_seconds": 9.430901416999404,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 9,
+      "output_truncated": true,
+      "context_chars": 15578,
+      "prompt_tokens": 24735,
+      "completion_tokens": 309,
+      "total_tokens": 25044,
+      "context_compaction_count": 0,
+      "context_chars_before": 1872,
+      "context_chars_after": 1872,
+      "estimated_input_tokens": 2722,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 2722,
+      "remaining_run_tokens": 94956,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 1136,
+      "usage_source": "provider",
+      "estimation_error_tokens": -1586,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_1a3ff37449934348aacac4",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 9,
+          "output_chars_before": 76145,
+          "output_chars_after": 14343,
+          "removed_chars": 61802,
+          "document_metadata_chars": 22745,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 19837,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 1872,
+      "repair_visible_evidence_count": 9,
+      "final_citation_count": 6,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "《踏冰逐梦》的总导演是刘正 [1] [2] [3] [4]\n\n姚滨担纲《踏冰逐梦》相关职务（具体职务未明确） [3] [4]\n\n张丹、张昊领衔主演《踏冰逐梦》 [5] [6]",
+      "citations": {
+        "ev_104c86b97e00c077": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_05df98963d29269e320a2df2",
+          "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+          "document_name": "rgb_doc_05df98963d29269e320a2df2.txt",
+          "chunk_id": "rgb_doc_05df98963d29269e320a2df2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "Jul 3, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+            "block_ids": [
+              "rgb_doc_05df98963d29269e320a2df2:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 92
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 28.454437255859375,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_f1f9eefe8724ef70": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_ca2b37841f09fa86fc9c2f40",
+          "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+          "document_name": "rgb_doc_ca2b37841f09fa86fc9c2f40.txt",
+          "chunk_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "Jul 6, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+            "block_ids": [
+              "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 92
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 28.454437255859375,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_b9f6acff5c0f82ec": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_ddea09dc05c1019bf93de47b",
+          "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+          "document_name": "rgb_doc_ddea09dc05c1019bf93de47b.txt",
+          "chunk_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "Jul 4, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父姚滨担纲 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+            "block_ids": [
+              "rgb_doc_ddea09dc05c1019bf93de47b:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 92
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 28.454437255859375,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_a8ba17616c4a59aa": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_5151a15d7cd891cd06145e36",
+          "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+          "document_name": "rgb_doc_5151a15d7cd891cd06145e36.txt",
+          "chunk_id": "rgb_doc_5151a15d7cd891cd06145e36:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "《踏冰逐梦》是由万域芳菲出品、WOI（Wings on Ice）菲剧团演出的中国首部原创冰上舞剧 · 该剧以冬奥元素为主题，由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父姚滨 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+            "block_ids": [
+              "rgb_doc_5151a15d7cd891cd06145e36:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 93
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 23.79421615600586,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_8f75445cca1ac388": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_ba00bec91f36664b9b009b88",
+          "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+          "document_name": "rgb_doc_ba00bec91f36664b9b009b88.txt",
+          "chunk_id": "rgb_doc_ba00bec91f36664b9b009b88:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "中国首部原创冰上舞剧《踏冰逐梦》精彩来袭 当花滑与舞剧融合，冰+舞+剧在剧场掀起艺术浪潮。 花滑运动世界冠军张丹、张昊领衔主演 解锁属于中国花滑的别样辉煌 7月8日至9日冰上舞剧《踏冰逐梦》将在北京凯迪拉克中心上演。 让《踏冰逐梦》的现场，带给你夏日第一份清凉~    剧目介绍 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上舞剧。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+            "block_ids": [
+              "rgb_doc_ba00bec91f36664b9b009b88:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 175
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 27.390533447265625,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_8ad291852e149e56": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_802457f603287d5a2e8436e7",
+          "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+          "document_name": "rgb_doc_802457f603287d5a2e8436e7.txt",
+          "chunk_id": "rgb_doc_802457f603287d5a2e8436e7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 9,
+          "source_score": null,
+          "fused_score": 0.014492753623188406,
+          "rerank_score": null,
+          "content": "6 days ago ... 冰上舞剧《踏冰逐梦》是一部以花样滑冰为主要表演形式的冰上舞剧，剧目讲述了一位热爱花滑的女孩在父亲、队友 ... 张丹、张昊将担任该剧的领衔主演。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+            "block_ids": [
+              "rgb_doc_802457f603287d5a2e8436e7:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 87
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 9,
+              "score": 23.336997985839844,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "《踏冰逐梦》的总导演是刘正",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S7"
+          ]
+        },
+        {
+          "text": "姚滨担纲《踏冰逐梦》相关职务（具体职务未明确）",
+          "source_ids": [
+            "S3",
+            "S7"
+          ]
+        },
+        {
+          "text": "张丹、张昊领衔主演《踏冰逐梦》",
+          "source_ids": [
+            "S5",
+            "S9"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_104c86b97e00c077"
+        },
+        {
+          "number": 2,
+          "source_id": "S2",
+          "evidence_id": "ev_f1f9eefe8724ef70"
+        },
+        {
+          "number": 3,
+          "source_id": "S3",
+          "evidence_id": "ev_b9f6acff5c0f82ec"
+        },
+        {
+          "number": 4,
+          "source_id": "S7",
+          "evidence_id": "ev_a8ba17616c4a59aa"
+        },
+        {
+          "number": 5,
+          "source_id": "S5",
+          "evidence_id": "ev_8f75445cca1ac388"
+        },
+        {
+          "number": 6,
+          "source_id": "S9",
+          "evidence_id": "ev_8ad291852e149e56"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_1a3ff37449934348aacac4",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "踏冰逐梦 主演 导演",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_05df98963d29269e320a2df2",
+            "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+            "document_name": "rgb_doc_05df98963d29269e320a2df2.txt",
+            "chunk_id": "rgb_doc_05df98963d29269e320a2df2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 28.454437255859375,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Jul 3, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+              "block_ids": [
+                "rgb_doc_05df98963d29269e320a2df2:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 28.454437255859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ca2b37841f09fa86fc9c2f40",
+            "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+            "document_name": "rgb_doc_ca2b37841f09fa86fc9c2f40.txt",
+            "chunk_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 28.454437255859375,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Jul 6, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+              "block_ids": [
+                "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 28.454437255859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ddea09dc05c1019bf93de47b",
+            "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+            "document_name": "rgb_doc_ddea09dc05c1019bf93de47b.txt",
+            "chunk_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 28.454437255859375,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "Jul 4, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父姚滨担纲 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+              "block_ids": [
+                "rgb_doc_ddea09dc05c1019bf93de47b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 28.454437255859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_01407d4253e5e7a6e4f84b16",
+            "version_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1",
+            "document_name": "rgb_doc_01407d4253e5e7a6e4f84b16.txt",
+            "chunk_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 27.9796142578125,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "May 22, 2022 ... 即日起，冰上舞剧《踏冰逐梦》主演动漫IP形象设计作品征集全面开启参赛通道！ ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1",
+              "block_ids": [
+                "rgb_doc_01407d4253e5e7a6e4f84b16:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 27.9796142578125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ba00bec91f36664b9b009b88",
+            "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+            "document_name": "rgb_doc_ba00bec91f36664b9b009b88.txt",
+            "chunk_id": "rgb_doc_ba00bec91f36664b9b009b88:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 27.390533447265625,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "中国首部原创冰上舞剧《踏冰逐梦》精彩来袭 当花滑与舞剧融合，冰+舞+剧在剧场掀起艺术浪潮。 花滑运动世界冠军张丹、张昊领衔主演 解锁属于中国花滑的别样辉煌 7月8日至9日冰上舞剧《踏冰逐梦》将在北京凯迪拉克中心上演。 让《踏冰逐梦》的现场，带给你夏日第一份清凉~    剧目介绍 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上舞剧。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+              "block_ids": [
+                "rgb_doc_ba00bec91f36664b9b009b88:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 175
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 27.390533447265625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d3697b85aeed27f62b1d31b",
+            "version_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1",
+            "document_name": "rgb_doc_0d3697b85aeed27f62b1d31b.txt",
+            "chunk_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 24.667404174804688,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "《踏冰逐梦》融合了花样滑冰、舞剧、冰上杂技等多种表演形式，结合当代舞台的多重 ... 与众国家队运动员共同主演这部感人至深、无与伦比的冰上盛宴，致敬所有追梦人， ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1",
+              "block_ids": [
+                "rgb_doc_0d3697b85aeed27f62b1d31b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 84
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 24.667404174804688,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5151a15d7cd891cd06145e36",
+            "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+            "document_name": "rgb_doc_5151a15d7cd891cd06145e36.txt",
+            "chunk_id": "rgb_doc_5151a15d7cd891cd06145e36:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 23.79421615600586,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "《踏冰逐梦》是由万域芳菲出品、WOI（Wings on Ice）菲剧团演出的中国首部原创冰上舞剧 · 该剧以冬奥元素为主题，由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父姚滨 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+              "block_ids": [
+                "rgb_doc_5151a15d7cd891cd06145e36:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 23.79421615600586,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4544a736b8f463fce8658af6",
+            "version_id": "rgb_doc_4544a736b8f463fce8658af6:r1",
+            "document_name": "rgb_doc_4544a736b8f463fce8658af6.txt",
+            "chunk_id": "rgb_doc_4544a736b8f463fce8658af6:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 23.705856323242188,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创舞剧，曾被北京冬奥组委列为《北京2022年冬奥会和冬残奥会遗产案例报告（2022）》文化遗产6个案例中，唯一的冰上演出案例予以详细评述。   为使《踏冰逐梦》以全新的形象展示于社会，不断提升冰上舞剧知名度及影响力，万域芳菲特面向社会各界公开征集动漫IP形象创意设计作品。请参赛者以《踏冰逐梦》为原型，发挥自己的想象力，通过设计《踏冰逐梦》动漫IP形象，展现《踏冰逐梦》的艺术本质。  1.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4544a736b8f463fce8658af6:r1",
+              "block_ids": [
+                "rgb_doc_4544a736b8f463fce8658af6:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 224
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 23.705856323242188,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_802457f603287d5a2e8436e7",
+            "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+            "document_name": "rgb_doc_802457f603287d5a2e8436e7.txt",
+            "chunk_id": "rgb_doc_802457f603287d5a2e8436e7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 23.336997985839844,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "6 days ago ... 冰上舞剧《踏冰逐梦》是一部以花样滑冰为主要表演形式的冰上舞剧，剧目讲述了一位热爱花滑的女孩在父亲、队友 ... 张丹、张昊将担任该剧的领衔主演。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+              "block_ids": [
+                "rgb_doc_802457f603287d5a2e8436e7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 87
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 23.336997985839844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c80ff95465c8c32bb6b11063",
+            "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+            "document_name": "rgb_doc_c80ff95465c8c32bb6b11063.txt",
+            "chunk_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 23.099220275878906,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "Jun 20, 2023 ... 花滑运动世界冠军张丹、张昊领衔主演，解锁属于中国花滑的别样辉煌，7 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上舞剧。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+              "block_ids": [
+                "rgb_doc_c80ff95465c8c32bb6b11063:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 90
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 23.099220275878906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_05df98963d29269e320a2df2",
+            "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+            "document_name": "rgb_doc_05df98963d29269e320a2df2.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_05df98963d29269e320a2df2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_05df98963d29269e320a2df2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ca2b37841f09fa86fc9c2f40",
+            "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+            "document_name": "rgb_doc_ca2b37841f09fa86fc9c2f40.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ca2b37841f09fa86fc9c2f40.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ddea09dc05c1019bf93de47b",
+            "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+            "document_name": "rgb_doc_ddea09dc05c1019bf93de47b.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_ddea09dc05c1019bf93de47b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ddea09dc05c1019bf93de47b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_01407d4253e5e7a6e4f84b16",
+            "version_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1",
+            "document_name": "rgb_doc_01407d4253e5e7a6e4f84b16.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_01407d4253e5e7a6e4f84b16:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_01407d4253e5e7a6e4f84b16.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ba00bec91f36664b9b009b88",
+            "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+            "document_name": "rgb_doc_ba00bec91f36664b9b009b88.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_ba00bec91f36664b9b009b88:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ba00bec91f36664b9b009b88.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d3697b85aeed27f62b1d31b",
+            "version_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1",
+            "document_name": "rgb_doc_0d3697b85aeed27f62b1d31b.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_0d3697b85aeed27f62b1d31b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0d3697b85aeed27f62b1d31b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5151a15d7cd891cd06145e36",
+            "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+            "document_name": "rgb_doc_5151a15d7cd891cd06145e36.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_5151a15d7cd891cd06145e36:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5151a15d7cd891cd06145e36.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4544a736b8f463fce8658af6",
+            "version_id": "rgb_doc_4544a736b8f463fce8658af6:r1",
+            "document_name": "rgb_doc_4544a736b8f463fce8658af6.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_4544a736b8f463fce8658af6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4544a736b8f463fce8658af6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_802457f603287d5a2e8436e7",
+            "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+            "document_name": "rgb_doc_802457f603287d5a2e8436e7.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_802457f603287d5a2e8436e7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_802457f603287d5a2e8436e7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c80ff95465c8c32bb6b11063",
+            "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+            "document_name": "rgb_doc_c80ff95465c8c32bb6b11063.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_c80ff95465c8c32bb6b11063:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c80ff95465c8c32bb6b11063.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1137e477271064f2506458e6",
+            "version_id": "rgb_doc_1137e477271064f2506458e6:r1",
+            "document_name": "rgb_doc_1137e477271064f2506458e6.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_1137e477271064f2506458e6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1137e477271064f2506458e6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_746fc146a92c07cc28f51341",
+            "version_id": "rgb_doc_746fc146a92c07cc28f51341:r1",
+            "document_name": "rgb_doc_746fc146a92c07cc28f51341.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_746fc146a92c07cc28f51341:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_746fc146a92c07cc28f51341.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5f86ab7d01ee756cc8d8c318",
+            "version_id": "rgb_doc_5f86ab7d01ee756cc8d8c318:r1",
+            "document_name": "rgb_doc_5f86ab7d01ee756cc8d8c318.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_5f86ab7d01ee756cc8d8c318:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5f86ab7d01ee756cc8d8c318.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5932a1a25f65663b418451b3",
+            "version_id": "rgb_doc_5932a1a25f65663b418451b3:r1",
+            "document_name": "rgb_doc_5932a1a25f65663b418451b3.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_5932a1a25f65663b418451b3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5932a1a25f65663b418451b3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_31785a8e8839ad0e2b1744b8",
+            "version_id": "rgb_doc_31785a8e8839ad0e2b1744b8:r1",
+            "document_name": "rgb_doc_31785a8e8839ad0e2b1744b8.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_31785a8e8839ad0e2b1744b8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_31785a8e8839ad0e2b1744b8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8105288cfe23611d50a4e345",
+            "version_id": "rgb_doc_8105288cfe23611d50a4e345:r1",
+            "document_name": "rgb_doc_8105288cfe23611d50a4e345.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_8105288cfe23611d50a4e345:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8105288cfe23611d50a4e345.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_22f08a36c899dbd5e8163ece",
+            "version_id": "rgb_doc_22f08a36c899dbd5e8163ece:r1",
+            "document_name": "rgb_doc_22f08a36c899dbd5e8163ece.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_22f08a36c899dbd5e8163ece:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_22f08a36c899dbd5e8163ece.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_26c08dae8c14400887ac6f64",
+            "version_id": "rgb_doc_26c08dae8c14400887ac6f64:r1",
+            "document_name": "rgb_doc_26c08dae8c14400887ac6f64.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_26c08dae8c14400887ac6f64:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_26c08dae8c14400887ac6f64.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_80f2ab86cf01e2b3dd88cb54",
+            "version_id": "rgb_doc_80f2ab86cf01e2b3dd88cb54:r1",
+            "document_name": "rgb_doc_80f2ab86cf01e2b3dd88cb54.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_80f2ab86cf01e2b3dd88cb54:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_80f2ab86cf01e2b3dd88cb54.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2cac17b0c1e6975a31a2fd3c",
+            "version_id": "rgb_doc_2cac17b0c1e6975a31a2fd3c:r1",
+            "document_name": "rgb_doc_2cac17b0c1e6975a31a2fd3c.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_2cac17b0c1e6975a31a2fd3c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2cac17b0c1e6975a31a2fd3c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7f006c051c1880afbbd3fc56",
+            "version_id": "rgb_doc_7f006c051c1880afbbd3fc56:r1",
+            "document_name": "rgb_doc_7f006c051c1880afbbd3fc56.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_7f006c051c1880afbbd3fc56:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7f006c051c1880afbbd3fc56.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b89bed931ba3e97bc312dc11",
+            "version_id": "rgb_doc_b89bed931ba3e97bc312dc11:r1",
+            "document_name": "rgb_doc_b89bed931ba3e97bc312dc11.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_b89bed931ba3e97bc312dc11:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b89bed931ba3e97bc312dc11.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ecf52291d7cad0af407237ce",
+            "version_id": "rgb_doc_ecf52291d7cad0af407237ce:r1",
+            "document_name": "rgb_doc_ecf52291d7cad0af407237ce.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_ecf52291d7cad0af407237ce:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ecf52291d7cad0af407237ce.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_10153a23524fa0aff7bbf0ff",
+            "version_id": "rgb_doc_10153a23524fa0aff7bbf0ff:r1",
+            "document_name": "rgb_doc_10153a23524fa0aff7bbf0ff.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_10153a23524fa0aff7bbf0ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_10153a23524fa0aff7bbf0ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4f12829e906c298429811de2",
+            "version_id": "rgb_doc_4f12829e906c298429811de2:r1",
+            "document_name": "rgb_doc_4f12829e906c298429811de2.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_4f12829e906c298429811de2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4f12829e906c298429811de2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_97bb8916c41bac28ed7f4c67",
+            "version_id": "rgb_doc_97bb8916c41bac28ed7f4c67:r1",
+            "document_name": "rgb_doc_97bb8916c41bac28ed7f4c67.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_97bb8916c41bac28ed7f4c67:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_97bb8916c41bac28ed7f4c67.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8ef1128077b8a69842b9218c",
+            "version_id": "rgb_doc_8ef1128077b8a69842b9218c:r1",
+            "document_name": "rgb_doc_8ef1128077b8a69842b9218c.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_8ef1128077b8a69842b9218c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8ef1128077b8a69842b9218c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3e3de68f54f0c8add2713ab9",
+            "version_id": "rgb_doc_3e3de68f54f0c8add2713ab9:r1",
+            "document_name": "rgb_doc_3e3de68f54f0c8add2713ab9.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_3e3de68f54f0c8add2713ab9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3e3de68f54f0c8add2713ab9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7e3478410d73189b64feda93",
+            "version_id": "rgb_doc_7e3478410d73189b64feda93:r1",
+            "document_name": "rgb_doc_7e3478410d73189b64feda93.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_7e3478410d73189b64feda93:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7e3478410d73189b64feda93.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e371634f4a7713faa0d8a6a9",
+            "version_id": "rgb_doc_e371634f4a7713faa0d8a6a9:r1",
+            "document_name": "rgb_doc_e371634f4a7713faa0d8a6a9.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_e371634f4a7713faa0d8a6a9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e371634f4a7713faa0d8a6a9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0c3614402f11feed6197499d",
+            "version_id": "rgb_doc_0c3614402f11feed6197499d:r1",
+            "document_name": "rgb_doc_0c3614402f11feed6197499d.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_0c3614402f11feed6197499d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0c3614402f11feed6197499d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3f4d766b7eaa43212ec029f5",
+            "version_id": "rgb_doc_3f4d766b7eaa43212ec029f5:r1",
+            "document_name": "rgb_doc_3f4d766b7eaa43212ec029f5.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_3f4d766b7eaa43212ec029f5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3f4d766b7eaa43212ec029f5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6ad1e420c8a3fcb045191967",
+            "version_id": "rgb_doc_6ad1e420c8a3fcb045191967:r1",
+            "document_name": "rgb_doc_6ad1e420c8a3fcb045191967.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_6ad1e420c8a3fcb045191967:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6ad1e420c8a3fcb045191967.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e4f5c6915be9134005dd64ff",
+            "version_id": "rgb_doc_e4f5c6915be9134005dd64ff:r1",
+            "document_name": "rgb_doc_e4f5c6915be9134005dd64ff.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_e4f5c6915be9134005dd64ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e4f5c6915be9134005dd64ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c3438a49dcddd7d9414c18a",
+            "version_id": "rgb_doc_1c3438a49dcddd7d9414c18a:r1",
+            "document_name": "rgb_doc_1c3438a49dcddd7d9414c18a.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_1c3438a49dcddd7d9414c18a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c3438a49dcddd7d9414c18a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5e7ca3d301fa0808058c3e1d",
+            "version_id": "rgb_doc_5e7ca3d301fa0808058c3e1d:r1",
+            "document_name": "rgb_doc_5e7ca3d301fa0808058c3e1d.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_5e7ca3d301fa0808058c3e1d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5e7ca3d301fa0808058c3e1d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8e44632b2d0c6ca201fb582b",
+            "version_id": "rgb_doc_8e44632b2d0c6ca201fb582b:r1",
+            "document_name": "rgb_doc_8e44632b2d0c6ca201fb582b.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_8e44632b2d0c6ca201fb582b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8e44632b2d0c6ca201fb582b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_641562e8c95448b5a6bd85c6",
+            "version_id": "rgb_doc_641562e8c95448b5a6bd85c6:r1",
+            "document_name": "rgb_doc_641562e8c95448b5a6bd85c6.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_641562e8c95448b5a6bd85c6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_641562e8c95448b5a6bd85c6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f459821352f08324548ffee7",
+            "version_id": "rgb_doc_f459821352f08324548ffee7:r1",
+            "document_name": "rgb_doc_f459821352f08324548ffee7.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_f459821352f08324548ffee7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f459821352f08324548ffee7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c4feb8dce925ba9247cd7c55",
+            "version_id": "rgb_doc_c4feb8dce925ba9247cd7c55:r1",
+            "document_name": "rgb_doc_c4feb8dce925ba9247cd7c55.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_c4feb8dce925ba9247cd7c55:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c4feb8dce925ba9247cd7c55.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            },
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 10.500582997337915,
+              "candidate_count": 40,
+              "verified_count": 40,
+              "candidates_truncated": false
+            }
+          },
+          "authorization_ms": 12.883165996754542,
+          "evidence_ms": 1.5829159965505823,
+          "fusion_ms": 0.546583003597334,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 40,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 36.97129100328311,
+          "context_chars": 1122,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_104c86b97e00c077",
+          "ev_f1f9eefe8724ef70",
+          "ev_b9f6acff5c0f82ec",
+          "ev_cbb3ed7548863b97",
+          "ev_8f75445cca1ac388",
+          "ev_a23ff721cc3bc33f",
+          "ev_a8ba17616c4a59aa",
+          "ev_689bae8e31788538",
+          "ev_8ad291852e149e56",
+          "ev_c16675e614fdad25"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_104c86b97e00c077",
+            "content": "Jul 3, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_05df98963d29269e320a2df2",
+            "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+            "document_name": "rgb_doc_05df98963d29269e320a2df2.txt",
+            "chunk_id": "rgb_doc_05df98963d29269e320a2df2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+              "block_ids": [
+                "rgb_doc_05df98963d29269e320a2df2:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 28.454437255859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "05df98963d29269e320a2df2d3e467773b943734a33d13364fa4e3f859b0a92a",
+            "scope_digest": "e2960399d7714620518a47179eaac79a3e55ac899945031be0323621f974f191",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_73c9477d3b4233360007",
+                "source_id": "S1",
+                "evidence_id": "ev_104c86b97e00c077",
+                "raw_text": "3",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 3, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_4a528985626ec8dd5955",
+                "source_id": "S1",
+                "evidence_id": "ev_104c86b97e00c077",
+                "raw_text": "2023",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 3, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_f1f9eefe8724ef70",
+            "content": "Jul 6, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ca2b37841f09fa86fc9c2f40",
+            "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+            "document_name": "rgb_doc_ca2b37841f09fa86fc9c2f40.txt",
+            "chunk_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+              "block_ids": [
+                "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 28.454437255859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "ca2b37841f09fa86fc9c2f4052855d7936e5a04f58766f7767a117978410a62c",
+            "scope_digest": "9476b0dcc5b0b63f06833e5d3d5cf0ca0ecf2e9f103c92ae5fb5e5ee60022248",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_4ec03c191f1c9fbd82f4",
+                "source_id": "S2",
+                "evidence_id": "ev_f1f9eefe8724ef70",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 6, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_2a6bd573d964f5cbd262",
+                "source_id": "S2",
+                "evidence_id": "ev_f1f9eefe8724ef70",
+                "raw_text": "2023",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 6, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 冰上舞剧《踏",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b9f6acff5c0f82ec",
+            "content": "Jul 4, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 《踏冰逐梦》由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父姚滨担纲 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ddea09dc05c1019bf93de47b",
+            "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+            "document_name": "rgb_doc_ddea09dc05c1019bf93de47b.txt",
+            "chunk_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+              "block_ids": [
+                "rgb_doc_ddea09dc05c1019bf93de47b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 28.454437255859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "ddea09dc05c1019bf93de47ba1ed536cde44b260222ccb470ab450c1611142f9",
+            "scope_digest": "5e826143affa9a4e59cd57a884763ad409c1a2675c9ffa7f3a39fc44cb2c9ebd",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_2706ca836450acc2defe",
+                "source_id": "S3",
+                "evidence_id": "ev_b9f6acff5c0f82ec",
+                "raw_text": "4",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 4, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_fcf90165d4d8b672fe20",
+                "source_id": "S3",
+                "evidence_id": "ev_b9f6acff5c0f82ec",
+                "raw_text": "2023",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 4, 2023 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上 ... 《踏冰逐梦》",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_cbb3ed7548863b97",
+            "content": "May 22, 2022 ... 即日起，冰上舞剧《踏冰逐梦》主演动漫IP形象设计作品征集全面开启参赛通道！ ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_01407d4253e5e7a6e4f84b16",
+            "version_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1",
+            "document_name": "rgb_doc_01407d4253e5e7a6e4f84b16.txt",
+            "chunk_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1",
+              "block_ids": [
+                "rgb_doc_01407d4253e5e7a6e4f84b16:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 27.9796142578125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 93,
+            "content_hash": "01407d4253e5e7a6e4f84b1641230f20658ab9a054ddfa47014ed2416247bebd",
+            "scope_digest": "32bd4c2d49c17daad7130239a7c5938377abe2a8d625c6fa2d803df2cd4d6372",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_e68b1356b5863723a599",
+                "source_id": "S4",
+                "evidence_id": "ev_cbb3ed7548863b97",
+                "raw_text": "22",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 22, 2022 ... 即日起，冰上舞剧《踏冰逐梦》主演动漫IP形象设计作品征集全面开启参赛通道！",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_6cedb570ea08b9541af7",
+                "source_id": "S4",
+                "evidence_id": "ev_cbb3ed7548863b97",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 22, 2022 ... 即日起，冰上舞剧《踏冰逐梦》主演动漫IP形象设计作品征集全面开启参赛通道！ ... 冰",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_8f75445cca1ac388",
+            "content": "中国首部原创冰上舞剧《踏冰逐梦》精彩来袭 当花滑与舞剧融合，冰+舞+剧在剧场掀起艺术浪潮。 花滑运动世界冠军张丹、张昊领衔主演 解锁属于中国花滑的别样辉煌 7月8日至9日冰上舞剧《踏冰逐梦》将在北京凯迪拉克中心上演。 让《踏冰逐梦》的现场，带给你夏日第一份清凉~    剧目介绍 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上舞剧。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ba00bec91f36664b9b009b88",
+            "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+            "document_name": "rgb_doc_ba00bec91f36664b9b009b88.txt",
+            "chunk_id": "rgb_doc_ba00bec91f36664b9b009b88:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+              "block_ids": [
+                "rgb_doc_ba00bec91f36664b9b009b88:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 175
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 27.390533447265625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 175,
+            "content_hash": "ba00bec91f36664b9b009b8876600ba1ebfc9cef3d1c9aeb78fd41b6c4155a06",
+            "scope_digest": "acddc0b911ac4793293a42fb2e0a3cbc8c6cf3862d7efb985e62042b64736df6",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a23ff721cc3bc33f",
+            "content": "《踏冰逐梦》融合了花样滑冰、舞剧、冰上杂技等多种表演形式，结合当代舞台的多重 ... 与众国家队运动员共同主演这部感人至深、无与伦比的冰上盛宴，致敬所有追梦人， ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d3697b85aeed27f62b1d31b",
+            "version_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1",
+            "document_name": "rgb_doc_0d3697b85aeed27f62b1d31b.txt",
+            "chunk_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1",
+              "block_ids": [
+                "rgb_doc_0d3697b85aeed27f62b1d31b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 84
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 24.667404174804688,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 84,
+            "content_hash": "0d3697b85aeed27f62b1d31b72f9f569c6baa7d4da9fc4eab6b6a6e216cc9d8f",
+            "scope_digest": "03a70f2f3380af71580e7ebeee4c60639d34762ed2d89ea73dddc84f59b8bd7e",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a8ba17616c4a59aa",
+            "content": "《踏冰逐梦》是由万域芳菲出品、WOI（Wings on Ice）菲剧团演出的中国首部原创冰上舞剧 · 该剧以冬奥元素为主题，由当代跨界剧场导演刘正出任总导演，中国花样滑冰教父姚滨 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5151a15d7cd891cd06145e36",
+            "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+            "document_name": "rgb_doc_5151a15d7cd891cd06145e36.txt",
+            "chunk_id": "rgb_doc_5151a15d7cd891cd06145e36:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+              "block_ids": [
+                "rgb_doc_5151a15d7cd891cd06145e36:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 23.79421615600586,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 93,
+            "content_hash": "5151a15d7cd891cd06145e36ba4b5f3a1af78aca0b12a80a3ab7272ba502ec63",
+            "scope_digest": "2caec7965086100c0e8eb15e0787fba3c775ce1eea7b7799f27b36ddaaea9def",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_689bae8e31788538",
+            "content": "冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创舞剧，曾被北京冬奥组委列为《北京2022年冬奥会和冬残奥会遗产案例报告（2022）》文化遗产6个案例中，唯一的冰上演出案例予以详细评述。   为使《踏冰逐梦》以全新的形象展示于社会，不断提升冰上舞剧知名度及影响力，万域芳菲特面向社会各界公开征集动漫IP形象创意设计作品。请参赛者以《踏冰逐梦》为原型，发挥自己的想象力，通过设计《踏冰逐梦》动漫IP形象，展现《踏冰逐梦》的艺术本质。  1.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4544a736b8f463fce8658af6",
+            "version_id": "rgb_doc_4544a736b8f463fce8658af6:r1",
+            "document_name": "rgb_doc_4544a736b8f463fce8658af6.txt",
+            "chunk_id": "rgb_doc_4544a736b8f463fce8658af6:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4544a736b8f463fce8658af6:r1",
+              "block_ids": [
+                "rgb_doc_4544a736b8f463fce8658af6:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 224
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 23.705856323242188,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 224,
+            "content_hash": "4544a736b8f463fce8658af6fc48342f36b6203f6cfbc0d2d7c7f0eb41bb7d00",
+            "scope_digest": "bf0c229b542d63f619eeef03ce56b073fda8e3ed96b55217bfead00b13be69bf",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_274ca6b9002096ab46b4",
+                "source_id": "S8",
+                "evidence_id": "ev_689bae8e31788538",
+                "raw_text": "2022",
+                "start": 66,
+                "end": 70,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "滑冰为主要表演形式的原创舞剧，曾被北京冬奥组委列为《北京2022年冬奥会和冬残奥会遗产案例报告（2022）》文化遗产6个案例中，唯一的冰上演出案例予以详细评述。   为使《踏冰逐梦》以全新的形象展示于",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_1497f64c525f3c0c3733",
+                "source_id": "S8",
+                "evidence_id": "ev_689bae8e31788538",
+                "raw_text": "1",
+                "start": 222,
+                "end": 223,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "梦》为原型，发挥自己的想象力，通过设计《踏冰逐梦》动漫IP形象，展现《踏冰逐梦》的艺术本质。  1.",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_8ad291852e149e56",
+            "content": "6 days ago ... 冰上舞剧《踏冰逐梦》是一部以花样滑冰为主要表演形式的冰上舞剧，剧目讲述了一位热爱花滑的女孩在父亲、队友 ... 张丹、张昊将担任该剧的领衔主演。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_802457f603287d5a2e8436e7",
+            "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+            "document_name": "rgb_doc_802457f603287d5a2e8436e7.txt",
+            "chunk_id": "rgb_doc_802457f603287d5a2e8436e7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+              "block_ids": [
+                "rgb_doc_802457f603287d5a2e8436e7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 87
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 23.336997985839844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 87,
+            "content_hash": "802457f603287d5a2e8436e7d82bb9fa9622e7870ab8e5538b97d1bcb5cf3fd3",
+            "scope_digest": "d1d9ff99127cfc286241427263dc559fa8c48050640e0d935d163a7a456299ad",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_bae3e7890a2c68c0bf1a",
+                "source_id": "S9",
+                "evidence_id": "ev_8ad291852e149e56",
+                "raw_text": "6",
+                "start": 0,
+                "end": 1,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "6 days ago ... 冰上舞剧《踏冰逐梦》是一部以花样滑冰为主要表演形式的冰上舞剧，剧目讲",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_c16675e614fdad25",
+            "content": "Jun 20, 2023 ... 花滑运动世界冠军张丹、张昊领衔主演，解锁属于中国花滑的别样辉煌，7 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上舞剧。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c80ff95465c8c32bb6b11063",
+            "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+            "document_name": "rgb_doc_c80ff95465c8c32bb6b11063.txt",
+            "chunk_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+              "block_ids": [
+                "rgb_doc_c80ff95465c8c32bb6b11063:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 90
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 23.099220275878906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 90,
+            "content_hash": "c80ff95465c8c32bb6b11063a7b5078c06bbef25b902b51a1def547eb52a509e",
+            "scope_digest": "020a788504b6bfe9808d935f98559dc6a8fa8d7b39933836f4c09cd5d29cce73",
+            "trace_id": "1881c26874054629a684be8b4dcf07e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_c7e061c06d90ea096d14",
+                "source_id": "S10",
+                "evidence_id": "ev_c16675e614fdad25",
+                "raw_text": "20",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 20, 2023 ... 花滑运动世界冠军张丹、张昊领衔主演，解锁属于中国花滑的别样辉煌，7 ...",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_407786802b24924dd5c1",
+                "source_id": "S10",
+                "evidence_id": "ev_c16675e614fdad25",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 20, 2023 ... 花滑运动世界冠军张丹、张昊领衔主演，解锁属于中国花滑的别样辉煌，7 ... 冰上舞剧《",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_85a52dff0af967e64e3b",
+                "source_id": "S10",
+                "evidence_id": "ev_c16675e614fdad25",
+                "raw_text": "7",
+                "start": 49,
+                "end": 50,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "un 20, 2023 ... 花滑运动世界冠军张丹、张昊领衔主演，解锁属于中国花滑的别样辉煌，7 ... 冰上舞剧《踏冰逐梦》是中国首部以花样滑冰为主要表演形式的原创冰上舞剧。",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_104c86b97e00c077",
+      "ev_f1f9eefe8724ef70",
+      "ev_b9f6acff5c0f82ec",
+      "ev_cbb3ed7548863b97",
+      "ev_8f75445cca1ac388",
+      "ev_a23ff721cc3bc33f",
+      "ev_a8ba17616c4a59aa",
+      "ev_689bae8e31788538",
+      "ev_8ad291852e149e56"
+    ],
+    "evidence": {
+      "ev_104c86b97e00c077": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_05df98963d29269e320a2df2",
+        "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+        "document_name": "rgb_doc_05df98963d29269e320a2df2.txt",
+        "chunk_id": "rgb_doc_05df98963d29269e320a2df2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_05df98963d29269e320a2df2:r1",
+          "block_ids": [
+            "rgb_doc_05df98963d29269e320a2df2:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 28.454437255859375,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "05df98963d29269e320a2df2d3e467773b943734a33d13364fa4e3f859b0a92a",
+        "scope_digest": "e2960399d7714620518a47179eaac79a3e55ac899945031be0323621f974f191",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_f1f9eefe8724ef70": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_ca2b37841f09fa86fc9c2f40",
+        "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+        "document_name": "rgb_doc_ca2b37841f09fa86fc9c2f40.txt",
+        "chunk_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_ca2b37841f09fa86fc9c2f40:r1",
+          "block_ids": [
+            "rgb_doc_ca2b37841f09fa86fc9c2f40:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 28.454437255859375,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "ca2b37841f09fa86fc9c2f4052855d7936e5a04f58766f7767a117978410a62c",
+        "scope_digest": "9476b0dcc5b0b63f06833e5d3d5cf0ca0ecf2e9f103c92ae5fb5e5ee60022248",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b9f6acff5c0f82ec": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_ddea09dc05c1019bf93de47b",
+        "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+        "document_name": "rgb_doc_ddea09dc05c1019bf93de47b.txt",
+        "chunk_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_ddea09dc05c1019bf93de47b:r1",
+          "block_ids": [
+            "rgb_doc_ddea09dc05c1019bf93de47b:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 28.454437255859375,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "ddea09dc05c1019bf93de47ba1ed536cde44b260222ccb470ab450c1611142f9",
+        "scope_digest": "5e826143affa9a4e59cd57a884763ad409c1a2675c9ffa7f3a39fc44cb2c9ebd",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_cbb3ed7548863b97": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_01407d4253e5e7a6e4f84b16",
+        "version_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1",
+        "document_name": "rgb_doc_01407d4253e5e7a6e4f84b16.txt",
+        "chunk_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_01407d4253e5e7a6e4f84b16:r1",
+          "block_ids": [
+            "rgb_doc_01407d4253e5e7a6e4f84b16:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 93
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 27.9796142578125,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 93,
+        "content_hash": "01407d4253e5e7a6e4f84b1641230f20658ab9a054ddfa47014ed2416247bebd",
+        "scope_digest": "32bd4c2d49c17daad7130239a7c5938377abe2a8d625c6fa2d803df2cd4d6372",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_8f75445cca1ac388": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_ba00bec91f36664b9b009b88",
+        "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+        "document_name": "rgb_doc_ba00bec91f36664b9b009b88.txt",
+        "chunk_id": "rgb_doc_ba00bec91f36664b9b009b88:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_ba00bec91f36664b9b009b88:r1",
+          "block_ids": [
+            "rgb_doc_ba00bec91f36664b9b009b88:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 175
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 27.390533447265625,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 175,
+        "content_hash": "ba00bec91f36664b9b009b8876600ba1ebfc9cef3d1c9aeb78fd41b6c4155a06",
+        "scope_digest": "acddc0b911ac4793293a42fb2e0a3cbc8c6cf3862d7efb985e62042b64736df6",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a23ff721cc3bc33f": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_0d3697b85aeed27f62b1d31b",
+        "version_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1",
+        "document_name": "rgb_doc_0d3697b85aeed27f62b1d31b.txt",
+        "chunk_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_0d3697b85aeed27f62b1d31b:r1",
+          "block_ids": [
+            "rgb_doc_0d3697b85aeed27f62b1d31b:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 84
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 24.667404174804688,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 84,
+        "content_hash": "0d3697b85aeed27f62b1d31b72f9f569c6baa7d4da9fc4eab6b6a6e216cc9d8f",
+        "scope_digest": "03a70f2f3380af71580e7ebeee4c60639d34762ed2d89ea73dddc84f59b8bd7e",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a8ba17616c4a59aa": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_5151a15d7cd891cd06145e36",
+        "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+        "document_name": "rgb_doc_5151a15d7cd891cd06145e36.txt",
+        "chunk_id": "rgb_doc_5151a15d7cd891cd06145e36:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_5151a15d7cd891cd06145e36:r1",
+          "block_ids": [
+            "rgb_doc_5151a15d7cd891cd06145e36:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 93
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 23.79421615600586,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 93,
+        "content_hash": "5151a15d7cd891cd06145e36ba4b5f3a1af78aca0b12a80a3ab7272ba502ec63",
+        "scope_digest": "2caec7965086100c0e8eb15e0787fba3c775ce1eea7b7799f27b36ddaaea9def",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_689bae8e31788538": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4544a736b8f463fce8658af6",
+        "version_id": "rgb_doc_4544a736b8f463fce8658af6:r1",
+        "document_name": "rgb_doc_4544a736b8f463fce8658af6.txt",
+        "chunk_id": "rgb_doc_4544a736b8f463fce8658af6:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4544a736b8f463fce8658af6:r1",
+          "block_ids": [
+            "rgb_doc_4544a736b8f463fce8658af6:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 224
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 23.705856323242188,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 224,
+        "content_hash": "4544a736b8f463fce8658af6fc48342f36b6203f6cfbc0d2d7c7f0eb41bb7d00",
+        "scope_digest": "bf0c229b542d63f619eeef03ce56b073fda8e3ed96b55217bfead00b13be69bf",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_8ad291852e149e56": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_802457f603287d5a2e8436e7",
+        "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+        "document_name": "rgb_doc_802457f603287d5a2e8436e7.txt",
+        "chunk_id": "rgb_doc_802457f603287d5a2e8436e7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_802457f603287d5a2e8436e7:r1",
+          "block_ids": [
+            "rgb_doc_802457f603287d5a2e8436e7:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 87
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 23.336997985839844,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 87,
+        "content_hash": "802457f603287d5a2e8436e7d82bb9fa9622e7870ab8e5538b97d1bcb5cf3fd3",
+        "scope_digest": "d1d9ff99127cfc286241427263dc559fa8c48050640e0d935d163a7a456299ad",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_c16675e614fdad25": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_c80ff95465c8c32bb6b11063",
+        "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+        "document_name": "rgb_doc_c80ff95465c8c32bb6b11063.txt",
+        "chunk_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+          "block_ids": [
+            "rgb_doc_c80ff95465c8c32bb6b11063:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 90
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 23.099220275878906,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 90,
+        "content_hash": "c80ff95465c8c32bb6b11063a7b5078c06bbef25b902b51a1def547eb52a509e",
+        "scope_digest": "020a788504b6bfe9808d935f98559dc6a8fa8d7b39933836f4c09cd5d29cce73",
+        "trace_id": "1881c26874054629a684be8b4dcf07e8",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_104c86b97e00c077",
+      "S2": "ev_f1f9eefe8724ef70",
+      "S3": "ev_b9f6acff5c0f82ec",
+      "S4": "ev_cbb3ed7548863b97",
+      "S5": "ev_8f75445cca1ac388",
+      "S6": "ev_a23ff721cc3bc33f",
+      "S7": "ev_a8ba17616c4a59aa",
+      "S8": "ev_689bae8e31788538",
+      "S9": "ev_8ad291852e149e56",
+      "S10": "ev_c16675e614fdad25"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

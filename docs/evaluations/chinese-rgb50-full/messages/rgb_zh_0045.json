@@ -1,0 +1,99 @@
+{
+  "question_id": "rgb_zh_0045",
+  "description": "Unique persisted message versions across ALL checkpoints, including pre-validation drafts and tool artifacts. First-seen chronological order; these are runtime records, not HTTP packet captures. Generated safe final messages may also be present.",
+  "checkpoints": [
+    {
+      "id": "1f1d605a-a9e1-6a0a-bfff-afd922589ebe",
+      "timestamp": "2026-11-01T15:05:25.086462+00:00",
+      "step": -1,
+      "new_message_hashes": []
+    },
+    {
+      "id": "1f1d605a-a9e2-6a22-8000-b40b7109f6f9",
+      "timestamp": "2026-11-01T15:05:25.086870+00:00",
+      "step": 0,
+      "new_message_hashes": [
+        "0fa05f583f212c8551eb0ecbd0aa054c156cd09bd572e32594ed4c8c02df8a4c"
+      ]
+    },
+    {
+      "id": "1f1d605a-b5df-6410-8001-e8dadd31238b",
+      "timestamp": "2026-11-01T15:05:26.343752+00:00",
+      "step": 1,
+      "new_message_hashes": [
+        "5a967e349631ad50e20f5a599c38f29dcedb82fffee4c8ee2c08914bf7debd8d"
+      ]
+    },
+    {
+      "id": "1f1d605a-b5e1-6cc4-8002-bb402ff4b3ec",
+      "timestamp": "2026-11-01T15:05:26.344799+00:00",
+      "step": 2,
+      "new_message_hashes": [
+        "0a88808e9b1e7ee8ec6092b20046fd294f9cc53e61b3ba5b20f66666bcfab67c"
+      ]
+    }
+  ],
+  "messages": [
+    {
+      "record_sha256": "0fa05f583f212c8551eb0ecbd0aa054c156cd09bd572e32594ed4c8c02df8a4c",
+      "first_checkpoint": "1f1d605a-a9e2-6a22-8000-b40b7109f6f9",
+      "message": {
+        "type": "human",
+        "data": {
+          "content": "电影《头号玩家》的导演是谁",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "human",
+          "name": null,
+          "id": "c451ee0b-bf99-47fa-aaac-d54e0380fd73"
+        }
+      }
+    },
+    {
+      "record_sha256": "5a967e349631ad50e20f5a599c38f29dcedb82fffee4c8ee2c08914bf7debd8d",
+      "first_checkpoint": "1f1d605a-b5df-6410-8001-e8dadd31238b",
+      "message": {
+        "type": "ai",
+        "data": {
+          "content": "{\"claims\":[{\"text\":\"电影《头号玩家》的导演是史蒂文·斯皮尔伯格\",\"source_ids\":[\"S1\"]}]}",
+          "additional_kwargs": {},
+          "response_metadata": {
+            "model": "qwen-plus",
+            "usage": {
+              "total_tokens": 8470,
+              "completion_tokens": 31,
+              "prompt_tokens": 8439,
+              "prompt_tokens_details": {
+                "cached_tokens": 8384
+              }
+            }
+          },
+          "type": "ai",
+          "name": null,
+          "id": "3c5745c4-2e68-4db2-8f82-2caca7d362a1",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": null
+        }
+      }
+    },
+    {
+      "record_sha256": "0a88808e9b1e7ee8ec6092b20046fd294f9cc53e61b3ba5b20f66666bcfab67c",
+      "first_checkpoint": "1f1d605a-b5e1-6cc4-8002-bb402ff4b3ec",
+      "message": {
+        "type": "ai",
+        "data": {
+          "content": "证据不足或引用未通过复核，无法给出可靠结论。",
+          "additional_kwargs": {},
+          "response_metadata": {},
+          "type": "ai",
+          "name": null,
+          "id": "3c5745c4-2e68-4db2-8f82-2caca7d362a1",
+          "tool_calls": [],
+          "invalid_tool_calls": [],
+          "usage_metadata": null
+        }
+      }
+    }
+  ]
+}

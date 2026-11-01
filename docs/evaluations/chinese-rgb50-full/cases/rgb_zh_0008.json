@@ -1,0 +1,3681 @@
+{
+  "question_id": "rgb_zh_0008",
+  "result": {
+    "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+    "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:1",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:2",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:3",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "context_chars": 1189,
+        "prompt_tokens": 8441,
+        "completion_tokens": 51,
+        "total_tokens": 8492,
+        "context_compaction_count": 0,
+        "context_chars_before": 1189,
+        "context_chars_after": 1189,
+        "estimated_input_tokens": 12120,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1474,
+        "remaining_run_tokens": 111508,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8441,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3679
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:4",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1189
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:5",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "tool_call_id": "call_c3b9104043534eb0aa1306",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:6",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "tool_call_id": "call_c3b9104043534eb0aa1306",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:7",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_c3b9104043534eb0aa1306",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 9,
+        "output_chars_before": 98425,
+        "output_chars_after": 14969,
+        "removed_chars": 83456,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:8",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:9",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:10",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "context_chars": 16158,
+        "prompt_tokens": 15392,
+        "completion_tokens": 37,
+        "total_tokens": 15429,
+        "context_compaction_count": 0,
+        "context_chars_before": 16158,
+        "context_chars_after": 16158,
+        "estimated_input_tokens": 20855,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7989,
+        "evidence_tokens": 1587,
+        "history_tokens": 2220,
+        "remaining_run_tokens": 96079,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15392,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5463
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:11",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "model_visible_evidence_count": 9,
+        "context_chars": 16158
+      },
+      {
+        "type": "answer_started",
+        "sequence": 12,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:12",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 13,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:13",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "delta": "2022年春节档首日票房冠军是《长津湖之水门桥》 [1] [2]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 14,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:14",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a",
+        "final_citation_count": 2,
+        "citation_validation_reason": [],
+        "repair_attempted": false,
+        "repair_success": false
+      },
+      {
+        "type": "completed",
+        "sequence": 15,
+        "event_id": "run_017cc8730cf94018965f7c81609b9a46:502c665003054c1cbd87a3bb8e0b5eee:15",
+        "run_id": "run_017cc8730cf94018965f7c81609b9a46",
+        "thread_id": "thread_ba0c6c46293941939742ad588e99944a"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 2,
+    "usage": {
+      "prompt_tokens": 23833,
+      "completion_tokens": 88,
+      "total_tokens": 23921
+    },
+    "elapsed_seconds": 4.1654057080013445,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 9,
+      "output_truncated": true,
+      "context_chars": 16158,
+      "prompt_tokens": 23833,
+      "completion_tokens": 88,
+      "total_tokens": 23921,
+      "context_compaction_count": 0,
+      "context_chars_before": 16158,
+      "context_chars_after": 16158,
+      "estimated_input_tokens": 20855,
+      "tool_schema_tokens": 10646,
+      "observation_tokens": 7989,
+      "evidence_tokens": 1587,
+      "history_tokens": 2220,
+      "remaining_run_tokens": 96079,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 15392,
+      "usage_source": "provider",
+      "estimation_error_tokens": -5463,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_c3b9104043534eb0aa1306",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 9,
+          "output_chars_before": 98425,
+          "output_chars_after": 14969,
+          "removed_chars": 83456,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "final_citation_count": 2,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "2022年春节档首日票房冠军是《长津湖之水门桥》 [1] [2]",
+      "citations": {
+        "ev_73bd41c1b47c6ed5": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_0d028396826f6b146584842a",
+          "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+          "document_name": "rgb_doc_0d028396826f6b146584842a.txt",
+          "chunk_id": "rgb_doc_0d028396826f6b146584842a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "Feb 3, 2022 ... 值得注意的是，2022年春节档首日票房不及去年同期，观影人次更是减少近900万。 ... 《水门桥》以6.68亿元的成绩摘得首日票房冠军，一举打破了包括中国 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+            "block_ids": [
+              "rgb_doc_0d028396826f6b146584842a:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 98
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 22.651086807250977,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_62654543cdd5fdd0": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_3678a62800f6405e8e774ef5",
+          "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+          "document_name": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+          "chunk_id": "rgb_doc_3678a62800f6405e8e774ef5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 9,
+          "source_score": null,
+          "fused_score": 0.014492753623188406,
+          "rerank_score": null,
+          "content": "2022年春节档以60.35亿票房收官，2月7日，灯塔研究院和灯塔专业版联合发布《2022春节档电影市场数据洞察报告》（以下简称灯塔报告）。 灯塔报告显示，2月1日大年初一，春节档首日揽下14.5亿票房，与2019年持平，后续走势也与疫情前一样平缓回落。  票房冠军《长津湖之水门桥》斩获25.",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+            "block_ids": [
+              "rgb_doc_3678a62800f6405e8e774ef5:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 147
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 9,
+              "score": 22.405059814453125,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "2022年春节档首日票房冠军是《长津湖之水门桥》",
+          "source_ids": [
+            "S7",
+            "S9"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S7",
+          "evidence_id": "ev_73bd41c1b47c6ed5"
+        },
+        {
+          "number": 2,
+          "source_id": "S9",
+          "evidence_id": "ev_62654543cdd5fdd0"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": false,
+      "repair_success": false,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_c3b9104043534eb0aa1306",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2022年春节档首日票房冠军",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c4feda52836306aafff241",
+            "version_id": "rgb_doc_65c4feda52836306aafff241:r1",
+            "document_name": "rgb_doc_65c4feda52836306aafff241.txt",
+            "chunk_id": "rgb_doc_65c4feda52836306aafff241:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 23.486677169799805,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Jan 24, 2023 ... 票房佳大年初一票房突破13亿元数据显示，2023年春节档新片上映首日（1 ... 其中，《流浪地球2》成为今年春节档新片上映首日票房冠军，单日票房4.67亿元。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_65c4feda52836306aafff241:r1",
+              "block_ids": [
+                "rgb_doc_65c4feda52836306aafff241:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 23.486677169799805,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_89d054754882273b6dd742eb",
+            "version_id": "rgb_doc_89d054754882273b6dd742eb:r1",
+            "document_name": "rgb_doc_89d054754882273b6dd742eb.txt",
+            "chunk_id": "rgb_doc_89d054754882273b6dd742eb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 23.403348922729492,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日(1月22日)票房达13.4亿元，放映总 ... 《流浪地球2》成为今年春节档新片上映首日票房冠军，单日票房4.67亿元。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_89d054754882273b6dd742eb:r1",
+              "block_ids": [
+                "rgb_doc_89d054754882273b6dd742eb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 23.403348922729492,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9c2ddc3f05b4c1087c83decc",
+            "version_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1",
+            "document_name": "rgb_doc_9c2ddc3f05b4c1087c83decc.txt",
+            "chunk_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 23.318416595458984,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "Jan 26, 2023 ... 春节档上映首日，《流浪地球2》以超过5亿元的票房登顶当日冠军，并且率先 ... 研报指出，春节档票房第二日与第三日（截至10点）相比2019年与2022年 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1",
+              "block_ids": [
+                "rgb_doc_9c2ddc3f05b4c1087c83decc:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 23.318416595458984,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e2378b9a6828b93c61370849",
+            "version_id": "rgb_doc_e2378b9a6828b93c61370849:r1",
+            "document_name": "rgb_doc_e2378b9a6828b93c61370849.txt",
+            "chunk_id": "rgb_doc_e2378b9a6828b93c61370849:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 22.990365982055664,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日（1月22日）票房达13.4亿元，放映总场次44.8 ... 其中，《流浪地球2》成为今年春节档新片上映首日票房冠军，单日 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e2378b9a6828b93c61370849:r1",
+              "block_ids": [
+                "rgb_doc_e2378b9a6828b93c61370849:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 101
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 22.990365982055664,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f99201cee51bdc174c042e3e",
+            "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+            "document_name": "rgb_doc_f99201cee51bdc174c042e3e.txt",
+            "chunk_id": "rgb_doc_f99201cee51bdc174c042e3e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 22.811025619506836,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Jan 22, 2023 ... 春节档目前票房最高的《流浪地球2》为2019年春节档票房冠军、中国科幻电影 ... 目前首日上映总票房已超过《中国机长》成为内地影史灾难片首映日票房 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+              "block_ids": [
+                "rgb_doc_f99201cee51bdc174c042e3e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 22.811025619506836,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95e382fea538c1ff2fca11fb",
+            "version_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1",
+            "document_name": "rgb_doc_95e382fea538c1ff2fca11fb.txt",
+            "chunk_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 22.731637954711914,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "据猫眼专业版数据显示，截至1月27日(农历正月初六)21时，2023年春节档期总 ... 项里程碑成就，包括中国影史春节档动画片首日票房冠军、中国影史春节档动画片票房冠军。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1",
+              "block_ids": [
+                "rgb_doc_95e382fea538c1ff2fca11fb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 86
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 22.731637954711914,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d028396826f6b146584842a",
+            "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+            "document_name": "rgb_doc_0d028396826f6b146584842a.txt",
+            "chunk_id": "rgb_doc_0d028396826f6b146584842a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 22.651086807250977,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "Feb 3, 2022 ... 值得注意的是，2022年春节档首日票房不及去年同期，观影人次更是减少近900万。 ... 《水门桥》以6.68亿元的成绩摘得首日票房冠军，一举打破了包括中国 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+              "block_ids": [
+                "rgb_doc_0d028396826f6b146584842a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 22.651086807250977,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f932089bee3aca66798eee06",
+            "version_id": "rgb_doc_f932089bee3aca66798eee06:r1",
+            "document_name": "rgb_doc_f932089bee3aca66798eee06.txt",
+            "chunk_id": "rgb_doc_f932089bee3aca66798eee06:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 22.523834228515625,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "44亿，共打破10项纪录，获得38项里程碑成就，包括中国影史春节档动画片首日票房冠军、中国影史春节档动画片票房冠军。 《无名》上映7天总票房破5亿。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f932089bee3aca66798eee06:r1",
+              "block_ids": [
+                "rgb_doc_f932089bee3aca66798eee06:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 74
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 22.523834228515625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3678a62800f6405e8e774ef5",
+            "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+            "document_name": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+            "chunk_id": "rgb_doc_3678a62800f6405e8e774ef5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 22.405059814453125,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "2022年春节档以60.35亿票房收官，2月7日，灯塔研究院和灯塔专业版联合发布《2022春节档电影市场数据洞察报告》（以下简称灯塔报告）。 灯塔报告显示，2月1日大年初一，春节档首日揽下14.5亿票房，与2019年持平，后续走势也与疫情前一样平缓回落。  票房冠军《长津湖之水门桥》斩获25.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+              "block_ids": [
+                "rgb_doc_3678a62800f6405e8e774ef5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 147
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 22.405059814453125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6248f697d659aba11bbd6119",
+            "version_id": "rgb_doc_6248f697d659aba11bbd6119:r1",
+            "document_name": "rgb_doc_6248f697d659aba11bbd6119.txt",
+            "chunk_id": "rgb_doc_6248f697d659aba11bbd6119:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 22.252567291259766,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "从影片类型上来看，春节档上映的新片中涵盖科幻、喜剧、谍战、动画、家庭、运动等题材，受众范围广泛。  春节档目前票房最高的《流浪地球2》为2019年春节档票房冠军、中国科幻电影票房冠军《流浪地球》的续作，吴京、刘德华、李雪健等一众大牌主演，目前首日上映总票房已超过《中国机长》成为内地影史灾难片首映日票房冠军，截至发稿票房占比超过30%。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6248f697d659aba11bbd6119:r1",
+              "block_ids": [
+                "rgb_doc_6248f697d659aba11bbd6119:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 168
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 22.252567291259766,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c4feda52836306aafff241",
+            "version_id": "rgb_doc_65c4feda52836306aafff241:r1",
+            "document_name": "rgb_doc_65c4feda52836306aafff241.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_65c4feda52836306aafff241:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_65c4feda52836306aafff241.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_89d054754882273b6dd742eb",
+            "version_id": "rgb_doc_89d054754882273b6dd742eb:r1",
+            "document_name": "rgb_doc_89d054754882273b6dd742eb.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_89d054754882273b6dd742eb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_89d054754882273b6dd742eb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9c2ddc3f05b4c1087c83decc",
+            "version_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1",
+            "document_name": "rgb_doc_9c2ddc3f05b4c1087c83decc.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_9c2ddc3f05b4c1087c83decc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9c2ddc3f05b4c1087c83decc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e2378b9a6828b93c61370849",
+            "version_id": "rgb_doc_e2378b9a6828b93c61370849:r1",
+            "document_name": "rgb_doc_e2378b9a6828b93c61370849.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_e2378b9a6828b93c61370849:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e2378b9a6828b93c61370849.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f99201cee51bdc174c042e3e",
+            "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+            "document_name": "rgb_doc_f99201cee51bdc174c042e3e.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_f99201cee51bdc174c042e3e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f99201cee51bdc174c042e3e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95e382fea538c1ff2fca11fb",
+            "version_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1",
+            "document_name": "rgb_doc_95e382fea538c1ff2fca11fb.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_95e382fea538c1ff2fca11fb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_95e382fea538c1ff2fca11fb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d028396826f6b146584842a",
+            "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+            "document_name": "rgb_doc_0d028396826f6b146584842a.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_0d028396826f6b146584842a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0d028396826f6b146584842a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f932089bee3aca66798eee06",
+            "version_id": "rgb_doc_f932089bee3aca66798eee06:r1",
+            "document_name": "rgb_doc_f932089bee3aca66798eee06.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_f932089bee3aca66798eee06:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f932089bee3aca66798eee06.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3678a62800f6405e8e774ef5",
+            "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+            "document_name": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_3678a62800f6405e8e774ef5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6248f697d659aba11bbd6119",
+            "version_id": "rgb_doc_6248f697d659aba11bbd6119:r1",
+            "document_name": "rgb_doc_6248f697d659aba11bbd6119.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_6248f697d659aba11bbd6119:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6248f697d659aba11bbd6119.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f71177ada3d356dc7d40a3ed",
+            "version_id": "rgb_doc_f71177ada3d356dc7d40a3ed:r1",
+            "document_name": "rgb_doc_f71177ada3d356dc7d40a3ed.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_f71177ada3d356dc7d40a3ed:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f71177ada3d356dc7d40a3ed.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_259fb73b670c4ad7e249f4b7",
+            "version_id": "rgb_doc_259fb73b670c4ad7e249f4b7:r1",
+            "document_name": "rgb_doc_259fb73b670c4ad7e249f4b7.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_259fb73b670c4ad7e249f4b7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_259fb73b670c4ad7e249f4b7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edfa43a39375f44c888df74b",
+            "version_id": "rgb_doc_edfa43a39375f44c888df74b:r1",
+            "document_name": "rgb_doc_edfa43a39375f44c888df74b.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_edfa43a39375f44c888df74b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edfa43a39375f44c888df74b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e3f2c6f56c1ef39fd74c4bc7",
+            "version_id": "rgb_doc_e3f2c6f56c1ef39fd74c4bc7:r1",
+            "document_name": "rgb_doc_e3f2c6f56c1ef39fd74c4bc7.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_e3f2c6f56c1ef39fd74c4bc7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e3f2c6f56c1ef39fd74c4bc7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4fde76069a004caf407342e8",
+            "version_id": "rgb_doc_4fde76069a004caf407342e8:r1",
+            "document_name": "rgb_doc_4fde76069a004caf407342e8.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_4fde76069a004caf407342e8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4fde76069a004caf407342e8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_caae762742aeeadb97276e79",
+            "version_id": "rgb_doc_caae762742aeeadb97276e79:r1",
+            "document_name": "rgb_doc_caae762742aeeadb97276e79.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_caae762742aeeadb97276e79:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_caae762742aeeadb97276e79.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cdc1db8993cfe0cca44eae21",
+            "version_id": "rgb_doc_cdc1db8993cfe0cca44eae21:r1",
+            "document_name": "rgb_doc_cdc1db8993cfe0cca44eae21.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_cdc1db8993cfe0cca44eae21:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cdc1db8993cfe0cca44eae21.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f41a0165fcf288a6f3dd8036",
+            "version_id": "rgb_doc_f41a0165fcf288a6f3dd8036:r1",
+            "document_name": "rgb_doc_f41a0165fcf288a6f3dd8036.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_f41a0165fcf288a6f3dd8036:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f41a0165fcf288a6f3dd8036.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_43a40aa65fbf95375920bbf7",
+            "version_id": "rgb_doc_43a40aa65fbf95375920bbf7:r1",
+            "document_name": "rgb_doc_43a40aa65fbf95375920bbf7.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_43a40aa65fbf95375920bbf7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_43a40aa65fbf95375920bbf7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8a74641173c0a33c02763382",
+            "version_id": "rgb_doc_8a74641173c0a33c02763382:r1",
+            "document_name": "rgb_doc_8a74641173c0a33c02763382.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_8a74641173c0a33c02763382:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8a74641173c0a33c02763382.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e973854f7b3ebca1c401098a",
+            "version_id": "rgb_doc_e973854f7b3ebca1c401098a:r1",
+            "document_name": "rgb_doc_e973854f7b3ebca1c401098a.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_e973854f7b3ebca1c401098a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e973854f7b3ebca1c401098a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_433e66dc98b4ae8ac412f6cd",
+            "version_id": "rgb_doc_433e66dc98b4ae8ac412f6cd:r1",
+            "document_name": "rgb_doc_433e66dc98b4ae8ac412f6cd.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_433e66dc98b4ae8ac412f6cd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_433e66dc98b4ae8ac412f6cd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b95b25429cfcca9b532a09b1",
+            "version_id": "rgb_doc_b95b25429cfcca9b532a09b1:r1",
+            "document_name": "rgb_doc_b95b25429cfcca9b532a09b1.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_b95b25429cfcca9b532a09b1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b95b25429cfcca9b532a09b1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1a1efb5edaf5414649d6bdec",
+            "version_id": "rgb_doc_1a1efb5edaf5414649d6bdec:r1",
+            "document_name": "rgb_doc_1a1efb5edaf5414649d6bdec.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_1a1efb5edaf5414649d6bdec:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1a1efb5edaf5414649d6bdec.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0e43846c054f4fe5d8063f57",
+            "version_id": "rgb_doc_0e43846c054f4fe5d8063f57:r1",
+            "document_name": "rgb_doc_0e43846c054f4fe5d8063f57.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_0e43846c054f4fe5d8063f57:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0e43846c054f4fe5d8063f57.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_35a0a818021f47578a7f8b1a",
+            "version_id": "rgb_doc_35a0a818021f47578a7f8b1a:r1",
+            "document_name": "rgb_doc_35a0a818021f47578a7f8b1a.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_35a0a818021f47578a7f8b1a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_35a0a818021f47578a7f8b1a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4322668528a1c27d86b81ce6",
+            "version_id": "rgb_doc_4322668528a1c27d86b81ce6:r1",
+            "document_name": "rgb_doc_4322668528a1c27d86b81ce6.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_4322668528a1c27d86b81ce6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4322668528a1c27d86b81ce6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_75a604cdc0d4f309bb71c66e",
+            "version_id": "rgb_doc_75a604cdc0d4f309bb71c66e:r1",
+            "document_name": "rgb_doc_75a604cdc0d4f309bb71c66e.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_75a604cdc0d4f309bb71c66e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_75a604cdc0d4f309bb71c66e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_61217c78008abcec75ad8d07",
+            "version_id": "rgb_doc_61217c78008abcec75ad8d07:r1",
+            "document_name": "rgb_doc_61217c78008abcec75ad8d07.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_61217c78008abcec75ad8d07:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_61217c78008abcec75ad8d07.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_03ff6ca96b0a1d34bb090363",
+            "version_id": "rgb_doc_03ff6ca96b0a1d34bb090363:r1",
+            "document_name": "rgb_doc_03ff6ca96b0a1d34bb090363.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_03ff6ca96b0a1d34bb090363:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_03ff6ca96b0a1d34bb090363.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6f4ffd5c15ff49e7257a74a",
+            "version_id": "rgb_doc_b6f4ffd5c15ff49e7257a74a:r1",
+            "document_name": "rgb_doc_b6f4ffd5c15ff49e7257a74a.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_b6f4ffd5c15ff49e7257a74a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6f4ffd5c15ff49e7257a74a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5b079b8a9b58a56a58c630e6",
+            "version_id": "rgb_doc_5b079b8a9b58a56a58c630e6:r1",
+            "document_name": "rgb_doc_5b079b8a9b58a56a58c630e6.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_5b079b8a9b58a56a58c630e6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5b079b8a9b58a56a58c630e6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_334aff96081cecb0f5a55d77",
+            "version_id": "rgb_doc_334aff96081cecb0f5a55d77:r1",
+            "document_name": "rgb_doc_334aff96081cecb0f5a55d77.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_334aff96081cecb0f5a55d77:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_334aff96081cecb0f5a55d77.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8c82d99ce176154b4a9de718",
+            "version_id": "rgb_doc_8c82d99ce176154b4a9de718:r1",
+            "document_name": "rgb_doc_8c82d99ce176154b4a9de718.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_8c82d99ce176154b4a9de718:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8c82d99ce176154b4a9de718.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7e4475c2c7d96f219c4a243a",
+            "version_id": "rgb_doc_7e4475c2c7d96f219c4a243a:r1",
+            "document_name": "rgb_doc_7e4475c2c7d96f219c4a243a.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_7e4475c2c7d96f219c4a243a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7e4475c2c7d96f219c4a243a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_94a2383dde131575959d237c",
+            "version_id": "rgb_doc_94a2383dde131575959d237c:r1",
+            "document_name": "rgb_doc_94a2383dde131575959d237c.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_94a2383dde131575959d237c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_94a2383dde131575959d237c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1f0241cc11bb483530746b52",
+            "version_id": "rgb_doc_1f0241cc11bb483530746b52:r1",
+            "document_name": "rgb_doc_1f0241cc11bb483530746b52.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_1f0241cc11bb483530746b52:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1f0241cc11bb483530746b52.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a34d19daaf33bcc315ec3517",
+            "version_id": "rgb_doc_a34d19daaf33bcc315ec3517:r1",
+            "document_name": "rgb_doc_a34d19daaf33bcc315ec3517.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_a34d19daaf33bcc315ec3517:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a34d19daaf33bcc315ec3517.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a9aa6845030b144f52ceba75",
+            "version_id": "rgb_doc_a9aa6845030b144f52ceba75:r1",
+            "document_name": "rgb_doc_a9aa6845030b144f52ceba75.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_a9aa6845030b144f52ceba75:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a9aa6845030b144f52ceba75.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9532b7310f08dedf5065d2bb",
+            "version_id": "rgb_doc_9532b7310f08dedf5065d2bb:r1",
+            "document_name": "rgb_doc_9532b7310f08dedf5065d2bb.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_9532b7310f08dedf5065d2bb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9532b7310f08dedf5065d2bb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_619270ea5364ff0b92914ba4",
+            "version_id": "rgb_doc_619270ea5364ff0b92914ba4:r1",
+            "document_name": "rgb_doc_619270ea5364ff0b92914ba4.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_619270ea5364ff0b92914ba4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_619270ea5364ff0b92914ba4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5f9979c560a26d037c5c28e4",
+            "version_id": "rgb_doc_5f9979c560a26d037c5c28e4:r1",
+            "document_name": "rgb_doc_5f9979c560a26d037c5c28e4.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_5f9979c560a26d037c5c28e4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5f9979c560a26d037c5c28e4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_43acddca931b4d5eaf7f722b",
+            "version_id": "rgb_doc_43acddca931b4d5eaf7f722b:r1",
+            "document_name": "rgb_doc_43acddca931b4d5eaf7f722b.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_43acddca931b4d5eaf7f722b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_43acddca931b4d5eaf7f722b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a9baef705a76a46037171f6f",
+            "version_id": "rgb_doc_a9baef705a76a46037171f6f:r1",
+            "document_name": "rgb_doc_a9baef705a76a46037171f6f.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_a9baef705a76a46037171f6f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a9baef705a76a46037171f6f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7bbce13cc89145e87d121a1d",
+            "version_id": "rgb_doc_7bbce13cc89145e87d121a1d:r1",
+            "document_name": "rgb_doc_7bbce13cc89145e87d121a1d.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_7bbce13cc89145e87d121a1d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7bbce13cc89145e87d121a1d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_837857b2988b4e2133e02f4c",
+            "version_id": "rgb_doc_837857b2988b4e2133e02f4c:r1",
+            "document_name": "rgb_doc_837857b2988b4e2133e02f4c.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_837857b2988b4e2133e02f4c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_837857b2988b4e2133e02f4c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_030f108cecb56d2b9266668f",
+            "version_id": "rgb_doc_030f108cecb56d2b9266668f:r1",
+            "document_name": "rgb_doc_030f108cecb56d2b9266668f.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_030f108cecb56d2b9266668f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_030f108cecb56d2b9266668f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d419101ca06baded2d466097",
+            "version_id": "rgb_doc_d419101ca06baded2d466097:r1",
+            "document_name": "rgb_doc_d419101ca06baded2d466097.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_d419101ca06baded2d466097:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d419101ca06baded2d466097.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d21b9a895335033ce375c680",
+            "version_id": "rgb_doc_d21b9a895335033ce375c680:r1",
+            "document_name": "rgb_doc_d21b9a895335033ce375c680.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_d21b9a895335033ce375c680:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d21b9a895335033ce375c680.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dca36e3d23c2d77af4b4f4fd",
+            "version_id": "rgb_doc_dca36e3d23c2d77af4b4f4fd:r1",
+            "document_name": "rgb_doc_dca36e3d23c2d77af4b4f4fd.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_dca36e3d23c2d77af4b4f4fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dca36e3d23c2d77af4b4f4fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ff385368de4b3ddabe0a6b45",
+            "version_id": "rgb_doc_ff385368de4b3ddabe0a6b45:r1",
+            "document_name": "rgb_doc_ff385368de4b3ddabe0a6b45.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_ff385368de4b3ddabe0a6b45:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ff385368de4b3ddabe0a6b45.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4886dc263ae50cad1ac4a488",
+            "version_id": "rgb_doc_4886dc263ae50cad1ac4a488:r1",
+            "document_name": "rgb_doc_4886dc263ae50cad1ac4a488.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_4886dc263ae50cad1ac4a488:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4886dc263ae50cad1ac4a488.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ffb977b55dca9bab1fdd6c17",
+            "version_id": "rgb_doc_ffb977b55dca9bab1fdd6c17:r1",
+            "document_name": "rgb_doc_ffb977b55dca9bab1fdd6c17.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_ffb977b55dca9bab1fdd6c17:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ffb977b55dca9bab1fdd6c17.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2240bb895929000fd93f0eb",
+            "version_id": "rgb_doc_f2240bb895929000fd93f0eb:r1",
+            "document_name": "rgb_doc_f2240bb895929000fd93f0eb.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_f2240bb895929000fd93f0eb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f2240bb895929000fd93f0eb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e8cca4b3f4d66492dcb1a830",
+            "version_id": "rgb_doc_e8cca4b3f4d66492dcb1a830:r1",
+            "document_name": "rgb_doc_e8cca4b3f4d66492dcb1a830.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_e8cca4b3f4d66492dcb1a830:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e8cca4b3f4d66492dcb1a830.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_eb96e615d6c0ec9dc80c7dd9",
+            "version_id": "rgb_doc_eb96e615d6c0ec9dc80c7dd9:r1",
+            "document_name": "rgb_doc_eb96e615d6c0ec9dc80c7dd9.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_eb96e615d6c0ec9dc80c7dd9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_eb96e615d6c0ec9dc80c7dd9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_71b837099b73be2b6edf532f",
+            "version_id": "rgb_doc_71b837099b73be2b6edf532f:r1",
+            "document_name": "rgb_doc_71b837099b73be2b6edf532f.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_71b837099b73be2b6edf532f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_71b837099b73be2b6edf532f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5a258c3574b6f1d2c0deb7ee",
+            "version_id": "rgb_doc_5a258c3574b6f1d2c0deb7ee:r1",
+            "document_name": "rgb_doc_5a258c3574b6f1d2c0deb7ee.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_5a258c3574b6f1d2c0deb7ee:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5a258c3574b6f1d2c0deb7ee.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dfbbe1b86b040c8d32cd7ce6",
+            "version_id": "rgb_doc_dfbbe1b86b040c8d32cd7ce6:r1",
+            "document_name": "rgb_doc_dfbbe1b86b040c8d32cd7ce6.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_dfbbe1b86b040c8d32cd7ce6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dfbbe1b86b040c8d32cd7ce6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3211ccaa2baf108e17fa5d99",
+            "version_id": "rgb_doc_3211ccaa2baf108e17fa5d99:r1",
+            "document_name": "rgb_doc_3211ccaa2baf108e17fa5d99.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_3211ccaa2baf108e17fa5d99:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3211ccaa2baf108e17fa5d99.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_060940e3a479be06051a4f72",
+            "version_id": "rgb_doc_060940e3a479be06051a4f72:r1",
+            "document_name": "rgb_doc_060940e3a479be06051a4f72.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_060940e3a479be06051a4f72:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_060940e3a479be06051a4f72.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fb31585e2fa4a8c47813d657",
+            "version_id": "rgb_doc_fb31585e2fa4a8c47813d657:r1",
+            "document_name": "rgb_doc_fb31585e2fa4a8c47813d657.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_fb31585e2fa4a8c47813d657:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fb31585e2fa4a8c47813d657.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6a444cd35ee3a41cea48a53e",
+            "version_id": "rgb_doc_6a444cd35ee3a41cea48a53e:r1",
+            "document_name": "rgb_doc_6a444cd35ee3a41cea48a53e.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_6a444cd35ee3a41cea48a53e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6a444cd35ee3a41cea48a53e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0b36b5c6d30893d7d65aed80",
+            "version_id": "rgb_doc_0b36b5c6d30893d7d65aed80:r1",
+            "document_name": "rgb_doc_0b36b5c6d30893d7d65aed80.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_0b36b5c6d30893d7d65aed80:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0b36b5c6d30893d7d65aed80.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8284e3ed7eb5c5b813d2e509",
+            "version_id": "rgb_doc_8284e3ed7eb5c5b813d2e509:r1",
+            "document_name": "rgb_doc_8284e3ed7eb5c5b813d2e509.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_8284e3ed7eb5c5b813d2e509:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8284e3ed7eb5c5b813d2e509.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1ce731ff533c8e9fb75a5699",
+            "version_id": "rgb_doc_1ce731ff533c8e9fb75a5699:r1",
+            "document_name": "rgb_doc_1ce731ff533c8e9fb75a5699.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_1ce731ff533c8e9fb75a5699:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1ce731ff533c8e9fb75a5699.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f16e4669351894b6e8a125dc",
+            "version_id": "rgb_doc_f16e4669351894b6e8a125dc:r1",
+            "document_name": "rgb_doc_f16e4669351894b6e8a125dc.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_f16e4669351894b6e8a125dc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f16e4669351894b6e8a125dc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3a359a61568645f05aab8247",
+            "version_id": "rgb_doc_3a359a61568645f05aab8247:r1",
+            "document_name": "rgb_doc_3a359a61568645f05aab8247.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_3a359a61568645f05aab8247:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3a359a61568645f05aab8247.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3bc95b60300706406b5d5016",
+            "version_id": "rgb_doc_3bc95b60300706406b5d5016:r1",
+            "document_name": "rgb_doc_3bc95b60300706406b5d5016.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_3bc95b60300706406b5d5016:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3bc95b60300706406b5d5016.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_450ec79bfa690451f83f1d72",
+            "version_id": "rgb_doc_450ec79bfa690451f83f1d72:r1",
+            "document_name": "rgb_doc_450ec79bfa690451f83f1d72.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_450ec79bfa690451f83f1d72:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_450ec79bfa690451f83f1d72.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_37adabbe6435e96fb06c734d",
+            "version_id": "rgb_doc_37adabbe6435e96fb06c734d:r1",
+            "document_name": "rgb_doc_37adabbe6435e96fb06c734d.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_37adabbe6435e96fb06c734d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_37adabbe6435e96fb06c734d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a82cb652f8ce612aa1036201",
+            "version_id": "rgb_doc_a82cb652f8ce612aa1036201:r1",
+            "document_name": "rgb_doc_a82cb652f8ce612aa1036201.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_a82cb652f8ce612aa1036201:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a82cb652f8ce612aa1036201.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2ab0ac19c084344356237172",
+            "version_id": "rgb_doc_2ab0ac19c084344356237172:r1",
+            "document_name": "rgb_doc_2ab0ac19c084344356237172.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_2ab0ac19c084344356237172:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2ab0ac19c084344356237172.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b68483a3910fb7fc80eb21e",
+            "version_id": "rgb_doc_3b68483a3910fb7fc80eb21e:r1",
+            "document_name": "rgb_doc_3b68483a3910fb7fc80eb21e.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_3b68483a3910fb7fc80eb21e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3b68483a3910fb7fc80eb21e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e5c161215e5b7cb78ecbbaa4",
+            "version_id": "rgb_doc_e5c161215e5b7cb78ecbbaa4:r1",
+            "document_name": "rgb_doc_e5c161215e5b7cb78ecbbaa4.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_e5c161215e5b7cb78ecbbaa4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e5c161215e5b7cb78ecbbaa4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6ad1141d0e61f5221c57caa2",
+            "version_id": "rgb_doc_6ad1141d0e61f5221c57caa2:r1",
+            "document_name": "rgb_doc_6ad1141d0e61f5221c57caa2.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_6ad1141d0e61f5221c57caa2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6ad1141d0e61f5221c57caa2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3a064c491fb60cdd4baae25a",
+            "version_id": "rgb_doc_3a064c491fb60cdd4baae25a:r1",
+            "document_name": "rgb_doc_3a064c491fb60cdd4baae25a.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_3a064c491fb60cdd4baae25a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3a064c491fb60cdd4baae25a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8247f049eb3870a29b8b880e",
+            "version_id": "rgb_doc_8247f049eb3870a29b8b880e:r1",
+            "document_name": "rgb_doc_8247f049eb3870a29b8b880e.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_8247f049eb3870a29b8b880e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8247f049eb3870a29b8b880e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6e7dcfefac4422db699ced8",
+            "version_id": "rgb_doc_b6e7dcfefac4422db699ced8:r1",
+            "document_name": "rgb_doc_b6e7dcfefac4422db699ced8.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_b6e7dcfefac4422db699ced8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6e7dcfefac4422db699ced8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55889ee96060e9acd52a9a15",
+            "version_id": "rgb_doc_55889ee96060e9acd52a9a15:r1",
+            "document_name": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_55889ee96060e9acd52a9a15:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 9.454708007979207,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.235000005806796,
+          "evidence_ms": 2.1787090081488714,
+          "fusion_ms": 1.116042010835372,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 37.377915999968536,
+          "context_chars": 1061,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_62bd95b8a11fc8af",
+          "ev_a25d2ae17819c636",
+          "ev_5e1024776efb64b3",
+          "ev_7f1c1004ddd00264",
+          "ev_54c191ad07bcb192",
+          "ev_386d3629de122045",
+          "ev_73bd41c1b47c6ed5",
+          "ev_906bac33ba5f3010",
+          "ev_62654543cdd5fdd0",
+          "ev_35e0186594581512"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_62bd95b8a11fc8af",
+            "content": "Jan 24, 2023 ... 票房佳大年初一票房突破13亿元数据显示，2023年春节档新片上映首日（1 ... 其中，《流浪地球2》成为今年春节档新片上映首日票房冠军，单日票房4.67亿元。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c4feda52836306aafff241",
+            "version_id": "rgb_doc_65c4feda52836306aafff241:r1",
+            "document_name": "rgb_doc_65c4feda52836306aafff241.txt",
+            "chunk_id": "rgb_doc_65c4feda52836306aafff241:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_65c4feda52836306aafff241:r1",
+              "block_ids": [
+                "rgb_doc_65c4feda52836306aafff241:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 23.486677169799805,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "65c4feda52836306aafff241a0c6fb208c373ace480184c47f6f3953a334e5c9",
+            "scope_digest": "be9cc87c66ad85125995fd4b1c6627c7067a95ecd0a68c6d9266ea006176fdeb",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_8a04503a245256f2afad",
+                "source_id": "S1",
+                "evidence_id": "ev_62bd95b8a11fc8af",
+                "raw_text": "24",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 24, 2023 ... 票房佳大年初一票房突破13亿元数据显示，2023年春节档新片上映首日（1 ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ed289ee298e404a35ffc",
+                "source_id": "S1",
+                "evidence_id": "ev_62bd95b8a11fc8af",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 24, 2023 ... 票房佳大年初一票房突破13亿元数据显示，2023年春节档新片上映首日（1 ... 其中",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_c2f924af7a34830e2cd1",
+                "source_id": "S1",
+                "evidence_id": "ev_62bd95b8a11fc8af",
+                "raw_text": "1",
+                "start": 52,
+                "end": 53,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "24, 2023 ... 票房佳大年初一票房突破13亿元数据显示，2023年春节档新片上映首日（1 ... 其中，《流浪地球2》成为今年春节档新片上映首日票房冠军，单日票房4.67亿元。",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a25d2ae17819c636",
+            "content": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日(1月22日)票房达13.4亿元，放映总 ... 《流浪地球2》成为今年春节档新片上映首日票房冠军，单日票房4.67亿元。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_89d054754882273b6dd742eb",
+            "version_id": "rgb_doc_89d054754882273b6dd742eb:r1",
+            "document_name": "rgb_doc_89d054754882273b6dd742eb.txt",
+            "chunk_id": "rgb_doc_89d054754882273b6dd742eb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_89d054754882273b6dd742eb:r1",
+              "block_ids": [
+                "rgb_doc_89d054754882273b6dd742eb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 23.403348922729492,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "89d054754882273b6dd742ebfb7c0c847c3c2811cd7386139022be5378639cec",
+            "scope_digest": "25aede1447cf292f4cd616cbb2d08691e5ecbe46b3d77db14ec20152f0a29343",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_d7bd3cc232cc757b342b",
+                "source_id": "S2",
+                "evidence_id": "ev_a25d2ae17819c636",
+                "raw_text": "24",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日(1月22日)票房达13.4亿元，放",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_e0f340fb21886d98bf59",
+                "source_id": "S2",
+                "evidence_id": "ev_a25d2ae17819c636",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日(1月22日)票房达13.4亿元，放映总 ...",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_5e1024776efb64b3",
+            "content": "Jan 26, 2023 ... 春节档上映首日，《流浪地球2》以超过5亿元的票房登顶当日冠军，并且率先 ... 研报指出，春节档票房第二日与第三日（截至10点）相比2019年与2022年 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9c2ddc3f05b4c1087c83decc",
+            "version_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1",
+            "document_name": "rgb_doc_9c2ddc3f05b4c1087c83decc.txt",
+            "chunk_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1",
+              "block_ids": [
+                "rgb_doc_9c2ddc3f05b4c1087c83decc:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 23.318416595458984,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "9c2ddc3f05b4c1087c83decccfc38212854edd90752e42c083d33d6f1ca0097b",
+            "scope_digest": "42aab49c7c707e18d8cc49d3fba683ea01b2f903b14e3ba79fa47a5c2fb1a52c",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_317b6aa1ab9b5c8a965e",
+                "source_id": "S3",
+                "evidence_id": "ev_5e1024776efb64b3",
+                "raw_text": "26",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 26, 2023 ... 春节档上映首日，《流浪地球2》以超过5亿元的票房登顶当日冠军，并且率先 .",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_dd587dfde039bee2b3b9",
+                "source_id": "S3",
+                "evidence_id": "ev_5e1024776efb64b3",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 26, 2023 ... 春节档上映首日，《流浪地球2》以超过5亿元的票房登顶当日冠军，并且率先 ... 研报指",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_7f1c1004ddd00264",
+            "content": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日（1月22日）票房达13.4亿元，放映总场次44.8 ... 其中，《流浪地球2》成为今年春节档新片上映首日票房冠军，单日 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e2378b9a6828b93c61370849",
+            "version_id": "rgb_doc_e2378b9a6828b93c61370849:r1",
+            "document_name": "rgb_doc_e2378b9a6828b93c61370849.txt",
+            "chunk_id": "rgb_doc_e2378b9a6828b93c61370849:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e2378b9a6828b93c61370849:r1",
+              "block_ids": [
+                "rgb_doc_e2378b9a6828b93c61370849:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 101
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 22.990365982055664,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 101,
+            "content_hash": "e2378b9a6828b93c61370849b579a113727983453b10e545d1136803a5451c6d",
+            "scope_digest": "ff8dff8037c33fefa5cb1633ced620d12599ab4b78e8ce237bba81ad7c5adad1",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_d424e53bc1950183e83e",
+                "source_id": "S4",
+                "evidence_id": "ev_7f1c1004ddd00264",
+                "raw_text": "24",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日（1月22日）票房达13.4亿元，放",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_54e6a97208c08156d5de",
+                "source_id": "S4",
+                "evidence_id": "ev_7f1c1004ddd00264",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 24, 2023 ... 数据显示，2023年春节档新片上映首日（1月22日）票房达13.4亿元，放映总场次44",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_54c191ad07bcb192",
+            "content": "Jan 22, 2023 ... 春节档目前票房最高的《流浪地球2》为2019年春节档票房冠军、中国科幻电影 ... 目前首日上映总票房已超过《中国机长》成为内地影史灾难片首映日票房 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f99201cee51bdc174c042e3e",
+            "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+            "document_name": "rgb_doc_f99201cee51bdc174c042e3e.txt",
+            "chunk_id": "rgb_doc_f99201cee51bdc174c042e3e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+              "block_ids": [
+                "rgb_doc_f99201cee51bdc174c042e3e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 22.811025619506836,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 95,
+            "content_hash": "f99201cee51bdc174c042e3e0c68e4a05dfec133cfa377be295f3a2293a3afff",
+            "scope_digest": "cfc3315946b299ee3feccf05e82f3edd67efd8129a6128d84d3f7d6c0a371283",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_26ee1e5dff1222040f1f",
+                "source_id": "S5",
+                "evidence_id": "ev_54c191ad07bcb192",
+                "raw_text": "22",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 22, 2023 ... 春节档目前票房最高的《流浪地球2》为2019年春节档票房冠军、中国科幻电影",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_14ecc495333471621917",
+                "source_id": "S5",
+                "evidence_id": "ev_54c191ad07bcb192",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 22, 2023 ... 春节档目前票房最高的《流浪地球2》为2019年春节档票房冠军、中国科幻电影 ... 目",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_386d3629de122045",
+            "content": "据猫眼专业版数据显示，截至1月27日(农历正月初六)21时，2023年春节档期总 ... 项里程碑成就，包括中国影史春节档动画片首日票房冠军、中国影史春节档动画片票房冠军。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95e382fea538c1ff2fca11fb",
+            "version_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1",
+            "document_name": "rgb_doc_95e382fea538c1ff2fca11fb.txt",
+            "chunk_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1",
+              "block_ids": [
+                "rgb_doc_95e382fea538c1ff2fca11fb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 86
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 22.731637954711914,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 86,
+            "content_hash": "95e382fea538c1ff2fca11fba83d831acff5a2c997e8125f5d7c0e4a9027770f",
+            "scope_digest": "162f01e8ef650bbb41d2b6f311431538f8395e130e2bdfd0bd06b908c0e496fc",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_73bd41c1b47c6ed5",
+            "content": "Feb 3, 2022 ... 值得注意的是，2022年春节档首日票房不及去年同期，观影人次更是减少近900万。 ... 《水门桥》以6.68亿元的成绩摘得首日票房冠军，一举打破了包括中国 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d028396826f6b146584842a",
+            "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+            "document_name": "rgb_doc_0d028396826f6b146584842a.txt",
+            "chunk_id": "rgb_doc_0d028396826f6b146584842a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+              "block_ids": [
+                "rgb_doc_0d028396826f6b146584842a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 22.651086807250977,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "0d028396826f6b146584842aad32a6ab7cef72acd21146e50ad8ce6945c3781a",
+            "scope_digest": "78c52e18417b678cc97e7e0c585857678cb149ed1c5c35a8216a36dc21dc8c92",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_8d3938ead73f73cc6a86",
+                "source_id": "S7",
+                "evidence_id": "ev_73bd41c1b47c6ed5",
+                "raw_text": "3",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 3, 2022 ... 值得注意的是，2022年春节档首日票房不及去年同期，观影人次更是减少近90",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_6397d43cc96f247d2970",
+                "source_id": "S7",
+                "evidence_id": "ev_73bd41c1b47c6ed5",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 3, 2022 ... 值得注意的是，2022年春节档首日票房不及去年同期，观影人次更是减少近900万。 ..",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_906bac33ba5f3010",
+            "content": "44亿，共打破10项纪录，获得38项里程碑成就，包括中国影史春节档动画片首日票房冠军、中国影史春节档动画片票房冠军。 《无名》上映7天总票房破5亿。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f932089bee3aca66798eee06",
+            "version_id": "rgb_doc_f932089bee3aca66798eee06:r1",
+            "document_name": "rgb_doc_f932089bee3aca66798eee06.txt",
+            "chunk_id": "rgb_doc_f932089bee3aca66798eee06:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f932089bee3aca66798eee06:r1",
+              "block_ids": [
+                "rgb_doc_f932089bee3aca66798eee06:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 74
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 22.523834228515625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 74,
+            "content_hash": "f932089bee3aca66798eee06d1448a3d16f3dbb74c311e592d930849c39f5a48",
+            "scope_digest": "dd6b25d1782eadebf9c7fc8d990edec714f6190fee6925045beaf80ed421c71c",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_62654543cdd5fdd0",
+            "content": "2022年春节档以60.35亿票房收官，2月7日，灯塔研究院和灯塔专业版联合发布《2022春节档电影市场数据洞察报告》（以下简称灯塔报告）。 灯塔报告显示，2月1日大年初一，春节档首日揽下14.5亿票房，与2019年持平，后续走势也与疫情前一样平缓回落。  票房冠军《长津湖之水门桥》斩获25.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3678a62800f6405e8e774ef5",
+            "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+            "document_name": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+            "chunk_id": "rgb_doc_3678a62800f6405e8e774ef5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+              "block_ids": [
+                "rgb_doc_3678a62800f6405e8e774ef5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 147
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 22.405059814453125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 147,
+            "content_hash": "3678a62800f6405e8e774ef5efa657af0cf02b2cca4e9bb79cfb84171d3d15b1",
+            "scope_digest": "8087097e98fe5ce31ca54382215da7e6bbba1ca1cebe576718e460f22b517c51",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_35e0186594581512",
+            "content": "从影片类型上来看，春节档上映的新片中涵盖科幻、喜剧、谍战、动画、家庭、运动等题材，受众范围广泛。  春节档目前票房最高的《流浪地球2》为2019年春节档票房冠军、中国科幻电影票房冠军《流浪地球》的续作，吴京、刘德华、李雪健等一众大牌主演，目前首日上映总票房已超过《中国机长》成为内地影史灾难片首映日票房冠军，截至发稿票房占比超过30%。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6248f697d659aba11bbd6119",
+            "version_id": "rgb_doc_6248f697d659aba11bbd6119:r1",
+            "document_name": "rgb_doc_6248f697d659aba11bbd6119.txt",
+            "chunk_id": "rgb_doc_6248f697d659aba11bbd6119:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6248f697d659aba11bbd6119:r1",
+              "block_ids": [
+                "rgb_doc_6248f697d659aba11bbd6119:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 168
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 22.252567291259766,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 168,
+            "content_hash": "6248f697d659aba11bbd611992a2ee0234c39bdf9d3f129dfeae85177f20dd8f",
+            "scope_digest": "a88587cd1bc84bbfaec0613b0ceec018424065191b45bbe6f1865a5254fa4b8a",
+            "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_386d3629de122045",
+      "ev_54c191ad07bcb192",
+      "ev_5e1024776efb64b3",
+      "ev_62654543cdd5fdd0",
+      "ev_62bd95b8a11fc8af",
+      "ev_73bd41c1b47c6ed5",
+      "ev_7f1c1004ddd00264",
+      "ev_906bac33ba5f3010",
+      "ev_a25d2ae17819c636"
+    ],
+    "evidence": {
+      "ev_62bd95b8a11fc8af": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_65c4feda52836306aafff241",
+        "version_id": "rgb_doc_65c4feda52836306aafff241:r1",
+        "document_name": "rgb_doc_65c4feda52836306aafff241.txt",
+        "chunk_id": "rgb_doc_65c4feda52836306aafff241:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_65c4feda52836306aafff241:r1",
+          "block_ids": [
+            "rgb_doc_65c4feda52836306aafff241:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 23.486677169799805,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "65c4feda52836306aafff241a0c6fb208c373ace480184c47f6f3953a334e5c9",
+        "scope_digest": "be9cc87c66ad85125995fd4b1c6627c7067a95ecd0a68c6d9266ea006176fdeb",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a25d2ae17819c636": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_89d054754882273b6dd742eb",
+        "version_id": "rgb_doc_89d054754882273b6dd742eb:r1",
+        "document_name": "rgb_doc_89d054754882273b6dd742eb.txt",
+        "chunk_id": "rgb_doc_89d054754882273b6dd742eb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_89d054754882273b6dd742eb:r1",
+          "block_ids": [
+            "rgb_doc_89d054754882273b6dd742eb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 23.403348922729492,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "89d054754882273b6dd742ebfb7c0c847c3c2811cd7386139022be5378639cec",
+        "scope_digest": "25aede1447cf292f4cd616cbb2d08691e5ecbe46b3d77db14ec20152f0a29343",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_5e1024776efb64b3": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9c2ddc3f05b4c1087c83decc",
+        "version_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1",
+        "document_name": "rgb_doc_9c2ddc3f05b4c1087c83decc.txt",
+        "chunk_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9c2ddc3f05b4c1087c83decc:r1",
+          "block_ids": [
+            "rgb_doc_9c2ddc3f05b4c1087c83decc:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 23.318416595458984,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "9c2ddc3f05b4c1087c83decccfc38212854edd90752e42c083d33d6f1ca0097b",
+        "scope_digest": "42aab49c7c707e18d8cc49d3fba683ea01b2f903b14e3ba79fa47a5c2fb1a52c",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_7f1c1004ddd00264": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_e2378b9a6828b93c61370849",
+        "version_id": "rgb_doc_e2378b9a6828b93c61370849:r1",
+        "document_name": "rgb_doc_e2378b9a6828b93c61370849.txt",
+        "chunk_id": "rgb_doc_e2378b9a6828b93c61370849:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_e2378b9a6828b93c61370849:r1",
+          "block_ids": [
+            "rgb_doc_e2378b9a6828b93c61370849:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 101
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 22.990365982055664,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 101,
+        "content_hash": "e2378b9a6828b93c61370849b579a113727983453b10e545d1136803a5451c6d",
+        "scope_digest": "ff8dff8037c33fefa5cb1633ced620d12599ab4b78e8ce237bba81ad7c5adad1",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_54c191ad07bcb192": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_f99201cee51bdc174c042e3e",
+        "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+        "document_name": "rgb_doc_f99201cee51bdc174c042e3e.txt",
+        "chunk_id": "rgb_doc_f99201cee51bdc174c042e3e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+          "block_ids": [
+            "rgb_doc_f99201cee51bdc174c042e3e:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 95
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 22.811025619506836,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 95,
+        "content_hash": "f99201cee51bdc174c042e3e0c68e4a05dfec133cfa377be295f3a2293a3afff",
+        "scope_digest": "cfc3315946b299ee3feccf05e82f3edd67efd8129a6128d84d3f7d6c0a371283",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_386d3629de122045": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_95e382fea538c1ff2fca11fb",
+        "version_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1",
+        "document_name": "rgb_doc_95e382fea538c1ff2fca11fb.txt",
+        "chunk_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_95e382fea538c1ff2fca11fb:r1",
+          "block_ids": [
+            "rgb_doc_95e382fea538c1ff2fca11fb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 86
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 22.731637954711914,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 86,
+        "content_hash": "95e382fea538c1ff2fca11fba83d831acff5a2c997e8125f5d7c0e4a9027770f",
+        "scope_digest": "162f01e8ef650bbb41d2b6f311431538f8395e130e2bdfd0bd06b908c0e496fc",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_73bd41c1b47c6ed5": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_0d028396826f6b146584842a",
+        "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+        "document_name": "rgb_doc_0d028396826f6b146584842a.txt",
+        "chunk_id": "rgb_doc_0d028396826f6b146584842a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+          "block_ids": [
+            "rgb_doc_0d028396826f6b146584842a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 22.651086807250977,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "0d028396826f6b146584842aad32a6ab7cef72acd21146e50ad8ce6945c3781a",
+        "scope_digest": "78c52e18417b678cc97e7e0c585857678cb149ed1c5c35a8216a36dc21dc8c92",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_906bac33ba5f3010": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_f932089bee3aca66798eee06",
+        "version_id": "rgb_doc_f932089bee3aca66798eee06:r1",
+        "document_name": "rgb_doc_f932089bee3aca66798eee06.txt",
+        "chunk_id": "rgb_doc_f932089bee3aca66798eee06:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_f932089bee3aca66798eee06:r1",
+          "block_ids": [
+            "rgb_doc_f932089bee3aca66798eee06:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 74
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 22.523834228515625,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 74,
+        "content_hash": "f932089bee3aca66798eee06d1448a3d16f3dbb74c311e592d930849c39f5a48",
+        "scope_digest": "dd6b25d1782eadebf9c7fc8d990edec714f6190fee6925045beaf80ed421c71c",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_62654543cdd5fdd0": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_3678a62800f6405e8e774ef5",
+        "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+        "document_name": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+        "chunk_id": "rgb_doc_3678a62800f6405e8e774ef5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+          "block_ids": [
+            "rgb_doc_3678a62800f6405e8e774ef5:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 147
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 22.405059814453125,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 147,
+        "content_hash": "3678a62800f6405e8e774ef5efa657af0cf02b2cca4e9bb79cfb84171d3d15b1",
+        "scope_digest": "8087097e98fe5ce31ca54382215da7e6bbba1ca1cebe576718e460f22b517c51",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_35e0186594581512": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_6248f697d659aba11bbd6119",
+        "version_id": "rgb_doc_6248f697d659aba11bbd6119:r1",
+        "document_name": "rgb_doc_6248f697d659aba11bbd6119.txt",
+        "chunk_id": "rgb_doc_6248f697d659aba11bbd6119:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_6248f697d659aba11bbd6119:r1",
+          "block_ids": [
+            "rgb_doc_6248f697d659aba11bbd6119:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 168
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 22.252567291259766,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 168,
+        "content_hash": "6248f697d659aba11bbd611992a2ee0234c39bdf9d3f129dfeae85177f20dd8f",
+        "scope_digest": "a88587cd1bc84bbfaec0613b0ceec018424065191b45bbe6f1865a5254fa4b8a",
+        "trace_id": "a0bf223438c64fffb7860c7f94cbef9d",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_62bd95b8a11fc8af",
+      "S2": "ev_a25d2ae17819c636",
+      "S3": "ev_5e1024776efb64b3",
+      "S4": "ev_7f1c1004ddd00264",
+      "S5": "ev_54c191ad07bcb192",
+      "S6": "ev_386d3629de122045",
+      "S7": "ev_73bd41c1b47c6ed5",
+      "S8": "ev_906bac33ba5f3010",
+      "S9": "ev_62654543cdd5fdd0",
+      "S10": "ev_35e0186594581512"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

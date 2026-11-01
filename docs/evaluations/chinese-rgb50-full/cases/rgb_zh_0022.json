@@ -1,0 +1,3777 @@
+{
+  "question_id": "rgb_zh_0022",
+  "result": {
+    "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+    "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:1",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:2",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:3",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "context_chars": 1192,
+        "prompt_tokens": 8442,
+        "completion_tokens": 59,
+        "total_tokens": 8501,
+        "context_compaction_count": 0,
+        "context_chars_before": 1192,
+        "context_chars_after": 1192,
+        "estimated_input_tokens": 12121,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1475,
+        "remaining_run_tokens": 111499,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8442,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3679
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:4",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1192
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:5",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "tool_call_id": "call_13bf60e1f09c4eb2926929",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:6",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "tool_call_id": "call_13bf60e1f09c4eb2926929",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:7",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_13bf60e1f09c4eb2926929",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 9,
+        "output_chars_before": 98737,
+        "output_chars_after": 13697,
+        "removed_chars": 85040,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:8",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:9",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:10",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "context_chars": 14889,
+        "prompt_tokens": 14842,
+        "completion_tokens": 2000,
+        "total_tokens": 16842,
+        "context_compaction_count": 0,
+        "context_chars_before": 14889,
+        "context_chars_after": 14889,
+        "estimated_input_tokens": 20599,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7825,
+        "evidence_tokens": 2454,
+        "history_tokens": 2128,
+        "remaining_run_tokens": 94657,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 14842,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5757
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:11",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "model_visible_evidence_count": 9,
+        "context_chars": 14889
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:12",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "citation_validation_reason": [
+          "invalid_claim_structure",
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:13",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "context_chars": 6240,
+        "prompt_tokens": 3338,
+        "completion_tokens": 62,
+        "total_tokens": 3400,
+        "context_compaction_count": 0,
+        "context_chars_before": 6240,
+        "context_chars_after": 6240,
+        "estimated_input_tokens": 7268,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 7268,
+        "remaining_run_tokens": 91257,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 3338,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3930
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:14",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:15",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "delta": "2021年澳门GDP全年经济实质增长18.0% [1]\n\n2021年香港GDP增长率未在提供的证据中明确给出 [2] [3] [4]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:16",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09",
+        "final_citation_count": 4,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_e92ebf939f5b4cbd845a367d4be2785f:edc9fa76bd6b41ce81e29100b045b703:17",
+        "run_id": "run_e92ebf939f5b4cbd845a367d4be2785f",
+        "thread_id": "thread_0cc92647fa094c53812ffb6a0eebcd09"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 26622,
+      "completion_tokens": 2121,
+      "total_tokens": 28743
+    },
+    "elapsed_seconds": 49.65574704098981,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 9,
+      "output_truncated": true,
+      "context_chars": 14889,
+      "prompt_tokens": 26622,
+      "completion_tokens": 2121,
+      "total_tokens": 28743,
+      "context_compaction_count": 0,
+      "context_chars_before": 6240,
+      "context_chars_after": 6240,
+      "estimated_input_tokens": 7268,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 7268,
+      "remaining_run_tokens": 91257,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 3338,
+      "usage_source": "provider",
+      "estimation_error_tokens": -3930,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_13bf60e1f09c4eb2926929",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 9,
+          "output_chars_before": 98737,
+          "output_chars_after": 13697,
+          "removed_chars": 85040,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "invalid_claim_structure",
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 6240,
+      "repair_visible_evidence_count": 9,
+      "final_citation_count": 4,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "2021年澳门GDP全年经济实质增长18.0% [1]\n\n2021年香港GDP增长率未在提供的证据中明确给出 [2] [3] [4]",
+      "citations": {
+        "ev_12f36c6d080e46fe": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_4454f18fdc92e318110231de",
+          "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+          "document_name": "rgb_doc_4454f18fdc92e318110231de.txt",
+          "chunk_id": "rgb_doc_4454f18fdc92e318110231de:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "南方财经全媒体记者田静、见习记者蔡依莹 发自澳门  澳门统计暨普查局3月4日公布，澳门2021年本地生产总值（GDP）为2394亿元（澳门元，下同），全年经济实质增长18.0%，人均GDP为350445元。有学者表示，这些数据或代表新冠疫情影响澳门最严重的时期已经过去，2022年全年经济有望维持正增长。 澳门统计暨普查局资料显示，纵观2021年，疫情仍然反复，但与2020年相比已有所改善，澳门经济整体需求回升。数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质增长18.0%，内部需求上升3.0%。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+            "block_ids": [
+              "rgb_doc_4454f18fdc92e318110231de:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 269
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 17.055835723876953,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_22543640c67a38c7": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_dda3bd4afb6818359a4feaae",
+          "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+          "document_name": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+          "chunk_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "GDP 增长率（年百分比） - Hong Kong SAR, China from The World Bank: Data. ... 国家的名字. 最近年份. 最近数值. 中国香港特别行政区. 2021.",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+            "block_ids": [
+              "rgb_doc_dda3bd4afb6818359a4feaae:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 103
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 16.50758171081543,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_d7a296f5907c6d46": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_29bcfe678ae952c4158c59d7",
+          "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+          "document_name": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+          "chunk_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "source_score": null,
+          "fused_score": 0.015625,
+          "rerank_score": null,
+          "content": "May 18, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的下行风险已降低，且经济逐步复苏将助力2021年的香港GDP增长率 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+            "block_ids": [
+              "rgb_doc_29bcfe678ae952c4158c59d7:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 96
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 16.411521911621094,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_72dec71ce51474b2": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7",
+          "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+          "document_name": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+          "chunk_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "May 14, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的下行风险已降低，且经济逐步复苏将助力2021年的香港GDP增长率 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+            "block_ids": [
+              "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 96
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 16.411521911621094,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "2021年澳门GDP全年经济实质增长18.0%",
+          "source_ids": [
+            "S2"
+          ]
+        },
+        {
+          "text": "2021年香港GDP增长率未在提供的证据中明确给出",
+          "source_ids": [
+            "S3",
+            "S4",
+            "S5"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S2",
+          "evidence_id": "ev_12f36c6d080e46fe"
+        },
+        {
+          "number": 2,
+          "source_id": "S3",
+          "evidence_id": "ev_22543640c67a38c7"
+        },
+        {
+          "number": 3,
+          "source_id": "S4",
+          "evidence_id": "ev_d7a296f5907c6d46"
+        },
+        {
+          "number": 4,
+          "source_id": "S5",
+          "evidence_id": "ev_72dec71ce51474b2"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_13bf60e1f09c4eb2926929",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2021年 香港 澳门 GDP 增长率",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+            "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+            "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "chunk_id": "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 19.63483428955078,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "GDP 增长率（年百分比） - Macao SAR, China from The World Bank: Data. ... 人均GDP增长（年增长率） ... 中国澳门特别行政区.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+              "block_ids": [
+                "rgb_doc_2fee0cf6aa6787537f752901:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 19.63483428955078,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4454f18fdc92e318110231de",
+            "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+            "document_name": "rgb_doc_4454f18fdc92e318110231de.txt",
+            "chunk_id": "rgb_doc_4454f18fdc92e318110231de:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 17.055835723876953,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "南方财经全媒体记者田静、见习记者蔡依莹 发自澳门  澳门统计暨普查局3月4日公布，澳门2021年本地生产总值（GDP）为2394亿元（澳门元，下同），全年经济实质增长18.0%，人均GDP为350445元。有学者表示，这些数据或代表新冠疫情影响澳门最严重的时期已经过去，2022年全年经济有望维持正增长。 澳门统计暨普查局资料显示，纵观2021年，疫情仍然反复，但与2020年相比已有所改善，澳门经济整体需求回升。数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质增长18.0%，内部需求上升3.0%。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+              "block_ids": [
+                "rgb_doc_4454f18fdc92e318110231de:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 269
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 17.055835723876953,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dda3bd4afb6818359a4feaae",
+            "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+            "document_name": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+            "chunk_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 16.50758171081543,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "GDP 增长率（年百分比） - Hong Kong SAR, China from The World Bank: Data. ... 国家的名字. 最近年份. 最近数值. 中国香港特别行政区. 2021.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+              "block_ids": [
+                "rgb_doc_dda3bd4afb6818359a4feaae:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 103
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 16.50758171081543,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_29bcfe678ae952c4158c59d7",
+            "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+            "document_name": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+            "chunk_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 16.411521911621094,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "May 18, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的下行风险已降低，且经济逐步复苏将助力2021年的香港GDP增长率 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+              "block_ids": [
+                "rgb_doc_29bcfe678ae952c4158c59d7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 16.411521911621094,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7",
+            "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+            "document_name": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+            "chunk_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 16.411521911621094,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "May 14, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的下行风险已降低，且经济逐步复苏将助力2021年的香港GDP增长率 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+              "block_ids": [
+                "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 16.411521911621094,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b5a69046e67b344a72fa9da3",
+            "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+            "document_name": "rgb_doc_b5a69046e67b344a72fa9da3.txt",
+            "chunk_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 15.724358558654785,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "由于旅游业收入仍然相对较低，2021年的经常账户顺差估计不到危机前水平的一半。   澳门特区的经济复苏有望继续推进。在境外游客逐渐回归、本地需求回升的推动下，预计2022年澳门特区GDP将增长15.5%。鉴于新批准博彩业经营特许权相关投资的增加，加之粤港澳大湾区（GBA）一体化程度的提高，预计澳门特区经济增速将在2023年达到23%，并在中期内逐渐回落到约3.5%的长期潜在增长率水平。整体通胀预计将在2022年加速，中期内稳定在2.5%左右。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+              "block_ids": [
+                "rgb_doc_b5a69046e67b344a72fa9da3:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 223
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.724358558654785,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da337ec5054f663b6e7d98ff",
+            "version_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1",
+            "document_name": "rgb_doc_da337ec5054f663b6e7d98ff.txt",
+            "chunk_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 15.56308650970459,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质增长18.0%，内部需求上升3.0%。 　　澳门大学工商管理学院教授刘丁己在接受南方财经全媒体记者采访时表示，澳门2021年GDP录得较大增幅，主要是因为澳门2020年基数非常低。“从好的角度来看，可能代表疫情影响澳门最严重的时期已经过去，游客数字回升直接影响着澳门旅游业和博彩业的回温。” 　　数据显示，2021年澳门居民的本地经济活动已经基本恢复，私人消费按年上升7.0%；政府最终消费支出按年上升0.1%，其中雇员报酬增加1.2%，购入货物及服务净值下跌1.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1",
+              "block_ids": [
+                "rgb_doc_da337ec5054f663b6e7d98ff:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 275
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 15.56308650970459,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_414d20429d14bda37640e503",
+            "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+            "document_name": "rgb_doc_414d20429d14bda37640e503.txt",
+            "chunk_id": "rgb_doc_414d20429d14bda37640e503:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 15.43889331817627,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "Mar 7, 2022 ... 数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质增长18.0%，内部需求上升3.0%。 澳门大学工商管理学院教授刘丁己在接受南方财经全 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+              "block_ids": [
+                "rgb_doc_414d20429d14bda37640e503:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 106
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 15.43889331817627,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_622b512c4978fbb03529aa7b",
+            "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+            "document_name": "rgb_doc_622b512c4978fbb03529aa7b.txt",
+            "chunk_id": "rgb_doc_622b512c4978fbb03529aa7b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 15.349634170532227,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "回顾2021年澳门整体数据，进一步从季度分析，2021年第1季至第3季澳门本地实质生产总值增长率分别是-1.2%、70.9%和33.8%。数据显示，澳门去年第4季GDP未能沿着第2、第3季的升势，按年实质收缩4.4%。 去年第4季外部需求保持平稳，服务出口按年微跌0.3%，当中博彩服务出口下跌14.4%，其他旅游服务出口则上升8.9%。货物出口上升7.7%。内部需求方面，固定资本形成总额按年下跌8.7%，私人消费上升0.4%，政府最终消费支出则增加1.3%。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+              "block_ids": [
+                "rgb_doc_622b512c4978fbb03529aa7b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 231
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 15.349634170532227,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+            "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+            "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "chunk_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 15.152604103088379,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "5%，进入负增长，基数较低，所以在2020年低基数影响下，2021年美国GDP实现了较高的增长率。 同时，美国GDP数据也公布了，根据统计，2021年美国GDP总量首次突破23万亿美元大关，达到23.03万亿美元，依然是全球第一大经济体，要知道2020年美国GDP为20.89万亿美元，GDP增量超过2万亿美元。  但是，如果按照正常计算，美国GDP增长率应该是10.24%，为什么GDP增长率却是5.7%？事实上，10.24%属于名义增速，其中包括了通胀水平等因素，抛开这些因素之后就会得出GDP实际增长率，也就是5.7%。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+              "block_ids": [
+                "rgb_doc_e71f6e32b9abe8a66a634e91:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 263
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 15.152604103088379,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+            "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+            "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4454f18fdc92e318110231de",
+            "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+            "document_name": "rgb_doc_4454f18fdc92e318110231de.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_4454f18fdc92e318110231de:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4454f18fdc92e318110231de.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dda3bd4afb6818359a4feaae",
+            "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+            "document_name": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_dda3bd4afb6818359a4feaae:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_29bcfe678ae952c4158c59d7",
+            "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+            "document_name": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_29bcfe678ae952c4158c59d7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7",
+            "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+            "document_name": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b5a69046e67b344a72fa9da3",
+            "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+            "document_name": "rgb_doc_b5a69046e67b344a72fa9da3.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_b5a69046e67b344a72fa9da3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b5a69046e67b344a72fa9da3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da337ec5054f663b6e7d98ff",
+            "version_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1",
+            "document_name": "rgb_doc_da337ec5054f663b6e7d98ff.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_da337ec5054f663b6e7d98ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_da337ec5054f663b6e7d98ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_414d20429d14bda37640e503",
+            "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+            "document_name": "rgb_doc_414d20429d14bda37640e503.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_414d20429d14bda37640e503:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_414d20429d14bda37640e503.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_622b512c4978fbb03529aa7b",
+            "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+            "document_name": "rgb_doc_622b512c4978fbb03529aa7b.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_622b512c4978fbb03529aa7b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_622b512c4978fbb03529aa7b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+            "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+            "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6d25acf9d523708b256df8a",
+            "version_id": "rgb_doc_b6d25acf9d523708b256df8a:r1",
+            "document_name": "rgb_doc_b6d25acf9d523708b256df8a.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_b6d25acf9d523708b256df8a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6d25acf9d523708b256df8a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb",
+            "version_id": "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1",
+            "document_name": "rgb_doc_3491d8ca8e8c31a7ad3009eb.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_3491d8ca8e8c31a7ad3009eb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3491d8ca8e8c31a7ad3009eb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a6512fe92edbcc22bca2bc25",
+            "version_id": "rgb_doc_a6512fe92edbcc22bca2bc25:r1",
+            "document_name": "rgb_doc_a6512fe92edbcc22bca2bc25.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_a6512fe92edbcc22bca2bc25:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a6512fe92edbcc22bca2bc25.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b0b945fe09a621cbf7e21cde",
+            "version_id": "rgb_doc_b0b945fe09a621cbf7e21cde:r1",
+            "document_name": "rgb_doc_b0b945fe09a621cbf7e21cde.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_b0b945fe09a621cbf7e21cde:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b0b945fe09a621cbf7e21cde.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18b56746e9f57e0e24bca4b5",
+            "version_id": "rgb_doc_18b56746e9f57e0e24bca4b5:r1",
+            "document_name": "rgb_doc_18b56746e9f57e0e24bca4b5.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_18b56746e9f57e0e24bca4b5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_18b56746e9f57e0e24bca4b5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fc1fd577e370895efd6d48d1",
+            "version_id": "rgb_doc_fc1fd577e370895efd6d48d1:r1",
+            "document_name": "rgb_doc_fc1fd577e370895efd6d48d1.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_fc1fd577e370895efd6d48d1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fc1fd577e370895efd6d48d1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0ee5246a050da25af6a0f0d5",
+            "version_id": "rgb_doc_0ee5246a050da25af6a0f0d5:r1",
+            "document_name": "rgb_doc_0ee5246a050da25af6a0f0d5.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_0ee5246a050da25af6a0f0d5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0ee5246a050da25af6a0f0d5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4f1f76f5ba656fdc752b98fd",
+            "version_id": "rgb_doc_4f1f76f5ba656fdc752b98fd:r1",
+            "document_name": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_4f1f76f5ba656fdc752b98fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4f1f76f5ba656fdc752b98fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bb23abe95eb45731ad9ed4a0",
+            "version_id": "rgb_doc_bb23abe95eb45731ad9ed4a0:r1",
+            "document_name": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_bb23abe95eb45731ad9ed4a0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bb23abe95eb45731ad9ed4a0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4a8e1438a5a7c2134914886d",
+            "version_id": "rgb_doc_4a8e1438a5a7c2134914886d:r1",
+            "document_name": "rgb_doc_4a8e1438a5a7c2134914886d.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_4a8e1438a5a7c2134914886d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4a8e1438a5a7c2134914886d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_53c09a3e46f098b72308e23f",
+            "version_id": "rgb_doc_53c09a3e46f098b72308e23f:r1",
+            "document_name": "rgb_doc_53c09a3e46f098b72308e23f.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_53c09a3e46f098b72308e23f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_53c09a3e46f098b72308e23f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_696f4ee6331d24bb95fd5b7f",
+            "version_id": "rgb_doc_696f4ee6331d24bb95fd5b7f:r1",
+            "document_name": "rgb_doc_696f4ee6331d24bb95fd5b7f.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_696f4ee6331d24bb95fd5b7f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_696f4ee6331d24bb95fd5b7f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e3a126399952ad99f6ea810d",
+            "version_id": "rgb_doc_e3a126399952ad99f6ea810d:r1",
+            "document_name": "rgb_doc_e3a126399952ad99f6ea810d.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_e3a126399952ad99f6ea810d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e3a126399952ad99f6ea810d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2e45c9ef03942da70a7fee82",
+            "version_id": "rgb_doc_2e45c9ef03942da70a7fee82:r1",
+            "document_name": "rgb_doc_2e45c9ef03942da70a7fee82.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_2e45c9ef03942da70a7fee82:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2e45c9ef03942da70a7fee82.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ae7757fce264a89b8b4edf89",
+            "version_id": "rgb_doc_ae7757fce264a89b8b4edf89:r1",
+            "document_name": "rgb_doc_ae7757fce264a89b8b4edf89.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_ae7757fce264a89b8b4edf89:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ae7757fce264a89b8b4edf89.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d52ed00f0896129db0683f29",
+            "version_id": "rgb_doc_d52ed00f0896129db0683f29:r1",
+            "document_name": "rgb_doc_d52ed00f0896129db0683f29.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_d52ed00f0896129db0683f29:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d52ed00f0896129db0683f29.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f6b5505baf5469a3415d9bf9",
+            "version_id": "rgb_doc_f6b5505baf5469a3415d9bf9:r1",
+            "document_name": "rgb_doc_f6b5505baf5469a3415d9bf9.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_f6b5505baf5469a3415d9bf9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f6b5505baf5469a3415d9bf9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_943bb8753ff9aa9c7a80253c",
+            "version_id": "rgb_doc_943bb8753ff9aa9c7a80253c:r1",
+            "document_name": "rgb_doc_943bb8753ff9aa9c7a80253c.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_943bb8753ff9aa9c7a80253c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_943bb8753ff9aa9c7a80253c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a1fed3b1769da477d8188964",
+            "version_id": "rgb_doc_a1fed3b1769da477d8188964:r1",
+            "document_name": "rgb_doc_a1fed3b1769da477d8188964.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_a1fed3b1769da477d8188964:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a1fed3b1769da477d8188964.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bcb93d379749223099f859f9",
+            "version_id": "rgb_doc_bcb93d379749223099f859f9:r1",
+            "document_name": "rgb_doc_bcb93d379749223099f859f9.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_bcb93d379749223099f859f9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bcb93d379749223099f859f9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9abfbf592994a6a89a7e68ee",
+            "version_id": "rgb_doc_9abfbf592994a6a89a7e68ee:r1",
+            "document_name": "rgb_doc_9abfbf592994a6a89a7e68ee.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_9abfbf592994a6a89a7e68ee:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9abfbf592994a6a89a7e68ee.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bf6a35566abf6322684bb75a",
+            "version_id": "rgb_doc_bf6a35566abf6322684bb75a:r1",
+            "document_name": "rgb_doc_bf6a35566abf6322684bb75a.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_bf6a35566abf6322684bb75a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bf6a35566abf6322684bb75a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5970c1a4e04623e3d3d5a145",
+            "version_id": "rgb_doc_5970c1a4e04623e3d3d5a145:r1",
+            "document_name": "rgb_doc_5970c1a4e04623e3d3d5a145.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_5970c1a4e04623e3d3d5a145:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5970c1a4e04623e3d3d5a145.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c25adbb546a25a8bcad25b4a",
+            "version_id": "rgb_doc_c25adbb546a25a8bcad25b4a:r1",
+            "document_name": "rgb_doc_c25adbb546a25a8bcad25b4a.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_c25adbb546a25a8bcad25b4a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c25adbb546a25a8bcad25b4a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_698d530285f7fb63e2e173ba",
+            "version_id": "rgb_doc_698d530285f7fb63e2e173ba:r1",
+            "document_name": "rgb_doc_698d530285f7fb63e2e173ba.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_698d530285f7fb63e2e173ba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_698d530285f7fb63e2e173ba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b15a61c7543c4250cdaf25e5",
+            "version_id": "rgb_doc_b15a61c7543c4250cdaf25e5:r1",
+            "document_name": "rgb_doc_b15a61c7543c4250cdaf25e5.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_b15a61c7543c4250cdaf25e5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b15a61c7543c4250cdaf25e5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_44366bbec32b58cd43a37160",
+            "version_id": "rgb_doc_44366bbec32b58cd43a37160:r1",
+            "document_name": "rgb_doc_44366bbec32b58cd43a37160.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_44366bbec32b58cd43a37160:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_44366bbec32b58cd43a37160.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f",
+            "version_id": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f:r1",
+            "document_name": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_e3bae1a8f0f6c6f1187cbe2f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e3bae1a8f0f6c6f1187cbe2f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a7337d1aaa3905ce2cffc794",
+            "version_id": "rgb_doc_a7337d1aaa3905ce2cffc794:r1",
+            "document_name": "rgb_doc_a7337d1aaa3905ce2cffc794.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_a7337d1aaa3905ce2cffc794:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a7337d1aaa3905ce2cffc794.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ef7d3aaccd97cf3b81aecd9d",
+            "version_id": "rgb_doc_ef7d3aaccd97cf3b81aecd9d:r1",
+            "document_name": "rgb_doc_ef7d3aaccd97cf3b81aecd9d.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_ef7d3aaccd97cf3b81aecd9d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ef7d3aaccd97cf3b81aecd9d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fed73b23d178d97590b8ea8f",
+            "version_id": "rgb_doc_fed73b23d178d97590b8ea8f:r1",
+            "document_name": "rgb_doc_fed73b23d178d97590b8ea8f.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_fed73b23d178d97590b8ea8f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fed73b23d178d97590b8ea8f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f1b47bcc11191aa4afea9971",
+            "version_id": "rgb_doc_f1b47bcc11191aa4afea9971:r1",
+            "document_name": "rgb_doc_f1b47bcc11191aa4afea9971.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_f1b47bcc11191aa4afea9971:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f1b47bcc11191aa4afea9971.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_248fbdf402b62988143bf340",
+            "version_id": "rgb_doc_248fbdf402b62988143bf340:r1",
+            "document_name": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_248fbdf402b62988143bf340:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_19daf54bc00d9fdd27749748",
+            "version_id": "rgb_doc_19daf54bc00d9fdd27749748:r1",
+            "document_name": "rgb_doc_19daf54bc00d9fdd27749748.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_19daf54bc00d9fdd27749748:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_19daf54bc00d9fdd27749748.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4b2d571ba06fcf1f3a85ed64",
+            "version_id": "rgb_doc_4b2d571ba06fcf1f3a85ed64:r1",
+            "document_name": "rgb_doc_4b2d571ba06fcf1f3a85ed64.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_4b2d571ba06fcf1f3a85ed64:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4b2d571ba06fcf1f3a85ed64.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5f2489820ff57882da88b164",
+            "version_id": "rgb_doc_5f2489820ff57882da88b164:r1",
+            "document_name": "rgb_doc_5f2489820ff57882da88b164.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_5f2489820ff57882da88b164:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5f2489820ff57882da88b164.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cfbfe6b1c7256da93af58b45",
+            "version_id": "rgb_doc_cfbfe6b1c7256da93af58b45:r1",
+            "document_name": "rgb_doc_cfbfe6b1c7256da93af58b45.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_cfbfe6b1c7256da93af58b45:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cfbfe6b1c7256da93af58b45.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_27c30e8fae3efefc69af0ef0",
+            "version_id": "rgb_doc_27c30e8fae3efefc69af0ef0:r1",
+            "document_name": "rgb_doc_27c30e8fae3efefc69af0ef0.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_27c30e8fae3efefc69af0ef0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_27c30e8fae3efefc69af0ef0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dd36f790f45e3033187af454",
+            "version_id": "rgb_doc_dd36f790f45e3033187af454:r1",
+            "document_name": "rgb_doc_dd36f790f45e3033187af454.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_dd36f790f45e3033187af454:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dd36f790f45e3033187af454.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dbd77de4ad9eecd838648bba",
+            "version_id": "rgb_doc_dbd77de4ad9eecd838648bba:r1",
+            "document_name": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_dbd77de4ad9eecd838648bba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dbd77de4ad9eecd838648bba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a86e4ed9a2f1b3dbf2022f61",
+            "version_id": "rgb_doc_a86e4ed9a2f1b3dbf2022f61:r1",
+            "document_name": "rgb_doc_a86e4ed9a2f1b3dbf2022f61.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_a86e4ed9a2f1b3dbf2022f61:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a86e4ed9a2f1b3dbf2022f61.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b9d6cb74100a85f59574bb76",
+            "version_id": "rgb_doc_b9d6cb74100a85f59574bb76:r1",
+            "document_name": "rgb_doc_b9d6cb74100a85f59574bb76.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_b9d6cb74100a85f59574bb76:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b9d6cb74100a85f59574bb76.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7ffb990716f9280f3e934ffe",
+            "version_id": "rgb_doc_7ffb990716f9280f3e934ffe:r1",
+            "document_name": "rgb_doc_7ffb990716f9280f3e934ffe.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_7ffb990716f9280f3e934ffe:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7ffb990716f9280f3e934ffe.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_367808c5ac996bbefd4b19c8",
+            "version_id": "rgb_doc_367808c5ac996bbefd4b19c8:r1",
+            "document_name": "rgb_doc_367808c5ac996bbefd4b19c8.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_367808c5ac996bbefd4b19c8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_367808c5ac996bbefd4b19c8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_918cf5cb1b29696b006a1928",
+            "version_id": "rgb_doc_918cf5cb1b29696b006a1928:r1",
+            "document_name": "rgb_doc_918cf5cb1b29696b006a1928.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_918cf5cb1b29696b006a1928:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_918cf5cb1b29696b006a1928.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_40e8de130b63429ef44fc724",
+            "version_id": "rgb_doc_40e8de130b63429ef44fc724:r1",
+            "document_name": "rgb_doc_40e8de130b63429ef44fc724.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_40e8de130b63429ef44fc724:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_40e8de130b63429ef44fc724.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a79ca1663d948f9923cda6d9",
+            "version_id": "rgb_doc_a79ca1663d948f9923cda6d9:r1",
+            "document_name": "rgb_doc_a79ca1663d948f9923cda6d9.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_a79ca1663d948f9923cda6d9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a79ca1663d948f9923cda6d9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dc3273ce271938cf6a1a672a",
+            "version_id": "rgb_doc_dc3273ce271938cf6a1a672a:r1",
+            "document_name": "rgb_doc_dc3273ce271938cf6a1a672a.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_dc3273ce271938cf6a1a672a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dc3273ce271938cf6a1a672a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ea87bd98301116c8f8e527b7",
+            "version_id": "rgb_doc_ea87bd98301116c8f8e527b7:r1",
+            "document_name": "rgb_doc_ea87bd98301116c8f8e527b7.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_ea87bd98301116c8f8e527b7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ea87bd98301116c8f8e527b7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e7e41e1348185b4fe275329a",
+            "version_id": "rgb_doc_e7e41e1348185b4fe275329a:r1",
+            "document_name": "rgb_doc_e7e41e1348185b4fe275329a.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_e7e41e1348185b4fe275329a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e7e41e1348185b4fe275329a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18c8cf89f1f10ee17515614d",
+            "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+            "document_name": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_18c8cf89f1f10ee17515614d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_533b8e252631593112419e6a",
+            "version_id": "rgb_doc_533b8e252631593112419e6a:r1",
+            "document_name": "rgb_doc_533b8e252631593112419e6a.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_533b8e252631593112419e6a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_533b8e252631593112419e6a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9cfee50b3792109de34de6ce",
+            "version_id": "rgb_doc_9cfee50b3792109de34de6ce:r1",
+            "document_name": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_9cfee50b3792109de34de6ce:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f188048a3c18149034666dd",
+            "version_id": "rgb_doc_2f188048a3c18149034666dd:r1",
+            "document_name": "rgb_doc_2f188048a3c18149034666dd.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_2f188048a3c18149034666dd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f188048a3c18149034666dd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a2ead64db42d5110155e663a",
+            "version_id": "rgb_doc_a2ead64db42d5110155e663a:r1",
+            "document_name": "rgb_doc_a2ead64db42d5110155e663a.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_a2ead64db42d5110155e663a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a2ead64db42d5110155e663a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5e9c022cc10fa8c51b0e60f6",
+            "version_id": "rgb_doc_5e9c022cc10fa8c51b0e60f6:r1",
+            "document_name": "rgb_doc_5e9c022cc10fa8c51b0e60f6.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_5e9c022cc10fa8c51b0e60f6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5e9c022cc10fa8c51b0e60f6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fd4536172fb6f0868d2eb440",
+            "version_id": "rgb_doc_fd4536172fb6f0868d2eb440:r1",
+            "document_name": "rgb_doc_fd4536172fb6f0868d2eb440.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_fd4536172fb6f0868d2eb440:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fd4536172fb6f0868d2eb440.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a6e92de36bc3703504365253",
+            "version_id": "rgb_doc_a6e92de36bc3703504365253:r1",
+            "document_name": "rgb_doc_a6e92de36bc3703504365253.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_a6e92de36bc3703504365253:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a6e92de36bc3703504365253.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5962711ea5fe89440cfe8642",
+            "version_id": "rgb_doc_5962711ea5fe89440cfe8642:r1",
+            "document_name": "rgb_doc_5962711ea5fe89440cfe8642.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_5962711ea5fe89440cfe8642:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5962711ea5fe89440cfe8642.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a926b100a5dca0086e7d8f01",
+            "version_id": "rgb_doc_a926b100a5dca0086e7d8f01:r1",
+            "document_name": "rgb_doc_a926b100a5dca0086e7d8f01.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_a926b100a5dca0086e7d8f01:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a926b100a5dca0086e7d8f01.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1add5c0f31c4c745fb641ce1",
+            "version_id": "rgb_doc_1add5c0f31c4c745fb641ce1:r1",
+            "document_name": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_1add5c0f31c4c745fb641ce1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_346b847dea621ef8c0c45754",
+            "version_id": "rgb_doc_346b847dea621ef8c0c45754:r1",
+            "document_name": "rgb_doc_346b847dea621ef8c0c45754.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_346b847dea621ef8c0c45754:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_346b847dea621ef8c0c45754.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_70425feb627cde1e30be0935",
+            "version_id": "rgb_doc_70425feb627cde1e30be0935:r1",
+            "document_name": "rgb_doc_70425feb627cde1e30be0935.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_70425feb627cde1e30be0935:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_70425feb627cde1e30be0935.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9b2a640b73c972bd90f6d20e",
+            "version_id": "rgb_doc_9b2a640b73c972bd90f6d20e:r1",
+            "document_name": "rgb_doc_9b2a640b73c972bd90f6d20e.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_9b2a640b73c972bd90f6d20e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9b2a640b73c972bd90f6d20e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ae1ae0b59c520ae88a81c99b",
+            "version_id": "rgb_doc_ae1ae0b59c520ae88a81c99b:r1",
+            "document_name": "rgb_doc_ae1ae0b59c520ae88a81c99b.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_ae1ae0b59c520ae88a81c99b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ae1ae0b59c520ae88a81c99b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_adc32aa55967eeab1aa8f0c0",
+            "version_id": "rgb_doc_adc32aa55967eeab1aa8f0c0:r1",
+            "document_name": "rgb_doc_adc32aa55967eeab1aa8f0c0.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_adc32aa55967eeab1aa8f0c0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_adc32aa55967eeab1aa8f0c0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1a1afdc5c2c22f9caa881b00",
+            "version_id": "rgb_doc_1a1afdc5c2c22f9caa881b00:r1",
+            "document_name": "rgb_doc_1a1afdc5c2c22f9caa881b00.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_1a1afdc5c2c22f9caa881b00:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1a1afdc5c2c22f9caa881b00.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7ef98635ead592e8ef3f5fd6",
+            "version_id": "rgb_doc_7ef98635ead592e8ef3f5fd6:r1",
+            "document_name": "rgb_doc_7ef98635ead592e8ef3f5fd6.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_7ef98635ead592e8ef3f5fd6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7ef98635ead592e8ef3f5fd6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_86d26025ab28d83ff4c8b9b5",
+            "version_id": "rgb_doc_86d26025ab28d83ff4c8b9b5:r1",
+            "document_name": "rgb_doc_86d26025ab28d83ff4c8b9b5.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_86d26025ab28d83ff4c8b9b5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_86d26025ab28d83ff4c8b9b5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_df837a8805599d7e0a4a5732",
+            "version_id": "rgb_doc_df837a8805599d7e0a4a5732:r1",
+            "document_name": "rgb_doc_df837a8805599d7e0a4a5732.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_df837a8805599d7e0a4a5732:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_df837a8805599d7e0a4a5732.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 10.07683300122153,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 14.243040990550071,
+          "evidence_ms": 2.5413330004084855,
+          "fusion_ms": 1.0738340060925111,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 40.426583000225946,
+          "context_chars": 1754,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_4d3bdf76a0d3f206",
+          "ev_12f36c6d080e46fe",
+          "ev_22543640c67a38c7",
+          "ev_d7a296f5907c6d46",
+          "ev_72dec71ce51474b2",
+          "ev_d216d80043a7128a",
+          "ev_5f65f46e1fa7f48f",
+          "ev_341a49c410f2a070",
+          "ev_d602705cc9133828",
+          "ev_cc8cea5a0e609fcf"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_4d3bdf76a0d3f206",
+            "content": "GDP 增长率（年百分比） - Macao SAR, China from The World Bank: Data. ... 人均GDP增长（年增长率） ... 中国澳门特别行政区.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+            "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+            "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+            "chunk_id": "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+              "block_ids": [
+                "rgb_doc_2fee0cf6aa6787537f752901:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 19.63483428955078,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "2fee0cf6aa6787537f75290167d9d0c41715b83bc1e835402c54dcdf2704faea",
+            "scope_digest": "af416b8e08cb4449743274f2aa38f2e2d3b643c430be1e92c2df2f897d13e6c1",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_12f36c6d080e46fe",
+            "content": "南方财经全媒体记者田静、见习记者蔡依莹 发自澳门  澳门统计暨普查局3月4日公布，澳门2021年本地生产总值（GDP）为2394亿元（澳门元，下同），全年经济实质增长18.0%，人均GDP为350445元。有学者表示，这些数据或代表新冠疫情影响澳门最严重的时期已经过去，2022年全年经济有望维持正增长。 澳门统计暨普查局资料显示，纵观2021年，疫情仍然反复，但与2020年相比已有所改善，澳门经济整体需求回升。数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质增长18.0%，内部需求上升3.0%。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4454f18fdc92e318110231de",
+            "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+            "document_name": "rgb_doc_4454f18fdc92e318110231de.txt",
+            "chunk_id": "rgb_doc_4454f18fdc92e318110231de:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+              "block_ids": [
+                "rgb_doc_4454f18fdc92e318110231de:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 269
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 17.055835723876953,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 269,
+            "content_hash": "4454f18fdc92e318110231ded4f0e4b183ead7980e7ee543bfe313ecda187d20",
+            "scope_digest": "63bcebc6a9813e1ed33259e784aa06346747d4fb6a81e928c51b73822447f7e6",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_22543640c67a38c7",
+            "content": "GDP 增长率（年百分比） - Hong Kong SAR, China from The World Bank: Data. ... 国家的名字. 最近年份. 最近数值. 中国香港特别行政区. 2021.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dda3bd4afb6818359a4feaae",
+            "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+            "document_name": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+            "chunk_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+              "block_ids": [
+                "rgb_doc_dda3bd4afb6818359a4feaae:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 103
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 16.50758171081543,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 103,
+            "content_hash": "dda3bd4afb6818359a4feaaeb4efcb484fd37dc56f8473c7e5d6c2125ec95c2d",
+            "scope_digest": "e6c31c11d8ad7e1c13405fba14cfd698950d0e060905b25c93bf27ca101c1ad5",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_79471ee267f3c213cec3",
+                "source_id": "S3",
+                "evidence_id": "ev_22543640c67a38c7",
+                "raw_text": "2021",
+                "start": 98,
+                "end": 102,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "d Bank: Data. ... 国家的名字. 最近年份. 最近数值. 中国香港特别行政区. 2021.",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d7a296f5907c6d46",
+            "content": "May 18, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的下行风险已降低，且经济逐步复苏将助力2021年的香港GDP增长率 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_29bcfe678ae952c4158c59d7",
+            "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+            "document_name": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+            "chunk_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+              "block_ids": [
+                "rgb_doc_29bcfe678ae952c4158c59d7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 16.411521911621094,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "29bcfe678ae952c4158c59d76a5bc94d9261f73d276cf63288592bb8ba91f23c",
+            "scope_digest": "4c568b1600634ab37a1e9b47b722e6cb1978686df8acd957bbbcabba7ed4d347",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_24aa1dae3f1742eb2082",
+                "source_id": "S4",
+                "evidence_id": "ev_d7a296f5907c6d46",
+                "raw_text": "18",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 18, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_09c4df33cb0ecc937c94",
+                "source_id": "S4",
+                "evidence_id": "ev_d7a296f5907c6d46",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 18, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_72dec71ce51474b2",
+            "content": "May 14, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的下行风险已降低，且经济逐步复苏将助力2021年的香港GDP增长率 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7",
+            "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+            "document_name": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+            "chunk_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+              "block_ids": [
+                "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 16.411521911621094,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "34929bc7e9f5bdaeb9ad4cd7fa294e8d546ceafa4a606f42d5d8851858963adb",
+            "scope_digest": "48f9241b5fb2fda2ec3e34f6df323550470ac35302aa7c88da293472bb05a058",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_f072b51d0b1b94295e5c",
+                "source_id": "S5",
+                "evidence_id": "ev_72dec71ce51474b2",
+                "raw_text": "14",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 14, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_60c1e72c78794a16084d",
+                "source_id": "S5",
+                "evidence_id": "ev_72dec71ce51474b2",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 14, 2021 ... 惠誉已将香港银行'a'的经营环境展望从负面调至稳定。上述调整是基于，惠誉预期疫情带来的",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d216d80043a7128a",
+            "content": "由于旅游业收入仍然相对较低，2021年的经常账户顺差估计不到危机前水平的一半。   澳门特区的经济复苏有望继续推进。在境外游客逐渐回归、本地需求回升的推动下，预计2022年澳门特区GDP将增长15.5%。鉴于新批准博彩业经营特许权相关投资的增加，加之粤港澳大湾区（GBA）一体化程度的提高，预计澳门特区经济增速将在2023年达到23%，并在中期内逐渐回落到约3.5%的长期潜在增长率水平。整体通胀预计将在2022年加速，中期内稳定在2.5%左右。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b5a69046e67b344a72fa9da3",
+            "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+            "document_name": "rgb_doc_b5a69046e67b344a72fa9da3.txt",
+            "chunk_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+              "block_ids": [
+                "rgb_doc_b5a69046e67b344a72fa9da3:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 223
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.724358558654785,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 223,
+            "content_hash": "b5a69046e67b344a72fa9da3529ee466bf232ed4c0f454103177489caef74ee9",
+            "scope_digest": "42c8b1c4be9e5cff534f9748f7ef2c90d6939ed5822c232169c719079d6fdb23",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_5f65f46e1fa7f48f",
+            "content": "数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质增长18.0%，内部需求上升3.0%。 　　澳门大学工商管理学院教授刘丁己在接受南方财经全媒体记者采访时表示，澳门2021年GDP录得较大增幅，主要是因为澳门2020年基数非常低。“从好的角度来看，可能代表疫情影响澳门最严重的时期已经过去，游客数字回升直接影响着澳门旅游业和博彩业的回温。” 　　数据显示，2021年澳门居民的本地经济活动已经基本恢复，私人消费按年上升7.0%；政府最终消费支出按年上升0.1%，其中雇员报酬增加1.2%，购入货物及服务净值下跌1.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da337ec5054f663b6e7d98ff",
+            "version_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1",
+            "document_name": "rgb_doc_da337ec5054f663b6e7d98ff.txt",
+            "chunk_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1",
+              "block_ids": [
+                "rgb_doc_da337ec5054f663b6e7d98ff:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 275
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 15.56308650970459,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 275,
+            "content_hash": "da337ec5054f663b6e7d98ff6d3ae9648700fbf1d2c226c17d40ab00f576ce56",
+            "scope_digest": "d820d965e32f4993b37f2139edf37d0f09b98e46a532a6a75b0c6f87cf8e4685",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_341a49c410f2a070",
+            "content": "Mar 7, 2022 ... 数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质增长18.0%，内部需求上升3.0%。 澳门大学工商管理学院教授刘丁己在接受南方财经全 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_414d20429d14bda37640e503",
+            "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+            "document_name": "rgb_doc_414d20429d14bda37640e503.txt",
+            "chunk_id": "rgb_doc_414d20429d14bda37640e503:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+              "block_ids": [
+                "rgb_doc_414d20429d14bda37640e503:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 106
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 15.43889331817627,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 106,
+            "content_hash": "414d20429d14bda37640e50396289da0e5f4a5d6604311ac869b699e183a8544",
+            "scope_digest": "de0ec6b8a9e71c69a3f9f1644376e2a57c7eecf7fd552aaf7704544150a4c42f",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_92a9f082830dd120bd38",
+                "source_id": "S8",
+                "evidence_id": "ev_341a49c410f2a070",
+                "raw_text": "7",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 7, 2022 ... 数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_5a2d99bfe1473c9afaa5",
+                "source_id": "S8",
+                "evidence_id": "ev_341a49c410f2a070",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 7, 2022 ... 数据显示，澳门2021年GDP为2394亿元，人均GDP为350445元，全年经济实质",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d602705cc9133828",
+            "content": "回顾2021年澳门整体数据，进一步从季度分析，2021年第1季至第3季澳门本地实质生产总值增长率分别是-1.2%、70.9%和33.8%。数据显示，澳门去年第4季GDP未能沿着第2、第3季的升势，按年实质收缩4.4%。 去年第4季外部需求保持平稳，服务出口按年微跌0.3%，当中博彩服务出口下跌14.4%，其他旅游服务出口则上升8.9%。货物出口上升7.7%。内部需求方面，固定资本形成总额按年下跌8.7%，私人消费上升0.4%，政府最终消费支出则增加1.3%。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_622b512c4978fbb03529aa7b",
+            "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+            "document_name": "rgb_doc_622b512c4978fbb03529aa7b.txt",
+            "chunk_id": "rgb_doc_622b512c4978fbb03529aa7b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+              "block_ids": [
+                "rgb_doc_622b512c4978fbb03529aa7b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 231
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 15.349634170532227,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 231,
+            "content_hash": "622b512c4978fbb03529aa7be949c7229d71a08de1317132d82e8842b1de70d1",
+            "scope_digest": "532f5195a05401bd7ce3fa9054c1b1d8fa2c552f9cd1e6ee14e6d9cb01375818",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_d8bffc4d30e65b36ba03",
+                "source_id": "S9",
+                "evidence_id": "ev_d602705cc9133828",
+                "raw_text": "70.9",
+                "start": 57,
+                "end": 61,
+                "unit": "%",
+                "unit_start": 61,
+                "unit_end": 62,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "整体数据，进一步从季度分析，2021年第1季至第3季澳门本地实质生产总值增长率分别是-1.2%、70.9%和33.8%。数据显示，澳门去年第4季GDP未能沿着第2、第3季的升势，按年实质收缩4.4%。",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_cc8cea5a0e609fcf",
+            "content": "5%，进入负增长，基数较低，所以在2020年低基数影响下，2021年美国GDP实现了较高的增长率。 同时，美国GDP数据也公布了，根据统计，2021年美国GDP总量首次突破23万亿美元大关，达到23.03万亿美元，依然是全球第一大经济体，要知道2020年美国GDP为20.89万亿美元，GDP增量超过2万亿美元。  但是，如果按照正常计算，美国GDP增长率应该是10.24%，为什么GDP增长率却是5.7%？事实上，10.24%属于名义增速，其中包括了通胀水平等因素，抛开这些因素之后就会得出GDP实际增长率，也就是5.7%。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+            "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+            "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+            "chunk_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+              "block_ids": [
+                "rgb_doc_e71f6e32b9abe8a66a634e91:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 263
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 15.152604103088379,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 263,
+            "content_hash": "e71f6e32b9abe8a66a634e916f27b24cb0b4e9feb3c07eae4a5aca3e62591053",
+            "scope_digest": "fd2705f7cd8fbdd28a535469f6f05bdc860faf5f7213f6198e58fe0c3e51a2b7",
+            "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_4efc8f46982721f4317f",
+                "source_id": "S10",
+                "evidence_id": "ev_cc8cea5a0e609fcf",
+                "raw_text": "5",
+                "start": 0,
+                "end": 1,
+                "unit": "%",
+                "unit_start": 1,
+                "unit_end": 2,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "5%，进入负增长，基数较低，所以在2020年低基数影响下，2021年美国GDP实现了较高的增长率。",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_3a4590d06f10ded27dbc",
+                "source_id": "S10",
+                "evidence_id": "ev_cc8cea5a0e609fcf",
+                "raw_text": "10.24",
+                "start": 208,
+                "end": 213,
+                "unit": "%",
+                "unit_start": 213,
+                "unit_end": 214,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "，如果按照正常计算，美国GDP增长率应该是10.24%，为什么GDP增长率却是5.7%？事实上，10.24%属于名义增速，其中包括了通胀水平等因素，抛开这些因素之后就会得出GDP实际增长率，也就是5.7",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_4d3bdf76a0d3f206",
+      "ev_12f36c6d080e46fe",
+      "ev_22543640c67a38c7",
+      "ev_d7a296f5907c6d46",
+      "ev_72dec71ce51474b2",
+      "ev_d216d80043a7128a",
+      "ev_5f65f46e1fa7f48f",
+      "ev_341a49c410f2a070",
+      "ev_d602705cc9133828"
+    ],
+    "evidence": {
+      "ev_4d3bdf76a0d3f206": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_2fee0cf6aa6787537f752901",
+        "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+        "document_name": "rgb_doc_2fee0cf6aa6787537f752901.txt",
+        "chunk_id": "rgb_doc_2fee0cf6aa6787537f752901:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_2fee0cf6aa6787537f752901:r1",
+          "block_ids": [
+            "rgb_doc_2fee0cf6aa6787537f752901:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 19.63483428955078,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "2fee0cf6aa6787537f75290167d9d0c41715b83bc1e835402c54dcdf2704faea",
+        "scope_digest": "af416b8e08cb4449743274f2aa38f2e2d3b643c430be1e92c2df2f897d13e6c1",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_12f36c6d080e46fe": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4454f18fdc92e318110231de",
+        "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+        "document_name": "rgb_doc_4454f18fdc92e318110231de.txt",
+        "chunk_id": "rgb_doc_4454f18fdc92e318110231de:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4454f18fdc92e318110231de:r1",
+          "block_ids": [
+            "rgb_doc_4454f18fdc92e318110231de:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 269
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 17.055835723876953,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 269,
+        "content_hash": "4454f18fdc92e318110231ded4f0e4b183ead7980e7ee543bfe313ecda187d20",
+        "scope_digest": "63bcebc6a9813e1ed33259e784aa06346747d4fb6a81e928c51b73822447f7e6",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_22543640c67a38c7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_dda3bd4afb6818359a4feaae",
+        "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+        "document_name": "rgb_doc_dda3bd4afb6818359a4feaae.txt",
+        "chunk_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_dda3bd4afb6818359a4feaae:r1",
+          "block_ids": [
+            "rgb_doc_dda3bd4afb6818359a4feaae:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 103
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 16.50758171081543,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 103,
+        "content_hash": "dda3bd4afb6818359a4feaaeb4efcb484fd37dc56f8473c7e5d6c2125ec95c2d",
+        "scope_digest": "e6c31c11d8ad7e1c13405fba14cfd698950d0e060905b25c93bf27ca101c1ad5",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d7a296f5907c6d46": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_29bcfe678ae952c4158c59d7",
+        "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+        "document_name": "rgb_doc_29bcfe678ae952c4158c59d7.txt",
+        "chunk_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_29bcfe678ae952c4158c59d7:r1",
+          "block_ids": [
+            "rgb_doc_29bcfe678ae952c4158c59d7:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 16.411521911621094,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "29bcfe678ae952c4158c59d76a5bc94d9261f73d276cf63288592bb8ba91f23c",
+        "scope_digest": "4c568b1600634ab37a1e9b47b722e6cb1978686df8acd957bbbcabba7ed4d347",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_72dec71ce51474b2": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7",
+        "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+        "document_name": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7.txt",
+        "chunk_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1",
+          "block_ids": [
+            "rgb_doc_34929bc7e9f5bdaeb9ad4cd7:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 16.411521911621094,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "34929bc7e9f5bdaeb9ad4cd7fa294e8d546ceafa4a606f42d5d8851858963adb",
+        "scope_digest": "48f9241b5fb2fda2ec3e34f6df323550470ac35302aa7c88da293472bb05a058",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d216d80043a7128a": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b5a69046e67b344a72fa9da3",
+        "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+        "document_name": "rgb_doc_b5a69046e67b344a72fa9da3.txt",
+        "chunk_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b5a69046e67b344a72fa9da3:r1",
+          "block_ids": [
+            "rgb_doc_b5a69046e67b344a72fa9da3:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 223
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 15.724358558654785,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 223,
+        "content_hash": "b5a69046e67b344a72fa9da3529ee466bf232ed4c0f454103177489caef74ee9",
+        "scope_digest": "42c8b1c4be9e5cff534f9748f7ef2c90d6939ed5822c232169c719079d6fdb23",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_5f65f46e1fa7f48f": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_da337ec5054f663b6e7d98ff",
+        "version_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1",
+        "document_name": "rgb_doc_da337ec5054f663b6e7d98ff.txt",
+        "chunk_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_da337ec5054f663b6e7d98ff:r1",
+          "block_ids": [
+            "rgb_doc_da337ec5054f663b6e7d98ff:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 275
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 15.56308650970459,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 275,
+        "content_hash": "da337ec5054f663b6e7d98ff6d3ae9648700fbf1d2c226c17d40ab00f576ce56",
+        "scope_digest": "d820d965e32f4993b37f2139edf37d0f09b98e46a532a6a75b0c6f87cf8e4685",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_341a49c410f2a070": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_414d20429d14bda37640e503",
+        "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+        "document_name": "rgb_doc_414d20429d14bda37640e503.txt",
+        "chunk_id": "rgb_doc_414d20429d14bda37640e503:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_414d20429d14bda37640e503:r1",
+          "block_ids": [
+            "rgb_doc_414d20429d14bda37640e503:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 106
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 15.43889331817627,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 106,
+        "content_hash": "414d20429d14bda37640e50396289da0e5f4a5d6604311ac869b699e183a8544",
+        "scope_digest": "de0ec6b8a9e71c69a3f9f1644376e2a57c7eecf7fd552aaf7704544150a4c42f",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d602705cc9133828": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_622b512c4978fbb03529aa7b",
+        "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+        "document_name": "rgb_doc_622b512c4978fbb03529aa7b.txt",
+        "chunk_id": "rgb_doc_622b512c4978fbb03529aa7b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_622b512c4978fbb03529aa7b:r1",
+          "block_ids": [
+            "rgb_doc_622b512c4978fbb03529aa7b:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 231
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 15.349634170532227,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 231,
+        "content_hash": "622b512c4978fbb03529aa7be949c7229d71a08de1317132d82e8842b1de70d1",
+        "scope_digest": "532f5195a05401bd7ce3fa9054c1b1d8fa2c552f9cd1e6ee14e6d9cb01375818",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_cc8cea5a0e609fcf": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_e71f6e32b9abe8a66a634e91",
+        "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+        "document_name": "rgb_doc_e71f6e32b9abe8a66a634e91.txt",
+        "chunk_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_e71f6e32b9abe8a66a634e91:r1",
+          "block_ids": [
+            "rgb_doc_e71f6e32b9abe8a66a634e91:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 263
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 15.152604103088379,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 263,
+        "content_hash": "e71f6e32b9abe8a66a634e916f27b24cb0b4e9feb3c07eae4a5aca3e62591053",
+        "scope_digest": "fd2705f7cd8fbdd28a535469f6f05bdc860faf5f7213f6198e58fe0c3e51a2b7",
+        "trace_id": "83510cd835834c4d9394e2e00e8f0a20",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_4d3bdf76a0d3f206",
+      "S2": "ev_12f36c6d080e46fe",
+      "S3": "ev_22543640c67a38c7",
+      "S4": "ev_d7a296f5907c6d46",
+      "S5": "ev_72dec71ce51474b2",
+      "S6": "ev_d216d80043a7128a",
+      "S7": "ev_5f65f46e1fa7f48f",
+      "S8": "ev_341a49c410f2a070",
+      "S9": "ev_d602705cc9133828",
+      "S10": "ev_cc8cea5a0e609fcf"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

@@ -1,0 +1,3732 @@
+{
+  "question_id": "rgb_zh_0020",
+  "result": {
+    "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+    "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:1",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:2",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:3",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "context_chars": 1194,
+        "prompt_tokens": 8444,
+        "completion_tokens": 84,
+        "total_tokens": 8528,
+        "context_compaction_count": 0,
+        "context_chars_before": 1194,
+        "context_chars_after": 1194,
+        "estimated_input_tokens": 12128,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1482,
+        "remaining_run_tokens": 111472,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8444,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3684
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:4",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1194
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:5",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "tool_call_id": "call_12980a57a82c4e92a8af3f",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:6",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "tool_call_id": "call_12980a57a82c4e92a8af3f",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:7",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_12980a57a82c4e92a8af3f",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 10,
+        "output_chars_before": 96259,
+        "output_chars_after": 12974,
+        "removed_chars": 83285,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:8",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:9",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:10",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "context_chars": 14227,
+        "prompt_tokens": 14594,
+        "completion_tokens": 341,
+        "total_tokens": 14935,
+        "context_compaction_count": 0,
+        "context_chars_before": 14227,
+        "context_chars_after": 14227,
+        "estimated_input_tokens": 20465,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7635,
+        "evidence_tokens": 2773,
+        "history_tokens": 2184,
+        "remaining_run_tokens": 96537,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 14594,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5871
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:11",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "model_visible_evidence_count": 10,
+        "context_chars": 14227
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:12",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "citation_validation_reason": [
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:13",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "context_chars": 2653,
+        "prompt_tokens": 1663,
+        "completion_tokens": 43,
+        "total_tokens": 1706,
+        "context_compaction_count": 0,
+        "context_chars_before": 2653,
+        "context_chars_after": 2653,
+        "estimated_input_tokens": 3853,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 3853,
+        "remaining_run_tokens": 94831,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 1663,
+        "usage_source": "provider",
+        "estimation_error_tokens": -2190
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:14",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:15",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "delta": "2022年1月5日全国新增确诊病例数为189例 [1] [2] [3] [4] [5]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:16",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66",
+        "final_citation_count": 5,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_b7c55fc9cdbf4d66ba63876962260ba6:8ffaec9e0b344b7cafae1207525c66e6:17",
+        "run_id": "run_b7c55fc9cdbf4d66ba63876962260ba6",
+        "thread_id": "thread_3417faf7747e4ab4b29cc00bcb0d3f66"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 24701,
+      "completion_tokens": 468,
+      "total_tokens": 25169
+    },
+    "elapsed_seconds": 12.988621583004715,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 10,
+      "output_truncated": true,
+      "context_chars": 14227,
+      "prompt_tokens": 24701,
+      "completion_tokens": 468,
+      "total_tokens": 25169,
+      "context_compaction_count": 0,
+      "context_chars_before": 2653,
+      "context_chars_after": 2653,
+      "estimated_input_tokens": 3853,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 3853,
+      "remaining_run_tokens": 94831,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 1663,
+      "usage_source": "provider",
+      "estimation_error_tokens": -2190,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_12980a57a82c4e92a8af3f",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 10,
+          "output_chars_before": 96259,
+          "output_chars_after": 12974,
+          "removed_chars": 83285,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 2653,
+      "repair_visible_evidence_count": 10,
+      "final_citation_count": 5,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "2022年1月5日全国新增确诊病例数为189例 [1] [2] [3] [4] [5]",
+      "citations": {
+        "ev_a64692284d0f5547": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_b8ffb29f5b715cac68b23659",
+          "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+          "document_name": "rgb_doc_b8ffb29f5b715cac68b23659.txt",
+          "chunk_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "2022-01-06来源:国家卫生健康委 2022年1月5日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例189例。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+            "block_ids": [
+              "rgb_doc_b8ffb29f5b715cac68b23659:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 71
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 25.668962478637695,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_a044f4566486b19b": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_8811c735523ccdb179e7bcde",
+          "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+          "document_name": "rgb_doc_8811c735523ccdb179e7bcde.txt",
+          "chunk_id": "rgb_doc_8811c735523ccdb179e7bcde:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "source_score": null,
+          "fused_score": 0.015625,
+          "rerank_score": null,
+          "content": "1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。其中境外输入病例57例（上海20例，广东10例，浙江7例，福建6例，天津4例，广西2例，四川2例，云南2例，吉林1例，江苏1例，山东1例，河南1例），含6例由无症状感染者转为确诊病例（浙江3例，四川2例，河南1例）；本土病例132例（河南64例，其中许昌市50例、郑州市5例、洛阳市4例、周口市3例、商丘市1例、固始县1例；陕西63例，均在西安市；浙江5例，均在宁波市），含30例由无症状感染者转为确诊病例（均在河南）。无新增死亡病例。新增疑似病例2例，均为境外输入病例（均在上海）",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+            "block_ids": [
+              "rgb_doc_8811c735523ccdb179e7bcde:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 286
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 25.452743530273438,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_ab39b8afc8a9045b": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_1a1dfc47ec0d58400a846c4c",
+          "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+          "document_name": "rgb_doc_1a1dfc47ec0d58400a846c4c.txt",
+          "chunk_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+            "block_ids": [
+              "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 45
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 25.090415954589844,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_2f8e73d0af8c4a14": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_b11fb02a87600b816bdb6194",
+          "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+          "document_name": "rgb_doc_b11fb02a87600b816bdb6194.txt",
+          "chunk_id": "rgb_doc_b11fb02a87600b816bdb6194:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 6,
+          "source_score": null,
+          "fused_score": 0.015151515151515152,
+          "rerank_score": null,
+          "content": "Jan 6, 2022 ... 1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。其中境外输入病例57例（上海20例，广东10例，浙江7例，福建6例， ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+            "block_ids": [
+              "rgb_doc_b11fb02a87600b816bdb6194:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 99
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 6,
+              "score": 25.044233322143555,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_a122f27d2384b42e": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81",
+          "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+          "document_name": "rgb_doc_c8112a44d3fdf0cab4bc9a81.txt",
+          "chunk_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "据国家卫健委网站消息,截至1月5日24时新型冠状病毒肺炎疫情最新情况公布。 1月5日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例189例。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+            "block_ids": [
+              "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 83
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 23.887786865234375,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "2022年1月5日全国新增确诊病例数为189例",
+          "source_ids": [
+            "S3",
+            "S4",
+            "S5",
+            "S6",
+            "S7"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S3",
+          "evidence_id": "ev_a64692284d0f5547"
+        },
+        {
+          "number": 2,
+          "source_id": "S4",
+          "evidence_id": "ev_a044f4566486b19b"
+        },
+        {
+          "number": 3,
+          "source_id": "S5",
+          "evidence_id": "ev_ab39b8afc8a9045b"
+        },
+        {
+          "number": 4,
+          "source_id": "S6",
+          "evidence_id": "ev_2f8e73d0af8c4a14"
+        },
+        {
+          "number": 5,
+          "source_id": "S7",
+          "evidence_id": "ev_a122f27d2384b42e"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_12980a57a82c4e92a8af3f",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2022年1月5日 全国新增确诊病例",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62c9250c7f99aa4607376a25",
+            "version_id": "rgb_doc_62c9250c7f99aa4607376a25:r1",
+            "document_name": "rgb_doc_62c9250c7f99aa4607376a25.txt",
+            "chunk_id": "rgb_doc_62c9250c7f99aa4607376a25:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 29.15959930419922,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "（2023年5月） 一、全国新冠病毒感染重症和死亡病例报告情况2023年5月1日-5月31 ... 1月8日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例14171 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_62c9250c7f99aa4607376a25:r1",
+              "block_ids": [
+                "rgb_doc_62c9250c7f99aa4607376a25:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 29.15959930419922,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62d402d522bfb5c885f38fc8",
+            "version_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1",
+            "document_name": "rgb_doc_62d402d522bfb5c885f38fc8.txt",
+            "chunk_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 28.006847381591797,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "May 6, 2022 ... 5月以来，全国疫情防控形势整体趋稳，日新增本土确诊病例和无症状感染者继续 ... 截至2022年5月5日，31个省（自治区、直辖市）和新疆生产建设兵团累计 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1",
+              "block_ids": [
+                "rgb_doc_62d402d522bfb5c885f38fc8:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 28.006847381591797,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b8ffb29f5b715cac68b23659",
+            "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+            "document_name": "rgb_doc_b8ffb29f5b715cac68b23659.txt",
+            "chunk_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 25.668962478637695,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "2022-01-06来源:国家卫生健康委 2022年1月5日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例189例。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+              "block_ids": [
+                "rgb_doc_b8ffb29f5b715cac68b23659:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 71
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 25.668962478637695,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8811c735523ccdb179e7bcde",
+            "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+            "document_name": "rgb_doc_8811c735523ccdb179e7bcde.txt",
+            "chunk_id": "rgb_doc_8811c735523ccdb179e7bcde:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 25.452743530273438,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。其中境外输入病例57例（上海20例，广东10例，浙江7例，福建6例，天津4例，广西2例，四川2例，云南2例，吉林1例，江苏1例，山东1例，河南1例），含6例由无症状感染者转为确诊病例（浙江3例，四川2例，河南1例）；本土病例132例（河南64例，其中许昌市50例、郑州市5例、洛阳市4例、周口市3例、商丘市1例、固始县1例；陕西63例，均在西安市；浙江5例，均在宁波市），含30例由无症状感染者转为确诊病例（均在河南）。无新增死亡病例。新增疑似病例2例，均为境外输入病例（均在上海）",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+              "block_ids": [
+                "rgb_doc_8811c735523ccdb179e7bcde:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 286
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 25.452743530273438,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1a1dfc47ec0d58400a846c4c",
+            "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+            "document_name": "rgb_doc_1a1dfc47ec0d58400a846c4c.txt",
+            "chunk_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 25.090415954589844,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+              "block_ids": [
+                "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 45
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 25.090415954589844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b11fb02a87600b816bdb6194",
+            "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+            "document_name": "rgb_doc_b11fb02a87600b816bdb6194.txt",
+            "chunk_id": "rgb_doc_b11fb02a87600b816bdb6194:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 25.044233322143555,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "Jan 6, 2022 ... 1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。其中境外输入病例57例（上海20例，广东10例，浙江7例，福建6例， ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+              "block_ids": [
+                "rgb_doc_b11fb02a87600b816bdb6194:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 25.044233322143555,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81",
+            "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+            "document_name": "rgb_doc_c8112a44d3fdf0cab4bc9a81.txt",
+            "chunk_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 23.887786865234375,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "据国家卫健委网站消息,截至1月5日24时新型冠状病毒肺炎疫情最新情况公布。 1月5日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例189例。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+              "block_ids": [
+                "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 83
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 23.887786865234375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b7f24983708fa6995980e6a1",
+            "version_id": "rgb_doc_b7f24983708fa6995980e6a1:r1",
+            "document_name": "rgb_doc_b7f24983708fa6995980e6a1.txt",
+            "chunk_id": "rgb_doc_b7f24983708fa6995980e6a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 22.056312561035156,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "全国疫情防控形势 5月以来，全国疫情防控形势整体趋稳，日新增本土确诊病例和无症状感染者继续下降。截至目前，21个省份和新疆生产建设兵团全域为低风险地区，但仍存在反弹风险，疫情防控形势依然严峻复杂。 信息来源： 国务院联防联控机制就时不我待 科学精准 抓实抓细疫情防控工作举行发布会（实录全文） 新冠病毒疫苗接种情况 截至2022年5月5日，31个省（自治区、直辖市）和新疆生产建设兵团累计报告接种新冠病毒疫苗334970.2万剂次。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b7f24983708fa6995980e6a1:r1",
+              "block_ids": [
+                "rgb_doc_b7f24983708fa6995980e6a1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 216
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 22.056312561035156,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b1454330b6fd06469119be83",
+            "version_id": "rgb_doc_b1454330b6fd06469119be83:r1",
+            "document_name": "rgb_doc_b1454330b6fd06469119be83.txt",
+            "chunk_id": "rgb_doc_b1454330b6fd06469119be83:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 19.376771926879883,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "截至5月5日24时，新疆现有确诊病例1例，在乌鲁木齐市米东区；无症状感染者57例，其中乌鲁木齐市米东区55例、天山区2例。 贵州 铜仁 5月6日，接铜仁市卫生健康局报告，在集中隔离管控的省外返黔人员中发现一名新冠病毒核酸检测结果异常人员，经省级专家组诊断为新冠肺炎无症状感染者。该人员无社会面活动轨迹。 全国中高风险等级地区 截至2022年5月6日17时，全国共有19个高风险等级地区和92个中风险等级地区，具体名单请识别下方小程序码，进入【疫情风险等级查询】服务查看。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b1454330b6fd06469119be83:r1",
+              "block_ids": [
+                "rgb_doc_b1454330b6fd06469119be83:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 235
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 19.376771926879883,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d10d1ba4d7f99454f908ecca",
+            "version_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1",
+            "document_name": "rgb_doc_d10d1ba4d7f99454f908ecca.txt",
+            "chunk_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 18.850860595703125,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "国家统计局发布的《2020年国民经济和社会发展统计公报》显示，“截至2020年末，全国累计报告新型冠状病毒肺炎确诊病例87071例，累计死亡4634人”，与《中国卫生健康统计年鉴2021》给出的数据是完全一致的。 而《2021年国民经济和社会发展统计公报》显示，“截至2021年末，全国累计报告新型冠状病毒肺炎确诊病例102314例，累计死亡4636人”，可以计算出2021年我国新冠肺炎确诊病例为102314-87071=15243例，死于新冠肺炎的病例为4636-4634=2人，也就是说，2021年全国死于新冠肺炎的病例仅有2人。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1",
+              "block_ids": [
+                "rgb_doc_d10d1ba4d7f99454f908ecca:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 268
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 18.850860595703125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62c9250c7f99aa4607376a25",
+            "version_id": "rgb_doc_62c9250c7f99aa4607376a25:r1",
+            "document_name": "rgb_doc_62c9250c7f99aa4607376a25.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_62c9250c7f99aa4607376a25:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62c9250c7f99aa4607376a25.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62d402d522bfb5c885f38fc8",
+            "version_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1",
+            "document_name": "rgb_doc_62d402d522bfb5c885f38fc8.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_62d402d522bfb5c885f38fc8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62d402d522bfb5c885f38fc8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b8ffb29f5b715cac68b23659",
+            "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+            "document_name": "rgb_doc_b8ffb29f5b715cac68b23659.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_b8ffb29f5b715cac68b23659:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b8ffb29f5b715cac68b23659.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8811c735523ccdb179e7bcde",
+            "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+            "document_name": "rgb_doc_8811c735523ccdb179e7bcde.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_8811c735523ccdb179e7bcde:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8811c735523ccdb179e7bcde.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1a1dfc47ec0d58400a846c4c",
+            "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+            "document_name": "rgb_doc_1a1dfc47ec0d58400a846c4c.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1a1dfc47ec0d58400a846c4c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b11fb02a87600b816bdb6194",
+            "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+            "document_name": "rgb_doc_b11fb02a87600b816bdb6194.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_b11fb02a87600b816bdb6194:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b11fb02a87600b816bdb6194.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81",
+            "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+            "document_name": "rgb_doc_c8112a44d3fdf0cab4bc9a81.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c8112a44d3fdf0cab4bc9a81.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b7f24983708fa6995980e6a1",
+            "version_id": "rgb_doc_b7f24983708fa6995980e6a1:r1",
+            "document_name": "rgb_doc_b7f24983708fa6995980e6a1.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_b7f24983708fa6995980e6a1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b7f24983708fa6995980e6a1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b1454330b6fd06469119be83",
+            "version_id": "rgb_doc_b1454330b6fd06469119be83:r1",
+            "document_name": "rgb_doc_b1454330b6fd06469119be83.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_b1454330b6fd06469119be83:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b1454330b6fd06469119be83.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d10d1ba4d7f99454f908ecca",
+            "version_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1",
+            "document_name": "rgb_doc_d10d1ba4d7f99454f908ecca.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_d10d1ba4d7f99454f908ecca:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d10d1ba4d7f99454f908ecca.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e111424f896a8e0b1bd58d3e",
+            "version_id": "rgb_doc_e111424f896a8e0b1bd58d3e:r1",
+            "document_name": "rgb_doc_e111424f896a8e0b1bd58d3e.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_e111424f896a8e0b1bd58d3e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e111424f896a8e0b1bd58d3e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e0a3b355ddd8a8c41d63e704",
+            "version_id": "rgb_doc_e0a3b355ddd8a8c41d63e704:r1",
+            "document_name": "rgb_doc_e0a3b355ddd8a8c41d63e704.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_e0a3b355ddd8a8c41d63e704:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e0a3b355ddd8a8c41d63e704.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7caff7ce6c1cb5fd99cb3738",
+            "version_id": "rgb_doc_7caff7ce6c1cb5fd99cb3738:r1",
+            "document_name": "rgb_doc_7caff7ce6c1cb5fd99cb3738.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_7caff7ce6c1cb5fd99cb3738:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7caff7ce6c1cb5fd99cb3738.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_af5b51e96135352647954ba7",
+            "version_id": "rgb_doc_af5b51e96135352647954ba7:r1",
+            "document_name": "rgb_doc_af5b51e96135352647954ba7.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_af5b51e96135352647954ba7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_af5b51e96135352647954ba7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5ed0ccab406418e963f32768",
+            "version_id": "rgb_doc_5ed0ccab406418e963f32768:r1",
+            "document_name": "rgb_doc_5ed0ccab406418e963f32768.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_5ed0ccab406418e963f32768:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5ed0ccab406418e963f32768.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2663334cd62816cb29d41f70",
+            "version_id": "rgb_doc_2663334cd62816cb29d41f70:r1",
+            "document_name": "rgb_doc_2663334cd62816cb29d41f70.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_2663334cd62816cb29d41f70:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2663334cd62816cb29d41f70.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b1c5a5d26e6d7da139497bb0",
+            "version_id": "rgb_doc_b1c5a5d26e6d7da139497bb0:r1",
+            "document_name": "rgb_doc_b1c5a5d26e6d7da139497bb0.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_b1c5a5d26e6d7da139497bb0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b1c5a5d26e6d7da139497bb0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_be91668f3f81955cca35fda6",
+            "version_id": "rgb_doc_be91668f3f81955cca35fda6:r1",
+            "document_name": "rgb_doc_be91668f3f81955cca35fda6.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_be91668f3f81955cca35fda6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_be91668f3f81955cca35fda6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_db94233bec9dfb051f00a77d",
+            "version_id": "rgb_doc_db94233bec9dfb051f00a77d:r1",
+            "document_name": "rgb_doc_db94233bec9dfb051f00a77d.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_db94233bec9dfb051f00a77d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_db94233bec9dfb051f00a77d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c69f903fc528f89e3feabba8",
+            "version_id": "rgb_doc_c69f903fc528f89e3feabba8:r1",
+            "document_name": "rgb_doc_c69f903fc528f89e3feabba8.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_c69f903fc528f89e3feabba8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c69f903fc528f89e3feabba8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ff2b3592fbe738b2785699d2",
+            "version_id": "rgb_doc_ff2b3592fbe738b2785699d2:r1",
+            "document_name": "rgb_doc_ff2b3592fbe738b2785699d2.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_ff2b3592fbe738b2785699d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ff2b3592fbe738b2785699d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5872e85891364cdec241fa15",
+            "version_id": "rgb_doc_5872e85891364cdec241fa15:r1",
+            "document_name": "rgb_doc_5872e85891364cdec241fa15.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_5872e85891364cdec241fa15:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5872e85891364cdec241fa15.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e951fc280c307d5c3f7e2fa",
+            "version_id": "rgb_doc_4e951fc280c307d5c3f7e2fa:r1",
+            "document_name": "rgb_doc_4e951fc280c307d5c3f7e2fa.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_4e951fc280c307d5c3f7e2fa:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4e951fc280c307d5c3f7e2fa.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0c6df86e4591df0d2643ae55",
+            "version_id": "rgb_doc_0c6df86e4591df0d2643ae55:r1",
+            "document_name": "rgb_doc_0c6df86e4591df0d2643ae55.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_0c6df86e4591df0d2643ae55:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0c6df86e4591df0d2643ae55.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_78678e88a75179dabf277015",
+            "version_id": "rgb_doc_78678e88a75179dabf277015:r1",
+            "document_name": "rgb_doc_78678e88a75179dabf277015.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_78678e88a75179dabf277015:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_78678e88a75179dabf277015.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5b013e4f9ccd1f7db517a6fd",
+            "version_id": "rgb_doc_5b013e4f9ccd1f7db517a6fd:r1",
+            "document_name": "rgb_doc_5b013e4f9ccd1f7db517a6fd.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_5b013e4f9ccd1f7db517a6fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5b013e4f9ccd1f7db517a6fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c06dc8df19460b375f8103ea",
+            "version_id": "rgb_doc_c06dc8df19460b375f8103ea:r1",
+            "document_name": "rgb_doc_c06dc8df19460b375f8103ea.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_c06dc8df19460b375f8103ea:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c06dc8df19460b375f8103ea.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c54bddccdebe2214acd4af",
+            "version_id": "rgb_doc_65c54bddccdebe2214acd4af:r1",
+            "document_name": "rgb_doc_65c54bddccdebe2214acd4af.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_65c54bddccdebe2214acd4af:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_65c54bddccdebe2214acd4af.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_83cf0616affc13c907e2a7a9",
+            "version_id": "rgb_doc_83cf0616affc13c907e2a7a9:r1",
+            "document_name": "rgb_doc_83cf0616affc13c907e2a7a9.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_83cf0616affc13c907e2a7a9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_83cf0616affc13c907e2a7a9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_074b17fbd255676e16fa1f51",
+            "version_id": "rgb_doc_074b17fbd255676e16fa1f51:r1",
+            "document_name": "rgb_doc_074b17fbd255676e16fa1f51.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_074b17fbd255676e16fa1f51:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_074b17fbd255676e16fa1f51.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f650170fd17768eb3152e945",
+            "version_id": "rgb_doc_f650170fd17768eb3152e945:r1",
+            "document_name": "rgb_doc_f650170fd17768eb3152e945.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_f650170fd17768eb3152e945:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f650170fd17768eb3152e945.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_269894e159027eda049d409e",
+            "version_id": "rgb_doc_269894e159027eda049d409e:r1",
+            "document_name": "rgb_doc_269894e159027eda049d409e.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_269894e159027eda049d409e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_269894e159027eda049d409e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f8f9093dfbdb0e07c07b6003",
+            "version_id": "rgb_doc_f8f9093dfbdb0e07c07b6003:r1",
+            "document_name": "rgb_doc_f8f9093dfbdb0e07c07b6003.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_f8f9093dfbdb0e07c07b6003:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f8f9093dfbdb0e07c07b6003.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec16dad5c77b5ee908c8ce52",
+            "version_id": "rgb_doc_ec16dad5c77b5ee908c8ce52:r1",
+            "document_name": "rgb_doc_ec16dad5c77b5ee908c8ce52.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_ec16dad5c77b5ee908c8ce52:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ec16dad5c77b5ee908c8ce52.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8fb65ad0892c052f8a300b92",
+            "version_id": "rgb_doc_8fb65ad0892c052f8a300b92:r1",
+            "document_name": "rgb_doc_8fb65ad0892c052f8a300b92.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_8fb65ad0892c052f8a300b92:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8fb65ad0892c052f8a300b92.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9eaecb9a354ce444c8bc2fd8",
+            "version_id": "rgb_doc_9eaecb9a354ce444c8bc2fd8:r1",
+            "document_name": "rgb_doc_9eaecb9a354ce444c8bc2fd8.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_9eaecb9a354ce444c8bc2fd8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9eaecb9a354ce444c8bc2fd8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b4e224feeff181a5aff3f15d",
+            "version_id": "rgb_doc_b4e224feeff181a5aff3f15d:r1",
+            "document_name": "rgb_doc_b4e224feeff181a5aff3f15d.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_b4e224feeff181a5aff3f15d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b4e224feeff181a5aff3f15d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2e131f33bd79159863d5d3a9",
+            "version_id": "rgb_doc_2e131f33bd79159863d5d3a9:r1",
+            "document_name": "rgb_doc_2e131f33bd79159863d5d3a9.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_2e131f33bd79159863d5d3a9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2e131f33bd79159863d5d3a9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c3a83f10e937c66d6e5eba40",
+            "version_id": "rgb_doc_c3a83f10e937c66d6e5eba40:r1",
+            "document_name": "rgb_doc_c3a83f10e937c66d6e5eba40.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_c3a83f10e937c66d6e5eba40:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c3a83f10e937c66d6e5eba40.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a328beacff506468a158b420",
+            "version_id": "rgb_doc_a328beacff506468a158b420:r1",
+            "document_name": "rgb_doc_a328beacff506468a158b420.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_a328beacff506468a158b420:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a328beacff506468a158b420.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a42a9432402dfc905771b006",
+            "version_id": "rgb_doc_a42a9432402dfc905771b006:r1",
+            "document_name": "rgb_doc_a42a9432402dfc905771b006.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_a42a9432402dfc905771b006:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a42a9432402dfc905771b006.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b80af46bb0e915277b83a52d",
+            "version_id": "rgb_doc_b80af46bb0e915277b83a52d:r1",
+            "document_name": "rgb_doc_b80af46bb0e915277b83a52d.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_b80af46bb0e915277b83a52d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b80af46bb0e915277b83a52d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1ef5caf5d738114451789616",
+            "version_id": "rgb_doc_1ef5caf5d738114451789616:r1",
+            "document_name": "rgb_doc_1ef5caf5d738114451789616.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_1ef5caf5d738114451789616:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1ef5caf5d738114451789616.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_165f276239bedd5ebffc0abd",
+            "version_id": "rgb_doc_165f276239bedd5ebffc0abd:r1",
+            "document_name": "rgb_doc_165f276239bedd5ebffc0abd.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_165f276239bedd5ebffc0abd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_165f276239bedd5ebffc0abd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_37adabbe6435e96fb06c734d",
+            "version_id": "rgb_doc_37adabbe6435e96fb06c734d:r1",
+            "document_name": "rgb_doc_37adabbe6435e96fb06c734d.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_37adabbe6435e96fb06c734d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_37adabbe6435e96fb06c734d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f831775d54e5bf2418ea1533",
+            "version_id": "rgb_doc_f831775d54e5bf2418ea1533:r1",
+            "document_name": "rgb_doc_f831775d54e5bf2418ea1533.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_f831775d54e5bf2418ea1533:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f831775d54e5bf2418ea1533.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c",
+            "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+            "document_name": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9d962f4f5a96e9fe62cd4de9",
+            "version_id": "rgb_doc_9d962f4f5a96e9fe62cd4de9:r1",
+            "document_name": "rgb_doc_9d962f4f5a96e9fe62cd4de9.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_9d962f4f5a96e9fe62cd4de9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9d962f4f5a96e9fe62cd4de9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e92d77872cace8aaf95c00f1",
+            "version_id": "rgb_doc_e92d77872cace8aaf95c00f1:r1",
+            "document_name": "rgb_doc_e92d77872cace8aaf95c00f1.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_e92d77872cace8aaf95c00f1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e92d77872cace8aaf95c00f1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bbdd56a31fc6228249131193",
+            "version_id": "rgb_doc_bbdd56a31fc6228249131193:r1",
+            "document_name": "rgb_doc_bbdd56a31fc6228249131193.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_bbdd56a31fc6228249131193:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bbdd56a31fc6228249131193.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_31fa1e789694b462007d2c8a",
+            "version_id": "rgb_doc_31fa1e789694b462007d2c8a:r1",
+            "document_name": "rgb_doc_31fa1e789694b462007d2c8a.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_31fa1e789694b462007d2c8a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_31fa1e789694b462007d2c8a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec36dc18190e7d312753aad2",
+            "version_id": "rgb_doc_ec36dc18190e7d312753aad2:r1",
+            "document_name": "rgb_doc_ec36dc18190e7d312753aad2.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_ec36dc18190e7d312753aad2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ec36dc18190e7d312753aad2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8165073e5d4e11934162a5f",
+            "version_id": "rgb_doc_c8165073e5d4e11934162a5f:r1",
+            "document_name": "rgb_doc_c8165073e5d4e11934162a5f.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_c8165073e5d4e11934162a5f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c8165073e5d4e11934162a5f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0ce99ca227d5712628b517e0",
+            "version_id": "rgb_doc_0ce99ca227d5712628b517e0:r1",
+            "document_name": "rgb_doc_0ce99ca227d5712628b517e0.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_0ce99ca227d5712628b517e0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0ce99ca227d5712628b517e0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3a064c491fb60cdd4baae25a",
+            "version_id": "rgb_doc_3a064c491fb60cdd4baae25a:r1",
+            "document_name": "rgb_doc_3a064c491fb60cdd4baae25a.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_3a064c491fb60cdd4baae25a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3a064c491fb60cdd4baae25a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dce4c7c31b4ebbc6aecba5e4",
+            "version_id": "rgb_doc_dce4c7c31b4ebbc6aecba5e4:r1",
+            "document_name": "rgb_doc_dce4c7c31b4ebbc6aecba5e4.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_dce4c7c31b4ebbc6aecba5e4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dce4c7c31b4ebbc6aecba5e4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e30a6e01f02fac6edc6c25bd",
+            "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+            "document_name": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6306136f01aab6bfb1d0f402",
+            "version_id": "rgb_doc_6306136f01aab6bfb1d0f402:r1",
+            "document_name": "rgb_doc_6306136f01aab6bfb1d0f402.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_6306136f01aab6bfb1d0f402:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6306136f01aab6bfb1d0f402.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da810d057a7d0200c1204bad",
+            "version_id": "rgb_doc_da810d057a7d0200c1204bad:r1",
+            "document_name": "rgb_doc_da810d057a7d0200c1204bad.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_da810d057a7d0200c1204bad:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_da810d057a7d0200c1204bad.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_262d22ef5dfa424b011d09fe",
+            "version_id": "rgb_doc_262d22ef5dfa424b011d09fe:r1",
+            "document_name": "rgb_doc_262d22ef5dfa424b011d09fe.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_262d22ef5dfa424b011d09fe:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_262d22ef5dfa424b011d09fe.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_410403b31bc0ac65a45f95ff",
+            "version_id": "rgb_doc_410403b31bc0ac65a45f95ff:r1",
+            "document_name": "rgb_doc_410403b31bc0ac65a45f95ff.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_410403b31bc0ac65a45f95ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_410403b31bc0ac65a45f95ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_afd2695797c0c23a692bf1e6",
+            "version_id": "rgb_doc_afd2695797c0c23a692bf1e6:r1",
+            "document_name": "rgb_doc_afd2695797c0c23a692bf1e6.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_afd2695797c0c23a692bf1e6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_afd2695797c0c23a692bf1e6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6e04a6311f302ae6b8790edf",
+            "version_id": "rgb_doc_6e04a6311f302ae6b8790edf:r1",
+            "document_name": "rgb_doc_6e04a6311f302ae6b8790edf.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_6e04a6311f302ae6b8790edf:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6e04a6311f302ae6b8790edf.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55889ee96060e9acd52a9a15",
+            "version_id": "rgb_doc_55889ee96060e9acd52a9a15:r1",
+            "document_name": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_55889ee96060e9acd52a9a15:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c766d49d625e8d28780c7514",
+            "version_id": "rgb_doc_c766d49d625e8d28780c7514:r1",
+            "document_name": "rgb_doc_c766d49d625e8d28780c7514.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_c766d49d625e8d28780c7514:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c766d49d625e8d28780c7514.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f4728010f8488e72be0eb20d",
+            "version_id": "rgb_doc_f4728010f8488e72be0eb20d:r1",
+            "document_name": "rgb_doc_f4728010f8488e72be0eb20d.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_f4728010f8488e72be0eb20d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f4728010f8488e72be0eb20d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6af1b3d3bb3c48f0114b356",
+            "version_id": "rgb_doc_b6af1b3d3bb3c48f0114b356:r1",
+            "document_name": "rgb_doc_b6af1b3d3bb3c48f0114b356.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_b6af1b3d3bb3c48f0114b356:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6af1b3d3bb3c48f0114b356.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e35aa9818b3d5eb0bf39de7",
+            "version_id": "rgb_doc_1e35aa9818b3d5eb0bf39de7:r1",
+            "document_name": "rgb_doc_1e35aa9818b3d5eb0bf39de7.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_1e35aa9818b3d5eb0bf39de7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e35aa9818b3d5eb0bf39de7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9f02aa1affcfd0218c6a8efe",
+            "version_id": "rgb_doc_9f02aa1affcfd0218c6a8efe:r1",
+            "document_name": "rgb_doc_9f02aa1affcfd0218c6a8efe.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_9f02aa1affcfd0218c6a8efe:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9f02aa1affcfd0218c6a8efe.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ba666e78bb2b70d4ace81103",
+            "version_id": "rgb_doc_ba666e78bb2b70d4ace81103:r1",
+            "document_name": "rgb_doc_ba666e78bb2b70d4ace81103.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_ba666e78bb2b70d4ace81103:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ba666e78bb2b70d4ace81103.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6917d81a93061e99311e6ff4",
+            "version_id": "rgb_doc_6917d81a93061e99311e6ff4:r1",
+            "document_name": "rgb_doc_6917d81a93061e99311e6ff4.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_6917d81a93061e99311e6ff4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6917d81a93061e99311e6ff4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a433f410227b963bf46238f",
+            "version_id": "rgb_doc_2a433f410227b963bf46238f:r1",
+            "document_name": "rgb_doc_2a433f410227b963bf46238f.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_2a433f410227b963bf46238f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2a433f410227b963bf46238f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_83fd9809233a8d2b6a56e754",
+            "version_id": "rgb_doc_83fd9809233a8d2b6a56e754:r1",
+            "document_name": "rgb_doc_83fd9809233a8d2b6a56e754.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_83fd9809233a8d2b6a56e754:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_83fd9809233a8d2b6a56e754.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a92fff76af1c836bd8769adf",
+            "version_id": "rgb_doc_a92fff76af1c836bd8769adf:r1",
+            "document_name": "rgb_doc_a92fff76af1c836bd8769adf.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_a92fff76af1c836bd8769adf:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a92fff76af1c836bd8769adf.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5baf7e935e4bbefa4098c652",
+            "version_id": "rgb_doc_5baf7e935e4bbefa4098c652:r1",
+            "document_name": "rgb_doc_5baf7e935e4bbefa4098c652.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_5baf7e935e4bbefa4098c652:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5baf7e935e4bbefa4098c652.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c5dfd7343ee599abf1d3794d",
+            "version_id": "rgb_doc_c5dfd7343ee599abf1d3794d:r1",
+            "document_name": "rgb_doc_c5dfd7343ee599abf1d3794d.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_c5dfd7343ee599abf1d3794d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c5dfd7343ee599abf1d3794d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21c69a3ada4997b65ce5c939",
+            "version_id": "rgb_doc_21c69a3ada4997b65ce5c939:r1",
+            "document_name": "rgb_doc_21c69a3ada4997b65ce5c939.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_21c69a3ada4997b65ce5c939:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_21c69a3ada4997b65ce5c939.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3678a62800f6405e8e774ef5",
+            "version_id": "rgb_doc_3678a62800f6405e8e774ef5:r1",
+            "document_name": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_3678a62800f6405e8e774ef5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3678a62800f6405e8e774ef5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_43c76fa91ad46b6a0d2a63c8",
+            "version_id": "rgb_doc_43c76fa91ad46b6a0d2a63c8:r1",
+            "document_name": "rgb_doc_43c76fa91ad46b6a0d2a63c8.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_43c76fa91ad46b6a0d2a63c8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_43c76fa91ad46b6a0d2a63c8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d41bc3681427f349a1eb0758",
+            "version_id": "rgb_doc_d41bc3681427f349a1eb0758:r1",
+            "document_name": "rgb_doc_d41bc3681427f349a1eb0758.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_d41bc3681427f349a1eb0758:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d41bc3681427f349a1eb0758.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 8.784290999756195,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 12.138749996665865,
+          "evidence_ms": 2.2062909993110225,
+          "fusion_ms": 1.0471660061739385,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 35.097540996503085,
+          "context_chars": 1499,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_6de1380c26828d60",
+          "ev_63900c97fae619f9",
+          "ev_a64692284d0f5547",
+          "ev_a044f4566486b19b",
+          "ev_ab39b8afc8a9045b",
+          "ev_2f8e73d0af8c4a14",
+          "ev_a122f27d2384b42e",
+          "ev_3931a0b9bad33d7e",
+          "ev_b41effaa4848ac17",
+          "ev_22011f9443da3419"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_6de1380c26828d60",
+            "content": "（2023年5月） 一、全国新冠病毒感染重症和死亡病例报告情况2023年5月1日-5月31 ... 1月8日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例14171 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62c9250c7f99aa4607376a25",
+            "version_id": "rgb_doc_62c9250c7f99aa4607376a25:r1",
+            "document_name": "rgb_doc_62c9250c7f99aa4607376a25.txt",
+            "chunk_id": "rgb_doc_62c9250c7f99aa4607376a25:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_62c9250c7f99aa4607376a25:r1",
+              "block_ids": [
+                "rgb_doc_62c9250c7f99aa4607376a25:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 29.15959930419922,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 99,
+            "content_hash": "62c9250c7f99aa4607376a25d7b4b88b3cd098c00f52f3349daefda33b5e3ba4",
+            "scope_digest": "5bb05c21751db092860e59a22f9e1bf5e03efd87946f1a53bbb2ce6d7a0329a9",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_63900c97fae619f9",
+            "content": "May 6, 2022 ... 5月以来，全国疫情防控形势整体趋稳，日新增本土确诊病例和无症状感染者继续 ... 截至2022年5月5日，31个省（自治区、直辖市）和新疆生产建设兵团累计 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62d402d522bfb5c885f38fc8",
+            "version_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1",
+            "document_name": "rgb_doc_62d402d522bfb5c885f38fc8.txt",
+            "chunk_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1",
+              "block_ids": [
+                "rgb_doc_62d402d522bfb5c885f38fc8:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 28.006847381591797,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "62d402d522bfb5c885f38fc896e1c07f01d216098b6af28eab0a13a49c28d7cd",
+            "scope_digest": "145388aae6c4f1db17a9954cfdbf37d992da2d18951b19f1622a6b4a8881bcf8",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_5be155dfd7fb3515b452",
+                "source_id": "S2",
+                "evidence_id": "ev_63900c97fae619f9",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 6, 2022 ... 5月以来，全国疫情防控形势整体趋稳，日新增本土确诊病例和无症状感染者继续 ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_574cc12c2a85a1226220",
+                "source_id": "S2",
+                "evidence_id": "ev_63900c97fae619f9",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 6, 2022 ... 5月以来，全国疫情防控形势整体趋稳，日新增本土确诊病例和无症状感染者继续 ... 截至",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a64692284d0f5547",
+            "content": "2022-01-06来源:国家卫生健康委 2022年1月5日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例189例。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b8ffb29f5b715cac68b23659",
+            "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+            "document_name": "rgb_doc_b8ffb29f5b715cac68b23659.txt",
+            "chunk_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+              "block_ids": [
+                "rgb_doc_b8ffb29f5b715cac68b23659:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 71
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 25.668962478637695,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 71,
+            "content_hash": "b8ffb29f5b715cac68b236590de9003b29c79200db7189d56fd1ff5da8c9447d",
+            "scope_digest": "38eb569b6864b7ec04ef052e4e167732195fd6cbb06de2a1f2e97be22acf2f93",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_34beee0c7c36c1ee9c13",
+                "source_id": "S3",
+                "evidence_id": "ev_a64692284d0f5547",
+                "raw_text": "2022",
+                "start": 0,
+                "end": 4,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "2022-01-06来源:国家卫生健康委 2022年1月5日0—24时,31个省(自治区、直辖市)和新疆",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a044f4566486b19b",
+            "content": "1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。其中境外输入病例57例（上海20例，广东10例，浙江7例，福建6例，天津4例，广西2例，四川2例，云南2例，吉林1例，江苏1例，山东1例，河南1例），含6例由无症状感染者转为确诊病例（浙江3例，四川2例，河南1例）；本土病例132例（河南64例，其中许昌市50例、郑州市5例、洛阳市4例、周口市3例、商丘市1例、固始县1例；陕西63例，均在西安市；浙江5例，均在宁波市），含30例由无症状感染者转为确诊病例（均在河南）。无新增死亡病例。新增疑似病例2例，均为境外输入病例（均在上海）",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8811c735523ccdb179e7bcde",
+            "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+            "document_name": "rgb_doc_8811c735523ccdb179e7bcde.txt",
+            "chunk_id": "rgb_doc_8811c735523ccdb179e7bcde:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+              "block_ids": [
+                "rgb_doc_8811c735523ccdb179e7bcde:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 286
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 25.452743530273438,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 286,
+            "content_hash": "8811c735523ccdb179e7bcde6e18da1a92050f0560de9d3ce1ec1f5ec1842297",
+            "scope_digest": "fbee3e8a57841971f8a93058cd9c302cb12e307f06b5c029d7b2fcabe9df2b50",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_ab39b8afc8a9045b",
+            "content": "1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1a1dfc47ec0d58400a846c4c",
+            "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+            "document_name": "rgb_doc_1a1dfc47ec0d58400a846c4c.txt",
+            "chunk_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+              "block_ids": [
+                "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 45
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 25.090415954589844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 45,
+            "content_hash": "1a1dfc47ec0d58400a846c4c53b452a5592f82a61274ff52df0eb7e13f446426",
+            "scope_digest": "9ed537a089b7bf6608ce2db5a3d663f0b7a732abfaeae7ff667a87b5bd4c3593",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_2f8e73d0af8c4a14",
+            "content": "Jan 6, 2022 ... 1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189例。其中境外输入病例57例（上海20例，广东10例，浙江7例，福建6例， ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b11fb02a87600b816bdb6194",
+            "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+            "document_name": "rgb_doc_b11fb02a87600b816bdb6194.txt",
+            "chunk_id": "rgb_doc_b11fb02a87600b816bdb6194:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+              "block_ids": [
+                "rgb_doc_b11fb02a87600b816bdb6194:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 25.044233322143555,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 99,
+            "content_hash": "b11fb02a87600b816bdb6194dabce0f9fa5c07eb9b12e3866ed00f778c2651fa",
+            "scope_digest": "900ebc3d5f2be491095184d4498bd75e2c08b22c6452cecd0839885820872e48",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_db797eaf5773872a26e7",
+                "source_id": "S6",
+                "evidence_id": "ev_2f8e73d0af8c4a14",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 6, 2022 ... 1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_70a24982162459b479ae",
+                "source_id": "S6",
+                "evidence_id": "ev_2f8e73d0af8c4a14",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 6, 2022 ... 1月5日0—24时，31个省（自治区、直辖市）和新疆生产建设兵团报告新增确诊病例189",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a122f27d2384b42e",
+            "content": "据国家卫健委网站消息,截至1月5日24时新型冠状病毒肺炎疫情最新情况公布。 1月5日0—24时,31个省(自治区、直辖市)和新疆生产建设兵团报告新增确诊病例189例。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81",
+            "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+            "document_name": "rgb_doc_c8112a44d3fdf0cab4bc9a81.txt",
+            "chunk_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+              "block_ids": [
+                "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 83
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 23.887786865234375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 83,
+            "content_hash": "c8112a44d3fdf0cab4bc9a815a46766375c822ad567d5751f86f2ecb1b893ddc",
+            "scope_digest": "a22159a77d94eebe32eefe66e0d0f7d9ac3733408d6093f2f04a9be53b52f1d2",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_3931a0b9bad33d7e",
+            "content": "全国疫情防控形势 5月以来，全国疫情防控形势整体趋稳，日新增本土确诊病例和无症状感染者继续下降。截至目前，21个省份和新疆生产建设兵团全域为低风险地区，但仍存在反弹风险，疫情防控形势依然严峻复杂。 信息来源： 国务院联防联控机制就时不我待 科学精准 抓实抓细疫情防控工作举行发布会（实录全文） 新冠病毒疫苗接种情况 截至2022年5月5日，31个省（自治区、直辖市）和新疆生产建设兵团累计报告接种新冠病毒疫苗334970.2万剂次。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b7f24983708fa6995980e6a1",
+            "version_id": "rgb_doc_b7f24983708fa6995980e6a1:r1",
+            "document_name": "rgb_doc_b7f24983708fa6995980e6a1.txt",
+            "chunk_id": "rgb_doc_b7f24983708fa6995980e6a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b7f24983708fa6995980e6a1:r1",
+              "block_ids": [
+                "rgb_doc_b7f24983708fa6995980e6a1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 216
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 22.056312561035156,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 216,
+            "content_hash": "b7f24983708fa6995980e6a1c6b70753bded817cc781c826b914f3c09f6cf3f5",
+            "scope_digest": "4b86e3b3481b535baeca1e76f76d91a257f4bec84b330c709c1a72f2890de233",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b41effaa4848ac17",
+            "content": "截至5月5日24时，新疆现有确诊病例1例，在乌鲁木齐市米东区；无症状感染者57例，其中乌鲁木齐市米东区55例、天山区2例。 贵州 铜仁 5月6日，接铜仁市卫生健康局报告，在集中隔离管控的省外返黔人员中发现一名新冠病毒核酸检测结果异常人员，经省级专家组诊断为新冠肺炎无症状感染者。该人员无社会面活动轨迹。 全国中高风险等级地区 截至2022年5月6日17时，全国共有19个高风险等级地区和92个中风险等级地区，具体名单请识别下方小程序码，进入【疫情风险等级查询】服务查看。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b1454330b6fd06469119be83",
+            "version_id": "rgb_doc_b1454330b6fd06469119be83:r1",
+            "document_name": "rgb_doc_b1454330b6fd06469119be83.txt",
+            "chunk_id": "rgb_doc_b1454330b6fd06469119be83:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b1454330b6fd06469119be83:r1",
+              "block_ids": [
+                "rgb_doc_b1454330b6fd06469119be83:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 235
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 19.376771926879883,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 235,
+            "content_hash": "b1454330b6fd06469119be83c5fe6b582e3eb6363bfa4d8e89b728c1fa37ebb9",
+            "scope_digest": "876900e9bb20a9fbc46669db6bc097dc087c0dd54bf370531f78fdadc1591729",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_22011f9443da3419",
+            "content": "国家统计局发布的《2020年国民经济和社会发展统计公报》显示，“截至2020年末，全国累计报告新型冠状病毒肺炎确诊病例87071例，累计死亡4634人”，与《中国卫生健康统计年鉴2021》给出的数据是完全一致的。 而《2021年国民经济和社会发展统计公报》显示，“截至2021年末，全国累计报告新型冠状病毒肺炎确诊病例102314例，累计死亡4636人”，可以计算出2021年我国新冠肺炎确诊病例为102314-87071=15243例，死于新冠肺炎的病例为4636-4634=2人，也就是说，2021年全国死于新冠肺炎的病例仅有2人。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d10d1ba4d7f99454f908ecca",
+            "version_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1",
+            "document_name": "rgb_doc_d10d1ba4d7f99454f908ecca.txt",
+            "chunk_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1",
+              "block_ids": [
+                "rgb_doc_d10d1ba4d7f99454f908ecca:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 268
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 18.850860595703125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 268,
+            "content_hash": "d10d1ba4d7f99454f908eccaac83ed46ff346a378bb1bd186f0c247a0fe5ca7e",
+            "scope_digest": "6532143e8e553e09dabca6f7e9f27daa27b23473b7b5209151ccc979941282ef",
+            "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_6de1380c26828d60",
+      "ev_63900c97fae619f9",
+      "ev_a64692284d0f5547",
+      "ev_a044f4566486b19b",
+      "ev_ab39b8afc8a9045b",
+      "ev_2f8e73d0af8c4a14",
+      "ev_a122f27d2384b42e",
+      "ev_3931a0b9bad33d7e",
+      "ev_b41effaa4848ac17",
+      "ev_22011f9443da3419"
+    ],
+    "evidence": {
+      "ev_6de1380c26828d60": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_62c9250c7f99aa4607376a25",
+        "version_id": "rgb_doc_62c9250c7f99aa4607376a25:r1",
+        "document_name": "rgb_doc_62c9250c7f99aa4607376a25.txt",
+        "chunk_id": "rgb_doc_62c9250c7f99aa4607376a25:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_62c9250c7f99aa4607376a25:r1",
+          "block_ids": [
+            "rgb_doc_62c9250c7f99aa4607376a25:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 99
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 29.15959930419922,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 99,
+        "content_hash": "62c9250c7f99aa4607376a25d7b4b88b3cd098c00f52f3349daefda33b5e3ba4",
+        "scope_digest": "5bb05c21751db092860e59a22f9e1bf5e03efd87946f1a53bbb2ce6d7a0329a9",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_63900c97fae619f9": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_62d402d522bfb5c885f38fc8",
+        "version_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1",
+        "document_name": "rgb_doc_62d402d522bfb5c885f38fc8.txt",
+        "chunk_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_62d402d522bfb5c885f38fc8:r1",
+          "block_ids": [
+            "rgb_doc_62d402d522bfb5c885f38fc8:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 28.006847381591797,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "62d402d522bfb5c885f38fc896e1c07f01d216098b6af28eab0a13a49c28d7cd",
+        "scope_digest": "145388aae6c4f1db17a9954cfdbf37d992da2d18951b19f1622a6b4a8881bcf8",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a64692284d0f5547": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b8ffb29f5b715cac68b23659",
+        "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+        "document_name": "rgb_doc_b8ffb29f5b715cac68b23659.txt",
+        "chunk_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b8ffb29f5b715cac68b23659:r1",
+          "block_ids": [
+            "rgb_doc_b8ffb29f5b715cac68b23659:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 71
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 25.668962478637695,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 71,
+        "content_hash": "b8ffb29f5b715cac68b236590de9003b29c79200db7189d56fd1ff5da8c9447d",
+        "scope_digest": "38eb569b6864b7ec04ef052e4e167732195fd6cbb06de2a1f2e97be22acf2f93",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a044f4566486b19b": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_8811c735523ccdb179e7bcde",
+        "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+        "document_name": "rgb_doc_8811c735523ccdb179e7bcde.txt",
+        "chunk_id": "rgb_doc_8811c735523ccdb179e7bcde:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_8811c735523ccdb179e7bcde:r1",
+          "block_ids": [
+            "rgb_doc_8811c735523ccdb179e7bcde:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 286
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 25.452743530273438,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 286,
+        "content_hash": "8811c735523ccdb179e7bcde6e18da1a92050f0560de9d3ce1ec1f5ec1842297",
+        "scope_digest": "fbee3e8a57841971f8a93058cd9c302cb12e307f06b5c029d7b2fcabe9df2b50",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_ab39b8afc8a9045b": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_1a1dfc47ec0d58400a846c4c",
+        "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+        "document_name": "rgb_doc_1a1dfc47ec0d58400a846c4c.txt",
+        "chunk_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_1a1dfc47ec0d58400a846c4c:r1",
+          "block_ids": [
+            "rgb_doc_1a1dfc47ec0d58400a846c4c:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 45
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 25.090415954589844,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 45,
+        "content_hash": "1a1dfc47ec0d58400a846c4c53b452a5592f82a61274ff52df0eb7e13f446426",
+        "scope_digest": "9ed537a089b7bf6608ce2db5a3d663f0b7a732abfaeae7ff667a87b5bd4c3593",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_2f8e73d0af8c4a14": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b11fb02a87600b816bdb6194",
+        "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+        "document_name": "rgb_doc_b11fb02a87600b816bdb6194.txt",
+        "chunk_id": "rgb_doc_b11fb02a87600b816bdb6194:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b11fb02a87600b816bdb6194:r1",
+          "block_ids": [
+            "rgb_doc_b11fb02a87600b816bdb6194:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 99
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 25.044233322143555,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 99,
+        "content_hash": "b11fb02a87600b816bdb6194dabce0f9fa5c07eb9b12e3866ed00f778c2651fa",
+        "scope_digest": "900ebc3d5f2be491095184d4498bd75e2c08b22c6452cecd0839885820872e48",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a122f27d2384b42e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81",
+        "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+        "document_name": "rgb_doc_c8112a44d3fdf0cab4bc9a81.txt",
+        "chunk_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1",
+          "block_ids": [
+            "rgb_doc_c8112a44d3fdf0cab4bc9a81:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 83
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 23.887786865234375,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 83,
+        "content_hash": "c8112a44d3fdf0cab4bc9a815a46766375c822ad567d5751f86f2ecb1b893ddc",
+        "scope_digest": "a22159a77d94eebe32eefe66e0d0f7d9ac3733408d6093f2f04a9be53b52f1d2",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_3931a0b9bad33d7e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b7f24983708fa6995980e6a1",
+        "version_id": "rgb_doc_b7f24983708fa6995980e6a1:r1",
+        "document_name": "rgb_doc_b7f24983708fa6995980e6a1.txt",
+        "chunk_id": "rgb_doc_b7f24983708fa6995980e6a1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b7f24983708fa6995980e6a1:r1",
+          "block_ids": [
+            "rgb_doc_b7f24983708fa6995980e6a1:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 216
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 22.056312561035156,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 216,
+        "content_hash": "b7f24983708fa6995980e6a1c6b70753bded817cc781c826b914f3c09f6cf3f5",
+        "scope_digest": "4b86e3b3481b535baeca1e76f76d91a257f4bec84b330c709c1a72f2890de233",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b41effaa4848ac17": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b1454330b6fd06469119be83",
+        "version_id": "rgb_doc_b1454330b6fd06469119be83:r1",
+        "document_name": "rgb_doc_b1454330b6fd06469119be83.txt",
+        "chunk_id": "rgb_doc_b1454330b6fd06469119be83:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b1454330b6fd06469119be83:r1",
+          "block_ids": [
+            "rgb_doc_b1454330b6fd06469119be83:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 235
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 19.376771926879883,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 235,
+        "content_hash": "b1454330b6fd06469119be83c5fe6b582e3eb6363bfa4d8e89b728c1fa37ebb9",
+        "scope_digest": "876900e9bb20a9fbc46669db6bc097dc087c0dd54bf370531f78fdadc1591729",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_22011f9443da3419": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_d10d1ba4d7f99454f908ecca",
+        "version_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1",
+        "document_name": "rgb_doc_d10d1ba4d7f99454f908ecca.txt",
+        "chunk_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_d10d1ba4d7f99454f908ecca:r1",
+          "block_ids": [
+            "rgb_doc_d10d1ba4d7f99454f908ecca:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 268
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 18.850860595703125,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 268,
+        "content_hash": "d10d1ba4d7f99454f908eccaac83ed46ff346a378bb1bd186f0c247a0fe5ca7e",
+        "scope_digest": "6532143e8e553e09dabca6f7e9f27daa27b23473b7b5209151ccc979941282ef",
+        "trace_id": "dde8a76a387a4e07b19f9fa1313d3ff7",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_6de1380c26828d60",
+      "S2": "ev_63900c97fae619f9",
+      "S3": "ev_a64692284d0f5547",
+      "S4": "ev_a044f4566486b19b",
+      "S5": "ev_ab39b8afc8a9045b",
+      "S6": "ev_2f8e73d0af8c4a14",
+      "S7": "ev_a122f27d2384b42e",
+      "S8": "ev_3931a0b9bad33d7e",
+      "S9": "ev_b41effaa4848ac17",
+      "S10": "ev_22011f9443da3419"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

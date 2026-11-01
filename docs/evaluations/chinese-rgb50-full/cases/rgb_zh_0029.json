@@ -1,0 +1,3866 @@
+{
+  "question_id": "rgb_zh_0029",
+  "result": {
+    "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+    "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:1",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:2",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:3",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "context_chars": 1202,
+        "prompt_tokens": 8450,
+        "completion_tokens": 96,
+        "total_tokens": 8546,
+        "context_compaction_count": 0,
+        "context_chars_before": 1202,
+        "context_chars_after": 1202,
+        "estimated_input_tokens": 12140,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1494,
+        "remaining_run_tokens": 111454,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8450,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3690
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:4",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1202
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:5",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "tool_call_id": "call_89817fe7ef3e454cbcf9e0",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:6",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "tool_call_id": "call_89817fe7ef3e454cbcf9e0",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:7",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_89817fe7ef3e454cbcf9e0",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 7,
+        "output_chars_before": 101177,
+        "output_chars_after": 14593,
+        "removed_chars": 86584,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:8",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:9",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:10",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "context_chars": 15859,
+        "prompt_tokens": 15130,
+        "completion_tokens": 186,
+        "total_tokens": 15316,
+        "context_compaction_count": 0,
+        "context_chars_before": 15859,
+        "context_chars_after": 15859,
+        "estimated_input_tokens": 20585,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7604,
+        "evidence_tokens": 1106,
+        "history_tokens": 2335,
+        "remaining_run_tokens": 96138,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15130,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5455
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:11",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "model_visible_evidence_count": 7,
+        "context_chars": 15859
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:12",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "citation_validation_reason": [
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:13",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "context_chars": 1484,
+        "prompt_tokens": 907,
+        "completion_tokens": 64,
+        "total_tokens": 971,
+        "context_compaction_count": 0,
+        "context_chars_before": 1484,
+        "context_chars_after": 1484,
+        "estimated_input_tokens": 1875,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1875,
+        "remaining_run_tokens": 95167,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 907,
+        "usage_source": "provider",
+        "estimation_error_tokens": -968
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:14",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:15",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "delta": "塔里木油田2021年油气产量为3182万吨油当量 [1]\n\n塔里木油田2022年油气产量为3310万吨油当量 [2]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:16",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a",
+        "final_citation_count": 2,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6:23937c79ca0c4c6c99fc1ef9bee060aa:17",
+        "run_id": "run_1c8d86b09ef74851a22dc1cb0aa576e6",
+        "thread_id": "thread_18af24d5948b4241afddb57cf0af187a"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 24487,
+      "completion_tokens": 346,
+      "total_tokens": 24833
+    },
+    "elapsed_seconds": 9.971412333994522,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 7,
+      "output_truncated": true,
+      "context_chars": 15859,
+      "prompt_tokens": 24487,
+      "completion_tokens": 346,
+      "total_tokens": 24833,
+      "context_compaction_count": 0,
+      "context_chars_before": 1484,
+      "context_chars_after": 1484,
+      "estimated_input_tokens": 1875,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 1875,
+      "remaining_run_tokens": 95167,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 907,
+      "usage_source": "provider",
+      "estimation_error_tokens": -968,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_89817fe7ef3e454cbcf9e0",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 7,
+          "output_chars_before": 101177,
+          "output_chars_after": 14593,
+          "removed_chars": 86584,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 1484,
+      "repair_visible_evidence_count": 7,
+      "final_citation_count": 2,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "塔里木油田2021年油气产量为3182万吨油当量 [1]\n\n塔里木油田2022年油气产量为3310万吨油当量 [2]",
+      "citations": {
+        "ev_63d884909b4bb8a8": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_0fc53e300cf68caae8626132",
+          "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+          "document_name": "rgb_doc_0fc53e300cf68caae8626132.txt",
+          "chunk_id": "rgb_doc_0fc53e300cf68caae8626132:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "Oct 26, 2022 ... 2021年，油田油气产量达到3182万吨油当量。图为塔里木油田一处井区。 谭辉摄（影像中国）. 数据来源： ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+            "block_ids": [
+              "rgb_doc_0fc53e300cf68caae8626132:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 74
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 35.86085510253906,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_5583f7ede610a022": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb",
+          "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+          "document_name": "rgb_doc_4bc0faf5fda313e5c39fc8bb.txt",
+          "chunk_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "source_score": null,
+          "fused_score": 0.015625,
+          "rerank_score": null,
+          "content": "Jan 1, 2023 ... 本报乌鲁木齐12月31日讯（记者乔文汇）记者从中国石油塔里木油田公司获悉，塔里木油田2022年油气产量当量达3310万吨，创历史新高，同比净增128万吨， ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+            "block_ids": [
+              "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 97
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 35.09589385986328,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "塔里木油田2021年油气产量为3182万吨油当量",
+          "source_ids": [
+            "S2"
+          ]
+        },
+        {
+          "text": "塔里木油田2022年油气产量为3310万吨油当量",
+          "source_ids": [
+            "S4"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S2",
+          "evidence_id": "ev_63d884909b4bb8a8"
+        },
+        {
+          "number": 2,
+          "source_id": "S4",
+          "evidence_id": "ev_5583f7ede610a022"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_89817fe7ef3e454cbcf9e0",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "塔里木油田 2021年 2022年 油气产量",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be",
+            "version_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1",
+            "document_name": "rgb_doc_508a9d2c9f8fe3a1dac2e0be.txt",
+            "chunk_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 36.5765266418457,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万吨之后，又 ... 2022年7月底，“塔里木油田博孜—大北超深大气区100亿立方米产能建设 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1",
+              "block_ids": [
+                "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 104
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 36.5765266418457,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0fc53e300cf68caae8626132",
+            "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+            "document_name": "rgb_doc_0fc53e300cf68caae8626132.txt",
+            "chunk_id": "rgb_doc_0fc53e300cf68caae8626132:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 35.86085510253906,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Oct 26, 2022 ... 2021年，油田油气产量达到3182万吨油当量。图为塔里木油田一处井区。 谭辉摄（影像中国）. 数据来源： ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+              "block_ids": [
+                "rgb_doc_0fc53e300cf68caae8626132:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 74
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 35.86085510253906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50",
+            "version_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1",
+            "document_name": "rgb_doc_5c8eb2b3db494b1eaa60bf50.txt",
+            "chunk_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 35.615272521972656,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "Feb 21, 2023 ... 2022年是我国又一个油气丰收年，油气产量持续上升，保持着很好的增储上产劲头。 ... 主要油田：塔里木油田、新疆油田、西北油田、吐哈油田. 新疆油气 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1",
+              "block_ids": [
+                "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 35.615272521972656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb",
+            "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+            "document_name": "rgb_doc_4bc0faf5fda313e5c39fc8bb.txt",
+            "chunk_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 35.09589385986328,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "Jan 1, 2023 ... 本报乌鲁木齐12月31日讯（记者乔文汇）记者从中国石油塔里木油田公司获悉，塔里木油田2022年油气产量当量达3310万吨，创历史新高，同比净增128万吨， ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+              "block_ids": [
+                "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 35.09589385986328,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d",
+            "version_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1",
+            "document_name": "rgb_doc_9a3db8e7a8a80fe1a1195b0d.txt",
+            "chunk_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 34.58837127685547,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Jan 2, 2023 ... 富满油田去年油气产量. 突破300万吨. 本报讯 塔里木油田2022年12月23日发布消息称，位于塔克拉玛干沙漠腹地的我国最大超深油田——富满油田2022年油气 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1",
+              "block_ids": [
+                "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 100
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 34.58837127685547,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cc44b53e5c7a796e2adc2e60",
+            "version_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1",
+            "document_name": "rgb_doc_cc44b53e5c7a796e2adc2e60.txt",
+            "chunk_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 34.31471633911133,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "Feb 11, 2022 ... 中国石油最大的三个油气田是长庆油田、大庆油田、塔里木油田，油气产量当量分别达到6244、4322、3182万吨。 长庆油田是我国第一大油气田，也是我国近10 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1",
+              "block_ids": [
+                "rgb_doc_cc44b53e5c7a796e2adc2e60:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 34.31471633911133,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_00f110fe09caaa436846a81c",
+            "version_id": "rgb_doc_00f110fe09caaa436846a81c:r1",
+            "document_name": "rgb_doc_00f110fe09caaa436846a81c.txt",
+            "chunk_id": "rgb_doc_00f110fe09caaa436846a81c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 34.307350158691406,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "Mar 29, 2023 ... 2022年中国石油油气产量当量创历史新高，新能源规模化发展全面提速， ... 万吨；塔里木油田油气产量当量达3310万吨，创历史新高；西南油气田年产 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_00f110fe09caaa436846a81c:r1",
+              "block_ids": [
+                "rgb_doc_00f110fe09caaa436846a81c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 34.307350158691406,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1aa22f1d0943317d697c592e",
+            "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+            "document_name": "rgb_doc_1aa22f1d0943317d697c592e.txt",
+            "chunk_id": "rgb_doc_1aa22f1d0943317d697c592e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 33.995811462402344,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "Jan 13, 2023 ... 油气产量创历史新高. 2022年，塔里木油田从一场场“逆战”中锐意进取，在一次次飞跃中行稳致远。 立足“十四五”高质量开局新起点，塔里木油田党工委坚定 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+              "block_ids": [
+                "rgb_doc_1aa22f1d0943317d697c592e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 33.995811462402344,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b83e59bce1b312f0d1407f11",
+            "version_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1",
+            "document_name": "rgb_doc_b83e59bce1b312f0d1407f11.txt",
+            "chunk_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 33.9023323059082,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万吨之后，又 ... 过去，难度小、开发成本低的浅层资源，一直是油气勘探开发的重点。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1",
+              "block_ids": [
+                "rgb_doc_b83e59bce1b312f0d1407f11:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 33.9023323059082,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a2244466db9c8f48bcd29ce0",
+            "version_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1",
+            "document_name": "rgb_doc_a2244466db9c8f48bcd29ce0.txt",
+            "chunk_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 33.31660461425781,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "Mar 14, 2022 ... 特别是在去冬今春冬供期间，塔里木油田天然气日产量连攀新高，保持在1亿 ... 亿立方米大气区。2021年，油气产量当量达到3182万吨，其中天然气产量319 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1",
+              "block_ids": [
+                "rgb_doc_a2244466db9c8f48bcd29ce0:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 33.31660461425781,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be",
+            "version_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1",
+            "document_name": "rgb_doc_508a9d2c9f8fe3a1dac2e0be.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_508a9d2c9f8fe3a1dac2e0be.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0fc53e300cf68caae8626132",
+            "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+            "document_name": "rgb_doc_0fc53e300cf68caae8626132.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_0fc53e300cf68caae8626132:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0fc53e300cf68caae8626132.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50",
+            "version_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1",
+            "document_name": "rgb_doc_5c8eb2b3db494b1eaa60bf50.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5c8eb2b3db494b1eaa60bf50.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb",
+            "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+            "document_name": "rgb_doc_4bc0faf5fda313e5c39fc8bb.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4bc0faf5fda313e5c39fc8bb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d",
+            "version_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1",
+            "document_name": "rgb_doc_9a3db8e7a8a80fe1a1195b0d.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9a3db8e7a8a80fe1a1195b0d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cc44b53e5c7a796e2adc2e60",
+            "version_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1",
+            "document_name": "rgb_doc_cc44b53e5c7a796e2adc2e60.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_cc44b53e5c7a796e2adc2e60:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cc44b53e5c7a796e2adc2e60.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_00f110fe09caaa436846a81c",
+            "version_id": "rgb_doc_00f110fe09caaa436846a81c:r1",
+            "document_name": "rgb_doc_00f110fe09caaa436846a81c.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_00f110fe09caaa436846a81c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_00f110fe09caaa436846a81c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1aa22f1d0943317d697c592e",
+            "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+            "document_name": "rgb_doc_1aa22f1d0943317d697c592e.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_1aa22f1d0943317d697c592e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1aa22f1d0943317d697c592e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b83e59bce1b312f0d1407f11",
+            "version_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1",
+            "document_name": "rgb_doc_b83e59bce1b312f0d1407f11.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_b83e59bce1b312f0d1407f11:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b83e59bce1b312f0d1407f11.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a2244466db9c8f48bcd29ce0",
+            "version_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1",
+            "document_name": "rgb_doc_a2244466db9c8f48bcd29ce0.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_a2244466db9c8f48bcd29ce0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a2244466db9c8f48bcd29ce0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3f3f1d5fec9d7e594031d499",
+            "version_id": "rgb_doc_3f3f1d5fec9d7e594031d499:r1",
+            "document_name": "rgb_doc_3f3f1d5fec9d7e594031d499.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_3f3f1d5fec9d7e594031d499:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3f3f1d5fec9d7e594031d499.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ed50cab9bbdd40fb6d6961ba",
+            "version_id": "rgb_doc_ed50cab9bbdd40fb6d6961ba:r1",
+            "document_name": "rgb_doc_ed50cab9bbdd40fb6d6961ba.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_ed50cab9bbdd40fb6d6961ba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ed50cab9bbdd40fb6d6961ba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_769d3a790b7fd19a6067938d",
+            "version_id": "rgb_doc_769d3a790b7fd19a6067938d:r1",
+            "document_name": "rgb_doc_769d3a790b7fd19a6067938d.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_769d3a790b7fd19a6067938d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_769d3a790b7fd19a6067938d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9f503b30f8af6e6d4dcfb923",
+            "version_id": "rgb_doc_9f503b30f8af6e6d4dcfb923:r1",
+            "document_name": "rgb_doc_9f503b30f8af6e6d4dcfb923.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_9f503b30f8af6e6d4dcfb923:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9f503b30f8af6e6d4dcfb923.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c5dfd7343ee599abf1d3794d",
+            "version_id": "rgb_doc_c5dfd7343ee599abf1d3794d:r1",
+            "document_name": "rgb_doc_c5dfd7343ee599abf1d3794d.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_c5dfd7343ee599abf1d3794d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c5dfd7343ee599abf1d3794d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0ce99ca227d5712628b517e0",
+            "version_id": "rgb_doc_0ce99ca227d5712628b517e0:r1",
+            "document_name": "rgb_doc_0ce99ca227d5712628b517e0.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_0ce99ca227d5712628b517e0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0ce99ca227d5712628b517e0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b4de612b8c356897466c171c",
+            "version_id": "rgb_doc_b4de612b8c356897466c171c:r1",
+            "document_name": "rgb_doc_b4de612b8c356897466c171c.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_b4de612b8c356897466c171c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b4de612b8c356897466c171c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edaf68ea11dffd03cf5283f6",
+            "version_id": "rgb_doc_edaf68ea11dffd03cf5283f6:r1",
+            "document_name": "rgb_doc_edaf68ea11dffd03cf5283f6.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_edaf68ea11dffd03cf5283f6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edaf68ea11dffd03cf5283f6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_66f2eaadbd3b9a5c27de3e60",
+            "version_id": "rgb_doc_66f2eaadbd3b9a5c27de3e60:r1",
+            "document_name": "rgb_doc_66f2eaadbd3b9a5c27de3e60.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_66f2eaadbd3b9a5c27de3e60:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_66f2eaadbd3b9a5c27de3e60.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_008cc0087d96143fefbb47c4",
+            "version_id": "rgb_doc_008cc0087d96143fefbb47c4:r1",
+            "document_name": "rgb_doc_008cc0087d96143fefbb47c4.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_008cc0087d96143fefbb47c4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_008cc0087d96143fefbb47c4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d0ebbd8f34dc7660e4d57bd",
+            "version_id": "rgb_doc_0d0ebbd8f34dc7660e4d57bd:r1",
+            "document_name": "rgb_doc_0d0ebbd8f34dc7660e4d57bd.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_0d0ebbd8f34dc7660e4d57bd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0d0ebbd8f34dc7660e4d57bd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_af2bd47f23de274eada38b0f",
+            "version_id": "rgb_doc_af2bd47f23de274eada38b0f:r1",
+            "document_name": "rgb_doc_af2bd47f23de274eada38b0f.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_af2bd47f23de274eada38b0f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_af2bd47f23de274eada38b0f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_43d6004668191f108627598f",
+            "version_id": "rgb_doc_43d6004668191f108627598f:r1",
+            "document_name": "rgb_doc_43d6004668191f108627598f.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_43d6004668191f108627598f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_43d6004668191f108627598f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_691691b238190428096522de",
+            "version_id": "rgb_doc_691691b238190428096522de:r1",
+            "document_name": "rgb_doc_691691b238190428096522de.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_691691b238190428096522de:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_691691b238190428096522de.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9f93aafee36468cde64ebfd1",
+            "version_id": "rgb_doc_9f93aafee36468cde64ebfd1:r1",
+            "document_name": "rgb_doc_9f93aafee36468cde64ebfd1.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_9f93aafee36468cde64ebfd1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9f93aafee36468cde64ebfd1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7ebae21270662c8b6021fb73",
+            "version_id": "rgb_doc_7ebae21270662c8b6021fb73:r1",
+            "document_name": "rgb_doc_7ebae21270662c8b6021fb73.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_7ebae21270662c8b6021fb73:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7ebae21270662c8b6021fb73.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6b2782b0127f013eab7cf1e",
+            "version_id": "rgb_doc_b6b2782b0127f013eab7cf1e:r1",
+            "document_name": "rgb_doc_b6b2782b0127f013eab7cf1e.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_b6b2782b0127f013eab7cf1e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6b2782b0127f013eab7cf1e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_df10e9feba9c6040ec50f55c",
+            "version_id": "rgb_doc_df10e9feba9c6040ec50f55c:r1",
+            "document_name": "rgb_doc_df10e9feba9c6040ec50f55c.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_df10e9feba9c6040ec50f55c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_df10e9feba9c6040ec50f55c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9aa424682fdc580fb2d2b00b",
+            "version_id": "rgb_doc_9aa424682fdc580fb2d2b00b:r1",
+            "document_name": "rgb_doc_9aa424682fdc580fb2d2b00b.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_9aa424682fdc580fb2d2b00b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9aa424682fdc580fb2d2b00b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9c7f19143b5426167b9c2f0d",
+            "version_id": "rgb_doc_9c7f19143b5426167b9c2f0d:r1",
+            "document_name": "rgb_doc_9c7f19143b5426167b9c2f0d.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_9c7f19143b5426167b9c2f0d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9c7f19143b5426167b9c2f0d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6d69883e3ca3a9c8f2a6ae66",
+            "version_id": "rgb_doc_6d69883e3ca3a9c8f2a6ae66:r1",
+            "document_name": "rgb_doc_6d69883e3ca3a9c8f2a6ae66.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_6d69883e3ca3a9c8f2a6ae66:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6d69883e3ca3a9c8f2a6ae66.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2e131f33bd79159863d5d3a9",
+            "version_id": "rgb_doc_2e131f33bd79159863d5d3a9:r1",
+            "document_name": "rgb_doc_2e131f33bd79159863d5d3a9.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_2e131f33bd79159863d5d3a9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2e131f33bd79159863d5d3a9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fec9ad14b0d80414843c4581",
+            "version_id": "rgb_doc_fec9ad14b0d80414843c4581:r1",
+            "document_name": "rgb_doc_fec9ad14b0d80414843c4581.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_fec9ad14b0d80414843c4581:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fec9ad14b0d80414843c4581.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2bc10951cfd36532789a418b",
+            "version_id": "rgb_doc_2bc10951cfd36532789a418b:r1",
+            "document_name": "rgb_doc_2bc10951cfd36532789a418b.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_2bc10951cfd36532789a418b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2bc10951cfd36532789a418b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4ed44af02d1d0f8b023a2717",
+            "version_id": "rgb_doc_4ed44af02d1d0f8b023a2717:r1",
+            "document_name": "rgb_doc_4ed44af02d1d0f8b023a2717.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_4ed44af02d1d0f8b023a2717:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4ed44af02d1d0f8b023a2717.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_97c1dcc33c57fe566b08ed43",
+            "version_id": "rgb_doc_97c1dcc33c57fe566b08ed43:r1",
+            "document_name": "rgb_doc_97c1dcc33c57fe566b08ed43.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_97c1dcc33c57fe566b08ed43:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_97c1dcc33c57fe566b08ed43.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_63cfc5814ca3d2b99515ac5b",
+            "version_id": "rgb_doc_63cfc5814ca3d2b99515ac5b:r1",
+            "document_name": "rgb_doc_63cfc5814ca3d2b99515ac5b.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_63cfc5814ca3d2b99515ac5b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_63cfc5814ca3d2b99515ac5b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6016eb9d84eadb8f77ffde6d",
+            "version_id": "rgb_doc_6016eb9d84eadb8f77ffde6d:r1",
+            "document_name": "rgb_doc_6016eb9d84eadb8f77ffde6d.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_6016eb9d84eadb8f77ffde6d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6016eb9d84eadb8f77ffde6d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cec9d1d90ee7e4b2378fcf57",
+            "version_id": "rgb_doc_cec9d1d90ee7e4b2378fcf57:r1",
+            "document_name": "rgb_doc_cec9d1d90ee7e4b2378fcf57.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_cec9d1d90ee7e4b2378fcf57:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cec9d1d90ee7e4b2378fcf57.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_655f29b8a5cfe883cd9b98ad",
+            "version_id": "rgb_doc_655f29b8a5cfe883cd9b98ad:r1",
+            "document_name": "rgb_doc_655f29b8a5cfe883cd9b98ad.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_655f29b8a5cfe883cd9b98ad:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_655f29b8a5cfe883cd9b98ad.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dfbbe1b86b040c8d32cd7ce6",
+            "version_id": "rgb_doc_dfbbe1b86b040c8d32cd7ce6:r1",
+            "document_name": "rgb_doc_dfbbe1b86b040c8d32cd7ce6.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_dfbbe1b86b040c8d32cd7ce6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dfbbe1b86b040c8d32cd7ce6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ba3e2b63204d59b3ef87c0ff",
+            "version_id": "rgb_doc_ba3e2b63204d59b3ef87c0ff:r1",
+            "document_name": "rgb_doc_ba3e2b63204d59b3ef87c0ff.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_ba3e2b63204d59b3ef87c0ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ba3e2b63204d59b3ef87c0ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fbcdb32bbbc9db6f6964395e",
+            "version_id": "rgb_doc_fbcdb32bbbc9db6f6964395e:r1",
+            "document_name": "rgb_doc_fbcdb32bbbc9db6f6964395e.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_fbcdb32bbbc9db6f6964395e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fbcdb32bbbc9db6f6964395e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_015641a8cf59723028f5e9e8",
+            "version_id": "rgb_doc_015641a8cf59723028f5e9e8:r1",
+            "document_name": "rgb_doc_015641a8cf59723028f5e9e8.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_015641a8cf59723028f5e9e8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_015641a8cf59723028f5e9e8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a039359ab1312b086223df44",
+            "version_id": "rgb_doc_a039359ab1312b086223df44:r1",
+            "document_name": "rgb_doc_a039359ab1312b086223df44.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_a039359ab1312b086223df44:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a039359ab1312b086223df44.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9d69dacbb032eb6c09fbb957",
+            "version_id": "rgb_doc_9d69dacbb032eb6c09fbb957:r1",
+            "document_name": "rgb_doc_9d69dacbb032eb6c09fbb957.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_9d69dacbb032eb6c09fbb957:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9d69dacbb032eb6c09fbb957.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_436a2e81a04f25c13f9b5204",
+            "version_id": "rgb_doc_436a2e81a04f25c13f9b5204:r1",
+            "document_name": "rgb_doc_436a2e81a04f25c13f9b5204.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_436a2e81a04f25c13f9b5204:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_436a2e81a04f25c13f9b5204.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6322f8991566bd99a5821c66",
+            "version_id": "rgb_doc_6322f8991566bd99a5821c66:r1",
+            "document_name": "rgb_doc_6322f8991566bd99a5821c66.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_6322f8991566bd99a5821c66:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6322f8991566bd99a5821c66.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d52ed00f0896129db0683f29",
+            "version_id": "rgb_doc_d52ed00f0896129db0683f29:r1",
+            "document_name": "rgb_doc_d52ed00f0896129db0683f29.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_d52ed00f0896129db0683f29:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d52ed00f0896129db0683f29.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aaa4f964353318363491d7ca",
+            "version_id": "rgb_doc_aaa4f964353318363491d7ca:r1",
+            "document_name": "rgb_doc_aaa4f964353318363491d7ca.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_aaa4f964353318363491d7ca:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aaa4f964353318363491d7ca.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3510b80b5d9ac59781596a70",
+            "version_id": "rgb_doc_3510b80b5d9ac59781596a70:r1",
+            "document_name": "rgb_doc_3510b80b5d9ac59781596a70.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_3510b80b5d9ac59781596a70:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3510b80b5d9ac59781596a70.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e16c3ec662e1077ac80d30a",
+            "version_id": "rgb_doc_4e16c3ec662e1077ac80d30a:r1",
+            "document_name": "rgb_doc_4e16c3ec662e1077ac80d30a.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_4e16c3ec662e1077ac80d30a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4e16c3ec662e1077ac80d30a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_04426582e543328ab8ebf5ba",
+            "version_id": "rgb_doc_04426582e543328ab8ebf5ba:r1",
+            "document_name": "rgb_doc_04426582e543328ab8ebf5ba.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_04426582e543328ab8ebf5ba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_04426582e543328ab8ebf5ba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e49de696fa6ec816bc77f1c5",
+            "version_id": "rgb_doc_e49de696fa6ec816bc77f1c5:r1",
+            "document_name": "rgb_doc_e49de696fa6ec816bc77f1c5.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_e49de696fa6ec816bc77f1c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e49de696fa6ec816bc77f1c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b9fd64eef9ceb4472486f041",
+            "version_id": "rgb_doc_b9fd64eef9ceb4472486f041:r1",
+            "document_name": "rgb_doc_b9fd64eef9ceb4472486f041.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_b9fd64eef9ceb4472486f041:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b9fd64eef9ceb4472486f041.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e754a022fb5fb70871e9c287",
+            "version_id": "rgb_doc_e754a022fb5fb70871e9c287:r1",
+            "document_name": "rgb_doc_e754a022fb5fb70871e9c287.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_e754a022fb5fb70871e9c287:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e754a022fb5fb70871e9c287.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c3a83f10e937c66d6e5eba40",
+            "version_id": "rgb_doc_c3a83f10e937c66d6e5eba40:r1",
+            "document_name": "rgb_doc_c3a83f10e937c66d6e5eba40.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_c3a83f10e937c66d6e5eba40:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c3a83f10e937c66d6e5eba40.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6d25acf9d523708b256df8a",
+            "version_id": "rgb_doc_b6d25acf9d523708b256df8a:r1",
+            "document_name": "rgb_doc_b6d25acf9d523708b256df8a.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_b6d25acf9d523708b256df8a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6d25acf9d523708b256df8a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fc1fd577e370895efd6d48d1",
+            "version_id": "rgb_doc_fc1fd577e370895efd6d48d1:r1",
+            "document_name": "rgb_doc_fc1fd577e370895efd6d48d1.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_fc1fd577e370895efd6d48d1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fc1fd577e370895efd6d48d1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1614b20c68a7c4fc7157ed37",
+            "version_id": "rgb_doc_1614b20c68a7c4fc7157ed37:r1",
+            "document_name": "rgb_doc_1614b20c68a7c4fc7157ed37.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_1614b20c68a7c4fc7157ed37:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1614b20c68a7c4fc7157ed37.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_91486a42daa6cf8ca20e5f03",
+            "version_id": "rgb_doc_91486a42daa6cf8ca20e5f03:r1",
+            "document_name": "rgb_doc_91486a42daa6cf8ca20e5f03.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_91486a42daa6cf8ca20e5f03:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_91486a42daa6cf8ca20e5f03.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20f270e4459c97f07c0b2a9a",
+            "version_id": "rgb_doc_20f270e4459c97f07c0b2a9a:r1",
+            "document_name": "rgb_doc_20f270e4459c97f07c0b2a9a.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_20f270e4459c97f07c0b2a9a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_20f270e4459c97f07c0b2a9a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2bfe957b8ba0692afd64e531",
+            "version_id": "rgb_doc_2bfe957b8ba0692afd64e531:r1",
+            "document_name": "rgb_doc_2bfe957b8ba0692afd64e531.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_2bfe957b8ba0692afd64e531:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2bfe957b8ba0692afd64e531.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2c8130e7a2ec0af89f9687cb",
+            "version_id": "rgb_doc_2c8130e7a2ec0af89f9687cb:r1",
+            "document_name": "rgb_doc_2c8130e7a2ec0af89f9687cb.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_2c8130e7a2ec0af89f9687cb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2c8130e7a2ec0af89f9687cb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_87cb94bf544696607fbfbac1",
+            "version_id": "rgb_doc_87cb94bf544696607fbfbac1:r1",
+            "document_name": "rgb_doc_87cb94bf544696607fbfbac1.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_87cb94bf544696607fbfbac1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_87cb94bf544696607fbfbac1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ae7757fce264a89b8b4edf89",
+            "version_id": "rgb_doc_ae7757fce264a89b8b4edf89:r1",
+            "document_name": "rgb_doc_ae7757fce264a89b8b4edf89.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_ae7757fce264a89b8b4edf89:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ae7757fce264a89b8b4edf89.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_914783c5e4454e57b562e66c",
+            "version_id": "rgb_doc_914783c5e4454e57b562e66c:r1",
+            "document_name": "rgb_doc_914783c5e4454e57b562e66c.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_914783c5e4454e57b562e66c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_914783c5e4454e57b562e66c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cbde14aa59ae53065f5f4e01",
+            "version_id": "rgb_doc_cbde14aa59ae53065f5f4e01:r1",
+            "document_name": "rgb_doc_cbde14aa59ae53065f5f4e01.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_cbde14aa59ae53065f5f4e01:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cbde14aa59ae53065f5f4e01.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bc4890deed9b2bee356f7b4e",
+            "version_id": "rgb_doc_bc4890deed9b2bee356f7b4e:r1",
+            "document_name": "rgb_doc_bc4890deed9b2bee356f7b4e.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_bc4890deed9b2bee356f7b4e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bc4890deed9b2bee356f7b4e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0546a21b8ebdf63d58d10861",
+            "version_id": "rgb_doc_0546a21b8ebdf63d58d10861:r1",
+            "document_name": "rgb_doc_0546a21b8ebdf63d58d10861.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_0546a21b8ebdf63d58d10861:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0546a21b8ebdf63d58d10861.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bfff31af0f807894f15d738f",
+            "version_id": "rgb_doc_bfff31af0f807894f15d738f:r1",
+            "document_name": "rgb_doc_bfff31af0f807894f15d738f.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_bfff31af0f807894f15d738f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bfff31af0f807894f15d738f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_18c8cf89f1f10ee17515614d",
+            "version_id": "rgb_doc_18c8cf89f1f10ee17515614d:r1",
+            "document_name": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_18c8cf89f1f10ee17515614d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_18c8cf89f1f10ee17515614d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_346b847dea621ef8c0c45754",
+            "version_id": "rgb_doc_346b847dea621ef8c0c45754:r1",
+            "document_name": "rgb_doc_346b847dea621ef8c0c45754.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_346b847dea621ef8c0c45754:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_346b847dea621ef8c0c45754.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1063656db2f774fdead88531",
+            "version_id": "rgb_doc_1063656db2f774fdead88531:r1",
+            "document_name": "rgb_doc_1063656db2f774fdead88531.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_1063656db2f774fdead88531:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1063656db2f774fdead88531.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_017c92d38d3ed298913406d5",
+            "version_id": "rgb_doc_017c92d38d3ed298913406d5:r1",
+            "document_name": "rgb_doc_017c92d38d3ed298913406d5.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_017c92d38d3ed298913406d5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_017c92d38d3ed298913406d5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4dee8e10237655375782cf80",
+            "version_id": "rgb_doc_4dee8e10237655375782cf80:r1",
+            "document_name": "rgb_doc_4dee8e10237655375782cf80.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_4dee8e10237655375782cf80:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4dee8e10237655375782cf80.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c66a0ba935758d1f19c87063",
+            "version_id": "rgb_doc_c66a0ba935758d1f19c87063:r1",
+            "document_name": "rgb_doc_c66a0ba935758d1f19c87063.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_c66a0ba935758d1f19c87063:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c66a0ba935758d1f19c87063.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2fb9ad9182a19a4c808ff652",
+            "version_id": "rgb_doc_2fb9ad9182a19a4c808ff652:r1",
+            "document_name": "rgb_doc_2fb9ad9182a19a4c808ff652.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_2fb9ad9182a19a4c808ff652:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2fb9ad9182a19a4c808ff652.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5b55ec957e6c84406edf9b22",
+            "version_id": "rgb_doc_5b55ec957e6c84406edf9b22:r1",
+            "document_name": "rgb_doc_5b55ec957e6c84406edf9b22.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_5b55ec957e6c84406edf9b22:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5b55ec957e6c84406edf9b22.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_982da5c62b2776d00d25438a",
+            "version_id": "rgb_doc_982da5c62b2776d00d25438a:r1",
+            "document_name": "rgb_doc_982da5c62b2776d00d25438a.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_982da5c62b2776d00d25438a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_982da5c62b2776d00d25438a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 8.678041995153762,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 10.490332992048934,
+          "evidence_ms": 2.126208011759445,
+          "fusion_ms": 0.9139589965343475,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 32.80920800170861,
+          "context_chars": 955,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_fe1fef44755c42ad",
+          "ev_63d884909b4bb8a8",
+          "ev_6ddacc2c90ef6860",
+          "ev_5583f7ede610a022",
+          "ev_6723c68e45af5394",
+          "ev_638d462ee1d08235",
+          "ev_c4dc6b6d4ee1f6d6",
+          "ev_e9715f0319285aba",
+          "ev_06dc4c2b103f1f76",
+          "ev_b8a7d79c13260202"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_fe1fef44755c42ad",
+            "content": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万吨之后，又 ... 2022年7月底，“塔里木油田博孜—大北超深大气区100亿立方米产能建设 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be",
+            "version_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1",
+            "document_name": "rgb_doc_508a9d2c9f8fe3a1dac2e0be.txt",
+            "chunk_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1",
+              "block_ids": [
+                "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 104
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 36.5765266418457,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 104,
+            "content_hash": "508a9d2c9f8fe3a1dac2e0be91dfee333b91d9f70ba710d9f4650ffe30825e0d",
+            "scope_digest": "c331fd2b41227967f413d67c2e61d24c16560045f9d18e394dc9517e5cad0e95",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_8204b944ad2862bab432",
+                "source_id": "S1",
+                "evidence_id": "ev_fe1fef44755c42ad",
+                "raw_text": "19",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d61f3e53a290d374cfdf",
+                "source_id": "S1",
+                "evidence_id": "ev_fe1fef44755c42ad",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万吨之后，又 ",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_63d884909b4bb8a8",
+            "content": "Oct 26, 2022 ... 2021年，油田油气产量达到3182万吨油当量。图为塔里木油田一处井区。 谭辉摄（影像中国）. 数据来源： ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0fc53e300cf68caae8626132",
+            "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+            "document_name": "rgb_doc_0fc53e300cf68caae8626132.txt",
+            "chunk_id": "rgb_doc_0fc53e300cf68caae8626132:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+              "block_ids": [
+                "rgb_doc_0fc53e300cf68caae8626132:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 74
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 35.86085510253906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 74,
+            "content_hash": "0fc53e300cf68caae8626132fdfddbaf84a14ddb46ea411351ec32484b53c47a",
+            "scope_digest": "4f475d4636f7e6059ad80b8e251f07688a0ad20f361f0bb919f5bd35abd0db2a",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_7162c7e34155aa77e033",
+                "source_id": "S2",
+                "evidence_id": "ev_63d884909b4bb8a8",
+                "raw_text": "26",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Oct 26, 2022 ... 2021年，油田油气产量达到3182万吨油当量。图为塔里木油田一处井区。 ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_dabd2fdcacadeab51370",
+                "source_id": "S2",
+                "evidence_id": "ev_63d884909b4bb8a8",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Oct 26, 2022 ... 2021年，油田油气产量达到3182万吨油当量。图为塔里木油田一处井区。 谭辉摄（影像",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_6ddacc2c90ef6860",
+            "content": "Feb 21, 2023 ... 2022年是我国又一个油气丰收年，油气产量持续上升，保持着很好的增储上产劲头。 ... 主要油田：塔里木油田、新疆油田、西北油田、吐哈油田. 新疆油气 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50",
+            "version_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1",
+            "document_name": "rgb_doc_5c8eb2b3db494b1eaa60bf50.txt",
+            "chunk_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1",
+              "block_ids": [
+                "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 35.615272521972656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "5c8eb2b3db494b1eaa60bf50b2e023b3e32e4473e5642caf3f02efb94a9302cd",
+            "scope_digest": "03854481b916859ccaa07ae9b7cd91297adda17511681b54f6ab872ed081e07f",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_4b08302b7d7aa8b60fe5",
+                "source_id": "S3",
+                "evidence_id": "ev_6ddacc2c90ef6860",
+                "raw_text": "21",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 21, 2023 ... 2022年是我国又一个油气丰收年，油气产量持续上升，保持着很好的增储上产劲",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_9e5525e320ba59a68ca2",
+                "source_id": "S3",
+                "evidence_id": "ev_6ddacc2c90ef6860",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 21, 2023 ... 2022年是我国又一个油气丰收年，油气产量持续上升，保持着很好的增储上产劲头。 ...",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_5583f7ede610a022",
+            "content": "Jan 1, 2023 ... 本报乌鲁木齐12月31日讯（记者乔文汇）记者从中国石油塔里木油田公司获悉，塔里木油田2022年油气产量当量达3310万吨，创历史新高，同比净增128万吨， ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb",
+            "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+            "document_name": "rgb_doc_4bc0faf5fda313e5c39fc8bb.txt",
+            "chunk_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+              "block_ids": [
+                "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 35.09589385986328,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "4bc0faf5fda313e5c39fc8bb92359fb87d1b44e38968f42f7ac052d06280a883",
+            "scope_digest": "3cf0ddaaf5ab244e278237a545138a2690eb44a562fea5bcb3d6b6c19e3c1473",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_100ee0fdbdc44dd3a426",
+                "source_id": "S4",
+                "evidence_id": "ev_5583f7ede610a022",
+                "raw_text": "1",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2023 ... 本报乌鲁木齐12月31日讯（记者乔文汇）记者从中国石油塔里木油田公司获悉，",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_f52b1abce844ef70926c",
+                "source_id": "S4",
+                "evidence_id": "ev_5583f7ede610a022",
+                "raw_text": "2023",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2023 ... 本报乌鲁木齐12月31日讯（记者乔文汇）记者从中国石油塔里木油田公司获悉，塔里木油田2",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_6723c68e45af5394",
+            "content": "Jan 2, 2023 ... 富满油田去年油气产量. 突破300万吨. 本报讯 塔里木油田2022年12月23日发布消息称，位于塔克拉玛干沙漠腹地的我国最大超深油田——富满油田2022年油气 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d",
+            "version_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1",
+            "document_name": "rgb_doc_9a3db8e7a8a80fe1a1195b0d.txt",
+            "chunk_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1",
+              "block_ids": [
+                "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 100
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 34.58837127685547,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 100,
+            "content_hash": "9a3db8e7a8a80fe1a1195b0d02c001680c00132c224136c75930ef735494020e",
+            "scope_digest": "73d8ae1cf1750e6d4eaed4f9253c32dc29ef8a08cab2c3816892899ea52725ca",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_708b4e7a587f278ea498",
+                "source_id": "S5",
+                "evidence_id": "ev_6723c68e45af5394",
+                "raw_text": "2",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 2, 2023 ... 富满油田去年油气产量. 突破300万吨. 本报讯 塔里木油田2022年12",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_706c18abc72942814e60",
+                "source_id": "S5",
+                "evidence_id": "ev_6723c68e45af5394",
+                "raw_text": "2023",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 2, 2023 ... 富满油田去年油气产量. 突破300万吨. 本报讯 塔里木油田2022年12月23日发布",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_638d462ee1d08235",
+            "content": "Feb 11, 2022 ... 中国石油最大的三个油气田是长庆油田、大庆油田、塔里木油田，油气产量当量分别达到6244、4322、3182万吨。 长庆油田是我国第一大油气田，也是我国近10 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cc44b53e5c7a796e2adc2e60",
+            "version_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1",
+            "document_name": "rgb_doc_cc44b53e5c7a796e2adc2e60.txt",
+            "chunk_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1",
+              "block_ids": [
+                "rgb_doc_cc44b53e5c7a796e2adc2e60:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 34.31471633911133,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 99,
+            "content_hash": "cc44b53e5c7a796e2adc2e605cf91219dc010d72beade6dafcb2672099920ede",
+            "scope_digest": "74fb1b58ca6e55010fcb19fd073cbff3c9e15226cc2db39e34b372e8656b52a8",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_2dc0ae97e974342d510c",
+                "source_id": "S6",
+                "evidence_id": "ev_638d462ee1d08235",
+                "raw_text": "11",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 11, 2022 ... 中国石油最大的三个油气田是长庆油田、大庆油田、塔里木油田，油气产量当量分别",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d1c980a57f429e6d3389",
+                "source_id": "S6",
+                "evidence_id": "ev_638d462ee1d08235",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Feb 11, 2022 ... 中国石油最大的三个油气田是长庆油田、大庆油田、塔里木油田，油气产量当量分别达到6244",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_1619b987c015165f9f88",
+                "source_id": "S6",
+                "evidence_id": "ev_638d462ee1d08235",
+                "raw_text": "4322",
+                "start": 61,
+                "end": 65,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "... 中国石油最大的三个油气田是长庆油田、大庆油田、塔里木油田，油气产量当量分别达到6244、4322、3182万吨。 长庆油田是我国第一大油气田，也是我国近10 ...",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_c4dc6b6d4ee1f6d6",
+            "content": "Mar 29, 2023 ... 2022年中国石油油气产量当量创历史新高，新能源规模化发展全面提速， ... 万吨；塔里木油田油气产量当量达3310万吨，创历史新高；西南油气田年产 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_00f110fe09caaa436846a81c",
+            "version_id": "rgb_doc_00f110fe09caaa436846a81c:r1",
+            "document_name": "rgb_doc_00f110fe09caaa436846a81c.txt",
+            "chunk_id": "rgb_doc_00f110fe09caaa436846a81c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_00f110fe09caaa436846a81c:r1",
+              "block_ids": [
+                "rgb_doc_00f110fe09caaa436846a81c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 34.307350158691406,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 95,
+            "content_hash": "00f110fe09caaa436846a81c8f4c9f33c8707eb87105621a9b7ff49ad304e8f4",
+            "scope_digest": "047dfffea42ef17f2b94ca000f6394b42d666cfa49a33915af207ae8cf8e57b2",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_3b90e1a7c63a12ba9913",
+                "source_id": "S7",
+                "evidence_id": "ev_c4dc6b6d4ee1f6d6",
+                "raw_text": "29",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 29, 2023 ... 2022年中国石油油气产量当量创历史新高，新能源规模化发展全面提速， ..",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_dcc32154ceb5f565c4c9",
+                "source_id": "S7",
+                "evidence_id": "ev_c4dc6b6d4ee1f6d6",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 29, 2023 ... 2022年中国石油油气产量当量创历史新高，新能源规模化发展全面提速， ... 万吨；塔",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_e9715f0319285aba",
+            "content": "Jan 13, 2023 ... 油气产量创历史新高. 2022年，塔里木油田从一场场“逆战”中锐意进取，在一次次飞跃中行稳致远。 立足“十四五”高质量开局新起点，塔里木油田党工委坚定 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1aa22f1d0943317d697c592e",
+            "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+            "document_name": "rgb_doc_1aa22f1d0943317d697c592e.txt",
+            "chunk_id": "rgb_doc_1aa22f1d0943317d697c592e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+              "block_ids": [
+                "rgb_doc_1aa22f1d0943317d697c592e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 33.995811462402344,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "1aa22f1d0943317d697c592e72d637a8d9754f96f58a2bc8cca90106d6f0f0db",
+            "scope_digest": "3a3bfde1d03686cc2d98b99c27d00a5853859217b7f0f22f6bea2b6c785b8c1f",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_67f42bd849cefe7156f0",
+                "source_id": "S8",
+                "evidence_id": "ev_e9715f0319285aba",
+                "raw_text": "13",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 13, 2023 ... 油气产量创历史新高. 2022年，塔里木油田从一场场“逆战”中锐意进取，在",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_f67681fe7a8eb4be6387",
+                "source_id": "S8",
+                "evidence_id": "ev_e9715f0319285aba",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 13, 2023 ... 油气产量创历史新高. 2022年，塔里木油田从一场场“逆战”中锐意进取，在一次次飞跃中",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_06dc4c2b103f1f76",
+            "content": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万吨之后，又 ... 过去，难度小、开发成本低的浅层资源，一直是油气勘探开发的重点。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b83e59bce1b312f0d1407f11",
+            "version_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1",
+            "document_name": "rgb_doc_b83e59bce1b312f0d1407f11.txt",
+            "chunk_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1",
+              "block_ids": [
+                "rgb_doc_b83e59bce1b312f0d1407f11:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 33.9023323059082,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 95,
+            "content_hash": "b83e59bce1b312f0d1407f110ee90065cb97e2796274b3f924361f603d449512",
+            "scope_digest": "1a6b0b5b42e99b3a16adb1a2afe5490c2dff4af858f6cb4e2a6a7f4332a102f2",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_f615431a84c125529afd",
+                "source_id": "S9",
+                "evidence_id": "ev_06dc4c2b103f1f76",
+                "raw_text": "19",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_187e428649acae5e3ce1",
+                "source_id": "S9",
+                "evidence_id": "ev_06dc4c2b103f1f76",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Aug 19, 2022 ... 时光穿梭至2021年，塔里木油田油气产量当量继2020年首次突破3000万吨之后，又 ",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b8a7d79c13260202",
+            "content": "Mar 14, 2022 ... 特别是在去冬今春冬供期间，塔里木油田天然气日产量连攀新高，保持在1亿 ... 亿立方米大气区。2021年，油气产量当量达到3182万吨，其中天然气产量319 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a2244466db9c8f48bcd29ce0",
+            "version_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1",
+            "document_name": "rgb_doc_a2244466db9c8f48bcd29ce0.txt",
+            "chunk_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1",
+              "block_ids": [
+                "rgb_doc_a2244466db9c8f48bcd29ce0:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 33.31660461425781,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 99,
+            "content_hash": "a2244466db9c8f48bcd29ce0a7067948a61003e6fde3a48383c482f1fb72646b",
+            "scope_digest": "c0297a82676f2ef67e79101634c6b4120e7b19ea1484b13ffb276626fa89847f",
+            "trace_id": "d971b693ba06414dbab57b180362024a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_610a4317cf6c2da720aa",
+                "source_id": "S10",
+                "evidence_id": "ev_b8a7d79c13260202",
+                "raw_text": "14",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 14, 2022 ... 特别是在去冬今春冬供期间，塔里木油田天然气日产量连攀新高，保持在1亿 ..",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_cb2077248a78a66b3068",
+                "source_id": "S10",
+                "evidence_id": "ev_b8a7d79c13260202",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 14, 2022 ... 特别是在去冬今春冬供期间，塔里木油田天然气日产量连攀新高，保持在1亿 ... 亿立方米",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_fe1fef44755c42ad",
+      "ev_63d884909b4bb8a8",
+      "ev_6ddacc2c90ef6860",
+      "ev_5583f7ede610a022",
+      "ev_6723c68e45af5394",
+      "ev_638d462ee1d08235",
+      "ev_c4dc6b6d4ee1f6d6"
+    ],
+    "evidence": {
+      "ev_fe1fef44755c42ad": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be",
+        "version_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1",
+        "document_name": "rgb_doc_508a9d2c9f8fe3a1dac2e0be.txt",
+        "chunk_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1",
+          "block_ids": [
+            "rgb_doc_508a9d2c9f8fe3a1dac2e0be:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 104
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 36.5765266418457,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 104,
+        "content_hash": "508a9d2c9f8fe3a1dac2e0be91dfee333b91d9f70ba710d9f4650ffe30825e0d",
+        "scope_digest": "c331fd2b41227967f413d67c2e61d24c16560045f9d18e394dc9517e5cad0e95",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_63d884909b4bb8a8": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_0fc53e300cf68caae8626132",
+        "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+        "document_name": "rgb_doc_0fc53e300cf68caae8626132.txt",
+        "chunk_id": "rgb_doc_0fc53e300cf68caae8626132:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_0fc53e300cf68caae8626132:r1",
+          "block_ids": [
+            "rgb_doc_0fc53e300cf68caae8626132:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 74
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 35.86085510253906,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 74,
+        "content_hash": "0fc53e300cf68caae8626132fdfddbaf84a14ddb46ea411351ec32484b53c47a",
+        "scope_digest": "4f475d4636f7e6059ad80b8e251f07688a0ad20f361f0bb919f5bd35abd0db2a",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_6ddacc2c90ef6860": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50",
+        "version_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1",
+        "document_name": "rgb_doc_5c8eb2b3db494b1eaa60bf50.txt",
+        "chunk_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1",
+          "block_ids": [
+            "rgb_doc_5c8eb2b3db494b1eaa60bf50:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 35.615272521972656,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "5c8eb2b3db494b1eaa60bf50b2e023b3e32e4473e5642caf3f02efb94a9302cd",
+        "scope_digest": "03854481b916859ccaa07ae9b7cd91297adda17511681b54f6ab872ed081e07f",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_5583f7ede610a022": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb",
+        "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+        "document_name": "rgb_doc_4bc0faf5fda313e5c39fc8bb.txt",
+        "chunk_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1",
+          "block_ids": [
+            "rgb_doc_4bc0faf5fda313e5c39fc8bb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 35.09589385986328,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "4bc0faf5fda313e5c39fc8bb92359fb87d1b44e38968f42f7ac052d06280a883",
+        "scope_digest": "3cf0ddaaf5ab244e278237a545138a2690eb44a562fea5bcb3d6b6c19e3c1473",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_6723c68e45af5394": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d",
+        "version_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1",
+        "document_name": "rgb_doc_9a3db8e7a8a80fe1a1195b0d.txt",
+        "chunk_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1",
+          "block_ids": [
+            "rgb_doc_9a3db8e7a8a80fe1a1195b0d:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 100
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 34.58837127685547,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 100,
+        "content_hash": "9a3db8e7a8a80fe1a1195b0d02c001680c00132c224136c75930ef735494020e",
+        "scope_digest": "73d8ae1cf1750e6d4eaed4f9253c32dc29ef8a08cab2c3816892899ea52725ca",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_638d462ee1d08235": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_cc44b53e5c7a796e2adc2e60",
+        "version_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1",
+        "document_name": "rgb_doc_cc44b53e5c7a796e2adc2e60.txt",
+        "chunk_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_cc44b53e5c7a796e2adc2e60:r1",
+          "block_ids": [
+            "rgb_doc_cc44b53e5c7a796e2adc2e60:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 99
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 34.31471633911133,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 99,
+        "content_hash": "cc44b53e5c7a796e2adc2e605cf91219dc010d72beade6dafcb2672099920ede",
+        "scope_digest": "74fb1b58ca6e55010fcb19fd073cbff3c9e15226cc2db39e34b372e8656b52a8",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_c4dc6b6d4ee1f6d6": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_00f110fe09caaa436846a81c",
+        "version_id": "rgb_doc_00f110fe09caaa436846a81c:r1",
+        "document_name": "rgb_doc_00f110fe09caaa436846a81c.txt",
+        "chunk_id": "rgb_doc_00f110fe09caaa436846a81c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_00f110fe09caaa436846a81c:r1",
+          "block_ids": [
+            "rgb_doc_00f110fe09caaa436846a81c:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 95
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 34.307350158691406,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 95,
+        "content_hash": "00f110fe09caaa436846a81c8f4c9f33c8707eb87105621a9b7ff49ad304e8f4",
+        "scope_digest": "047dfffea42ef17f2b94ca000f6394b42d666cfa49a33915af207ae8cf8e57b2",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_e9715f0319285aba": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_1aa22f1d0943317d697c592e",
+        "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+        "document_name": "rgb_doc_1aa22f1d0943317d697c592e.txt",
+        "chunk_id": "rgb_doc_1aa22f1d0943317d697c592e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_1aa22f1d0943317d697c592e:r1",
+          "block_ids": [
+            "rgb_doc_1aa22f1d0943317d697c592e:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 33.995811462402344,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "1aa22f1d0943317d697c592e72d637a8d9754f96f58a2bc8cca90106d6f0f0db",
+        "scope_digest": "3a3bfde1d03686cc2d98b99c27d00a5853859217b7f0f22f6bea2b6c785b8c1f",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_06dc4c2b103f1f76": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b83e59bce1b312f0d1407f11",
+        "version_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1",
+        "document_name": "rgb_doc_b83e59bce1b312f0d1407f11.txt",
+        "chunk_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b83e59bce1b312f0d1407f11:r1",
+          "block_ids": [
+            "rgb_doc_b83e59bce1b312f0d1407f11:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 95
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 33.9023323059082,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 95,
+        "content_hash": "b83e59bce1b312f0d1407f110ee90065cb97e2796274b3f924361f603d449512",
+        "scope_digest": "1a6b0b5b42e99b3a16adb1a2afe5490c2dff4af858f6cb4e2a6a7f4332a102f2",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b8a7d79c13260202": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_a2244466db9c8f48bcd29ce0",
+        "version_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1",
+        "document_name": "rgb_doc_a2244466db9c8f48bcd29ce0.txt",
+        "chunk_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_a2244466db9c8f48bcd29ce0:r1",
+          "block_ids": [
+            "rgb_doc_a2244466db9c8f48bcd29ce0:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 99
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 33.31660461425781,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 99,
+        "content_hash": "a2244466db9c8f48bcd29ce0a7067948a61003e6fde3a48383c482f1fb72646b",
+        "scope_digest": "c0297a82676f2ef67e79101634c6b4120e7b19ea1484b13ffb276626fa89847f",
+        "trace_id": "d971b693ba06414dbab57b180362024a",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_fe1fef44755c42ad",
+      "S2": "ev_63d884909b4bb8a8",
+      "S3": "ev_6ddacc2c90ef6860",
+      "S4": "ev_5583f7ede610a022",
+      "S5": "ev_6723c68e45af5394",
+      "S6": "ev_638d462ee1d08235",
+      "S7": "ev_c4dc6b6d4ee1f6d6",
+      "S8": "ev_e9715f0319285aba",
+      "S9": "ev_06dc4c2b103f1f76",
+      "S10": "ev_b8a7d79c13260202"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

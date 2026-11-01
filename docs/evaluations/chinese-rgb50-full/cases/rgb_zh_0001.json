@@ -1,0 +1,3122 @@
+{
+  "question_id": "rgb_zh_0001",
+  "result": {
+    "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+    "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:1",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:2",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:3",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "context_chars": 1193,
+        "prompt_tokens": 8442,
+        "completion_tokens": 52,
+        "total_tokens": 8494,
+        "context_compaction_count": 0,
+        "context_chars_before": 1193,
+        "context_chars_after": 1193,
+        "estimated_input_tokens": 12133,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1487,
+        "remaining_run_tokens": 111506,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8442,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3691
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:4",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1193
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:5",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "tool_call_id": "call_15a9cb83beb34ff2a7fa9e",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:6",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "tool_call_id": "call_15a9cb83beb34ff2a7fa9e",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:7",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_15a9cb83beb34ff2a7fa9e",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 10,
+        "output_chars_before": 74110,
+        "output_chars_after": 13876,
+        "removed_chars": 60234,
+        "document_metadata_chars": 22745,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 19837,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:8",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:9",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:10",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "context_chars": 15069,
+        "prompt_tokens": 14954,
+        "completion_tokens": 2000,
+        "total_tokens": 16954,
+        "context_compaction_count": 0,
+        "context_chars_before": 15069,
+        "context_chars_after": 15069,
+        "estimated_input_tokens": 20873,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 8054,
+        "evidence_tokens": 2538,
+        "history_tokens": 2173,
+        "remaining_run_tokens": 94552,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 14954,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5919
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:11",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "model_visible_evidence_count": 10,
+        "context_chars": 15069
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:12",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "citation_validation_reason": [
+          "invalid_claim_structure",
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:13",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "context_chars": 6839,
+        "prompt_tokens": 3338,
+        "completion_tokens": 255,
+        "total_tokens": 3593,
+        "context_compaction_count": 0,
+        "context_chars_before": 6839,
+        "context_chars_after": 6839,
+        "estimated_input_tokens": 8063,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 8063,
+        "remaining_run_tokens": 90959,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 3338,
+        "usage_source": "provider",
+        "estimation_error_tokens": -4725
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:14",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:15",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "delta": "印控克什米尔地区瓦希诺德维寺踩踏事故造成12人死亡、14人受伤。 [1] [2] [3] [4] [5]\n\n该事故发生在2022年1月1日，当时大批印度民众聚集在寺庙庆贺新年。 [3] [4] [5]\n\n事故地点位于印控查谟和克什米尔地区的瓦希诺德维寺。 [6] [3] [4] [5]\n\n事故发生在寺庙外，当时有大量民众涌入寺庙。 [3]\n\n事故原因包括大量民众涌入寺庙，部分人未经许可进入，导致踩踏事件发生。 [3] [4]\n\n事故中有人摔倒引发连锁反应，导致多人伤亡。 [4]\n\n印度总理莫迪在事故发生后第一时间就此事发声。 [4]\n\n救援行动立即展开，所有伤者已被送往医院，部分伤者情况严重。 [3]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:16",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c",
+        "final_citation_count": 6,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_59c665f7c59b4903887c9215fea4eb31:9ad9a0a9068b410a9c9a429fbf3489ae:17",
+        "run_id": "run_59c665f7c59b4903887c9215fea4eb31",
+        "thread_id": "thread_3c7d4dd8a5844da984bc8160a43a133c"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 26734,
+      "completion_tokens": 2307,
+      "total_tokens": 29041
+    },
+    "elapsed_seconds": 54.25293837500794,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 10,
+      "output_truncated": true,
+      "context_chars": 15069,
+      "prompt_tokens": 26734,
+      "completion_tokens": 2307,
+      "total_tokens": 29041,
+      "context_compaction_count": 0,
+      "context_chars_before": 6839,
+      "context_chars_after": 6839,
+      "estimated_input_tokens": 8063,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 8063,
+      "remaining_run_tokens": 90959,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 3338,
+      "usage_source": "provider",
+      "estimation_error_tokens": -4725,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_15a9cb83beb34ff2a7fa9e",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 10,
+          "output_chars_before": 74110,
+          "output_chars_after": 13876,
+          "removed_chars": 60234,
+          "document_metadata_chars": 22745,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 19837,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "invalid_claim_structure",
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 6839,
+      "repair_visible_evidence_count": 10,
+      "final_citation_count": 6,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "印控克什米尔地区瓦希诺德维寺踩踏事故造成12人死亡、14人受伤。 [1] [2] [3] [4] [5]\n\n该事故发生在2022年1月1日，当时大批印度民众聚集在寺庙庆贺新年。 [3] [4] [5]\n\n事故地点位于印控查谟和克什米尔地区的瓦希诺德维寺。 [6] [3] [4] [5]\n\n事故发生在寺庙外，当时有大量民众涌入寺庙。 [3]\n\n事故原因包括大量民众涌入寺庙，部分人未经许可进入，导致踩踏事件发生。 [3] [4]\n\n事故中有人摔倒引发连锁反应，导致多人伤亡。 [4]\n\n印度总理莫迪在事故发生后第一时间就此事发声。 [4]\n\n救援行动立即展开，所有伤者已被送往医院，部分伤者情况严重。 [3]",
+      "citations": {
+        "ev_597fc111b57f08e0": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_921d8ad9f261e105c5247268",
+          "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+          "document_name": "rgb_doc_921d8ad9f261e105c5247268.txt",
+          "chunk_id": "rgb_doc_921d8ad9f261e105c5247268:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "Nov 10, 2022 ... ... 年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡；今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+            "block_ids": [
+              "rgb_doc_921d8ad9f261e105c5247268:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 90
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 63.66661834716797,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_5d4eb0d87c4cb656": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_ec4022492bc30511fd8c0117",
+          "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+          "document_name": "rgb_doc_ec4022492bc30511fd8c0117.txt",
+          "chunk_id": "rgb_doc_ec4022492bc30511fd8c0117:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "印度近年来发生过不少类似的悲惨事件：2013年，因为有传言称一座桥即将坍塌，中央邦德蒂亚地区发生踩踏事故，造成115人死亡；2017年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡；今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。 莫尔维吊桥垮塌时，桥上人流量约为五六百人，其中包括妇女和儿童，而上桥需要买票，这意味着当局原本可以按照吊桥的承受能力减少售票量，从而控制人群数量。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+            "block_ids": [
+              "rgb_doc_ec4022492bc30511fd8c0117:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 209
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 50.44802474975586,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_495160abc8636df3": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_8f6e6f84a956572bd1d30ef8",
+          "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+          "document_name": "rgb_doc_8f6e6f84a956572bd1d30ef8.txt",
+          "chunk_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 4,
+          "source_score": null,
+          "fused_score": 0.015625,
+          "rerank_score": null,
+          "content": "海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。  当地时间1月1日，大批印度民众聚集在瓦希诺德维寺庆贺新年，期间发生踩踏事故。警方证实，12人在踩踏事故中丧生，14人受伤，救援行动立即展开，所有伤者已被送往医院，部分伤者情况严重。 当地官员透露，事件发生在寺庙外，当时有大量民众涌入寺庙，有的人甚至未经许可就进入寺庙，紧接着踩踏事件就发生了。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+            "block_ids": [
+              "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 213
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 4,
+              "score": 50.16633605957031,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_c1f0fe4faf0e0162": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_4913f72e3b479494ae378377",
+          "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+          "document_name": "rgb_doc_4913f72e3b479494ae378377.txt",
+          "chunk_id": "rgb_doc_4913f72e3b479494ae378377:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "当时，大批民众聚集在寺庙门口，大门打开后人群立刻涌入，一名女子直接摔倒在地，随后其他人也跟着摔倒。 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏事件，造成至少12人死亡、14人受伤。当天，大批印度民众聚集在此庆贺新年，不少人未经许可涌入寺庙，导致踩踏事件发生，事后印度总理莫迪也在第一时间就此事发声。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+            "block_ids": [
+              "rgb_doc_4913f72e3b479494ae378377:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 162
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 47.100341796875,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_b280f9aba8c643af": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_4660b7e82bf0c8926e6b1761",
+          "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+          "document_name": "rgb_doc_4660b7e82bf0c8926e6b1761.txt",
+          "chunk_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 8,
+          "source_score": null,
+          "fused_score": 0.014705882352941176,
+          "rerank_score": null,
+          "content": "Jan 1, 2022 ... 海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+            "block_ids": [
+              "rgb_doc_4660b7e82bf0c8926e6b1761:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 81
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 8,
+              "score": 46.47612762451172,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_19885108c0e59c50": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_25251ef6931d6294fdb73188",
+          "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+          "document_name": "rgb_doc_25251ef6931d6294fdb73188.txt",
+          "chunk_id": "rgb_doc_25251ef6931d6294fdb73188:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "Dec 30, 2022 ... 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏 ... 韩媒称，这是自“世越”号沉船事故后，韩国发生的死亡人数最多的一起 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+            "block_ids": [
+              "rgb_doc_25251ef6931d6294fdb73188:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 92
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 50.96946334838867,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "印控克什米尔地区瓦希诺德维寺踩踏事故造成12人死亡、14人受伤。",
+          "source_ids": [
+            "S1",
+            "S3",
+            "S4",
+            "S7",
+            "S8"
+          ]
+        },
+        {
+          "text": "该事故发生在2022年1月1日，当时大批印度民众聚集在寺庙庆贺新年。",
+          "source_ids": [
+            "S4",
+            "S7",
+            "S8"
+          ]
+        },
+        {
+          "text": "事故地点位于印控查谟和克什米尔地区的瓦希诺德维寺。",
+          "source_ids": [
+            "S2",
+            "S4",
+            "S7",
+            "S8"
+          ]
+        },
+        {
+          "text": "事故发生在寺庙外，当时有大量民众涌入寺庙。",
+          "source_ids": [
+            "S4"
+          ]
+        },
+        {
+          "text": "事故原因包括大量民众涌入寺庙，部分人未经许可进入，导致踩踏事件发生。",
+          "source_ids": [
+            "S4",
+            "S7"
+          ]
+        },
+        {
+          "text": "事故中有人摔倒引发连锁反应，导致多人伤亡。",
+          "source_ids": [
+            "S7"
+          ]
+        },
+        {
+          "text": "印度总理莫迪在事故发生后第一时间就此事发声。",
+          "source_ids": [
+            "S7"
+          ]
+        },
+        {
+          "text": "救援行动立即展开，所有伤者已被送往医院，部分伤者情况严重。",
+          "source_ids": [
+            "S4"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_597fc111b57f08e0"
+        },
+        {
+          "number": 2,
+          "source_id": "S3",
+          "evidence_id": "ev_5d4eb0d87c4cb656"
+        },
+        {
+          "number": 3,
+          "source_id": "S4",
+          "evidence_id": "ev_495160abc8636df3"
+        },
+        {
+          "number": 4,
+          "source_id": "S7",
+          "evidence_id": "ev_c1f0fe4faf0e0162"
+        },
+        {
+          "number": 5,
+          "source_id": "S8",
+          "evidence_id": "ev_b280f9aba8c643af"
+        },
+        {
+          "number": 6,
+          "source_id": "S2",
+          "evidence_id": "ev_19885108c0e59c50"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_15a9cb83beb34ff2a7fa9e",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "印控克什米尔地区寺庙踩踏事故死亡人数",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_921d8ad9f261e105c5247268",
+            "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+            "document_name": "rgb_doc_921d8ad9f261e105c5247268.txt",
+            "chunk_id": "rgb_doc_921d8ad9f261e105c5247268:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 63.66661834716797,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Nov 10, 2022 ... ... 年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡；今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+              "block_ids": [
+                "rgb_doc_921d8ad9f261e105c5247268:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 90
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 63.66661834716797,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_25251ef6931d6294fdb73188",
+            "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+            "document_name": "rgb_doc_25251ef6931d6294fdb73188.txt",
+            "chunk_id": "rgb_doc_25251ef6931d6294fdb73188:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 50.96946334838867,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Dec 30, 2022 ... 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏 ... 韩媒称，这是自“世越”号沉船事故后，韩国发生的死亡人数最多的一起 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+              "block_ids": [
+                "rgb_doc_25251ef6931d6294fdb73188:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 50.96946334838867,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec4022492bc30511fd8c0117",
+            "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+            "document_name": "rgb_doc_ec4022492bc30511fd8c0117.txt",
+            "chunk_id": "rgb_doc_ec4022492bc30511fd8c0117:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 50.44802474975586,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "印度近年来发生过不少类似的悲惨事件：2013年，因为有传言称一座桥即将坍塌，中央邦德蒂亚地区发生踩踏事故，造成115人死亡；2017年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡；今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。 莫尔维吊桥垮塌时，桥上人流量约为五六百人，其中包括妇女和儿童，而上桥需要买票，这意味着当局原本可以按照吊桥的承受能力减少售票量，从而控制人群数量。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+              "block_ids": [
+                "rgb_doc_ec4022492bc30511fd8c0117:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 209
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 50.44802474975586,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f6e6f84a956572bd1d30ef8",
+            "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+            "document_name": "rgb_doc_8f6e6f84a956572bd1d30ef8.txt",
+            "chunk_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 50.16633605957031,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。  当地时间1月1日，大批印度民众聚集在瓦希诺德维寺庆贺新年，期间发生踩踏事故。警方证实，12人在踩踏事故中丧生，14人受伤，救援行动立即展开，所有伤者已被送往医院，部分伤者情况严重。 当地官员透露，事件发生在寺庙外，当时有大量民众涌入寺庙，有的人甚至未经许可就进入寺庙，紧接着踩踏事件就发生了。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+              "block_ids": [
+                "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 213
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 50.16633605957031,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa",
+            "version_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1",
+            "document_name": "rgb_doc_609163fc2b5d50bb4ce5b7fa.txt",
+            "chunk_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 48.92697525024414,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "据印度媒体5月30日报道，印控克什米尔地区发生一起交通事故，一辆巴士在行驶过程中坠入深谷，已造成10人死亡。事故原因仍在调查中。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1",
+              "block_ids": [
+                "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 64
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 48.92697525024414,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55e5e923688c9d39eb35d84e",
+            "version_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1",
+            "document_name": "rgb_doc_55e5e923688c9d39eb35d84e.txt",
+            "chunk_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 48.18844223022461,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "May 30, 2023 ... 据印度媒体5月30日报道，印控克什米尔地区发生一起交通事故，一辆巴士在行驶过程中坠入深谷，已造成10人死亡。事故原因仍在调查中。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1",
+              "block_ids": [
+                "rgb_doc_55e5e923688c9d39eb35d84e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 81
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 48.18844223022461,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4913f72e3b479494ae378377",
+            "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+            "document_name": "rgb_doc_4913f72e3b479494ae378377.txt",
+            "chunk_id": "rgb_doc_4913f72e3b479494ae378377:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 47.100341796875,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "当时，大批民众聚集在寺庙门口，大门打开后人群立刻涌入，一名女子直接摔倒在地，随后其他人也跟着摔倒。 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏事件，造成至少12人死亡、14人受伤。当天，大批印度民众聚集在此庆贺新年，不少人未经许可涌入寺庙，导致踩踏事件发生，事后印度总理莫迪也在第一时间就此事发声。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+              "block_ids": [
+                "rgb_doc_4913f72e3b479494ae378377:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 162
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 47.100341796875,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4660b7e82bf0c8926e6b1761",
+            "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+            "document_name": "rgb_doc_4660b7e82bf0c8926e6b1761.txt",
+            "chunk_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 46.47612762451172,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "Jan 1, 2022 ... 海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+              "block_ids": [
+                "rgb_doc_4660b7e82bf0c8926e6b1761:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 81
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 46.47612762451172,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2aa20cbce1d0b2d011225aca",
+            "version_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1",
+            "document_name": "rgb_doc_2aa20cbce1d0b2d011225aca.txt",
+            "chunk_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 30.65873146057129,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "印度踩踏事件频发 自今年以来，印度已经发生过多起类似的踩踏事故，不少人更是因此失去生命。三个多月前，印度南部一场国际板球比赛的售票现场发生踩踏事件，造成至少20人受伤，现场一度引发骚乱，最终警方只能动用警棍驱赶人群，印媒称，当时的购票现场可以用“噩梦”来形容。 （大批民众涌入寺庙） 就在这场踩踏事件发生的一个多月前，印度拉贾斯坦邦一座寺庙的入口处发生踩踏事故，造成3人死亡，2人受伤。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1",
+              "block_ids": [
+                "rgb_doc_2aa20cbce1d0b2d011225aca:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 193
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 30.65873146057129,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9bb971b18b63ef63e6487bcf",
+            "version_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1",
+            "document_name": "rgb_doc_9bb971b18b63ef63e6487bcf.txt",
+            "chunk_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 27.504762649536133,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "大规模的搜救行动正在进行中，预计死亡人数还会上升。 ... 飓风“艾达”带来的强暴雨侵袭纽约和周边地区，多个街区被淹，数十人死亡。 ... 印度封锁下的克什米尔.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1",
+              "block_ids": [
+                "rgb_doc_9bb971b18b63ef63e6487bcf:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 81
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 27.504762649536133,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_921d8ad9f261e105c5247268",
+            "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+            "document_name": "rgb_doc_921d8ad9f261e105c5247268.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_921d8ad9f261e105c5247268:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_921d8ad9f261e105c5247268.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_25251ef6931d6294fdb73188",
+            "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+            "document_name": "rgb_doc_25251ef6931d6294fdb73188.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_25251ef6931d6294fdb73188:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_25251ef6931d6294fdb73188.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec4022492bc30511fd8c0117",
+            "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+            "document_name": "rgb_doc_ec4022492bc30511fd8c0117.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_ec4022492bc30511fd8c0117:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ec4022492bc30511fd8c0117.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f6e6f84a956572bd1d30ef8",
+            "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+            "document_name": "rgb_doc_8f6e6f84a956572bd1d30ef8.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8f6e6f84a956572bd1d30ef8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa",
+            "version_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1",
+            "document_name": "rgb_doc_609163fc2b5d50bb4ce5b7fa.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_609163fc2b5d50bb4ce5b7fa.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55e5e923688c9d39eb35d84e",
+            "version_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1",
+            "document_name": "rgb_doc_55e5e923688c9d39eb35d84e.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_55e5e923688c9d39eb35d84e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_55e5e923688c9d39eb35d84e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4913f72e3b479494ae378377",
+            "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+            "document_name": "rgb_doc_4913f72e3b479494ae378377.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_4913f72e3b479494ae378377:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4913f72e3b479494ae378377.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4660b7e82bf0c8926e6b1761",
+            "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+            "document_name": "rgb_doc_4660b7e82bf0c8926e6b1761.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_4660b7e82bf0c8926e6b1761:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4660b7e82bf0c8926e6b1761.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2aa20cbce1d0b2d011225aca",
+            "version_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1",
+            "document_name": "rgb_doc_2aa20cbce1d0b2d011225aca.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_2aa20cbce1d0b2d011225aca:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2aa20cbce1d0b2d011225aca.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9bb971b18b63ef63e6487bcf",
+            "version_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1",
+            "document_name": "rgb_doc_9bb971b18b63ef63e6487bcf.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_9bb971b18b63ef63e6487bcf:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9bb971b18b63ef63e6487bcf.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9db538a17b0da511e556b0d6",
+            "version_id": "rgb_doc_9db538a17b0da511e556b0d6:r1",
+            "document_name": "rgb_doc_9db538a17b0da511e556b0d6.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_9db538a17b0da511e556b0d6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9db538a17b0da511e556b0d6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9a891ced1e07cb164afe74f4",
+            "version_id": "rgb_doc_9a891ced1e07cb164afe74f4:r1",
+            "document_name": "rgb_doc_9a891ced1e07cb164afe74f4.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_9a891ced1e07cb164afe74f4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9a891ced1e07cb164afe74f4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_429a224523f4c0ac7b10fbea",
+            "version_id": "rgb_doc_429a224523f4c0ac7b10fbea:r1",
+            "document_name": "rgb_doc_429a224523f4c0ac7b10fbea.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_429a224523f4c0ac7b10fbea:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_429a224523f4c0ac7b10fbea.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e7ff8b1eaacec7330a8dec8",
+            "version_id": "rgb_doc_4e7ff8b1eaacec7330a8dec8:r1",
+            "document_name": "rgb_doc_4e7ff8b1eaacec7330a8dec8.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_4e7ff8b1eaacec7330a8dec8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4e7ff8b1eaacec7330a8dec8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c32b6f591e32b14684790402",
+            "version_id": "rgb_doc_c32b6f591e32b14684790402:r1",
+            "document_name": "rgb_doc_c32b6f591e32b14684790402.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_c32b6f591e32b14684790402:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c32b6f591e32b14684790402.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d6e2bfce9e9af0200ee9592b",
+            "version_id": "rgb_doc_d6e2bfce9e9af0200ee9592b:r1",
+            "document_name": "rgb_doc_d6e2bfce9e9af0200ee9592b.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_d6e2bfce9e9af0200ee9592b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d6e2bfce9e9af0200ee9592b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aef711ea4d867d0e203e9c86",
+            "version_id": "rgb_doc_aef711ea4d867d0e203e9c86:r1",
+            "document_name": "rgb_doc_aef711ea4d867d0e203e9c86.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_aef711ea4d867d0e203e9c86:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aef711ea4d867d0e203e9c86.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0bc3e2462646f0d6a8dbd29e",
+            "version_id": "rgb_doc_0bc3e2462646f0d6a8dbd29e:r1",
+            "document_name": "rgb_doc_0bc3e2462646f0d6a8dbd29e.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_0bc3e2462646f0d6a8dbd29e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0bc3e2462646f0d6a8dbd29e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9f15b57d840c86ecd59745cc",
+            "version_id": "rgb_doc_9f15b57d840c86ecd59745cc:r1",
+            "document_name": "rgb_doc_9f15b57d840c86ecd59745cc.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_9f15b57d840c86ecd59745cc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9f15b57d840c86ecd59745cc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_56b3c66c48d9e4a49473c58e",
+            "version_id": "rgb_doc_56b3c66c48d9e4a49473c58e:r1",
+            "document_name": "rgb_doc_56b3c66c48d9e4a49473c58e.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_56b3c66c48d9e4a49473c58e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_56b3c66c48d9e4a49473c58e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c622103710c02d7c6ea92ab4",
+            "version_id": "rgb_doc_c622103710c02d7c6ea92ab4:r1",
+            "document_name": "rgb_doc_c622103710c02d7c6ea92ab4.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_c622103710c02d7c6ea92ab4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c622103710c02d7c6ea92ab4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95d5ce438173760b0c497681",
+            "version_id": "rgb_doc_95d5ce438173760b0c497681:r1",
+            "document_name": "rgb_doc_95d5ce438173760b0c497681.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_95d5ce438173760b0c497681:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_95d5ce438173760b0c497681.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0546a21b8ebdf63d58d10861",
+            "version_id": "rgb_doc_0546a21b8ebdf63d58d10861:r1",
+            "document_name": "rgb_doc_0546a21b8ebdf63d58d10861.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_0546a21b8ebdf63d58d10861:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0546a21b8ebdf63d58d10861.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8d6964088d5b751b3d640f75",
+            "version_id": "rgb_doc_8d6964088d5b751b3d640f75:r1",
+            "document_name": "rgb_doc_8d6964088d5b751b3d640f75.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_8d6964088d5b751b3d640f75:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8d6964088d5b751b3d640f75.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1add5c0f31c4c745fb641ce1",
+            "version_id": "rgb_doc_1add5c0f31c4c745fb641ce1:r1",
+            "document_name": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_1add5c0f31c4c745fb641ce1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b4e224feeff181a5aff3f15d",
+            "version_id": "rgb_doc_b4e224feeff181a5aff3f15d:r1",
+            "document_name": "rgb_doc_b4e224feeff181a5aff3f15d.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_b4e224feeff181a5aff3f15d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b4e224feeff181a5aff3f15d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4743583ba7b6689c7291617c",
+            "version_id": "rgb_doc_4743583ba7b6689c7291617c:r1",
+            "document_name": "rgb_doc_4743583ba7b6689c7291617c.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_4743583ba7b6689c7291617c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4743583ba7b6689c7291617c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f650170fd17768eb3152e945",
+            "version_id": "rgb_doc_f650170fd17768eb3152e945:r1",
+            "document_name": "rgb_doc_f650170fd17768eb3152e945.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_f650170fd17768eb3152e945:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f650170fd17768eb3152e945.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e2c39f14db632d5f82ca6bf4",
+            "version_id": "rgb_doc_e2c39f14db632d5f82ca6bf4:r1",
+            "document_name": "rgb_doc_e2c39f14db632d5f82ca6bf4.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_e2c39f14db632d5f82ca6bf4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e2c39f14db632d5f82ca6bf4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_04426582e543328ab8ebf5ba",
+            "version_id": "rgb_doc_04426582e543328ab8ebf5ba:r1",
+            "document_name": "rgb_doc_04426582e543328ab8ebf5ba.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_04426582e543328ab8ebf5ba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_04426582e543328ab8ebf5ba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e49de696fa6ec816bc77f1c5",
+            "version_id": "rgb_doc_e49de696fa6ec816bc77f1c5:r1",
+            "document_name": "rgb_doc_e49de696fa6ec816bc77f1c5.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_e49de696fa6ec816bc77f1c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e49de696fa6ec816bc77f1c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_87766fb4735a1081efaa16fd",
+            "version_id": "rgb_doc_87766fb4735a1081efaa16fd:r1",
+            "document_name": "rgb_doc_87766fb4735a1081efaa16fd.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_87766fb4735a1081efaa16fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_87766fb4735a1081efaa16fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_43d04a1b633b6fa072f5b5fd",
+            "version_id": "rgb_doc_43d04a1b633b6fa072f5b5fd:r1",
+            "document_name": "rgb_doc_43d04a1b633b6fa072f5b5fd.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_43d04a1b633b6fa072f5b5fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_43d04a1b633b6fa072f5b5fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a328beacff506468a158b420",
+            "version_id": "rgb_doc_a328beacff506468a158b420:r1",
+            "document_name": "rgb_doc_a328beacff506468a158b420.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_a328beacff506468a158b420:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a328beacff506468a158b420.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0af16f9a6db7e2dfce64edf3",
+            "version_id": "rgb_doc_0af16f9a6db7e2dfce64edf3:r1",
+            "document_name": "rgb_doc_0af16f9a6db7e2dfce64edf3.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_0af16f9a6db7e2dfce64edf3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0af16f9a6db7e2dfce64edf3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ab0b78b19af6594a5936dfdd",
+            "version_id": "rgb_doc_ab0b78b19af6594a5936dfdd:r1",
+            "document_name": "rgb_doc_ab0b78b19af6594a5936dfdd.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_ab0b78b19af6594a5936dfdd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ab0b78b19af6594a5936dfdd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_766ac389fc1a2886accc98a6",
+            "version_id": "rgb_doc_766ac389fc1a2886accc98a6:r1",
+            "document_name": "rgb_doc_766ac389fc1a2886accc98a6.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_766ac389fc1a2886accc98a6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_766ac389fc1a2886accc98a6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_acd49ea96ea8c0cb0ec74a80",
+            "version_id": "rgb_doc_acd49ea96ea8c0cb0ec74a80:r1",
+            "document_name": "rgb_doc_acd49ea96ea8c0cb0ec74a80.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_acd49ea96ea8c0cb0ec74a80:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_acd49ea96ea8c0cb0ec74a80.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_165f276239bedd5ebffc0abd",
+            "version_id": "rgb_doc_165f276239bedd5ebffc0abd:r1",
+            "document_name": "rgb_doc_165f276239bedd5ebffc0abd.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_165f276239bedd5ebffc0abd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_165f276239bedd5ebffc0abd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2219260464a1817c052ddd9f",
+            "version_id": "rgb_doc_2219260464a1817c052ddd9f:r1",
+            "document_name": "rgb_doc_2219260464a1817c052ddd9f.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_2219260464a1817c052ddd9f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2219260464a1817c052ddd9f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 12.910082994494587,
+              "candidate_count": 40,
+              "verified_count": 40,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.799374995869584,
+          "evidence_ms": 1.6531659930478781,
+          "fusion_ms": 0.568125004065223,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 40,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 42.82783299277071,
+          "context_chars": 1266,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_597fc111b57f08e0",
+          "ev_19885108c0e59c50",
+          "ev_5d4eb0d87c4cb656",
+          "ev_495160abc8636df3",
+          "ev_cc0e080c506e340b",
+          "ev_c1ec1e9a52656252",
+          "ev_c1f0fe4faf0e0162",
+          "ev_b280f9aba8c643af",
+          "ev_7a2ea7df22903375",
+          "ev_d348af3dead8573e"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_597fc111b57f08e0",
+            "content": "Nov 10, 2022 ... ... 年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡；今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_921d8ad9f261e105c5247268",
+            "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+            "document_name": "rgb_doc_921d8ad9f261e105c5247268.txt",
+            "chunk_id": "rgb_doc_921d8ad9f261e105c5247268:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+              "block_ids": [
+                "rgb_doc_921d8ad9f261e105c5247268:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 90
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 63.66661834716797,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 90,
+            "content_hash": "921d8ad9f261e105c5247268abb31b04a3b7001b664c434300b99e56d25a605c",
+            "scope_digest": "9a99e8b32c5c4a13f58473a8cd9ab7d34d19a1b75fb44b6722751012322a364c",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_7a355d5d47146531c94b",
+                "source_id": "S1",
+                "evidence_id": "ev_597fc111b57f08e0",
+                "raw_text": "10",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Nov 10, 2022 ... ... 年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_c71bdb96e74094c09870",
+                "source_id": "S1",
+                "evidence_id": "ev_597fc111b57f08e0",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Nov 10, 2022 ... ... 年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡；今年1月，",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_19885108c0e59c50",
+            "content": "Dec 30, 2022 ... 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏 ... 韩媒称，这是自“世越”号沉船事故后，韩国发生的死亡人数最多的一起 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_25251ef6931d6294fdb73188",
+            "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+            "document_name": "rgb_doc_25251ef6931d6294fdb73188.txt",
+            "chunk_id": "rgb_doc_25251ef6931d6294fdb73188:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+              "block_ids": [
+                "rgb_doc_25251ef6931d6294fdb73188:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 50.96946334838867,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "25251ef6931d6294fdb731884eda27d966021cc0192a1b6e81118b05a346b8da",
+            "scope_digest": "ea576242eb78b0eae2891567531646043e14ce07ae282704bb593a65ec61de70",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_310c7fa36993feaf38a9",
+                "source_id": "S2",
+                "evidence_id": "ev_19885108c0e59c50",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 30, 2022 ... 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏 ..",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_a4a7ad86cbb00b1662f1",
+                "source_id": "S2",
+                "evidence_id": "ev_19885108c0e59c50",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 30, 2022 ... 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏 ... 韩媒称，",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_5d4eb0d87c4cb656",
+            "content": "印度近年来发生过不少类似的悲惨事件：2013年，因为有传言称一座桥即将坍塌，中央邦德蒂亚地区发生踩踏事故，造成115人死亡；2017年，孟买埃尔芬斯通车站一座狭窄的步行桥发生踩踏事故，造成23人死亡；今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。 莫尔维吊桥垮塌时，桥上人流量约为五六百人，其中包括妇女和儿童，而上桥需要买票，这意味着当局原本可以按照吊桥的承受能力减少售票量，从而控制人群数量。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec4022492bc30511fd8c0117",
+            "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+            "document_name": "rgb_doc_ec4022492bc30511fd8c0117.txt",
+            "chunk_id": "rgb_doc_ec4022492bc30511fd8c0117:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+              "block_ids": [
+                "rgb_doc_ec4022492bc30511fd8c0117:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 209
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 50.44802474975586,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 209,
+            "content_hash": "ec4022492bc30511fd8c01179b9882cd24f2d740ce1161d4f2fc6ad17439558a",
+            "scope_digest": "8ca207d40b7c2b7b08883e3400a868278f52d4fb82ed0f77d61f3f07b93f5ac6",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_495160abc8636df3",
+            "content": "海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。  当地时间1月1日，大批印度民众聚集在瓦希诺德维寺庆贺新年，期间发生踩踏事故。警方证实，12人在踩踏事故中丧生，14人受伤，救援行动立即展开，所有伤者已被送往医院，部分伤者情况严重。 当地官员透露，事件发生在寺庙外，当时有大量民众涌入寺庙，有的人甚至未经许可就进入寺庙，紧接着踩踏事件就发生了。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f6e6f84a956572bd1d30ef8",
+            "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+            "document_name": "rgb_doc_8f6e6f84a956572bd1d30ef8.txt",
+            "chunk_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+              "block_ids": [
+                "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 213
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 50.16633605957031,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 213,
+            "content_hash": "8f6e6f84a956572bd1d30ef863512756645e0cc7667f9dd67053005dea6a31d3",
+            "scope_digest": "a697ea7cb31a85c5158291e0a8b541adada6c149e3dc8a830350bf7c7c3c9192",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_cc0e080c506e340b",
+            "content": "据印度媒体5月30日报道，印控克什米尔地区发生一起交通事故，一辆巴士在行驶过程中坠入深谷，已造成10人死亡。事故原因仍在调查中。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa",
+            "version_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1",
+            "document_name": "rgb_doc_609163fc2b5d50bb4ce5b7fa.txt",
+            "chunk_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1",
+              "block_ids": [
+                "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 64
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 48.92697525024414,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 64,
+            "content_hash": "609163fc2b5d50bb4ce5b7fabcfdee27c6bec918869a2ee51abca8ac022adc74",
+            "scope_digest": "aa7da8db3426048bca322c5eb28967be2d2f6b8a15761e9982e5a7511c483714",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_c1ec1e9a52656252",
+            "content": "May 30, 2023 ... 据印度媒体5月30日报道，印控克什米尔地区发生一起交通事故，一辆巴士在行驶过程中坠入深谷，已造成10人死亡。事故原因仍在调查中。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55e5e923688c9d39eb35d84e",
+            "version_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1",
+            "document_name": "rgb_doc_55e5e923688c9d39eb35d84e.txt",
+            "chunk_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1",
+              "block_ids": [
+                "rgb_doc_55e5e923688c9d39eb35d84e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 81
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 48.18844223022461,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 81,
+            "content_hash": "55e5e923688c9d39eb35d84e6e0d5c07cfd7ef11ff074e1836a42c2fdc351964",
+            "scope_digest": "24250cc14618e97c012436f79661e2f27fff0477d659868da890132812ff0189",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_dab56b8263c0a8a843aa",
+                "source_id": "S6",
+                "evidence_id": "ev_c1ec1e9a52656252",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 30, 2023 ... 据印度媒体5月30日报道，印控克什米尔地区发生一起交通事故，一辆巴士在行驶",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ba1de3881e1036af3dae",
+                "source_id": "S6",
+                "evidence_id": "ev_c1ec1e9a52656252",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 30, 2023 ... 据印度媒体5月30日报道，印控克什米尔地区发生一起交通事故，一辆巴士在行驶过程中坠入深",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_c1f0fe4faf0e0162",
+            "content": "当时，大批民众聚集在寺庙门口，大门打开后人群立刻涌入，一名女子直接摔倒在地，随后其他人也跟着摔倒。 而在今年年初，位于印控查谟和克什米尔地区的瓦希诺德维寺也发生一起踩踏事件，造成至少12人死亡、14人受伤。当天，大批印度民众聚集在此庆贺新年，不少人未经许可涌入寺庙，导致踩踏事件发生，事后印度总理莫迪也在第一时间就此事发声。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4913f72e3b479494ae378377",
+            "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+            "document_name": "rgb_doc_4913f72e3b479494ae378377.txt",
+            "chunk_id": "rgb_doc_4913f72e3b479494ae378377:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+              "block_ids": [
+                "rgb_doc_4913f72e3b479494ae378377:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 162
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 47.100341796875,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 162,
+            "content_hash": "4913f72e3b479494ae378377b5e512586f10de30ea941561d1a23930af1b69ee",
+            "scope_digest": "29636d7ddaba5317839fe99fb64ad1041a4503c22d8f846b355e6aa2ac86bab1",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b280f9aba8c643af",
+            "content": "Jan 1, 2022 ... 海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4660b7e82bf0c8926e6b1761",
+            "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+            "document_name": "rgb_doc_4660b7e82bf0c8926e6b1761.txt",
+            "chunk_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+              "block_ids": [
+                "rgb_doc_4660b7e82bf0c8926e6b1761:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 81
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 46.47612762451172,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 81,
+            "content_hash": "4660b7e82bf0c8926e6b1761880608875ba204ce7b0874ad2e4d5396d2397c6d",
+            "scope_digest": "2f09e71f7fd38d4abdf68bc8a20e928b3762300b698b1d530c70305f6c65b56b",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_1804ed98351e5dd9f6de",
+                "source_id": "S8",
+                "evidence_id": "ev_b280f9aba8c643af",
+                "raw_text": "1",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2022 ... 海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_b52d27ae00c810bbf84c",
+                "source_id": "S8",
+                "evidence_id": "ev_b280f9aba8c643af",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 1, 2022 ... 海外网1月1日电 据印度新德里电视台报道，位于印控查谟和克什米尔地区的瓦希诺德维寺发生",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_7a2ea7df22903375",
+            "content": "印度踩踏事件频发 自今年以来，印度已经发生过多起类似的踩踏事故，不少人更是因此失去生命。三个多月前，印度南部一场国际板球比赛的售票现场发生踩踏事件，造成至少20人受伤，现场一度引发骚乱，最终警方只能动用警棍驱赶人群，印媒称，当时的购票现场可以用“噩梦”来形容。 （大批民众涌入寺庙） 就在这场踩踏事件发生的一个多月前，印度拉贾斯坦邦一座寺庙的入口处发生踩踏事故，造成3人死亡，2人受伤。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2aa20cbce1d0b2d011225aca",
+            "version_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1",
+            "document_name": "rgb_doc_2aa20cbce1d0b2d011225aca.txt",
+            "chunk_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1",
+              "block_ids": [
+                "rgb_doc_2aa20cbce1d0b2d011225aca:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 193
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 30.65873146057129,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 193,
+            "content_hash": "2aa20cbce1d0b2d011225aca28439d7b62120585d24c50376a7f5af13d027fd7",
+            "scope_digest": "87d252dcf44d7441782a6f91c683882ce20f6f7a030e05034a5fc32ad8012c1b",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d348af3dead8573e",
+            "content": "大规模的搜救行动正在进行中，预计死亡人数还会上升。 ... 飓风“艾达”带来的强暴雨侵袭纽约和周边地区，多个街区被淹，数十人死亡。 ... 印度封锁下的克什米尔.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9bb971b18b63ef63e6487bcf",
+            "version_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1",
+            "document_name": "rgb_doc_9bb971b18b63ef63e6487bcf.txt",
+            "chunk_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1",
+              "block_ids": [
+                "rgb_doc_9bb971b18b63ef63e6487bcf:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 81
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 27.504762649536133,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 81,
+            "content_hash": "9bb971b18b63ef63e6487bcfe44c90b89125fe3575e4b0fcaa2718c0443553ec",
+            "scope_digest": "cd7a27f66c07ee7eced8e5dc9ebf1ca7ca2fc242ba83bb97a1cb6d1ce8ae59df",
+            "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_597fc111b57f08e0",
+      "ev_19885108c0e59c50",
+      "ev_5d4eb0d87c4cb656",
+      "ev_495160abc8636df3",
+      "ev_cc0e080c506e340b",
+      "ev_c1ec1e9a52656252",
+      "ev_c1f0fe4faf0e0162",
+      "ev_b280f9aba8c643af",
+      "ev_7a2ea7df22903375",
+      "ev_d348af3dead8573e"
+    ],
+    "evidence": {
+      "ev_597fc111b57f08e0": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_921d8ad9f261e105c5247268",
+        "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+        "document_name": "rgb_doc_921d8ad9f261e105c5247268.txt",
+        "chunk_id": "rgb_doc_921d8ad9f261e105c5247268:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_921d8ad9f261e105c5247268:r1",
+          "block_ids": [
+            "rgb_doc_921d8ad9f261e105c5247268:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 90
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 63.66661834716797,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 90,
+        "content_hash": "921d8ad9f261e105c5247268abb31b04a3b7001b664c434300b99e56d25a605c",
+        "scope_digest": "9a99e8b32c5c4a13f58473a8cd9ab7d34d19a1b75fb44b6722751012322a364c",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_19885108c0e59c50": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_25251ef6931d6294fdb73188",
+        "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+        "document_name": "rgb_doc_25251ef6931d6294fdb73188.txt",
+        "chunk_id": "rgb_doc_25251ef6931d6294fdb73188:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_25251ef6931d6294fdb73188:r1",
+          "block_ids": [
+            "rgb_doc_25251ef6931d6294fdb73188:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 50.96946334838867,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "25251ef6931d6294fdb731884eda27d966021cc0192a1b6e81118b05a346b8da",
+        "scope_digest": "ea576242eb78b0eae2891567531646043e14ce07ae282704bb593a65ec61de70",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_5d4eb0d87c4cb656": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_ec4022492bc30511fd8c0117",
+        "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+        "document_name": "rgb_doc_ec4022492bc30511fd8c0117.txt",
+        "chunk_id": "rgb_doc_ec4022492bc30511fd8c0117:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_ec4022492bc30511fd8c0117:r1",
+          "block_ids": [
+            "rgb_doc_ec4022492bc30511fd8c0117:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 209
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 50.44802474975586,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 209,
+        "content_hash": "ec4022492bc30511fd8c01179b9882cd24f2d740ce1161d4f2fc6ad17439558a",
+        "scope_digest": "8ca207d40b7c2b7b08883e3400a868278f52d4fb82ed0f77d61f3f07b93f5ac6",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_495160abc8636df3": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_8f6e6f84a956572bd1d30ef8",
+        "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+        "document_name": "rgb_doc_8f6e6f84a956572bd1d30ef8.txt",
+        "chunk_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_8f6e6f84a956572bd1d30ef8:r1",
+          "block_ids": [
+            "rgb_doc_8f6e6f84a956572bd1d30ef8:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 213
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 50.16633605957031,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 213,
+        "content_hash": "8f6e6f84a956572bd1d30ef863512756645e0cc7667f9dd67053005dea6a31d3",
+        "scope_digest": "a697ea7cb31a85c5158291e0a8b541adada6c149e3dc8a830350bf7c7c3c9192",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_cc0e080c506e340b": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa",
+        "version_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1",
+        "document_name": "rgb_doc_609163fc2b5d50bb4ce5b7fa.txt",
+        "chunk_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1",
+          "block_ids": [
+            "rgb_doc_609163fc2b5d50bb4ce5b7fa:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 64
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 48.92697525024414,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 64,
+        "content_hash": "609163fc2b5d50bb4ce5b7fabcfdee27c6bec918869a2ee51abca8ac022adc74",
+        "scope_digest": "aa7da8db3426048bca322c5eb28967be2d2f6b8a15761e9982e5a7511c483714",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_c1ec1e9a52656252": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_55e5e923688c9d39eb35d84e",
+        "version_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1",
+        "document_name": "rgb_doc_55e5e923688c9d39eb35d84e.txt",
+        "chunk_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_55e5e923688c9d39eb35d84e:r1",
+          "block_ids": [
+            "rgb_doc_55e5e923688c9d39eb35d84e:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 81
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 48.18844223022461,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 81,
+        "content_hash": "55e5e923688c9d39eb35d84e6e0d5c07cfd7ef11ff074e1836a42c2fdc351964",
+        "scope_digest": "24250cc14618e97c012436f79661e2f27fff0477d659868da890132812ff0189",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_c1f0fe4faf0e0162": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4913f72e3b479494ae378377",
+        "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+        "document_name": "rgb_doc_4913f72e3b479494ae378377.txt",
+        "chunk_id": "rgb_doc_4913f72e3b479494ae378377:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4913f72e3b479494ae378377:r1",
+          "block_ids": [
+            "rgb_doc_4913f72e3b479494ae378377:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 162
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 47.100341796875,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 162,
+        "content_hash": "4913f72e3b479494ae378377b5e512586f10de30ea941561d1a23930af1b69ee",
+        "scope_digest": "29636d7ddaba5317839fe99fb64ad1041a4503c22d8f846b355e6aa2ac86bab1",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b280f9aba8c643af": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4660b7e82bf0c8926e6b1761",
+        "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+        "document_name": "rgb_doc_4660b7e82bf0c8926e6b1761.txt",
+        "chunk_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4660b7e82bf0c8926e6b1761:r1",
+          "block_ids": [
+            "rgb_doc_4660b7e82bf0c8926e6b1761:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 81
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 46.47612762451172,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 81,
+        "content_hash": "4660b7e82bf0c8926e6b1761880608875ba204ce7b0874ad2e4d5396d2397c6d",
+        "scope_digest": "2f09e71f7fd38d4abdf68bc8a20e928b3762300b698b1d530c70305f6c65b56b",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_7a2ea7df22903375": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_2aa20cbce1d0b2d011225aca",
+        "version_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1",
+        "document_name": "rgb_doc_2aa20cbce1d0b2d011225aca.txt",
+        "chunk_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_2aa20cbce1d0b2d011225aca:r1",
+          "block_ids": [
+            "rgb_doc_2aa20cbce1d0b2d011225aca:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 193
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 30.65873146057129,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 193,
+        "content_hash": "2aa20cbce1d0b2d011225aca28439d7b62120585d24c50376a7f5af13d027fd7",
+        "scope_digest": "87d252dcf44d7441782a6f91c683882ce20f6f7a030e05034a5fc32ad8012c1b",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d348af3dead8573e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9bb971b18b63ef63e6487bcf",
+        "version_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1",
+        "document_name": "rgb_doc_9bb971b18b63ef63e6487bcf.txt",
+        "chunk_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9bb971b18b63ef63e6487bcf:r1",
+          "block_ids": [
+            "rgb_doc_9bb971b18b63ef63e6487bcf:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 81
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 27.504762649536133,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 81,
+        "content_hash": "9bb971b18b63ef63e6487bcfe44c90b89125fe3575e4b0fcaa2718c0443553ec",
+        "scope_digest": "cd7a27f66c07ee7eced8e5dc9ebf1ca7ca2fc242ba83bb97a1cb6d1ce8ae59df",
+        "trace_id": "099c23fd9d32456ab2d5f1447e502811",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_597fc111b57f08e0",
+      "S2": "ev_19885108c0e59c50",
+      "S3": "ev_5d4eb0d87c4cb656",
+      "S4": "ev_495160abc8636df3",
+      "S5": "ev_cc0e080c506e340b",
+      "S6": "ev_c1ec1e9a52656252",
+      "S7": "ev_c1f0fe4faf0e0162",
+      "S8": "ev_b280f9aba8c643af",
+      "S9": "ev_7a2ea7df22903375",
+      "S10": "ev_d348af3dead8573e"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

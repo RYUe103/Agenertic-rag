@@ -1,0 +1,3238 @@
+{
+  "question_id": "rgb_zh_0050",
+  "result": {
+    "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+    "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:1",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:2",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:3",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "context_chars": 1189,
+        "prompt_tokens": 8436,
+        "completion_tokens": 44,
+        "total_tokens": 8480,
+        "context_compaction_count": 0,
+        "context_chars_before": 1189,
+        "context_chars_after": 1189,
+        "estimated_input_tokens": 12126,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1480,
+        "remaining_run_tokens": 111520,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8436,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3690
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:4",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1189
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:5",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "tool_call_id": "call_722c96631a7f49ebb862a9",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:6",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "tool_call_id": "call_722c96631a7f49ebb862a9",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:7",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_722c96631a7f49ebb862a9",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 7,
+        "output_chars_before": 77972,
+        "output_chars_after": 14186,
+        "removed_chars": 63786,
+        "document_metadata_chars": 22745,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 19837,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:8",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:9",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:10",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "context_chars": 15375,
+        "prompt_tokens": 14883,
+        "completion_tokens": 43,
+        "total_tokens": 14926,
+        "context_compaction_count": 0,
+        "context_chars_before": 15375,
+        "context_chars_after": 15375,
+        "estimated_input_tokens": 20290,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7439,
+        "evidence_tokens": 1159,
+        "history_tokens": 2205,
+        "remaining_run_tokens": 96594,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 14883,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5407
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:11",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "model_visible_evidence_count": 7,
+        "context_chars": 15375
+      },
+      {
+        "type": "answer_started",
+        "sequence": 12,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:12",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 13,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:13",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "delta": "东京奥运会于2021年7月23日开幕。 [1] [2] [3] [4] [5] [6]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 14,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:14",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3",
+        "final_citation_count": 6,
+        "citation_validation_reason": [],
+        "repair_attempted": false,
+        "repair_success": false
+      },
+      {
+        "type": "completed",
+        "sequence": 15,
+        "event_id": "run_4798a6f0111848ca97174ee709a79ea9:f6434078c26f48c1b9456687f882cd7c:15",
+        "run_id": "run_4798a6f0111848ca97174ee709a79ea9",
+        "thread_id": "thread_1020c9ef744f40c2b6cd49ca92501dc3"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 2,
+    "usage": {
+      "prompt_tokens": 23319,
+      "completion_tokens": 87,
+      "total_tokens": 23406
+    },
+    "elapsed_seconds": 3.912061625000206,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 7,
+      "output_truncated": true,
+      "context_chars": 15375,
+      "prompt_tokens": 23319,
+      "completion_tokens": 87,
+      "total_tokens": 23406,
+      "context_compaction_count": 0,
+      "context_chars_before": 15375,
+      "context_chars_after": 15375,
+      "estimated_input_tokens": 20290,
+      "tool_schema_tokens": 10646,
+      "observation_tokens": 7439,
+      "evidence_tokens": 1159,
+      "history_tokens": 2205,
+      "remaining_run_tokens": 96594,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 14883,
+      "usage_source": "provider",
+      "estimation_error_tokens": -5407,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_722c96631a7f49ebb862a9",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 7,
+          "output_chars_before": 77972,
+          "output_chars_after": 14186,
+          "removed_chars": 63786,
+          "document_metadata_chars": 22745,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 19837,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "final_citation_count": 6,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "东京奥运会于2021年7月23日开幕。 [1] [2] [3] [4] [5] [6]",
+      "citations": {
+        "ev_e47f7117a05bbf0d": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+          "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+          "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+          "chunk_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+            "block_ids": [
+              "rgb_doc_7d32bc72c92429b00411fcbd:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 94
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 27.39337921142578,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_9fee32caa1098105": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+          "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+          "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+          "chunk_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+            "block_ids": [
+              "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 94
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 27.39337921142578,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_3aabce25f7506d01": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_6352cba58821024a6925ba68",
+          "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+          "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+          "chunk_id": "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大使：东京奥运会是新冠肺炎疫情发生以来举行的首场全球性大型体育赛事， ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+            "block_ids": [
+              "rgb_doc_6352cba58821024a6925ba68:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 91
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 25.98978614807129,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_60a8f08575e8f2b4": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_460859bfa02f5241ed021894",
+          "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+          "document_name": "rgb_doc_460859bfa02f5241ed021894.txt",
+          "chunk_id": "rgb_doc_460859bfa02f5241ed021894:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "Jul 22, 2021 ... 新华社东京7月22日电（记者王恒志、王沁鸥）在因新冠肺炎疫情延期一年后，第32届夏季奥林匹克运动会将于23日在日本东京开幕。 本届东京奥运会是奥运 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+            "block_ids": [
+              "rgb_doc_460859bfa02f5241ed021894:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 94
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 24.756450653076172,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_8dd2eac0d025f8cf": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+          "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+          "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+          "chunk_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 6,
+          "source_score": null,
+          "fused_score": 0.015151515151515152,
+          "rerank_score": null,
+          "content": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每个日本人都对奥运会兴奋不已，”现年69岁的井上和夫（Kazuo Inoue，音）说，他清楚 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+            "block_ids": [
+              "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 103
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 6,
+              "score": 24.55394744873047,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_4f0fa3690b5ad832": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_5c2414410db015246fb5133b",
+          "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+          "document_name": "rgb_doc_5c2414410db015246fb5133b.txt",
+          "chunk_id": "rgb_doc_5c2414410db015246fb5133b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "Jul 24, 2021 ... 7月23日是东京奥运会开幕日，距离开幕式主会场新国立竞技场一步之遥的乒乓球赛场东京体育馆却稍显冷清。按照组委会的安排，训练时段集中在上午，下午 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+            "block_ids": [
+              "rgb_doc_5c2414410db015246fb5133b:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 92
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 24.031173706054688,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "东京奥运会于2021年7月23日开幕。",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S3",
+            "S5",
+            "S6",
+            "S7"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_e47f7117a05bbf0d"
+        },
+        {
+          "number": 2,
+          "source_id": "S2",
+          "evidence_id": "ev_9fee32caa1098105"
+        },
+        {
+          "number": 3,
+          "source_id": "S3",
+          "evidence_id": "ev_3aabce25f7506d01"
+        },
+        {
+          "number": 4,
+          "source_id": "S5",
+          "evidence_id": "ev_60a8f08575e8f2b4"
+        },
+        {
+          "number": 5,
+          "source_id": "S6",
+          "evidence_id": "ev_8dd2eac0d025f8cf"
+        },
+        {
+          "number": 6,
+          "source_id": "S7",
+          "evidence_id": "ev_4f0fa3690b5ad832"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": false,
+      "repair_success": false,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_722c96631a7f49ebb862a9",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "东京奥运会开幕日期",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+            "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+            "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "chunk_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 27.39337921142578,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+              "block_ids": [
+                "rgb_doc_7d32bc72c92429b00411fcbd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 27.39337921142578,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+            "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+            "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "chunk_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 27.39337921142578,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+              "block_ids": [
+                "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 27.39337921142578,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6352cba58821024a6925ba68",
+            "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+            "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "chunk_id": "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 25.98978614807129,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大使：东京奥运会是新冠肺炎疫情发生以来举行的首场全球性大型体育赛事， ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+              "block_ids": [
+                "rgb_doc_6352cba58821024a6925ba68:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 25.98978614807129,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_14dde20e0f727bac9d7c0622",
+            "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+            "document_name": "rgb_doc_14dde20e0f727bac9d7c0622.txt",
+            "chunk_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 24.942665100097656,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "Jan 21, 2021 ... 路透东京1月22日- 周六将是东京奥运会开幕倒计时六个月，鉴于日本多数地区因为第三波新冠疫情而进入紧急状态，而且公众的支持度在迅速下降，东京奥运 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+              "block_ids": [
+                "rgb_doc_14dde20e0f727bac9d7c0622:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 24.942665100097656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_460859bfa02f5241ed021894",
+            "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+            "document_name": "rgb_doc_460859bfa02f5241ed021894.txt",
+            "chunk_id": "rgb_doc_460859bfa02f5241ed021894:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 24.756450653076172,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Jul 22, 2021 ... 新华社东京7月22日电（记者王恒志、王沁鸥）在因新冠肺炎疫情延期一年后，第32届夏季奥林匹克运动会将于23日在日本东京开幕。 本届东京奥运会是奥运 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+              "block_ids": [
+                "rgb_doc_460859bfa02f5241ed021894:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 24.756450653076172,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+            "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+            "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "chunk_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 24.55394744873047,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每个日本人都对奥运会兴奋不已，”现年69岁的井上和夫（Kazuo Inoue，音）说，他清楚 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+              "block_ids": [
+                "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 103
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 24.55394744873047,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c2414410db015246fb5133b",
+            "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+            "document_name": "rgb_doc_5c2414410db015246fb5133b.txt",
+            "chunk_id": "rgb_doc_5c2414410db015246fb5133b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 24.031173706054688,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "Jul 24, 2021 ... 7月23日是东京奥运会开幕日，距离开幕式主会场新国立竞技场一步之遥的乒乓球赛场东京体育馆却稍显冷清。按照组委会的安排，训练时段集中在上午，下午 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+              "block_ids": [
+                "rgb_doc_5c2414410db015246fb5133b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 24.031173706054688,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_279b381a102074420971bf0e",
+            "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+            "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+            "chunk_id": "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 23.95430564880371,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界 ... 现行的紧急状态将至少持续至五月底，而奥运会的开幕日是7月23日。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+              "block_ids": [
+                "rgb_doc_279b381a102074420971bf0e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 23.95430564880371,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb",
+            "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+            "document_name": "rgb_doc_2a046f62f0cffae0e3cbf1fb.txt",
+            "chunk_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 23.498550415039062,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的东京奥运会的开幕时间很有可能是2021年7月23日。 日本共同社援引这位内部 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+              "block_ids": [
+                "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 23.498550415039062,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b356497eb2e12178768cafb",
+            "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+            "document_name": "rgb_doc_3b356497eb2e12178768cafb.txt",
+            "chunk_id": "rgb_doc_3b356497eb2e12178768cafb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 23.498550415039062,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的东京奥运会的开幕时间很有可能是2021年1月23日。 日本共同社援引这位内部 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+              "block_ids": [
+                "rgb_doc_3b356497eb2e12178768cafb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 23.498550415039062,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+            "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+            "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+            "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+            "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6352cba58821024a6925ba68",
+            "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+            "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_14dde20e0f727bac9d7c0622",
+            "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+            "document_name": "rgb_doc_14dde20e0f727bac9d7c0622.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_14dde20e0f727bac9d7c0622:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_14dde20e0f727bac9d7c0622.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_460859bfa02f5241ed021894",
+            "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+            "document_name": "rgb_doc_460859bfa02f5241ed021894.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_460859bfa02f5241ed021894:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_460859bfa02f5241ed021894.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+            "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+            "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c2414410db015246fb5133b",
+            "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+            "document_name": "rgb_doc_5c2414410db015246fb5133b.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_5c2414410db015246fb5133b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5c2414410db015246fb5133b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_279b381a102074420971bf0e",
+            "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+            "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_279b381a102074420971bf0e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb",
+            "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+            "document_name": "rgb_doc_2a046f62f0cffae0e3cbf1fb.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2a046f62f0cffae0e3cbf1fb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b356497eb2e12178768cafb",
+            "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+            "document_name": "rgb_doc_3b356497eb2e12178768cafb.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_3b356497eb2e12178768cafb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3b356497eb2e12178768cafb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c8071a64b6f2693d9c2f6c1",
+            "version_id": "rgb_doc_1c8071a64b6f2693d9c2f6c1:r1",
+            "document_name": "rgb_doc_1c8071a64b6f2693d9c2f6c1.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_1c8071a64b6f2693d9c2f6c1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c8071a64b6f2693d9c2f6c1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5d6bc52987f4aa0a3b23e14e",
+            "version_id": "rgb_doc_5d6bc52987f4aa0a3b23e14e:r1",
+            "document_name": "rgb_doc_5d6bc52987f4aa0a3b23e14e.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_5d6bc52987f4aa0a3b23e14e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5d6bc52987f4aa0a3b23e14e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ba666e78bb2b70d4ace81103",
+            "version_id": "rgb_doc_ba666e78bb2b70d4ace81103:r1",
+            "document_name": "rgb_doc_ba666e78bb2b70d4ace81103.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_ba666e78bb2b70d4ace81103:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ba666e78bb2b70d4ace81103.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_85701d99c92ec45f1aa139a5",
+            "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+            "document_name": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_85701d99c92ec45f1aa139a5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da19629827a0f58fd4468408",
+            "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+            "document_name": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_da19629827a0f58fd4468408:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d5b66db67659a9afc5f482ad",
+            "version_id": "rgb_doc_d5b66db67659a9afc5f482ad:r1",
+            "document_name": "rgb_doc_d5b66db67659a9afc5f482ad.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_d5b66db67659a9afc5f482ad:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d5b66db67659a9afc5f482ad.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_86579c05a020ce0a191010c4",
+            "version_id": "rgb_doc_86579c05a020ce0a191010c4:r1",
+            "document_name": "rgb_doc_86579c05a020ce0a191010c4.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_86579c05a020ce0a191010c4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_86579c05a020ce0a191010c4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_53fbf5b0f0ce146c48af189f",
+            "version_id": "rgb_doc_53fbf5b0f0ce146c48af189f:r1",
+            "document_name": "rgb_doc_53fbf5b0f0ce146c48af189f.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_53fbf5b0f0ce146c48af189f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_53fbf5b0f0ce146c48af189f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21bcce2fd0f77387227aae9d",
+            "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+            "document_name": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_21bcce2fd0f77387227aae9d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a226d951bc152e76e6e62686",
+            "version_id": "rgb_doc_a226d951bc152e76e6e62686:r1",
+            "document_name": "rgb_doc_a226d951bc152e76e6e62686.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_a226d951bc152e76e6e62686:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a226d951bc152e76e6e62686.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b1fa3b0791ebad0d165d45f9",
+            "version_id": "rgb_doc_b1fa3b0791ebad0d165d45f9:r1",
+            "document_name": "rgb_doc_b1fa3b0791ebad0d165d45f9.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_b1fa3b0791ebad0d165d45f9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b1fa3b0791ebad0d165d45f9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e71cfaba339e4cceec3af672",
+            "version_id": "rgb_doc_e71cfaba339e4cceec3af672:r1",
+            "document_name": "rgb_doc_e71cfaba339e4cceec3af672.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_e71cfaba339e4cceec3af672:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e71cfaba339e4cceec3af672.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9ada233a4c51c8a53fdc15d8",
+            "version_id": "rgb_doc_9ada233a4c51c8a53fdc15d8:r1",
+            "document_name": "rgb_doc_9ada233a4c51c8a53fdc15d8.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_9ada233a4c51c8a53fdc15d8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9ada233a4c51c8a53fdc15d8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3da22e166ba1f7debddbbe6e",
+            "version_id": "rgb_doc_3da22e166ba1f7debddbbe6e:r1",
+            "document_name": "rgb_doc_3da22e166ba1f7debddbbe6e.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_3da22e166ba1f7debddbbe6e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3da22e166ba1f7debddbbe6e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b3d76c6ab0de01a1e1c4fa7a",
+            "version_id": "rgb_doc_b3d76c6ab0de01a1e1c4fa7a:r1",
+            "document_name": "rgb_doc_b3d76c6ab0de01a1e1c4fa7a.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_b3d76c6ab0de01a1e1c4fa7a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b3d76c6ab0de01a1e1c4fa7a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f67bf9cc17c2c15c3af8da5",
+            "version_id": "rgb_doc_8f67bf9cc17c2c15c3af8da5:r1",
+            "document_name": "rgb_doc_8f67bf9cc17c2c15c3af8da5.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_8f67bf9cc17c2c15c3af8da5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8f67bf9cc17c2c15c3af8da5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c6a3195f396c23c401f4255b",
+            "version_id": "rgb_doc_c6a3195f396c23c401f4255b:r1",
+            "document_name": "rgb_doc_c6a3195f396c23c401f4255b.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_c6a3195f396c23c401f4255b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c6a3195f396c23c401f4255b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8b84c977019395ba86173e8",
+            "version_id": "rgb_doc_c8b84c977019395ba86173e8:r1",
+            "document_name": "rgb_doc_c8b84c977019395ba86173e8.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_c8b84c977019395ba86173e8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c8b84c977019395ba86173e8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c077d2f6a604257d4f55804f",
+            "version_id": "rgb_doc_c077d2f6a604257d4f55804f:r1",
+            "document_name": "rgb_doc_c077d2f6a604257d4f55804f.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_c077d2f6a604257d4f55804f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c077d2f6a604257d4f55804f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a059171e79c3516747b9494b",
+            "version_id": "rgb_doc_a059171e79c3516747b9494b:r1",
+            "document_name": "rgb_doc_a059171e79c3516747b9494b.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_a059171e79c3516747b9494b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a059171e79c3516747b9494b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8b2824ffe5fba383e506ddef",
+            "version_id": "rgb_doc_8b2824ffe5fba383e506ddef:r1",
+            "document_name": "rgb_doc_8b2824ffe5fba383e506ddef.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_8b2824ffe5fba383e506ddef:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8b2824ffe5fba383e506ddef.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1cbc54535e43e4e494e69918",
+            "version_id": "rgb_doc_1cbc54535e43e4e494e69918:r1",
+            "document_name": "rgb_doc_1cbc54535e43e4e494e69918.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_1cbc54535e43e4e494e69918:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1cbc54535e43e4e494e69918.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cbd73bc22f65370dfcdd3aa4",
+            "version_id": "rgb_doc_cbd73bc22f65370dfcdd3aa4:r1",
+            "document_name": "rgb_doc_cbd73bc22f65370dfcdd3aa4.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_cbd73bc22f65370dfcdd3aa4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cbd73bc22f65370dfcdd3aa4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_47cf23642328e0f4d3da6b18",
+            "version_id": "rgb_doc_47cf23642328e0f4d3da6b18:r1",
+            "document_name": "rgb_doc_47cf23642328e0f4d3da6b18.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_47cf23642328e0f4d3da6b18:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_47cf23642328e0f4d3da6b18.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_45eeb76568612312b14da606",
+            "version_id": "rgb_doc_45eeb76568612312b14da606:r1",
+            "document_name": "rgb_doc_45eeb76568612312b14da606.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_45eeb76568612312b14da606:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_45eeb76568612312b14da606.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_05340ac80b172fa83c0a0358",
+            "version_id": "rgb_doc_05340ac80b172fa83c0a0358:r1",
+            "document_name": "rgb_doc_05340ac80b172fa83c0a0358.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_05340ac80b172fa83c0a0358:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_05340ac80b172fa83c0a0358.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dbb5ed1c1c9efd7b068b29c8",
+            "version_id": "rgb_doc_dbb5ed1c1c9efd7b068b29c8:r1",
+            "document_name": "rgb_doc_dbb5ed1c1c9efd7b068b29c8.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_dbb5ed1c1c9efd7b068b29c8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dbb5ed1c1c9efd7b068b29c8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_182ff19096e2aa0aab56f4ee",
+            "version_id": "rgb_doc_182ff19096e2aa0aab56f4ee:r1",
+            "document_name": "rgb_doc_182ff19096e2aa0aab56f4ee.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_182ff19096e2aa0aab56f4ee:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_182ff19096e2aa0aab56f4ee.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f5550e38f24b917bab5554df",
+            "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+            "document_name": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_f5550e38f24b917bab5554df:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_50875e52038a70ee56c244ac",
+            "version_id": "rgb_doc_50875e52038a70ee56c244ac:r1",
+            "document_name": "rgb_doc_50875e52038a70ee56c244ac.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_50875e52038a70ee56c244ac:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_50875e52038a70ee56c244ac.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 9.84766699548345,
+              "candidate_count": 40,
+              "verified_count": 40,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 11.331790999975055,
+          "evidence_ms": 1.6401250031776726,
+          "fusion_ms": 0.5372500017983839,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 40,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 35.79120799258817,
+          "context_chars": 944,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_e47f7117a05bbf0d",
+          "ev_9fee32caa1098105",
+          "ev_3aabce25f7506d01",
+          "ev_1244e5189e2f19be",
+          "ev_60a8f08575e8f2b4",
+          "ev_8dd2eac0d025f8cf",
+          "ev_4f0fa3690b5ad832",
+          "ev_d3bcd6aa291f59c1",
+          "ev_0f4b4f2f77c5b123",
+          "ev_84cc13bdc0e1870d"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_e47f7117a05bbf0d",
+            "content": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+            "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+            "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "chunk_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+              "block_ids": [
+                "rgb_doc_7d32bc72c92429b00411fcbd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 27.39337921142578,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 94,
+            "content_hash": "7d32bc72c92429b00411fcbd437a09c2c279df6f4e7d2c7f57a8b8472edbe122",
+            "scope_digest": "1413527c609fef2b0eb8c14052706749987c7136a6421a8c30c3aacc51dcc8d8",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_ea00125f8df10130e859",
+                "source_id": "S1",
+                "evidence_id": "ev_e47f7117a05bbf0d",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_6f36a83a88e5112fcf12",
+                "source_id": "S1",
+                "evidence_id": "ev_e47f7117a05bbf0d",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_9fee32caa1098105",
+            "content": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+            "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+            "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "chunk_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+              "block_ids": [
+                "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 27.39337921142578,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 94,
+            "content_hash": "edbea60d61b6f1b2ba0d3f8512a8e1de905a477eb7de589da31a1ad500d13ff2",
+            "scope_digest": "3b4e8b3d0d01801c8e8c18265b16af5cc021a8617e97a074d640400c608c154a",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9ffd431dbc1708ce79b5",
+                "source_id": "S2",
+                "evidence_id": "ev_9fee32caa1098105",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_69dd7a09f41c1a0b3dc5",
+                "source_id": "S2",
+                "evidence_id": "ev_9fee32caa1098105",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_3aabce25f7506d01",
+            "content": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大使：东京奥运会是新冠肺炎疫情发生以来举行的首场全球性大型体育赛事， ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6352cba58821024a6925ba68",
+            "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+            "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "chunk_id": "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+              "block_ids": [
+                "rgb_doc_6352cba58821024a6925ba68:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 25.98978614807129,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 91,
+            "content_hash": "6352cba58821024a6925ba685de3053ea0754e58d517f40bbf27018a2cb05b6a",
+            "scope_digest": "f5e4ebaad5cc4b868a42ce4db906150ded085828bda633c1ae786cf1c1162b4f",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_6526f4182d52d32fe676",
+                "source_id": "S3",
+                "evidence_id": "ev_3aabce25f7506d01",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ea8c11635d6310babd49",
+                "source_id": "S3",
+                "evidence_id": "ev_3aabce25f7506d01",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大使：东京奥运",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_1244e5189e2f19be",
+            "content": "Jan 21, 2021 ... 路透东京1月22日- 周六将是东京奥运会开幕倒计时六个月，鉴于日本多数地区因为第三波新冠疫情而进入紧急状态，而且公众的支持度在迅速下降，东京奥运 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_14dde20e0f727bac9d7c0622",
+            "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+            "document_name": "rgb_doc_14dde20e0f727bac9d7c0622.txt",
+            "chunk_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+              "block_ids": [
+                "rgb_doc_14dde20e0f727bac9d7c0622:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 24.942665100097656,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 93,
+            "content_hash": "14dde20e0f727bac9d7c06224c1a150a17879e5509c5b97d5959ec95254a1990",
+            "scope_digest": "ce48e752446ac3b9f2cea01bc608bf5481ee0a208bd8ec0fcc9dd3d32ecd3421",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_247f4fa51584cd2227c2",
+                "source_id": "S4",
+                "evidence_id": "ev_1244e5189e2f19be",
+                "raw_text": "21",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 21, 2021 ... 路透东京1月22日- 周六将是东京奥运会开幕倒计时六个月，鉴于日本多数地区",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_dc9095b2c7387fa42d56",
+                "source_id": "S4",
+                "evidence_id": "ev_1244e5189e2f19be",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 21, 2021 ... 路透东京1月22日- 周六将是东京奥运会开幕倒计时六个月，鉴于日本多数地区因为第三波新",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_60a8f08575e8f2b4",
+            "content": "Jul 22, 2021 ... 新华社东京7月22日电（记者王恒志、王沁鸥）在因新冠肺炎疫情延期一年后，第32届夏季奥林匹克运动会将于23日在日本东京开幕。 本届东京奥运会是奥运 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_460859bfa02f5241ed021894",
+            "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+            "document_name": "rgb_doc_460859bfa02f5241ed021894.txt",
+            "chunk_id": "rgb_doc_460859bfa02f5241ed021894:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+              "block_ids": [
+                "rgb_doc_460859bfa02f5241ed021894:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 24.756450653076172,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 94,
+            "content_hash": "460859bfa02f5241ed02189470f9dd477e9e7d2f3199be070f093e139c18f565",
+            "scope_digest": "cdca91c40fc50c7e7cdc6bf5928939f7f184b4c3b4862dcfdeaca14e132501b6",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9db3cec6159d83ba53ab",
+                "source_id": "S5",
+                "evidence_id": "ev_60a8f08575e8f2b4",
+                "raw_text": "22",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 22, 2021 ... 新华社东京7月22日电（记者王恒志、王沁鸥）在因新冠肺炎疫情延期一年后，第",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_10dabc0afe4a8ef02dd6",
+                "source_id": "S5",
+                "evidence_id": "ev_60a8f08575e8f2b4",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 22, 2021 ... 新华社东京7月22日电（记者王恒志、王沁鸥）在因新冠肺炎疫情延期一年后，第32届夏季奥",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_8dd2eac0d025f8cf",
+            "content": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每个日本人都对奥运会兴奋不已，”现年69岁的井上和夫（Kazuo Inoue，音）说，他清楚 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+            "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+            "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "chunk_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+              "block_ids": [
+                "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 103
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 24.55394744873047,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 103,
+            "content_hash": "1e6b62eb82329a5fd33a6fd145bd71f41ead1921d9f10b02ca0a2b906a2bee7b",
+            "scope_digest": "30944b747ad97801c849cf8e50ba9d80af087f0e4b1649127f095693f7268d8d",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_c9200248c39a45e5c3e7",
+                "source_id": "S6",
+                "evidence_id": "ev_8dd2eac0d025f8cf",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_1bf4a40ec2c92a754894",
+                "source_id": "S6",
+                "evidence_id": "ev_8dd2eac0d025f8cf",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每个日本人都对",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_4f0fa3690b5ad832",
+            "content": "Jul 24, 2021 ... 7月23日是东京奥运会开幕日，距离开幕式主会场新国立竞技场一步之遥的乒乓球赛场东京体育馆却稍显冷清。按照组委会的安排，训练时段集中在上午，下午 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c2414410db015246fb5133b",
+            "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+            "document_name": "rgb_doc_5c2414410db015246fb5133b.txt",
+            "chunk_id": "rgb_doc_5c2414410db015246fb5133b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+              "block_ids": [
+                "rgb_doc_5c2414410db015246fb5133b:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 24.031173706054688,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "5c2414410db015246fb5133b86fe09b2c3bd9915093fe14b1cf52872cfc63b24",
+            "scope_digest": "bdb93bd5790123b35aac4d3b843f29b50deb636a68beab703fa9cbca06982075",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_ddba0d7d47053962acfd",
+                "source_id": "S7",
+                "evidence_id": "ev_4f0fa3690b5ad832",
+                "raw_text": "24",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 24, 2021 ... 7月23日是东京奥运会开幕日，距离开幕式主会场新国立竞技场一步之遥的乒乓球",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_fe5a5b2118b96228118a",
+                "source_id": "S7",
+                "evidence_id": "ev_4f0fa3690b5ad832",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 24, 2021 ... 7月23日是东京奥运会开幕日，距离开幕式主会场新国立竞技场一步之遥的乒乓球赛场东京体育",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d3bcd6aa291f59c1",
+            "content": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界 ... 现行的紧急状态将至少持续至五月底，而奥运会的开幕日是7月23日。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_279b381a102074420971bf0e",
+            "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+            "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+            "chunk_id": "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+              "block_ids": [
+                "rgb_doc_279b381a102074420971bf0e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 23.95430564880371,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 91,
+            "content_hash": "279b381a102074420971bf0e096b8336ae0392c753c486a4fa9699c3e54485ce",
+            "scope_digest": "1bb0ac0e0646e32a4566cb869687f73a87d570821f6e8117f35f96c20f3877d2",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_1bc3d685b3fe38a6c729",
+                "source_id": "S8",
+                "evidence_id": "ev_d3bcd6aa291f59c1",
+                "raw_text": "20",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_f8c44f69615554650a48",
+                "source_id": "S8",
+                "evidence_id": "ev_d3bcd6aa291f59c1",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界 ... 现",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_0f4b4f2f77c5b123",
+            "content": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的东京奥运会的开幕时间很有可能是2021年7月23日。 日本共同社援引这位内部 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb",
+            "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+            "document_name": "rgb_doc_2a046f62f0cffae0e3cbf1fb.txt",
+            "chunk_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+              "block_ids": [
+                "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 23.498550415039062,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "2a046f62f0cffae0e3cbf1fb3340d9a2526e5f72a28275a759d97d999b5bb303",
+            "scope_digest": "f08462f0de6767d960f08e43a2c174292cd32029e1e5aaf0f27381f73650eca4",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9e7a05b127fc00bdfcd5",
+                "source_id": "S9",
+                "evidence_id": "ev_0f4b4f2f77c5b123",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_7d026093f42db746db67",
+                "source_id": "S9",
+                "evidence_id": "ev_0f4b4f2f77c5b123",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的东京奥运会的",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_84cc13bdc0e1870d",
+            "content": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的东京奥运会的开幕时间很有可能是2021年1月23日。 日本共同社援引这位内部 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b356497eb2e12178768cafb",
+            "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+            "document_name": "rgb_doc_3b356497eb2e12178768cafb.txt",
+            "chunk_id": "rgb_doc_3b356497eb2e12178768cafb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+              "block_ids": [
+                "rgb_doc_3b356497eb2e12178768cafb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 23.498550415039062,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "3b356497eb2e12178768cafbaf0ac602fa88f4f345b8dc6b91dfb091874fc184",
+            "scope_digest": "9e24aa8e42aa8ecd02a001c149eb24aba07154e553a81e561a5539439d15c733",
+            "trace_id": "6bd029df576f4172b04017a268c383e8",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_37b9a05837cdeb3500f2",
+                "source_id": "S10",
+                "evidence_id": "ev_84cc13bdc0e1870d",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_230ba07f68f42dcc6337",
+                "source_id": "S10",
+                "evidence_id": "ev_84cc13bdc0e1870d",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月29日电（记者王子江）东京奥组委消息人士29日透露，推迟后的东京奥运会的",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_1244e5189e2f19be",
+      "ev_3aabce25f7506d01",
+      "ev_4f0fa3690b5ad832",
+      "ev_60a8f08575e8f2b4",
+      "ev_8dd2eac0d025f8cf",
+      "ev_9fee32caa1098105",
+      "ev_e47f7117a05bbf0d"
+    ],
+    "evidence": {
+      "ev_e47f7117a05bbf0d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+        "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+        "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+        "chunk_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+          "block_ids": [
+            "rgb_doc_7d32bc72c92429b00411fcbd:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 94
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 27.39337921142578,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 94,
+        "content_hash": "7d32bc72c92429b00411fcbd437a09c2c279df6f4e7d2c7f57a8b8472edbe122",
+        "scope_digest": "1413527c609fef2b0eb8c14052706749987c7136a6421a8c30c3aacc51dcc8d8",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_9fee32caa1098105": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+        "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+        "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+        "chunk_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+          "block_ids": [
+            "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 94
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 27.39337921142578,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 94,
+        "content_hash": "edbea60d61b6f1b2ba0d3f8512a8e1de905a477eb7de589da31a1ad500d13ff2",
+        "scope_digest": "3b4e8b3d0d01801c8e8c18265b16af5cc021a8617e97a074d640400c608c154a",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_3aabce25f7506d01": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_6352cba58821024a6925ba68",
+        "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+        "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+        "chunk_id": "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+          "block_ids": [
+            "rgb_doc_6352cba58821024a6925ba68:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 91
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 25.98978614807129,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 91,
+        "content_hash": "6352cba58821024a6925ba685de3053ea0754e58d517f40bbf27018a2cb05b6a",
+        "scope_digest": "f5e4ebaad5cc4b868a42ce4db906150ded085828bda633c1ae786cf1c1162b4f",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_1244e5189e2f19be": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_14dde20e0f727bac9d7c0622",
+        "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+        "document_name": "rgb_doc_14dde20e0f727bac9d7c0622.txt",
+        "chunk_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+          "block_ids": [
+            "rgb_doc_14dde20e0f727bac9d7c0622:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 93
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 24.942665100097656,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 93,
+        "content_hash": "14dde20e0f727bac9d7c06224c1a150a17879e5509c5b97d5959ec95254a1990",
+        "scope_digest": "ce48e752446ac3b9f2cea01bc608bf5481ee0a208bd8ec0fcc9dd3d32ecd3421",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_60a8f08575e8f2b4": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_460859bfa02f5241ed021894",
+        "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+        "document_name": "rgb_doc_460859bfa02f5241ed021894.txt",
+        "chunk_id": "rgb_doc_460859bfa02f5241ed021894:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+          "block_ids": [
+            "rgb_doc_460859bfa02f5241ed021894:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 94
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 24.756450653076172,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 94,
+        "content_hash": "460859bfa02f5241ed02189470f9dd477e9e7d2f3199be070f093e139c18f565",
+        "scope_digest": "cdca91c40fc50c7e7cdc6bf5928939f7f184b4c3b4862dcfdeaca14e132501b6",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_8dd2eac0d025f8cf": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+        "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+        "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+        "chunk_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+          "block_ids": [
+            "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 103
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 24.55394744873047,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 103,
+        "content_hash": "1e6b62eb82329a5fd33a6fd145bd71f41ead1921d9f10b02ca0a2b906a2bee7b",
+        "scope_digest": "30944b747ad97801c849cf8e50ba9d80af087f0e4b1649127f095693f7268d8d",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_4f0fa3690b5ad832": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_5c2414410db015246fb5133b",
+        "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+        "document_name": "rgb_doc_5c2414410db015246fb5133b.txt",
+        "chunk_id": "rgb_doc_5c2414410db015246fb5133b:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+          "block_ids": [
+            "rgb_doc_5c2414410db015246fb5133b:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 24.031173706054688,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "5c2414410db015246fb5133b86fe09b2c3bd9915093fe14b1cf52872cfc63b24",
+        "scope_digest": "bdb93bd5790123b35aac4d3b843f29b50deb636a68beab703fa9cbca06982075",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d3bcd6aa291f59c1": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_279b381a102074420971bf0e",
+        "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+        "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+        "chunk_id": "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+          "block_ids": [
+            "rgb_doc_279b381a102074420971bf0e:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 91
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 23.95430564880371,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 91,
+        "content_hash": "279b381a102074420971bf0e096b8336ae0392c753c486a4fa9699c3e54485ce",
+        "scope_digest": "1bb0ac0e0646e32a4566cb869687f73a87d570821f6e8117f35f96c20f3877d2",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_0f4b4f2f77c5b123": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb",
+        "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+        "document_name": "rgb_doc_2a046f62f0cffae0e3cbf1fb.txt",
+        "chunk_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+          "block_ids": [
+            "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 23.498550415039062,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "2a046f62f0cffae0e3cbf1fb3340d9a2526e5f72a28275a759d97d999b5bb303",
+        "scope_digest": "f08462f0de6767d960f08e43a2c174292cd32029e1e5aaf0f27381f73650eca4",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_84cc13bdc0e1870d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_3b356497eb2e12178768cafb",
+        "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+        "document_name": "rgb_doc_3b356497eb2e12178768cafb.txt",
+        "chunk_id": "rgb_doc_3b356497eb2e12178768cafb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+          "block_ids": [
+            "rgb_doc_3b356497eb2e12178768cafb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 23.498550415039062,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "3b356497eb2e12178768cafbaf0ac602fa88f4f345b8dc6b91dfb091874fc184",
+        "scope_digest": "9e24aa8e42aa8ecd02a001c149eb24aba07154e553a81e561a5539439d15c733",
+        "trace_id": "6bd029df576f4172b04017a268c383e8",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_e47f7117a05bbf0d",
+      "S2": "ev_9fee32caa1098105",
+      "S3": "ev_3aabce25f7506d01",
+      "S4": "ev_1244e5189e2f19be",
+      "S5": "ev_60a8f08575e8f2b4",
+      "S6": "ev_8dd2eac0d025f8cf",
+      "S7": "ev_4f0fa3690b5ad832",
+      "S8": "ev_d3bcd6aa291f59c1",
+      "S9": "ev_0f4b4f2f77c5b123",
+      "S10": "ev_84cc13bdc0e1870d"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

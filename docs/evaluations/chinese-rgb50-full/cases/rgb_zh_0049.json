@@ -1,0 +1,3797 @@
+{
+  "question_id": "rgb_zh_0049",
+  "result": {
+    "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+    "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:1",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:2",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:3",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "context_chars": 1187,
+        "prompt_tokens": 8439,
+        "completion_tokens": 49,
+        "total_tokens": 8488,
+        "context_compaction_count": 0,
+        "context_chars_before": 1187,
+        "context_chars_after": 1187,
+        "estimated_input_tokens": 12116,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1470,
+        "remaining_run_tokens": 111512,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8439,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3677
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:4",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1187
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:5",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "tool_call_id": "call_d9fe254c19c54ba38184b2",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:6",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "tool_call_id": "call_d9fe254c19c54ba38184b2",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:7",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_d9fe254c19c54ba38184b2",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 7,
+        "output_chars_before": 100747,
+        "output_chars_after": 14173,
+        "removed_chars": 86574,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:8",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:9",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:10",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "context_chars": 15360,
+        "prompt_tokens": 14935,
+        "completion_tokens": 113,
+        "total_tokens": 15048,
+        "context_compaction_count": 0,
+        "context_chars_before": 15360,
+        "context_chars_after": 15360,
+        "estimated_input_tokens": 20175,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7335,
+        "evidence_tokens": 1089,
+        "history_tokens": 2194,
+        "remaining_run_tokens": 96464,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 14935,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5240
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:11",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "model_visible_evidence_count": 7,
+        "context_chars": 15360
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:12",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "citation_validation_reason": [
+          "invalid_claim_structure",
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:13",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "context_chars": 1369,
+        "prompt_tokens": 811,
+        "completion_tokens": 26,
+        "total_tokens": 837,
+        "context_compaction_count": 0,
+        "context_chars_before": 1369,
+        "context_chars_after": 1369,
+        "estimated_input_tokens": 1738,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1738,
+        "remaining_run_tokens": 95627,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 811,
+        "usage_source": "provider",
+        "estimation_error_tokens": -927
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:14",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:15",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "delta": "2000年奥运会的举办地是澳大利亚悉尼。 [1]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:16",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368",
+        "final_citation_count": 1,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_49b93cff8c8f473db06c74f8a2f0f5af:0ae6d1ea1ba84961ae8aa2d859aaab4d:17",
+        "run_id": "run_49b93cff8c8f473db06c74f8a2f0f5af",
+        "thread_id": "thread_c35c9244f1264d5c9e6ca9ac9bdd9368"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 24185,
+      "completion_tokens": 188,
+      "total_tokens": 24373
+    },
+    "elapsed_seconds": 7.425660334003624,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 7,
+      "output_truncated": true,
+      "context_chars": 15360,
+      "prompt_tokens": 24185,
+      "completion_tokens": 188,
+      "total_tokens": 24373,
+      "context_compaction_count": 0,
+      "context_chars_before": 1369,
+      "context_chars_after": 1369,
+      "estimated_input_tokens": 1738,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 1738,
+      "remaining_run_tokens": 95627,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 811,
+      "usage_source": "provider",
+      "estimation_error_tokens": -927,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_d9fe254c19c54ba38184b2",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 7,
+          "output_chars_before": 100747,
+          "output_chars_after": 14173,
+          "removed_chars": 86574,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "invalid_claim_structure",
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 1369,
+      "repair_visible_evidence_count": 7,
+      "final_citation_count": 1,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "2000年奥运会的举办地是澳大利亚悉尼。 [1]",
+      "citations": {
+        "ev_15bda2122d2c8fc7": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_3b927f8d40cb2b56b949dcc9",
+          "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+          "document_name": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+          "chunk_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：澳大利亚悉尼运动员：10651名运动员（4069名女选手，6582名男选手）",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+            "block_ids": [
+              "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 89
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 21.843395233154297,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "2000年奥运会的举办地是澳大利亚悉尼。",
+          "source_ids": [
+            "S2"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S2",
+          "evidence_id": "ev_15bda2122d2c8fc7"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_d9fe254c19c54ba38184b2",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2000年奥运会 举办地",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f5550e38f24b917bab5554df",
+            "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+            "document_name": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "chunk_id": "rgb_doc_f5550e38f24b917bab5554df:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 22.141353607177734,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：中国北京运动员：10651名运动员（4069名女选手，6582名男选手）",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+              "block_ids": [
+                "rgb_doc_f5550e38f24b917bab5554df:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 87
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 22.141353607177734,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b927f8d40cb2b56b949dcc9",
+            "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+            "document_name": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "chunk_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 21.843395233154297,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：澳大利亚悉尼运动员：10651名运动员（4069名女选手，6582名男选手）",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+              "block_ids": [
+                "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 89
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 21.843395233154297,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21bcce2fd0f77387227aae9d",
+            "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+            "document_name": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "chunk_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 21.742965698242188,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "Jan 5, 2015 ... 当天，申办代表团的一位重量级人物，时任全国政协副主席的霍英东先生私下里向记者透露，何振梁在2000年奥运会举办城市选举结果公布后建议，为了让世界 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+              "block_ids": [
+                "rgb_doc_21bcce2fd0f77387227aae9d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 21.742965698242188,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_85701d99c92ec45f1aa139a5",
+            "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+            "document_name": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "chunk_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 17.048986434936523,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合宣布，推迟后的东京奥运会举办时间是2021年7月23日至8月8日，东京残奥会举办 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+              "block_ids": [
+                "rgb_doc_85701d99c92ec45f1aa139a5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 17.048986434936523,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da19629827a0f58fd4468408",
+            "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+            "document_name": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "chunk_id": "rgb_doc_da19629827a0f58fd4468408:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 17.048986434936523,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合宣布，推迟后的东京奥运会举办时间是2021年1月23日至8月8日，东京残奥会举办 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+              "block_ids": [
+                "rgb_doc_da19629827a0f58fd4468408:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 17.048986434936523,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+            "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+            "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "chunk_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 15.08787727355957,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+              "block_ids": [
+                "rgb_doc_7d32bc72c92429b00411fcbd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.08787727355957,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+            "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+            "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "chunk_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 15.08787727355957,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+              "block_ids": [
+                "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 15.08787727355957,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+            "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+            "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "chunk_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 14.068916320800781,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每个日本人都对奥运会兴奋不已，”现年69岁的井上和夫（Kazuo Inoue，音）说，他清楚 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+              "block_ids": [
+                "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 103
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 14.068916320800781,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6352cba58821024a6925ba68",
+            "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+            "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "chunk_id": "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 13.539243698120117,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大使：东京奥运会是新冠肺炎疫情发生以来举行的首场全球性大型体育赛事， ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+              "block_ids": [
+                "rgb_doc_6352cba58821024a6925ba68:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 13.539243698120117,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_279b381a102074420971bf0e",
+            "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+            "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+            "chunk_id": "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 13.287643432617188,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界 ... 现行的紧急状态将至少持续至五月底，而奥运会的开幕日是7月23日。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+              "block_ids": [
+                "rgb_doc_279b381a102074420971bf0e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 13.287643432617188,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f5550e38f24b917bab5554df",
+            "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+            "document_name": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_f5550e38f24b917bab5554df:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b927f8d40cb2b56b949dcc9",
+            "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+            "document_name": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21bcce2fd0f77387227aae9d",
+            "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+            "document_name": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_21bcce2fd0f77387227aae9d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_85701d99c92ec45f1aa139a5",
+            "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+            "document_name": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_85701d99c92ec45f1aa139a5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da19629827a0f58fd4468408",
+            "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+            "document_name": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_da19629827a0f58fd4468408:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+            "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+            "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+            "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+            "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+            "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+            "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6352cba58821024a6925ba68",
+            "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+            "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_279b381a102074420971bf0e",
+            "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+            "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_279b381a102074420971bf0e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_86579c05a020ce0a191010c4",
+            "version_id": "rgb_doc_86579c05a020ce0a191010c4:r1",
+            "document_name": "rgb_doc_86579c05a020ce0a191010c4.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_86579c05a020ce0a191010c4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_86579c05a020ce0a191010c4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8c375e6ad6163c70adc8ba58",
+            "version_id": "rgb_doc_8c375e6ad6163c70adc8ba58:r1",
+            "document_name": "rgb_doc_8c375e6ad6163c70adc8ba58.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_8c375e6ad6163c70adc8ba58:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8c375e6ad6163c70adc8ba58.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_14dde20e0f727bac9d7c0622",
+            "version_id": "rgb_doc_14dde20e0f727bac9d7c0622:r1",
+            "document_name": "rgb_doc_14dde20e0f727bac9d7c0622.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_14dde20e0f727bac9d7c0622:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_14dde20e0f727bac9d7c0622.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_460859bfa02f5241ed021894",
+            "version_id": "rgb_doc_460859bfa02f5241ed021894:r1",
+            "document_name": "rgb_doc_460859bfa02f5241ed021894.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_460859bfa02f5241ed021894:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_460859bfa02f5241ed021894.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_53fbf5b0f0ce146c48af189f",
+            "version_id": "rgb_doc_53fbf5b0f0ce146c48af189f:r1",
+            "document_name": "rgb_doc_53fbf5b0f0ce146c48af189f.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_53fbf5b0f0ce146c48af189f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_53fbf5b0f0ce146c48af189f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c8071a64b6f2693d9c2f6c1",
+            "version_id": "rgb_doc_1c8071a64b6f2693d9c2f6c1:r1",
+            "document_name": "rgb_doc_1c8071a64b6f2693d9c2f6c1.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_1c8071a64b6f2693d9c2f6c1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c8071a64b6f2693d9c2f6c1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5d6bc52987f4aa0a3b23e14e",
+            "version_id": "rgb_doc_5d6bc52987f4aa0a3b23e14e:r1",
+            "document_name": "rgb_doc_5d6bc52987f4aa0a3b23e14e.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_5d6bc52987f4aa0a3b23e14e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5d6bc52987f4aa0a3b23e14e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb",
+            "version_id": "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1",
+            "document_name": "rgb_doc_2a046f62f0cffae0e3cbf1fb.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_2a046f62f0cffae0e3cbf1fb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2a046f62f0cffae0e3cbf1fb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b356497eb2e12178768cafb",
+            "version_id": "rgb_doc_3b356497eb2e12178768cafb:r1",
+            "document_name": "rgb_doc_3b356497eb2e12178768cafb.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_3b356497eb2e12178768cafb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3b356497eb2e12178768cafb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d5b66db67659a9afc5f482ad",
+            "version_id": "rgb_doc_d5b66db67659a9afc5f482ad:r1",
+            "document_name": "rgb_doc_d5b66db67659a9afc5f482ad.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_d5b66db67659a9afc5f482ad:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d5b66db67659a9afc5f482ad.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a226d951bc152e76e6e62686",
+            "version_id": "rgb_doc_a226d951bc152e76e6e62686:r1",
+            "document_name": "rgb_doc_a226d951bc152e76e6e62686.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_a226d951bc152e76e6e62686:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a226d951bc152e76e6e62686.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ba666e78bb2b70d4ace81103",
+            "version_id": "rgb_doc_ba666e78bb2b70d4ace81103:r1",
+            "document_name": "rgb_doc_ba666e78bb2b70d4ace81103.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_ba666e78bb2b70d4ace81103:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ba666e78bb2b70d4ace81103.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c2414410db015246fb5133b",
+            "version_id": "rgb_doc_5c2414410db015246fb5133b:r1",
+            "document_name": "rgb_doc_5c2414410db015246fb5133b.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_5c2414410db015246fb5133b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5c2414410db015246fb5133b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b1fa3b0791ebad0d165d45f9",
+            "version_id": "rgb_doc_b1fa3b0791ebad0d165d45f9:r1",
+            "document_name": "rgb_doc_b1fa3b0791ebad0d165d45f9.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_b1fa3b0791ebad0d165d45f9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b1fa3b0791ebad0d165d45f9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9ada233a4c51c8a53fdc15d8",
+            "version_id": "rgb_doc_9ada233a4c51c8a53fdc15d8:r1",
+            "document_name": "rgb_doc_9ada233a4c51c8a53fdc15d8.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_9ada233a4c51c8a53fdc15d8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9ada233a4c51c8a53fdc15d8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3da22e166ba1f7debddbbe6e",
+            "version_id": "rgb_doc_3da22e166ba1f7debddbbe6e:r1",
+            "document_name": "rgb_doc_3da22e166ba1f7debddbbe6e.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_3da22e166ba1f7debddbbe6e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3da22e166ba1f7debddbbe6e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9fa34ac70ac9f20acc3d9ef7",
+            "version_id": "rgb_doc_9fa34ac70ac9f20acc3d9ef7:r1",
+            "document_name": "rgb_doc_9fa34ac70ac9f20acc3d9ef7.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_9fa34ac70ac9f20acc3d9ef7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9fa34ac70ac9f20acc3d9ef7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f67bf9cc17c2c15c3af8da5",
+            "version_id": "rgb_doc_8f67bf9cc17c2c15c3af8da5:r1",
+            "document_name": "rgb_doc_8f67bf9cc17c2c15c3af8da5.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_8f67bf9cc17c2c15c3af8da5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8f67bf9cc17c2c15c3af8da5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c6a3195f396c23c401f4255b",
+            "version_id": "rgb_doc_c6a3195f396c23c401f4255b:r1",
+            "document_name": "rgb_doc_c6a3195f396c23c401f4255b.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_c6a3195f396c23c401f4255b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c6a3195f396c23c401f4255b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_00c332c9de94798156325fd9",
+            "version_id": "rgb_doc_00c332c9de94798156325fd9:r1",
+            "document_name": "rgb_doc_00c332c9de94798156325fd9.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_00c332c9de94798156325fd9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_00c332c9de94798156325fd9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4a3876bf09ca72e6ab3e9b55",
+            "version_id": "rgb_doc_4a3876bf09ca72e6ab3e9b55:r1",
+            "document_name": "rgb_doc_4a3876bf09ca72e6ab3e9b55.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_4a3876bf09ca72e6ab3e9b55:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4a3876bf09ca72e6ab3e9b55.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8b84c977019395ba86173e8",
+            "version_id": "rgb_doc_c8b84c977019395ba86173e8:r1",
+            "document_name": "rgb_doc_c8b84c977019395ba86173e8.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_c8b84c977019395ba86173e8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c8b84c977019395ba86173e8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb",
+            "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+            "document_name": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c077d2f6a604257d4f55804f",
+            "version_id": "rgb_doc_c077d2f6a604257d4f55804f:r1",
+            "document_name": "rgb_doc_c077d2f6a604257d4f55804f.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_c077d2f6a604257d4f55804f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c077d2f6a604257d4f55804f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_87cb94bf544696607fbfbac1",
+            "version_id": "rgb_doc_87cb94bf544696607fbfbac1:r1",
+            "document_name": "rgb_doc_87cb94bf544696607fbfbac1.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_87cb94bf544696607fbfbac1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_87cb94bf544696607fbfbac1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a9fe95998b2b2e57aa23252",
+            "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+            "document_name": "rgb_doc_2a9fe95998b2b2e57aa23252.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_2a9fe95998b2b2e57aa23252:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2a9fe95998b2b2e57aa23252.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7",
+            "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+            "document_name": "rgb_doc_7d55ec03ef389a98f0cf0ca7.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7d55ec03ef389a98f0cf0ca7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b316a8dd5b0e7ff35a9ae22d",
+            "version_id": "rgb_doc_b316a8dd5b0e7ff35a9ae22d:r1",
+            "document_name": "rgb_doc_b316a8dd5b0e7ff35a9ae22d.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_b316a8dd5b0e7ff35a9ae22d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b316a8dd5b0e7ff35a9ae22d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bef30e60b8093e6163574c36",
+            "version_id": "rgb_doc_bef30e60b8093e6163574c36:r1",
+            "document_name": "rgb_doc_bef30e60b8093e6163574c36.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_bef30e60b8093e6163574c36:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bef30e60b8093e6163574c36.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d01ec3a2189cdf6020990f25",
+            "version_id": "rgb_doc_d01ec3a2189cdf6020990f25:r1",
+            "document_name": "rgb_doc_d01ec3a2189cdf6020990f25.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_d01ec3a2189cdf6020990f25:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d01ec3a2189cdf6020990f25.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edb50ea6c3a1327dabd13134",
+            "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+            "document_name": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_edb50ea6c3a1327dabd13134:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1b581f620b7e4ba2a56d4c5b",
+            "version_id": "rgb_doc_1b581f620b7e4ba2a56d4c5b:r1",
+            "document_name": "rgb_doc_1b581f620b7e4ba2a56d4c5b.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_1b581f620b7e4ba2a56d4c5b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1b581f620b7e4ba2a56d4c5b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aafb9e37dcbc690337c8d7d2",
+            "version_id": "rgb_doc_aafb9e37dcbc690337c8d7d2:r1",
+            "document_name": "rgb_doc_aafb9e37dcbc690337c8d7d2.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_aafb9e37dcbc690337c8d7d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aafb9e37dcbc690337c8d7d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c68297bae1e9b93f43706d9f",
+            "version_id": "rgb_doc_c68297bae1e9b93f43706d9f:r1",
+            "document_name": "rgb_doc_c68297bae1e9b93f43706d9f.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_c68297bae1e9b93f43706d9f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c68297bae1e9b93f43706d9f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ef0e41a44d2be7736ff36ff9",
+            "version_id": "rgb_doc_ef0e41a44d2be7736ff36ff9:r1",
+            "document_name": "rgb_doc_ef0e41a44d2be7736ff36ff9.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_ef0e41a44d2be7736ff36ff9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ef0e41a44d2be7736ff36ff9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6fc64350e1512a4df9f30aa2",
+            "version_id": "rgb_doc_6fc64350e1512a4df9f30aa2:r1",
+            "document_name": "rgb_doc_6fc64350e1512a4df9f30aa2.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_6fc64350e1512a4df9f30aa2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6fc64350e1512a4df9f30aa2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a9f37dfd6f0c66b529eabef0",
+            "version_id": "rgb_doc_a9f37dfd6f0c66b529eabef0:r1",
+            "document_name": "rgb_doc_a9f37dfd6f0c66b529eabef0.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_a9f37dfd6f0c66b529eabef0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a9f37dfd6f0c66b529eabef0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cc8ba8a97d76c9302ea7fd55",
+            "version_id": "rgb_doc_cc8ba8a97d76c9302ea7fd55:r1",
+            "document_name": "rgb_doc_cc8ba8a97d76c9302ea7fd55.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_cc8ba8a97d76c9302ea7fd55:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cc8ba8a97d76c9302ea7fd55.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_30c88ad0e0419eb1e89dfccb",
+            "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+            "document_name": "rgb_doc_30c88ad0e0419eb1e89dfccb.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_30c88ad0e0419eb1e89dfccb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e480c36c76273ae1c4be5edf",
+            "version_id": "rgb_doc_e480c36c76273ae1c4be5edf:r1",
+            "document_name": "rgb_doc_e480c36c76273ae1c4be5edf.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_e480c36c76273ae1c4be5edf:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e480c36c76273ae1c4be5edf.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_612b09e00ac9a24a67654dbb",
+            "version_id": "rgb_doc_612b09e00ac9a24a67654dbb:r1",
+            "document_name": "rgb_doc_612b09e00ac9a24a67654dbb.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_612b09e00ac9a24a67654dbb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_612b09e00ac9a24a67654dbb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7bedd63430baab41bc2046e7",
+            "version_id": "rgb_doc_7bedd63430baab41bc2046e7:r1",
+            "document_name": "rgb_doc_7bedd63430baab41bc2046e7.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_7bedd63430baab41bc2046e7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7bedd63430baab41bc2046e7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_936b8ce5274bc5ec7eae98a3",
+            "version_id": "rgb_doc_936b8ce5274bc5ec7eae98a3:r1",
+            "document_name": "rgb_doc_936b8ce5274bc5ec7eae98a3.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_936b8ce5274bc5ec7eae98a3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_936b8ce5274bc5ec7eae98a3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3d06689a1434f76082a3b8f4",
+            "version_id": "rgb_doc_3d06689a1434f76082a3b8f4:r1",
+            "document_name": "rgb_doc_3d06689a1434f76082a3b8f4.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_3d06689a1434f76082a3b8f4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3d06689a1434f76082a3b8f4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_659a8e2629a5bfd04ac81a3e",
+            "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+            "document_name": "rgb_doc_659a8e2629a5bfd04ac81a3e.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_659a8e2629a5bfd04ac81a3e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e6244de7d77058bf31c95cdd",
+            "version_id": "rgb_doc_e6244de7d77058bf31c95cdd:r1",
+            "document_name": "rgb_doc_e6244de7d77058bf31c95cdd.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_e6244de7d77058bf31c95cdd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e6244de7d77058bf31c95cdd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_66a8cd0e9e06354388a25b86",
+            "version_id": "rgb_doc_66a8cd0e9e06354388a25b86:r1",
+            "document_name": "rgb_doc_66a8cd0e9e06354388a25b86.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_66a8cd0e9e06354388a25b86:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_66a8cd0e9e06354388a25b86.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e371634f4a7713faa0d8a6a9",
+            "version_id": "rgb_doc_e371634f4a7713faa0d8a6a9:r1",
+            "document_name": "rgb_doc_e371634f4a7713faa0d8a6a9.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_e371634f4a7713faa0d8a6a9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e371634f4a7713faa0d8a6a9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d6a014dfe562470367f79c6a",
+            "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+            "document_name": "rgb_doc_d6a014dfe562470367f79c6a.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_d6a014dfe562470367f79c6a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d6a014dfe562470367f79c6a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_471b991b648ca8422bfe5b7d",
+            "version_id": "rgb_doc_471b991b648ca8422bfe5b7d:r1",
+            "document_name": "rgb_doc_471b991b648ca8422bfe5b7d.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_471b991b648ca8422bfe5b7d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_471b991b648ca8422bfe5b7d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_db88d0331e81fe79473b7fd8",
+            "version_id": "rgb_doc_db88d0331e81fe79473b7fd8:r1",
+            "document_name": "rgb_doc_db88d0331e81fe79473b7fd8.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_db88d0331e81fe79473b7fd8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_db88d0331e81fe79473b7fd8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_69253b6409fe684c12cf62f7",
+            "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+            "document_name": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_69253b6409fe684c12cf62f7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_533b8e252631593112419e6a",
+            "version_id": "rgb_doc_533b8e252631593112419e6a:r1",
+            "document_name": "rgb_doc_533b8e252631593112419e6a.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_533b8e252631593112419e6a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_533b8e252631593112419e6a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2e45c9ef03942da70a7fee82",
+            "version_id": "rgb_doc_2e45c9ef03942da70a7fee82:r1",
+            "document_name": "rgb_doc_2e45c9ef03942da70a7fee82.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_2e45c9ef03942da70a7fee82:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2e45c9ef03942da70a7fee82.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e2e0dd98ffb11f53d6ed4193",
+            "version_id": "rgb_doc_e2e0dd98ffb11f53d6ed4193:r1",
+            "document_name": "rgb_doc_e2e0dd98ffb11f53d6ed4193.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_e2e0dd98ffb11f53d6ed4193:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e2e0dd98ffb11f53d6ed4193.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d2d29dd5cf48e4a859b74782",
+            "version_id": "rgb_doc_d2d29dd5cf48e4a859b74782:r1",
+            "document_name": "rgb_doc_d2d29dd5cf48e4a859b74782.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_d2d29dd5cf48e4a859b74782:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d2d29dd5cf48e4a859b74782.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a9aa6845030b144f52ceba75",
+            "version_id": "rgb_doc_a9aa6845030b144f52ceba75:r1",
+            "document_name": "rgb_doc_a9aa6845030b144f52ceba75.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_a9aa6845030b144f52ceba75:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a9aa6845030b144f52ceba75.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6cc9ea99c300b744b84dbc64",
+            "version_id": "rgb_doc_6cc9ea99c300b744b84dbc64:r1",
+            "document_name": "rgb_doc_6cc9ea99c300b744b84dbc64.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_6cc9ea99c300b744b84dbc64:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6cc9ea99c300b744b84dbc64.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_248fbdf402b62988143bf340",
+            "version_id": "rgb_doc_248fbdf402b62988143bf340:r1",
+            "document_name": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_248fbdf402b62988143bf340:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b89bed931ba3e97bc312dc11",
+            "version_id": "rgb_doc_b89bed931ba3e97bc312dc11:r1",
+            "document_name": "rgb_doc_b89bed931ba3e97bc312dc11.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_b89bed931ba3e97bc312dc11:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b89bed931ba3e97bc312dc11.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d66d97ef21d6c61f532c5a43",
+            "version_id": "rgb_doc_d66d97ef21d6c61f532c5a43:r1",
+            "document_name": "rgb_doc_d66d97ef21d6c61f532c5a43.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_d66d97ef21d6c61f532c5a43:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d66d97ef21d6c61f532c5a43.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f47af0d883adeaa2e58e1cc",
+            "version_id": "rgb_doc_2f47af0d883adeaa2e58e1cc:r1",
+            "document_name": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_2f47af0d883adeaa2e58e1cc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ce52a7c3adad472608bc89d4",
+            "version_id": "rgb_doc_ce52a7c3adad472608bc89d4:r1",
+            "document_name": "rgb_doc_ce52a7c3adad472608bc89d4.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_ce52a7c3adad472608bc89d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ce52a7c3adad472608bc89d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4743583ba7b6689c7291617c",
+            "version_id": "rgb_doc_4743583ba7b6689c7291617c:r1",
+            "document_name": "rgb_doc_4743583ba7b6689c7291617c.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_4743583ba7b6689c7291617c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4743583ba7b6689c7291617c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a2ac2139896070910e000366",
+            "version_id": "rgb_doc_a2ac2139896070910e000366:r1",
+            "document_name": "rgb_doc_a2ac2139896070910e000366.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_a2ac2139896070910e000366:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a2ac2139896070910e000366.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bb180359fefb9f28e42f8abb",
+            "version_id": "rgb_doc_bb180359fefb9f28e42f8abb:r1",
+            "document_name": "rgb_doc_bb180359fefb9f28e42f8abb.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_bb180359fefb9f28e42f8abb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bb180359fefb9f28e42f8abb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4f12829e906c298429811de2",
+            "version_id": "rgb_doc_4f12829e906c298429811de2:r1",
+            "document_name": "rgb_doc_4f12829e906c298429811de2.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_4f12829e906c298429811de2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4f12829e906c298429811de2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f15699d9bf52f2f160fd87ed",
+            "version_id": "rgb_doc_f15699d9bf52f2f160fd87ed:r1",
+            "document_name": "rgb_doc_f15699d9bf52f2f160fd87ed.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_f15699d9bf52f2f160fd87ed:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f15699d9bf52f2f160fd87ed.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_911a9b480fa020df0d2daffc",
+            "version_id": "rgb_doc_911a9b480fa020df0d2daffc:r1",
+            "document_name": "rgb_doc_911a9b480fa020df0d2daffc.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_911a9b480fa020df0d2daffc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_911a9b480fa020df0d2daffc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dfa603ab175c35ce337c9bec",
+            "version_id": "rgb_doc_dfa603ab175c35ce337c9bec:r1",
+            "document_name": "rgb_doc_dfa603ab175c35ce337c9bec.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_dfa603ab175c35ce337c9bec:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dfa603ab175c35ce337c9bec.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 9.261166997021064,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.013832998694852,
+          "evidence_ms": 2.590750009403564,
+          "fusion_ms": 1.146915994468145,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 37.79541599215008,
+          "context_chars": 937,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_efefc868f929546e",
+          "ev_15bda2122d2c8fc7",
+          "ev_bd74beef83920be7",
+          "ev_eb2db63e9b943aee",
+          "ev_ad1990be509f8c35",
+          "ev_e47f7117a05bbf0d",
+          "ev_9fee32caa1098105",
+          "ev_8dd2eac0d025f8cf",
+          "ev_3aabce25f7506d01",
+          "ev_d3bcd6aa291f59c1"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_efefc868f929546e",
+            "content": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：中国北京运动员：10651名运动员（4069名女选手，6582名男选手）",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f5550e38f24b917bab5554df",
+            "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+            "document_name": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "chunk_id": "rgb_doc_f5550e38f24b917bab5554df:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+              "block_ids": [
+                "rgb_doc_f5550e38f24b917bab5554df:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 87
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 22.141353607177734,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 87,
+            "content_hash": "f5550e38f24b917bab5554df769b99cafb86d3c25a8438e4bb7b9413f2674c88",
+            "scope_digest": "48c9ae5a21b760a40615ab1985444e6df46c56ceaee2e87af91a0de56e4c80d3",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_c961a1b814c3d1d59388",
+                "source_id": "S1",
+                "evidence_id": "ev_efefc868f929546e",
+                "raw_text": "11",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：中国北",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_edd04285ce0a64de7633",
+                "source_id": "S1",
+                "evidence_id": "ev_efefc868f929546e",
+                "raw_text": "2012",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：中国北京运动员：1",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_15bda2122d2c8fc7",
+            "content": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：澳大利亚悉尼运动员：10651名运动员（4069名女选手，6582名男选手）",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b927f8d40cb2b56b949dcc9",
+            "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+            "document_name": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "chunk_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+              "block_ids": [
+                "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 89
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 21.843395233154297,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 89,
+            "content_hash": "3b927f8d40cb2b56b949dcc947cad54a9011622fcf1fe899fcfe34f3316de452",
+            "scope_digest": "c020c2aa42338cd4b875da54933a90575d332caca50bc99e06f783589063a48e",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_8e855f86ea5314cca65b",
+                "source_id": "S2",
+                "evidence_id": "ev_15bda2122d2c8fc7",
+                "raw_text": "11",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：澳大利",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ae7a09cbff0d363fb13a",
+                "source_id": "S2",
+                "evidence_id": "ev_15bda2122d2c8fc7",
+                "raw_text": "2012",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 11, 2012 ... 开幕时间：2000年9月15日闭幕时间：2000年10月1日举办地：澳大利亚悉尼运动员",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_bd74beef83920be7",
+            "content": "Jan 5, 2015 ... 当天，申办代表团的一位重量级人物，时任全国政协副主席的霍英东先生私下里向记者透露，何振梁在2000年奥运会举办城市选举结果公布后建议，为了让世界 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21bcce2fd0f77387227aae9d",
+            "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+            "document_name": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "chunk_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+              "block_ids": [
+                "rgb_doc_21bcce2fd0f77387227aae9d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 92
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 21.742965698242188,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 92,
+            "content_hash": "21bcce2fd0f77387227aae9d98363661f4f5993cd7ff41d554aa027f44a84ef9",
+            "scope_digest": "8a010449d9f9324389ffeaa8893dc3dd1a303be0b7e97500944275df0656830b",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_070bff8f1895ac4f6628",
+                "source_id": "S3",
+                "evidence_id": "ev_bd74beef83920be7",
+                "raw_text": "5",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 5, 2015 ... 当天，申办代表团的一位重量级人物，时任全国政协副主席的霍英东先生私下里向记",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_7f90c7a17669c0de6a58",
+                "source_id": "S3",
+                "evidence_id": "ev_bd74beef83920be7",
+                "raw_text": "2015",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 5, 2015 ... 当天，申办代表团的一位重量级人物，时任全国政协副主席的霍英东先生私下里向记者透露，何振",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_eb2db63e9b943aee",
+            "content": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合宣布，推迟后的东京奥运会举办时间是2021年7月23日至8月8日，东京残奥会举办 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_85701d99c92ec45f1aa139a5",
+            "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+            "document_name": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "chunk_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+              "block_ids": [
+                "rgb_doc_85701d99c92ec45f1aa139a5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 17.048986434936523,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "85701d99c92ec45f1aa139a5e4b876c84dd838782a92bb7c4ce009010f78fecd",
+            "scope_digest": "394b88451d177d59b9dc2353df8c0c389c0e64f4b083680ac67d606fcef103d7",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_a176fcc320c795fbc56f",
+                "source_id": "S4",
+                "evidence_id": "ev_eb2db63e9b943aee",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d8468e98c2368883aee9",
+                "source_id": "S4",
+                "evidence_id": "ev_eb2db63e9b943aee",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合宣布，推迟后",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_ad1990be509f8c35",
+            "content": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合宣布，推迟后的东京奥运会举办时间是2021年1月23日至8月8日，东京残奥会举办 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da19629827a0f58fd4468408",
+            "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+            "document_name": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "chunk_id": "rgb_doc_da19629827a0f58fd4468408:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+              "block_ids": [
+                "rgb_doc_da19629827a0f58fd4468408:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 17.048986434936523,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "da19629827a0f58fd44684086bce4917217116daf98112aef9955916cd9d5f99",
+            "scope_digest": "5093ff168a6d29095e5ef8d8c4115adb2cd829815a642b1141d671ec90393ab7",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_48251dd7ac62acf57928",
+                "source_id": "S5",
+                "evidence_id": "ev_ad1990be509f8c35",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_805251463a0fb322da48",
+                "source_id": "S5",
+                "evidence_id": "ev_ad1990be509f8c35",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Mar 30, 2020 ... 新华社东京3月30日电（记者王子江、姬烨）国际奥委会和东京奥组委30日联合宣布，推迟后",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_e47f7117a05bbf0d",
+            "content": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+            "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+            "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+            "chunk_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+              "block_ids": [
+                "rgb_doc_7d32bc72c92429b00411fcbd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 15.08787727355957,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 94,
+            "content_hash": "7d32bc72c92429b00411fcbd437a09c2c279df6f4e7d2c7f57a8b8472edbe122",
+            "scope_digest": "1413527c609fef2b0eb8c14052706749987c7136a6421a8c30c3aacc51dcc8d8",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_d20636f1245c366471b1",
+                "source_id": "S6",
+                "evidence_id": "ev_e47f7117a05bbf0d",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_db149c8a9d48a5cc460a",
+                "source_id": "S6",
+                "evidence_id": "ev_e47f7117a05bbf0d",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年1月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_9fee32caa1098105",
+            "content": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会的开幕式上，这 ... 谁将点燃圣火通常是奥运会开幕式上最大的悬念。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+            "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+            "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+            "chunk_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+              "block_ids": [
+                "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 94
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 15.08787727355957,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 94,
+            "content_hash": "edbea60d61b6f1b2ba0d3f8512a8e1de905a477eb7de589da31a1ad500d13ff2",
+            "scope_digest": "3b4e8b3d0d01801c8e8c18265b16af5cc021a8617e97a074d640400c608c154a",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_3e3f47f90b4ecb34d125",
+                "source_id": "S7",
+                "evidence_id": "ev_9fee32caa1098105",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_3ab1817e6b33a1a6bfa4",
+                "source_id": "S7",
+                "evidence_id": "ev_9fee32caa1098105",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 2021年7月23日19时（东八区时间），东京奥运会开幕式正式拉开帷幕。 在历届奥运会",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_8dd2eac0d025f8cf",
+            "content": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每个日本人都对奥运会兴奋不已，”现年69岁的井上和夫（Kazuo Inoue，音）说，他清楚 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+            "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+            "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+            "chunk_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+              "block_ids": [
+                "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 103
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 14.068916320800781,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 103,
+            "content_hash": "1e6b62eb82329a5fd33a6fd145bd71f41ead1921d9f10b02ca0a2b906a2bee7b",
+            "scope_digest": "30944b747ad97801c849cf8e50ba9d80af087f0e4b1649127f095693f7268d8d",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_cf54da88ba107e58fc97",
+                "source_id": "S8",
+                "evidence_id": "ev_8dd2eac0d025f8cf",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_09275534b93b2d39ec06",
+                "source_id": "S8",
+                "evidence_id": "ev_8dd2eac0d025f8cf",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 1964年东京夏季奥运会开幕式上飘向体育场上空的气球。 ... “那时候每个日本人都对",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_3aabce25f7506d01",
+            "content": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大使：东京奥运会是新冠肺炎疫情发生以来举行的首场全球性大型体育赛事， ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6352cba58821024a6925ba68",
+            "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+            "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+            "chunk_id": "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+              "block_ids": [
+                "rgb_doc_6352cba58821024a6925ba68:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 13.539243698120117,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 91,
+            "content_hash": "6352cba58821024a6925ba685de3053ea0754e58d517f40bbf27018a2cb05b6a",
+            "scope_digest": "f5e4ebaad5cc4b868a42ce4db906150ded085828bda633c1ae786cf1c1162b4f",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9f503519d9d9661452bd",
+                "source_id": "S9",
+                "evidence_id": "ev_3aabce25f7506d01",
+                "raw_text": "23",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ef35a7e25edac6eaf0ad",
+                "source_id": "S9",
+                "evidence_id": "ev_3aabce25f7506d01",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jul 23, 2021 ... 白岩松：东京奥运会明天就要开幕了，这几天作为大使馆工作的重点是什么？ 孔大使：东京奥运",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d3bcd6aa291f59c1",
+            "content": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界 ... 现行的紧急状态将至少持续至五月底，而奥运会的开幕日是7月23日。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_279b381a102074420971bf0e",
+            "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+            "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+            "chunk_id": "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+              "block_ids": [
+                "rgb_doc_279b381a102074420971bf0e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 91
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 13.287643432617188,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 91,
+            "content_hash": "279b381a102074420971bf0e096b8336ae0392c753c486a4fa9699c3e54485ce",
+            "scope_digest": "1bb0ac0e0646e32a4566cb869687f73a87d570821f6e8117f35f96c20f3877d2",
+            "trace_id": "ce739afd694448de87bb2f18c1184a00",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_f0e73eb6c36822fcc0b5",
+                "source_id": "S10",
+                "evidence_id": "ev_d3bcd6aa291f59c1",
+                "raw_text": "20",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_12028989233a5306ad25",
+                "source_id": "S10",
+                "evidence_id": "ev_d3bcd6aa291f59c1",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 20, 2021 ... 世界运动员协会表示，东京奥运会要确保安全进行，国际奥委会必须保证实行“世界 ... 现",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_efefc868f929546e",
+      "ev_15bda2122d2c8fc7",
+      "ev_bd74beef83920be7",
+      "ev_eb2db63e9b943aee",
+      "ev_ad1990be509f8c35",
+      "ev_e47f7117a05bbf0d",
+      "ev_9fee32caa1098105"
+    ],
+    "evidence": {
+      "ev_efefc868f929546e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_f5550e38f24b917bab5554df",
+        "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+        "document_name": "rgb_doc_f5550e38f24b917bab5554df.txt",
+        "chunk_id": "rgb_doc_f5550e38f24b917bab5554df:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+          "block_ids": [
+            "rgb_doc_f5550e38f24b917bab5554df:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 87
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 22.141353607177734,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 87,
+        "content_hash": "f5550e38f24b917bab5554df769b99cafb86d3c25a8438e4bb7b9413f2674c88",
+        "scope_digest": "48c9ae5a21b760a40615ab1985444e6df46c56ceaee2e87af91a0de56e4c80d3",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_15bda2122d2c8fc7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_3b927f8d40cb2b56b949dcc9",
+        "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+        "document_name": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+        "chunk_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+          "block_ids": [
+            "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 89
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 21.843395233154297,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 89,
+        "content_hash": "3b927f8d40cb2b56b949dcc947cad54a9011622fcf1fe899fcfe34f3316de452",
+        "scope_digest": "c020c2aa42338cd4b875da54933a90575d332caca50bc99e06f783589063a48e",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_bd74beef83920be7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_21bcce2fd0f77387227aae9d",
+        "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+        "document_name": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+        "chunk_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+          "block_ids": [
+            "rgb_doc_21bcce2fd0f77387227aae9d:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 92
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 21.742965698242188,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 92,
+        "content_hash": "21bcce2fd0f77387227aae9d98363661f4f5993cd7ff41d554aa027f44a84ef9",
+        "scope_digest": "8a010449d9f9324389ffeaa8893dc3dd1a303be0b7e97500944275df0656830b",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_eb2db63e9b943aee": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_85701d99c92ec45f1aa139a5",
+        "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+        "document_name": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+        "chunk_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+          "block_ids": [
+            "rgb_doc_85701d99c92ec45f1aa139a5:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 17.048986434936523,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "85701d99c92ec45f1aa139a5e4b876c84dd838782a92bb7c4ce009010f78fecd",
+        "scope_digest": "394b88451d177d59b9dc2353df8c0c389c0e64f4b083680ac67d606fcef103d7",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_ad1990be509f8c35": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_da19629827a0f58fd4468408",
+        "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+        "document_name": "rgb_doc_da19629827a0f58fd4468408.txt",
+        "chunk_id": "rgb_doc_da19629827a0f58fd4468408:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+          "block_ids": [
+            "rgb_doc_da19629827a0f58fd4468408:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 17.048986434936523,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "da19629827a0f58fd44684086bce4917217116daf98112aef9955916cd9d5f99",
+        "scope_digest": "5093ff168a6d29095e5ef8d8c4115adb2cd829815a642b1141d671ec90393ab7",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_e47f7117a05bbf0d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_7d32bc72c92429b00411fcbd",
+        "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+        "document_name": "rgb_doc_7d32bc72c92429b00411fcbd.txt",
+        "chunk_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_7d32bc72c92429b00411fcbd:r1",
+          "block_ids": [
+            "rgb_doc_7d32bc72c92429b00411fcbd:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 94
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 15.08787727355957,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 94,
+        "content_hash": "7d32bc72c92429b00411fcbd437a09c2c279df6f4e7d2c7f57a8b8472edbe122",
+        "scope_digest": "1413527c609fef2b0eb8c14052706749987c7136a6421a8c30c3aacc51dcc8d8",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_9fee32caa1098105": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85",
+        "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+        "document_name": "rgb_doc_edbea60d61b6f1b2ba0d3f85.txt",
+        "chunk_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1",
+          "block_ids": [
+            "rgb_doc_edbea60d61b6f1b2ba0d3f85:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 94
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 15.08787727355957,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 94,
+        "content_hash": "edbea60d61b6f1b2ba0d3f8512a8e1de905a477eb7de589da31a1ad500d13ff2",
+        "scope_digest": "3b4e8b3d0d01801c8e8c18265b16af5cc021a8617e97a074d640400c608c154a",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_8dd2eac0d025f8cf": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1",
+        "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+        "document_name": "rgb_doc_1e6b62eb82329a5fd33a6fd1.txt",
+        "chunk_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1",
+          "block_ids": [
+            "rgb_doc_1e6b62eb82329a5fd33a6fd1:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 103
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 14.068916320800781,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 103,
+        "content_hash": "1e6b62eb82329a5fd33a6fd145bd71f41ead1921d9f10b02ca0a2b906a2bee7b",
+        "scope_digest": "30944b747ad97801c849cf8e50ba9d80af087f0e4b1649127f095693f7268d8d",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_3aabce25f7506d01": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_6352cba58821024a6925ba68",
+        "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+        "document_name": "rgb_doc_6352cba58821024a6925ba68.txt",
+        "chunk_id": "rgb_doc_6352cba58821024a6925ba68:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_6352cba58821024a6925ba68:r1",
+          "block_ids": [
+            "rgb_doc_6352cba58821024a6925ba68:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 91
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 13.539243698120117,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 91,
+        "content_hash": "6352cba58821024a6925ba685de3053ea0754e58d517f40bbf27018a2cb05b6a",
+        "scope_digest": "f5e4ebaad5cc4b868a42ce4db906150ded085828bda633c1ae786cf1c1162b4f",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d3bcd6aa291f59c1": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_279b381a102074420971bf0e",
+        "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+        "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+        "chunk_id": "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+          "block_ids": [
+            "rgb_doc_279b381a102074420971bf0e:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 91
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 13.287643432617188,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 91,
+        "content_hash": "279b381a102074420971bf0e096b8336ae0392c753c486a4fa9699c3e54485ce",
+        "scope_digest": "1bb0ac0e0646e32a4566cb869687f73a87d570821f6e8117f35f96c20f3877d2",
+        "trace_id": "ce739afd694448de87bb2f18c1184a00",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_efefc868f929546e",
+      "S2": "ev_15bda2122d2c8fc7",
+      "S3": "ev_bd74beef83920be7",
+      "S4": "ev_eb2db63e9b943aee",
+      "S5": "ev_ad1990be509f8c35",
+      "S6": "ev_e47f7117a05bbf0d",
+      "S7": "ev_9fee32caa1098105",
+      "S8": "ev_8dd2eac0d025f8cf",
+      "S9": "ev_3aabce25f7506d01",
+      "S10": "ev_d3bcd6aa291f59c1"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

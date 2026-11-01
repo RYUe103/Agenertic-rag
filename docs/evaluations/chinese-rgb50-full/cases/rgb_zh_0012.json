@@ -1,0 +1,3627 @@
+{
+  "question_id": "rgb_zh_0012",
+  "result": {
+    "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+    "run_id": "run_650b54a03d29426f8e51b0607118a333",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:1",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:2",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:3",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "context_chars": 1192,
+        "prompt_tokens": 8440,
+        "completion_tokens": 51,
+        "total_tokens": 8491,
+        "context_compaction_count": 0,
+        "context_chars_before": 1192,
+        "context_chars_after": 1192,
+        "estimated_input_tokens": 12125,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1479,
+        "remaining_run_tokens": 111509,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8440,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3685
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:4",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1192
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:5",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "tool_call_id": "call_73e9ea45c76e471ba04d66",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:6",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "tool_call_id": "call_73e9ea45c76e471ba04d66",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:7",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_73e9ea45c76e471ba04d66",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 10,
+        "output_chars_before": 96973,
+        "output_chars_after": 13734,
+        "removed_chars": 83239,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:8",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:9",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:10",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "context_chars": 14926,
+        "prompt_tokens": 14748,
+        "completion_tokens": 66,
+        "total_tokens": 14814,
+        "context_compaction_count": 0,
+        "context_chars_before": 14926,
+        "context_chars_after": 14926,
+        "estimated_input_tokens": 21046,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 8258,
+        "evidence_tokens": 2900,
+        "history_tokens": 2142,
+        "remaining_run_tokens": 96695,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 14748,
+        "usage_source": "provider",
+        "estimation_error_tokens": -6298
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:11",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "model_visible_evidence_count": 10,
+        "context_chars": 14926
+      },
+      {
+        "type": "answer_started",
+        "sequence": 12,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:12",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 13,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:13",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "delta": "2023年世界人工智能大会于7月6日至8日在中国上海举办，主会场为上海世博中心及世博展览馆，并在浦东张江、徐汇西岸设分会场。 [1] [2] [3]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 14,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:14",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6",
+        "final_citation_count": 3,
+        "citation_validation_reason": [],
+        "repair_attempted": false,
+        "repair_success": false
+      },
+      {
+        "type": "completed",
+        "sequence": 15,
+        "event_id": "run_650b54a03d29426f8e51b0607118a333:3b27e8725a6941edab7acfe1ccc2785e:15",
+        "run_id": "run_650b54a03d29426f8e51b0607118a333",
+        "thread_id": "thread_b3a2d240e8f64f7faf3a233ff31e2dd6"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 2,
+    "usage": {
+      "prompt_tokens": 23188,
+      "completion_tokens": 117,
+      "total_tokens": 23305
+    },
+    "elapsed_seconds": 4.784491750004236,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 10,
+      "output_truncated": true,
+      "context_chars": 14926,
+      "prompt_tokens": 23188,
+      "completion_tokens": 117,
+      "total_tokens": 23305,
+      "context_compaction_count": 0,
+      "context_chars_before": 14926,
+      "context_chars_after": 14926,
+      "estimated_input_tokens": 21046,
+      "tool_schema_tokens": 10646,
+      "observation_tokens": 8258,
+      "evidence_tokens": 2900,
+      "history_tokens": 2142,
+      "remaining_run_tokens": 96695,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 14748,
+      "usage_source": "provider",
+      "estimation_error_tokens": -6298,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_73e9ea45c76e471ba04d66",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 10,
+          "output_chars_before": 96973,
+          "output_chars_after": 13734,
+          "removed_chars": 83239,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "final_citation_count": 3,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "2023年世界人工智能大会于7月6日至8日在中国上海举办，主会场为上海世博中心及世博展览馆，并在浦东张江、徐汇西岸设分会场。 [1] [2] [3]",
+      "citations": {
+        "ev_559923faecf1f9bd": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb",
+          "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+          "document_name": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+          "chunk_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "Jun 30, 2023 ... 2023年世界人工智能大会7月6日将在上海举办-\"上海已连续第六年举办世界人工智能大会，本届大会的主题是“智联世界生成未来”，由上海市政府和国家 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+            "block_ids": [
+              "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 93
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 42.475669860839844,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_e7a602628e032bb3": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_edb50ea6c3a1327dabd13134",
+          "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+          "document_name": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+          "chunk_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "Jun 9, 2023 ... 2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世界人工智能大会以“智联世界·生成未来”为主题，经国务院批准，由国家发展 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+            "block_ids": [
+              "rgb_doc_edb50ea6c3a1327dabd13134:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 98
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 41.38483810424805,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_988e0ee3ae5f22ce": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_69253b6409fe684c12cf62f7",
+          "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+          "document_name": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+          "chunk_id": "rgb_doc_69253b6409fe684c12cf62f7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 10,
+          "source_score": null,
+          "fused_score": 0.014285714285714285,
+          "rerank_score": null,
+          "content": "记者从6月29日举行的上海市政府新闻发布会上了解到，2023世界人工智能大会将于7月6日至8日在上海世博中心及世博展览馆举办，并在浦东张江、徐汇西岸设分会场，同步在闵行等产业集聚区开展同期活动。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+            "block_ids": [
+              "rgb_doc_69253b6409fe684c12cf62f7:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 97
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 10,
+              "score": 29.9732666015625,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "2023年世界人工智能大会于7月6日至8日在中国上海举办，主会场为上海世博中心及世博展览馆，并在浦东张江、徐汇西岸设分会场。",
+          "source_ids": [
+            "S1",
+            "S2",
+            "S10"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_559923faecf1f9bd"
+        },
+        {
+          "number": 2,
+          "source_id": "S2",
+          "evidence_id": "ev_e7a602628e032bb3"
+        },
+        {
+          "number": 3,
+          "source_id": "S10",
+          "evidence_id": "ev_988e0ee3ae5f22ce"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": false,
+      "repair_success": false,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_73e9ea45c76e471ba04d66",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2023年世界人工智能大会 举办地点",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb",
+            "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+            "document_name": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+            "chunk_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 42.475669860839844,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Jun 30, 2023 ... 2023年世界人工智能大会7月6日将在上海举办-\"上海已连续第六年举办世界人工智能大会，本届大会的主题是“智联世界生成未来”，由上海市政府和国家 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+              "block_ids": [
+                "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 42.475669860839844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edb50ea6c3a1327dabd13134",
+            "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+            "document_name": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+            "chunk_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 41.38483810424805,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Jun 9, 2023 ... 2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世界人工智能大会以“智联世界·生成未来”为主题，经国务院批准，由国家发展 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+              "block_ids": [
+                "rgb_doc_edb50ea6c3a1327dabd13134:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 41.38483810424805,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a9fe95998b2b2e57aa23252",
+            "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+            "document_name": "rgb_doc_2a9fe95998b2b2e57aa23252.txt",
+            "chunk_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 40.516441345214844,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "来源：中国网 2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世界人工智能大会以“智联世界·生成未来”为主题，经国务院批准，由国家发展和改革委员会、工业和信息化部、科学技术部、国家互联网信息办公室、中国科学院、中国工程院、中国科学技术协会和上海市人民政府共同主办。  世界人工智能大会自2018年创办以来，已经成功举办五届。亿欧自首届举办以来，就作为官方战略合作伙伴，全程深度参与世界人工智能大会。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+              "block_ids": [
+                "rgb_doc_2a9fe95998b2b2e57aa23252:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 217
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 40.516441345214844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7",
+            "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+            "document_name": "rgb_doc_7d55ec03ef389a98f0cf0ca7.txt",
+            "chunk_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 40.516441345214844,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世界人工智能大会以“智联世界·生成未来”为主题，经国务院批准，由国家发展和改革委员会、工业和信息化部、科学技术部、国家互联网信息办公室、中国科学院、中国工程院、中国科学技术协会和上海市人民政府共同主办。 世界人工智能大会自2018年创办以来，已经成功举办五届。亿欧自首届举办以来，就作为官方战略合作伙伴，全程深度参与世界人工智能大会。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+              "block_ids": [
+                "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 209
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 40.516441345214844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_659a8e2629a5bfd04ac81a3e",
+            "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+            "document_name": "rgb_doc_659a8e2629a5bfd04ac81a3e.txt",
+            "chunk_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 38.467803955078125,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "7月6日-8日，2023世界人工智能大会举办，本届大会的主题是“智联世界 生成未来”，会议活动总体架构按照“1+1+2+10+N”设置，即1场开幕式、1场闭幕式、科技创新和产业发展2场全体会议、10场主题论坛，以及N场生态论坛。 今年是上海连续第六年举办世界人工智能大会，充分发挥大会“科技风向标、应用展示台、产业加速器、治理议事厅”重要作用，汇聚融通全球人工智能领域思想智慧、前沿技术、产业动向和人文生态，助推人工智能健康创新发展。其中，多家上海国企在大会上展示交流创新成果。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+              "block_ids": [
+                "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 239
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 38.467803955078125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_30c88ad0e0419eb1e89dfccb",
+            "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+            "document_name": "rgb_doc_30c88ad0e0419eb1e89dfccb.txt",
+            "chunk_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 37.00639343261719,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "本届世界人工智能大会期间，亿欧将同步举办世界人工智能大会“AI商业落地论坛”“AI医疗发展论坛”“AI与新一代车载智能传感器技术创新论坛”“第十届中国产业互联网高峰论坛”等分论坛。 同时，亿欧将重磅发布《2023中国AI商业落地投资价值报告》《2023中国AIGC商业潜力研究报告》《2023AI医学影像产品生命周期研究报告》等多份研究报告，在媒体传播、榜单发布等多方面，全程助力大会成功举办。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+              "block_ids": [
+                "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 197
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 37.00639343261719,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_94270f5924d949874106c478",
+            "version_id": "rgb_doc_94270f5924d949874106c478:r1",
+            "document_name": "rgb_doc_94270f5924d949874106c478.txt",
+            "chunk_id": "rgb_doc_94270f5924d949874106c478:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 33.313907623291016,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "东浩兰生集团   2023世界人工智能大会是东浩兰生集团项目团队总承办世界人工智能大会的第五年。多年来，集团旗下的会展集团发挥专业优势，负责大会的整体策划、参会组织、论坛筹备、展览展示、运营服务以及宣传推广等。本届大会企业数量、展览面积均创历届之最。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_94270f5924d949874106c478:r1",
+              "block_ids": [
+                "rgb_doc_94270f5924d949874106c478:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 125
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 33.313907623291016,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d6a014dfe562470367f79c6a",
+            "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+            "document_name": "rgb_doc_d6a014dfe562470367f79c6a.txt",
+            "chunk_id": "rgb_doc_d6a014dfe562470367f79c6a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 31.754192352294922,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "Jun 30, 2023 ... 记者从6月29日举行的上海市政府新闻发布会上了解到，2023世界人工智能大会将于7月6日至8日在上海世博中心及世博展览馆举办，并在浦东张江、徐汇西岸设 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+              "block_ids": [
+                "rgb_doc_d6a014dfe562470367f79c6a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 31.754192352294922,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_01be51c58b7249a92b3d6f26",
+            "version_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1",
+            "document_name": "rgb_doc_01be51c58b7249a92b3d6f26.txt",
+            "chunk_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 30.894874572753906,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "2023世界人工智能大会以“智联世界元生无界”为主题，以“高端化、国际化、专业化、市场化、智能化”为特色，将集聚全球智能领域最具影响力的科学家和企业家，以及相关政府 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1",
+              "block_ids": [
+                "rgb_doc_01be51c58b7249a92b3d6f26:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 86
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 30.894874572753906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_69253b6409fe684c12cf62f7",
+            "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+            "document_name": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+            "chunk_id": "rgb_doc_69253b6409fe684c12cf62f7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 29.9732666015625,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "记者从6月29日举行的上海市政府新闻发布会上了解到，2023世界人工智能大会将于7月6日至8日在上海世博中心及世博展览馆举办，并在浦东张江、徐汇西岸设分会场，同步在闵行等产业集聚区开展同期活动。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+              "block_ids": [
+                "rgb_doc_69253b6409fe684c12cf62f7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 29.9732666015625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb",
+            "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+            "document_name": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edb50ea6c3a1327dabd13134",
+            "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+            "document_name": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_edb50ea6c3a1327dabd13134:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a9fe95998b2b2e57aa23252",
+            "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+            "document_name": "rgb_doc_2a9fe95998b2b2e57aa23252.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_2a9fe95998b2b2e57aa23252:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2a9fe95998b2b2e57aa23252.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7",
+            "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+            "document_name": "rgb_doc_7d55ec03ef389a98f0cf0ca7.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7d55ec03ef389a98f0cf0ca7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_659a8e2629a5bfd04ac81a3e",
+            "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+            "document_name": "rgb_doc_659a8e2629a5bfd04ac81a3e.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_659a8e2629a5bfd04ac81a3e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_30c88ad0e0419eb1e89dfccb",
+            "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+            "document_name": "rgb_doc_30c88ad0e0419eb1e89dfccb.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_30c88ad0e0419eb1e89dfccb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_94270f5924d949874106c478",
+            "version_id": "rgb_doc_94270f5924d949874106c478:r1",
+            "document_name": "rgb_doc_94270f5924d949874106c478.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_94270f5924d949874106c478:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_94270f5924d949874106c478.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d6a014dfe562470367f79c6a",
+            "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+            "document_name": "rgb_doc_d6a014dfe562470367f79c6a.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_d6a014dfe562470367f79c6a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d6a014dfe562470367f79c6a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_01be51c58b7249a92b3d6f26",
+            "version_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1",
+            "document_name": "rgb_doc_01be51c58b7249a92b3d6f26.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_01be51c58b7249a92b3d6f26:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_01be51c58b7249a92b3d6f26.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_69253b6409fe684c12cf62f7",
+            "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+            "document_name": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_69253b6409fe684c12cf62f7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ccdbb2b540976f9f285fd6d2",
+            "version_id": "rgb_doc_ccdbb2b540976f9f285fd6d2:r1",
+            "document_name": "rgb_doc_ccdbb2b540976f9f285fd6d2.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_ccdbb2b540976f9f285fd6d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ccdbb2b540976f9f285fd6d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b2b2169c815ba6f2fc974ad9",
+            "version_id": "rgb_doc_b2b2169c815ba6f2fc974ad9:r1",
+            "document_name": "rgb_doc_b2b2169c815ba6f2fc974ad9.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_b2b2169c815ba6f2fc974ad9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b2b2169c815ba6f2fc974ad9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f9de4f17a40a6331c7ff2233",
+            "version_id": "rgb_doc_f9de4f17a40a6331c7ff2233:r1",
+            "document_name": "rgb_doc_f9de4f17a40a6331c7ff2233.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_f9de4f17a40a6331c7ff2233:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f9de4f17a40a6331c7ff2233.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_828b443248ab063018a08f6d",
+            "version_id": "rgb_doc_828b443248ab063018a08f6d:r1",
+            "document_name": "rgb_doc_828b443248ab063018a08f6d.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_828b443248ab063018a08f6d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_828b443248ab063018a08f6d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4f26c71af7c420e782038429",
+            "version_id": "rgb_doc_4f26c71af7c420e782038429:r1",
+            "document_name": "rgb_doc_4f26c71af7c420e782038429.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_4f26c71af7c420e782038429:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4f26c71af7c420e782038429.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2441461442d1e895f9462aa",
+            "version_id": "rgb_doc_f2441461442d1e895f9462aa:r1",
+            "document_name": "rgb_doc_f2441461442d1e895f9462aa.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_f2441461442d1e895f9462aa:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f2441461442d1e895f9462aa.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5194a19d3b96388dd482b33",
+            "version_id": "rgb_doc_a5194a19d3b96388dd482b33:r1",
+            "document_name": "rgb_doc_a5194a19d3b96388dd482b33.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_a5194a19d3b96388dd482b33:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a5194a19d3b96388dd482b33.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a1d2269977cf36478762eb33",
+            "version_id": "rgb_doc_a1d2269977cf36478762eb33:r1",
+            "document_name": "rgb_doc_a1d2269977cf36478762eb33.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_a1d2269977cf36478762eb33:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a1d2269977cf36478762eb33.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b7d9601f3cf483cca89f2d8a",
+            "version_id": "rgb_doc_b7d9601f3cf483cca89f2d8a:r1",
+            "document_name": "rgb_doc_b7d9601f3cf483cca89f2d8a.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_b7d9601f3cf483cca89f2d8a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b7d9601f3cf483cca89f2d8a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_00c332c9de94798156325fd9",
+            "version_id": "rgb_doc_00c332c9de94798156325fd9:r1",
+            "document_name": "rgb_doc_00c332c9de94798156325fd9.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_00c332c9de94798156325fd9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_00c332c9de94798156325fd9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4a3876bf09ca72e6ab3e9b55",
+            "version_id": "rgb_doc_4a3876bf09ca72e6ab3e9b55:r1",
+            "document_name": "rgb_doc_4a3876bf09ca72e6ab3e9b55.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_4a3876bf09ca72e6ab3e9b55:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4a3876bf09ca72e6ab3e9b55.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aafb9e37dcbc690337c8d7d2",
+            "version_id": "rgb_doc_aafb9e37dcbc690337c8d7d2:r1",
+            "document_name": "rgb_doc_aafb9e37dcbc690337c8d7d2.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_aafb9e37dcbc690337c8d7d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aafb9e37dcbc690337c8d7d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c68297bae1e9b93f43706d9f",
+            "version_id": "rgb_doc_c68297bae1e9b93f43706d9f:r1",
+            "document_name": "rgb_doc_c68297bae1e9b93f43706d9f.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_c68297bae1e9b93f43706d9f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c68297bae1e9b93f43706d9f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1b581f620b7e4ba2a56d4c5b",
+            "version_id": "rgb_doc_1b581f620b7e4ba2a56d4c5b:r1",
+            "document_name": "rgb_doc_1b581f620b7e4ba2a56d4c5b.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_1b581f620b7e4ba2a56d4c5b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1b581f620b7e4ba2a56d4c5b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_21bcce2fd0f77387227aae9d",
+            "version_id": "rgb_doc_21bcce2fd0f77387227aae9d:r1",
+            "document_name": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_21bcce2fd0f77387227aae9d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_21bcce2fd0f77387227aae9d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ef0e41a44d2be7736ff36ff9",
+            "version_id": "rgb_doc_ef0e41a44d2be7736ff36ff9:r1",
+            "document_name": "rgb_doc_ef0e41a44d2be7736ff36ff9.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_ef0e41a44d2be7736ff36ff9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ef0e41a44d2be7736ff36ff9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a9f37dfd6f0c66b529eabef0",
+            "version_id": "rgb_doc_a9f37dfd6f0c66b529eabef0:r1",
+            "document_name": "rgb_doc_a9f37dfd6f0c66b529eabef0.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_a9f37dfd6f0c66b529eabef0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a9f37dfd6f0c66b529eabef0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_612b09e00ac9a24a67654dbb",
+            "version_id": "rgb_doc_612b09e00ac9a24a67654dbb:r1",
+            "document_name": "rgb_doc_612b09e00ac9a24a67654dbb.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_612b09e00ac9a24a67654dbb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_612b09e00ac9a24a67654dbb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7bedd63430baab41bc2046e7",
+            "version_id": "rgb_doc_7bedd63430baab41bc2046e7:r1",
+            "document_name": "rgb_doc_7bedd63430baab41bc2046e7.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_7bedd63430baab41bc2046e7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7bedd63430baab41bc2046e7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_936b8ce5274bc5ec7eae98a3",
+            "version_id": "rgb_doc_936b8ce5274bc5ec7eae98a3:r1",
+            "document_name": "rgb_doc_936b8ce5274bc5ec7eae98a3.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_936b8ce5274bc5ec7eae98a3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_936b8ce5274bc5ec7eae98a3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8c375e6ad6163c70adc8ba58",
+            "version_id": "rgb_doc_8c375e6ad6163c70adc8ba58:r1",
+            "document_name": "rgb_doc_8c375e6ad6163c70adc8ba58.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_8c375e6ad6163c70adc8ba58:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8c375e6ad6163c70adc8ba58.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ddf366f74570e62129fd3085",
+            "version_id": "rgb_doc_ddf366f74570e62129fd3085:r1",
+            "document_name": "rgb_doc_ddf366f74570e62129fd3085.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_ddf366f74570e62129fd3085:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ddf366f74570e62129fd3085.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_85701d99c92ec45f1aa139a5",
+            "version_id": "rgb_doc_85701d99c92ec45f1aa139a5:r1",
+            "document_name": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_85701d99c92ec45f1aa139a5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_85701d99c92ec45f1aa139a5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da19629827a0f58fd4468408",
+            "version_id": "rgb_doc_da19629827a0f58fd4468408:r1",
+            "document_name": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_da19629827a0f58fd4468408:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_da19629827a0f58fd4468408.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_30b74022df3fca3d9bd769ff",
+            "version_id": "rgb_doc_30b74022df3fca3d9bd769ff:r1",
+            "document_name": "rgb_doc_30b74022df3fca3d9bd769ff.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_30b74022df3fca3d9bd769ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_30b74022df3fca3d9bd769ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_29ceb777942e907a02616b3d",
+            "version_id": "rgb_doc_29ceb777942e907a02616b3d:r1",
+            "document_name": "rgb_doc_29ceb777942e907a02616b3d.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_29ceb777942e907a02616b3d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_29ceb777942e907a02616b3d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c8071a64b6f2693d9c2f6c1",
+            "version_id": "rgb_doc_1c8071a64b6f2693d9c2f6c1:r1",
+            "document_name": "rgb_doc_1c8071a64b6f2693d9c2f6c1.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_1c8071a64b6f2693d9c2f6c1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c8071a64b6f2693d9c2f6c1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5d6bc52987f4aa0a3b23e14e",
+            "version_id": "rgb_doc_5d6bc52987f4aa0a3b23e14e:r1",
+            "document_name": "rgb_doc_5d6bc52987f4aa0a3b23e14e.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_5d6bc52987f4aa0a3b23e14e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5d6bc52987f4aa0a3b23e14e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ea87bd98301116c8f8e527b7",
+            "version_id": "rgb_doc_ea87bd98301116c8f8e527b7:r1",
+            "document_name": "rgb_doc_ea87bd98301116c8f8e527b7.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_ea87bd98301116c8f8e527b7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ea87bd98301116c8f8e527b7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d9df20f5d3bf558930358e4d",
+            "version_id": "rgb_doc_d9df20f5d3bf558930358e4d:r1",
+            "document_name": "rgb_doc_d9df20f5d3bf558930358e4d.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_d9df20f5d3bf558930358e4d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d9df20f5d3bf558930358e4d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f5550e38f24b917bab5554df",
+            "version_id": "rgb_doc_f5550e38f24b917bab5554df:r1",
+            "document_name": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_f5550e38f24b917bab5554df:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f5550e38f24b917bab5554df.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_160a93b420988903e9e58c45",
+            "version_id": "rgb_doc_160a93b420988903e9e58c45:r1",
+            "document_name": "rgb_doc_160a93b420988903e9e58c45.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_160a93b420988903e9e58c45:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_160a93b420988903e9e58c45.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_262d22ef5dfa424b011d09fe",
+            "version_id": "rgb_doc_262d22ef5dfa424b011d09fe:r1",
+            "document_name": "rgb_doc_262d22ef5dfa424b011d09fe.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_262d22ef5dfa424b011d09fe:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_262d22ef5dfa424b011d09fe.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_850c51915282d2f957baba82",
+            "version_id": "rgb_doc_850c51915282d2f957baba82:r1",
+            "document_name": "rgb_doc_850c51915282d2f957baba82.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_850c51915282d2f957baba82:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_850c51915282d2f957baba82.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b927f8d40cb2b56b949dcc9",
+            "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+            "document_name": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c80ff95465c8c32bb6b11063",
+            "version_id": "rgb_doc_c80ff95465c8c32bb6b11063:r1",
+            "document_name": "rgb_doc_c80ff95465c8c32bb6b11063.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_c80ff95465c8c32bb6b11063:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c80ff95465c8c32bb6b11063.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_acd49ea96ea8c0cb0ec74a80",
+            "version_id": "rgb_doc_acd49ea96ea8c0cb0ec74a80:r1",
+            "document_name": "rgb_doc_acd49ea96ea8c0cb0ec74a80.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_acd49ea96ea8c0cb0ec74a80:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_acd49ea96ea8c0cb0ec74a80.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6fc64350e1512a4df9f30aa2",
+            "version_id": "rgb_doc_6fc64350e1512a4df9f30aa2:r1",
+            "document_name": "rgb_doc_6fc64350e1512a4df9f30aa2.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_6fc64350e1512a4df9f30aa2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6fc64350e1512a4df9f30aa2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cc8ba8a97d76c9302ea7fd55",
+            "version_id": "rgb_doc_cc8ba8a97d76c9302ea7fd55:r1",
+            "document_name": "rgb_doc_cc8ba8a97d76c9302ea7fd55.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_cc8ba8a97d76c9302ea7fd55:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cc8ba8a97d76c9302ea7fd55.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5525373752b6bf9779f7b17a",
+            "version_id": "rgb_doc_5525373752b6bf9779f7b17a:r1",
+            "document_name": "rgb_doc_5525373752b6bf9779f7b17a.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_5525373752b6bf9779f7b17a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5525373752b6bf9779f7b17a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_248fbdf402b62988143bf340",
+            "version_id": "rgb_doc_248fbdf402b62988143bf340:r1",
+            "document_name": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_248fbdf402b62988143bf340:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_248fbdf402b62988143bf340.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5a8b2f0189a2b4f526a6a55e",
+            "version_id": "rgb_doc_5a8b2f0189a2b4f526a6a55e:r1",
+            "document_name": "rgb_doc_5a8b2f0189a2b4f526a6a55e.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_5a8b2f0189a2b4f526a6a55e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5a8b2f0189a2b4f526a6a55e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c2453fbaa396313314eb49ac",
+            "version_id": "rgb_doc_c2453fbaa396313314eb49ac:r1",
+            "document_name": "rgb_doc_c2453fbaa396313314eb49ac.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_c2453fbaa396313314eb49ac:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c2453fbaa396313314eb49ac.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3d3f041a808136144f038582",
+            "version_id": "rgb_doc_3d3f041a808136144f038582:r1",
+            "document_name": "rgb_doc_3d3f041a808136144f038582.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_3d3f041a808136144f038582:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3d3f041a808136144f038582.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ce992a119da5f63e00b7f59e",
+            "version_id": "rgb_doc_ce992a119da5f63e00b7f59e:r1",
+            "document_name": "rgb_doc_ce992a119da5f63e00b7f59e.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_ce992a119da5f63e00b7f59e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ce992a119da5f63e00b7f59e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e6244de7d77058bf31c95cdd",
+            "version_id": "rgb_doc_e6244de7d77058bf31c95cdd:r1",
+            "document_name": "rgb_doc_e6244de7d77058bf31c95cdd.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_e6244de7d77058bf31c95cdd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e6244de7d77058bf31c95cdd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b6b2782b0127f013eab7cf1e",
+            "version_id": "rgb_doc_b6b2782b0127f013eab7cf1e:r1",
+            "document_name": "rgb_doc_b6b2782b0127f013eab7cf1e.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_b6b2782b0127f013eab7cf1e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b6b2782b0127f013eab7cf1e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f5c26856dff3d15bd5b52afd",
+            "version_id": "rgb_doc_f5c26856dff3d15bd5b52afd:r1",
+            "document_name": "rgb_doc_f5c26856dff3d15bd5b52afd.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_f5c26856dff3d15bd5b52afd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f5c26856dff3d15bd5b52afd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_44b67e3be916e83e710a4517",
+            "version_id": "rgb_doc_44b67e3be916e83e710a4517:r1",
+            "document_name": "rgb_doc_44b67e3be916e83e710a4517.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_44b67e3be916e83e710a4517:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_44b67e3be916e83e710a4517.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_95d5ce438173760b0c497681",
+            "version_id": "rgb_doc_95d5ce438173760b0c497681:r1",
+            "document_name": "rgb_doc_95d5ce438173760b0c497681.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_95d5ce438173760b0c497681:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_95d5ce438173760b0c497681.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2c6f2d36b715c4033941b837",
+            "version_id": "rgb_doc_2c6f2d36b715c4033941b837:r1",
+            "document_name": "rgb_doc_2c6f2d36b715c4033941b837.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_2c6f2d36b715c4033941b837:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2c6f2d36b715c4033941b837.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_008cc0087d96143fefbb47c4",
+            "version_id": "rgb_doc_008cc0087d96143fefbb47c4:r1",
+            "document_name": "rgb_doc_008cc0087d96143fefbb47c4.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_008cc0087d96143fefbb47c4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_008cc0087d96143fefbb47c4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bdf4f4596ea39f73702c986d",
+            "version_id": "rgb_doc_bdf4f4596ea39f73702c986d:r1",
+            "document_name": "rgb_doc_bdf4f4596ea39f73702c986d.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_bdf4f4596ea39f73702c986d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bdf4f4596ea39f73702c986d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_279b381a102074420971bf0e",
+            "version_id": "rgb_doc_279b381a102074420971bf0e:r1",
+            "document_name": "rgb_doc_279b381a102074420971bf0e.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_279b381a102074420971bf0e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_279b381a102074420971bf0e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_26c08dae8c14400887ac6f64",
+            "version_id": "rgb_doc_26c08dae8c14400887ac6f64:r1",
+            "document_name": "rgb_doc_26c08dae8c14400887ac6f64.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_26c08dae8c14400887ac6f64:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_26c08dae8c14400887ac6f64.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_80f2ab86cf01e2b3dd88cb54",
+            "version_id": "rgb_doc_80f2ab86cf01e2b3dd88cb54:r1",
+            "document_name": "rgb_doc_80f2ab86cf01e2b3dd88cb54.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_80f2ab86cf01e2b3dd88cb54:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_80f2ab86cf01e2b3dd88cb54.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f4f50da1abbe68563ce61f8c",
+            "version_id": "rgb_doc_f4f50da1abbe68563ce61f8c:r1",
+            "document_name": "rgb_doc_f4f50da1abbe68563ce61f8c.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_f4f50da1abbe68563ce61f8c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f4f50da1abbe68563ce61f8c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4c003ee177a091ebd3055134",
+            "version_id": "rgb_doc_4c003ee177a091ebd3055134:r1",
+            "document_name": "rgb_doc_4c003ee177a091ebd3055134.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_4c003ee177a091ebd3055134:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4c003ee177a091ebd3055134.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_87cb94bf544696607fbfbac1",
+            "version_id": "rgb_doc_87cb94bf544696607fbfbac1:r1",
+            "document_name": "rgb_doc_87cb94bf544696607fbfbac1.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_87cb94bf544696607fbfbac1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_87cb94bf544696607fbfbac1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f47af0d883adeaa2e58e1cc",
+            "version_id": "rgb_doc_2f47af0d883adeaa2e58e1cc:r1",
+            "document_name": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_2f47af0d883adeaa2e58e1cc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dce4c7c31b4ebbc6aecba5e4",
+            "version_id": "rgb_doc_dce4c7c31b4ebbc6aecba5e4:r1",
+            "document_name": "rgb_doc_dce4c7c31b4ebbc6aecba5e4.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_dce4c7c31b4ebbc6aecba5e4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dce4c7c31b4ebbc6aecba5e4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_69311a5ceed5800d7459db45",
+            "version_id": "rgb_doc_69311a5ceed5800d7459db45:r1",
+            "document_name": "rgb_doc_69311a5ceed5800d7459db45.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_69311a5ceed5800d7459db45:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_69311a5ceed5800d7459db45.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_77928831baa3e88e9cf43b05",
+            "version_id": "rgb_doc_77928831baa3e88e9cf43b05:r1",
+            "document_name": "rgb_doc_77928831baa3e88e9cf43b05.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_77928831baa3e88e9cf43b05:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_77928831baa3e88e9cf43b05.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0e08d4fff24bcd48525dcc1d",
+            "version_id": "rgb_doc_0e08d4fff24bcd48525dcc1d:r1",
+            "document_name": "rgb_doc_0e08d4fff24bcd48525dcc1d.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_0e08d4fff24bcd48525dcc1d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0e08d4fff24bcd48525dcc1d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5fa5b44bf82edf765814169",
+            "version_id": "rgb_doc_a5fa5b44bf82edf765814169:r1",
+            "document_name": "rgb_doc_a5fa5b44bf82edf765814169.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_a5fa5b44bf82edf765814169:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a5fa5b44bf82edf765814169.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4743583ba7b6689c7291617c",
+            "version_id": "rgb_doc_4743583ba7b6689c7291617c:r1",
+            "document_name": "rgb_doc_4743583ba7b6689c7291617c.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_4743583ba7b6689c7291617c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4743583ba7b6689c7291617c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_363f3aec0d3482852e93f1d2",
+            "version_id": "rgb_doc_363f3aec0d3482852e93f1d2:r1",
+            "document_name": "rgb_doc_363f3aec0d3482852e93f1d2.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_363f3aec0d3482852e93f1d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_363f3aec0d3482852e93f1d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_34254cec688702bf15efa0f1",
+            "version_id": "rgb_doc_34254cec688702bf15efa0f1:r1",
+            "document_name": "rgb_doc_34254cec688702bf15efa0f1.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_34254cec688702bf15efa0f1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_34254cec688702bf15efa0f1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f76b44ed7337bee9bac7bd25",
+            "version_id": "rgb_doc_f76b44ed7337bee9bac7bd25:r1",
+            "document_name": "rgb_doc_f76b44ed7337bee9bac7bd25.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_f76b44ed7337bee9bac7bd25:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f76b44ed7337bee9bac7bd25.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_61a7cc8cdd89e4e2040ff878",
+            "version_id": "rgb_doc_61a7cc8cdd89e4e2040ff878:r1",
+            "document_name": "rgb_doc_61a7cc8cdd89e4e2040ff878.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_61a7cc8cdd89e4e2040ff878:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_61a7cc8cdd89e4e2040ff878.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            },
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 16.589000006206334,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            }
+          },
+          "authorization_ms": 17.088041990064085,
+          "evidence_ms": 3.3094579994212836,
+          "fusion_ms": 1.9692089990712702,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 51.644249993842095,
+          "context_chars": 1457,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_559923faecf1f9bd",
+          "ev_e7a602628e032bb3",
+          "ev_ccc48f302850ca8d",
+          "ev_c2acb1e3865e863d",
+          "ev_ed3a1c4630beb6ee",
+          "ev_bc8202b97dfa3082",
+          "ev_b19cd218fb6e8362",
+          "ev_0356c672b2db2983",
+          "ev_a41e78bc6a5032cb",
+          "ev_988e0ee3ae5f22ce"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_559923faecf1f9bd",
+            "content": "Jun 30, 2023 ... 2023年世界人工智能大会7月6日将在上海举办-\"上海已连续第六年举办世界人工智能大会，本届大会的主题是“智联世界生成未来”，由上海市政府和国家 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb",
+            "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+            "document_name": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+            "chunk_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+              "block_ids": [
+                "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 93
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 42.475669860839844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 93,
+            "content_hash": "2888cd8f03df6eb1fa2e8edb49a3ae1ef32e40b2063cbbd6b5a3f7cb6387682a",
+            "scope_digest": "74180034b89a97666c119d6f73fa922f6ffd1b351e5f1b031ac413157489a652",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9fdaaab4fb1b79b8bcb3",
+                "source_id": "S1",
+                "evidence_id": "ev_559923faecf1f9bd",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 30, 2023 ... 2023年世界人工智能大会7月6日将在上海举办-\"上海已连续第六年举办世界",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ad92b7bd21341af6805d",
+                "source_id": "S1",
+                "evidence_id": "ev_559923faecf1f9bd",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 30, 2023 ... 2023年世界人工智能大会7月6日将在上海举办-\"上海已连续第六年举办世界人工智能大会",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_e7a602628e032bb3",
+            "content": "Jun 9, 2023 ... 2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世界人工智能大会以“智联世界·生成未来”为主题，经国务院批准，由国家发展 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edb50ea6c3a1327dabd13134",
+            "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+            "document_name": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+            "chunk_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+              "block_ids": [
+                "rgb_doc_edb50ea6c3a1327dabd13134:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 41.38483810424805,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "edb50ea6c3a1327dabd13134f09d73e00df4f11a5f1badcd90d19a9ef5399c64",
+            "scope_digest": "552c8517003c6b6944ebbd84c74717bc5e2e686c867c3a3fe5b04fcacbb39b2b",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_bcdffd9a5b9a092b1ab3",
+                "source_id": "S2",
+                "evidence_id": "ev_e7a602628e032bb3",
+                "raw_text": "9",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 9, 2023 ... 2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_1cfb857a4f5ee4792fff",
+                "source_id": "S2",
+                "evidence_id": "ev_e7a602628e032bb3",
+                "raw_text": "2023",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 9, 2023 ... 2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_ccc48f302850ca8d",
+            "content": "来源：中国网 2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世界人工智能大会以“智联世界·生成未来”为主题，经国务院批准，由国家发展和改革委员会、工业和信息化部、科学技术部、国家互联网信息办公室、中国科学院、中国工程院、中国科学技术协会和上海市人民政府共同主办。  世界人工智能大会自2018年创办以来，已经成功举办五届。亿欧自首届举办以来，就作为官方战略合作伙伴，全程深度参与世界人工智能大会。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a9fe95998b2b2e57aa23252",
+            "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+            "document_name": "rgb_doc_2a9fe95998b2b2e57aa23252.txt",
+            "chunk_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+              "block_ids": [
+                "rgb_doc_2a9fe95998b2b2e57aa23252:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 217
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 40.516441345214844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 217,
+            "content_hash": "2a9fe95998b2b2e57aa23252d92dff51e09ad9d5efa3d491b2f59e65d6efddec",
+            "scope_digest": "f28284f1e6d1435b15a2c034113c3fdcaa830496c7f629ec148e68aa5265a0f7",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_c2acb1e3865e863d",
+            "content": "2023年7月6日-8日，世界人工智能大会（简称“WAIC”）将在中国上海举办。本届世界人工智能大会以“智联世界·生成未来”为主题，经国务院批准，由国家发展和改革委员会、工业和信息化部、科学技术部、国家互联网信息办公室、中国科学院、中国工程院、中国科学技术协会和上海市人民政府共同主办。 世界人工智能大会自2018年创办以来，已经成功举办五届。亿欧自首届举办以来，就作为官方战略合作伙伴，全程深度参与世界人工智能大会。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7",
+            "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+            "document_name": "rgb_doc_7d55ec03ef389a98f0cf0ca7.txt",
+            "chunk_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+              "block_ids": [
+                "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 209
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 40.516441345214844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 209,
+            "content_hash": "7d55ec03ef389a98f0cf0ca7cf00d6b8cfa874e458943d08448e6e6148515ba0",
+            "scope_digest": "dda608034cc42d9edb569675b3e2740e37838d513fde76ec785f9c4337102e1f",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_ed3a1c4630beb6ee",
+            "content": "7月6日-8日，2023世界人工智能大会举办，本届大会的主题是“智联世界 生成未来”，会议活动总体架构按照“1+1+2+10+N”设置，即1场开幕式、1场闭幕式、科技创新和产业发展2场全体会议、10场主题论坛，以及N场生态论坛。 今年是上海连续第六年举办世界人工智能大会，充分发挥大会“科技风向标、应用展示台、产业加速器、治理议事厅”重要作用，汇聚融通全球人工智能领域思想智慧、前沿技术、产业动向和人文生态，助推人工智能健康创新发展。其中，多家上海国企在大会上展示交流创新成果。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_659a8e2629a5bfd04ac81a3e",
+            "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+            "document_name": "rgb_doc_659a8e2629a5bfd04ac81a3e.txt",
+            "chunk_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+              "block_ids": [
+                "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 239
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 38.467803955078125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 239,
+            "content_hash": "659a8e2629a5bfd04ac81a3e4b9bfc6ced7f47052a42835529b2520bac630332",
+            "scope_digest": "d67d5a9700590f80a162fe8263258ec619e1a714b1002db1ecb739d564f2a2e1",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_86d1a866ffbe14731d5f",
+                "source_id": "S5",
+                "evidence_id": "ev_ed3a1c4630beb6ee",
+                "raw_text": "1",
+                "start": 54,
+                "end": 55,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "日，2023世界人工智能大会举办，本届大会的主题是“智联世界 生成未来”，会议活动总体架构按照“1+1+2+10+N”设置，即1场开幕式、1场闭幕式、科技创新和产业发展2场全体会议、10场主题论",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_bc8202b97dfa3082",
+            "content": "本届世界人工智能大会期间，亿欧将同步举办世界人工智能大会“AI商业落地论坛”“AI医疗发展论坛”“AI与新一代车载智能传感器技术创新论坛”“第十届中国产业互联网高峰论坛”等分论坛。 同时，亿欧将重磅发布《2023中国AI商业落地投资价值报告》《2023中国AIGC商业潜力研究报告》《2023AI医学影像产品生命周期研究报告》等多份研究报告，在媒体传播、榜单发布等多方面，全程助力大会成功举办。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_30c88ad0e0419eb1e89dfccb",
+            "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+            "document_name": "rgb_doc_30c88ad0e0419eb1e89dfccb.txt",
+            "chunk_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+              "block_ids": [
+                "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 197
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 37.00639343261719,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 197,
+            "content_hash": "30c88ad0e0419eb1e89dfccbef6a3e4606ba054bdb39dc799a413d9977ad8134",
+            "scope_digest": "bbae0ff02f919a2aeffcd55b1ffbceb45d7ff991a5a9c141b3f73003c9a11094",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b19cd218fb6e8362",
+            "content": "东浩兰生集团   2023世界人工智能大会是东浩兰生集团项目团队总承办世界人工智能大会的第五年。多年来，集团旗下的会展集团发挥专业优势，负责大会的整体策划、参会组织、论坛筹备、展览展示、运营服务以及宣传推广等。本届大会企业数量、展览面积均创历届之最。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_94270f5924d949874106c478",
+            "version_id": "rgb_doc_94270f5924d949874106c478:r1",
+            "document_name": "rgb_doc_94270f5924d949874106c478.txt",
+            "chunk_id": "rgb_doc_94270f5924d949874106c478:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_94270f5924d949874106c478:r1",
+              "block_ids": [
+                "rgb_doc_94270f5924d949874106c478:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 125
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 33.313907623291016,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 125,
+            "content_hash": "94270f5924d949874106c478037753e2ecc4bb1c16da52e6e8c858957b8f22ec",
+            "scope_digest": "7992b9e014c90bffb361e0ce7a019f9f3b91bbe890183d36af01d5dc5aeaa853",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_0356c672b2db2983",
+            "content": "Jun 30, 2023 ... 记者从6月29日举行的上海市政府新闻发布会上了解到，2023世界人工智能大会将于7月6日至8日在上海世博中心及世博展览馆举办，并在浦东张江、徐汇西岸设 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d6a014dfe562470367f79c6a",
+            "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+            "document_name": "rgb_doc_d6a014dfe562470367f79c6a.txt",
+            "chunk_id": "rgb_doc_d6a014dfe562470367f79c6a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+              "block_ids": [
+                "rgb_doc_d6a014dfe562470367f79c6a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 31.754192352294922,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "d6a014dfe562470367f79c6a2766e60b9bfe4f74762d9a4a145b00f7442a2e75",
+            "scope_digest": "fb8b4e5aee4ae0f79939b0ffc0e7944058dd6149806384d8948162a56fc2e1ef",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_38729bf558691811fd16",
+                "source_id": "S8",
+                "evidence_id": "ev_0356c672b2db2983",
+                "raw_text": "30",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 30, 2023 ... 记者从6月29日举行的上海市政府新闻发布会上了解到，2023世界人工智能大",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_786f32c470c74401a829",
+                "source_id": "S8",
+                "evidence_id": "ev_0356c672b2db2983",
+                "raw_text": "2023",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jun 30, 2023 ... 记者从6月29日举行的上海市政府新闻发布会上了解到，2023世界人工智能大会将于7月6",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a41e78bc6a5032cb",
+            "content": "2023世界人工智能大会以“智联世界元生无界”为主题，以“高端化、国际化、专业化、市场化、智能化”为特色，将集聚全球智能领域最具影响力的科学家和企业家，以及相关政府 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_01be51c58b7249a92b3d6f26",
+            "version_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1",
+            "document_name": "rgb_doc_01be51c58b7249a92b3d6f26.txt",
+            "chunk_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1",
+              "block_ids": [
+                "rgb_doc_01be51c58b7249a92b3d6f26:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 86
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 30.894874572753906,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 86,
+            "content_hash": "01be51c58b7249a92b3d6f262632722b1e926ea2a701fb0fd180ed931e6c091e",
+            "scope_digest": "ef23542941aae6a90bed853974d99d64d7e27c70dcbf5e5a9afc10d1b613b65a",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_988e0ee3ae5f22ce",
+            "content": "记者从6月29日举行的上海市政府新闻发布会上了解到，2023世界人工智能大会将于7月6日至8日在上海世博中心及世博展览馆举办，并在浦东张江、徐汇西岸设分会场，同步在闵行等产业集聚区开展同期活动。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_69253b6409fe684c12cf62f7",
+            "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+            "document_name": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+            "chunk_id": "rgb_doc_69253b6409fe684c12cf62f7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+              "block_ids": [
+                "rgb_doc_69253b6409fe684c12cf62f7:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 29.9732666015625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "69253b6409fe684c12cf62f7a29e2032ac14b97fc8d7107525c66f6ad7632dad",
+            "scope_digest": "d5325a04d3c43291745d16535d7ae9641419fdcd9aac88aeb07351d7d4a0c4d6",
+            "trace_id": "357253eec2334d23b0ea1dddc226948c",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_0356c672b2db2983",
+      "ev_559923faecf1f9bd",
+      "ev_988e0ee3ae5f22ce",
+      "ev_a41e78bc6a5032cb",
+      "ev_b19cd218fb6e8362",
+      "ev_bc8202b97dfa3082",
+      "ev_c2acb1e3865e863d",
+      "ev_ccc48f302850ca8d",
+      "ev_e7a602628e032bb3",
+      "ev_ed3a1c4630beb6ee"
+    ],
+    "evidence": {
+      "ev_559923faecf1f9bd": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb",
+        "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+        "document_name": "rgb_doc_2888cd8f03df6eb1fa2e8edb.txt",
+        "chunk_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1",
+          "block_ids": [
+            "rgb_doc_2888cd8f03df6eb1fa2e8edb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 93
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 42.475669860839844,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 93,
+        "content_hash": "2888cd8f03df6eb1fa2e8edb49a3ae1ef32e40b2063cbbd6b5a3f7cb6387682a",
+        "scope_digest": "74180034b89a97666c119d6f73fa922f6ffd1b351e5f1b031ac413157489a652",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_e7a602628e032bb3": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_edb50ea6c3a1327dabd13134",
+        "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+        "document_name": "rgb_doc_edb50ea6c3a1327dabd13134.txt",
+        "chunk_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_edb50ea6c3a1327dabd13134:r1",
+          "block_ids": [
+            "rgb_doc_edb50ea6c3a1327dabd13134:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 41.38483810424805,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "edb50ea6c3a1327dabd13134f09d73e00df4f11a5f1badcd90d19a9ef5399c64",
+        "scope_digest": "552c8517003c6b6944ebbd84c74717bc5e2e686c867c3a3fe5b04fcacbb39b2b",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_ccc48f302850ca8d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_2a9fe95998b2b2e57aa23252",
+        "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+        "document_name": "rgb_doc_2a9fe95998b2b2e57aa23252.txt",
+        "chunk_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_2a9fe95998b2b2e57aa23252:r1",
+          "block_ids": [
+            "rgb_doc_2a9fe95998b2b2e57aa23252:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 217
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 40.516441345214844,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 217,
+        "content_hash": "2a9fe95998b2b2e57aa23252d92dff51e09ad9d5efa3d491b2f59e65d6efddec",
+        "scope_digest": "f28284f1e6d1435b15a2c034113c3fdcaa830496c7f629ec148e68aa5265a0f7",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_c2acb1e3865e863d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7",
+        "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+        "document_name": "rgb_doc_7d55ec03ef389a98f0cf0ca7.txt",
+        "chunk_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1",
+          "block_ids": [
+            "rgb_doc_7d55ec03ef389a98f0cf0ca7:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 209
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 40.516441345214844,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 209,
+        "content_hash": "7d55ec03ef389a98f0cf0ca7cf00d6b8cfa874e458943d08448e6e6148515ba0",
+        "scope_digest": "dda608034cc42d9edb569675b3e2740e37838d513fde76ec785f9c4337102e1f",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_ed3a1c4630beb6ee": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_659a8e2629a5bfd04ac81a3e",
+        "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+        "document_name": "rgb_doc_659a8e2629a5bfd04ac81a3e.txt",
+        "chunk_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_659a8e2629a5bfd04ac81a3e:r1",
+          "block_ids": [
+            "rgb_doc_659a8e2629a5bfd04ac81a3e:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 239
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 38.467803955078125,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 239,
+        "content_hash": "659a8e2629a5bfd04ac81a3e4b9bfc6ced7f47052a42835529b2520bac630332",
+        "scope_digest": "d67d5a9700590f80a162fe8263258ec619e1a714b1002db1ecb739d564f2a2e1",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_bc8202b97dfa3082": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_30c88ad0e0419eb1e89dfccb",
+        "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+        "document_name": "rgb_doc_30c88ad0e0419eb1e89dfccb.txt",
+        "chunk_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_30c88ad0e0419eb1e89dfccb:r1",
+          "block_ids": [
+            "rgb_doc_30c88ad0e0419eb1e89dfccb:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 197
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 37.00639343261719,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 197,
+        "content_hash": "30c88ad0e0419eb1e89dfccbef6a3e4606ba054bdb39dc799a413d9977ad8134",
+        "scope_digest": "bbae0ff02f919a2aeffcd55b1ffbceb45d7ff991a5a9c141b3f73003c9a11094",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b19cd218fb6e8362": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_94270f5924d949874106c478",
+        "version_id": "rgb_doc_94270f5924d949874106c478:r1",
+        "document_name": "rgb_doc_94270f5924d949874106c478.txt",
+        "chunk_id": "rgb_doc_94270f5924d949874106c478:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_94270f5924d949874106c478:r1",
+          "block_ids": [
+            "rgb_doc_94270f5924d949874106c478:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 125
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 33.313907623291016,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 125,
+        "content_hash": "94270f5924d949874106c478037753e2ecc4bb1c16da52e6e8c858957b8f22ec",
+        "scope_digest": "7992b9e014c90bffb361e0ce7a019f9f3b91bbe890183d36af01d5dc5aeaa853",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_0356c672b2db2983": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_d6a014dfe562470367f79c6a",
+        "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+        "document_name": "rgb_doc_d6a014dfe562470367f79c6a.txt",
+        "chunk_id": "rgb_doc_d6a014dfe562470367f79c6a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_d6a014dfe562470367f79c6a:r1",
+          "block_ids": [
+            "rgb_doc_d6a014dfe562470367f79c6a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 31.754192352294922,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "d6a014dfe562470367f79c6a2766e60b9bfe4f74762d9a4a145b00f7442a2e75",
+        "scope_digest": "fb8b4e5aee4ae0f79939b0ffc0e7944058dd6149806384d8948162a56fc2e1ef",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a41e78bc6a5032cb": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_01be51c58b7249a92b3d6f26",
+        "version_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1",
+        "document_name": "rgb_doc_01be51c58b7249a92b3d6f26.txt",
+        "chunk_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_01be51c58b7249a92b3d6f26:r1",
+          "block_ids": [
+            "rgb_doc_01be51c58b7249a92b3d6f26:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 86
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 30.894874572753906,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 86,
+        "content_hash": "01be51c58b7249a92b3d6f262632722b1e926ea2a701fb0fd180ed931e6c091e",
+        "scope_digest": "ef23542941aae6a90bed853974d99d64d7e27c70dcbf5e5a9afc10d1b613b65a",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_988e0ee3ae5f22ce": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_69253b6409fe684c12cf62f7",
+        "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+        "document_name": "rgb_doc_69253b6409fe684c12cf62f7.txt",
+        "chunk_id": "rgb_doc_69253b6409fe684c12cf62f7:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_69253b6409fe684c12cf62f7:r1",
+          "block_ids": [
+            "rgb_doc_69253b6409fe684c12cf62f7:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 29.9732666015625,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "69253b6409fe684c12cf62f7a29e2032ac14b97fc8d7107525c66f6ad7632dad",
+        "scope_digest": "d5325a04d3c43291745d16535d7ae9641419fdcd9aac88aeb07351d7d4a0c4d6",
+        "trace_id": "357253eec2334d23b0ea1dddc226948c",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_559923faecf1f9bd",
+      "S2": "ev_e7a602628e032bb3",
+      "S3": "ev_ccc48f302850ca8d",
+      "S4": "ev_c2acb1e3865e863d",
+      "S5": "ev_ed3a1c4630beb6ee",
+      "S6": "ev_bc8202b97dfa3082",
+      "S7": "ev_b19cd218fb6e8362",
+      "S8": "ev_0356c672b2db2983",
+      "S9": "ev_a41e78bc6a5032cb",
+      "S10": "ev_988e0ee3ae5f22ce"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

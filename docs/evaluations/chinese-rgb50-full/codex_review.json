@@ -1,0 +1,475 @@
+{
+  "1": {
+    "grade": "correct",
+    "reason": "核心死亡人数12人准确，原文多份材料相互印证。额外的女子摔倒、连锁反应描述来自同一段中另一场寺庙事故，不能转用于本题事件。",
+    "core_support": "supported",
+    "full_support": "partial",
+    "issues": [
+      "extra_claim_event_conflation"
+    ],
+    "tool_review": "单次搜索已获得足够核心证据；无需精读才能回答死亡人数。扩写事故经过前应辨别同段的事件切换。"
+  },
+  "2": {
+    "grade": "correct",
+    "reason": "完整给出东盟10国及中日韩澳新，与参考答案一致；区分早期邀请印度与最终15个成员。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索得到成员名单及印度未加入的材料；英文检索仍通过RCEP命中，没有明显追加检索需求。"
+  },
+  "3": {
+    "grade": "correct",
+    "reason": "2022年1月3日上午11时与原始报道相符，比参考日期更精确。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索即可直接回答，证据完整，无需额外读取。"
+  },
+  "4": {
+    "grade": "correct",
+    "reason": "南宁国际铁路港是参考答案南宁的具体地点，多份原文明确支持。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索已足够，使用多个重复来源略显冗余但未损害结论。"
+  },
+  "5": {
+    "grade": "correct",
+    "reason": "90席及40/30/20构成准确，相关制度背景也能从引用材料复核。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索得到答案；9个引用和背景扩写超过简单数量问题所需。"
+  },
+  "6": {
+    "grade": "unanswered",
+    "reason": "最终明确拒答，未给出6.4%。两次知识搜索的实际返回Top10均未包含本题标注正例；读取了美国等无关GDP文本并发生一次工具参数错误，耗尽8次工具预算。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "retrieval_top_k_miss",
+      "ineffective_tool_selection",
+      "invalid_tool_arguments",
+      "tool_budget"
+    ],
+    "tool_review": "具备追加搜索和精读行为，但精读目标偏离香港；应改写为香港经济增长或扩大候选，而非继续读美国资料。目录候选中出现相关文档不等于模型获得原文答案。"
+  },
+  "7": {
+    "grade": "correct",
+    "reason": "突破2500万人次与参考和新华社原文一致。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索足够；两段重复表述可简化。"
+  },
+  "8": {
+    "grade": "correct",
+    "reason": "水门桥是长津湖之水门桥的简称，原文明确为首日冠军。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索获得直接证据，回答简洁。"
+  },
+  "9": {
+    "grade": "partially_correct",
+    "reason": "给出了正确的1月17日，但又无保留地给出互斥的1月28日，未形成可靠唯一答案。后者来自语料中错误日期文章，与多份报道冲突。",
+    "core_support": "conflicting_sources",
+    "full_support": "conflicting_sources",
+    "issues": [
+      "source_conflict_unresolved",
+      "premature_stop"
+    ],
+    "tool_review": "一次检索已包含正确与错误日期，应做来源和年份冲突核验；继续精读这份短TXT本身不会自动消除错误，需交叉验证并明确取舍。"
+  },
+  "10": {
+    "grade": "correct",
+    "reason": "2022年1月3日开售准确；补充春运和除夕购票日期均可核对。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索完成，七段扩写及重复引用对简单日期问答不必要。"
+  },
+  "11": {
+    "grade": "correct",
+    "reason": "131.39万辆是1313851辆的合理四舍五入，核心答案准确。扩写的第四季度产销差来自原文，但与同答43.97万产量和40.5万交付相减不一致，属于额外信息可靠性风险。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [
+      "extra_claim_numeric_conflict"
+    ],
+    "tool_review": "单次搜索已足够；为一项数量问题扩展十段背景，引入无需承担的事实冲突和Token成本。"
+  },
+  "12": {
+    "grade": "correct",
+    "reason": "上海及具体场馆、日期均有直接原文支持，满足问题。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索得到直接答案，无需追加精读。"
+  },
+  "13": {
+    "grade": "correct",
+    "reason": "2021年11月23日的核心日期准确。额外把原文关于媒体未报道的推测改成下水时间的原因，因果对象不一致。",
+    "core_support": "supported",
+    "full_support": "partial",
+    "issues": [
+      "extra_claim_causal_misattribution"
+    ],
+    "tool_review": "一次搜索足够；不必要的原因扩写降低引用语义可靠性。"
+  },
+  "14": {
+    "grade": "correct",
+    "reason": "全年实际增速5.7%正确，并区分名义增速10.24%；季度补充内容有相应原文，但6.9%的年率口径最好写清楚。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索完成；季度数据不是本题必答项，扩写增加口径混淆风险。"
+  },
+  "15": {
+    "grade": "correct",
+    "reason": "1269万人与原始统计报道一致。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索获得多份直接证据，简洁作答。"
+  },
+  "16": {
+    "grade": "correct",
+    "reason": "四次与4次等价，多份原文明确为黑石集团预测。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "工具查询将黑石误写为BlackRock；其他中文关键词仍找到了Blackstone原文，最终回答未跟随错误实体。应减少不必要的实体翻译。"
+  },
+  "17": {
+    "grade": "correct",
+    "reason": "472.58亿元与参考和原文一致。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索足够，没有不必要的后续工具。"
+  },
+  "18": {
+    "grade": "correct",
+    "reason": "喜剧、古装喜剧符合参考；补充风格描述来自影评原文。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索足够；六段类型复述明显过多。"
+  },
+  "19": {
+    "grade": "correct",
+    "reason": "山东泰山与原始赛事资料一致。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索、一个直接引用，适合简单事实题。"
+  },
+  "20": {
+    "grade": "correct",
+    "reason": "189例与国家卫健委原始日期报道一致，未混淆本土132例与全国总量。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索直接取得答案，未被分项数量误导。"
+  },
+  "21": {
+    "grade": "correct",
+    "reason": "1月3日宣誓、1月12日首次会议两项完整，分别由不同文件支持。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次联合查询取得两个文件并正确整合；多文件问题不必机械增加轮数。"
+  },
+  "22": {
+    "grade": "partially_correct",
+    "reason": "澳门18%正确，香港6.4%缺失；如实承认证据缺口，但没有完成双项问答。",
+    "core_support": "partial",
+    "full_support": "supported",
+    "issues": [
+      "missing_required_fact",
+      "retrieval_top_k_miss",
+      "premature_stop"
+    ],
+    "tool_review": "只做一次联合搜索，没有针对缺失的香港增速继续查询；应拆分子问题检索而非停止。"
+  },
+  "23": {
+    "grade": "unanswered",
+    "reason": "最终拒答，运行状态failed/model_unavailable；不能将中间检索命中或未输出的草稿算成答案。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "model_unavailable"
+    ],
+    "tool_review": "先联合检索再针对2022年补查，方向合理；模型调用失败导致未形成最终答案。未自动重放。"
+  },
+  "24": {
+    "grade": "correct",
+    "reason": "1月17日开始、2月25日结束两项准确；40天也有直接支持。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索取得同时含两项的文件即可答全；本题不需要强行跨文件或增加轮数。"
+  },
+  "25": {
+    "grade": "correct",
+    "reason": "两年开售日期完整准确，明确2023年春运票在2022年12月24日开售。最终正文夹带claims JSON，但不影响核心事实判分。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [
+      "claims_json_leak"
+    ],
+    "tool_review": "一次搜索整合两个文件成功；引用协议内容泄漏到答案是输出格式问题。"
+  },
+  "26": {
+    "grade": "correct",
+    "reason": "特斯拉131.39万辆为合理舍入，比亚迪186.35万辆与参考完整一致；未混用比亚迪纯电91万辆。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次联合检索即获得两项，存在单个文件同时给出两家公司数据；不需要额外调用。"
+  },
+  "27": {
+    "grade": "unanswered",
+    "reason": "最终只有拒答。原始模型草稿曾从编剧身份推断导演；引用修复后导演声明无引用，uncited_claim使整份答案被拒绝。完整语料另有高可导演、杨晓明联合导演的原文，未进入本次Top10。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "missing_required_fact",
+      "premature_stop",
+      "citation_rejected",
+      "unsupported_draft_inference"
+    ],
+    "tool_review": "只搜索一次，明知缺导演证据仍生成答案，没有针对导演再查；修复路径未恢复检索，也未保留已支持的类型答案。"
+  },
+  "28": {
+    "grade": "correct",
+    "reason": "出生率7.52‰、死亡率7.18‰均正确。出生率可由引用的2022年6.77‰加同比下降0.75个千分点复算，属于证据支持的简单推导。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次检索整合多个文件；虽未调用计算工具，简单加法可直接复核，不按工具名称强制扣分。"
+  },
+  "29": {
+    "grade": "correct",
+    "reason": "2021年3182万吨、2022年3310万吨油当量两项完整并正确对应年份。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索取得两份分年度原文并正确整合。"
+  },
+  "30": {
+    "grade": "uncertain",
+    "reason": "回答的宝马2213795辆、奔驰2093476辆有真实原文支持，分别是宝马品牌与奔驰乘用车口径；参考2521525辆、超过240万是集团或含商务车口径。题目未限定统计口径，不能把实际存在的较窄口径数据直接判成虚构，也不能据此确认满足参考的总量要求，列为口径争议待复核。",
+    "core_support": "scope_ambiguous",
+    "full_support": "supported",
+    "issues": [
+      "ambiguous_entity_scope",
+      "scope_not_disambiguated"
+    ],
+    "tool_review": "一次搜索后选择一份品牌销量文章作答，未比较集团总量或解释口径；应在答案中明确统计对象，并查核差异。"
+  },
+  "31": {
+    "grade": "correct",
+    "reason": "中国8.1%、美国5.7%完整准确，百分号及实际增速含义正确。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索从多份材料整合两国增速，没有将美国名义10.24%混入。"
+  },
+  "32": {
+    "grade": "unanswered",
+    "reason": "最终拒答且uncited_claim。两次搜索的第一批原文第8至10项已有英特尔631亿美元；发生一次上下文压缩后，最终可见证据仅为第二批英伟达来源，模型声称缺英特尔数据。另参考将英伟达2023财年269.74亿美元作为2022年答案，原文同时列2022财年269.14亿美元，财年口径存在歧义，不能单凭该差值判草稿错误。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "evidence_lost_from_context",
+      "citation_rejected",
+      "missing_required_fact",
+      "dataset_fiscal_year_ambiguity"
+    ],
+    "tool_review": "自主拆分为两家公司的搜索是合理的；应保留各子问题证据，或在发现缺失时复读已注册来源。现有修复未重启检索，连已支持事实也未保留。"
+  },
+  "33": {
+    "grade": "correct",
+    "reason": "主演张丹、张昊以及导演刘正三项完整，有不同文件直接支持。额外姚滨描述谨慎说明未确认具体职务。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次查询后跨文件整合成功，不需要额外读取。"
+  },
+  "34": {
+    "grade": "partially_correct",
+    "reason": "中国9金正确，但美国只给自由式滑雪2金，未回答美国总共8金。该分项数字有引用支持，却不满足题目总量要求。",
+    "core_support": "partial",
+    "full_support": "supported",
+    "issues": [
+      "missing_required_fact",
+      "subtotal_instead_of_total",
+      "premature_stop"
+    ],
+    "tool_review": "主动补查美国，但仍拿分项目金牌数代替缺失总量；应继续查奖牌榜或明确美国总数未找到。"
+  },
+  "35": {
+    "grade": "unanswered",
+    "reason": "最终拒答，运行记录为failed/model_unavailable；未产生可评分的冠军答案。现有日志没有底层异常详情，不能确定为网络超时或解析故障。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "model_unavailable"
+    ],
+    "tool_review": "执行了一次搜索后模型阶段失败，未自动重放；不将检索结果替代最终回答。"
+  },
+  "36": {
+    "grade": "correct",
+    "reason": "第六届70席正确，未采用反事实答案170席。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索、多份一致正例支持；是否看到了反事实材料由实际暴露统计单独列示。"
+  },
+  "37": {
+    "grade": "correct",
+    "reason": "1361万人正确，未采用161万反事实数字；复读后的原文直接支持。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [
+      "invalid_tool_arguments"
+    ],
+    "tool_review": "主动精读有利于数字核验；第一次read_document缺知识库参数报错，第二次自行补齐并成功，额外增加一次无效调用。"
+  },
+  "38": {
+    "grade": "correct",
+    "reason": "武汉与参考及原始军运会开幕报道一致。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索即可准确作答。"
+  },
+  "39": {
+    "grade": "correct",
+    "reason": "江苏苏宁与原文一致，没有将常规战绩第二误解成冠军不是苏宁。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索得到直接冠军信息，简洁作答。"
+  },
+  "40": {
+    "grade": "unanswered",
+    "reason": "最终拒答，停止原因citation_repair_failed。草稿识别到广州恒大与反事实江苏苏宁来源冲突，没有可靠决断；不能把草稿中正确选项算作最终正确答案。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "counterfactual_conflict",
+      "citation_repair_failed",
+      "premature_stop"
+    ],
+    "tool_review": "一次搜索同时返回正反事实材料，识别了冲突但未继续交叉查证；拒答避免明确传播错误，但未完成任务。"
+  },
+  "41": {
+    "grade": "correct",
+    "reason": "10.48‰与原始人口统计一致，单位未误写成百分比。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次搜索得到多个一致正例，正确取值。"
+  },
+  "42": {
+    "grade": "unanswered",
+    "reason": "最终拒答并耗尽8次工具预算。Top10已有10.94‰正例以及5.94‰反事实；6次成功复读加一次参数失败仍未形成结论，不能归因为语料没有正确答案。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "counterfactual_conflict",
+      "ineffective_tool_selection",
+      "invalid_tool_arguments",
+      "tool_budget"
+    ],
+    "tool_review": "主动精读但没有有效收敛；反复读取短片段与其他年份材料，未用出生率/死亡率/自然增长率的关系或独立来源化解冲突。"
+  },
+  "43": {
+    "grade": "correct",
+    "reason": "虽然参考是初步核算2.3%，引用原文明示国家统计局后将2020年实际GDP增长率修订为2.2%。题目未限定初值，接受有明确修订依据的2.2%，不机械按字符串判错。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [
+      "reference_uses_initial_estimate"
+    ],
+    "tool_review": "一次搜索获得修订信息；答案最好注明修订值与原初2.3%的关系，但不因未要求的背景解释扣分。"
+  },
+  "44": {
+    "grade": "correct",
+    "reason": "最终6.1%符合参考和冻结正例，但唯一引用文本实际写10.1%，是反事实文档，不能支持6.1%。答案正确性与证据支持分开：正确答案不能掩盖错引。",
+    "core_support": "contradicted",
+    "full_support": "contradicted",
+    "issues": [
+      "counterfactual_citation",
+      "citation_semantic_mismatch",
+      "near_duplicate_search"
+    ],
+    "tool_review": "三次搜索仅改变空格，属于语义重复查询，机械重复计数却为0；最后未检查所引文本是否包含自己的数字。"
+  },
+  "45": {
+    "grade": "unanswered",
+    "reason": "实际最终拒答。草稿给出正确导演但未调用任何工具，凭空引用S1，被unknown_source及invalid_or_revoked_citation拦截。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "no_retrieval",
+      "fabricated_source_id",
+      "citation_rejected"
+    ],
+    "tool_review": "应该先检索注册来源；零工具直接生成引用违反证据流程。校验拦截有效，不能按内部草稿算答对。"
+  },
+  "46": {
+    "grade": "correct",
+    "reason": "布莱恩·辛格与参考及影片演职员原文一致。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次检索即可回答导演，未采用反事实导演名。"
+  },
+  "47": {
+    "grade": "unanswered",
+    "reason": "最终拒答。模型直接输出郭敬明但未检索、未引用，被no_cited_evidence拦截；用户实际看不到该草稿答案。",
+    "core_support": "not_applicable",
+    "full_support": "not_applicable",
+    "issues": [
+      "no_retrieval",
+      "citation_rejected"
+    ],
+    "tool_review": "需要先检索，不能依赖记忆绕过知识库证据要求。"
+  },
+  "48": {
+    "grade": "incorrect",
+    "reason": "应为2021年2月12日；回答2月18日取自检索片段的发布日期，正文没有声称当天上映。真实日期在冻结正例中，本次Top10未命中。",
+    "core_support": "unsupported",
+    "full_support": "unsupported",
+    "issues": [
+      "retrieval_top_k_miss",
+      "publication_date_as_event_date",
+      "citation_semantic_mismatch",
+      "premature_stop"
+    ],
+    "tool_review": "一次搜索后把文章时间当事件时间提前作答；应继续检索实际上映日期，区分撤档预告与最终上映。"
+  },
+  "49": {
+    "grade": "correct",
+    "reason": "澳大利亚和悉尼两项都回答，原文直接支持。",
+    "core_support": "supported",
+    "full_support": "supported",
+    "issues": [],
+    "tool_review": "一次检索完成，不需要额外精读。"
+  },
+  "50": {
+    "grade": "correct",
+    "reason": "2021年7月23日正确，引用2、4、6提供支持。但引用1正文被篡改为1月23日，引用5只谈1964年，不能支持本句；引用3的相对日期也不宜直接用来证明具体开幕日。",
+    "core_support": "supported",
+    "full_support": "partial",
+    "issues": [
+      "counterfactual_citation",
+      "irrelevant_citation"
+    ],
+    "tool_review": "一次搜索得到充分正例，同时把矛盾和无关来源一并堆入引用，显示引用选择仍缺语义筛选。"
+  }
+}

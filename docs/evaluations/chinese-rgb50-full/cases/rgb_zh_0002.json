@@ -1,0 +1,2863 @@
+{
+  "question_id": "rgb_zh_0002",
+  "result": {
+    "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+    "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:1",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:2",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:3",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "context_chars": 1187,
+        "prompt_tokens": 8437,
+        "completion_tokens": 45,
+        "total_tokens": 8482,
+        "context_compaction_count": 0,
+        "context_chars_before": 1187,
+        "context_chars_after": 1187,
+        "estimated_input_tokens": 12116,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1470,
+        "remaining_run_tokens": 111518,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8437,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3679
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:4",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1187
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:5",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "tool_call_id": "call_5533ef2438a54ee5931265",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:6",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "tool_call_id": "call_5533ef2438a54ee5931265",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:7",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_5533ef2438a54ee5931265",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 6,
+        "output_chars_before": 74611,
+        "output_chars_after": 15076,
+        "removed_chars": 59535,
+        "document_metadata_chars": 15353,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 12445,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:8",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:9",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:10",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "context_chars": 16263,
+        "prompt_tokens": 15531,
+        "completion_tokens": 88,
+        "total_tokens": 15619,
+        "context_compaction_count": 0,
+        "context_chars_before": 16263,
+        "context_chars_after": 16263,
+        "estimated_input_tokens": 22508,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 9692,
+        "evidence_tokens": 2573,
+        "history_tokens": 2170,
+        "remaining_run_tokens": 95899,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15531,
+        "usage_source": "provider",
+        "estimation_error_tokens": -6977
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:11",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "model_visible_evidence_count": 6,
+        "context_chars": 16263
+      },
+      {
+        "type": "answer_started",
+        "sequence": 12,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:12",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 13,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:13",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "delta": "RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰，共15个国家。 [1]\n\nRCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加（“10+6”），但印度目前尚未加入。 [2] [3]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 14,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:14",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877",
+        "final_citation_count": 3,
+        "citation_validation_reason": [],
+        "repair_attempted": false,
+        "repair_success": false
+      },
+      {
+        "type": "completed",
+        "sequence": 15,
+        "event_id": "run_725cf4dee68947bba3831ecf929f0cfd:1cba5875a6bf46f7b8916dd687270c78:15",
+        "run_id": "run_725cf4dee68947bba3831ecf929f0cfd",
+        "thread_id": "thread_7cfd1d72504b4d539c05317d1c8e2877"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 2,
+    "usage": {
+      "prompt_tokens": 23968,
+      "completion_tokens": 133,
+      "total_tokens": 24101
+    },
+    "elapsed_seconds": 6.651290665991837,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 6,
+      "output_truncated": true,
+      "context_chars": 16263,
+      "prompt_tokens": 23968,
+      "completion_tokens": 133,
+      "total_tokens": 24101,
+      "context_compaction_count": 0,
+      "context_chars_before": 16263,
+      "context_chars_after": 16263,
+      "estimated_input_tokens": 22508,
+      "tool_schema_tokens": 10646,
+      "observation_tokens": 9692,
+      "evidence_tokens": 2573,
+      "history_tokens": 2170,
+      "remaining_run_tokens": 95899,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 15531,
+      "usage_source": "provider",
+      "estimation_error_tokens": -6977,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_5533ef2438a54ee5931265",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 6,
+          "output_chars_before": 74611,
+          "output_chars_after": 15076,
+          "removed_chars": 59535,
+          "document_metadata_chars": 15353,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 12445,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "final_citation_count": 3,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰，共15个国家。 [1]\n\nRCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加（“10+6”），但印度目前尚未加入。 [2] [3]",
+      "citations": {
+        "ev_043ee4bccb514886": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_58e95ba02b20ccd7b243f1e2",
+          "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+          "document_name": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+          "chunk_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 5,
+          "source_score": null,
+          "fused_score": 0.015384615384615385,
+          "rerank_score": null,
+          "content": "Nov 15, 2020 ... RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰。RCEP是全球最大的自贸协定，15个成员国总人口、经济体量、贸易总额均占全球总量约30% ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+            "block_ids": [
+              "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 98
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 5,
+              "score": 7.414065837860107,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_b743c6a2149cb89d": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_9ba7e63346aa8f2e91d3147a",
+          "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+          "document_name": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+          "chunk_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 3,
+          "source_score": null,
+          "fused_score": 0.015873015873015872,
+          "rerank_score": null,
+          "content": "RCEP(Regional Comprehensive Economic Partnership)，即区域全面经济伙伴关系协定  　　RCEP是Regional Comprehensive Economic Partnership的缩写，即区域全面经济伙伴关系协定，RCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加(“10+6”)，通过削减关税及非关税壁垒，建立16国统一市场的自由贸易协定。  　　RCEP是东盟国家近年来首次提出，并以东盟为主导的区域经济一体化合作，是成员国间相互开放市场、实施区域经济一体化的组织形式。RCEP主要成员国计划包括与东盟已经签署自由贸易协定的国家，即中国、日本、韩国、澳大利亚、新西兰、印度。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+            "block_ids": [
+              "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 328
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 3,
+              "score": 7.741953372955322,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_93aa36e190ad217f": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_9e07c7bd7775c813bb11fd06",
+          "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+          "document_name": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+          "chunk_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 2,
+          "source_score": null,
+          "fused_score": 0.016129032258064516,
+          "rerank_score": null,
+          "content": "2020年11月15日，在RCEP签署后，各RCEP成员发表“区域全面经济伙伴关系协定领导人会议共同宣言”，其中再次呼吁印度重新加入该协议[61][62]。印度外交部一位高级官员在新闻发布会上表示，印度目前暂时不会加入该协议[105][63]。另据印度《经济时报》在11月17日的报道，印度官员称目前将重点放在与美国和欧盟的经济协定[64]。  目前RCEP对印度加入保持开放。印度可以在任何时候申请重新加入谈判，而RCEP签署方将启动与印度的谈判。[60]  孟加拉已经申请加入RCEP。[134]  2023年5月28日，斯里兰卡总统维克勒马辛哈宣布将申请加入RCEP。",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+            "block_ids": [
+              "rgb_doc_9e07c7bd7775c813bb11fd06:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 287
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 2,
+              "score": 7.939633369445801,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰，共15个国家。",
+          "source_ids": [
+            "S5"
+          ]
+        },
+        {
+          "text": "RCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加（“10+6”），但印度目前尚未加入。",
+          "source_ids": [
+            "S3",
+            "S2"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S5",
+          "evidence_id": "ev_043ee4bccb514886"
+        },
+        {
+          "number": 2,
+          "source_id": "S3",
+          "evidence_id": "ev_b743c6a2149cb89d"
+        },
+        {
+          "number": 3,
+          "source_id": "S2",
+          "evidence_id": "ev_93aa36e190ad217f"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": false,
+      "repair_success": false,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_5533ef2438a54ee5931265",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "RCEP member countries",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7fd3eb88ea554565fdaedb3f",
+            "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+            "document_name": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "chunk_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 7.939633369445801,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "当日，海口海关所属海口港海关顺利签发海南扬航实业有限公司首份RCEP原产地证书，这是海南省企业在RCEP协定下享惠出口的首单货物。山西签发首份RCEP原产地证书，太原海关所属运城海关为山西豪钢重工股份有限公司出口至澳大利亚的刮板、压板签发了RCEP原产地证书，货值13334.5美元。河南首份RCEP原产地证书在郑州海关所属金水海关报关大厅签发，产品为灰枣夹核桃，货值47万元人民币，目的国为日本。近一个月来，天津海关共签发RCEP原产地证书160余份，涉及货值约4300万元人民币。 　　职业教育、文化交流促进民心相通。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+              "block_ids": [
+                "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 261
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 7.939633369445801,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e07c7bd7775c813bb11fd06",
+            "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+            "document_name": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+            "chunk_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 7.939633369445801,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "2020年11月15日，在RCEP签署后，各RCEP成员发表“区域全面经济伙伴关系协定领导人会议共同宣言”，其中再次呼吁印度重新加入该协议[61][62]。印度外交部一位高级官员在新闻发布会上表示，印度目前暂时不会加入该协议[105][63]。另据印度《经济时报》在11月17日的报道，印度官员称目前将重点放在与美国和欧盟的经济协定[64]。  目前RCEP对印度加入保持开放。印度可以在任何时候申请重新加入谈判，而RCEP签署方将启动与印度的谈判。[60]  孟加拉已经申请加入RCEP。[134]  2023年5月28日，斯里兰卡总统维克勒马辛哈宣布将申请加入RCEP。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+              "block_ids": [
+                "rgb_doc_9e07c7bd7775c813bb11fd06:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 287
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 7.939633369445801,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9ba7e63346aa8f2e91d3147a",
+            "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+            "document_name": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "chunk_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 7.741953372955322,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "RCEP(Regional Comprehensive Economic Partnership)，即区域全面经济伙伴关系协定  　　RCEP是Regional Comprehensive Economic Partnership的缩写，即区域全面经济伙伴关系协定，RCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加(“10+6”)，通过削减关税及非关税壁垒，建立16国统一市场的自由贸易协定。  　　RCEP是东盟国家近年来首次提出，并以东盟为主导的区域经济一体化合作，是成员国间相互开放市场、实施区域经济一体化的组织形式。RCEP主要成员国计划包括与东盟已经签署自由贸易协定的国家，即中国、日本、韩国、澳大利亚、新西兰、印度。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+              "block_ids": [
+                "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 328
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 7.741953372955322,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9eb3810f81240816964eab3a",
+            "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+            "document_name": "rgb_doc_9eb3810f81240816964eab3a.txt",
+            "chunk_id": "rgb_doc_9eb3810f81240816964eab3a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 7.520437717437744,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "RCEP共有20个章节以及3个附件，规范了货物贸易、服务贸易以及其他贸易相关等三个领域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日在部长级会议签署的谈判指导原则和目标一致。RCEP谈判将以以下几点为目标：  2020年11月15日签署的《区域全面经济伙伴关系协定》第一章指出，RCEP各缔约方的目标是“共同建立一个现代、全面、高质量以及互惠共赢的经济伙伴关系合作框架，以促进区域贸易和投资增长，并为全球经济发展作出贡献”[73]。  RCEP规定各成员将在十年内取消90%以上货物的关税，其中主要产品在协议生效时关税税至零。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+              "block_ids": [
+                "rgb_doc_9eb3810f81240816964eab3a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 292
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 7.520437717437744,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_58e95ba02b20ccd7b243f1e2",
+            "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+            "document_name": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "chunk_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 7.414065837860107,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "Nov 15, 2020 ... RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰。RCEP是全球最大的自贸协定，15个成员国总人口、经济体量、贸易总额均占全球总量约30% ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+              "block_ids": [
+                "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 7.414065837860107,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5985275b58e261a691cf8d4",
+            "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+            "document_name": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "chunk_id": "rgb_doc_a5985275b58e261a691cf8d4:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 7.379087924957275,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "7亿，GDP达26万亿美元，出口总额达5.2万亿美元，均占全球总量约30%。RCEP自贸区的建成意味着全球约三分之一的经济体量将形成一体化大市场。RCEP囊括了东亚地区主要国家，将为区域和全球经济增长注入强劲动力。  　　RCEP是区域内经贸规则的“整合器”。RCEP整合了东盟与中国、日本、韩国、澳大利亚、新西兰多个“10+1”自贸协定以及中、日、韩、澳、新西兰5国之间已有的多对自贸伙伴关系，还在中日和日韩间建立了新的自贸伙伴关系。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+              "block_ids": [
+                "rgb_doc_a5985275b58e261a691cf8d4:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 218
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 7.379087924957275,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2f7ea6937b2c9626c0f872f",
+            "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+            "document_name": "rgb_doc_f2f7ea6937b2c9626c0f872f.txt",
+            "chunk_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 7.379087924957275,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "RCEP通过采用区域累积的原产地规则，深化了域内产业链、价值链；利用新技术推动海关便利化，促进了新型跨境物流发展；同时，成员国同意采用负面清单以推进投资自由化，提升了投资政策透明度。以上措施都将促进区域内经贸规则的优化和整合。再者，RCEP实现了高质量与包容性的统一。除了涉及货物和服务贸易以及投资的具体规定外，RCEP协定还包括知识产权、电子商务、竞争、中小企业、经济和技术合作以及政府采购等章节。RCEP协定充分照顾成员国之间的差异及其不同的发展阶段，以确保共享成果。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+              "block_ids": [
+                "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 236
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 7.379087924957275,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_725aa303b33e83e755a40852",
+            "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+            "document_name": "rgb_doc_725aa303b33e83e755a40852.txt",
+            "chunk_id": "rgb_doc_725aa303b33e83e755a40852:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 7.294779300689697,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "RCEP共有20個章節以及3個附件，規範了貨物貿易、服務貿易以及其他貿易相關等三個領域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日在部长级会议签署的谈判指导原则和目标一致。RCEP谈判将以以下几点为目标：  2020年11月15日签署的《区域全面经济伙伴关系协定》第一章指出，RCEP各缔约方的目标是“共同建立一个现代、全面、高质量以及互惠共赢的经济伙伴关系合作框架，以促进区域贸易和投资增长，并为全球经济发展作出贡献”[73]。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+              "block_ids": [
+                "rgb_doc_725aa303b33e83e755a40852:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 245
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 7.294779300689697,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5dab03436e0c23948863ac66",
+            "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+            "document_name": "rgb_doc_5dab03436e0c23948863ac66.txt",
+            "chunk_id": "rgb_doc_5dab03436e0c23948863ac66:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 7.21267032623291,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "RCEP規定各成员將在十年內取消90%以上货物的關稅，其中主要产品在協議生效時关税税至零。[71]  RCEP採用「原产地累积原则」，即单一产品可在RCEP成员间累积价值以满足最终出口产品增值40%的原产地标准，从而享受到优惠关税。[71]  RCEP達成了貨貿便利化的許多規定，比如海关程序、检验检疫、技术标准等。同時也規範了非关税保護措施，比如实行关税自由化基于优惠的市场准入、特定货物的临时免税入境、取消农业出口补贴、及全面取消数量限制、进出口许可程序管理以及与进出口相关的费用和手续等方面。[71]",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+              "block_ids": [
+                "rgb_doc_5dab03436e0c23948863ac66:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 253
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 7.21267032623291,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8cc17e2115bd14cf7df0b46f",
+            "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+            "document_name": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "chunk_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 7.1566481590271,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "2万亿美元，约占全球GDP的30%，占全球贸易总额的近28%（根据2019年数据），RCEP是朝着全球贸易和投资规则的理想框架迈出的重要一步。其次，RCEP是区域内经贸规则的“整合器”。RCEP整合了东盟与中国、日本、韩国、澳大利亚、新西兰多个“10+1”自贸协定以及中、日、韩、澳、新西兰5国之间已有的多对自贸伙伴关系，尤其是在中日和韩日间建立了新的自贸伙伴关系。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+              "block_ids": [
+                "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 183
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 7.1566481590271,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7fd3eb88ea554565fdaedb3f",
+            "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+            "document_name": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e07c7bd7775c813bb11fd06",
+            "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+            "document_name": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_9e07c7bd7775c813bb11fd06:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9ba7e63346aa8f2e91d3147a",
+            "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+            "document_name": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9eb3810f81240816964eab3a",
+            "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+            "document_name": "rgb_doc_9eb3810f81240816964eab3a.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_9eb3810f81240816964eab3a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9eb3810f81240816964eab3a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_58e95ba02b20ccd7b243f1e2",
+            "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+            "document_name": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5985275b58e261a691cf8d4",
+            "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+            "document_name": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_a5985275b58e261a691cf8d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2f7ea6937b2c9626c0f872f",
+            "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+            "document_name": "rgb_doc_f2f7ea6937b2c9626c0f872f.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f2f7ea6937b2c9626c0f872f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_725aa303b33e83e755a40852",
+            "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+            "document_name": "rgb_doc_725aa303b33e83e755a40852.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_725aa303b33e83e755a40852:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_725aa303b33e83e755a40852.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5dab03436e0c23948863ac66",
+            "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+            "document_name": "rgb_doc_5dab03436e0c23948863ac66.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_5dab03436e0c23948863ac66:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5dab03436e0c23948863ac66.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8cc17e2115bd14cf7df0b46f",
+            "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+            "document_name": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e49bff663ae9685967907486",
+            "version_id": "rgb_doc_e49bff663ae9685967907486:r1",
+            "document_name": "rgb_doc_e49bff663ae9685967907486.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_e49bff663ae9685967907486:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e49bff663ae9685967907486.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65cc97ba94e1c7887d5bd1c5",
+            "version_id": "rgb_doc_65cc97ba94e1c7887d5bd1c5:r1",
+            "document_name": "rgb_doc_65cc97ba94e1c7887d5bd1c5.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_65cc97ba94e1c7887d5bd1c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_65cc97ba94e1c7887d5bd1c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6ff1361c760702c06ab54b39",
+            "version_id": "rgb_doc_6ff1361c760702c06ab54b39:r1",
+            "document_name": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_6ff1361c760702c06ab54b39:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6ff1361c760702c06ab54b39.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e31a3ce833e2da4dee698d5",
+            "version_id": "rgb_doc_1e31a3ce833e2da4dee698d5:r1",
+            "document_name": "rgb_doc_1e31a3ce833e2da4dee698d5.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_1e31a3ce833e2da4dee698d5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e31a3ce833e2da4dee698d5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f45d33a5821b93bb64aba1a",
+            "version_id": "rgb_doc_8f45d33a5821b93bb64aba1a:r1",
+            "document_name": "rgb_doc_8f45d33a5821b93bb64aba1a.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_8f45d33a5821b93bb64aba1a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8f45d33a5821b93bb64aba1a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_db917d55267ef5faf0695915",
+            "version_id": "rgb_doc_db917d55267ef5faf0695915:r1",
+            "document_name": "rgb_doc_db917d55267ef5faf0695915.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_db917d55267ef5faf0695915:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_db917d55267ef5faf0695915.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c3c60f33b3f95472d5120f9",
+            "version_id": "rgb_doc_1c3c60f33b3f95472d5120f9:r1",
+            "document_name": "rgb_doc_1c3c60f33b3f95472d5120f9.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_1c3c60f33b3f95472d5120f9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c3c60f33b3f95472d5120f9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_57c287d6dfb6cd39bb7c99a8",
+            "version_id": "rgb_doc_57c287d6dfb6cd39bb7c99a8:r1",
+            "document_name": "rgb_doc_57c287d6dfb6cd39bb7c99a8.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_57c287d6dfb6cd39bb7c99a8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_57c287d6dfb6cd39bb7c99a8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_88c72c91d7bc336aa2e7ed1d",
+            "version_id": "rgb_doc_88c72c91d7bc336aa2e7ed1d:r1",
+            "document_name": "rgb_doc_88c72c91d7bc336aa2e7ed1d.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_88c72c91d7bc336aa2e7ed1d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_88c72c91d7bc336aa2e7ed1d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6931fa34788fb775f7fca443",
+            "version_id": "rgb_doc_6931fa34788fb775f7fca443:r1",
+            "document_name": "rgb_doc_6931fa34788fb775f7fca443.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_6931fa34788fb775f7fca443:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6931fa34788fb775f7fca443.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6f8777dc6870beed8270011d",
+            "version_id": "rgb_doc_6f8777dc6870beed8270011d:r1",
+            "document_name": "rgb_doc_6f8777dc6870beed8270011d.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_6f8777dc6870beed8270011d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6f8777dc6870beed8270011d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_27e79b6c6622ef5c01624815",
+            "version_id": "rgb_doc_27e79b6c6622ef5c01624815:r1",
+            "document_name": "rgb_doc_27e79b6c6622ef5c01624815.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_27e79b6c6622ef5c01624815:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_27e79b6c6622ef5c01624815.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c3d33407e5a32ff6695cab5e",
+            "version_id": "rgb_doc_c3d33407e5a32ff6695cab5e:r1",
+            "document_name": "rgb_doc_c3d33407e5a32ff6695cab5e.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_c3d33407e5a32ff6695cab5e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c3d33407e5a32ff6695cab5e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dc3e4e8909eae7688aea133c",
+            "version_id": "rgb_doc_dc3e4e8909eae7688aea133c:r1",
+            "document_name": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_dc3e4e8909eae7688aea133c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dc3e4e8909eae7688aea133c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_20fdea7f84e78d67897cec3c",
+            "version_id": "rgb_doc_20fdea7f84e78d67897cec3c:r1",
+            "document_name": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_20fdea7f84e78d67897cec3c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_20fdea7f84e78d67897cec3c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_53bf9914612de95f1d1ca98b",
+            "version_id": "rgb_doc_53bf9914612de95f1d1ca98b:r1",
+            "document_name": "rgb_doc_53bf9914612de95f1d1ca98b.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_53bf9914612de95f1d1ca98b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_53bf9914612de95f1d1ca98b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_429a224523f4c0ac7b10fbea",
+            "version_id": "rgb_doc_429a224523f4c0ac7b10fbea:r1",
+            "document_name": "rgb_doc_429a224523f4c0ac7b10fbea.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_429a224523f4c0ac7b10fbea:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_429a224523f4c0ac7b10fbea.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 11.079999996582046,
+              "candidate_count": 27,
+              "verified_count": 27,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 10.156791002373211,
+          "evidence_ms": 1.0854160063900054,
+          "fusion_ms": 0.32812499557621777,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 27,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 33.41458299837541,
+          "context_chars": 2401,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_6cda30763b4d91ac",
+          "ev_93aa36e190ad217f",
+          "ev_b743c6a2149cb89d",
+          "ev_df9d3f95bb82fa39",
+          "ev_043ee4bccb514886",
+          "ev_3cfc8147a56dbe3d",
+          "ev_29cd827447f9c72e",
+          "ev_c599df1eb667c35e",
+          "ev_20d3c46b0af38f69",
+          "ev_7314140f45297ce7"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_6cda30763b4d91ac",
+            "content": "当日，海口海关所属海口港海关顺利签发海南扬航实业有限公司首份RCEP原产地证书，这是海南省企业在RCEP协定下享惠出口的首单货物。山西签发首份RCEP原产地证书，太原海关所属运城海关为山西豪钢重工股份有限公司出口至澳大利亚的刮板、压板签发了RCEP原产地证书，货值13334.5美元。河南首份RCEP原产地证书在郑州海关所属金水海关报关大厅签发，产品为灰枣夹核桃，货值47万元人民币，目的国为日本。近一个月来，天津海关共签发RCEP原产地证书160余份，涉及货值约4300万元人民币。 　　职业教育、文化交流促进民心相通。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7fd3eb88ea554565fdaedb3f",
+            "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+            "document_name": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "chunk_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+              "block_ids": [
+                "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 261
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 7.939633369445801,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 261,
+            "content_hash": "7fd3eb88ea554565fdaedb3f5a0f300d938a2e2460f1cacf7e5dd3b064783842",
+            "scope_digest": "c6f0e85c36e23dc11de412ee923d7b4fa0d834eb8896d5224a6f5ecf8ee407f8",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_93aa36e190ad217f",
+            "content": "2020年11月15日，在RCEP签署后，各RCEP成员发表“区域全面经济伙伴关系协定领导人会议共同宣言”，其中再次呼吁印度重新加入该协议[61][62]。印度外交部一位高级官员在新闻发布会上表示，印度目前暂时不会加入该协议[105][63]。另据印度《经济时报》在11月17日的报道，印度官员称目前将重点放在与美国和欧盟的经济协定[64]。  目前RCEP对印度加入保持开放。印度可以在任何时候申请重新加入谈判，而RCEP签署方将启动与印度的谈判。[60]  孟加拉已经申请加入RCEP。[134]  2023年5月28日，斯里兰卡总统维克勒马辛哈宣布将申请加入RCEP。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e07c7bd7775c813bb11fd06",
+            "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+            "document_name": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+            "chunk_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+              "block_ids": [
+                "rgb_doc_9e07c7bd7775c813bb11fd06:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 287
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 7.939633369445801,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 287,
+            "content_hash": "9e07c7bd7775c813bb11fd060632b548c0d86e5395a82a6569df4f9b71ab85a7",
+            "scope_digest": "2d449594bade133568c19006a389c2b5195e3ed35f35690bbaef0e88d8a63d5c",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_6e4fe7f418c029f678df",
+                "source_id": "S2",
+                "evidence_id": "ev_93aa36e190ad217f",
+                "raw_text": "61",
+                "start": 70,
+                "end": 72,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "RCEP成员发表“区域全面经济伙伴关系协定领导人会议共同宣言”，其中再次呼吁印度重新加入该协议[61][62]。印度外交部一位高级官员在新闻发布会上表示，印度目前暂时不会加入该协议[105][63",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ef489445d756ed140823",
+                "source_id": "S2",
+                "evidence_id": "ev_93aa36e190ad217f",
+                "raw_text": "62",
+                "start": 74,
+                "end": 76,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "成员发表“区域全面经济伙伴关系协定领导人会议共同宣言”，其中再次呼吁印度重新加入该协议[61][62]。印度外交部一位高级官员在新闻发布会上表示，印度目前暂时不会加入该协议[105][63]。另据",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_bfdc1ebd633f99c6065d",
+                "source_id": "S2",
+                "evidence_id": "ev_93aa36e190ad217f",
+                "raw_text": "105",
+                "start": 113,
+                "end": 116,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "入该协议[61][62]。印度外交部一位高级官员在新闻发布会上表示，印度目前暂时不会加入该协议[105][63]。另据印度《经济时报》在11月17日的报道，印度官员称目前将重点放在与美国和欧盟的经济",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_e88defb164bd08768361",
+                "source_id": "S2",
+                "evidence_id": "ev_93aa36e190ad217f",
+                "raw_text": "63",
+                "start": 118,
+                "end": 120,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "61][62]。印度外交部一位高级官员在新闻发布会上表示，印度目前暂时不会加入该协议[105][63]。另据印度《经济时报》在11月17日的报道，印度官员称目前将重点放在与美国和欧盟的经济协定[6",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_96c82435d455322495a5",
+                "source_id": "S2",
+                "evidence_id": "ev_93aa36e190ad217f",
+                "raw_text": "64",
+                "start": 167,
+                "end": 169,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "3]。另据印度《经济时报》在11月17日的报道，印度官员称目前将重点放在与美国和欧盟的经济协定[64]。  目前RCEP对印度加入保持开放。印度可以在任何时候申请重新加入谈判，而RCEP签署方将启",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_0a9f0dafbe10cb049846",
+                "source_id": "S2",
+                "evidence_id": "ev_93aa36e190ad217f",
+                "raw_text": "60",
+                "start": 226,
+                "end": 228,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "P对印度加入保持开放。印度可以在任何时候申请重新加入谈判，而RCEP签署方将启动与印度的谈判。[60]  孟加拉已经申请加入RCEP。[134]  2023年5月28日，斯里兰卡总统维克勒马辛哈宣",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_74d39fe92544937b990e",
+                "source_id": "S2",
+                "evidence_id": "ev_93aa36e190ad217f",
+                "raw_text": "134",
+                "start": 246,
+                "end": 249,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "申请重新加入谈判，而RCEP签署方将启动与印度的谈判。[60]  孟加拉已经申请加入RCEP。[134]  2023年5月28日，斯里兰卡总统维克勒马辛哈宣布将申请加入RCEP。",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b743c6a2149cb89d",
+            "content": "RCEP(Regional Comprehensive Economic Partnership)，即区域全面经济伙伴关系协定  　　RCEP是Regional Comprehensive Economic Partnership的缩写，即区域全面经济伙伴关系协定，RCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加(“10+6”)，通过削减关税及非关税壁垒，建立16国统一市场的自由贸易协定。  　　RCEP是东盟国家近年来首次提出，并以东盟为主导的区域经济一体化合作，是成员国间相互开放市场、实施区域经济一体化的组织形式。RCEP主要成员国计划包括与东盟已经签署自由贸易协定的国家，即中国、日本、韩国、澳大利亚、新西兰、印度。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9ba7e63346aa8f2e91d3147a",
+            "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+            "document_name": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "chunk_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+              "block_ids": [
+                "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 328
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 7.741953372955322,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 328,
+            "content_hash": "9ba7e63346aa8f2e91d3147a54fba740f57f21fbfed089b88f397d9a08947adb",
+            "scope_digest": "599a5bdfd2e42f610a0116188fbc218febb04627935255271f18d64036d4da6e",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_e481e5211f095dcafcdb",
+                "source_id": "S3",
+                "evidence_id": "ev_b743c6a2149cb89d",
+                "raw_text": "10",
+                "start": 173,
+                "end": 175,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "济伙伴关系协定，RCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加(“10+6”)，通过削减关税及非关税壁垒，建立16国统一市场的自由贸易协定。  　　RCEP是东盟国家",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_df9d3f95bb82fa39",
+            "content": "RCEP共有20个章节以及3个附件，规范了货物贸易、服务贸易以及其他贸易相关等三个领域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日在部长级会议签署的谈判指导原则和目标一致。RCEP谈判将以以下几点为目标：  2020年11月15日签署的《区域全面经济伙伴关系协定》第一章指出，RCEP各缔约方的目标是“共同建立一个现代、全面、高质量以及互惠共赢的经济伙伴关系合作框架，以促进区域贸易和投资增长，并为全球经济发展作出贡献”[73]。  RCEP规定各成员将在十年内取消90%以上货物的关税，其中主要产品在协议生效时关税税至零。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9eb3810f81240816964eab3a",
+            "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+            "document_name": "rgb_doc_9eb3810f81240816964eab3a.txt",
+            "chunk_id": "rgb_doc_9eb3810f81240816964eab3a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+              "block_ids": [
+                "rgb_doc_9eb3810f81240816964eab3a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 292
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 7.520437717437744,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 292,
+            "content_hash": "9eb3810f81240816964eab3abe6633e4a95f72c953d9f7b56b231251e98088a7",
+            "scope_digest": "4b323198432bd235a60ed08a2476b99b8bb0caa050bab7d0ceb77480117bccc7",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_ae31a76bd3880cdf028d",
+                "source_id": "S4",
+                "evidence_id": "ev_df9d3f95bb82fa39",
+                "raw_text": "70",
+                "start": 45,
+                "end": 47,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "RCEP共有20个章节以及3个附件，规范了货物贸易、服务贸易以及其他贸易相关等三个领域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_c8b7aa2ad13496d7d8e4",
+                "source_id": "S4",
+                "evidence_id": "ev_df9d3f95bb82fa39",
+                "raw_text": "71",
+                "start": 49,
+                "end": 51,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "CEP共有20个章节以及3个附件，规范了货物贸易、服务贸易以及其他贸易相关等三个领域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日在部长级",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ddb261426d09773bd1ab",
+                "source_id": "S4",
+                "evidence_id": "ev_df9d3f95bb82fa39",
+                "raw_text": "73",
+                "start": 241,
+                "end": 243,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "高质量以及互惠共赢的经济伙伴关系合作框架，以促进区域贸易和投资增长，并为全球经济发展作出贡献”[73]。  RCEP规定各成员将在十年内取消90%以上货物的关税，其中主要产品在协议生效时关税税至零",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_043ee4bccb514886",
+            "content": "Nov 15, 2020 ... RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰。RCEP是全球最大的自贸协定，15个成员国总人口、经济体量、贸易总额均占全球总量约30% ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_58e95ba02b20ccd7b243f1e2",
+            "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+            "document_name": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "chunk_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+              "block_ids": [
+                "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 7.414065837860107,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "58e95ba02b20ccd7b243f1e283d2cc00d7862296461d8433099749654c39a8d2",
+            "scope_digest": "de89f3b94834635b64969e44f66a418c2deb25a7ef33bc279c58ca74fcb81095",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_7a34e0d81758088931aa",
+                "source_id": "S5",
+                "evidence_id": "ev_043ee4bccb514886",
+                "raw_text": "15",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Nov 15, 2020 ... RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰。RCEP",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_778f140d4a5b3f46f46f",
+                "source_id": "S5",
+                "evidence_id": "ev_043ee4bccb514886",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Nov 15, 2020 ... RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰。RCEP是全球最大的",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_3cfc8147a56dbe3d",
+            "content": "7亿，GDP达26万亿美元，出口总额达5.2万亿美元，均占全球总量约30%。RCEP自贸区的建成意味着全球约三分之一的经济体量将形成一体化大市场。RCEP囊括了东亚地区主要国家，将为区域和全球经济增长注入强劲动力。  　　RCEP是区域内经贸规则的“整合器”。RCEP整合了东盟与中国、日本、韩国、澳大利亚、新西兰多个“10+1”自贸协定以及中、日、韩、澳、新西兰5国之间已有的多对自贸伙伴关系，还在中日和日韩间建立了新的自贸伙伴关系。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5985275b58e261a691cf8d4",
+            "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+            "document_name": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "chunk_id": "rgb_doc_a5985275b58e261a691cf8d4:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+              "block_ids": [
+                "rgb_doc_a5985275b58e261a691cf8d4:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 218
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 7.379087924957275,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 218,
+            "content_hash": "a5985275b58e261a691cf8d4aea1c00a9860019d195037a096835ff0b380e88a",
+            "scope_digest": "8be497140d46e0ab3719ac1aa6a5c511892cd28bcad9dd7e3bc4b8901ec90d63",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_bbe928e95d58894827c6",
+                "source_id": "S6",
+                "evidence_id": "ev_3cfc8147a56dbe3d",
+                "raw_text": "10",
+                "start": 160,
+                "end": 162,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "CEP是区域内经贸规则的“整合器”。RCEP整合了东盟与中国、日本、韩国、澳大利亚、新西兰多个“10+1”自贸协定以及中、日、韩、澳、新西兰5国之间已有的多对自贸伙伴关系，还在中日和日韩间建立了新",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_29cd827447f9c72e",
+            "content": "RCEP通过采用区域累积的原产地规则，深化了域内产业链、价值链；利用新技术推动海关便利化，促进了新型跨境物流发展；同时，成员国同意采用负面清单以推进投资自由化，提升了投资政策透明度。以上措施都将促进区域内经贸规则的优化和整合。再者，RCEP实现了高质量与包容性的统一。除了涉及货物和服务贸易以及投资的具体规定外，RCEP协定还包括知识产权、电子商务、竞争、中小企业、经济和技术合作以及政府采购等章节。RCEP协定充分照顾成员国之间的差异及其不同的发展阶段，以确保共享成果。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2f7ea6937b2c9626c0f872f",
+            "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+            "document_name": "rgb_doc_f2f7ea6937b2c9626c0f872f.txt",
+            "chunk_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+              "block_ids": [
+                "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 236
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 7.379087924957275,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 236,
+            "content_hash": "f2f7ea6937b2c9626c0f872fcdc1fbbe8d8dda221ecd220e7435adf5b19a27a6",
+            "scope_digest": "e1585cf93c61bd634fad8b6d91e56d876d8e3663d1d1b371c4df49b15c653db2",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_c599df1eb667c35e",
+            "content": "RCEP共有20個章節以及3個附件，規範了貨物貿易、服務貿易以及其他貿易相關等三個領域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日在部长级会议签署的谈判指导原则和目标一致。RCEP谈判将以以下几点为目标：  2020年11月15日签署的《区域全面经济伙伴关系协定》第一章指出，RCEP各缔约方的目标是“共同建立一个现代、全面、高质量以及互惠共赢的经济伙伴关系合作框架，以促进区域贸易和投资增长，并为全球经济发展作出贡献”[73]。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_725aa303b33e83e755a40852",
+            "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+            "document_name": "rgb_doc_725aa303b33e83e755a40852.txt",
+            "chunk_id": "rgb_doc_725aa303b33e83e755a40852:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+              "block_ids": [
+                "rgb_doc_725aa303b33e83e755a40852:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 245
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 7.294779300689697,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 245,
+            "content_hash": "725aa303b33e83e755a4085282abf82e00ae3bb6cf7f0e4a056848dc14468ceb",
+            "scope_digest": "6f54150b7470d59e0f81b2d7e765da5c1a1db239bb713db0de31895b8883b3de",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_ad6ce6db797baf1de5c4",
+                "source_id": "S8",
+                "evidence_id": "ev_c599df1eb667c35e",
+                "raw_text": "70",
+                "start": 45,
+                "end": 47,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "RCEP共有20個章節以及3個附件，規範了貨物貿易、服務貿易以及其他貿易相關等三個領域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d8f67de4222b5508c9e8",
+                "source_id": "S8",
+                "evidence_id": "ev_c599df1eb667c35e",
+                "raw_text": "71",
+                "start": 49,
+                "end": 51,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "CEP共有20個章節以及3個附件，規範了貨物貿易、服務貿易以及其他貿易相關等三個領域。[70][71]  与在2012年11月份的RCEP领导关于开始谈判的联合声明和在2012年8月30日在部长级",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_5b1651bfc2a900835c9e",
+                "source_id": "S8",
+                "evidence_id": "ev_c599df1eb667c35e",
+                "raw_text": "73",
+                "start": 241,
+                "end": 243,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "高质量以及互惠共赢的经济伙伴关系合作框架，以促进区域贸易和投资增长，并为全球经济发展作出贡献”[73]。",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_20d3c46b0af38f69",
+            "content": "RCEP規定各成员將在十年內取消90%以上货物的關稅，其中主要产品在協議生效時关税税至零。[71]  RCEP採用「原产地累积原则」，即单一产品可在RCEP成员间累积价值以满足最终出口产品增值40%的原产地标准，从而享受到优惠关税。[71]  RCEP達成了貨貿便利化的許多規定，比如海关程序、检验检疫、技术标准等。同時也規範了非关税保護措施，比如实行关税自由化基于优惠的市场准入、特定货物的临时免税入境、取消农业出口补贴、及全面取消数量限制、进出口许可程序管理以及与进出口相关的费用和手续等方面。[71]",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5dab03436e0c23948863ac66",
+            "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+            "document_name": "rgb_doc_5dab03436e0c23948863ac66.txt",
+            "chunk_id": "rgb_doc_5dab03436e0c23948863ac66:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+              "block_ids": [
+                "rgb_doc_5dab03436e0c23948863ac66:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 253
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 7.21267032623291,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 253,
+            "content_hash": "5dab03436e0c23948863ac6659ae8a997df8894e63d43ac482333db236255eb8",
+            "scope_digest": "8f8ee4bbc19063d5b66e1debf1f9f9b9f23caa827aff7fdd95ed1f7e76d34762",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_e63f02f70af08d479713",
+                "source_id": "S9",
+                "evidence_id": "ev_20d3c46b0af38f69",
+                "raw_text": "71",
+                "start": 46,
+                "end": 48,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "RCEP規定各成员將在十年內取消90%以上货物的關稅，其中主要产品在協議生效時关税税至零。[71]  RCEP採用「原产地累积原则」，即单一产品可在RCEP成员间累积价值以满足最终出口产品增值",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_e49366fd53c3ac84976c",
+                "source_id": "S9",
+                "evidence_id": "ev_20d3c46b0af38f69",
+                "raw_text": "71",
+                "start": 117,
+                "end": 119,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "一产品可在RCEP成员间累积价值以满足最终出口产品增值40%的原产地标准，从而享受到优惠关税。[71]  RCEP達成了貨貿便利化的許多規定，比如海关程序、检验检疫、技术标准等。同時也規範了非关税",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_88b6706e2d66645268a4",
+                "source_id": "S9",
+                "evidence_id": "ev_20d3c46b0af38f69",
+                "raw_text": "71",
+                "start": 250,
+                "end": 252,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "、取消农业出口补贴、及全面取消数量限制、进出口许可程序管理以及与进出口相关的费用和手续等方面。[71]",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_7314140f45297ce7",
+            "content": "2万亿美元，约占全球GDP的30%，占全球贸易总额的近28%（根据2019年数据），RCEP是朝着全球贸易和投资规则的理想框架迈出的重要一步。其次，RCEP是区域内经贸规则的“整合器”。RCEP整合了东盟与中国、日本、韩国、澳大利亚、新西兰多个“10+1”自贸协定以及中、日、韩、澳、新西兰5国之间已有的多对自贸伙伴关系，尤其是在中日和韩日间建立了新的自贸伙伴关系。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8cc17e2115bd14cf7df0b46f",
+            "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+            "document_name": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "chunk_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+              "block_ids": [
+                "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 183
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 7.1566481590271,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 183,
+            "content_hash": "8cc17e2115bd14cf7df0b46f1aab5e48a5808bb9f10188cfd63c2153f95b28f2",
+            "scope_digest": "4889ef32d051b1385456f0f632f88e493d180b3e82fcb309972d6adb49d5cdd4",
+            "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_1c052b46bc2f50c52636",
+                "source_id": "S10",
+                "evidence_id": "ev_7314140f45297ce7",
+                "raw_text": "10",
+                "start": 123,
+                "end": 125,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "CEP是区域内经贸规则的“整合器”。RCEP整合了东盟与中国、日本、韩国、澳大利亚、新西兰多个“10+1”自贸协定以及中、日、韩、澳、新西兰5国之间已有的多对自贸伙伴关系，尤其是在中日和韩日间建立",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_043ee4bccb514886",
+      "ev_3cfc8147a56dbe3d",
+      "ev_6cda30763b4d91ac",
+      "ev_93aa36e190ad217f",
+      "ev_b743c6a2149cb89d",
+      "ev_df9d3f95bb82fa39"
+    ],
+    "evidence": {
+      "ev_6cda30763b4d91ac": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_7fd3eb88ea554565fdaedb3f",
+        "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+        "document_name": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+        "chunk_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+          "block_ids": [
+            "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 261
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 7.939633369445801,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 261,
+        "content_hash": "7fd3eb88ea554565fdaedb3f5a0f300d938a2e2460f1cacf7e5dd3b064783842",
+        "scope_digest": "c6f0e85c36e23dc11de412ee923d7b4fa0d834eb8896d5224a6f5ecf8ee407f8",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_93aa36e190ad217f": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9e07c7bd7775c813bb11fd06",
+        "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+        "document_name": "rgb_doc_9e07c7bd7775c813bb11fd06.txt",
+        "chunk_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9e07c7bd7775c813bb11fd06:r1",
+          "block_ids": [
+            "rgb_doc_9e07c7bd7775c813bb11fd06:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 287
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 7.939633369445801,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 287,
+        "content_hash": "9e07c7bd7775c813bb11fd060632b548c0d86e5395a82a6569df4f9b71ab85a7",
+        "scope_digest": "2d449594bade133568c19006a389c2b5195e3ed35f35690bbaef0e88d8a63d5c",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b743c6a2149cb89d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9ba7e63346aa8f2e91d3147a",
+        "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+        "document_name": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+        "chunk_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+          "block_ids": [
+            "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 328
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 7.741953372955322,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 328,
+        "content_hash": "9ba7e63346aa8f2e91d3147a54fba740f57f21fbfed089b88f397d9a08947adb",
+        "scope_digest": "599a5bdfd2e42f610a0116188fbc218febb04627935255271f18d64036d4da6e",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_df9d3f95bb82fa39": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9eb3810f81240816964eab3a",
+        "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+        "document_name": "rgb_doc_9eb3810f81240816964eab3a.txt",
+        "chunk_id": "rgb_doc_9eb3810f81240816964eab3a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9eb3810f81240816964eab3a:r1",
+          "block_ids": [
+            "rgb_doc_9eb3810f81240816964eab3a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 292
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 7.520437717437744,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 292,
+        "content_hash": "9eb3810f81240816964eab3abe6633e4a95f72c953d9f7b56b231251e98088a7",
+        "scope_digest": "4b323198432bd235a60ed08a2476b99b8bb0caa050bab7d0ceb77480117bccc7",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_043ee4bccb514886": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_58e95ba02b20ccd7b243f1e2",
+        "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+        "document_name": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+        "chunk_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+          "block_ids": [
+            "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 7.414065837860107,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "58e95ba02b20ccd7b243f1e283d2cc00d7862296461d8433099749654c39a8d2",
+        "scope_digest": "de89f3b94834635b64969e44f66a418c2deb25a7ef33bc279c58ca74fcb81095",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_3cfc8147a56dbe3d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_a5985275b58e261a691cf8d4",
+        "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+        "document_name": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+        "chunk_id": "rgb_doc_a5985275b58e261a691cf8d4:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+          "block_ids": [
+            "rgb_doc_a5985275b58e261a691cf8d4:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 218
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 7.379087924957275,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 218,
+        "content_hash": "a5985275b58e261a691cf8d4aea1c00a9860019d195037a096835ff0b380e88a",
+        "scope_digest": "8be497140d46e0ab3719ac1aa6a5c511892cd28bcad9dd7e3bc4b8901ec90d63",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_29cd827447f9c72e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_f2f7ea6937b2c9626c0f872f",
+        "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+        "document_name": "rgb_doc_f2f7ea6937b2c9626c0f872f.txt",
+        "chunk_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_f2f7ea6937b2c9626c0f872f:r1",
+          "block_ids": [
+            "rgb_doc_f2f7ea6937b2c9626c0f872f:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 236
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 7.379087924957275,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 236,
+        "content_hash": "f2f7ea6937b2c9626c0f872fcdc1fbbe8d8dda221ecd220e7435adf5b19a27a6",
+        "scope_digest": "e1585cf93c61bd634fad8b6d91e56d876d8e3663d1d1b371c4df49b15c653db2",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_c599df1eb667c35e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_725aa303b33e83e755a40852",
+        "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+        "document_name": "rgb_doc_725aa303b33e83e755a40852.txt",
+        "chunk_id": "rgb_doc_725aa303b33e83e755a40852:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_725aa303b33e83e755a40852:r1",
+          "block_ids": [
+            "rgb_doc_725aa303b33e83e755a40852:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 245
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 7.294779300689697,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 245,
+        "content_hash": "725aa303b33e83e755a4085282abf82e00ae3bb6cf7f0e4a056848dc14468ceb",
+        "scope_digest": "6f54150b7470d59e0f81b2d7e765da5c1a1db239bb713db0de31895b8883b3de",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_20d3c46b0af38f69": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_5dab03436e0c23948863ac66",
+        "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+        "document_name": "rgb_doc_5dab03436e0c23948863ac66.txt",
+        "chunk_id": "rgb_doc_5dab03436e0c23948863ac66:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_5dab03436e0c23948863ac66:r1",
+          "block_ids": [
+            "rgb_doc_5dab03436e0c23948863ac66:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 253
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 7.21267032623291,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 253,
+        "content_hash": "5dab03436e0c23948863ac6659ae8a997df8894e63d43ac482333db236255eb8",
+        "scope_digest": "8f8ee4bbc19063d5b66e1debf1f9f9b9f23caa827aff7fdd95ed1f7e76d34762",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_7314140f45297ce7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_8cc17e2115bd14cf7df0b46f",
+        "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+        "document_name": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+        "chunk_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+          "block_ids": [
+            "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 183
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 7.1566481590271,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 183,
+        "content_hash": "8cc17e2115bd14cf7df0b46f1aab5e48a5808bb9f10188cfd63c2153f95b28f2",
+        "scope_digest": "4889ef32d051b1385456f0f632f88e493d180b3e82fcb309972d6adb49d5cdd4",
+        "trace_id": "f1e121d18cb74f0db4fa96b0a0a8d1b7",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_6cda30763b4d91ac",
+      "S2": "ev_93aa36e190ad217f",
+      "S3": "ev_b743c6a2149cb89d",
+      "S4": "ev_df9d3f95bb82fa39",
+      "S5": "ev_043ee4bccb514886",
+      "S6": "ev_3cfc8147a56dbe3d",
+      "S7": "ev_29cd827447f9c72e",
+      "S8": "ev_c599df1eb667c35e",
+      "S9": "ev_20d3c46b0af38f69",
+      "S10": "ev_7314140f45297ce7"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

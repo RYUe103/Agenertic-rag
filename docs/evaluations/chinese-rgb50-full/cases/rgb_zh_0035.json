@@ -1,0 +1,3484 @@
+{
+  "question_id": "rgb_zh_0035",
+  "result": {
+    "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+    "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+    "status": "failed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:1",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:2",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:3",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "context_chars": 1194,
+        "prompt_tokens": 8446,
+        "completion_tokens": 87,
+        "total_tokens": 8533,
+        "context_compaction_count": 0,
+        "context_chars_before": 1194,
+        "context_chars_after": 1194,
+        "estimated_input_tokens": 12131,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1485,
+        "remaining_run_tokens": 111467,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8446,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3685
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:4",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1194
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:5",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "tool_call_id": "call_0f0a89149b234e68964965",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:6",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "tool_call_id": "call_0f0a89149b234e68964965",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:7",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_0f0a89149b234e68964965",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 9,
+        "output_chars_before": 98740,
+        "output_chars_after": 14583,
+        "removed_chars": 84157,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:8",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:9",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "iteration": 2
+      },
+      {
+        "type": "answer_started",
+        "sequence": 10,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:10",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 11,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:11",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "delta": "证据不足或引用未通过复核，无法给出可靠结论。"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 12,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:12",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889",
+        "final_citation_count": 0,
+        "citation_validation_reason": [
+          "no_cited_evidence"
+        ],
+        "repair_attempted": false,
+        "repair_success": false
+      },
+      {
+        "type": "failed",
+        "sequence": 13,
+        "event_id": "run_83a4bb8707aa4048beb699a589930b49:0c201a9ec63c42a7abe35b589ce2e888:13",
+        "run_id": "run_83a4bb8707aa4048beb699a589930b49",
+        "thread_id": "thread_f04c1618aa8445418e3937ebb67aa889"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 2,
+    "usage": {
+      "prompt_tokens": 8446,
+      "completion_tokens": 87,
+      "total_tokens": 8533
+    },
+    "elapsed_seconds": 18.114724917002604,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 0,
+      "output_truncated": true,
+      "context_chars": 1194,
+      "prompt_tokens": 8446,
+      "completion_tokens": 87,
+      "total_tokens": 8533,
+      "context_compaction_count": 0,
+      "context_chars_before": 15839,
+      "context_chars_after": 15839,
+      "estimated_input_tokens": 21858,
+      "tool_schema_tokens": 10646,
+      "observation_tokens": 8931,
+      "evidence_tokens": 2809,
+      "history_tokens": 2281,
+      "remaining_run_tokens": 111467,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 8446,
+      "usage_source": "provider",
+      "estimation_error_tokens": -3685,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_0f0a89149b234e68964965",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 9,
+          "output_chars_before": 98740,
+          "output_chars_after": 14583,
+          "removed_chars": 84157,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "stop_reason": "model_unavailable",
+      "final_citation_count": 0,
+      "citation_validation_reason": [
+        "no_cited_evidence"
+      ]
+    },
+    "result": {
+      "answer": "证据不足或引用未通过复核，无法给出可靠结论。",
+      "citations": {},
+      "validation_errors": [
+        "no_cited_evidence"
+      ],
+      "citation_validation": "rejected",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": true,
+      "claims": [],
+      "citation_metadata": [],
+      "answer_validation": "insufficient_evidence",
+      "answer_displayable": false,
+      "trusted_evidence_count": 10,
+      "repair_attempted": false,
+      "repair_success": false,
+      "stop_reason": "model_unavailable",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_0f0a89149b234e68964965",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2022年澳大利亚网球公开赛 男单冠军 女单冠军",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5994b251830078755c17ce3a",
+            "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+            "document_name": "rgb_doc_5994b251830078755c17ce3a.txt",
+            "chunk_id": "rgb_doc_5994b251830078755c17ce3a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 54.900325775146484,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Jan 17, 2022 ... 2022年澳网男单会迎来新冠军吗？在昨晚德约科维奇因为“签证风波”告别澳大利亚之后，2022年澳大利亚网球公开赛男单签表中只剩下纳达尔一位前冠军球员了 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+              "block_ids": [
+                "rgb_doc_5994b251830078755c17ce3a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 54.900325775146484,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_17d9cbe0df0e655839d77fec",
+            "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+            "document_name": "rgb_doc_17d9cbe0df0e655839d77fec.txt",
+            "chunk_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 54.78529739379883,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "用微信扫码二维码 分享至好友和朋友圈 2022年澳网男单会迎来新冠军吗？  在昨晚德约科维奇因为“签证风波”告别澳大利亚之后，2022年澳大利亚网球公开赛男单签表中只剩下纳达尔一位前冠军球员了。 纳达尔唯一一次夺得澳大利亚网球公开赛男单冠军奖杯还是在遥远的2009年，此后他总计4次闯入过赛会男单决赛，但分别输给了德约科维奇（2012年、2019年）、费德勒（2017年），瓦林卡（2014年）。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+              "block_ids": [
+                "rgb_doc_17d9cbe0df0e655839d77fec:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 198
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 54.78529739379883,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_913e09f6597b1abda7d48de8",
+            "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+            "document_name": "rgb_doc_913e09f6597b1abda7d48de8.txt",
+            "chunk_id": "rgb_doc_913e09f6597b1abda7d48de8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 53.18693542480469,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "但由于澳大利亚严格的防疫政策，德约科维奇最终无法参加2022年澳大利亚网球公开赛并卫冕男单冠军头衔，无法向第21座大满贯冠军奖杯发起冲击，拉斐尔·纳达尔将会继续挑战这个记录并最终挑战成功，同时他也是本届赛事唯一一个曾捧起澳网冠军奖杯的男选手。大坂直美在第三轮中被淘汰。  2022年1月4日，卫冕冠军诺瓦克·乔科维奇宣布，他可以参加澳大利亚网球公开赛。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+              "block_ids": [
+                "rgb_doc_913e09f6597b1abda7d48de8:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 176
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 53.18693542480469,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c713bd8cc294e9172ee70165",
+            "version_id": "rgb_doc_c713bd8cc294e9172ee70165:r1",
+            "document_name": "rgb_doc_c713bd8cc294e9172ee70165.txt",
+            "chunk_id": "rgb_doc_c713bd8cc294e9172ee70165:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 52.56026840209961,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "纳达尔目前已经结束了他在2022年澳大利亚网球公开赛的单打首秀，在男单首轮的比赛中，他直落三盘以6-1/6-4/6-2的比分击败了美国选手吉隆，纳达尔要想再一次捧起澳大利亚网球公开赛男单冠军奖杯，他最大的隐患还是他目前的年龄以及不可预知的伤病。 此外，纳达尔与今年赛会另一大夺冠热门德国名将小兹维列夫被分在了同一个1/4区，两人之间只有一个人能够跻身今年澳大利亚网球公开赛男单四强，强者相遇，估计对双方的损耗应该都会不小。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c713bd8cc294e9172ee70165:r1",
+              "block_ids": [
+                "rgb_doc_c713bd8cc294e9172ee70165:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 211
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 52.56026840209961,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4fcc057ddfec37991dd93623",
+            "version_id": "rgb_doc_4fcc057ddfec37991dd93623:r1",
+            "document_name": "rgb_doc_4fcc057ddfec37991dd93623.txt",
+            "chunk_id": "rgb_doc_4fcc057ddfec37991dd93623:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 52.5343017578125,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "诺瓦克·德约科维奇和大坂直美分别是男女单打卫冕冠军。但由于澳大利亚严格的防疫政策，德约科维奇最终无法参加2022年澳大利亚网球公开赛并卫冕男单冠军头衔，无法向 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4fcc057ddfec37991dd93623:r1",
+              "block_ids": [
+                "rgb_doc_4fcc057ddfec37991dd93623:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 83
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 52.5343017578125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5065fb6307e2e9cb3242bde5",
+            "version_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1",
+            "document_name": "rgb_doc_5065fb6307e2e9cb3242bde5.txt",
+            "chunk_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 52.099063873291016,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "2022年澳大利亚网球公开赛（英语：2022 Australian Open）是一项在室外硬地球场进行的网球大满贯赛事，于2022年1月17日至30日期间在澳大利亚墨尔本公园举行。这是第110届澳大利亚网球公开赛，也是公开赛年代以来第54届，2022年的第一个大满贯赛事。澳大利亚网球公开赛的赛事类型包括单打、双打和混合双打，还包括青少年赛事和轮椅网球项目。单打比赛有128名球员参加（包括16名资格赛选手）。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1",
+              "block_ids": [
+                "rgb_doc_5065fb6307e2e9cb3242bde5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 205
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 52.099063873291016,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_26f6fa3941c4db8eb69b0812",
+            "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+            "document_name": "rgb_doc_26f6fa3941c4db8eb69b0812.txt",
+            "chunk_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 50.6666259765625,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "2022年澳大利亚网球公开赛女子单打比赛是2022年澳大利亚网球公开赛的其中一个比赛项目，于1月17日至29日举行。  大坂直美是上届冠军，然而她在第三轮负于阿曼达·阿尼西莫娃，无缘卫冕[1]。  阿什莉·巴蒂在决赛中直落两盘击败丹妮尔·柯林斯，获得该届比赛冠军，成为1978年以来首位获得澳网女单冠军的主办国球员，这也是巴蒂第三次获得大满贯女单冠军。[2]这是巴蒂于2022年3月宣布再次结束网球生涯前参加的最后一场大满贯比赛[3]。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+              "block_ids": [
+                "rgb_doc_26f6fa3941c4db8eb69b0812:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 218
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 50.6666259765625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_acd36352d1ae638e96c593ce",
+            "version_id": "rgb_doc_acd36352d1ae638e96c593ce:r1",
+            "document_name": "rgb_doc_acd36352d1ae638e96c593ce.txt",
+            "chunk_id": "rgb_doc_acd36352d1ae638e96c593ce:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 50.481773376464844,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "用微信扫码二维码 分享至好友和朋友圈 2022年澳网女单半决赛H2H：两位大满贯赛冠军占优！  2022年澳大利亚网球公开赛于今天结束了最后两场女单八强赛的较量，最终美国选手科林斯与波兰新星希维翁泰克脱颖而出，她们与早前晋级的澳大利亚姑娘巴蒂和美国姑娘凯斯构成了今年澳大利亚网球公开赛女单半决赛名单。 巴蒂和凯斯将争夺女单上半区的一个女单决赛名额，这场比赛将是两人职业生涯的第4次交手，在前3次交手记录中，巴蒂暂时2胜1负领先于凯斯。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_acd36352d1ae638e96c593ce:r1",
+              "block_ids": [
+                "rgb_doc_acd36352d1ae638e96c593ce:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 217
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 50.481773376464844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_28ece603ce771a5ef9ab6f99",
+            "version_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1",
+            "document_name": "rgb_doc_28ece603ce771a5ef9ab6f99.txt",
+            "chunk_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 50.00368118286133,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "Jan 26, 2022 ... 2022年澳网女单半决赛H2H：两位大满贯赛冠军占优！2022年澳大利亚网球公开赛于今天结束了最后两场女单八强赛的较量，最终美国选手科林斯与波兰新星希 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1",
+              "block_ids": [
+                "rgb_doc_28ece603ce771a5ef9ab6f99:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 50.00368118286133,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62dfa43a5286512295e0baf9",
+            "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+            "document_name": "rgb_doc_62dfa43a5286512295e0baf9.txt",
+            "chunk_id": "rgb_doc_62dfa43a5286512295e0baf9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 49.841529846191406,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "2019年，巴蒂夺得法网女单冠军和当年度深圳年终总决赛的冠军，并登顶世界第一；2020年，巴蒂夺得温布尔登网球公开赛女单冠军。 加上2022年澳网女单冠军，巴蒂成为现役少有的、同时取得红土、硬地和草地三种场地大满贯冠军的女子球员。目前，她距离自己的全满贯目标，仅差一个美国网球公开赛女单冠军。 在男子双打赛场方面，来自澳大利亚的本土组合科基纳吉斯和克耶高斯夺得了男子双打冠军奖杯，成为澳网近25年以来首对全澳大利亚人阵容的男双冠军。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+              "block_ids": [
+                "rgb_doc_62dfa43a5286512295e0baf9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 216
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 49.841529846191406,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5994b251830078755c17ce3a",
+            "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+            "document_name": "rgb_doc_5994b251830078755c17ce3a.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_5994b251830078755c17ce3a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5994b251830078755c17ce3a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_17d9cbe0df0e655839d77fec",
+            "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+            "document_name": "rgb_doc_17d9cbe0df0e655839d77fec.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_17d9cbe0df0e655839d77fec:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_17d9cbe0df0e655839d77fec.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_913e09f6597b1abda7d48de8",
+            "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+            "document_name": "rgb_doc_913e09f6597b1abda7d48de8.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_913e09f6597b1abda7d48de8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_913e09f6597b1abda7d48de8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c713bd8cc294e9172ee70165",
+            "version_id": "rgb_doc_c713bd8cc294e9172ee70165:r1",
+            "document_name": "rgb_doc_c713bd8cc294e9172ee70165.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_c713bd8cc294e9172ee70165:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c713bd8cc294e9172ee70165.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4fcc057ddfec37991dd93623",
+            "version_id": "rgb_doc_4fcc057ddfec37991dd93623:r1",
+            "document_name": "rgb_doc_4fcc057ddfec37991dd93623.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_4fcc057ddfec37991dd93623:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4fcc057ddfec37991dd93623.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5065fb6307e2e9cb3242bde5",
+            "version_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1",
+            "document_name": "rgb_doc_5065fb6307e2e9cb3242bde5.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_5065fb6307e2e9cb3242bde5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5065fb6307e2e9cb3242bde5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_26f6fa3941c4db8eb69b0812",
+            "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+            "document_name": "rgb_doc_26f6fa3941c4db8eb69b0812.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_26f6fa3941c4db8eb69b0812:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_26f6fa3941c4db8eb69b0812.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_acd36352d1ae638e96c593ce",
+            "version_id": "rgb_doc_acd36352d1ae638e96c593ce:r1",
+            "document_name": "rgb_doc_acd36352d1ae638e96c593ce.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_acd36352d1ae638e96c593ce:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_acd36352d1ae638e96c593ce.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_28ece603ce771a5ef9ab6f99",
+            "version_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1",
+            "document_name": "rgb_doc_28ece603ce771a5ef9ab6f99.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_28ece603ce771a5ef9ab6f99:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_28ece603ce771a5ef9ab6f99.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62dfa43a5286512295e0baf9",
+            "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+            "document_name": "rgb_doc_62dfa43a5286512295e0baf9.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_62dfa43a5286512295e0baf9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62dfa43a5286512295e0baf9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_853e41f458d2d80ed3764a17",
+            "version_id": "rgb_doc_853e41f458d2d80ed3764a17:r1",
+            "document_name": "rgb_doc_853e41f458d2d80ed3764a17.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_853e41f458d2d80ed3764a17:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_853e41f458d2d80ed3764a17.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_83fd9809233a8d2b6a56e754",
+            "version_id": "rgb_doc_83fd9809233a8d2b6a56e754:r1",
+            "document_name": "rgb_doc_83fd9809233a8d2b6a56e754.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_83fd9809233a8d2b6a56e754:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_83fd9809233a8d2b6a56e754.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_91ea6d9771ac499c3a77c81e",
+            "version_id": "rgb_doc_91ea6d9771ac499c3a77c81e:r1",
+            "document_name": "rgb_doc_91ea6d9771ac499c3a77c81e.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_91ea6d9771ac499c3a77c81e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_91ea6d9771ac499c3a77c81e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5baf7e935e4bbefa4098c652",
+            "version_id": "rgb_doc_5baf7e935e4bbefa4098c652:r1",
+            "document_name": "rgb_doc_5baf7e935e4bbefa4098c652.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_5baf7e935e4bbefa4098c652:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5baf7e935e4bbefa4098c652.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_02febd81ade976f42a233866",
+            "version_id": "rgb_doc_02febd81ade976f42a233866:r1",
+            "document_name": "rgb_doc_02febd81ade976f42a233866.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_02febd81ade976f42a233866:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_02febd81ade976f42a233866.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ccda6cf2b3e9fda1120862b3",
+            "version_id": "rgb_doc_ccda6cf2b3e9fda1120862b3:r1",
+            "document_name": "rgb_doc_ccda6cf2b3e9fda1120862b3.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_ccda6cf2b3e9fda1120862b3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ccda6cf2b3e9fda1120862b3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_398d788781547a7b62bd0238",
+            "version_id": "rgb_doc_398d788781547a7b62bd0238:r1",
+            "document_name": "rgb_doc_398d788781547a7b62bd0238.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_398d788781547a7b62bd0238:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_398d788781547a7b62bd0238.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e33e412d5660bba5f520778d",
+            "version_id": "rgb_doc_e33e412d5660bba5f520778d:r1",
+            "document_name": "rgb_doc_e33e412d5660bba5f520778d.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_e33e412d5660bba5f520778d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e33e412d5660bba5f520778d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1e4b943e335d34b221a89257",
+            "version_id": "rgb_doc_1e4b943e335d34b221a89257:r1",
+            "document_name": "rgb_doc_1e4b943e335d34b221a89257.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_1e4b943e335d34b221a89257:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1e4b943e335d34b221a89257.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_347cb467ca623f06c8a243e0",
+            "version_id": "rgb_doc_347cb467ca623f06c8a243e0:r1",
+            "document_name": "rgb_doc_347cb467ca623f06c8a243e0.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_347cb467ca623f06c8a243e0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_347cb467ca623f06c8a243e0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9edcb4b3631628c37c399da7",
+            "version_id": "rgb_doc_9edcb4b3631628c37c399da7:r1",
+            "document_name": "rgb_doc_9edcb4b3631628c37c399da7.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_9edcb4b3631628c37c399da7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9edcb4b3631628c37c399da7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aa20e53ce8cd0d1d6d640b13",
+            "version_id": "rgb_doc_aa20e53ce8cd0d1d6d640b13:r1",
+            "document_name": "rgb_doc_aa20e53ce8cd0d1d6d640b13.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_aa20e53ce8cd0d1d6d640b13:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aa20e53ce8cd0d1d6d640b13.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1d84aad64230e73bcf121a04",
+            "version_id": "rgb_doc_1d84aad64230e73bcf121a04:r1",
+            "document_name": "rgb_doc_1d84aad64230e73bcf121a04.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_1d84aad64230e73bcf121a04:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1d84aad64230e73bcf121a04.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2dde059af5a643b2c906b231",
+            "version_id": "rgb_doc_2dde059af5a643b2c906b231:r1",
+            "document_name": "rgb_doc_2dde059af5a643b2c906b231.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_2dde059af5a643b2c906b231:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2dde059af5a643b2c906b231.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c2453fbaa396313314eb49ac",
+            "version_id": "rgb_doc_c2453fbaa396313314eb49ac:r1",
+            "document_name": "rgb_doc_c2453fbaa396313314eb49ac.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_c2453fbaa396313314eb49ac:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c2453fbaa396313314eb49ac.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b077c7a5ba918cc4eb111716",
+            "version_id": "rgb_doc_b077c7a5ba918cc4eb111716:r1",
+            "document_name": "rgb_doc_b077c7a5ba918cc4eb111716.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_b077c7a5ba918cc4eb111716:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b077c7a5ba918cc4eb111716.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7d8026ee7426214838d1046e",
+            "version_id": "rgb_doc_7d8026ee7426214838d1046e:r1",
+            "document_name": "rgb_doc_7d8026ee7426214838d1046e.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_7d8026ee7426214838d1046e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7d8026ee7426214838d1046e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_05125d958e32361362e90f0a",
+            "version_id": "rgb_doc_05125d958e32361362e90f0a:r1",
+            "document_name": "rgb_doc_05125d958e32361362e90f0a.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_05125d958e32361362e90f0a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_05125d958e32361362e90f0a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4b73a7d7590c023118fb2288",
+            "version_id": "rgb_doc_4b73a7d7590c023118fb2288:r1",
+            "document_name": "rgb_doc_4b73a7d7590c023118fb2288.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_4b73a7d7590c023118fb2288:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4b73a7d7590c023118fb2288.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_70b6252c3554217cce8714fd",
+            "version_id": "rgb_doc_70b6252c3554217cce8714fd:r1",
+            "document_name": "rgb_doc_70b6252c3554217cce8714fd.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_70b6252c3554217cce8714fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_70b6252c3554217cce8714fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3ef709f2c462326bfdcb77a7",
+            "version_id": "rgb_doc_3ef709f2c462326bfdcb77a7:r1",
+            "document_name": "rgb_doc_3ef709f2c462326bfdcb77a7.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_3ef709f2c462326bfdcb77a7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3ef709f2c462326bfdcb77a7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5eac6dcd1e62db6aa7d44c05",
+            "version_id": "rgb_doc_5eac6dcd1e62db6aa7d44c05:r1",
+            "document_name": "rgb_doc_5eac6dcd1e62db6aa7d44c05.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_5eac6dcd1e62db6aa7d44c05:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5eac6dcd1e62db6aa7d44c05.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_190aae5fee7780a97750e07c",
+            "version_id": "rgb_doc_190aae5fee7780a97750e07c:r1",
+            "document_name": "rgb_doc_190aae5fee7780a97750e07c.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_190aae5fee7780a97750e07c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_190aae5fee7780a97750e07c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3b927f8d40cb2b56b949dcc9",
+            "version_id": "rgb_doc_3b927f8d40cb2b56b949dcc9:r1",
+            "document_name": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_3b927f8d40cb2b56b949dcc9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3b927f8d40cb2b56b949dcc9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7ea1f856617ac1cfa84af186",
+            "version_id": "rgb_doc_7ea1f856617ac1cfa84af186:r1",
+            "document_name": "rgb_doc_7ea1f856617ac1cfa84af186.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_7ea1f856617ac1cfa84af186:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7ea1f856617ac1cfa84af186.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b64f372385b85c534c484ef8",
+            "version_id": "rgb_doc_b64f372385b85c534c484ef8:r1",
+            "document_name": "rgb_doc_b64f372385b85c534c484ef8.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_b64f372385b85c534c484ef8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b64f372385b85c534c484ef8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_58e95ba02b20ccd7b243f1e2",
+            "version_id": "rgb_doc_58e95ba02b20ccd7b243f1e2:r1",
+            "document_name": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_58e95ba02b20ccd7b243f1e2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_58e95ba02b20ccd7b243f1e2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9ba7e63346aa8f2e91d3147a",
+            "version_id": "rgb_doc_9ba7e63346aa8f2e91d3147a:r1",
+            "document_name": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_9ba7e63346aa8f2e91d3147a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9ba7e63346aa8f2e91d3147a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f8b1bca9a5518127e541d58e",
+            "version_id": "rgb_doc_f8b1bca9a5518127e541d58e:r1",
+            "document_name": "rgb_doc_f8b1bca9a5518127e541d58e.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_f8b1bca9a5518127e541d58e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f8b1bca9a5518127e541d58e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3e26aa2bc3989f916167126b",
+            "version_id": "rgb_doc_3e26aa2bc3989f916167126b:r1",
+            "document_name": "rgb_doc_3e26aa2bc3989f916167126b.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_3e26aa2bc3989f916167126b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3e26aa2bc3989f916167126b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a05b041d38cf0dad58cb053",
+            "version_id": "rgb_doc_2a05b041d38cf0dad58cb053:r1",
+            "document_name": "rgb_doc_2a05b041d38cf0dad58cb053.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_2a05b041d38cf0dad58cb053:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2a05b041d38cf0dad58cb053.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8cc17e2115bd14cf7df0b46f",
+            "version_id": "rgb_doc_8cc17e2115bd14cf7df0b46f:r1",
+            "document_name": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_8cc17e2115bd14cf7df0b46f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8cc17e2115bd14cf7df0b46f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c3c60f33b3f95472d5120f9",
+            "version_id": "rgb_doc_1c3c60f33b3f95472d5120f9:r1",
+            "document_name": "rgb_doc_1c3c60f33b3f95472d5120f9.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_1c3c60f33b3f95472d5120f9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c3c60f33b3f95472d5120f9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62363a7384427395d8ec8249",
+            "version_id": "rgb_doc_62363a7384427395d8ec8249:r1",
+            "document_name": "rgb_doc_62363a7384427395d8ec8249.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_62363a7384427395d8ec8249:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62363a7384427395d8ec8249.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_be62a7cfaa6dabf2c51ba0d7",
+            "version_id": "rgb_doc_be62a7cfaa6dabf2c51ba0d7:r1",
+            "document_name": "rgb_doc_be62a7cfaa6dabf2c51ba0d7.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_be62a7cfaa6dabf2c51ba0d7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_be62a7cfaa6dabf2c51ba0d7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_09a21f1220d71a3f23710e3c",
+            "version_id": "rgb_doc_09a21f1220d71a3f23710e3c:r1",
+            "document_name": "rgb_doc_09a21f1220d71a3f23710e3c.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_09a21f1220d71a3f23710e3c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_09a21f1220d71a3f23710e3c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_99b9265560cbcb22ed12af4b",
+            "version_id": "rgb_doc_99b9265560cbcb22ed12af4b:r1",
+            "document_name": "rgb_doc_99b9265560cbcb22ed12af4b.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_99b9265560cbcb22ed12af4b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_99b9265560cbcb22ed12af4b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8f45d33a5821b93bb64aba1a",
+            "version_id": "rgb_doc_8f45d33a5821b93bb64aba1a:r1",
+            "document_name": "rgb_doc_8f45d33a5821b93bb64aba1a.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_8f45d33a5821b93bb64aba1a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8f45d33a5821b93bb64aba1a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a5985275b58e261a691cf8d4",
+            "version_id": "rgb_doc_a5985275b58e261a691cf8d4:r1",
+            "document_name": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_a5985275b58e261a691cf8d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a5985275b58e261a691cf8d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bedfa9fd5d3ad3154eefbbad",
+            "version_id": "rgb_doc_bedfa9fd5d3ad3154eefbbad:r1",
+            "document_name": "rgb_doc_bedfa9fd5d3ad3154eefbbad.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_bedfa9fd5d3ad3154eefbbad:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bedfa9fd5d3ad3154eefbbad.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6a113e20b403924d411baf87",
+            "version_id": "rgb_doc_6a113e20b403924d411baf87:r1",
+            "document_name": "rgb_doc_6a113e20b403924d411baf87.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_6a113e20b403924d411baf87:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6a113e20b403924d411baf87.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7fd3eb88ea554565fdaedb3f",
+            "version_id": "rgb_doc_7fd3eb88ea554565fdaedb3f:r1",
+            "document_name": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_7fd3eb88ea554565fdaedb3f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7fd3eb88ea554565fdaedb3f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aa626773b8fdc97245c01682",
+            "version_id": "rgb_doc_aa626773b8fdc97245c01682:r1",
+            "document_name": "rgb_doc_aa626773b8fdc97245c01682.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_aa626773b8fdc97245c01682:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aa626773b8fdc97245c01682.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5b8f5906d9a3cabacbe81e0d",
+            "version_id": "rgb_doc_5b8f5906d9a3cabacbe81e0d:r1",
+            "document_name": "rgb_doc_5b8f5906d9a3cabacbe81e0d.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_5b8f5906d9a3cabacbe81e0d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5b8f5906d9a3cabacbe81e0d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_810c19bc30fef5261aefaccb",
+            "version_id": "rgb_doc_810c19bc30fef5261aefaccb:r1",
+            "document_name": "rgb_doc_810c19bc30fef5261aefaccb.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_810c19bc30fef5261aefaccb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_810c19bc30fef5261aefaccb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5c24de26b1e722486521bd38",
+            "version_id": "rgb_doc_5c24de26b1e722486521bd38:r1",
+            "document_name": "rgb_doc_5c24de26b1e722486521bd38.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_5c24de26b1e722486521bd38:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5c24de26b1e722486521bd38.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a55da71e07566958f3beaf58",
+            "version_id": "rgb_doc_a55da71e07566958f3beaf58:r1",
+            "document_name": "rgb_doc_a55da71e07566958f3beaf58.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_a55da71e07566958f3beaf58:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a55da71e07566958f3beaf58.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c422bb41d4a8d4b1cf1a0e49",
+            "version_id": "rgb_doc_c422bb41d4a8d4b1cf1a0e49:r1",
+            "document_name": "rgb_doc_c422bb41d4a8d4b1cf1a0e49.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_c422bb41d4a8d4b1cf1a0e49:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c422bb41d4a8d4b1cf1a0e49.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bbef35f58fd5b412a96809d4",
+            "version_id": "rgb_doc_bbef35f58fd5b412a96809d4:r1",
+            "document_name": "rgb_doc_bbef35f58fd5b412a96809d4.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_bbef35f58fd5b412a96809d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bbef35f58fd5b412a96809d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8495eff3955c955daf82973",
+            "version_id": "rgb_doc_c8495eff3955c955daf82973:r1",
+            "document_name": "rgb_doc_c8495eff3955c955daf82973.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_c8495eff3955c955daf82973:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c8495eff3955c955daf82973.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3417c4824fc78589b54a00ff",
+            "version_id": "rgb_doc_3417c4824fc78589b54a00ff:r1",
+            "document_name": "rgb_doc_3417c4824fc78589b54a00ff.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_3417c4824fc78589b54a00ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3417c4824fc78589b54a00ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_844ae134f8679b92d3d8ccc4",
+            "version_id": "rgb_doc_844ae134f8679b92d3d8ccc4:r1",
+            "document_name": "rgb_doc_844ae134f8679b92d3d8ccc4.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_844ae134f8679b92d3d8ccc4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_844ae134f8679b92d3d8ccc4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cc3ca0c3de8100d939694e0d",
+            "version_id": "rgb_doc_cc3ca0c3de8100d939694e0d:r1",
+            "document_name": "rgb_doc_cc3ca0c3de8100d939694e0d.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_cc3ca0c3de8100d939694e0d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cc3ca0c3de8100d939694e0d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f1bff35614472d711669c201",
+            "version_id": "rgb_doc_f1bff35614472d711669c201:r1",
+            "document_name": "rgb_doc_f1bff35614472d711669c201.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_f1bff35614472d711669c201:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f1bff35614472d711669c201.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62e343a888871edbabf159d4",
+            "version_id": "rgb_doc_62e343a888871edbabf159d4:r1",
+            "document_name": "rgb_doc_62e343a888871edbabf159d4.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_62e343a888871edbabf159d4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62e343a888871edbabf159d4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6cc7ac64b90a952a45a58c36",
+            "version_id": "rgb_doc_6cc7ac64b90a952a45a58c36:r1",
+            "document_name": "rgb_doc_6cc7ac64b90a952a45a58c36.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_6cc7ac64b90a952a45a58c36:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6cc7ac64b90a952a45a58c36.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_31a91601232e0b3c1f754f65",
+            "version_id": "rgb_doc_31a91601232e0b3c1f754f65:r1",
+            "document_name": "rgb_doc_31a91601232e0b3c1f754f65.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_31a91601232e0b3c1f754f65:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_31a91601232e0b3c1f754f65.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a455800f0b1250c89f247bae",
+            "version_id": "rgb_doc_a455800f0b1250c89f247bae:r1",
+            "document_name": "rgb_doc_a455800f0b1250c89f247bae.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_a455800f0b1250c89f247bae:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a455800f0b1250c89f247bae.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a3c104ebeed926018b6ca837",
+            "version_id": "rgb_doc_a3c104ebeed926018b6ca837:r1",
+            "document_name": "rgb_doc_a3c104ebeed926018b6ca837.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_a3c104ebeed926018b6ca837:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a3c104ebeed926018b6ca837.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1c3438a49dcddd7d9414c18a",
+            "version_id": "rgb_doc_1c3438a49dcddd7d9414c18a:r1",
+            "document_name": "rgb_doc_1c3438a49dcddd7d9414c18a.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_1c3438a49dcddd7d9414c18a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1c3438a49dcddd7d9414c18a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_59b9d8cb0c3c0b50faa397e5",
+            "version_id": "rgb_doc_59b9d8cb0c3c0b50faa397e5:r1",
+            "document_name": "rgb_doc_59b9d8cb0c3c0b50faa397e5.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_59b9d8cb0c3c0b50faa397e5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_59b9d8cb0c3c0b50faa397e5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ab001d9a5aee47ab415a349f",
+            "version_id": "rgb_doc_ab001d9a5aee47ab415a349f:r1",
+            "document_name": "rgb_doc_ab001d9a5aee47ab415a349f.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_ab001d9a5aee47ab415a349f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ab001d9a5aee47ab415a349f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_35a0a818021f47578a7f8b1a",
+            "version_id": "rgb_doc_35a0a818021f47578a7f8b1a:r1",
+            "document_name": "rgb_doc_35a0a818021f47578a7f8b1a.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_35a0a818021f47578a7f8b1a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_35a0a818021f47578a7f8b1a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8a74641173c0a33c02763382",
+            "version_id": "rgb_doc_8a74641173c0a33c02763382:r1",
+            "document_name": "rgb_doc_8a74641173c0a33c02763382.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_8a74641173c0a33c02763382:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8a74641173c0a33c02763382.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_68f6f51370b15b270a38adec",
+            "version_id": "rgb_doc_68f6f51370b15b270a38adec:r1",
+            "document_name": "rgb_doc_68f6f51370b15b270a38adec.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_68f6f51370b15b270a38adec:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_68f6f51370b15b270a38adec.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5a8b2f0189a2b4f526a6a55e",
+            "version_id": "rgb_doc_5a8b2f0189a2b4f526a6a55e:r1",
+            "document_name": "rgb_doc_5a8b2f0189a2b4f526a6a55e.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_5a8b2f0189a2b4f526a6a55e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5a8b2f0189a2b4f526a6a55e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e5131e6fe09fd537699b85c7",
+            "version_id": "rgb_doc_e5131e6fe09fd537699b85c7:r1",
+            "document_name": "rgb_doc_e5131e6fe09fd537699b85c7.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_e5131e6fe09fd537699b85c7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e5131e6fe09fd537699b85c7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e30f4cb78bec7494d78fa222",
+            "version_id": "rgb_doc_e30f4cb78bec7494d78fa222:r1",
+            "document_name": "rgb_doc_e30f4cb78bec7494d78fa222.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_e30f4cb78bec7494d78fa222:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e30f4cb78bec7494d78fa222.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0d028396826f6b146584842a",
+            "version_id": "rgb_doc_0d028396826f6b146584842a:r1",
+            "document_name": "rgb_doc_0d028396826f6b146584842a.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_0d028396826f6b146584842a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0d028396826f6b146584842a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_259fb73b670c4ad7e249f4b7",
+            "version_id": "rgb_doc_259fb73b670c4ad7e249f4b7:r1",
+            "document_name": "rgb_doc_259fb73b670c4ad7e249f4b7.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_259fb73b670c4ad7e249f4b7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_259fb73b670c4ad7e249f4b7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 7.417708009597845,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 9.688874997664243,
+          "evidence_ms": 1.9627909932751209,
+          "fusion_ms": 0.9135419968515635,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 30.01899999799207,
+          "context_chars": 1716,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_1b9d64ac7718b6b0",
+          "ev_a4c4585e6766cfe7",
+          "ev_f4f004d596575e4f",
+          "ev_08137b4217482cc2",
+          "ev_d0e74eaae4cafa48",
+          "ev_e545f021e8d367c0",
+          "ev_cfcea2c6d9853419",
+          "ev_2ff00fa6d8cd6712",
+          "ev_6f58f4a33cb57ef7",
+          "ev_8e1bdd1db35c80eb"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_1b9d64ac7718b6b0",
+            "content": "Jan 17, 2022 ... 2022年澳网男单会迎来新冠军吗？在昨晚德约科维奇因为“签证风波”告别澳大利亚之后，2022年澳大利亚网球公开赛男单签表中只剩下纳达尔一位前冠军球员了 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5994b251830078755c17ce3a",
+            "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+            "document_name": "rgb_doc_5994b251830078755c17ce3a.txt",
+            "chunk_id": "rgb_doc_5994b251830078755c17ce3a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+              "block_ids": [
+                "rgb_doc_5994b251830078755c17ce3a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 54.900325775146484,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "5994b251830078755c17ce3a673906788032335e1dc4c0ace435428c7e28136e",
+            "scope_digest": "309da86c8b9869ff2c80a303c872652a859b555e84d5ed75e96e9ff3fd4eac01",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9e769e24e408cce31856",
+                "source_id": "S1",
+                "evidence_id": "ev_1b9d64ac7718b6b0",
+                "raw_text": "17",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 17, 2022 ... 2022年澳网男单会迎来新冠军吗？在昨晚德约科维奇因为“签证风波”告别澳大",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_cfd9064dd3ef9d061a9e",
+                "source_id": "S1",
+                "evidence_id": "ev_1b9d64ac7718b6b0",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 17, 2022 ... 2022年澳网男单会迎来新冠军吗？在昨晚德约科维奇因为“签证风波”告别澳大利亚之后，2",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_a4c4585e6766cfe7",
+            "content": "用微信扫码二维码 分享至好友和朋友圈 2022年澳网男单会迎来新冠军吗？  在昨晚德约科维奇因为“签证风波”告别澳大利亚之后，2022年澳大利亚网球公开赛男单签表中只剩下纳达尔一位前冠军球员了。 纳达尔唯一一次夺得澳大利亚网球公开赛男单冠军奖杯还是在遥远的2009年，此后他总计4次闯入过赛会男单决赛，但分别输给了德约科维奇（2012年、2019年）、费德勒（2017年），瓦林卡（2014年）。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_17d9cbe0df0e655839d77fec",
+            "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+            "document_name": "rgb_doc_17d9cbe0df0e655839d77fec.txt",
+            "chunk_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+              "block_ids": [
+                "rgb_doc_17d9cbe0df0e655839d77fec:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 198
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 54.78529739379883,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 198,
+            "content_hash": "17d9cbe0df0e655839d77fec55e6e21f0caf08ef7c60ae20a3d39dc7ea686d97",
+            "scope_digest": "2e77b9c2a9a2daf0f1716a1bfbd0bf265c4f24c6f88497684a9d175d7454756b",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_f4f004d596575e4f",
+            "content": "但由于澳大利亚严格的防疫政策，德约科维奇最终无法参加2022年澳大利亚网球公开赛并卫冕男单冠军头衔，无法向第21座大满贯冠军奖杯发起冲击，拉斐尔·纳达尔将会继续挑战这个记录并最终挑战成功，同时他也是本届赛事唯一一个曾捧起澳网冠军奖杯的男选手。大坂直美在第三轮中被淘汰。  2022年1月4日，卫冕冠军诺瓦克·乔科维奇宣布，他可以参加澳大利亚网球公开赛。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_913e09f6597b1abda7d48de8",
+            "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+            "document_name": "rgb_doc_913e09f6597b1abda7d48de8.txt",
+            "chunk_id": "rgb_doc_913e09f6597b1abda7d48de8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+              "block_ids": [
+                "rgb_doc_913e09f6597b1abda7d48de8:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 176
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 53.18693542480469,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 176,
+            "content_hash": "913e09f6597b1abda7d48de8aac04ca5867e2de99aaf70dcabbd0b8896f58996",
+            "scope_digest": "c8752f12beab5a742e2ab05aed61666fed3a954014d6abc4ee9cc835417b51d7",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_08137b4217482cc2",
+            "content": "纳达尔目前已经结束了他在2022年澳大利亚网球公开赛的单打首秀，在男单首轮的比赛中，他直落三盘以6-1/6-4/6-2的比分击败了美国选手吉隆，纳达尔要想再一次捧起澳大利亚网球公开赛男单冠军奖杯，他最大的隐患还是他目前的年龄以及不可预知的伤病。 此外，纳达尔与今年赛会另一大夺冠热门德国名将小兹维列夫被分在了同一个1/4区，两人之间只有一个人能够跻身今年澳大利亚网球公开赛男单四强，强者相遇，估计对双方的损耗应该都会不小。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c713bd8cc294e9172ee70165",
+            "version_id": "rgb_doc_c713bd8cc294e9172ee70165:r1",
+            "document_name": "rgb_doc_c713bd8cc294e9172ee70165.txt",
+            "chunk_id": "rgb_doc_c713bd8cc294e9172ee70165:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c713bd8cc294e9172ee70165:r1",
+              "block_ids": [
+                "rgb_doc_c713bd8cc294e9172ee70165:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 211
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 52.56026840209961,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 211,
+            "content_hash": "c713bd8cc294e9172ee70165d937d15489d749e40e06ff9d57b9c76b9256434a",
+            "scope_digest": "ad1599031b023371dcd60927c7a94c441e6233c932db720ea545df1b06eef514",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_727898c5f70bdb91680f",
+                "source_id": "S4",
+                "evidence_id": "ev_08137b4217482cc2",
+                "raw_text": "6",
+                "start": 52,
+                "end": 53,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "前已经结束了他在2022年澳大利亚网球公开赛的单打首秀，在男单首轮的比赛中，他直落三盘以6-1/6-4/6-2的比分击败了美国选手吉隆，纳达尔要想再一次捧起澳大利亚网球公开赛男单冠军奖杯，他最大",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_7331c33fe408bdbf799b",
+                "source_id": "S4",
+                "evidence_id": "ev_08137b4217482cc2",
+                "raw_text": "6",
+                "start": 56,
+                "end": 57,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "束了他在2022年澳大利亚网球公开赛的单打首秀，在男单首轮的比赛中，他直落三盘以6-1/6-4/6-2的比分击败了美国选手吉隆，纳达尔要想再一次捧起澳大利亚网球公开赛男单冠军奖杯，他最大的隐患还",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_d0e74eaae4cafa48",
+            "content": "诺瓦克·德约科维奇和大坂直美分别是男女单打卫冕冠军。但由于澳大利亚严格的防疫政策，德约科维奇最终无法参加2022年澳大利亚网球公开赛并卫冕男单冠军头衔，无法向 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4fcc057ddfec37991dd93623",
+            "version_id": "rgb_doc_4fcc057ddfec37991dd93623:r1",
+            "document_name": "rgb_doc_4fcc057ddfec37991dd93623.txt",
+            "chunk_id": "rgb_doc_4fcc057ddfec37991dd93623:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4fcc057ddfec37991dd93623:r1",
+              "block_ids": [
+                "rgb_doc_4fcc057ddfec37991dd93623:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 83
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 52.5343017578125,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 83,
+            "content_hash": "4fcc057ddfec37991dd93623a373efe6bd9fdfa888c835ea91afc154d16edfef",
+            "scope_digest": "4f2cb25e44767dab8ab11a66119bf938a70d05ddc2bc25c1c8001efd053b0e4f",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_e545f021e8d367c0",
+            "content": "2022年澳大利亚网球公开赛（英语：2022 Australian Open）是一项在室外硬地球场进行的网球大满贯赛事，于2022年1月17日至30日期间在澳大利亚墨尔本公园举行。这是第110届澳大利亚网球公开赛，也是公开赛年代以来第54届，2022年的第一个大满贯赛事。澳大利亚网球公开赛的赛事类型包括单打、双打和混合双打，还包括青少年赛事和轮椅网球项目。单打比赛有128名球员参加（包括16名资格赛选手）。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5065fb6307e2e9cb3242bde5",
+            "version_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1",
+            "document_name": "rgb_doc_5065fb6307e2e9cb3242bde5.txt",
+            "chunk_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1",
+              "block_ids": [
+                "rgb_doc_5065fb6307e2e9cb3242bde5:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 205
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 52.099063873291016,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 205,
+            "content_hash": "5065fb6307e2e9cb3242bde5586b84f98d443edfe60a0979123a481280802f83",
+            "scope_digest": "532cf735f10a65e28b4a5385b20b315f3e6129ab90822c83aed2a686bc281a9b",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_df372ff5c9f3fb7805fb",
+                "source_id": "S6",
+                "evidence_id": "ev_e545f021e8d367c0",
+                "raw_text": "2022",
+                "start": 18,
+                "end": 22,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "2022年澳大利亚网球公开赛（英语：2022 Australian Open）是一项在室外硬地球场进行的网球大满贯赛事，于2022年1月17",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_cfcea2c6d9853419",
+            "content": "2022年澳大利亚网球公开赛女子单打比赛是2022年澳大利亚网球公开赛的其中一个比赛项目，于1月17日至29日举行。  大坂直美是上届冠军，然而她在第三轮负于阿曼达·阿尼西莫娃，无缘卫冕[1]。  阿什莉·巴蒂在决赛中直落两盘击败丹妮尔·柯林斯，获得该届比赛冠军，成为1978年以来首位获得澳网女单冠军的主办国球员，这也是巴蒂第三次获得大满贯女单冠军。[2]这是巴蒂于2022年3月宣布再次结束网球生涯前参加的最后一场大满贯比赛[3]。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_26f6fa3941c4db8eb69b0812",
+            "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+            "document_name": "rgb_doc_26f6fa3941c4db8eb69b0812.txt",
+            "chunk_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+              "block_ids": [
+                "rgb_doc_26f6fa3941c4db8eb69b0812:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 218
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 50.6666259765625,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 218,
+            "content_hash": "26f6fa3941c4db8eb69b08123a1d1d5536c717247c91835a2316a52eafc96a54",
+            "scope_digest": "831caf1d639768fc36049da586ab6dea1a39389618acf4a408c07510e2dcbf33",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_cdc977b373b82adb824b",
+                "source_id": "S7",
+                "evidence_id": "ev_cfcea2c6d9853419",
+                "raw_text": "1",
+                "start": 94,
+                "end": 95,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "1月17日至29日举行。  大坂直美是上届冠军，然而她在第三轮负于阿曼达·阿尼西莫娃，无缘卫冕[1]。  阿什莉·巴蒂在决赛中直落两盘击败丹妮尔·柯林斯，获得该届比赛冠军，成为1978年以来首位",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_67ae1de8bca2be32138e",
+                "source_id": "S7",
+                "evidence_id": "ev_cfcea2c6d9853419",
+                "raw_text": "2",
+                "start": 177,
+                "end": 178,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "冠军，成为1978年以来首位获得澳网女单冠军的主办国球员，这也是巴蒂第三次获得大满贯女单冠军。[2]这是巴蒂于2022年3月宣布再次结束网球生涯前参加的最后一场大满贯比赛[3]。",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ff58dcdf898a9fbc206b",
+                "source_id": "S7",
+                "evidence_id": "ev_cfcea2c6d9853419",
+                "raw_text": "3",
+                "start": 215,
+                "end": 216,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "得大满贯女单冠军。[2]这是巴蒂于2022年3月宣布再次结束网球生涯前参加的最后一场大满贯比赛[3]。",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_2ff00fa6d8cd6712",
+            "content": "用微信扫码二维码 分享至好友和朋友圈 2022年澳网女单半决赛H2H：两位大满贯赛冠军占优！  2022年澳大利亚网球公开赛于今天结束了最后两场女单八强赛的较量，最终美国选手科林斯与波兰新星希维翁泰克脱颖而出，她们与早前晋级的澳大利亚姑娘巴蒂和美国姑娘凯斯构成了今年澳大利亚网球公开赛女单半决赛名单。 巴蒂和凯斯将争夺女单上半区的一个女单决赛名额，这场比赛将是两人职业生涯的第4次交手，在前3次交手记录中，巴蒂暂时2胜1负领先于凯斯。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_acd36352d1ae638e96c593ce",
+            "version_id": "rgb_doc_acd36352d1ae638e96c593ce:r1",
+            "document_name": "rgb_doc_acd36352d1ae638e96c593ce.txt",
+            "chunk_id": "rgb_doc_acd36352d1ae638e96c593ce:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_acd36352d1ae638e96c593ce:r1",
+              "block_ids": [
+                "rgb_doc_acd36352d1ae638e96c593ce:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 217
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 50.481773376464844,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 217,
+            "content_hash": "acd36352d1ae638e96c593cef60cc61b09e528d1a26ba63c6a825d7270cafc9b",
+            "scope_digest": "3bb22d131598e900b8c1280770d324fd5c3ee9a6309a11b2aea0f973bb473221",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_6f58f4a33cb57ef7",
+            "content": "Jan 26, 2022 ... 2022年澳网女单半决赛H2H：两位大满贯赛冠军占优！2022年澳大利亚网球公开赛于今天结束了最后两场女单八强赛的较量，最终美国选手科林斯与波兰新星希 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_28ece603ce771a5ef9ab6f99",
+            "version_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1",
+            "document_name": "rgb_doc_28ece603ce771a5ef9ab6f99.txt",
+            "chunk_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1",
+              "block_ids": [
+                "rgb_doc_28ece603ce771a5ef9ab6f99:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 50.00368118286133,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "28ece603ce771a5ef9ab6f9938370939154df12e9054f008fb6ad14d4900169d",
+            "scope_digest": "bb5af329a256394bd52bb54c388e4ac57e6cbe72a429e09dcd51981da5ce6522",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_1c79c1804b3e04eebd9f",
+                "source_id": "S9",
+                "evidence_id": "ev_6f58f4a33cb57ef7",
+                "raw_text": "26",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 26, 2022 ... 2022年澳网女单半决赛H2H：两位大满贯赛冠军占优！2022年澳大利亚网",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_c3f15b369119dd48472a",
+                "source_id": "S9",
+                "evidence_id": "ev_6f58f4a33cb57ef7",
+                "raw_text": "2022",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 26, 2022 ... 2022年澳网女单半决赛H2H：两位大满贯赛冠军占优！2022年澳大利亚网球公开赛于今",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_8e1bdd1db35c80eb",
+            "content": "2019年，巴蒂夺得法网女单冠军和当年度深圳年终总决赛的冠军，并登顶世界第一；2020年，巴蒂夺得温布尔登网球公开赛女单冠军。 加上2022年澳网女单冠军，巴蒂成为现役少有的、同时取得红土、硬地和草地三种场地大满贯冠军的女子球员。目前，她距离自己的全满贯目标，仅差一个美国网球公开赛女单冠军。 在男子双打赛场方面，来自澳大利亚的本土组合科基纳吉斯和克耶高斯夺得了男子双打冠军奖杯，成为澳网近25年以来首对全澳大利亚人阵容的男双冠军。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62dfa43a5286512295e0baf9",
+            "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+            "document_name": "rgb_doc_62dfa43a5286512295e0baf9.txt",
+            "chunk_id": "rgb_doc_62dfa43a5286512295e0baf9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+              "block_ids": [
+                "rgb_doc_62dfa43a5286512295e0baf9:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 216
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 49.841529846191406,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 216,
+            "content_hash": "62dfa43a5286512295e0baf90a5bb39af81be1bb9c4164d711cbc87e5d810c8a",
+            "scope_digest": "88488c5dd669542ff4cca4631d3ae4f8f466f561083367be482df80c6da27d3b",
+            "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [],
+    "evidence": {
+      "ev_1b9d64ac7718b6b0": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_5994b251830078755c17ce3a",
+        "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+        "document_name": "rgb_doc_5994b251830078755c17ce3a.txt",
+        "chunk_id": "rgb_doc_5994b251830078755c17ce3a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_5994b251830078755c17ce3a:r1",
+          "block_ids": [
+            "rgb_doc_5994b251830078755c17ce3a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 54.900325775146484,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "5994b251830078755c17ce3a673906788032335e1dc4c0ace435428c7e28136e",
+        "scope_digest": "309da86c8b9869ff2c80a303c872652a859b555e84d5ed75e96e9ff3fd4eac01",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_a4c4585e6766cfe7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_17d9cbe0df0e655839d77fec",
+        "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+        "document_name": "rgb_doc_17d9cbe0df0e655839d77fec.txt",
+        "chunk_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_17d9cbe0df0e655839d77fec:r1",
+          "block_ids": [
+            "rgb_doc_17d9cbe0df0e655839d77fec:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 198
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 54.78529739379883,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 198,
+        "content_hash": "17d9cbe0df0e655839d77fec55e6e21f0caf08ef7c60ae20a3d39dc7ea686d97",
+        "scope_digest": "2e77b9c2a9a2daf0f1716a1bfbd0bf265c4f24c6f88497684a9d175d7454756b",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_f4f004d596575e4f": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_913e09f6597b1abda7d48de8",
+        "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+        "document_name": "rgb_doc_913e09f6597b1abda7d48de8.txt",
+        "chunk_id": "rgb_doc_913e09f6597b1abda7d48de8:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_913e09f6597b1abda7d48de8:r1",
+          "block_ids": [
+            "rgb_doc_913e09f6597b1abda7d48de8:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 176
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 53.18693542480469,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 176,
+        "content_hash": "913e09f6597b1abda7d48de8aac04ca5867e2de99aaf70dcabbd0b8896f58996",
+        "scope_digest": "c8752f12beab5a742e2ab05aed61666fed3a954014d6abc4ee9cc835417b51d7",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_08137b4217482cc2": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_c713bd8cc294e9172ee70165",
+        "version_id": "rgb_doc_c713bd8cc294e9172ee70165:r1",
+        "document_name": "rgb_doc_c713bd8cc294e9172ee70165.txt",
+        "chunk_id": "rgb_doc_c713bd8cc294e9172ee70165:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_c713bd8cc294e9172ee70165:r1",
+          "block_ids": [
+            "rgb_doc_c713bd8cc294e9172ee70165:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 211
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 52.56026840209961,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 211,
+        "content_hash": "c713bd8cc294e9172ee70165d937d15489d749e40e06ff9d57b9c76b9256434a",
+        "scope_digest": "ad1599031b023371dcd60927c7a94c441e6233c932db720ea545df1b06eef514",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_d0e74eaae4cafa48": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4fcc057ddfec37991dd93623",
+        "version_id": "rgb_doc_4fcc057ddfec37991dd93623:r1",
+        "document_name": "rgb_doc_4fcc057ddfec37991dd93623.txt",
+        "chunk_id": "rgb_doc_4fcc057ddfec37991dd93623:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4fcc057ddfec37991dd93623:r1",
+          "block_ids": [
+            "rgb_doc_4fcc057ddfec37991dd93623:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 83
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 52.5343017578125,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 83,
+        "content_hash": "4fcc057ddfec37991dd93623a373efe6bd9fdfa888c835ea91afc154d16edfef",
+        "scope_digest": "4f2cb25e44767dab8ab11a66119bf938a70d05ddc2bc25c1c8001efd053b0e4f",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_e545f021e8d367c0": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_5065fb6307e2e9cb3242bde5",
+        "version_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1",
+        "document_name": "rgb_doc_5065fb6307e2e9cb3242bde5.txt",
+        "chunk_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_5065fb6307e2e9cb3242bde5:r1",
+          "block_ids": [
+            "rgb_doc_5065fb6307e2e9cb3242bde5:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 205
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 52.099063873291016,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 205,
+        "content_hash": "5065fb6307e2e9cb3242bde5586b84f98d443edfe60a0979123a481280802f83",
+        "scope_digest": "532cf735f10a65e28b4a5385b20b315f3e6129ab90822c83aed2a686bc281a9b",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_cfcea2c6d9853419": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_26f6fa3941c4db8eb69b0812",
+        "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+        "document_name": "rgb_doc_26f6fa3941c4db8eb69b0812.txt",
+        "chunk_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_26f6fa3941c4db8eb69b0812:r1",
+          "block_ids": [
+            "rgb_doc_26f6fa3941c4db8eb69b0812:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 218
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 50.6666259765625,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 218,
+        "content_hash": "26f6fa3941c4db8eb69b08123a1d1d5536c717247c91835a2316a52eafc96a54",
+        "scope_digest": "831caf1d639768fc36049da586ab6dea1a39389618acf4a408c07510e2dcbf33",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_2ff00fa6d8cd6712": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_acd36352d1ae638e96c593ce",
+        "version_id": "rgb_doc_acd36352d1ae638e96c593ce:r1",
+        "document_name": "rgb_doc_acd36352d1ae638e96c593ce.txt",
+        "chunk_id": "rgb_doc_acd36352d1ae638e96c593ce:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_acd36352d1ae638e96c593ce:r1",
+          "block_ids": [
+            "rgb_doc_acd36352d1ae638e96c593ce:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 217
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 50.481773376464844,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 217,
+        "content_hash": "acd36352d1ae638e96c593cef60cc61b09e528d1a26ba63c6a825d7270cafc9b",
+        "scope_digest": "3bb22d131598e900b8c1280770d324fd5c3ee9a6309a11b2aea0f973bb473221",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_6f58f4a33cb57ef7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_28ece603ce771a5ef9ab6f99",
+        "version_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1",
+        "document_name": "rgb_doc_28ece603ce771a5ef9ab6f99.txt",
+        "chunk_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_28ece603ce771a5ef9ab6f99:r1",
+          "block_ids": [
+            "rgb_doc_28ece603ce771a5ef9ab6f99:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 50.00368118286133,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "28ece603ce771a5ef9ab6f9938370939154df12e9054f008fb6ad14d4900169d",
+        "scope_digest": "bb5af329a256394bd52bb54c388e4ac57e6cbe72a429e09dcd51981da5ce6522",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_8e1bdd1db35c80eb": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_62dfa43a5286512295e0baf9",
+        "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+        "document_name": "rgb_doc_62dfa43a5286512295e0baf9.txt",
+        "chunk_id": "rgb_doc_62dfa43a5286512295e0baf9:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_62dfa43a5286512295e0baf9:r1",
+          "block_ids": [
+            "rgb_doc_62dfa43a5286512295e0baf9:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 216
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 49.841529846191406,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 216,
+        "content_hash": "62dfa43a5286512295e0baf90a5bb39af81be1bb9c4164d711cbc87e5d810c8a",
+        "scope_digest": "88488c5dd669542ff4cca4631d3ae4f8f466f561083367be482df80c6da27d3b",
+        "trace_id": "c342ac958fbb4489a7e3fb7172df8c48",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_1b9d64ac7718b6b0",
+      "S2": "ev_a4c4585e6766cfe7",
+      "S3": "ev_f4f004d596575e4f",
+      "S4": "ev_08137b4217482cc2",
+      "S5": "ev_d0e74eaae4cafa48",
+      "S6": "ev_e545f021e8d367c0",
+      "S7": "ev_cfcea2c6d9853419",
+      "S8": "ev_2ff00fa6d8cd6712",
+      "S9": "ev_6f58f4a33cb57ef7",
+      "S10": "ev_8e1bdd1db35c80eb"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": "model_unavailable"
+  },
+  "generation_status": "completed"
+}

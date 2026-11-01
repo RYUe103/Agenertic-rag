@@ -1,0 +1,3748 @@
+{
+  "question_id": "rgb_zh_0041",
+  "result": {
+    "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+    "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:1",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:2",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:3",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "context_chars": 1187,
+        "prompt_tokens": 8439,
+        "completion_tokens": 51,
+        "total_tokens": 8490,
+        "context_compaction_count": 0,
+        "context_chars_before": 1187,
+        "context_chars_after": 1187,
+        "estimated_input_tokens": 12116,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1470,
+        "remaining_run_tokens": 111510,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8439,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3677
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:4",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1187
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:5",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "tool_call_id": "call_5841dc59bcf645f2856c39",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:6",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "tool_call_id": "call_5841dc59bcf645f2856c39",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:7",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_5841dc59bcf645f2856c39",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 9,
+        "output_chars_before": 98581,
+        "output_chars_after": 14542,
+        "removed_chars": 84039,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:8",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:9",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:10",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "context_chars": 15729,
+        "prompt_tokens": 15178,
+        "completion_tokens": 34,
+        "total_tokens": 15212,
+        "context_compaction_count": 0,
+        "context_chars_before": 15729,
+        "context_chars_after": 15729,
+        "estimated_input_tokens": 20436,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 7599,
+        "evidence_tokens": 1479,
+        "history_tokens": 2191,
+        "remaining_run_tokens": 96298,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15178,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5258
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:11",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "model_visible_evidence_count": 9,
+        "context_chars": 15729
+      },
+      {
+        "type": "answer_started",
+        "sequence": 12,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:12",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 13,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:13",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "delta": "中国2019年人口出生率为10.48‰ [1] [2] [3]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 14,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:14",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5",
+        "final_citation_count": 3,
+        "citation_validation_reason": [],
+        "repair_attempted": false,
+        "repair_success": false
+      },
+      {
+        "type": "completed",
+        "sequence": 15,
+        "event_id": "run_b7166439ef154fd89df6d9dfa74cf2af:2cad46f597b241289672c1e332e1b8c6:15",
+        "run_id": "run_b7166439ef154fd89df6d9dfa74cf2af",
+        "thread_id": "thread_490a094a1a0e4ed7bf985d34f073eef5"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 2,
+    "usage": {
+      "prompt_tokens": 23617,
+      "completion_tokens": 85,
+      "total_tokens": 23702
+    },
+    "elapsed_seconds": 4.233421957993414,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 9,
+      "output_truncated": true,
+      "context_chars": 15729,
+      "prompt_tokens": 23617,
+      "completion_tokens": 85,
+      "total_tokens": 23702,
+      "context_compaction_count": 0,
+      "context_chars_before": 15729,
+      "context_chars_after": 15729,
+      "estimated_input_tokens": 20436,
+      "tool_schema_tokens": 10646,
+      "observation_tokens": 7599,
+      "evidence_tokens": 1479,
+      "history_tokens": 2191,
+      "remaining_run_tokens": 96298,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 15178,
+      "usage_source": "provider",
+      "estimation_error_tokens": -5258,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_5841dc59bcf645f2856c39",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 9,
+          "output_chars_before": 98581,
+          "output_chars_after": 14542,
+          "removed_chars": 84039,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "final_citation_count": 3,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "中国2019年人口出生率为10.48‰ [1] [2] [3]",
+      "citations": {
+        "ev_b173920011bd966e": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_254b45152e9203d587d66b20",
+          "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+          "document_name": "rgb_doc_254b45152e9203d587d66b20.txt",
+          "chunk_id": "rgb_doc_254b45152e9203d587d66b20:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 1,
+          "source_score": null,
+          "fused_score": 0.01639344262295082,
+          "rerank_score": null,
+          "content": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为10.48‰，为1949年有记录以来最低。中国国家统计局局长宁吉喆表示，人口出生率还是 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+            "block_ids": [
+              "rgb_doc_254b45152e9203d587d66b20:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 100
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 1,
+              "score": 17.698354721069336,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_5e2be62027019f23": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_995dcc51a90dfafb2c6fc976",
+          "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+          "document_name": "rgb_doc_995dcc51a90dfafb2c6fc976.txt",
+          "chunk_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为10.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+            "block_ids": [
+              "rgb_doc_995dcc51a90dfafb2c6fc976:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 90
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 15.760516166687012,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_27100c350d2bc305": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_084f18208bc0645881b33d8a",
+          "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+          "document_name": "rgb_doc_084f18208bc0645881b33d8a.txt",
+          "chunk_id": "rgb_doc_084f18208bc0645881b33d8a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 8,
+          "source_score": null,
+          "fused_score": 0.014705882352941176,
+          "rerank_score": null,
+          "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为10.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到14.3亿，人口 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+            "block_ids": [
+              "rgb_doc_084f18208bc0645881b33d8a:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 98
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 8,
+              "score": 15.362558364868164,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "中国2019年人口出生率为10.48‰",
+          "source_ids": [
+            "S1",
+            "S7",
+            "S8"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S1",
+          "evidence_id": "ev_b173920011bd966e"
+        },
+        {
+          "number": 2,
+          "source_id": "S7",
+          "evidence_id": "ev_5e2be62027019f23"
+        },
+        {
+          "number": 3,
+          "source_id": "S8",
+          "evidence_id": "ev_27100c350d2bc305"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": false,
+      "repair_success": false,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_5841dc59bcf645f2856c39",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "中国 2019年 出生率",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_254b45152e9203d587d66b20",
+            "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+            "document_name": "rgb_doc_254b45152e9203d587d66b20.txt",
+            "chunk_id": "rgb_doc_254b45152e9203d587d66b20:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 17.698354721069336,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为10.48‰，为1949年有记录以来最低。中国国家统计局局长宁吉喆表示，人口出生率还是 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+              "block_ids": [
+                "rgb_doc_254b45152e9203d587d66b20:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 100
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 17.698354721069336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c1e3d00b708a42717b4b3e8e",
+            "version_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1",
+            "document_name": "rgb_doc_c1e3d00b708a42717b4b3e8e.txt",
+            "chunk_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 17.698354721069336,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为5.48‰，为1949年有记录以来最低。中国国家统计局局长宁吉喆表示，人口出生率还是 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1",
+              "block_ids": [
+                "rgb_doc_c1e3d00b708a42717b4b3e8e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 17.698354721069336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7afd14b1801651c3d3592c08",
+            "version_id": "rgb_doc_7afd14b1801651c3d3592c08:r1",
+            "document_name": "rgb_doc_7afd14b1801651c3d3592c08.txt",
+            "chunk_id": "rgb_doc_7afd14b1801651c3d3592c08:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 17.46792221069336,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "Jan 20, 2019 ... 路透北京1月21日- 尽管中国放开生育二胎政策，却未能遏止人口出生率下降的趋势。根据中国国家统计局周一发布2018年数据显示，2018年人口出生率大幅降 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7afd14b1801651c3d3592c08:r1",
+              "block_ids": [
+                "rgb_doc_7afd14b1801651c3d3592c08:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 17.46792221069336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6a6a5bb74547b89798d7a267",
+            "version_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1",
+            "document_name": "rgb_doc_6a6a5bb74547b89798d7a267.txt",
+            "chunk_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 16.429094314575195,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "Apr 28, 2020 ... 2019年中国人口出生率创新低年轻人不愿生娃了吗---小冉生孩子之前的“恐育心理”在当下年轻人中并不少见。国家统计局数据显示，2019年，我国全年出生 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1",
+              "block_ids": [
+                "rgb_doc_6a6a5bb74547b89798d7a267:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 16.429094314575195,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_12eeb7ecc2a27390eb812a04",
+            "version_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1",
+            "document_name": "rgb_doc_12eeb7ecc2a27390eb812a04.txt",
+            "chunk_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 16.25472640991211,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为5.94‰，出生人口较上年减少约200万，为连续第二年下降。同时，2018年人口出生数也创下了 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1",
+              "block_ids": [
+                "rgb_doc_12eeb7ecc2a27390eb812a04:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 101
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 16.25472640991211,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e91a6643e8d49e7a6ae4281",
+            "version_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1",
+            "document_name": "rgb_doc_9e91a6643e8d49e7a6ae4281.txt",
+            "chunk_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 16.25472640991211,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为10.94‰，出生人口较上年减少约200万，为连续第二年下降。同时，2018年人口出生数也创下了 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1",
+              "block_ids": [
+                "rgb_doc_9e91a6643e8d49e7a6ae4281:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 102
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 16.25472640991211,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_995dcc51a90dfafb2c6fc976",
+            "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+            "document_name": "rgb_doc_995dcc51a90dfafb2c6fc976.txt",
+            "chunk_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 15.760516166687012,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为10.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+              "block_ids": [
+                "rgb_doc_995dcc51a90dfafb2c6fc976:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 90
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 15.760516166687012,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_084f18208bc0645881b33d8a",
+            "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+            "document_name": "rgb_doc_084f18208bc0645881b33d8a.txt",
+            "chunk_id": "rgb_doc_084f18208bc0645881b33d8a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 15.362558364868164,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为10.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到14.3亿，人口 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+              "block_ids": [
+                "rgb_doc_084f18208bc0645881b33d8a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 15.362558364868164,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_eb505d68fb059cb5fff2dd1d",
+            "version_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1",
+            "document_name": "rgb_doc_eb505d68fb059cb5fff2dd1d.txt",
+            "chunk_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 15.362558364868164,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为5.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到14.3亿，人口 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1",
+              "block_ids": [
+                "rgb_doc_eb505d68fb059cb5fff2dd1d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 15.362558364868164,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7374d36de41b8dd1bffcd787",
+            "version_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1",
+            "document_name": "rgb_doc_7374d36de41b8dd1bffcd787.txt",
+            "chunk_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 15.233559608459473,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "Jan 21, 2019 ... 据财新数据，国家统计局周一公布数据显示，2018年末中国大陆总人口139538万人，比上年末增加530万人。全年出生人口1523万人，人口出生率由上一年 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1",
+              "block_ids": [
+                "rgb_doc_7374d36de41b8dd1bffcd787:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 15.233559608459473,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_254b45152e9203d587d66b20",
+            "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+            "document_name": "rgb_doc_254b45152e9203d587d66b20.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_254b45152e9203d587d66b20:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_254b45152e9203d587d66b20.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c1e3d00b708a42717b4b3e8e",
+            "version_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1",
+            "document_name": "rgb_doc_c1e3d00b708a42717b4b3e8e.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_c1e3d00b708a42717b4b3e8e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c1e3d00b708a42717b4b3e8e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7afd14b1801651c3d3592c08",
+            "version_id": "rgb_doc_7afd14b1801651c3d3592c08:r1",
+            "document_name": "rgb_doc_7afd14b1801651c3d3592c08.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_7afd14b1801651c3d3592c08:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7afd14b1801651c3d3592c08.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6a6a5bb74547b89798d7a267",
+            "version_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1",
+            "document_name": "rgb_doc_6a6a5bb74547b89798d7a267.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_6a6a5bb74547b89798d7a267:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6a6a5bb74547b89798d7a267.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_12eeb7ecc2a27390eb812a04",
+            "version_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1",
+            "document_name": "rgb_doc_12eeb7ecc2a27390eb812a04.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_12eeb7ecc2a27390eb812a04:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_12eeb7ecc2a27390eb812a04.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e91a6643e8d49e7a6ae4281",
+            "version_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1",
+            "document_name": "rgb_doc_9e91a6643e8d49e7a6ae4281.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_9e91a6643e8d49e7a6ae4281:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9e91a6643e8d49e7a6ae4281.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_995dcc51a90dfafb2c6fc976",
+            "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+            "document_name": "rgb_doc_995dcc51a90dfafb2c6fc976.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_995dcc51a90dfafb2c6fc976:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_995dcc51a90dfafb2c6fc976.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_084f18208bc0645881b33d8a",
+            "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+            "document_name": "rgb_doc_084f18208bc0645881b33d8a.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_084f18208bc0645881b33d8a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_084f18208bc0645881b33d8a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_eb505d68fb059cb5fff2dd1d",
+            "version_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1",
+            "document_name": "rgb_doc_eb505d68fb059cb5fff2dd1d.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_eb505d68fb059cb5fff2dd1d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_eb505d68fb059cb5fff2dd1d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7374d36de41b8dd1bffcd787",
+            "version_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1",
+            "document_name": "rgb_doc_7374d36de41b8dd1bffcd787.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_7374d36de41b8dd1bffcd787:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7374d36de41b8dd1bffcd787.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_965caddef25ef15cb95700b8",
+            "version_id": "rgb_doc_965caddef25ef15cb95700b8:r1",
+            "document_name": "rgb_doc_965caddef25ef15cb95700b8.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_965caddef25ef15cb95700b8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_965caddef25ef15cb95700b8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7ffb990716f9280f3e934ffe",
+            "version_id": "rgb_doc_7ffb990716f9280f3e934ffe:r1",
+            "document_name": "rgb_doc_7ffb990716f9280f3e934ffe.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_7ffb990716f9280f3e934ffe:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7ffb990716f9280f3e934ffe.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_533b8e252631593112419e6a",
+            "version_id": "rgb_doc_533b8e252631593112419e6a:r1",
+            "document_name": "rgb_doc_533b8e252631593112419e6a.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_533b8e252631593112419e6a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_533b8e252631593112419e6a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9cfee50b3792109de34de6ce",
+            "version_id": "rgb_doc_9cfee50b3792109de34de6ce:r1",
+            "document_name": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_9cfee50b3792109de34de6ce:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9cfee50b3792109de34de6ce.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2324acfeaf5965dc4b5ab23c",
+            "version_id": "rgb_doc_2324acfeaf5965dc4b5ab23c:r1",
+            "document_name": "rgb_doc_2324acfeaf5965dc4b5ab23c.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_2324acfeaf5965dc4b5ab23c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2324acfeaf5965dc4b5ab23c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6075ff26db99fabd106452df",
+            "version_id": "rgb_doc_6075ff26db99fabd106452df:r1",
+            "document_name": "rgb_doc_6075ff26db99fabd106452df.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_6075ff26db99fabd106452df:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6075ff26db99fabd106452df.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2219260464a1817c052ddd9f",
+            "version_id": "rgb_doc_2219260464a1817c052ddd9f:r1",
+            "document_name": "rgb_doc_2219260464a1817c052ddd9f.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_2219260464a1817c052ddd9f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2219260464a1817c052ddd9f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3e31cbfca347d1a2bd2f5f0e",
+            "version_id": "rgb_doc_3e31cbfca347d1a2bd2f5f0e:r1",
+            "document_name": "rgb_doc_3e31cbfca347d1a2bd2f5f0e.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_3e31cbfca347d1a2bd2f5f0e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3e31cbfca347d1a2bd2f5f0e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4d0f76b5916c33302305c075",
+            "version_id": "rgb_doc_4d0f76b5916c33302305c075:r1",
+            "document_name": "rgb_doc_4d0f76b5916c33302305c075.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_4d0f76b5916c33302305c075:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4d0f76b5916c33302305c075.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c3269f616dc65dfd5eb55ee9",
+            "version_id": "rgb_doc_c3269f616dc65dfd5eb55ee9:r1",
+            "document_name": "rgb_doc_c3269f616dc65dfd5eb55ee9.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_c3269f616dc65dfd5eb55ee9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c3269f616dc65dfd5eb55ee9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e051c33bf420787eabf33fe9",
+            "version_id": "rgb_doc_e051c33bf420787eabf33fe9:r1",
+            "document_name": "rgb_doc_e051c33bf420787eabf33fe9.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_e051c33bf420787eabf33fe9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e051c33bf420787eabf33fe9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7509cbcc36fe01584ed55f6c",
+            "version_id": "rgb_doc_7509cbcc36fe01584ed55f6c:r1",
+            "document_name": "rgb_doc_7509cbcc36fe01584ed55f6c.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_7509cbcc36fe01584ed55f6c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7509cbcc36fe01584ed55f6c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3c14d116f748a4893eaebec5",
+            "version_id": "rgb_doc_3c14d116f748a4893eaebec5:r1",
+            "document_name": "rgb_doc_3c14d116f748a4893eaebec5.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_3c14d116f748a4893eaebec5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3c14d116f748a4893eaebec5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0f9ed34eb0d78c8ef4d8e59b",
+            "version_id": "rgb_doc_0f9ed34eb0d78c8ef4d8e59b:r1",
+            "document_name": "rgb_doc_0f9ed34eb0d78c8ef4d8e59b.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_0f9ed34eb0d78c8ef4d8e59b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0f9ed34eb0d78c8ef4d8e59b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_35451f21ef93461423651e86",
+            "version_id": "rgb_doc_35451f21ef93461423651e86:r1",
+            "document_name": "rgb_doc_35451f21ef93461423651e86.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_35451f21ef93461423651e86:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_35451f21ef93461423651e86.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dd36f790f45e3033187af454",
+            "version_id": "rgb_doc_dd36f790f45e3033187af454:r1",
+            "document_name": "rgb_doc_dd36f790f45e3033187af454.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_dd36f790f45e3033187af454:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dd36f790f45e3033187af454.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ca7c6f04ac214050a2871b57",
+            "version_id": "rgb_doc_ca7c6f04ac214050a2871b57:r1",
+            "document_name": "rgb_doc_ca7c6f04ac214050a2871b57.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_ca7c6f04ac214050a2871b57:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ca7c6f04ac214050a2871b57.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_367808c5ac996bbefd4b19c8",
+            "version_id": "rgb_doc_367808c5ac996bbefd4b19c8:r1",
+            "document_name": "rgb_doc_367808c5ac996bbefd4b19c8.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_367808c5ac996bbefd4b19c8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_367808c5ac996bbefd4b19c8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_adc32aa55967eeab1aa8f0c0",
+            "version_id": "rgb_doc_adc32aa55967eeab1aa8f0c0:r1",
+            "document_name": "rgb_doc_adc32aa55967eeab1aa8f0c0.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_adc32aa55967eeab1aa8f0c0:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_adc32aa55967eeab1aa8f0c0.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f188048a3c18149034666dd",
+            "version_id": "rgb_doc_2f188048a3c18149034666dd:r1",
+            "document_name": "rgb_doc_2f188048a3c18149034666dd.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_2f188048a3c18149034666dd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f188048a3c18149034666dd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f1b47bcc11191aa4afea9971",
+            "version_id": "rgb_doc_f1b47bcc11191aa4afea9971:r1",
+            "document_name": "rgb_doc_f1b47bcc11191aa4afea9971.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_f1b47bcc11191aa4afea9971:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f1b47bcc11191aa4afea9971.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_40e8de130b63429ef44fc724",
+            "version_id": "rgb_doc_40e8de130b63429ef44fc724:r1",
+            "document_name": "rgb_doc_40e8de130b63429ef44fc724.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_40e8de130b63429ef44fc724:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_40e8de130b63429ef44fc724.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a79ca1663d948f9923cda6d9",
+            "version_id": "rgb_doc_a79ca1663d948f9923cda6d9:r1",
+            "document_name": "rgb_doc_a79ca1663d948f9923cda6d9.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_a79ca1663d948f9923cda6d9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a79ca1663d948f9923cda6d9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_19daf54bc00d9fdd27749748",
+            "version_id": "rgb_doc_19daf54bc00d9fdd27749748:r1",
+            "document_name": "rgb_doc_19daf54bc00d9fdd27749748.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_19daf54bc00d9fdd27749748:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_19daf54bc00d9fdd27749748.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2cf58628ef745cc391c3f98e",
+            "version_id": "rgb_doc_2cf58628ef745cc391c3f98e:r1",
+            "document_name": "rgb_doc_2cf58628ef745cc391c3f98e.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_2cf58628ef745cc391c3f98e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2cf58628ef745cc391c3f98e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f4039e68628fec40b3975387",
+            "version_id": "rgb_doc_f4039e68628fec40b3975387:r1",
+            "document_name": "rgb_doc_f4039e68628fec40b3975387.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_f4039e68628fec40b3975387:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f4039e68628fec40b3975387.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6e04a6311f302ae6b8790edf",
+            "version_id": "rgb_doc_6e04a6311f302ae6b8790edf:r1",
+            "document_name": "rgb_doc_6e04a6311f302ae6b8790edf.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_6e04a6311f302ae6b8790edf:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6e04a6311f302ae6b8790edf.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5f2489820ff57882da88b164",
+            "version_id": "rgb_doc_5f2489820ff57882da88b164:r1",
+            "document_name": "rgb_doc_5f2489820ff57882da88b164.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_5f2489820ff57882da88b164:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5f2489820ff57882da88b164.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dbe75f052d4fc4f9ed036aab",
+            "version_id": "rgb_doc_dbe75f052d4fc4f9ed036aab:r1",
+            "document_name": "rgb_doc_dbe75f052d4fc4f9ed036aab.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_dbe75f052d4fc4f9ed036aab:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dbe75f052d4fc4f9ed036aab.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1d05d717c72cd92444d75b4b",
+            "version_id": "rgb_doc_1d05d717c72cd92444d75b4b:r1",
+            "document_name": "rgb_doc_1d05d717c72cd92444d75b4b.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_1d05d717c72cd92444d75b4b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1d05d717c72cd92444d75b4b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_be247a7c35ea18e51e3ac9c2",
+            "version_id": "rgb_doc_be247a7c35ea18e51e3ac9c2:r1",
+            "document_name": "rgb_doc_be247a7c35ea18e51e3ac9c2.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_be247a7c35ea18e51e3ac9c2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_be247a7c35ea18e51e3ac9c2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9dc0937c73621984b28b127a",
+            "version_id": "rgb_doc_9dc0937c73621984b28b127a:r1",
+            "document_name": "rgb_doc_9dc0937c73621984b28b127a.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_9dc0937c73621984b28b127a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9dc0937c73621984b28b127a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_09a2674126f0c8278ded87d5",
+            "version_id": "rgb_doc_09a2674126f0c8278ded87d5:r1",
+            "document_name": "rgb_doc_09a2674126f0c8278ded87d5.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_09a2674126f0c8278ded87d5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_09a2674126f0c8278ded87d5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_997aec06a31bc95582567079",
+            "version_id": "rgb_doc_997aec06a31bc95582567079:r1",
+            "document_name": "rgb_doc_997aec06a31bc95582567079.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_997aec06a31bc95582567079:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_997aec06a31bc95582567079.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4dee8e10237655375782cf80",
+            "version_id": "rgb_doc_4dee8e10237655375782cf80:r1",
+            "document_name": "rgb_doc_4dee8e10237655375782cf80.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_4dee8e10237655375782cf80:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4dee8e10237655375782cf80.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_766ac389fc1a2886accc98a6",
+            "version_id": "rgb_doc_766ac389fc1a2886accc98a6:r1",
+            "document_name": "rgb_doc_766ac389fc1a2886accc98a6.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_766ac389fc1a2886accc98a6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_766ac389fc1a2886accc98a6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1add5c0f31c4c745fb641ce1",
+            "version_id": "rgb_doc_1add5c0f31c4c745fb641ce1:r1",
+            "document_name": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_1add5c0f31c4c745fb641ce1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1add5c0f31c4c745fb641ce1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a08d01e177577baeaa4f59af",
+            "version_id": "rgb_doc_a08d01e177577baeaa4f59af:r1",
+            "document_name": "rgb_doc_a08d01e177577baeaa4f59af.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_a08d01e177577baeaa4f59af:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a08d01e177577baeaa4f59af.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9c2bbddd1e4f1d1d169a9e16",
+            "version_id": "rgb_doc_9c2bbddd1e4f1d1d169a9e16:r1",
+            "document_name": "rgb_doc_9c2bbddd1e4f1d1d169a9e16.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_9c2bbddd1e4f1d1d169a9e16:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9c2bbddd1e4f1d1d169a9e16.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_09870f877e542bc6e3ef7ed3",
+            "version_id": "rgb_doc_09870f877e542bc6e3ef7ed3:r1",
+            "document_name": "rgb_doc_09870f877e542bc6e3ef7ed3.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_09870f877e542bc6e3ef7ed3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_09870f877e542bc6e3ef7ed3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e2e0dd98ffb11f53d6ed4193",
+            "version_id": "rgb_doc_e2e0dd98ffb11f53d6ed4193:r1",
+            "document_name": "rgb_doc_e2e0dd98ffb11f53d6ed4193.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_e2e0dd98ffb11f53d6ed4193:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e2e0dd98ffb11f53d6ed4193.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_04426582e543328ab8ebf5ba",
+            "version_id": "rgb_doc_04426582e543328ab8ebf5ba:r1",
+            "document_name": "rgb_doc_04426582e543328ab8ebf5ba.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_04426582e543328ab8ebf5ba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_04426582e543328ab8ebf5ba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3510b80b5d9ac59781596a70",
+            "version_id": "rgb_doc_3510b80b5d9ac59781596a70:r1",
+            "document_name": "rgb_doc_3510b80b5d9ac59781596a70.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_3510b80b5d9ac59781596a70:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3510b80b5d9ac59781596a70.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e16c3ec662e1077ac80d30a",
+            "version_id": "rgb_doc_4e16c3ec662e1077ac80d30a:r1",
+            "document_name": "rgb_doc_4e16c3ec662e1077ac80d30a.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_4e16c3ec662e1077ac80d30a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4e16c3ec662e1077ac80d30a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_965cb55a195c8f40a7acf4bd",
+            "version_id": "rgb_doc_965cb55a195c8f40a7acf4bd:r1",
+            "document_name": "rgb_doc_965cb55a195c8f40a7acf4bd.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_965cb55a195c8f40a7acf4bd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_965cb55a195c8f40a7acf4bd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e49de696fa6ec816bc77f1c5",
+            "version_id": "rgb_doc_e49de696fa6ec816bc77f1c5:r1",
+            "document_name": "rgb_doc_e49de696fa6ec816bc77f1c5.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_e49de696fa6ec816bc77f1c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e49de696fa6ec816bc77f1c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1614b20c68a7c4fc7157ed37",
+            "version_id": "rgb_doc_1614b20c68a7c4fc7157ed37:r1",
+            "document_name": "rgb_doc_1614b20c68a7c4fc7157ed37.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_1614b20c68a7c4fc7157ed37:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1614b20c68a7c4fc7157ed37.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a520796123a9120b89555943",
+            "version_id": "rgb_doc_a520796123a9120b89555943:r1",
+            "document_name": "rgb_doc_a520796123a9120b89555943.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_a520796123a9120b89555943:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a520796123a9120b89555943.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9d9bacdbb8a22687e701a61d",
+            "version_id": "rgb_doc_9d9bacdbb8a22687e701a61d:r1",
+            "document_name": "rgb_doc_9d9bacdbb8a22687e701a61d.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_9d9bacdbb8a22687e701a61d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_9d9bacdbb8a22687e701a61d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ac80de31ce3385d179c24535",
+            "version_id": "rgb_doc_ac80de31ce3385d179c24535:r1",
+            "document_name": "rgb_doc_ac80de31ce3385d179c24535.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_ac80de31ce3385d179c24535:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ac80de31ce3385d179c24535.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4a4add9b7be9311dbe57bccc",
+            "version_id": "rgb_doc_4a4add9b7be9311dbe57bccc:r1",
+            "document_name": "rgb_doc_4a4add9b7be9311dbe57bccc.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_4a4add9b7be9311dbe57bccc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4a4add9b7be9311dbe57bccc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6fc64350e1512a4df9f30aa2",
+            "version_id": "rgb_doc_6fc64350e1512a4df9f30aa2:r1",
+            "document_name": "rgb_doc_6fc64350e1512a4df9f30aa2.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_6fc64350e1512a4df9f30aa2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6fc64350e1512a4df9f30aa2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_cc8ba8a97d76c9302ea7fd55",
+            "version_id": "rgb_doc_cc8ba8a97d76c9302ea7fd55:r1",
+            "document_name": "rgb_doc_cc8ba8a97d76c9302ea7fd55.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_cc8ba8a97d76c9302ea7fd55:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_cc8ba8a97d76c9302ea7fd55.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bdf4f4596ea39f73702c986d",
+            "version_id": "rgb_doc_bdf4f4596ea39f73702c986d:r1",
+            "document_name": "rgb_doc_bdf4f4596ea39f73702c986d.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_bdf4f4596ea39f73702c986d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bdf4f4596ea39f73702c986d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0546a21b8ebdf63d58d10861",
+            "version_id": "rgb_doc_0546a21b8ebdf63d58d10861:r1",
+            "document_name": "rgb_doc_0546a21b8ebdf63d58d10861.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_0546a21b8ebdf63d58d10861:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0546a21b8ebdf63d58d10861.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_97e9283795e7fcea656aa26b",
+            "version_id": "rgb_doc_97e9283795e7fcea656aa26b:r1",
+            "document_name": "rgb_doc_97e9283795e7fcea656aa26b.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_97e9283795e7fcea656aa26b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_97e9283795e7fcea656aa26b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1b581f620b7e4ba2a56d4c5b",
+            "version_id": "rgb_doc_1b581f620b7e4ba2a56d4c5b:r1",
+            "document_name": "rgb_doc_1b581f620b7e4ba2a56d4c5b.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_1b581f620b7e4ba2a56d4c5b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1b581f620b7e4ba2a56d4c5b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ef0e41a44d2be7736ff36ff9",
+            "version_id": "rgb_doc_ef0e41a44d2be7736ff36ff9:r1",
+            "document_name": "rgb_doc_ef0e41a44d2be7736ff36ff9.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_ef0e41a44d2be7736ff36ff9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ef0e41a44d2be7736ff36ff9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1dc479a57bc91b70cc25c93a",
+            "version_id": "rgb_doc_1dc479a57bc91b70cc25c93a:r1",
+            "document_name": "rgb_doc_1dc479a57bc91b70cc25c93a.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_1dc479a57bc91b70cc25c93a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1dc479a57bc91b70cc25c93a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b78d0ae08e1a038ff360e50b",
+            "version_id": "rgb_doc_b78d0ae08e1a038ff360e50b:r1",
+            "document_name": "rgb_doc_b78d0ae08e1a038ff360e50b.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_b78d0ae08e1a038ff360e50b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b78d0ae08e1a038ff360e50b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f99201cee51bdc174c042e3e",
+            "version_id": "rgb_doc_f99201cee51bdc174c042e3e:r1",
+            "document_name": "rgb_doc_f99201cee51bdc174c042e3e.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_f99201cee51bdc174c042e3e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f99201cee51bdc174c042e3e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a2c4bd4b2ebf2b2dc7dab647",
+            "version_id": "rgb_doc_a2c4bd4b2ebf2b2dc7dab647:r1",
+            "document_name": "rgb_doc_a2c4bd4b2ebf2b2dc7dab647.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_a2c4bd4b2ebf2b2dc7dab647:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a2c4bd4b2ebf2b2dc7dab647.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bbfaf3046e90a51a847ad9fc",
+            "version_id": "rgb_doc_bbfaf3046e90a51a847ad9fc:r1",
+            "document_name": "rgb_doc_bbfaf3046e90a51a847ad9fc.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_bbfaf3046e90a51a847ad9fc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bbfaf3046e90a51a847ad9fc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_03b11dfd7172b886acb5e6cb",
+            "version_id": "rgb_doc_03b11dfd7172b886acb5e6cb:r1",
+            "document_name": "rgb_doc_03b11dfd7172b886acb5e6cb.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_03b11dfd7172b886acb5e6cb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_03b11dfd7172b886acb5e6cb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2029ee7458ef4524a753eaa7",
+            "version_id": "rgb_doc_2029ee7458ef4524a753eaa7:r1",
+            "document_name": "rgb_doc_2029ee7458ef4524a753eaa7.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_2029ee7458ef4524a753eaa7:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2029ee7458ef4524a753eaa7.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b8c7e95495f5e67e3e5f1f96",
+            "version_id": "rgb_doc_b8c7e95495f5e67e3e5f1f96:r1",
+            "document_name": "rgb_doc_b8c7e95495f5e67e3e5f1f96.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_b8c7e95495f5e67e3e5f1f96:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b8c7e95495f5e67e3e5f1f96.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c780e64d333504dad71bae7c",
+            "version_id": "rgb_doc_c780e64d333504dad71bae7c:r1",
+            "document_name": "rgb_doc_c780e64d333504dad71bae7c.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_c780e64d333504dad71bae7c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c780e64d333504dad71bae7c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aafb9e37dcbc690337c8d7d2",
+            "version_id": "rgb_doc_aafb9e37dcbc690337c8d7d2:r1",
+            "document_name": "rgb_doc_aafb9e37dcbc690337c8d7d2.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_aafb9e37dcbc690337c8d7d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aafb9e37dcbc690337c8d7d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c68297bae1e9b93f43706d9f",
+            "version_id": "rgb_doc_c68297bae1e9b93f43706d9f:r1",
+            "document_name": "rgb_doc_c68297bae1e9b93f43706d9f.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_c68297bae1e9b93f43706d9f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c68297bae1e9b93f43706d9f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f47af0d883adeaa2e58e1cc",
+            "version_id": "rgb_doc_2f47af0d883adeaa2e58e1cc:r1",
+            "document_name": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_2f47af0d883adeaa2e58e1cc:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f47af0d883adeaa2e58e1cc.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 11.605541993048973,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.177999993786216,
+          "evidence_ms": 2.4911660002544522,
+          "fusion_ms": 1.6816249990370125,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 73.17116699414328,
+          "context_chars": 977,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_b173920011bd966e",
+          "ev_45607368cc99231a",
+          "ev_0b802775fd6a46cd",
+          "ev_1e0b32232817a24f",
+          "ev_b4dfdc868e716611",
+          "ev_bfd5367abd62b7e7",
+          "ev_5e2be62027019f23",
+          "ev_27100c350d2bc305",
+          "ev_87894ce08052f887",
+          "ev_2f1d73b1ca990fd6"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_b173920011bd966e",
+            "content": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为10.48‰，为1949年有记录以来最低。中国国家统计局局长宁吉喆表示，人口出生率还是 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_254b45152e9203d587d66b20",
+            "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+            "document_name": "rgb_doc_254b45152e9203d587d66b20.txt",
+            "chunk_id": "rgb_doc_254b45152e9203d587d66b20:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+              "block_ids": [
+                "rgb_doc_254b45152e9203d587d66b20:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 100
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 17.698354721069336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 100,
+            "content_hash": "254b45152e9203d587d66b20bcdde5c1069ba0099b6a4ff1e1eb25cbd78458ce",
+            "scope_digest": "ccecf86ca5fa99d7969182d2f3160b13f86c27f26729c208bb6e17d4925607d9",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_0f23b1ad3149dad213da",
+                "source_id": "S1",
+                "evidence_id": "ev_b173920011bd966e",
+                "raw_text": "16",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为1",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_016f1e98439dc53d1310",
+                "source_id": "S1",
+                "evidence_id": "ev_b173920011bd966e",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为10.48‰，",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_45607368cc99231a",
+            "content": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为5.48‰，为1949年有记录以来最低。中国国家统计局局长宁吉喆表示，人口出生率还是 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c1e3d00b708a42717b4b3e8e",
+            "version_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1",
+            "document_name": "rgb_doc_c1e3d00b708a42717b4b3e8e.txt",
+            "chunk_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1",
+              "block_ids": [
+                "rgb_doc_c1e3d00b708a42717b4b3e8e:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 99
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 17.698354721069336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 99,
+            "content_hash": "c1e3d00b708a42717b4b3e8e78a672dc8c755eed792b438c06f42d7106860fef",
+            "scope_digest": "4f4cbdd07b249a592c806dcfd74d798e305d1232efd4845642b55f3a54d47416",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_9069b9c242216c4baef6",
+                "source_id": "S2",
+                "evidence_id": "ev_45607368cc99231a",
+                "raw_text": "16",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为5",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d605bbb533d2a2569eae",
+                "source_id": "S2",
+                "evidence_id": "ev_45607368cc99231a",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 16, 2020 ... 中国国家统计局周五公布，2019年全年出生人口1465万人，人口出生率为5.48‰，为",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_0b802775fd6a46cd",
+            "content": "Jan 20, 2019 ... 路透北京1月21日- 尽管中国放开生育二胎政策，却未能遏止人口出生率下降的趋势。根据中国国家统计局周一发布2018年数据显示，2018年人口出生率大幅降 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7afd14b1801651c3d3592c08",
+            "version_id": "rgb_doc_7afd14b1801651c3d3592c08:r1",
+            "document_name": "rgb_doc_7afd14b1801651c3d3592c08.txt",
+            "chunk_id": "rgb_doc_7afd14b1801651c3d3592c08:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7afd14b1801651c3d3592c08:r1",
+              "block_ids": [
+                "rgb_doc_7afd14b1801651c3d3592c08:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 17.46792221069336,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "7afd14b1801651c3d3592c088760e7635cc1dea8dc08c061de22513e167497f5",
+            "scope_digest": "11273f439981e96da2bd49680d8fbf69cf323b4e952473c70e7ee06146e64c9f",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_315f1a426431efef49e2",
+                "source_id": "S3",
+                "evidence_id": "ev_0b802775fd6a46cd",
+                "raw_text": "20",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 20, 2019 ... 路透北京1月21日- 尽管中国放开生育二胎政策，却未能遏止人口出生率下降的",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_909833f30c14c02983d3",
+                "source_id": "S3",
+                "evidence_id": "ev_0b802775fd6a46cd",
+                "raw_text": "2019",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 20, 2019 ... 路透北京1月21日- 尽管中国放开生育二胎政策，却未能遏止人口出生率下降的趋势。根据中",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_1e0b32232817a24f",
+            "content": "Apr 28, 2020 ... 2019年中国人口出生率创新低年轻人不愿生娃了吗---小冉生孩子之前的“恐育心理”在当下年轻人中并不少见。国家统计局数据显示，2019年，我国全年出生 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6a6a5bb74547b89798d7a267",
+            "version_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1",
+            "document_name": "rgb_doc_6a6a5bb74547b89798d7a267.txt",
+            "chunk_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1",
+              "block_ids": [
+                "rgb_doc_6a6a5bb74547b89798d7a267:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 16.429094314575195,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "6a6a5bb74547b89798d7a2678f7c2ccf61c5846d76efeaa6a390d81fefe42a7f",
+            "scope_digest": "aa6e085cac244682e10d1ddcf6e2621221bb2fd376a5a7c0f1480769e4486c54",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_0a8e31a928fa0652fc99",
+                "source_id": "S4",
+                "evidence_id": "ev_1e0b32232817a24f",
+                "raw_text": "28",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Apr 28, 2020 ... 2019年中国人口出生率创新低年轻人不愿生娃了吗---小冉生孩子之前的“恐",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_7633feca466e67c4ee63",
+                "source_id": "S4",
+                "evidence_id": "ev_1e0b32232817a24f",
+                "raw_text": "2020",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Apr 28, 2020 ... 2019年中国人口出生率创新低年轻人不愿生娃了吗---小冉生孩子之前的“恐育心理”在当",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_b4dfdc868e716611",
+            "content": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为5.94‰，出生人口较上年减少约200万，为连续第二年下降。同时，2018年人口出生数也创下了 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_12eeb7ecc2a27390eb812a04",
+            "version_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1",
+            "document_name": "rgb_doc_12eeb7ecc2a27390eb812a04.txt",
+            "chunk_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1",
+              "block_ids": [
+                "rgb_doc_12eeb7ecc2a27390eb812a04:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 101
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 16.25472640991211,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 101,
+            "content_hash": "12eeb7ecc2a27390eb812a04a14fb90af45eb84c4ff9f2cde32c8e792efe112b",
+            "scope_digest": "8004c3734d10f5833c4032db5c2b30b70876971ab0f2c370f3ad0f3dc7960d22",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_79b889a83f50dc142314",
+                "source_id": "S5",
+                "evidence_id": "ev_b4dfdc868e716611",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为5.9",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_1feafd028a56df8c532e",
+                "source_id": "S5",
+                "evidence_id": "ev_b4dfdc868e716611",
+                "raw_text": "2019",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为5.94‰，出生人",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_bfd5367abd62b7e7",
+            "content": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为10.94‰，出生人口较上年减少约200万，为连续第二年下降。同时，2018年人口出生数也创下了 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_9e91a6643e8d49e7a6ae4281",
+            "version_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1",
+            "document_name": "rgb_doc_9e91a6643e8d49e7a6ae4281.txt",
+            "chunk_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1",
+              "block_ids": [
+                "rgb_doc_9e91a6643e8d49e7a6ae4281:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 102
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 16.25472640991211,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 102,
+            "content_hash": "9e91a6643e8d49e7a6ae428186595a5b4f140dff8689d21afa83d5efebfcf655",
+            "scope_digest": "a3456a36cabd801b98988b9c101537532192433a33a8d2eec53e0717afc5841c",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_bf0d21cf8d45c7b375bd",
+                "source_id": "S6",
+                "evidence_id": "ev_bfd5367abd62b7e7",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为10.",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_683fc06d966cb3cc5839",
+                "source_id": "S6",
+                "evidence_id": "ev_bfd5367abd62b7e7",
+                "raw_text": "2019",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "May 6, 2019 ... 从国家统计局数据看，2018年中国出生人口1523万人，人口出生率为10.94‰，出生",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_5e2be62027019f23",
+            "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为10.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_995dcc51a90dfafb2c6fc976",
+            "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+            "document_name": "rgb_doc_995dcc51a90dfafb2c6fc976.txt",
+            "chunk_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+              "block_ids": [
+                "rgb_doc_995dcc51a90dfafb2c6fc976:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 90
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 15.760516166687012,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 90,
+            "content_hash": "995dcc51a90dfafb2c6fc976a1304dce4acdfec343ac4679754eda7eea31e6aa",
+            "scope_digest": "03c7a546ba211cce87cb7c340d3ce2c04476291392b401aa006ce08877806237",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_27100c350d2bc305",
+            "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为10.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到14.3亿，人口 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_084f18208bc0645881b33d8a",
+            "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+            "document_name": "rgb_doc_084f18208bc0645881b33d8a.txt",
+            "chunk_id": "rgb_doc_084f18208bc0645881b33d8a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+              "block_ids": [
+                "rgb_doc_084f18208bc0645881b33d8a:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 98
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 15.362558364868164,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 98,
+            "content_hash": "084f18208bc0645881b33d8a3e0e3ad85918e1e98860b34f51fceffa481586e7",
+            "scope_digest": "1269f11512c52c405f6b2aecd635e57c3f380e82443155da3d611815c66f2ba9",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_87894ce08052f887",
+            "content": "2019年中国大陆总人口140005万人，比上年末增加467万人。全年出生人口1465万人，人口出生率为5.48‰，人口自然增长率为3.34‰。预计2030年总人口数增到14.3亿，人口 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_eb505d68fb059cb5fff2dd1d",
+            "version_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1",
+            "document_name": "rgb_doc_eb505d68fb059cb5fff2dd1d.txt",
+            "chunk_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1",
+              "block_ids": [
+                "rgb_doc_eb505d68fb059cb5fff2dd1d:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 15.362558364868164,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "eb505d68fb059cb5fff2dd1dc075be2afbba50eb23f4da700b175f16eb973b80",
+            "scope_digest": "b7c42698a8e374ee99451870a96558300b6bb55209cde2bde1f2f3e7b9d1a609",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_2f1d73b1ca990fd6",
+            "content": "Jan 21, 2019 ... 据财新数据，国家统计局周一公布数据显示，2018年末中国大陆总人口139538万人，比上年末增加530万人。全年出生人口1523万人，人口出生率由上一年 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7374d36de41b8dd1bffcd787",
+            "version_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1",
+            "document_name": "rgb_doc_7374d36de41b8dd1bffcd787.txt",
+            "chunk_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1",
+              "block_ids": [
+                "rgb_doc_7374d36de41b8dd1bffcd787:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 97
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 15.233559608459473,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 97,
+            "content_hash": "7374d36de41b8dd1bffcd7871fa24d7a4cf2d2982860b8801a6e6b6e860b934b",
+            "scope_digest": "3ca674287226b45425f31154e98bf09be1a1c4ce6ecf2f5c23edfe462599db75",
+            "trace_id": "67ddffb98deb45408eea91a5e139606a",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_d105d73d70b3f923465d",
+                "source_id": "S10",
+                "evidence_id": "ev_2f1d73b1ca990fd6",
+                "raw_text": "21",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 21, 2019 ... 据财新数据，国家统计局周一公布数据显示，2018年末中国大陆总人口1395",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ded61d9b77b3221e7ffd",
+                "source_id": "S10",
+                "evidence_id": "ev_2f1d73b1ca990fd6",
+                "raw_text": "2019",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 21, 2019 ... 据财新数据，国家统计局周一公布数据显示，2018年末中国大陆总人口139538万人，比",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_0b802775fd6a46cd",
+      "ev_1e0b32232817a24f",
+      "ev_27100c350d2bc305",
+      "ev_45607368cc99231a",
+      "ev_5e2be62027019f23",
+      "ev_87894ce08052f887",
+      "ev_b173920011bd966e",
+      "ev_b4dfdc868e716611",
+      "ev_bfd5367abd62b7e7"
+    ],
+    "evidence": {
+      "ev_b173920011bd966e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_254b45152e9203d587d66b20",
+        "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+        "document_name": "rgb_doc_254b45152e9203d587d66b20.txt",
+        "chunk_id": "rgb_doc_254b45152e9203d587d66b20:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_254b45152e9203d587d66b20:r1",
+          "block_ids": [
+            "rgb_doc_254b45152e9203d587d66b20:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 100
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 17.698354721069336,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 100,
+        "content_hash": "254b45152e9203d587d66b20bcdde5c1069ba0099b6a4ff1e1eb25cbd78458ce",
+        "scope_digest": "ccecf86ca5fa99d7969182d2f3160b13f86c27f26729c208bb6e17d4925607d9",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_45607368cc99231a": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_c1e3d00b708a42717b4b3e8e",
+        "version_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1",
+        "document_name": "rgb_doc_c1e3d00b708a42717b4b3e8e.txt",
+        "chunk_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_c1e3d00b708a42717b4b3e8e:r1",
+          "block_ids": [
+            "rgb_doc_c1e3d00b708a42717b4b3e8e:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 99
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 17.698354721069336,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 99,
+        "content_hash": "c1e3d00b708a42717b4b3e8e78a672dc8c755eed792b438c06f42d7106860fef",
+        "scope_digest": "4f4cbdd07b249a592c806dcfd74d798e305d1232efd4845642b55f3a54d47416",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_0b802775fd6a46cd": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_7afd14b1801651c3d3592c08",
+        "version_id": "rgb_doc_7afd14b1801651c3d3592c08:r1",
+        "document_name": "rgb_doc_7afd14b1801651c3d3592c08.txt",
+        "chunk_id": "rgb_doc_7afd14b1801651c3d3592c08:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_7afd14b1801651c3d3592c08:r1",
+          "block_ids": [
+            "rgb_doc_7afd14b1801651c3d3592c08:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 17.46792221069336,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "7afd14b1801651c3d3592c088760e7635cc1dea8dc08c061de22513e167497f5",
+        "scope_digest": "11273f439981e96da2bd49680d8fbf69cf323b4e952473c70e7ee06146e64c9f",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_1e0b32232817a24f": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_6a6a5bb74547b89798d7a267",
+        "version_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1",
+        "document_name": "rgb_doc_6a6a5bb74547b89798d7a267.txt",
+        "chunk_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_6a6a5bb74547b89798d7a267:r1",
+          "block_ids": [
+            "rgb_doc_6a6a5bb74547b89798d7a267:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 16.429094314575195,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "6a6a5bb74547b89798d7a2678f7c2ccf61c5846d76efeaa6a390d81fefe42a7f",
+        "scope_digest": "aa6e085cac244682e10d1ddcf6e2621221bb2fd376a5a7c0f1480769e4486c54",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_b4dfdc868e716611": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_12eeb7ecc2a27390eb812a04",
+        "version_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1",
+        "document_name": "rgb_doc_12eeb7ecc2a27390eb812a04.txt",
+        "chunk_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_12eeb7ecc2a27390eb812a04:r1",
+          "block_ids": [
+            "rgb_doc_12eeb7ecc2a27390eb812a04:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 101
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 16.25472640991211,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 101,
+        "content_hash": "12eeb7ecc2a27390eb812a04a14fb90af45eb84c4ff9f2cde32c8e792efe112b",
+        "scope_digest": "8004c3734d10f5833c4032db5c2b30b70876971ab0f2c370f3ad0f3dc7960d22",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_bfd5367abd62b7e7": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_9e91a6643e8d49e7a6ae4281",
+        "version_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1",
+        "document_name": "rgb_doc_9e91a6643e8d49e7a6ae4281.txt",
+        "chunk_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_9e91a6643e8d49e7a6ae4281:r1",
+          "block_ids": [
+            "rgb_doc_9e91a6643e8d49e7a6ae4281:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 102
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 16.25472640991211,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 102,
+        "content_hash": "9e91a6643e8d49e7a6ae428186595a5b4f140dff8689d21afa83d5efebfcf655",
+        "scope_digest": "a3456a36cabd801b98988b9c101537532192433a33a8d2eec53e0717afc5841c",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_5e2be62027019f23": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_995dcc51a90dfafb2c6fc976",
+        "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+        "document_name": "rgb_doc_995dcc51a90dfafb2c6fc976.txt",
+        "chunk_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_995dcc51a90dfafb2c6fc976:r1",
+          "block_ids": [
+            "rgb_doc_995dcc51a90dfafb2c6fc976:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 90
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 15.760516166687012,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 90,
+        "content_hash": "995dcc51a90dfafb2c6fc976a1304dce4acdfec343ac4679754eda7eea31e6aa",
+        "scope_digest": "03c7a546ba211cce87cb7c340d3ce2c04476291392b401aa006ce08877806237",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_27100c350d2bc305": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_084f18208bc0645881b33d8a",
+        "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+        "document_name": "rgb_doc_084f18208bc0645881b33d8a.txt",
+        "chunk_id": "rgb_doc_084f18208bc0645881b33d8a:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_084f18208bc0645881b33d8a:r1",
+          "block_ids": [
+            "rgb_doc_084f18208bc0645881b33d8a:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 98
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 15.362558364868164,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 98,
+        "content_hash": "084f18208bc0645881b33d8a3e0e3ad85918e1e98860b34f51fceffa481586e7",
+        "scope_digest": "1269f11512c52c405f6b2aecd635e57c3f380e82443155da3d611815c66f2ba9",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_87894ce08052f887": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_eb505d68fb059cb5fff2dd1d",
+        "version_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1",
+        "document_name": "rgb_doc_eb505d68fb059cb5fff2dd1d.txt",
+        "chunk_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_eb505d68fb059cb5fff2dd1d:r1",
+          "block_ids": [
+            "rgb_doc_eb505d68fb059cb5fff2dd1d:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 15.362558364868164,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "eb505d68fb059cb5fff2dd1dc075be2afbba50eb23f4da700b175f16eb973b80",
+        "scope_digest": "b7c42698a8e374ee99451870a96558300b6bb55209cde2bde1f2f3e7b9d1a609",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_2f1d73b1ca990fd6": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_7374d36de41b8dd1bffcd787",
+        "version_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1",
+        "document_name": "rgb_doc_7374d36de41b8dd1bffcd787.txt",
+        "chunk_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_7374d36de41b8dd1bffcd787:r1",
+          "block_ids": [
+            "rgb_doc_7374d36de41b8dd1bffcd787:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 97
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 15.233559608459473,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 97,
+        "content_hash": "7374d36de41b8dd1bffcd7871fa24d7a4cf2d2982860b8801a6e6b6e860b934b",
+        "scope_digest": "3ca674287226b45425f31154e98bf09be1a1c4ce6ecf2f5c23edfe462599db75",
+        "trace_id": "67ddffb98deb45408eea91a5e139606a",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_b173920011bd966e",
+      "S2": "ev_45607368cc99231a",
+      "S3": "ev_0b802775fd6a46cd",
+      "S4": "ev_1e0b32232817a24f",
+      "S5": "ev_b4dfdc868e716611",
+      "S6": "ev_bfd5367abd62b7e7",
+      "S7": "ev_5e2be62027019f23",
+      "S8": "ev_27100c350d2bc305",
+      "S9": "ev_87894ce08052f887",
+      "S10": "ev_2f1d73b1ca990fd6"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}

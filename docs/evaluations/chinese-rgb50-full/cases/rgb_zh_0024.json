@@ -1,0 +1,3772 @@
+{
+  "question_id": "rgb_zh_0024",
+  "result": {
+    "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+    "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+    "status": "completed",
+    "events": [
+      {
+        "type": "run_started",
+        "sequence": 1,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:1",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86"
+      },
+      {
+        "type": "thinking",
+        "sequence": 2,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:2",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "iteration": 1
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 3,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:3",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "context_chars": 1195,
+        "prompt_tokens": 8443,
+        "completion_tokens": 123,
+        "total_tokens": 8566,
+        "context_compaction_count": 0,
+        "context_chars_before": 1195,
+        "context_chars_after": 1195,
+        "estimated_input_tokens": 12133,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 1487,
+        "remaining_run_tokens": 111434,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 8443,
+        "usage_source": "provider",
+        "estimation_error_tokens": -3690
+      },
+      {
+        "type": "citation_context",
+        "sequence": 4,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:4",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "model_visible_evidence_count": 0,
+        "context_chars": 1195
+      },
+      {
+        "type": "tool_started",
+        "sequence": 5,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:5",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "tool_call_id": "call_24fc714828e547218d8e91",
+        "tool_name": "v2.search_knowledge"
+      },
+      {
+        "type": "tool_completed",
+        "sequence": 6,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:6",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "tool_call_id": "call_24fc714828e547218d8e91",
+        "tool_name": "v2.search_knowledge",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "status": "success"
+      },
+      {
+        "type": "tool_evidence_metrics",
+        "sequence": 7,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:7",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "tool_name": "v2.search_knowledge",
+        "tool_call_id": "call_24fc714828e547218d8e91",
+        "tool_output_profile": "search",
+        "candidate_count": 10,
+        "evidence_examined": 10,
+        "evidence_registered": 10,
+        "registration_rejected": 0,
+        "registration_duplicate": 0,
+        "registration_budget_exhausted": false,
+        "registration_budget_reason": null,
+        "evidence_count_before": 10,
+        "evidence_count_after": 9,
+        "output_chars_before": 99954,
+        "output_chars_after": 15134,
+        "removed_chars": 84820,
+        "document_metadata_chars": 45516,
+        "duplicate_metadata_chars": 0,
+        "metadata_chars_removed": 42608,
+        "result_partial": false,
+        "evidence_content_truncated": false,
+        "candidate_selection": true,
+        "observation_budget_truncated": true,
+        "continuation_available": true,
+        "truncation_reason": [
+          "candidate_selection",
+          "observation_budget"
+        ]
+      },
+      {
+        "type": "evidence_updated",
+        "sequence": 8,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:8",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "evidence_count": 10
+      },
+      {
+        "type": "thinking",
+        "sequence": 9,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:9",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "iteration": 2
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 10,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:10",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "context_chars": 16464,
+        "prompt_tokens": 15930,
+        "completion_tokens": 282,
+        "total_tokens": 16212,
+        "context_compaction_count": 0,
+        "context_chars_before": 16464,
+        "context_chars_after": 16464,
+        "estimated_input_tokens": 21920,
+        "tool_schema_tokens": 10646,
+        "observation_tokens": 8868,
+        "evidence_tokens": 2751,
+        "history_tokens": 2406,
+        "remaining_run_tokens": 95222,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 15930,
+        "usage_source": "provider",
+        "estimation_error_tokens": -5990
+      },
+      {
+        "type": "citation_context",
+        "sequence": 11,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:11",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "model_visible_evidence_count": 9,
+        "context_chars": 16464
+      },
+      {
+        "type": "citation_repair_requested",
+        "sequence": 12,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:12",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "citation_validation_reason": [
+          "no_cited_evidence"
+        ]
+      },
+      {
+        "type": "model_metrics",
+        "sequence": 13,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:13",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "context_chars": 2663,
+        "prompt_tokens": 1805,
+        "completion_tokens": 45,
+        "total_tokens": 1850,
+        "context_compaction_count": 0,
+        "context_chars_before": 2663,
+        "context_chars_after": 2663,
+        "estimated_input_tokens": 3747,
+        "tool_schema_tokens": 0,
+        "observation_tokens": 0,
+        "evidence_tokens": 0,
+        "history_tokens": 3747,
+        "remaining_run_tokens": 93372,
+        "context_window_tokens": 32000,
+        "output_reserved_tokens": 2000,
+        "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+        "estimator_factor": 1,
+        "actual_prompt_tokens": 1805,
+        "usage_source": "provider",
+        "estimation_error_tokens": -1942
+      },
+      {
+        "type": "answer_started",
+        "sequence": 14,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:14",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86"
+      },
+      {
+        "type": "answer_delta",
+        "sequence": 15,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:15",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "delta": "2022年春运从1月17日开始，2月25日结束，共40天 [1] [2] [3]"
+      },
+      {
+        "type": "citation_validation",
+        "sequence": 16,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:16",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86",
+        "final_citation_count": 3,
+        "citation_validation_reason": [],
+        "repair_attempted": true,
+        "repair_success": true
+      },
+      {
+        "type": "completed",
+        "sequence": 17,
+        "event_id": "run_2f320741ed784752b8577d706eb1adbd:f477377ac241411e88c87b534cc0c15e:17",
+        "run_id": "run_2f320741ed784752b8577d706eb1adbd",
+        "thread_id": "thread_a4be2731294e4521b5c7cafebcd78d86"
+      }
+    ],
+    "tool_calls": 1,
+    "retrieval_rounds": 1,
+    "iterations": 3,
+    "usage": {
+      "prompt_tokens": 26178,
+      "completion_tokens": 450,
+      "total_tokens": 26628
+    },
+    "elapsed_seconds": 12.771518957990338,
+    "metrics": {
+      "tool_candidate_count": 10,
+      "registered_evidence_count": 10,
+      "model_visible_evidence_count": 9,
+      "output_truncated": true,
+      "context_chars": 16464,
+      "prompt_tokens": 26178,
+      "completion_tokens": 450,
+      "total_tokens": 26628,
+      "context_compaction_count": 0,
+      "context_chars_before": 2663,
+      "context_chars_after": 2663,
+      "estimated_input_tokens": 3747,
+      "tool_schema_tokens": 0,
+      "observation_tokens": 0,
+      "evidence_tokens": 0,
+      "history_tokens": 3747,
+      "remaining_run_tokens": 93372,
+      "context_window_tokens": 32000,
+      "output_reserved_tokens": 2000,
+      "estimator": "mixed_text_v1_25pct_margin_not_model_tokenizer",
+      "estimator_factor": 1,
+      "actual_prompt_tokens": 1805,
+      "usage_source": "provider",
+      "estimation_error_tokens": -1942,
+      "tool_outputs": [
+        {
+          "tool_name": "v2.search_knowledge",
+          "tool_call_id": "call_24fc714828e547218d8e91",
+          "tool_output_profile": "search",
+          "candidate_count": 10,
+          "evidence_examined": 10,
+          "evidence_registered": 10,
+          "registration_rejected": 0,
+          "registration_duplicate": 0,
+          "registration_budget_exhausted": false,
+          "registration_budget_reason": null,
+          "evidence_count_before": 10,
+          "evidence_count_after": 9,
+          "output_chars_before": 99954,
+          "output_chars_after": 15134,
+          "removed_chars": 84820,
+          "document_metadata_chars": 45516,
+          "duplicate_metadata_chars": 0,
+          "metadata_chars_removed": 42608,
+          "result_partial": false,
+          "evidence_content_truncated": false,
+          "candidate_selection": true,
+          "observation_budget_truncated": true,
+          "continuation_available": true,
+          "truncation_reason": [
+            "candidate_selection",
+            "observation_budget"
+          ]
+        }
+      ],
+      "initial_citation_validation_reason": [
+        "no_cited_evidence"
+      ],
+      "repair_context_chars": 2663,
+      "repair_visible_evidence_count": 9,
+      "final_citation_count": 3,
+      "citation_validation_reason": []
+    },
+    "result": {
+      "answer": "2022年春运从1月17日开始，2月25日结束，共40天 [1] [2] [3]",
+      "citations": {
+        "ev_32774f89d451201e": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_4e4e708b3e6ee3945f7ff482",
+          "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+          "document_name": "rgb_doc_4e4e708b3e6ee3945f7ff482.txt",
+          "chunk_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 7,
+          "source_score": null,
+          "fused_score": 0.014925373134328358,
+          "rerank_score": null,
+          "content": "Dec 21, 2021 ... 2022年春运从1月17日开始，2月25日结束，共40天，春运第一天的火车票(1 ... 回复【春运】可获2023年春运火车票购票入口(官网/APP)、春运起止时间/火车 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+            "block_ids": [
+              "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 106
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 7,
+              "score": 10.71630859375,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_81e72e3143ef4772": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_e30a6e01f02fac6edc6c25bd",
+          "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+          "document_name": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+          "chunk_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 8,
+          "source_score": null,
+          "fused_score": 0.014705882352941176,
+          "rerank_score": null,
+          "content": "Jan 6, 2022 ... 记者从2022年全国春运电视电话会议上获悉：今年春运将从1月17日开始， ... 根据属地疫情防控要求，调整寒假放假、开学时间，尽可能错开春运时段；二是 ...",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+            "block_ids": [
+              "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 96
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 8,
+              "score": 10.694977760314941,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        },
+        "ev_0dfec0489211891d": {
+          "knowledge_base_id": "chinese-rgb-evaluation",
+          "document_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c",
+          "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+          "document_name": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+          "chunk_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+          "source_adapter": "lexical",
+          "source_rank": 9,
+          "source_score": null,
+          "fused_score": 0.014492753623188406,
+          "rerank_score": null,
+          "content": "2022年春运时间： 　　2022年1月17日—2月25日，共40天 　　2022年春运抢票时间： 　　春运第一天的火车票(2022年1月17日农历腊月十五)——2022年1月3日开抢 　　春运第二天的火车票(2022年1月18日农历腊月十六)——2022年1月4日开抢 　　春运第三天的火车票(2022年1月19日农历腊月十七)——2022年1月5日开抢 　　春运第四天的火车票(2022年1月20日农历腊月十八)——2022年1月6日开抢 　　除夕前一天的火车票(2022年1月30日农历腊月廿九)——2022年1月16日开抢 　　除夕当天的火车票(2022年1月31日农历腊月三十)——2022年1月17日开抢",
+          "content_truncated": false,
+          "content_is_projection": false,
+          "locator": {
+            "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+            "block_ids": [
+              "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:block:0"
+            ],
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "bbox": null,
+            "coordinate_system": null,
+            "start": 0,
+            "end": 308
+          },
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "matched_ranges": [],
+          "index_generation": "4fc272319a2d491297e77020d1095e57",
+          "stale": false,
+          "verification_status": "verified_current",
+          "provenance": [
+            {
+              "adapter": "lexical",
+              "rank": 9,
+              "score": 10.609368324279785,
+              "generation": "4fc272319a2d491297e77020d1095e57"
+            }
+          ]
+        }
+      },
+      "validation_errors": [],
+      "citation_validation": "passed",
+      "answer_correctness": "not_assessed",
+      "evidence_insufficient": false,
+      "claims": [
+        {
+          "text": "2022年春运从1月17日开始，2月25日结束，共40天",
+          "source_ids": [
+            "S7",
+            "S8",
+            "S9"
+          ]
+        }
+      ],
+      "citation_metadata": [
+        {
+          "number": 1,
+          "source_id": "S7",
+          "evidence_id": "ev_32774f89d451201e"
+        },
+        {
+          "number": 2,
+          "source_id": "S8",
+          "evidence_id": "ev_81e72e3143ef4772"
+        },
+        {
+          "number": 3,
+          "source_id": "S9",
+          "evidence_id": "ev_0dfec0489211891d"
+        }
+      ],
+      "answer_validation": "validated",
+      "answer_displayable": true,
+      "trusted_evidence_count": 10,
+      "repair_attempted": true,
+      "repair_success": true,
+      "stop_reason": "answer",
+      "calculations": []
+    }
+  },
+  "trace": {
+    "available": true,
+    "tools": [
+      {
+        "call_id": "call_24fc714828e547218d8e91",
+        "name": "v2.search_knowledge",
+        "arguments": {
+          "query": "2022年春运时间",
+          "scopes": [
+            {
+              "knowledge_base_id": "chinese-rgb-evaluation"
+            }
+          ]
+        },
+        "status": "success",
+        "error": null,
+        "repeated_search": false,
+        "is_search": true,
+        "results": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6676c47d89785b09ab2c8b59",
+            "version_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1",
+            "document_name": "rgb_doc_6676c47d89785b09ab2c8b59.txt",
+            "chunk_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": 11.764193534851074,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content": "春运期间人流量肯定特别大，而现在疫情还没有结束，因此大家在出行前一定要做好防疫措施，防止疫情第二次爆发。下面是小编收集推荐的2022春运哪天开始，仅供参考，欢迎阅读。  2022春运哪天开始 春运时间是以每年的春节为界，春节前的15天以及春节后的25天，每年的春运时间为40天左右。2022年春节为2022年2月11日-2022年2月17日。 2022年春运从1月28日开始3月8日结束共40天 所以，2022年春运开始时间是1月28日星期四 腊月十六，春运结束时间是3月8日。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1",
+              "block_ids": [
+                "rgb_doc_6676c47d89785b09ab2c8b59:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 239
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 11.764193534851074,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_227972581ff2f302dc1c2775",
+            "version_id": "rgb_doc_227972581ff2f302dc1c2775:r1",
+            "document_name": "rgb_doc_227972581ff2f302dc1c2775.txt",
+            "chunk_id": "rgb_doc_227972581ff2f302dc1c2775:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": 11.57223892211914,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content": "本地宝武汉2022春运专题为您提供最全面的春运时间信息，包括春运什么时候开始，2022春运时间等方面的信息。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_227972581ff2f302dc1c2775:r1",
+              "block_ids": [
+                "rgb_doc_227972581ff2f302dc1c2775:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 54
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 11.57223892211914,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_51993f93cbe8a4b36a7559c3",
+            "version_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1",
+            "document_name": "rgb_doc_51993f93cbe8a4b36a7559c3.txt",
+            "chunk_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": 11.067203521728516,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content": "毕竟高速上如果遇到堵车，汽车长时间的走走停停会耗油量会很大。  2022春运哪天开始相关文章： ★ 2022年春运是从几号开始 ★ 春运2022年春运几号开始售票 ★ 2022年春节放假时间安排来了 ★ 2022年春节过年时几月几号哪一天 ★ 2022年春节是哪一天几月几号 ★ 2022全年放假具体时间安排表 ★ 2022年春节是几月几号星期几 ★ 2022牛年春节是几月几日星期几 ★ 有关2022年春节放假安排通知 油猫饼 上善若水 您还不是会员 包月(30天) 19.99元 包季(90天) 49.99元 16.66元/月 包月(365天) 99.99元 8.",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1",
+              "block_ids": [
+                "rgb_doc_51993f93cbe8a4b36a7559c3:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 284
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 11.067203521728516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b92189bbe34fd86908cb4bc4",
+            "version_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1",
+            "document_name": "rgb_doc_b92189bbe34fd86908cb4bc4.txt",
+            "chunk_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": 11.065885543823242,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content": "推荐阅读： 　　2022年最新高速公路免费时间（开始时间+结束时间） 　　广州限行规定（时间+范围+对象+图解） 温馨提示：微信搜索公众号广州本地宝，关注后在对话框回复【春运】可获春运开始+结束时间、春运购票日历+购票入口、起售时间、抢票攻略、停运列车。 手机访问 广州本地宝首页    12306网上订票几点开始放票？12306每天放票时间是什么时候？12306网站什么时候放票？2015年火车票12306放票时间段是什么？12306放票规律是什么？     广州春运火车票网上订票什么时候放票？广州春运火车票电话订票什么时候放票？火车票起售时间是什么意思？",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1",
+              "block_ids": [
+                "rgb_doc_b92189bbe34fd86908cb4bc4:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 280
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 11.065885543823242,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2d20b3a91cbc81dca015097c",
+            "version_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1",
+            "document_name": "rgb_doc_2d20b3a91cbc81dca015097c.txt",
+            "chunk_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": 10.773126602172852,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content": "2022年春运购票日历： 温馨提醒:微信搜索公众号【北京本地宝】,关注后回复【春运】可获2023年春运火车票购票入口(官网/APP)、春运起止时间/火车票预售时间、各火车站起售时间/退票规定。  手机访问 北京本地宝首页     关于调整互联网、电话订票预售期有关事项公告如下     2012-2013寒假学生票最多提前多少天买？这是2012年最后的一件大事，必须好好办。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1",
+              "block_ids": [
+                "rgb_doc_2d20b3a91cbc81dca015097c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 187
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 10.773126602172852,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2d36459d2a15326aaf2b272",
+            "version_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1",
+            "document_name": "rgb_doc_f2d36459d2a15326aaf2b272.txt",
+            "chunk_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": 10.768945693969727,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content": "中国2022年春运首日火车票开售. 时间: 2022-01-03 19:27:09; 来源: 中新社; 编辑: 聂晓. 1月3日起，旅客可通过网络和电话购买春运火车票。据悉，2022年春运自1月17日 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1",
+              "block_ids": [
+                "rgb_doc_f2d36459d2a15326aaf2b272:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 104
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 10.768945693969727,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e4e708b3e6ee3945f7ff482",
+            "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+            "document_name": "rgb_doc_4e4e708b3e6ee3945f7ff482.txt",
+            "chunk_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": 10.71630859375,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content": "Dec 21, 2021 ... 2022年春运从1月17日开始，2月25日结束，共40天，春运第一天的火车票(1 ... 回复【春运】可获2023年春运火车票购票入口(官网/APP)、春运起止时间/火车 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+              "block_ids": [
+                "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 106
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 10.71630859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e30a6e01f02fac6edc6c25bd",
+            "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+            "document_name": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+            "chunk_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": 10.694977760314941,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content": "Jan 6, 2022 ... 记者从2022年全国春运电视电话会议上获悉：今年春运将从1月17日开始， ... 根据属地疫情防控要求，调整寒假放假、开学时间，尽可能错开春运时段；二是 ...",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+              "block_ids": [
+                "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 10.694977760314941,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c",
+            "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+            "document_name": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+            "chunk_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": 10.609368324279785,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content": "2022年春运时间： 　　2022年1月17日—2月25日，共40天 　　2022年春运抢票时间： 　　春运第一天的火车票(2022年1月17日农历腊月十五)——2022年1月3日开抢 　　春运第二天的火车票(2022年1月18日农历腊月十六)——2022年1月4日开抢 　　春运第三天的火车票(2022年1月19日农历腊月十七)——2022年1月5日开抢 　　春运第四天的火车票(2022年1月20日农历腊月十八)——2022年1月6日开抢 　　除夕前一天的火车票(2022年1月30日农历腊月廿九)——2022年1月16日开抢 　　除夕当天的火车票(2022年1月31日农历腊月三十)——2022年1月17日开抢",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+              "block_ids": [
+                "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 308
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 10.609368324279785,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b3a83d584d910f85b503cf76",
+            "version_id": "rgb_doc_b3a83d584d910f85b503cf76:r1",
+            "document_name": "rgb_doc_b3a83d584d910f85b503cf76.txt",
+            "chunk_id": "rgb_doc_b3a83d584d910f85b503cf76:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": 10.564702987670898,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content": "Jan 6, 2022 ... 2022年春运将从1月17日开始，2月25日结束，共计40天。2022年是我国踏上 ... 属地疫情防控要求，及时调整寒假放假、开学时间，尽可能错开春运时段。",
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b3a83d584d910f85b503cf76:r1",
+              "block_ids": [
+                "rgb_doc_b3a83d584d910f85b503cf76:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 10.564702987670898,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ]
+          }
+        ],
+        "documents": [
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6676c47d89785b09ab2c8b59",
+            "version_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1",
+            "document_name": "rgb_doc_6676c47d89785b09ab2c8b59.txt",
+            "rank": 1,
+            "score": 0.01639344262295082,
+            "chunk_ids": [
+              "rgb_doc_6676c47d89785b09ab2c8b59:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6676c47d89785b09ab2c8b59.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_227972581ff2f302dc1c2775",
+            "version_id": "rgb_doc_227972581ff2f302dc1c2775:r1",
+            "document_name": "rgb_doc_227972581ff2f302dc1c2775.txt",
+            "rank": 2,
+            "score": 0.016129032258064516,
+            "chunk_ids": [
+              "rgb_doc_227972581ff2f302dc1c2775:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_227972581ff2f302dc1c2775.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_51993f93cbe8a4b36a7559c3",
+            "version_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1",
+            "document_name": "rgb_doc_51993f93cbe8a4b36a7559c3.txt",
+            "rank": 3,
+            "score": 0.015873015873015872,
+            "chunk_ids": [
+              "rgb_doc_51993f93cbe8a4b36a7559c3:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_51993f93cbe8a4b36a7559c3.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b92189bbe34fd86908cb4bc4",
+            "version_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1",
+            "document_name": "rgb_doc_b92189bbe34fd86908cb4bc4.txt",
+            "rank": 4,
+            "score": 0.015625,
+            "chunk_ids": [
+              "rgb_doc_b92189bbe34fd86908cb4bc4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b92189bbe34fd86908cb4bc4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2d20b3a91cbc81dca015097c",
+            "version_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1",
+            "document_name": "rgb_doc_2d20b3a91cbc81dca015097c.txt",
+            "rank": 5,
+            "score": 0.015384615384615385,
+            "chunk_ids": [
+              "rgb_doc_2d20b3a91cbc81dca015097c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2d20b3a91cbc81dca015097c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2d36459d2a15326aaf2b272",
+            "version_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1",
+            "document_name": "rgb_doc_f2d36459d2a15326aaf2b272.txt",
+            "rank": 6,
+            "score": 0.015151515151515152,
+            "chunk_ids": [
+              "rgb_doc_f2d36459d2a15326aaf2b272:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f2d36459d2a15326aaf2b272.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e4e708b3e6ee3945f7ff482",
+            "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+            "document_name": "rgb_doc_4e4e708b3e6ee3945f7ff482.txt",
+            "rank": 7,
+            "score": 0.014925373134328358,
+            "chunk_ids": [
+              "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4e4e708b3e6ee3945f7ff482.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e30a6e01f02fac6edc6c25bd",
+            "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+            "document_name": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+            "rank": 8,
+            "score": 0.014705882352941176,
+            "chunk_ids": [
+              "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c",
+            "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+            "document_name": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+            "rank": 9,
+            "score": 0.014492753623188406,
+            "chunk_ids": [
+              "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b3a83d584d910f85b503cf76",
+            "version_id": "rgb_doc_b3a83d584d910f85b503cf76:r1",
+            "document_name": "rgb_doc_b3a83d584d910f85b503cf76.txt",
+            "rank": 10,
+            "score": 0.014285714285714285,
+            "chunk_ids": [
+              "rgb_doc_b3a83d584d910f85b503cf76:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b3a83d584d910f85b503cf76.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3a064c491fb60cdd4baae25a",
+            "version_id": "rgb_doc_3a064c491fb60cdd4baae25a:r1",
+            "document_name": "rgb_doc_3a064c491fb60cdd4baae25a.txt",
+            "rank": 11,
+            "score": 0.014084507042253521,
+            "chunk_ids": [
+              "rgb_doc_3a064c491fb60cdd4baae25a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3a064c491fb60cdd4baae25a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_37adabbe6435e96fb06c734d",
+            "version_id": "rgb_doc_37adabbe6435e96fb06c734d:r1",
+            "document_name": "rgb_doc_37adabbe6435e96fb06c734d.txt",
+            "rank": 12,
+            "score": 0.013888888888888888,
+            "chunk_ids": [
+              "rgb_doc_37adabbe6435e96fb06c734d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_37adabbe6435e96fb06c734d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8691378e45f80ab4cfce4d18",
+            "version_id": "rgb_doc_8691378e45f80ab4cfce4d18:r1",
+            "document_name": "rgb_doc_8691378e45f80ab4cfce4d18.txt",
+            "rank": 13,
+            "score": 0.0136986301369863,
+            "chunk_ids": [
+              "rgb_doc_8691378e45f80ab4cfce4d18:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8691378e45f80ab4cfce4d18.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_55889ee96060e9acd52a9a15",
+            "version_id": "rgb_doc_55889ee96060e9acd52a9a15:r1",
+            "document_name": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "rank": 14,
+            "score": 0.013513513513513514,
+            "chunk_ids": [
+              "rgb_doc_55889ee96060e9acd52a9a15:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_55889ee96060e9acd52a9a15.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2f57e355d431af8859e28981",
+            "version_id": "rgb_doc_2f57e355d431af8859e28981:r1",
+            "document_name": "rgb_doc_2f57e355d431af8859e28981.txt",
+            "rank": 15,
+            "score": 0.013333333333333334,
+            "chunk_ids": [
+              "rgb_doc_2f57e355d431af8859e28981:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2f57e355d431af8859e28981.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_3c26339833bf09f67bfb163a",
+            "version_id": "rgb_doc_3c26339833bf09f67bfb163a:r1",
+            "document_name": "rgb_doc_3c26339833bf09f67bfb163a.txt",
+            "rank": 16,
+            "score": 0.013157894736842105,
+            "chunk_ids": [
+              "rgb_doc_3c26339833bf09f67bfb163a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_3c26339833bf09f67bfb163a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_afd2695797c0c23a692bf1e6",
+            "version_id": "rgb_doc_afd2695797c0c23a692bf1e6:r1",
+            "document_name": "rgb_doc_afd2695797c0c23a692bf1e6.txt",
+            "rank": 17,
+            "score": 0.012987012987012988,
+            "chunk_ids": [
+              "rgb_doc_afd2695797c0c23a692bf1e6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_afd2695797c0c23a692bf1e6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_5862801dfc2c3119f5d852fd",
+            "version_id": "rgb_doc_5862801dfc2c3119f5d852fd:r1",
+            "document_name": "rgb_doc_5862801dfc2c3119f5d852fd.txt",
+            "rank": 18,
+            "score": 0.01282051282051282,
+            "chunk_ids": [
+              "rgb_doc_5862801dfc2c3119f5d852fd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_5862801dfc2c3119f5d852fd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d991566615d5a3086df7c411",
+            "version_id": "rgb_doc_d991566615d5a3086df7c411:r1",
+            "document_name": "rgb_doc_d991566615d5a3086df7c411.txt",
+            "rank": 19,
+            "score": 0.012658227848101266,
+            "chunk_ids": [
+              "rgb_doc_d991566615d5a3086df7c411:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d991566615d5a3086df7c411.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1b652b887d109426660da3f2",
+            "version_id": "rgb_doc_1b652b887d109426660da3f2:r1",
+            "document_name": "rgb_doc_1b652b887d109426660da3f2.txt",
+            "rank": 20,
+            "score": 0.0125,
+            "chunk_ids": [
+              "rgb_doc_1b652b887d109426660da3f2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1b652b887d109426660da3f2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_62d58a93124a0ed6421eee70",
+            "version_id": "rgb_doc_62d58a93124a0ed6421eee70:r1",
+            "document_name": "rgb_doc_62d58a93124a0ed6421eee70.txt",
+            "rank": 21,
+            "score": 0.012345679012345678,
+            "chunk_ids": [
+              "rgb_doc_62d58a93124a0ed6421eee70:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_62d58a93124a0ed6421eee70.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_da810d057a7d0200c1204bad",
+            "version_id": "rgb_doc_da810d057a7d0200c1204bad:r1",
+            "document_name": "rgb_doc_da810d057a7d0200c1204bad.txt",
+            "rank": 22,
+            "score": 0.012195121951219513,
+            "chunk_ids": [
+              "rgb_doc_da810d057a7d0200c1204bad:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_da810d057a7d0200c1204bad.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_49094eb8568b1c24c27d77ca",
+            "version_id": "rgb_doc_49094eb8568b1c24c27d77ca:r1",
+            "document_name": "rgb_doc_49094eb8568b1c24c27d77ca.txt",
+            "rank": 23,
+            "score": 0.012048192771084338,
+            "chunk_ids": [
+              "rgb_doc_49094eb8568b1c24c27d77ca:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_49094eb8568b1c24c27d77ca.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f50ed94ead6aad3947764054",
+            "version_id": "rgb_doc_f50ed94ead6aad3947764054:r1",
+            "document_name": "rgb_doc_f50ed94ead6aad3947764054.txt",
+            "rank": 24,
+            "score": 0.011904761904761904,
+            "chunk_ids": [
+              "rgb_doc_f50ed94ead6aad3947764054:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f50ed94ead6aad3947764054.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_763b30718c63733fe2706bbd",
+            "version_id": "rgb_doc_763b30718c63733fe2706bbd:r1",
+            "document_name": "rgb_doc_763b30718c63733fe2706bbd.txt",
+            "rank": 25,
+            "score": 0.011764705882352941,
+            "chunk_ids": [
+              "rgb_doc_763b30718c63733fe2706bbd:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_763b30718c63733fe2706bbd.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_edefae16ce302fad80cb9fb1",
+            "version_id": "rgb_doc_edefae16ce302fad80cb9fb1:r1",
+            "document_name": "rgb_doc_edefae16ce302fad80cb9fb1.txt",
+            "rank": 26,
+            "score": 0.011627906976744186,
+            "chunk_ids": [
+              "rgb_doc_edefae16ce302fad80cb9fb1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_edefae16ce302fad80cb9fb1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec36dc18190e7d312753aad2",
+            "version_id": "rgb_doc_ec36dc18190e7d312753aad2:r1",
+            "document_name": "rgb_doc_ec36dc18190e7d312753aad2.txt",
+            "rank": 27,
+            "score": 0.011494252873563218,
+            "chunk_ids": [
+              "rgb_doc_ec36dc18190e7d312753aad2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ec36dc18190e7d312753aad2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c766d49d625e8d28780c7514",
+            "version_id": "rgb_doc_c766d49d625e8d28780c7514:r1",
+            "document_name": "rgb_doc_c766d49d625e8d28780c7514.txt",
+            "rank": 28,
+            "score": 0.011363636363636364,
+            "chunk_ids": [
+              "rgb_doc_c766d49d625e8d28780c7514:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c766d49d625e8d28780c7514.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ff7e17540b33c9435f030ce6",
+            "version_id": "rgb_doc_ff7e17540b33c9435f030ce6:r1",
+            "document_name": "rgb_doc_ff7e17540b33c9435f030ce6.txt",
+            "rank": 29,
+            "score": 0.011235955056179775,
+            "chunk_ids": [
+              "rgb_doc_ff7e17540b33c9435f030ce6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ff7e17540b33c9435f030ce6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_69a3e001db3362db552cb4ba",
+            "version_id": "rgb_doc_69a3e001db3362db552cb4ba:r1",
+            "document_name": "rgb_doc_69a3e001db3362db552cb4ba.txt",
+            "rank": 30,
+            "score": 0.011111111111111112,
+            "chunk_ids": [
+              "rgb_doc_69a3e001db3362db552cb4ba:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_69a3e001db3362db552cb4ba.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_982ec32c32e2e0acc2cf6482",
+            "version_id": "rgb_doc_982ec32c32e2e0acc2cf6482:r1",
+            "document_name": "rgb_doc_982ec32c32e2e0acc2cf6482.txt",
+            "rank": 31,
+            "score": 0.01098901098901099,
+            "chunk_ids": [
+              "rgb_doc_982ec32c32e2e0acc2cf6482:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_982ec32c32e2e0acc2cf6482.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0e08d4fff24bcd48525dcc1d",
+            "version_id": "rgb_doc_0e08d4fff24bcd48525dcc1d:r1",
+            "document_name": "rgb_doc_0e08d4fff24bcd48525dcc1d.txt",
+            "rank": 32,
+            "score": 0.010869565217391304,
+            "chunk_ids": [
+              "rgb_doc_0e08d4fff24bcd48525dcc1d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0e08d4fff24bcd48525dcc1d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_dd56b4b8df3a91c4fbbe7223",
+            "version_id": "rgb_doc_dd56b4b8df3a91c4fbbe7223:r1",
+            "document_name": "rgb_doc_dd56b4b8df3a91c4fbbe7223.txt",
+            "rank": 33,
+            "score": 0.010752688172043012,
+            "chunk_ids": [
+              "rgb_doc_dd56b4b8df3a91c4fbbe7223:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_dd56b4b8df3a91c4fbbe7223.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_7c96413244d58ec18aad852a",
+            "version_id": "rgb_doc_7c96413244d58ec18aad852a:r1",
+            "document_name": "rgb_doc_7c96413244d58ec18aad852a.txt",
+            "rank": 34,
+            "score": 0.010638297872340425,
+            "chunk_ids": [
+              "rgb_doc_7c96413244d58ec18aad852a:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_7c96413244d58ec18aad852a.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_77928831baa3e88e9cf43b05",
+            "version_id": "rgb_doc_77928831baa3e88e9cf43b05:r1",
+            "document_name": "rgb_doc_77928831baa3e88e9cf43b05.txt",
+            "rank": 35,
+            "score": 0.010526315789473684,
+            "chunk_ids": [
+              "rgb_doc_77928831baa3e88e9cf43b05:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_77928831baa3e88e9cf43b05.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_bc4890deed9b2bee356f7b4e",
+            "version_id": "rgb_doc_bc4890deed9b2bee356f7b4e:r1",
+            "document_name": "rgb_doc_bc4890deed9b2bee356f7b4e.txt",
+            "rank": 36,
+            "score": 0.010416666666666666,
+            "chunk_ids": [
+              "rgb_doc_bc4890deed9b2bee356f7b4e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_bc4890deed9b2bee356f7b4e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6f9dc337fd2cb1afed4c71ac",
+            "version_id": "rgb_doc_6f9dc337fd2cb1afed4c71ac:r1",
+            "document_name": "rgb_doc_6f9dc337fd2cb1afed4c71ac.txt",
+            "rank": 37,
+            "score": 0.010309278350515464,
+            "chunk_ids": [
+              "rgb_doc_6f9dc337fd2cb1afed4c71ac:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_6f9dc337fd2cb1afed4c71ac.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4ffdee6aa7557eeb7e0fc903",
+            "version_id": "rgb_doc_4ffdee6aa7557eeb7e0fc903:r1",
+            "document_name": "rgb_doc_4ffdee6aa7557eeb7e0fc903.txt",
+            "rank": 38,
+            "score": 0.01020408163265306,
+            "chunk_ids": [
+              "rgb_doc_4ffdee6aa7557eeb7e0fc903:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4ffdee6aa7557eeb7e0fc903.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e92d77872cace8aaf95c00f1",
+            "version_id": "rgb_doc_e92d77872cace8aaf95c00f1:r1",
+            "document_name": "rgb_doc_e92d77872cace8aaf95c00f1.txt",
+            "rank": 39,
+            "score": 0.010101010101010102,
+            "chunk_ids": [
+              "rgb_doc_e92d77872cace8aaf95c00f1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e92d77872cace8aaf95c00f1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_590d75e2891acaea66a7a1cb",
+            "version_id": "rgb_doc_590d75e2891acaea66a7a1cb:r1",
+            "document_name": "rgb_doc_590d75e2891acaea66a7a1cb.txt",
+            "rank": 40,
+            "score": 0.01,
+            "chunk_ids": [
+              "rgb_doc_590d75e2891acaea66a7a1cb:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_590d75e2891acaea66a7a1cb.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c3a83f10e937c66d6e5eba40",
+            "version_id": "rgb_doc_c3a83f10e937c66d6e5eba40:r1",
+            "document_name": "rgb_doc_c3a83f10e937c66d6e5eba40.txt",
+            "rank": 41,
+            "score": 0.009900990099009901,
+            "chunk_ids": [
+              "rgb_doc_c3a83f10e937c66d6e5eba40:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c3a83f10e937c66d6e5eba40.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_63f03db630964fe434995212",
+            "version_id": "rgb_doc_63f03db630964fe434995212:r1",
+            "document_name": "rgb_doc_63f03db630964fe434995212.txt",
+            "rank": 42,
+            "score": 0.00980392156862745,
+            "chunk_ids": [
+              "rgb_doc_63f03db630964fe434995212:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_63f03db630964fe434995212.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a82cb652f8ce612aa1036201",
+            "version_id": "rgb_doc_a82cb652f8ce612aa1036201:r1",
+            "document_name": "rgb_doc_a82cb652f8ce612aa1036201.txt",
+            "rank": 43,
+            "score": 0.009708737864077669,
+            "chunk_ids": [
+              "rgb_doc_a82cb652f8ce612aa1036201:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a82cb652f8ce612aa1036201.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2a433f410227b963bf46238f",
+            "version_id": "rgb_doc_2a433f410227b963bf46238f:r1",
+            "document_name": "rgb_doc_2a433f410227b963bf46238f.txt",
+            "rank": 44,
+            "score": 0.009615384615384616,
+            "chunk_ids": [
+              "rgb_doc_2a433f410227b963bf46238f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_2a433f410227b963bf46238f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_c8165073e5d4e11934162a5f",
+            "version_id": "rgb_doc_c8165073e5d4e11934162a5f:r1",
+            "document_name": "rgb_doc_c8165073e5d4e11934162a5f.txt",
+            "rank": 45,
+            "score": 0.009523809523809525,
+            "chunk_ids": [
+              "rgb_doc_c8165073e5d4e11934162a5f:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_c8165073e5d4e11934162a5f.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec74aca2e1d3729afb455002",
+            "version_id": "rgb_doc_ec74aca2e1d3729afb455002:r1",
+            "document_name": "rgb_doc_ec74aca2e1d3729afb455002.txt",
+            "rank": 46,
+            "score": 0.009433962264150943,
+            "chunk_ids": [
+              "rgb_doc_ec74aca2e1d3729afb455002:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ec74aca2e1d3729afb455002.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_a92fff76af1c836bd8769adf",
+            "version_id": "rgb_doc_a92fff76af1c836bd8769adf:r1",
+            "document_name": "rgb_doc_a92fff76af1c836bd8769adf.txt",
+            "rank": 47,
+            "score": 0.009345794392523364,
+            "chunk_ids": [
+              "rgb_doc_a92fff76af1c836bd8769adf:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_a92fff76af1c836bd8769adf.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4172dd8e9247ff5e03be17c5",
+            "version_id": "rgb_doc_4172dd8e9247ff5e03be17c5:r1",
+            "document_name": "rgb_doc_4172dd8e9247ff5e03be17c5.txt",
+            "rank": 48,
+            "score": 0.009259259259259259,
+            "chunk_ids": [
+              "rgb_doc_4172dd8e9247ff5e03be17c5:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4172dd8e9247ff5e03be17c5.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f0fa84336e580d946caadfa2",
+            "version_id": "rgb_doc_f0fa84336e580d946caadfa2:r1",
+            "document_name": "rgb_doc_f0fa84336e580d946caadfa2.txt",
+            "rank": 49,
+            "score": 0.009174311926605505,
+            "chunk_ids": [
+              "rgb_doc_f0fa84336e580d946caadfa2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_f0fa84336e580d946caadfa2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_65c54bddccdebe2214acd4af",
+            "version_id": "rgb_doc_65c54bddccdebe2214acd4af:r1",
+            "document_name": "rgb_doc_65c54bddccdebe2214acd4af.txt",
+            "rank": 50,
+            "score": 0.00909090909090909,
+            "chunk_ids": [
+              "rgb_doc_65c54bddccdebe2214acd4af:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_65c54bddccdebe2214acd4af.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_83cf0616affc13c907e2a7a9",
+            "version_id": "rgb_doc_83cf0616affc13c907e2a7a9:r1",
+            "document_name": "rgb_doc_83cf0616affc13c907e2a7a9.txt",
+            "rank": 51,
+            "score": 0.009009009009009009,
+            "chunk_ids": [
+              "rgb_doc_83cf0616affc13c907e2a7a9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_83cf0616affc13c907e2a7a9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4b7e2e7cd6fc39ed62afd05c",
+            "version_id": "rgb_doc_4b7e2e7cd6fc39ed62afd05c:r1",
+            "document_name": "rgb_doc_4b7e2e7cd6fc39ed62afd05c.txt",
+            "rank": 52,
+            "score": 0.008928571428571428,
+            "chunk_ids": [
+              "rgb_doc_4b7e2e7cd6fc39ed62afd05c:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_4b7e2e7cd6fc39ed62afd05c.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_43c76fa91ad46b6a0d2a63c8",
+            "version_id": "rgb_doc_43c76fa91ad46b6a0d2a63c8:r1",
+            "document_name": "rgb_doc_43c76fa91ad46b6a0d2a63c8.txt",
+            "rank": 53,
+            "score": 0.008849557522123894,
+            "chunk_ids": [
+              "rgb_doc_43c76fa91ad46b6a0d2a63c8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_43c76fa91ad46b6a0d2a63c8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_976f8ebf4d8fe5668d16e533",
+            "version_id": "rgb_doc_976f8ebf4d8fe5668d16e533:r1",
+            "document_name": "rgb_doc_976f8ebf4d8fe5668d16e533.txt",
+            "rank": 54,
+            "score": 0.008771929824561403,
+            "chunk_ids": [
+              "rgb_doc_976f8ebf4d8fe5668d16e533:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_976f8ebf4d8fe5668d16e533.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_074b17fbd255676e16fa1f51",
+            "version_id": "rgb_doc_074b17fbd255676e16fa1f51:r1",
+            "document_name": "rgb_doc_074b17fbd255676e16fa1f51.txt",
+            "rank": 55,
+            "score": 0.008695652173913044,
+            "chunk_ids": [
+              "rgb_doc_074b17fbd255676e16fa1f51:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_074b17fbd255676e16fa1f51.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_38f93ba41069842fe182184b",
+            "version_id": "rgb_doc_38f93ba41069842fe182184b:r1",
+            "document_name": "rgb_doc_38f93ba41069842fe182184b.txt",
+            "rank": 56,
+            "score": 0.008620689655172414,
+            "chunk_ids": [
+              "rgb_doc_38f93ba41069842fe182184b:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_38f93ba41069842fe182184b.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_296c01c1e138641af3db41a9",
+            "version_id": "rgb_doc_296c01c1e138641af3db41a9:r1",
+            "document_name": "rgb_doc_296c01c1e138641af3db41a9.txt",
+            "rank": 57,
+            "score": 0.008547008547008548,
+            "chunk_ids": [
+              "rgb_doc_296c01c1e138641af3db41a9:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_296c01c1e138641af3db41a9.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ce6f8418b10b6a619a15dcf2",
+            "version_id": "rgb_doc_ce6f8418b10b6a619a15dcf2:r1",
+            "document_name": "rgb_doc_ce6f8418b10b6a619a15dcf2.txt",
+            "rank": 58,
+            "score": 0.00847457627118644,
+            "chunk_ids": [
+              "rgb_doc_ce6f8418b10b6a619a15dcf2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ce6f8418b10b6a619a15dcf2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b80af46bb0e915277b83a52d",
+            "version_id": "rgb_doc_b80af46bb0e915277b83a52d:r1",
+            "document_name": "rgb_doc_b80af46bb0e915277b83a52d.txt",
+            "rank": 59,
+            "score": 0.008403361344537815,
+            "chunk_ids": [
+              "rgb_doc_b80af46bb0e915277b83a52d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b80af46bb0e915277b83a52d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_269894e159027eda049d409e",
+            "version_id": "rgb_doc_269894e159027eda049d409e:r1",
+            "document_name": "rgb_doc_269894e159027eda049d409e.txt",
+            "rank": 60,
+            "score": 0.008333333333333333,
+            "chunk_ids": [
+              "rgb_doc_269894e159027eda049d409e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_269894e159027eda049d409e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_619450f8bea5966d85476740",
+            "version_id": "rgb_doc_619450f8bea5966d85476740:r1",
+            "document_name": "rgb_doc_619450f8bea5966d85476740.txt",
+            "rank": 61,
+            "score": 0.008264462809917356,
+            "chunk_ids": [
+              "rgb_doc_619450f8bea5966d85476740:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_619450f8bea5966d85476740.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_69311a5ceed5800d7459db45",
+            "version_id": "rgb_doc_69311a5ceed5800d7459db45:r1",
+            "document_name": "rgb_doc_69311a5ceed5800d7459db45.txt",
+            "rank": 62,
+            "score": 0.00819672131147541,
+            "chunk_ids": [
+              "rgb_doc_69311a5ceed5800d7459db45:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_69311a5ceed5800d7459db45.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_472a2bb4e193130f824af9bf",
+            "version_id": "rgb_doc_472a2bb4e193130f824af9bf:r1",
+            "document_name": "rgb_doc_472a2bb4e193130f824af9bf.txt",
+            "rank": 63,
+            "score": 0.008130081300813009,
+            "chunk_ids": [
+              "rgb_doc_472a2bb4e193130f824af9bf:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_472a2bb4e193130f824af9bf.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_8a4c4292c8bfe85d9de4ddf6",
+            "version_id": "rgb_doc_8a4c4292c8bfe85d9de4ddf6:r1",
+            "document_name": "rgb_doc_8a4c4292c8bfe85d9de4ddf6.txt",
+            "rank": 64,
+            "score": 0.008064516129032258,
+            "chunk_ids": [
+              "rgb_doc_8a4c4292c8bfe85d9de4ddf6:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_8a4c4292c8bfe85d9de4ddf6.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b319f5e0da06a43c0e0e082d",
+            "version_id": "rgb_doc_b319f5e0da06a43c0e0e082d:r1",
+            "document_name": "rgb_doc_b319f5e0da06a43c0e0e082d.txt",
+            "rank": 65,
+            "score": 0.008,
+            "chunk_ids": [
+              "rgb_doc_b319f5e0da06a43c0e0e082d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_b319f5e0da06a43c0e0e082d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_1a5eaaa18f09995fde08e1c4",
+            "version_id": "rgb_doc_1a5eaaa18f09995fde08e1c4:r1",
+            "document_name": "rgb_doc_1a5eaaa18f09995fde08e1c4.txt",
+            "rank": 66,
+            "score": 0.007936507936507936,
+            "chunk_ids": [
+              "rgb_doc_1a5eaaa18f09995fde08e1c4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_1a5eaaa18f09995fde08e1c4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_471b991b648ca8422bfe5b7d",
+            "version_id": "rgb_doc_471b991b648ca8422bfe5b7d:r1",
+            "document_name": "rgb_doc_471b991b648ca8422bfe5b7d.txt",
+            "rank": 67,
+            "score": 0.007874015748031496,
+            "chunk_ids": [
+              "rgb_doc_471b991b648ca8422bfe5b7d:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_471b991b648ca8422bfe5b7d.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_aee084692b01478d412f9ad1",
+            "version_id": "rgb_doc_aee084692b01478d412f9ad1:r1",
+            "document_name": "rgb_doc_aee084692b01478d412f9ad1.txt",
+            "rank": 68,
+            "score": 0.0078125,
+            "chunk_ids": [
+              "rgb_doc_aee084692b01478d412f9ad1:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_aee084692b01478d412f9ad1.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e3b95d75e4f27d692efdb458",
+            "version_id": "rgb_doc_e3b95d75e4f27d692efdb458:r1",
+            "document_name": "rgb_doc_e3b95d75e4f27d692efdb458.txt",
+            "rank": 69,
+            "score": 0.007751937984496124,
+            "chunk_ids": [
+              "rgb_doc_e3b95d75e4f27d692efdb458:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_e3b95d75e4f27d692efdb458.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_fa0b6b59ab0254101baf68b8",
+            "version_id": "rgb_doc_fa0b6b59ab0254101baf68b8:r1",
+            "document_name": "rgb_doc_fa0b6b59ab0254101baf68b8.txt",
+            "rank": 70,
+            "score": 0.007692307692307693,
+            "chunk_ids": [
+              "rgb_doc_fa0b6b59ab0254101baf68b8:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_fa0b6b59ab0254101baf68b8.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_450ec79bfa690451f83f1d72",
+            "version_id": "rgb_doc_450ec79bfa690451f83f1d72:r1",
+            "document_name": "rgb_doc_450ec79bfa690451f83f1d72.txt",
+            "rank": 71,
+            "score": 0.007633587786259542,
+            "chunk_ids": [
+              "rgb_doc_450ec79bfa690451f83f1d72:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_450ec79bfa690451f83f1d72.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d9c94e27ef2837c0667ff90e",
+            "version_id": "rgb_doc_d9c94e27ef2837c0667ff90e:r1",
+            "document_name": "rgb_doc_d9c94e27ef2837c0667ff90e.txt",
+            "rank": 72,
+            "score": 0.007575757575757576,
+            "chunk_ids": [
+              "rgb_doc_d9c94e27ef2837c0667ff90e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d9c94e27ef2837c0667ff90e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_af72625732f980f23b3193d2",
+            "version_id": "rgb_doc_af72625732f980f23b3193d2:r1",
+            "document_name": "rgb_doc_af72625732f980f23b3193d2.txt",
+            "rank": 73,
+            "score": 0.007518796992481203,
+            "chunk_ids": [
+              "rgb_doc_af72625732f980f23b3193d2:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_af72625732f980f23b3193d2.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_ec16dad5c77b5ee908c8ce52",
+            "version_id": "rgb_doc_ec16dad5c77b5ee908c8ce52:r1",
+            "document_name": "rgb_doc_ec16dad5c77b5ee908c8ce52.txt",
+            "rank": 74,
+            "score": 0.007462686567164179,
+            "chunk_ids": [
+              "rgb_doc_ec16dad5c77b5ee908c8ce52:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_ec16dad5c77b5ee908c8ce52.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_812dd84ea9da2cc5443d5dd4",
+            "version_id": "rgb_doc_812dd84ea9da2cc5443d5dd4:r1",
+            "document_name": "rgb_doc_812dd84ea9da2cc5443d5dd4.txt",
+            "rank": 75,
+            "score": 0.007407407407407408,
+            "chunk_ids": [
+              "rgb_doc_812dd84ea9da2cc5443d5dd4:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_812dd84ea9da2cc5443d5dd4.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_61a7cc8cdd89e4e2040ff878",
+            "version_id": "rgb_doc_61a7cc8cdd89e4e2040ff878:r1",
+            "document_name": "rgb_doc_61a7cc8cdd89e4e2040ff878.txt",
+            "rank": 76,
+            "score": 0.007352941176470588,
+            "chunk_ids": [
+              "rgb_doc_61a7cc8cdd89e4e2040ff878:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_61a7cc8cdd89e4e2040ff878.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_0de07f384a6d91ead4ac405e",
+            "version_id": "rgb_doc_0de07f384a6d91ead4ac405e:r1",
+            "document_name": "rgb_doc_0de07f384a6d91ead4ac405e.txt",
+            "rank": 77,
+            "score": 0.0072992700729927005,
+            "chunk_ids": [
+              "rgb_doc_0de07f384a6d91ead4ac405e:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_0de07f384a6d91ead4ac405e.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_30b74022df3fca3d9bd769ff",
+            "version_id": "rgb_doc_30b74022df3fca3d9bd769ff:r1",
+            "document_name": "rgb_doc_30b74022df3fca3d9bd769ff.txt",
+            "rank": 78,
+            "score": 0.007246376811594203,
+            "chunk_ids": [
+              "rgb_doc_30b74022df3fca3d9bd769ff:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_30b74022df3fca3d9bd769ff.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_d41bc3681427f349a1eb0758",
+            "version_id": "rgb_doc_d41bc3681427f349a1eb0758:r1",
+            "document_name": "rgb_doc_d41bc3681427f349a1eb0758.txt",
+            "rank": 79,
+            "score": 0.007194244604316547,
+            "chunk_ids": [
+              "rgb_doc_d41bc3681427f349a1eb0758:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_d41bc3681427f349a1eb0758.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          },
+          {
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_125a9ea6b0f02a1e594ee247",
+            "version_id": "rgb_doc_125a9ea6b0f02a1e594ee247:r1",
+            "document_name": "rgb_doc_125a9ea6b0f02a1e594ee247.txt",
+            "rank": 80,
+            "score": 0.007142857142857143,
+            "chunk_ids": [
+              "rgb_doc_125a9ea6b0f02a1e594ee247:r1:build:structure-v3-cfb1af48b26c:chunk:0"
+            ],
+            "table_ids": [],
+            "section_ids": [],
+            "candidate_count": 1,
+            "filename": "rgb_doc_125a9ea6b0f02a1e594ee247.txt",
+            "standard_title": null,
+            "standard_no": null,
+            "standard_year": null,
+            "metadata_scope": "current_source_metadata"
+          }
+        ],
+        "diagnostics": {
+          "backends": {
+            "chinese-rgb-evaluation:lexical": {
+              "status": "ok",
+              "elapsed_ms": 10.737624994362704,
+              "candidate_count": 80,
+              "verified_count": 80,
+              "candidates_truncated": false
+            },
+            "chinese-rgb-evaluation:vector": {
+              "status": "failed",
+              "error": "BackendError",
+              "code": "vector_unconfigured"
+            }
+          },
+          "authorization_ms": 13.23058300476987,
+          "evidence_ms": 2.5955410092137754,
+          "fusion_ms": 1.1062499979743734,
+          "reranker": {
+            "status": "disabled",
+            "elapsed_ms": 0
+          },
+          "candidate_count": 80,
+          "deduplicated": 0,
+          "rejected": {},
+          "total_ms": 39.53725000610575,
+          "context_chars": 1753,
+          "deadline_exceeded": false
+        },
+        "registered_evidence": [
+          "ev_f0fbf25ab7603cb1",
+          "ev_694aae7be807b4a6",
+          "ev_220df44de3322805",
+          "ev_7fd791c97ec18350",
+          "ev_9b4afa886983df47",
+          "ev_8f622b911a359997",
+          "ev_32774f89d451201e",
+          "ev_81e72e3143ef4772",
+          "ev_0dfec0489211891d",
+          "ev_0b86b2520b964683"
+        ],
+        "registration": {
+          "tool_candidate_count": 10,
+          "registered_evidence_count": 10,
+          "registration_rejections": {},
+          "examined": 10,
+          "rejected": 0,
+          "duplicate": 0,
+          "registered": 10,
+          "budget_exhausted": false,
+          "budget_reason": null,
+          "max_candidates_examined": 100,
+          "max_evidence_registered": 12,
+          "quota_filled": false,
+          "unexamined": 0
+        },
+        "observation_evidence": [
+          {
+            "evidence_id": "ev_f0fbf25ab7603cb1",
+            "content": "春运期间人流量肯定特别大，而现在疫情还没有结束，因此大家在出行前一定要做好防疫措施，防止疫情第二次爆发。下面是小编收集推荐的2022春运哪天开始，仅供参考，欢迎阅读。  2022春运哪天开始 春运时间是以每年的春节为界，春节前的15天以及春节后的25天，每年的春运时间为40天左右。2022年春节为2022年2月11日-2022年2月17日。 2022年春运从1月28日开始3月8日结束共40天 所以，2022年春运开始时间是1月28日星期四 腊月十六，春运结束时间是3月8日。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_6676c47d89785b09ab2c8b59",
+            "version_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1",
+            "document_name": "rgb_doc_6676c47d89785b09ab2c8b59.txt",
+            "chunk_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 1,
+            "source_score": null,
+            "fused_score": 0.01639344262295082,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1",
+              "block_ids": [
+                "rgb_doc_6676c47d89785b09ab2c8b59:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 239
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 1,
+                "score": 11.764193534851074,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 239,
+            "content_hash": "6676c47d89785b09ab2c8b59db8bb9f5bd3fb669157ff0e16feecd3061365f58",
+            "scope_digest": "2ed927b944d9fa0d7661bcf92fd9b40917d02e4e2d8a9cb8f191ead364a0b330",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_694aae7be807b4a6",
+            "content": "本地宝武汉2022春运专题为您提供最全面的春运时间信息，包括春运什么时候开始，2022春运时间等方面的信息。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_227972581ff2f302dc1c2775",
+            "version_id": "rgb_doc_227972581ff2f302dc1c2775:r1",
+            "document_name": "rgb_doc_227972581ff2f302dc1c2775.txt",
+            "chunk_id": "rgb_doc_227972581ff2f302dc1c2775:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 2,
+            "source_score": null,
+            "fused_score": 0.016129032258064516,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_227972581ff2f302dc1c2775:r1",
+              "block_ids": [
+                "rgb_doc_227972581ff2f302dc1c2775:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 54
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 2,
+                "score": 11.57223892211914,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 54,
+            "content_hash": "227972581ff2f302dc1c2775a50a8d5433ae3fd32e12cf5a3b8aefd1839e45ce",
+            "scope_digest": "107569857960084584c7fc8048ebad1e3d48a90024e0b2a6f1388ca4f255755a",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_220df44de3322805",
+            "content": "毕竟高速上如果遇到堵车，汽车长时间的走走停停会耗油量会很大。  2022春运哪天开始相关文章： ★ 2022年春运是从几号开始 ★ 春运2022年春运几号开始售票 ★ 2022年春节放假时间安排来了 ★ 2022年春节过年时几月几号哪一天 ★ 2022年春节是哪一天几月几号 ★ 2022全年放假具体时间安排表 ★ 2022年春节是几月几号星期几 ★ 2022牛年春节是几月几日星期几 ★ 有关2022年春节放假安排通知 油猫饼 上善若水 您还不是会员 包月(30天) 19.99元 包季(90天) 49.99元 16.66元/月 包月(365天) 99.99元 8.",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_51993f93cbe8a4b36a7559c3",
+            "version_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1",
+            "document_name": "rgb_doc_51993f93cbe8a4b36a7559c3.txt",
+            "chunk_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 3,
+            "source_score": null,
+            "fused_score": 0.015873015873015872,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1",
+              "block_ids": [
+                "rgb_doc_51993f93cbe8a4b36a7559c3:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 284
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 3,
+                "score": 11.067203521728516,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 284,
+            "content_hash": "51993f93cbe8a4b36a7559c3fb1252cf272ffa3d54a41b98b3547f653cd40c0f",
+            "scope_digest": "577556243a1f276f0cb4714e67c81f40367697fe59da2e5c5d66f59f1190ddc4",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_8b71e58fce377e23ad32",
+                "source_id": "S3",
+                "evidence_id": "ev_220df44de3322805",
+                "raw_text": "8",
+                "start": 282,
+                "end": 283,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": " 19.99元 包季(90天) 49.99元 16.66元/月 包月(365天) 99.99元 8.",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_7fd791c97ec18350",
+            "content": "推荐阅读： 　　2022年最新高速公路免费时间（开始时间+结束时间） 　　广州限行规定（时间+范围+对象+图解） 温馨提示：微信搜索公众号广州本地宝，关注后在对话框回复【春运】可获春运开始+结束时间、春运购票日历+购票入口、起售时间、抢票攻略、停运列车。 手机访问 广州本地宝首页    12306网上订票几点开始放票？12306每天放票时间是什么时候？12306网站什么时候放票？2015年火车票12306放票时间段是什么？12306放票规律是什么？     广州春运火车票网上订票什么时候放票？广州春运火车票电话订票什么时候放票？火车票起售时间是什么意思？",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b92189bbe34fd86908cb4bc4",
+            "version_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1",
+            "document_name": "rgb_doc_b92189bbe34fd86908cb4bc4.txt",
+            "chunk_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 4,
+            "source_score": null,
+            "fused_score": 0.015625,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1",
+              "block_ids": [
+                "rgb_doc_b92189bbe34fd86908cb4bc4:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 280
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 4,
+                "score": 11.065885543823242,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 280,
+            "content_hash": "b92189bbe34fd86908cb4bc4cc0d222bf955401a89037fba52957c14cd08842e",
+            "scope_digest": "3cf96a366f5146c59227ae1829e0a166a1d6668514b1b6eed780fdf03e3831a9",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_9b4afa886983df47",
+            "content": "2022年春运购票日历： 温馨提醒:微信搜索公众号【北京本地宝】,关注后回复【春运】可获2023年春运火车票购票入口(官网/APP)、春运起止时间/火车票预售时间、各火车站起售时间/退票规定。  手机访问 北京本地宝首页     关于调整互联网、电话订票预售期有关事项公告如下     2012-2013寒假学生票最多提前多少天买？这是2012年最后的一件大事，必须好好办。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_2d20b3a91cbc81dca015097c",
+            "version_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1",
+            "document_name": "rgb_doc_2d20b3a91cbc81dca015097c.txt",
+            "chunk_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 5,
+            "source_score": null,
+            "fused_score": 0.015384615384615385,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1",
+              "block_ids": [
+                "rgb_doc_2d20b3a91cbc81dca015097c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 187
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 5,
+                "score": 10.773126602172852,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 187,
+            "content_hash": "2d20b3a91cbc81dca015097cb65bd4df063293857c888e8435132b8e73155b02",
+            "scope_digest": "274657b938760d32d212d003fbb4cfa25a3e798df4c951e51acfa0618130ab42",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_3aa7df6562c0813e1ab9",
+                "source_id": "S5",
+                "evidence_id": "ev_9b4afa886983df47",
+                "raw_text": "2012",
+                "start": 143,
+                "end": 147,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "。  手机访问 北京本地宝首页     关于调整互联网、电话订票预售期有关事项公告如下     2012-2013寒假学生票最多提前多少天买？这是2012年最后的一件大事，必须好好办。",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_8f622b911a359997",
+            "content": "中国2022年春运首日火车票开售. 时间: 2022-01-03 19:27:09; 来源: 中新社; 编辑: 聂晓. 1月3日起，旅客可通过网络和电话购买春运火车票。据悉，2022年春运自1月17日 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_f2d36459d2a15326aaf2b272",
+            "version_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1",
+            "document_name": "rgb_doc_f2d36459d2a15326aaf2b272.txt",
+            "chunk_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 6,
+            "source_score": null,
+            "fused_score": 0.015151515151515152,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1",
+              "block_ids": [
+                "rgb_doc_f2d36459d2a15326aaf2b272:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 104
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 6,
+                "score": 10.768945693969727,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 104,
+            "content_hash": "f2d36459d2a15326aaf2b2720a73b99e82fa33bad365b3731731c3ff52dc12e7",
+            "scope_digest": "0c40c640128d8c18b73bbbb2f374bf41a9e2be6cc4bf311a0048383f6a2f9167",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_dab5551477ed3433f0b0",
+                "source_id": "S6",
+                "evidence_id": "ev_8f622b911a359997",
+                "raw_text": "2022",
+                "start": 22,
+                "end": 26,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "中国2022年春运首日火车票开售. 时间: 2022-01-03 19:27:09; 来源: 中新社; 编辑: 聂晓. 1月3日起，旅客可通过网络和",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_31e8bace0587388464e8",
+                "source_id": "S6",
+                "evidence_id": "ev_8f622b911a359997",
+                "raw_text": "19",
+                "start": 33,
+                "end": 35,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "中国2022年春运首日火车票开售. 时间: 2022-01-03 19:27:09; 来源: 中新社; 编辑: 聂晓. 1月3日起，旅客可通过网络和电话购买春运火车票",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_ee1efad4def12b7d0cfb",
+                "source_id": "S6",
+                "evidence_id": "ev_8f622b911a359997",
+                "raw_text": "27",
+                "start": 36,
+                "end": 38,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "中国2022年春运首日火车票开售. 时间: 2022-01-03 19:27:09; 来源: 中新社; 编辑: 聂晓. 1月3日起，旅客可通过网络和电话购买春运火车票。据悉",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_dfe84f94212392f6aa83",
+                "source_id": "S6",
+                "evidence_id": "ev_8f622b911a359997",
+                "raw_text": "09",
+                "start": 39,
+                "end": 41,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "中国2022年春运首日火车票开售. 时间: 2022-01-03 19:27:09; 来源: 中新社; 编辑: 聂晓. 1月3日起，旅客可通过网络和电话购买春运火车票。据悉，20",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_32774f89d451201e",
+            "content": "Dec 21, 2021 ... 2022年春运从1月17日开始，2月25日结束，共40天，春运第一天的火车票(1 ... 回复【春运】可获2023年春运火车票购票入口(官网/APP)、春运起止时间/火车 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_4e4e708b3e6ee3945f7ff482",
+            "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+            "document_name": "rgb_doc_4e4e708b3e6ee3945f7ff482.txt",
+            "chunk_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 7,
+            "source_score": null,
+            "fused_score": 0.014925373134328358,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+              "block_ids": [
+                "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 106
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 7,
+                "score": 10.71630859375,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 106,
+            "content_hash": "4e4e708b3e6ee3945f7ff4829c3f25823c1abc2ba187585593f7e79d07ff67c4",
+            "scope_digest": "b0b049aaa4632943b8d28fefca00071306e5cf0dbf074622c01a394b6d645078",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_29eab799a8715540c3c1",
+                "source_id": "S7",
+                "evidence_id": "ev_32774f89d451201e",
+                "raw_text": "21",
+                "start": 4,
+                "end": 6,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 21, 2021 ... 2022年春运从1月17日开始，2月25日结束，共40天，春运第一天的火车",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_03ccd1a87ac4f678ff75",
+                "source_id": "S7",
+                "evidence_id": "ev_32774f89d451201e",
+                "raw_text": "2021",
+                "start": 8,
+                "end": 12,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Dec 21, 2021 ... 2022年春运从1月17日开始，2月25日结束，共40天，春运第一天的火车票(1 ..",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_9cf8b34739a2d6169ec5",
+                "source_id": "S7",
+                "evidence_id": "ev_32774f89d451201e",
+                "raw_text": "1",
+                "start": 56,
+                "end": 57,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "2021 ... 2022年春运从1月17日开始，2月25日结束，共40天，春运第一天的火车票(1 ... 回复【春运】可获2023年春运火车票购票入口(官网/APP)、春运起止时间/火车 ..",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_81e72e3143ef4772",
+            "content": "Jan 6, 2022 ... 记者从2022年全国春运电视电话会议上获悉：今年春运将从1月17日开始， ... 根据属地疫情防控要求，调整寒假放假、开学时间，尽可能错开春运时段；二是 ...",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_e30a6e01f02fac6edc6c25bd",
+            "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+            "document_name": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+            "chunk_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 8,
+            "source_score": null,
+            "fused_score": 0.014705882352941176,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+              "block_ids": [
+                "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 96
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 8,
+                "score": 10.694977760314941,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 96,
+            "content_hash": "e30a6e01f02fac6edc6c25bd4bdd2f11cd1568c1ef7ad5683756c4378a63c75e",
+            "scope_digest": "f948966e156a945653a9f3bacb95d36b3647ac5c6c57c91c61524ef2fdf836f3",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_57a5368742647e76a760",
+                "source_id": "S8",
+                "evidence_id": "ev_81e72e3143ef4772",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 6, 2022 ... 记者从2022年全国春运电视电话会议上获悉：今年春运将从1月17日开始， ",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_eb1093efb48e19a0e787",
+                "source_id": "S8",
+                "evidence_id": "ev_81e72e3143ef4772",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 6, 2022 ... 记者从2022年全国春运电视电话会议上获悉：今年春运将从1月17日开始， ... 根据",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_0dfec0489211891d",
+            "content": "2022年春运时间： 　　2022年1月17日—2月25日，共40天 　　2022年春运抢票时间： 　　春运第一天的火车票(2022年1月17日农历腊月十五)——2022年1月3日开抢 　　春运第二天的火车票(2022年1月18日农历腊月十六)——2022年1月4日开抢 　　春运第三天的火车票(2022年1月19日农历腊月十七)——2022年1月5日开抢 　　春运第四天的火车票(2022年1月20日农历腊月十八)——2022年1月6日开抢 　　除夕前一天的火车票(2022年1月30日农历腊月廿九)——2022年1月16日开抢 　　除夕当天的火车票(2022年1月31日农历腊月三十)——2022年1月17日开抢",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c",
+            "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+            "document_name": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+            "chunk_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 9,
+            "source_score": null,
+            "fused_score": 0.014492753623188406,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+              "block_ids": [
+                "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 308
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 9,
+                "score": 10.609368324279785,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 308,
+            "content_hash": "efe6c36ebc0f59c325c3dc6cfdafdfe23ce3705ba0e35357771fbf944b991dbf",
+            "scope_digest": "247cfa04fd8d09af6e229a95a11e4c96179fdc7f6ed853ae46f746d3d620a039",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [],
+            "next_number_start": null
+          },
+          {
+            "evidence_id": "ev_0b86b2520b964683",
+            "content": "Jan 6, 2022 ... 2022年春运将从1月17日开始，2月25日结束，共计40天。2022年是我国踏上 ... 属地疫情防控要求，及时调整寒假放假、开学时间，尽可能错开春运时段。",
+            "knowledge_base_id": "chinese-rgb-evaluation",
+            "document_id": "rgb_doc_b3a83d584d910f85b503cf76",
+            "version_id": "rgb_doc_b3a83d584d910f85b503cf76:r1",
+            "document_name": "rgb_doc_b3a83d584d910f85b503cf76.txt",
+            "chunk_id": "rgb_doc_b3a83d584d910f85b503cf76:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+            "source_adapter": "lexical",
+            "source_rank": 10,
+            "source_score": null,
+            "fused_score": 0.014285714285714285,
+            "rerank_score": null,
+            "content_truncated": false,
+            "content_is_projection": false,
+            "locator": {
+              "version_id": "rgb_doc_b3a83d584d910f85b503cf76:r1",
+              "block_ids": [
+                "rgb_doc_b3a83d584d910f85b503cf76:r1:block:0"
+              ],
+              "page_numbers": [],
+              "section_ids": [],
+              "table_ids": [],
+              "bbox": null,
+              "coordinate_system": null,
+              "start": 0,
+              "end": 95
+            },
+            "page_numbers": [],
+            "section_ids": [],
+            "table_ids": [],
+            "matched_ranges": [],
+            "index_generation": "4fc272319a2d491297e77020d1095e57",
+            "stale": false,
+            "verification_status": "verified_current",
+            "provenance": [
+              {
+                "adapter": "lexical",
+                "rank": 10,
+                "score": 10.564702987670898,
+                "generation": "4fc272319a2d491297e77020d1095e57"
+              }
+            ],
+            "content_length": 95,
+            "content_hash": "b3a83d584d910f85b503cf76125f88630ae991dc9a4a73153417cd80b8a59864",
+            "scope_digest": "e44174ea8bea7031699adc12aebad648a43f1d6ccfae3f4f17a48ce59b91b812",
+            "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+            "table_context": null,
+            "continuation": null,
+            "numeric_candidates": [
+              {
+                "candidate_id": "num_20ccd5d852b89c472b77",
+                "source_id": "S10",
+                "evidence_id": "ev_0b86b2520b964683",
+                "raw_text": "6",
+                "start": 4,
+                "end": 5,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 6, 2022 ... 2022年春运将从1月17日开始，2月25日结束，共计40天。2022年是",
+                "verification_status": "verified_source_text"
+              },
+              {
+                "candidate_id": "num_d070b44e363a56150a19",
+                "source_id": "S10",
+                "evidence_id": "ev_0b86b2520b964683",
+                "raw_text": "2022",
+                "start": 7,
+                "end": 11,
+                "unit": "",
+                "unit_start": null,
+                "unit_end": null,
+                "row": null,
+                "column": null,
+                "headers": [],
+                "row_context": [],
+                "context": "Jan 6, 2022 ... 2022年春运将从1月17日开始，2月25日结束，共计40天。2022年是我国踏上 .",
+                "verification_status": "verified_source_text"
+              }
+            ],
+            "next_number_start": null
+          }
+        ]
+      }
+    ],
+    "visible_evidence": [
+      "ev_f0fbf25ab7603cb1",
+      "ev_694aae7be807b4a6",
+      "ev_220df44de3322805",
+      "ev_7fd791c97ec18350",
+      "ev_9b4afa886983df47",
+      "ev_8f622b911a359997",
+      "ev_32774f89d451201e",
+      "ev_81e72e3143ef4772",
+      "ev_0dfec0489211891d"
+    ],
+    "evidence": {
+      "ev_f0fbf25ab7603cb1": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_6676c47d89785b09ab2c8b59",
+        "version_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1",
+        "document_name": "rgb_doc_6676c47d89785b09ab2c8b59.txt",
+        "chunk_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 1,
+        "source_score": null,
+        "fused_score": 0.01639344262295082,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_6676c47d89785b09ab2c8b59:r1",
+          "block_ids": [
+            "rgb_doc_6676c47d89785b09ab2c8b59:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 239
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 1,
+            "score": 11.764193534851074,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 239,
+        "content_hash": "6676c47d89785b09ab2c8b59db8bb9f5bd3fb669157ff0e16feecd3061365f58",
+        "scope_digest": "2ed927b944d9fa0d7661bcf92fd9b40917d02e4e2d8a9cb8f191ead364a0b330",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_694aae7be807b4a6": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_227972581ff2f302dc1c2775",
+        "version_id": "rgb_doc_227972581ff2f302dc1c2775:r1",
+        "document_name": "rgb_doc_227972581ff2f302dc1c2775.txt",
+        "chunk_id": "rgb_doc_227972581ff2f302dc1c2775:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 2,
+        "source_score": null,
+        "fused_score": 0.016129032258064516,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_227972581ff2f302dc1c2775:r1",
+          "block_ids": [
+            "rgb_doc_227972581ff2f302dc1c2775:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 54
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 2,
+            "score": 11.57223892211914,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 54,
+        "content_hash": "227972581ff2f302dc1c2775a50a8d5433ae3fd32e12cf5a3b8aefd1839e45ce",
+        "scope_digest": "107569857960084584c7fc8048ebad1e3d48a90024e0b2a6f1388ca4f255755a",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_220df44de3322805": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_51993f93cbe8a4b36a7559c3",
+        "version_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1",
+        "document_name": "rgb_doc_51993f93cbe8a4b36a7559c3.txt",
+        "chunk_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 3,
+        "source_score": null,
+        "fused_score": 0.015873015873015872,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_51993f93cbe8a4b36a7559c3:r1",
+          "block_ids": [
+            "rgb_doc_51993f93cbe8a4b36a7559c3:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 284
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 3,
+            "score": 11.067203521728516,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 284,
+        "content_hash": "51993f93cbe8a4b36a7559c3fb1252cf272ffa3d54a41b98b3547f653cd40c0f",
+        "scope_digest": "577556243a1f276f0cb4714e67c81f40367697fe59da2e5c5d66f59f1190ddc4",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_7fd791c97ec18350": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b92189bbe34fd86908cb4bc4",
+        "version_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1",
+        "document_name": "rgb_doc_b92189bbe34fd86908cb4bc4.txt",
+        "chunk_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 4,
+        "source_score": null,
+        "fused_score": 0.015625,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b92189bbe34fd86908cb4bc4:r1",
+          "block_ids": [
+            "rgb_doc_b92189bbe34fd86908cb4bc4:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 280
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 4,
+            "score": 11.065885543823242,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 280,
+        "content_hash": "b92189bbe34fd86908cb4bc4cc0d222bf955401a89037fba52957c14cd08842e",
+        "scope_digest": "3cf96a366f5146c59227ae1829e0a166a1d6668514b1b6eed780fdf03e3831a9",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_9b4afa886983df47": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_2d20b3a91cbc81dca015097c",
+        "version_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1",
+        "document_name": "rgb_doc_2d20b3a91cbc81dca015097c.txt",
+        "chunk_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 5,
+        "source_score": null,
+        "fused_score": 0.015384615384615385,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_2d20b3a91cbc81dca015097c:r1",
+          "block_ids": [
+            "rgb_doc_2d20b3a91cbc81dca015097c:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 187
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 5,
+            "score": 10.773126602172852,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 187,
+        "content_hash": "2d20b3a91cbc81dca015097cb65bd4df063293857c888e8435132b8e73155b02",
+        "scope_digest": "274657b938760d32d212d003fbb4cfa25a3e798df4c951e51acfa0618130ab42",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_8f622b911a359997": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_f2d36459d2a15326aaf2b272",
+        "version_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1",
+        "document_name": "rgb_doc_f2d36459d2a15326aaf2b272.txt",
+        "chunk_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 6,
+        "source_score": null,
+        "fused_score": 0.015151515151515152,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_f2d36459d2a15326aaf2b272:r1",
+          "block_ids": [
+            "rgb_doc_f2d36459d2a15326aaf2b272:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 104
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 6,
+            "score": 10.768945693969727,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 104,
+        "content_hash": "f2d36459d2a15326aaf2b2720a73b99e82fa33bad365b3731731c3ff52dc12e7",
+        "scope_digest": "0c40c640128d8c18b73bbbb2f374bf41a9e2be6cc4bf311a0048383f6a2f9167",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_32774f89d451201e": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_4e4e708b3e6ee3945f7ff482",
+        "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+        "document_name": "rgb_doc_4e4e708b3e6ee3945f7ff482.txt",
+        "chunk_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 7,
+        "source_score": null,
+        "fused_score": 0.014925373134328358,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_4e4e708b3e6ee3945f7ff482:r1",
+          "block_ids": [
+            "rgb_doc_4e4e708b3e6ee3945f7ff482:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 106
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 7,
+            "score": 10.71630859375,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 106,
+        "content_hash": "4e4e708b3e6ee3945f7ff4829c3f25823c1abc2ba187585593f7e79d07ff67c4",
+        "scope_digest": "b0b049aaa4632943b8d28fefca00071306e5cf0dbf074622c01a394b6d645078",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_81e72e3143ef4772": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_e30a6e01f02fac6edc6c25bd",
+        "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+        "document_name": "rgb_doc_e30a6e01f02fac6edc6c25bd.txt",
+        "chunk_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 8,
+        "source_score": null,
+        "fused_score": 0.014705882352941176,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_e30a6e01f02fac6edc6c25bd:r1",
+          "block_ids": [
+            "rgb_doc_e30a6e01f02fac6edc6c25bd:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 96
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 8,
+            "score": 10.694977760314941,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 96,
+        "content_hash": "e30a6e01f02fac6edc6c25bd4bdd2f11cd1568c1ef7ad5683756c4378a63c75e",
+        "scope_digest": "f948966e156a945653a9f3bacb95d36b3647ac5c6c57c91c61524ef2fdf836f3",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_0dfec0489211891d": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c",
+        "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+        "document_name": "rgb_doc_efe6c36ebc0f59c325c3dc6c.txt",
+        "chunk_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 9,
+        "source_score": null,
+        "fused_score": 0.014492753623188406,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1",
+          "block_ids": [
+            "rgb_doc_efe6c36ebc0f59c325c3dc6c:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 308
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 9,
+            "score": 10.609368324279785,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 308,
+        "content_hash": "efe6c36ebc0f59c325c3dc6cfdafdfe23ce3705ba0e35357771fbf944b991dbf",
+        "scope_digest": "247cfa04fd8d09af6e229a95a11e4c96179fdc7f6ed853ae46f746d3d620a039",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      },
+      "ev_0b86b2520b964683": {
+        "knowledge_base_id": "chinese-rgb-evaluation",
+        "document_id": "rgb_doc_b3a83d584d910f85b503cf76",
+        "version_id": "rgb_doc_b3a83d584d910f85b503cf76:r1",
+        "document_name": "rgb_doc_b3a83d584d910f85b503cf76.txt",
+        "chunk_id": "rgb_doc_b3a83d584d910f85b503cf76:r1:build:structure-v3-cfb1af48b26c:chunk:0",
+        "source_adapter": "lexical",
+        "source_rank": 10,
+        "source_score": null,
+        "fused_score": 0.014285714285714285,
+        "rerank_score": null,
+        "content_truncated": false,
+        "content_is_projection": false,
+        "locator": {
+          "version_id": "rgb_doc_b3a83d584d910f85b503cf76:r1",
+          "block_ids": [
+            "rgb_doc_b3a83d584d910f85b503cf76:r1:block:0"
+          ],
+          "page_numbers": [],
+          "section_ids": [],
+          "table_ids": [],
+          "bbox": null,
+          "coordinate_system": null,
+          "start": 0,
+          "end": 95
+        },
+        "page_numbers": [],
+        "section_ids": [],
+        "table_ids": [],
+        "matched_ranges": [],
+        "index_generation": "4fc272319a2d491297e77020d1095e57",
+        "stale": false,
+        "verification_status": "verified_current",
+        "provenance": [
+          {
+            "adapter": "lexical",
+            "rank": 10,
+            "score": 10.564702987670898,
+            "generation": "4fc272319a2d491297e77020d1095e57"
+          }
+        ],
+        "content_length": 95,
+        "content_hash": "b3a83d584d910f85b503cf76125f88630ae991dc9a4a73153417cd80b8a59864",
+        "scope_digest": "e44174ea8bea7031699adc12aebad648a43f1d6ccfae3f4f17a48ce59b91b812",
+        "trace_id": "a74528cbb8694d00a7992e0bb9edb7e3",
+        "table_context": null,
+        "continuation": null
+      }
+    },
+    "sources": {
+      "S1": "ev_f0fbf25ab7603cb1",
+      "S2": "ev_694aae7be807b4a6",
+      "S3": "ev_220df44de3322805",
+      "S4": "ev_7fd791c97ec18350",
+      "S5": "ev_9b4afa886983df47",
+      "S6": "ev_8f622b911a359997",
+      "S7": "ev_32774f89d451201e",
+      "S8": "ev_81e72e3143ef4772",
+      "S9": "ev_0dfec0489211891d",
+      "S10": "ev_0b86b2520b964683"
+    },
+    "search_count": 1,
+    "read_count": 0,
+    "repeated_searches": 0,
+    "stop_reason": ""
+  },
+  "generation_status": "completed"
+}
