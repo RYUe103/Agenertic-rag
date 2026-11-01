@@ -11,6 +11,7 @@ class Operand(StrictModel):
     unit: str = Field(default='',max_length=32)
     source: Literal['user','evidence']
     evidence_id: str | None = None
+    source_id: str | None = Field(default=None,pattern=r'^S[1-9][0-9]*$',description='当前 Run 可见来源编号，由 Agent 安全转换；REST 调用仍提供 evidence_id')
     start: int | None = Field(default=None,ge=0,le=200000,description='仅当值在来源中重复出现时填写准确偏移；唯一值请省略，服务器精确定位')
     end: int | None = Field(default=None,gt=0,le=200000)
     unit_start: int | None = Field(default=None,ge=0,le=200000)
@@ -38,15 +39,15 @@ def calculate(value, context):
         item=item.model_copy()
         text = context(item.source, item.evidence_id)
         if item.start is None and item.end is None:
-            positions=list(re.finditer(r'(?<![0-9.eE+\-])'+re.escape(item.value)+r'(?![0-9.eE])',text))
+            positions=list(re.finditer(r'(?<![0-9,.eE+−\-])'+re.escape(item.value)+r'(?![0-9eE]|[.,][0-9])',text))
             if len(positions)!=1: raise ValueError('operand_not_unique_supply_offsets')
             item.start,item.end=positions[0].span()
         if item.start is None or item.end is None: raise ValueError('incomplete_range')
         if item.end <= item.start or text[item.start:item.end] != item.value:
             raise ValueError('operand_source_mismatch')
         # Prevent extracting 12 from 125.6, signs or scientific notation.
-        if (item.start and re.match(r'[0-9.eE+\-]',text[item.start-1]) or
-            item.end<len(text) and re.match(r'[0-9.eE]',text[item.end])):
+        if (item.start and re.match(r'[0-9,.eE+−\-]',text[item.start-1]) or
+            item.end<len(text) and re.match(r'(?:[0-9eE]|[.,][0-9])',text[item.end:])):
             raise ValueError('partial_number')
         if item.unit:
             if item.unit_start is None and item.unit_end is None:
@@ -55,9 +56,15 @@ def calculate(value, context):
                 item.unit_start,item.unit_end=positions[0].span()
             if item.unit_start is None or item.unit_end is None or text[item.unit_start:item.unit_end] != item.unit:
                 raise ValueError('unit_source_mismatch')
-        if not re.fullmatch(r'[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d{1,3})?', item.value):
+        # Preserve the exact source spelling and offsets; normalize only for Decimal.
+        numeric=item.value.replace('−','-')
+        if ',' in numeric:
+            if not re.fullmatch(r'[+-]?\d{1,3}(?:,\d{3})+(?:\.\d+)?',numeric):
+                raise ValueError('invalid_number')
+            numeric=numeric.replace(',','')
+        if not re.fullmatch(r'[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d{1,3})?', numeric):
             raise ValueError('invalid_number')
-        number = Decimal(item.value)
+        number = Decimal(numeric)
         if not number.is_finite() or abs(number.adjusted())>100:
             raise ValueError('numeric_budget')
         values.append(number);units.append(item.unit);sources.append(item.model_dump())

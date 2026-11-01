@@ -41,6 +41,7 @@ class FusionConfig(StrictModel):
 
 
 class RetrievalRequest(StrictModel):
+    document_start: int = Field(default=0,ge=0,le=10000,description='find_document 候选导航起始序号，不影响检索排名')
     query: str = Field(min_length=1, max_length=512)
     scopes: list[Scope] = Field(min_length=1, max_length=8)
     mode: Literal['auto','hybrid','lexical','vector','exact'] = 'auto'

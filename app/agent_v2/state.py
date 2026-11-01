@@ -16,6 +16,7 @@ class ExecutionBudget(StrictModel):
     consecutive_failures: int = Field(default=3, ge=1, le=10)
     citation_repair: bool = True
     total_tokens: int = Field(default=120000, ge=1000, le=1000000)
+    context_tokens: int = Field(default=32000, ge=1000, le=200000)
     completion_tokens: int = Field(default=2000, ge=100, le=8000)
 
 

@@ -45,11 +45,13 @@ def write(path, obj):
     temp.replace(path)
 
 
-def prepare(directory):
+def prepare(directory, question_ids=None, frozen_from=None):
     manifest_path=directory/'manifest.json'
     if manifest_path.exists():
         manifest=json.loads(manifest_path.read_text())
         settings=Settings()
+        if question_ids is not None and [q['id'] for q in manifest['questions']]!=question_ids:
+            raise RuntimeError('Resume question selection differs from frozen manifest')
         if manifest['budget']!=BUDGET.model_dump() or manifest['model']!=settings.llm_model or manifest['api_style']!=settings.llm_api_style:
             raise RuntimeError('Resume configuration differs from frozen manifest')
         repo=SourceRepository(directory/'sources.db',KB)
@@ -58,6 +60,22 @@ def prepare(directory):
         return manifest,repo
     if (directory/'sources.db').exists():
         raise RuntimeError('Incomplete preparation; use a new directory')
+    if frozen_from:
+        original=json.loads((frozen_from/'manifest.json').read_text())
+        selected=select_questions(original['questions'],question_ids)
+        # SQLite backup is consistent and does not mutate the frozen original corpus.
+        with sqlite3.connect('file:'+str((frozen_from/'sources.db').resolve())+'?mode=ro',uri=True) as source:
+            with sqlite3.connect(directory/'sources.db') as target: source.backup(target)
+        repo=SourceRepository(directory/'sources.db',KB)
+        for item in original['corpus']:
+            assert sha(repo.documents.version(item['document_id']).markdown)==item['text_sha256']
+        built=IndexManager(repo.documents).sync()
+        manifest={**original,'questions':selected,'code_sha':subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip(),
+            'budget':BUDGET.model_dump(),'model':Settings().llm_model,'api_style':Settings().llm_api_style,
+            'baseline_code_sha':original['code_sha'],'selection':'Explicit frozen whitelist, unchanged question text',
+            'chunks':built['chunks']}
+        write(manifest_path,manifest)
+        return manifest,repo
     baseline=json.loads(Path('docs/LOCAL_SEARCH_BENCHMARK_2026-10-31.json').read_text())
     frozen=Path('data/unified-real-accepted-20261101')
     records=json.loads((frozen/'report.json').read_text())['records']
@@ -68,6 +86,7 @@ def prepare(directory):
     selected=[dict(questions[g['question_id']],target_document=g['target_document'])
               for g in baseline['quality']['judgments']]
     assert len(selected)==len({q['id'] for q in selected})==100
+    if question_ids is not None: selected=select_questions(selected,question_ids)
     repo=SourceRepository(directory/'sources.db',KB);corpus=[]
     for r in records:
         doc=r['document_id'];context=Path(r['filename']).stem
@@ -193,14 +212,21 @@ def gold_mention(answer,gold):
     return bool(values) and all(re.search(r'(?<![\w.])'+re.escape(str(v).casefold().replace(',',''))+r'(?![\w.])',text) for v in values)
 
 
-def evaluate(directory,repo,settings,row,parser,isolated=False):
+def evaluate(directory,repo,settings,row,parser,isolated=False,run_judge=False):
     qid=row['id'];path=directory/(qid+'-private.json')
     if path.exists(): return json.loads(path.read_text())['summary']
+    execution_dir=directory/'isolated-executions'/qid if isolated else directory/'execution'
+    db_path=execution_dir/'executions.db'
+    if db_path.exists():
+        with sqlite3.connect('file:'+str(db_path.resolve())+'?mode=ro',uri=True) as db:
+            row=db.execute('SELECT status FROM threads WHERE conversation=?',(qid,)).fetchone()
+        if row is not None and row[0]!='new':
+            raise RuntimeError('Refuse replay of started execution without final artifact')
     started=time.monotonic();runner=make_runtime(directory,repo,settings,directory/'isolated-executions'/qid if isolated else None);result=None;assessment=None;raw_judge=None
     try:
         result=runner.run(row['question'],conversation=qid)
         final=result.get('result',{})
-        assessment,raw_judge=judge(row['question'],final,settings)
+        assessment,raw_judge=judge(row['question'],final,settings) if run_judge else (dict(status='disabled',claims=[],usage={}),None)
         refs=final.get('citations',{})
         correct=sum(e['document_id']==row['target_document'] for e in refs.values())
         summary=dict(question_id=qid,question_sha256=sha(row['question']),parser=parser,
@@ -295,10 +321,21 @@ def never_started(directory,qid):
         return db.execute('SELECT count(*) FROM checkpoints WHERE thread_id=?',(row[0],)).fetchone()[0]==0
 
 
+def select_questions(questions, question_ids):
+    if not question_ids or len(question_ids)!=len(set(question_ids)):
+        raise ValueError('Explicit nonempty unique question whitelist required')
+    lookup={q['id']:q for q in questions}
+    if set(question_ids)-lookup.keys(): raise ValueError('Unknown question IDs')
+    return [lookup[q] for q in question_ids]
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--workers',type=int,default=2,choices=[1,2])
+    parser.add_argument('--question-ids',nargs='+')
+    parser.add_argument('--frozen-from',type=Path)
+    parser.add_argument('--judge',action='store_true',help='Explicit opt-in extra model support judge')
     parser.add_argument('--recheck',action='store_true',help='Offline audit of saved judge quote formatting; no model requests')
     parser.add_argument('--retry-infrastructure',action='store_true',help='Archive and retry only pre-answer OperationalError cases')
     parser.add_argument('--isolated-executions',action='store_true',help='Independent checkpoint DB per question, same runtime and corpus')
@@ -308,7 +345,10 @@ def main():
         return
     settings=Settings()
     if not settings.llm_api_key: raise RuntimeError('Real LLM configuration required')
-    manifest,repo=prepare(directory)
+    manifest,repo=prepare(directory,args.question_ids,args.frozen_from)
+    if manifest.get('judge_enabled',args.judge)!=args.judge: raise RuntimeError('Judge configuration changed')
+    manifest['judge_enabled']=args.judge
+    write(directory/'manifest.json',manifest)
     if args.retry_infrastructure:
         previous=directory/'report.json';archived=directory/'report-first-pass.json'
         if previous.exists() and not archived.exists(): archived.write_bytes(previous.read_bytes())
@@ -324,15 +364,15 @@ def main():
                 path.replace(saved)
     bydoc={r['document_id']:r for r in manifest['corpus']}
     report={k:v for k,v in manifest.items() if k not in {'questions','corpus'}}
-    report.update(corpus_documents=len(manifest['corpus']),question_count=100,
+    report.update(corpus_documents=len(manifest['corpus']),question_count=len(manifest['questions']),
         target_documents=len({q['target_document'] for q in manifest['questions']}),
-        parser_question_counts=dict(Counter(bydoc[q['target_document']]['parser'] for q in manifest['questions'])),
+        judge_enabled=args.judge,parser_question_counts=dict(Counter(bydoc[q['target_document']]['parser'] for q in manifest['questions'])),
         limitations=['No Dify same-corpus vector verification','Model-assisted support judge is the same model, not human gold',
             'Gold document identity is not evidence-span recall','Gold answer mention is not answer accuracy',
             'MinerU and frozen PyMuPDF inputs reported separately; not fresh parsing acceptance'],cases=[])
     started=time.monotonic();rows=[]
     with ThreadPoolExecutor(max_workers=args.workers) as pool:
-        futures={pool.submit(evaluate,directory,repo,settings,q,bydoc[q['target_document']]['parser'],args.isolated_executions):q['id'] for q in manifest['questions']}
+        futures={pool.submit(evaluate,directory,repo,settings,q,bydoc[q['target_document']]['parser'],args.isolated_executions,args.judge):q['id'] for q in manifest['questions']}
         for future in as_completed(futures):
             rows.append(future.result());report['cases']=sorted(rows,key=lambda r:r['question_id'])
             report['summary']=aggregate(rows);report['wall_seconds']=time.monotonic()-started

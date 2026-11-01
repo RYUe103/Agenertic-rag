@@ -19,7 +19,7 @@ def assign_sources(refs, existing):
     return sources
 
 
-def observation(output, sources, admitted):
+def observation(output, sources, admitted, tool_name="", seen_documents=None):
     """Explicit allowlist: receipts/artifacts never form provider message content."""
     data = output.get('data') or {}
     reverse = {ident: label for label, ident in sources.items()}
@@ -33,11 +33,36 @@ def observation(output, sources, admitted):
         visible['evidence'].append(dict(source_id=reverse[ident], evidence_id=ident,
             content=snippet['content'], document_id=snippet.get('document_id'),
             title=snippet.get('document_name'), page_numbers=snippet.get('page_numbers', []),
-            locator=snippet.get('locator'), content_truncated=snippet.get('content_truncated', False)))
-    # Navigation and calculation results are useful; raw body/items duplicate excerpts.
+            locator=snippet.get('locator'), continuation=snippet.get('continuation'), content_truncated=snippet.get('content_truncated', False)))
+    from .context import profile
+    _, limits = profile(tool_name)
+    seen_documents = seen_documents if seen_documents is not None else set()
     visible['data'] = {k:v for k,v in data.items() if k in {
-        'status','partial','next_start','next_after','outline','documents','document_id',
-        'knowledge_base_id','version_id','operation','result','unit','precision','operands'}}
+        'status','partial','next_start','next_after','document_id', 'outline_next_after',
+        'knowledge_base_id','version_id','operation','result','unit','precision','operands',
+        'table_page','headers','table_id','continuation','units'}}
+    documents=[]
+    start=data.get('document_start',0)
+    for doc in data.get('documents',[])[start:start+limits['navigation_limit']]:
+        identity=(doc.get('knowledge_base_id'),doc.get('document_id'),doc.get('version_id'))
+        fields=('knowledge_base_id','document_id','version_id') if identity in seen_documents else (
+            'knowledge_base_id','document_id','version_id','document_name','title','filename','rank','score')
+        documents.append({k:v for k,v in doc.items() if k in fields})
+        seen_documents.add(identity)
+    if documents: visible['data']['documents']=documents
+    if len(data.get('documents',[]))>start+len(documents):
+        visible['data']['next_document_start']=start+len(documents)
+    if data.get('outline'):
+        visible['data']['outline']=data['outline'][:limits['navigation_limit']]
+    # Pagination data are navigation only, never model-visible Evidence.
+    if data.get('table_page'):
+        visible['data']['table_page']=data['table_page']
+    handles=[{k:v for k,v in item.items() if k in {'table_id','block_id','format','unit'}}
+             for item in data.get('items',[]) if item.get('table_id')]
+    if handles: visible['data']['tables']=handles[:limits['navigation_limit']]
+    if output.get('_navigation') and not visible['evidence']: visible['navigation']=output['_navigation'][:limits['navigation_limit']]
+    if output.get('error'):
+        visible['error']={k:v for k,v in output['error'].items() if k in {'code','reason','hint'}}
     return visible
 
 

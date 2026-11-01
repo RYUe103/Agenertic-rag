@@ -27,7 +27,7 @@ class EvidenceRegistry:
     def resolve(self, ref):
         kb, doc, vid = (ref[k] for k in ('knowledge_base_id','document_id','version_id'))
         repo, requested, scope = self.scope(kb, doc, vid)
-        request = RetrievalRequest(query='evidence', scopes=[requested], budget={'item_chars':6000})
+        request = RetrievalRequest(query='evidence', scopes=[requested], budget={'item_chars':12000})
         loc = ref['locator']
         candidate = dict(document_id=doc, version_id=vid, chunk_id=ref.get('chunk_id'),
                          start=loc.get('start'), end=loc.get('end'))
@@ -48,7 +48,7 @@ class EvidenceRegistry:
             'fused_score':ref.get('fused_score',0),'index_generation':ref.get('index_generation'),
             'content_truncated':ref.get('content_truncated',False)})
 
-    def collect(self, output, limit, diagnostics=None):
+    def collect(self, output, limit, diagnostics=None, item_chars=4000):
         diagnostics = diagnostics if diagnostics is not None else {}
         diagnostics.update(tool_candidate_count=0, registered_evidence_count=0, registration_rejections={})
         if output.get('status') != 'success':
@@ -58,7 +58,29 @@ class EvidenceRegistry:
         if data.get('document_id'):
             base = {k:data[k] for k in ('knowledge_base_id','document_id','version_id')}
             if 'content' in data:
-                candidates.append({**base, 'locator':{'start':data['start'], 'end':data['start']+len(data['content'])}})
+                # Do not split a table into an arbitrary prefix. Only whole tables or
+                # explicit row pages become evidence; deferred tables remain navigable.
+                repo,_,_=self.scope(base['knowledge_base_id'],base['document_id'],base['version_id'])
+                start=data['start'];end=start+len(data['content']);cursor=start
+                with repo.sources.connect() as conn:
+                    import json
+                    tables=[json.loads(r[0]) for r in conn.execute(
+                        "SELECT payload FROM document_nodes WHERE version_id=? AND kind='blocks' AND json_extract(payload,'$.kind') IN ('table_html','table_markdown') AND json_extract(payload,'$.locator.start')<? AND json_extract(payload,'$.locator.end')>? ORDER BY ordinal",
+                        (base['version_id'],end,start))]
+                def append_range(a,b):
+                    for pos in range(a,b,item_chars):
+                        candidates.append({**base,'locator':{'start':pos,'end':min(b,pos+item_chars)}})
+                if len(data['content'])<=item_chars and all(t['locator']['start']>=start and t['locator']['end']<=end for t in tables):
+                    append_range(start,end);cursor=end;tables=[]
+                for table in tables:
+                    a,b=table['locator']['start'],table['locator']['end']
+                    append_range(cursor,max(cursor,a))
+                    if a>=start and b<=end and b-a<=item_chars:
+                        candidates.append({**base,'locator':{'start':a,'end':b}})
+                    else:
+                        output.setdefault('_deferred_tables',[]).append({**base,'table_ids':table['locator']['table_ids']})
+                    cursor=max(cursor,min(end,b))
+                append_range(cursor,end)
             for item in data.get('items', []):
                 if item.get('verification_status'):
                     candidates.append(item)
@@ -73,6 +95,7 @@ class EvidenceRegistry:
                     table=repo.node(base['document_id'],item['table_id'],base['version_id'])
                     block=repo.node(base['document_id'],table['block_id'],base['version_id'])
                     candidates.append({**base,'locator':block['locator']})
+        output['_navigation']=output.get('_deferred_tables',[])+[{k:v for k,v in item.items() if k in {'knowledge_base_id','document_id','version_id','chunk_id','locator','table_ids'}} for item in candidates]
         refs, snippets = {}, []
         diagnostics['tool_candidate_count'] = len(candidates)
         def rejected(reason):
@@ -90,14 +113,30 @@ class EvidenceRegistry:
                 rejected({KeyError:'missing_identity', ValueError:'content_or_locator_invalid',
                     PermissionError:'scope_or_version_invalid', TimeoutError:'resolution_timeout'}[type(exc)])
                 continue
-            content=hit.content[:min(2000,len(item.get('content',hit.content)))]
+            content=hit.content[:min(item_chars,len(item.get('content',hit.content)))]
+            # A prefix is a new exact source range, never the original full locator.
+            partial=hit.content_truncated or len(content)<len(hit.content)
+            if partial and hit.content_is_projection:
+                rejected('projection_requires_full_read')
+                continue
+            if partial and hit.table_ids:
+                rejected('table_requires_structured_read')
+                continue
+            if not hit.content_is_projection and (partial or hit.locator.get('end',0)-hit.locator.get('start',0)!=len(content)):
+                original_end=hit.locator['end']
+                exact={**item,'chunk_id':None,'locator':{'start':hit.locator['start'],'end':hit.locator['start']+len(content)}}
+                hit,spec=self.resolve(exact)
+                content=hit.content
+            else:
+                original_end=hit.locator.get('end')
             value = hit.model_dump(exclude={'content'})
             value.update(content_length=len(content), content_hash=hashlib.sha256(content.encode()).hexdigest(),
                          scope_digest=digest(spec), trace_id=output['trace_id'],
                          source_adapter=item.get('source_adapter','repository'), provenance=item.get('provenance',[]),
                          source_rank=item.get('source_rank',hit.source_rank),fused_score=item.get('fused_score',0),
                          index_generation=item.get('index_generation'),
-                         content_truncated=hit.content_truncated or len(content)<len(hit.content))
+                         content_truncated=partial,
+                         continuation={'start':hit.locator['end'],'end':original_end} if partial and not hit.content_is_projection else None)
             ident = 'ev_' + digest([hit.key(), value['content_hash']])[:16]
             refs[ident] = value
             snippets.append(dict(evidence_id=ident, content=content, **value))

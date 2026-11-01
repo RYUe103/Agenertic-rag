@@ -20,6 +20,7 @@ class ReadInput(StrictModel):
     after: int = Field(default=-1,ge=-1)
     limit: int = Field(default=50,ge=1,le=100)
     max_chars: int = Field(default=12000,ge=1,le=100000)
+    outline_after: int = Field(default=-1,ge=-1)
     neighbors: int = Field(default=1,ge=0,le=5)
     row: int | None = Field(default=None,ge=0)
     column: int | None = Field(default=None,ge=0)
@@ -106,7 +107,7 @@ class ToolService:
                 response=self.retrieval.search(model)
                 data=response.model_dump()
                 if tool=='find_document':
-                    data={'documents':data['documents'],'diagnostics':data['diagnostics'],'plan':data['plan'],'status':data['status']}
+                    data={'documents':data['documents'],'document_start':model.document_start,'diagnostics':data['diagnostics'],'plan':data['plan'],'status':data['status']}
             else:
                 data=self.read(tool,model,started+5)
             for kb in kbs:
@@ -123,7 +124,11 @@ class ToolService:
                   else 'output_budget' if isinstance(exc,OverflowError) else 'timeout' if isinstance(exc,TimeoutError) else 'invalid_input')
             if isinstance(exc,PermissionError) and str(exc)=='approval_required':
                 code='approval_required'
-            return ToolOutput(trace_id=uuid.uuid4().hex,status='error',error={'code':code},elapsed_ms=(time.monotonic()-started)*1000)
+            return ToolOutput(trace_id=uuid.uuid4().hex,status='error',error={'code':code,**({'reason':str(exc),'hint':'使用当前可见 source_id；value 必须逐字复制原文含千分位。重复值需准确偏移；先精读，不要重试相同参数。'} if name=='v2.calculate' and str(exc) in {
+                'operand_not_unique_supply_offsets','operand_source_mismatch','incomplete_range','partial_number',
+                'unit_not_unique_supply_offsets','unit_source_mismatch','invalid_number','numeric_budget',
+                'two_operands_required','incompatible_units_convert_explicitly','compound_units_not_supported',
+                'unsupported_unit_conversion','incompatible_dimensions','invalid_arithmetic'} else {})},elapsed_ms=(time.monotonic()-started)*1000)
         except (RuntimeError,OSError):
             return ToolOutput(trace_id=uuid.uuid4().hex,status='error',error={'code':'internal_error'},
                               elapsed_ms=(time.monotonic()-started)*1000)
@@ -167,11 +172,12 @@ class ToolService:
                     result.update(content=text,start=value.start,next_start=None if finished else value.start+len(text))
                     # Navigation handles let high-level Agents select a section/table.
                     outline=[]
-                    for row in conn.execute("SELECT id,kind,substr(json_extract(payload,'$.title'),1,200) AS title,json_extract(payload,'$.block_id') AS block_id FROM document_nodes WHERE version_id=? AND kind IN ('sections','tables') ORDER BY ordinal,id LIMIT 101",(vid,)):
+                    for row in conn.execute("SELECT id,ordinal,kind,substr(json_extract(payload,'$.title'),1,200) AS title,json_extract(payload,'$.block_id') AS block_id FROM document_nodes WHERE version_id=? AND kind IN ('sections','tables') ORDER BY ordinal,id LIMIT ? OFFSET ?",(vid,min(value.limit,12)+1,value.outline_after+1)):
                         if time.monotonic()>=deadline: raise TimeoutError()
                         outline.append({'id':row['id'],'kind':row['kind'],'title':row['title'] or '',
-                                        'block_id':row['block_id']})
-                    result.update(outline=outline[:100],outline_partial=len(outline)>100)
+                                        'block_id':row['block_id'],'ordinal':row['ordinal']})
+                    result.update(outline=outline[:min(value.limit,12)],outline_partial=len(outline)>min(value.limit,12),
+                        outline_next_after=value.outline_after+min(value.limit,12) if len(outline)>min(value.limit,12) else None)
                 else:
                     kind={'read_document_section':'blocks','get_document_page':'blocks',
                           'get_document_outline':'sections','get_table_cells':'cells',
@@ -197,6 +203,20 @@ class ToolService:
                         val=getattr(value,key)
                         if val is not None and kind=='cells':
                             clauses.append(f"json_extract(payload,'$.{key}')=?");args.append(val)
+                    if kind=='tables' and value.node_id:
+                        from .table_page import table_page
+                        table_size=conn.execute("SELECT length(payload) FROM document_nodes WHERE id=? AND version_id=? AND kind='tables'",(value.node_id,vid)).fetchone()
+                        if not table_size: raise KeyError(value.node_id)
+                        if table_size[0]>1_000_000: raise OverflowError('table_materialization_budget')
+                        table=repo.node(value.document_id,value.node_id,vid)
+                        block=repo.node(value.document_id,table['block_id'],vid)
+                        # Existing small-table callers retain the complete table object.
+                        if value.start or len(json.dumps(table,ensure_ascii=False))>value.max_chars or len(table.get('cells',[]))>value.limit:
+                            result.update(table_page(table,block,value.start,value.limit,value.max_chars))
+                            if self.retrieval.access.scope(repo,requested,Filters())!=scope:
+                                raise PermissionError('scope_changed')
+                            if time.monotonic()>deadline: raise TimeoutError()
+                            return result
                     # Check sizes before materializing large tables/blocks.
                     order="json_extract(payload,'$.row'),json_extract(payload,'$.column'),id" if kind=='cells' else 'ordinal,id'
                     rows=conn.execute('SELECT id,ordinal,length(payload) AS chars FROM document_nodes WHERE '+
@@ -205,6 +225,12 @@ class ToolService:
                     items=[];size=0;budget_partial=False
                     for row in rows[:value.limit]:
                         if time.monotonic()>=deadline: raise TimeoutError()
+                        if kind=='tables' and row['chars']>value.max_chars and not items:
+                            item=json.loads(conn.execute('SELECT payload FROM document_nodes WHERE id=?',(row['id'],)).fetchone()[0])
+                            handle={k:item[k] for k in ('id','block_id','format','unit') if k in item}
+                            handle['table_id']=handle['id']
+                            items.append(handle)
+                            continue
                         size+=row['chars']
                         if size>value.max_chars:
                             if not items: raise OverflowError('output_budget')
