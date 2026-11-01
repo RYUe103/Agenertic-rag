@@ -1,0 +1,138 @@
+{
+  "audit_date": "2026-11-01",
+  "RGB": {
+    "revision": "65ec39e40e7dc9abb50e9bf1b4f32be3f6f16615",
+    "files": {
+      "zh_refine.json": {
+        "sha256": "7a5c7547dcfa1b83429b53a41644453508f820f502d3817312cbf8051afb4563",
+        "bytes": 3893494,
+        "records": 300
+      },
+      "zh_int.json": {
+        "sha256": "e2ddb0461e2130f4b006996a574a89d5898989ff8b15f51d900c17162c7d1b17",
+        "bytes": 3024012,
+        "records": 100
+      },
+      "zh_fact.json": {
+        "sha256": "171c4bc97860635092ce099f2da095c6ba8d07f0c6f7a19d0231373192f07da0",
+        "bytes": 320481,
+        "records": 100
+      }
+    },
+    "license": "CC BY-NC-SA 4.0; official readme and LICENSE.txt",
+    "protocol": "JSONL; outer answer list=required parts; inner lists=aliases; zh_int positive outer lists=groups; zh_fact positive_wrong and fakeanswer are counterfactual; rejection uses noise_rate=1, not native unanswerable labels"
+  },
+  "CRUD_RAG": {
+    "revision": "1aace383994e1f68efa12cf2a8e2dadfb4102ceb",
+    "file": "data/crud_split/split_merged.json",
+    "bytes": 26866460,
+    "sha256": "b199fb281ac526c1c8da7364cad7ea22b7f6fe1d4167e511edbdda8ad3bd943a",
+    "records": {
+      "event_summary": 2000,
+      "continuing_writing": 1999,
+      "hallu_modified": 1268,
+      "questanswer_1doc": 800,
+      "questanswer_2docs": 797,
+      "questanswer_3docs": 797
+    },
+    "fields": {
+      "event_summary": [
+        "event",
+        "summary",
+        "ID",
+        "text",
+        "time",
+        "url",
+        "title"
+      ],
+      "continuing_writing": [
+        "ID",
+        "event",
+        "summary",
+        "beginning",
+        "continuing"
+      ],
+      "hallu_modified": [
+        "ID",
+        "headLine",
+        "broadcastDate",
+        "type",
+        "newsBeginning",
+        "hallucinatedContinuation",
+        "generatedBy",
+        "appearedKeywords",
+        "allKeywords",
+        "realContinuation",
+        "newsRemainder",
+        "hallucinatedMod"
+      ],
+      "questanswer_1doc": [
+        "ID",
+        "event",
+        "news1",
+        "questions",
+        "answers"
+      ],
+      "questanswer_2docs": [
+        "ID",
+        "event",
+        "news1",
+        "news2",
+        "thoughts",
+        "questions",
+        "answers"
+      ],
+      "questanswer_3docs": [
+        "ID",
+        "event",
+        "news1",
+        "news2",
+        "news3",
+        "thoughts",
+        "questions",
+        "answers"
+      ]
+    },
+    "missing_answers": {
+      "questanswer_1doc": 0,
+      "questanswer_2docs": 0,
+      "questanswer_3docs": 0
+    },
+    "downloaded": "Only official experimental split (~26.9MB), no 80,000-document corpus, no embeddings",
+    "license": "Official README displays Apache-2.0 badge; GitHub license metadata was null, article source rights not independently resolved"
+  },
+  "T2Retrieval": {
+    "revision": "921dd3af6e78d1ae7ee0368aa8d7eaee02c8f08e",
+    "license": "apache-2.0 as declared in dataset card",
+    "source": "https://huggingface.co/datasets/mteb/T2Retrieval",
+    "corpus": {
+      "count": 118605,
+      "features": [
+        "_id",
+        "text",
+        "title"
+      ],
+      "download_size": 156879982
+    },
+    "queries": {
+      "count": 22812,
+      "features": [
+        "_id",
+        "text"
+      ],
+      "download_size": 817540
+    },
+    "qrels": {
+      "count": 118932,
+      "features": [
+        "query-id",
+        "corpus-id",
+        "score"
+      ],
+      "download_size": 1149414
+    },
+    "downloaded": "Dataset card/API metadata only; no Parquet corpus",
+    "answer_labels": false
+  },
+  "implementation_commit": "3bed999b9f3703ce9814bcafcd1f329890ef6238"
+}

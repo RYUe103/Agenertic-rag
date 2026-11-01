@@ -1,0 +1,149 @@
+{
+  "judge_calls": 5,
+  "no_retries": true,
+  "judgments": [
+    {
+      "question_id": "rgb_zh_0001",
+      "model": "qwen-plus",
+      "bias": "Post-hoc independent call, same model as Agent by default; correlated errors possible",
+      "assessment": {
+        "answer_grade": "not_assessed",
+        "citation_supported": null,
+        "method": "judge_failed",
+        "reason": "ValueError:answer_witness_not_exact",
+        "scorer_version": "chinese-answer-v2",
+        "elapsed_seconds": 18.266472666990012,
+        "usage": {
+          "total_tokens": 2251,
+          "completion_tokens": 810,
+          "prompt_tokens": 1441,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      "raw": "{\n  \"answer_grade\": \"correct\",\n  \"reason\": \"agent_answer明确回答了问题‘印控克什米尔地区寺庙踩踏事故死亡人数’为12人，与reference_answer['12人']完全一致；所有claims均被对应source_ids中的原文直接支持，无事实增补、无否定错误、无遗漏必答项；时间（今年1月）、地点（印控查谟和克什米尔地区瓦希诺德维寺）、伤亡数（12死14伤）全部有连续原文佐证；‘今年1月’在S1、S2、S3、S6中均出现，且S3明确标注‘当地时间1月1日’，与‘今年年初’（S4、S6）语义一致，不构成冲突；‘至少12人死亡’（S6）与‘12人死亡’（S1/S2/S3）不矛盾，因‘至少12人’包含‘12人’情形，且S3、S1、S2均使用确数‘12人’，整体口径以确数为准。\",\n  \"abstained\": false,\n  \"answer_witnesses\": [\n    {\n      \"source\": \"agent_answer\",\n      \"quote\": \"印控克什米尔地区寺庙踩踏事故造成12人死亡 [1] [2] [3] [4]\"\n    },\n    {\n      \"source\": \"reference_answer\",\n      \"quote\": \"12人\"\n    },\n    {\n      \"source\": \"gold:<0:1>\",\n      \"quote\": \"今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"index\": 0,\n      \"verdict\": \"supported\",\n      \"reason\": \"S1、S2、S3、S6均明确陈述‘造成12人死亡’或‘至少12人死亡’，其中S1、S2、S3为确数，S6‘至少’不否定确数，整体支持该claim。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"今年1月，印控克什米尔地区一座印度教寺庙发生踩踏事故，造成12人死亡。\"\n        }\n      ]\n    },\n    {\n      \"index\": 1,\n      \"verdict\": \"supported\",\n      \"reason\": \"S3明确写出‘位于印控查谟和克什米尔地区的瓦希诺德维寺’及‘当地时间1月1日’；S6、S4均称‘今年年初’‘今年1月’，与S3时间完全一致；地点与时间双重锚定，无歧义。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S3\",\n          \"quote\": \"位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。 当地时间1月1日，大批印度民众聚集在瓦希诺德维寺庆贺新年，期间发生踩踏事故。\"\n        }\n      ]\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"supported\",\n      \"reason\": \"S3和S6均明确记载‘14人受伤’，S3为‘14人受伤’，S6为‘至少12人死亡、14人受伤’，数字一致且无矛盾。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S3\",\n          \"quote\": \"位于印控查谟和克什米尔地区的瓦希诺德维寺发生踩踏事件，目前已造成12人死亡、14人受伤。\"\n        }\n      ]\n    }\n  ]\n}",
+      "payload_sha256": "19005876396c2401d8fff7530069127dc04012dbd5acdc9789565695e0824074"
+    },
+    {
+      "question_id": "rgb_zh_0002",
+      "model": "qwen-plus",
+      "bias": "Post-hoc independent call, same model as Agent by default; correlated errors possible",
+      "assessment": {
+        "answer_grade": "not_assessed",
+        "citation_supported": null,
+        "method": "judge_failed",
+        "reason": "ValueError:answer_witness_not_exact",
+        "scorer_version": "chinese-answer-v2",
+        "elapsed_seconds": 18.65717937500449,
+        "usage": {
+          "total_tokens": 1770,
+          "completion_tokens": 825,
+          "prompt_tokens": 945,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      "raw": "{\n  \"answer_grade\": \"partially_correct\",\n  \"reason\": \"agent_answer称RCEP包括‘东盟10国（列出全部10国名称）+中国、日本、韩国、澳大利亚、新西兰共15个国家’，该表述在数量和成员构成上与reference_answer一致，且S1明确支持‘RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰’。但agent_answer额外列出了东盟10国的全部具体国名（文莱、柬埔寨…越南），而S1原文未列举这些国家名称，仅用‘东盟10国’统称；gold excerpt 0:0虽提及‘东盟十国’并列出‘印度’为初始受邀方，但强调‘RCEP由东盟十国发起，邀请…印度共同参加（“10+6”）’，且明确指出‘RCEP是…建立16国统一市场的自由贸易协定’，暗示印度曾是谈判方；但S1（2020年11月15日签署时的权威表述）及最终生效文本确认印度于2019年退出，RCEP实际签署并生效国为15个，不含印度。agent_answer未提印度曾参与又退出这一关键事实，但问题仅问‘具体包括哪些国家’，当前有效成员确为东盟10国+5国，reference_answer亦未含印度，故主体正确。然而，agent_answer将‘东盟10国’展开为具体国名虽符合常识，但该细节无S1支持（S1仅说‘东盟10国’，未列名），属于添加未被引用证实的细节；同时，gold excerpt 0:0明确提到印度是初始受邀方（‘10+6’），若仅依据S1作答则无法解释为何排除印度，而agent_answer完全未提及印度及其退出，可能造成对RCEP历史构成的片面理解。因此，核心成员列表正确，但缺乏对印度退出的关键背景说明，且展开国名无直接引用支持，故判partially_correct。\",\n  \"abstained\": false,\n  \"answer_witnesses\": [\n    {\n      \"source\": \"agent_answer\",\n      \"quote\": \"RCEP包括东盟10国（文莱、柬埔寨、印度尼西亚、老挝、马来西亚、缅甸、菲律宾、新加坡、泰国、越南）、中国、日本、韩国、澳大利亚和新西兰共15个国家\"\n    },\n    {\n      \"source\": \"reference_answer\",\n      \"quote\": [\"东盟\", \"中国\", \"日本\", \"韩国\", \"澳大利亚\", \"新西兰\"]\n    },\n    {\n      \"source\": \"gold:<0:0>\",\n      \"quote\": \"RCEP由东盟十国发起，邀请中国、日本、韩国、澳大利亚、新西兰、印度共同参加(“10+6”)…建立16国统一市场的自由贸易协定。\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"index\": 0,\n      \"verdict\": \"partial\",\n      \"reason\": \"S1支持RCEP成员国包括‘东盟10国与中国、日本、韩国、澳大利亚、新西兰’，确认15国框架，与claim中‘共15个国家’及六类主体一致；但S1未列举东盟10国具体国名（如文莱、柬埔寨等），该部分属agent_answer自行补充，无S1依据；此外，S1未说明印度已退出，而gold excerpt 0:0显示印度原为‘10+6’成员，claim未反映这一动态变化，存在信息不完整。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"RCEP成员国包括东盟10国与中国、日本、韩国、澳大利亚、新西兰。\"\n        }\n      ]\n    }\n  ]\n}",
+      "payload_sha256": "f03b2ddf0f7549bd461de1519fc21fccf4f1f6909f3ded566aa5f3010d4bfce8"
+    },
+    {
+      "question_id": "rgb_zh_0003",
+      "model": "qwen-plus",
+      "bias": "Post-hoc independent call, same model as Agent by default; correlated errors possible",
+      "assessment": {
+        "answer_grade": "not_assessed",
+        "citation_supported": null,
+        "method": "judge_failed",
+        "reason": "ValueError:answer_witness_not_exact",
+        "scorer_version": "chinese-answer-v2",
+        "elapsed_seconds": 15.50477004199638,
+        "usage": {
+          "total_tokens": 2606,
+          "completion_tokens": 684,
+          "prompt_tokens": 1922,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          }
+        }
+      },
+      "raw": "{\n  \"answer_grade\": \"correct\",\n  \"reason\": \"问题询问第七届香港立法会议员宣誓仪式的时间，reference_answer为['1月3日']，属日期核心信息。agent_answer中三项claim均明确指向2022年1月3日（含'上午11时''上午''2022-01-03'），完全覆盖reference_answer的'1月3日'；所有claim均有对应source_ids支持，且引文内容与claim严格一致：S1明确写'2022年1月3日上午11时'；S2/S3多处重复'2022年1月3日上午'；S5直接标注'2022-01-03'。无添加错误事实、无否定偏差、无遗漏必答项。\",\n  \"abstained\": false,\n  \"answer_witnesses\": [\n    {\n      \"source\": \"agent_answer\",\n      \"quote\": \"第七届香港立法会议员宣誓仪式于2022年1月3日上午11时举行。 [1]\\n\\n2022年1月3日上午，香港特区第七届立法会议员宣誓仪式举行。 [2] [3]\\n\\n香港特区第七届立法会举行议员宣誓仪式时间为2022-01-03。 [4]\"\n    },\n    {\n      \"source\": \"reference_answer\",\n      \"quote\": \"1月3日\"\n    },\n    {\n      \"source\": \"gold:<0:0>\",\n      \"quote\": \"2022年1月3日上午，香港特区第七届立法会议员宣誓仪式举行。\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"index\": 0,\n      \"verdict\": \"supported\",\n      \"reason\": \"S1原文明确支持'2022年1月3日上午11时'这一精确时间点。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"香港第七届立法会议员的宣誓仪式将在2022年1月3日上午11时在立法会会议厅举行，由行政长官林郑月娥监誓。\"\n        }\n      ]\n    },\n    {\n      \"index\": 1,\n      \"verdict\": \"supported\",\n      \"reason\": \"S2和S3均多次出现'2022年1月3日上午'表述，语义一致且可交叉验证。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S2\",\n          \"quote\": \"2022年1月3日上午，香港特区第七届立法会议员宣誓仪式举行。\"\n        }\n      ]\n    },\n    {\n      \"index\": 2,\n      \"verdict\": \"supported\",\n      \"reason\": \"S5标题直接以'2022-01-03'格式标示日期，与claim完全匹配。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S5\",\n          \"quote\": \"香港特区第七届立法会举行议员宣誓仪式2022-01-03.\"\n        }\n      ]\n    }\n  ]\n}",
+      "payload_sha256": "4729204780dfd18d87e29324c1e948f6becf7951d7e9e9b3c4c0796a7c6a8234"
+    },
+    {
+      "question_id": "rgb_zh_0004",
+      "model": "qwen-plus",
+      "bias": "Post-hoc independent call, same model as Agent by default; correlated errors possible",
+      "assessment": {
+        "answer_grade": "not_assessed",
+        "citation_supported": null,
+        "method": "judge_failed",
+        "reason": "ValueError:answer_witness_not_exact",
+        "scorer_version": "chinese-answer-v2",
+        "elapsed_seconds": 13.779144833999453,
+        "usage": {
+          "total_tokens": 1770,
+          "completion_tokens": 603,
+          "prompt_tokens": 1167,
+          "prompt_tokens_details": {
+            "cached_tokens": 256
+          }
+        }
+      },
+      "raw": "{\n  \"answer_grade\": \"correct\",\n  \"reason\": \"问题问‘首趟RCEP班列的起点？’，参考答案为['南宁']；agent_answer称‘起点是南宁国际铁路港’，南宁国际铁路港位于南宁市，属南宁行政辖区，与‘南宁’口径一致且更具体，未引入错误信息。所有claim引用（S1、S3、S4）均明确指出‘我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出’，直接支持该结论。\",\n  \"abstained\": false,\n  \"answer_witnesses\": [\n    {\n      \"source\": \"agent_answer\",\n      \"quote\": \"首趟RCEP班列的起点是南宁国际铁路港 [1] [2] [3]\"\n    },\n    {\n      \"source\": \"reference_answer\",\n      \"quote\": \"南宁\"\n    },\n    {\n      \"source\": \"gold:<0:0>\",\n      \"quote\": \"2022年1月1日零点刚过，随着汽笛声响，满载800多吨货物的X9101次集装箱班列从南宁国际铁路港开出……这是RCEP(区域全面经济伙伴关系协定)生效后，我国首趟开往RCEP成员国的国际货运班列。    \\t我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"index\": 0,\n      \"verdict\": \"supported\",\n      \"reason\": \"claim断言‘首趟RCEP班列的起点是南宁国际铁路港’，S1、S3、S4三处原文均明确表述‘我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出’，且S4与gold<0:0>内容高度重合，语义完全一致，构成直接支持。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出\"\n        },\n        {\n          \"source_id\": \"S3\",\n          \"quote\": \"RCEP生效后首趟国际货运班列从广西南宁启程\"\n        },\n        {\n          \"source_id\": \"S4\",\n          \"quote\": \"满载800多吨货物的X9101次集装箱班列从南宁国际铁路港开出……这是RCEP(区域全面经济伙伴关系协定)生效后，我国首趟开往RCEP成员国的国际货运班列。    \\t我国首趟开往RCEP成员国的国际货运班列从南宁国际铁路港发出\"\n        }\n      ]\n    }\n  ]\n}",
+      "payload_sha256": "434cb3adbfb1cd79c9e38ad6090b14d0c20352ee718e57e02e21d1ffaed4407e"
+    },
+    {
+      "question_id": "rgb_zh_0005",
+      "model": "qwen-plus",
+      "bias": "Post-hoc independent call, same model as Agent by default; correlated errors possible",
+      "assessment": {
+        "answer_grade": "correct",
+        "reason": "agent_answer明确回答‘香港第七届立法会选举共有90个议席’，与reference_answer['90']完全一致；该结论在S1、S4、S8三处引用中均被直接、清晰支持：S1称‘第七届立法会90个议席全部顺利产生’；S4两次明确‘第七届立法会90个议席全部顺利产生’并补充构成方式（40+30+20）；S8原文段落首句即指出‘总共选出90名议员’。所有claim均获其对应source_ids原文直接证实，无添加错误信息、无否定偏差、无遗漏必答项。",
+        "abstained": false,
+        "answer_witnesses": [
+          {
+            "source": "agent_answer",
+            "quote": "香港第七届立法会选举共有90个议席 [1] [2] [3]"
+          },
+          {
+            "source": "reference_answer",
+            "quote": "90"
+          },
+          {
+            "source": "gold:0:0",
+            "quote": "第七届立法会（英语：Seventh Legislative Council）经2021年12月19日的选举产生，90名议员分别从地方选区普选20位、功能团体间选30位、选举委员会产生40名。"
+          }
+        ],
+        "claims": [
+          {
+            "index": 0,
+            "verdict": "supported",
+            "reason": "claim‘香港第七届立法会选举共有90个议席’在S1、S4、S8中均被原文直接陈述，且数字一致、语境明确（均为描述第七届立法会选举结果），无歧义或条件限制。",
+            "quotes": [
+              {
+                "source_id": "S1",
+                "quote": "至此，第七届立法会90个议席全部顺利产生。"
+              }
+            ]
+          }
+        ],
+        "citation_supported": true,
+        "method": "model_review_with_exact_witness_checks",
+        "scorer_version": "chinese-answer-v2",
+        "elapsed_seconds": 10.055435916001443,
+        "usage": {
+          "total_tokens": 2351,
+          "completion_tokens": 436,
+          "prompt_tokens": 1915,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        }
+      },
+      "raw": "{\n  \"answer_grade\": \"correct\",\n  \"reason\": \"agent_answer明确回答‘香港第七届立法会选举共有90个议席’，与reference_answer['90']完全一致；该结论在S1、S4、S8三处引用中均被直接、清晰支持：S1称‘第七届立法会90个议席全部顺利产生’；S4两次明确‘第七届立法会90个议席全部顺利产生’并补充构成方式（40+30+20）；S8原文段落首句即指出‘总共选出90名议员’。所有claim均获其对应source_ids原文直接证实，无添加错误信息、无否定偏差、无遗漏必答项。\",\n  \"abstained\": false,\n  \"answer_witnesses\": [\n    {\n      \"source\": \"agent_answer\",\n      \"quote\": \"香港第七届立法会选举共有90个议席 [1] [2] [3]\"\n    },\n    {\n      \"source\": \"reference_answer\",\n      \"quote\": \"90\"\n    },\n    {\n      \"source\": \"gold:0:0\",\n      \"quote\": \"第七届立法会（英语：Seventh Legislative Council）经2021年12月19日的选举产生，90名议员分别从地方选区普选20位、功能团体间选30位、选举委员会产生40名。\"\n    }\n  ],\n  \"claims\": [\n    {\n      \"index\": 0,\n      \"verdict\": \"supported\",\n      \"reason\": \"claim‘香港第七届立法会选举共有90个议席’在S1、S4、S8中均被原文直接陈述，且数字一致、语境明确（均为描述第七届立法会选举结果），无歧义或条件限制。\",\n      \"quotes\": [\n        {\n          \"source_id\": \"S1\",\n          \"quote\": \"至此，第七届立法会90个议席全部顺利产生。\"\n        }\n      ]\n    }\n  ]\n}",
+      "payload_sha256": "e3503f9931c5e0b4919b7fd00095707b168b0c7c8869f218e3a73a820b4cf422"
+    }
+  ]
+}
