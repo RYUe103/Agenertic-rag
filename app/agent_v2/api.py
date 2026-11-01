@@ -57,7 +57,9 @@ class AgentAPI:
             evidence_count=profile.max_evidence_for_answer,iterations=settings.agent_max_iterations,
             tool_seconds=settings.agent_tool_seconds,total_seconds=settings.agent_total_seconds,
             context_chars=settings.agent_context_chars,output_chars=settings.agent_output_chars,
-            consecutive_failures=settings.agent_consecutive_failures)
+            consecutive_failures=settings.agent_consecutive_failures,
+            citation_repair=settings.agent_citation_repair,total_tokens=settings.agent_total_tokens,
+            completion_tokens=settings.agent_completion_tokens)
         return ReActRuntime(ExecutionStore(self.directory),service,original.agent.llm,
             principal=owner,agent_id=body.agent_id,scopes=scopes,allowed_tools=profile.react_tools,
             budget=budget,authorize=authorize,emit=emit)
@@ -90,7 +92,7 @@ class AgentAPI:
 
     def legacy_response(self,result,profile):
         final=result.get('result') or {};citations=final.get('citations',{})
-        evidence=[];sources=[]
+        evidence=[];sources=[];metadata=[]
         for ident,item in citations.items():
             loc=item['locator'];url=(f"/api/v2/knowledge-bases/{quote(item['knowledge_base_id'],safe='')}/documents/"
                 f"{quote(item['document_id'],safe='')}/content?version_id={quote(item['version_id'],safe='')}")
@@ -98,13 +100,21 @@ class AgentAPI:
                 content=item['content'],retrieval_type=item['source_adapter'],page=next(iter(item['page_numbers']),None),
                 location=f"version={item['version_id']}; range={loc.get('start')}:{loc.get('end')}",pdf_url=url))
             sources.append(RetrievalSource(source_id=item['document_id'],filename=item['document_name'],url=url,pages=item['page_numbers']))
+            for citation in final.get('citation_metadata',[]):
+                if citation['evidence_id']==ident:
+                    metadata.append({**citation,'document_id':item['document_id'],'version_id':item['version_id'],
+                        'title':item['document_name'],'excerpt':item['content'],'page_numbers':item['page_numbers'],
+                        'locator':loc,'url':url})
         trace=[AgentTraceEvent(sequence=i+1,kind='tool' if e['type'].startswith('tool_') else 'observation',
                 title=e['type'],tool_name=e.get('tool_name'),status='error' if e['type']=='tool_failed' else 'success')
                 for i,e in enumerate(result['events'])]
         return AskResponse(run_id=result['run_id'],thread_id=result['thread_id'],runtime_mode='react_v2',
             agent_id=profile.agent_id,agent_name=profile.name,answer=final.get('answer','等待人工审批。'),
             evidences=evidence,sources=sources,process=[e['title'] for e in [t.model_dump() for t in trace]],trace=trace,
-            tool_calls=result['tool_calls'],evidence_insufficient=final.get('evidence_insufficient',True))
+            tool_calls=result['tool_calls'],evidence_insufficient=final.get('evidence_insufficient',True),
+            citation_validation=final.get('citation_validation','pending'),answer_correctness='not_assessed',
+            answer_validation=final.get('answer_validation','pending'),answer_displayable=final.get('answer_displayable',False),
+            trusted_evidence_count=final.get('trusted_evidence_count',0),citation_metadata=metadata,claims=final.get('claims',[]))
 
     def router(self):
         router=APIRouter(prefix='/api/v2/agent')

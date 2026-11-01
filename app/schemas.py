@@ -130,6 +130,13 @@ class AskResponse(BaseModel):
     sources: list[RetrievalSource] = Field(default_factory=list)
     runtime_mode: str = 'legacy'
     thread_id: str | None = None
+    citation_validation: str = 'not_assessed'
+    answer_correctness: str = 'not_assessed'
+    answer_validation: str = 'not_assessed'
+    answer_displayable: bool = True
+    trusted_evidence_count: int = 0
+    citation_metadata: list[dict[str, Any]] = Field(default_factory=list)
+    claims: list[dict[str, Any]] = Field(default_factory=list)
 
 
 class RetrievalResponse(BaseModel):

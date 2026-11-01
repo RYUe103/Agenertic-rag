@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh"><meta charset="utf-8"><title>Citation UI smoke test</title>
+<body><h1>Citation UI smoke test</h1><output id="checks">Running</output><main id="answer"></main>
+<section id="citation-1"><h2>First source</h2><a href="/api/v2/knowledge-bases/kb/documents/a/content?version_id=v1">Authorized version 1</a></section>
+<section id="citation-2"><h2>Second source</h2><a href="/api/v2/knowledge-bases/kb/documents/b/content?version_id=v2">Authorized version 2</a></section>
+<script type="module">
+import { citationHtml } from '/src/pages/citationHtml.ts';
+const response = {runtime_mode:'react_v2', answer:'First [1]. Second [2]. Again [1]. <img src="https://example.invalid/a" onerror="alert(1)"> [unsafe](javascript:alert) [model link](/untrusted)',
+  citation_metadata:[{number:1,title:'First source',excerpt:'First verified excerpt',page_numbers:[3],url:'/api/v2/knowledge-bases/kb/documents/a/content?version_id=v1'},
+    {number:2,title:'Second source',excerpt:'Second verified excerpt',page_numbers:[],url:'/api/v2/knowledge-bases/kb/documents/b/content?version_id=v2'}]};
+const root = document.querySelector('#answer'); root.innerHTML = citationHtml(response);
+const anchors = [...root.querySelectorAll('a')];
+const checks = [anchors.length === 3, anchors.map(a=>a.getAttribute('href')).join(',') === '#citation-1,#citation-2,#citation-1',
+  anchors[0].title.includes('First verified excerpt'), anchors[0].title.includes('3'),
+  !root.querySelector('img,script,[onerror]'), !root.innerHTML.includes('javascript:'),
+  citationHtml({...response,runtime_mode:'legacy',answer:'[legacy](/original)'}).includes('href="/original"')];
+document.querySelector('#checks').textContent = checks.every(Boolean) ? '7/7 passed' : JSON.stringify(checks);
+</script></body></html>

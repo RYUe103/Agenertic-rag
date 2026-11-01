@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from 'react';
-import DOMPurify from 'dompurify';
-import { marked } from 'marked';
+import { citationHtml } from './citationHtml';
 import { Button, Collapse, Switch, TextArea, Toast, Typography } from '@douyinfe/semi-ui';
 import { IconSearch, IconExternalOpen } from '@douyinfe/semi-icons';
 import { api, agentStream } from '../api/client';
@@ -30,7 +29,7 @@ export function QaPage() {
     } catch { /* Storage may be unavailable; server checkpoints remain accessible. */ }
     return () => {active = false;};
   }, [activeAgentId]);
-  const answerHtml = useMemo(() => response ? DOMPurify.sanitize(marked.parse(response.answer) as string) : '', [response]);
+  const answerHtml = useMemo(() => response ? citationHtml(response) : '', [response]);
 
   async function runReAct(resume = false) {
     setLoading(true); setPending('');
@@ -66,6 +65,6 @@ export function QaPage() {
       {reactMode && events.length > 0 && <Collapse><Collapse.Panel header="Agent 运行状态" itemKey="events"><pre className="trace-json">{JSON.stringify(events, null, 2)}</pre></Collapse.Panel></Collapse>}
     </div>
     <section className="query-panel"><div><Typography.Text strong>{activeAgent?.name || '未选择知识库'}</Typography.Text></div><TextArea value={question} onChange={setQuestion} placeholder="输入要检索的文件或具体问题" autosize rows={5} onEnterPress={(event) => {if ((event.metaKey || event.ctrlKey) && !loading) void ask();}} /><div className="query-actions"><span>Ctrl / ⌘ + Enter 提交</span><Button icon={<IconSearch />} theme="solid" type="primary" loading={loading} disabled={!question.trim() || !activeAgentId} onClick={() => void ask()}>开始检索</Button></div></section>
-    <section className="answer-panel">{!response && !loading && <div className="empty-answer"><IconSearch size="extra-large" /><strong>等待检索</strong><span>回答、来源文件和执行轨迹将在此显示</span></div>}{loading && <div className="answer-loading"><span />正在定位文件并检索证据…</div>}{response && <><article className="markdown-body answer-body" dangerouslySetInnerHTML={{__html: answerHtml}} /><div className="answer-meta">{response.agent_name} · {response.tool_calls} 次工具调用 · {response.evidences.length} 条证据</div><Typography.Title heading={6}>来源文件</Typography.Title><div className="source-list">{response.evidences.map((item, index) => <article key={`${item.source_id}-${index}`}><div><span>{index + 1}</span><strong>{item.filename}</strong></div><small>{item.page ? `第 ${item.page} 页` : item.location || '位置未标注'} · {item.retrieval_type}</small><p>{item.content}</p><Button size="small" theme="borderless" icon={<IconExternalOpen />} onClick={() => window.open(item.pdf_url || `/api/files/${encodeURIComponent(item.source_id)}`, '_blank', 'noopener,noreferrer')}>打开原始文件</Button></article>)}</div>{response.trace && response.trace.length > 0 && <Collapse><Collapse.Panel header="Agent 执行轨迹" itemKey="trace"><pre className="trace-json">{JSON.stringify(response.trace, null, 2)}</pre></Collapse.Panel></Collapse>}</>}</section>
+    <section className="answer-panel">{!response && !loading && <div className="empty-answer"><IconSearch size="extra-large" /><strong>等待检索</strong><span>回答、来源文件和执行轨迹将在此显示</span></div>}{loading && <div className="answer-loading"><span />正在定位文件并检索证据…</div>}{response && <><article className="markdown-body answer-body" dangerouslySetInnerHTML={{__html: answerHtml}} /><div className="answer-meta">{response.agent_name} · {response.tool_calls} 次工具调用 · {response.evidences.length} 条证据{response.runtime_mode === 'react_v2' && <span> · {response.citation_validation === 'passed' ? '引用已复核；结论正确性未评定' : '引用未通过，显示安全提示'}</span>}</div><Typography.Title heading={6}>来源文件</Typography.Title><div className="source-list">{response.evidences.map((item, index) => <article id={`citation-${index + 1}`} key={`${item.source_id}-${index}`}><div><span>{index + 1}</span><strong>{item.filename}</strong></div><small>{item.page ? `第 ${item.page} 页` : item.location || '位置未标注'} · {item.retrieval_type}</small><p>{item.content}</p><Button size="small" theme="borderless" icon={<IconExternalOpen />} onClick={() => window.open(item.pdf_url || `/api/files/${encodeURIComponent(item.source_id)}`, '_blank', 'noopener,noreferrer')}>打开原始文件</Button></article>)}</div>{response.trace && response.trace.length > 0 && <Collapse><Collapse.Panel header="Agent 执行轨迹" itemKey="trace"><pre className="trace-json">{JSON.stringify(response.trace, null, 2)}</pre></Collapse.Panel></Collapse>}</>}</section>
   </div>;
 }

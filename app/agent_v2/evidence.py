@@ -48,7 +48,9 @@ class EvidenceRegistry:
             'fused_score':ref.get('fused_score',0),'index_generation':ref.get('index_generation'),
             'content_truncated':ref.get('content_truncated',False)})
 
-    def collect(self, output, limit):
+    def collect(self, output, limit, diagnostics=None):
+        diagnostics = diagnostics if diagnostics is not None else {}
+        diagnostics.update(tool_candidate_count=0, registered_evidence_count=0, registration_rejections={})
         if output.get('status') != 'success':
             return {}, []
         data = output.get('data') or {}
@@ -72,12 +74,21 @@ class EvidenceRegistry:
                     block=repo.node(base['document_id'],table['block_id'],base['version_id'])
                     candidates.append({**base,'locator':block['locator']})
         refs, snippets = {}, []
+        diagnostics['tool_candidate_count'] = len(candidates)
+        def rejected(reason):
+            counts = diagnostics['registration_rejections']
+            counts[reason] = counts.get(reason, 0) + 1
+        if len(candidates)>limit:
+            diagnostics['registration_rejections']['evidence_budget'] = len(candidates)-limit
         for item in candidates[:limit]:
             if item.get('verification_status') not in (None,'verified_current','verified_historical'):
+                rejected('unverified_candidate')
                 continue
             try:
                 hit, spec = self.resolve(item)
-            except (KeyError, ValueError, PermissionError, TimeoutError):
+            except (KeyError, ValueError, PermissionError, TimeoutError) as exc:
+                rejected({KeyError:'missing_identity', ValueError:'content_or_locator_invalid',
+                    PermissionError:'scope_or_version_invalid', TimeoutError:'resolution_timeout'}[type(exc)])
                 continue
             content=hit.content[:min(2000,len(item.get('content',hit.content)))]
             value = hit.model_dump(exclude={'content'})
@@ -90,6 +101,7 @@ class EvidenceRegistry:
             ident = 'ev_' + digest([hit.key(), value['content_hash']])[:16]
             refs[ident] = value
             snippets.append(dict(evidence_id=ident, content=content, **value))
+        diagnostics['registered_evidence_count'] = len(refs)
         return refs, snippets
 
     def validate_answer(self, text, refs, *, allow_unreferenced=False):

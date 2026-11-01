@@ -17,7 +17,7 @@ from tests.test_retrieval_v2 import setup
 
 class ScriptedModel:
     def __init__(self,*steps): self.steps=list(steps);self.calls=0
-    def react(self,messages,tools):
+    def react(self,messages,tools,**kwargs):
         step=self.steps[self.calls];self.calls+=1
         return step(messages) if callable(step) else step
 
@@ -28,7 +28,8 @@ def call(name='search_knowledge',args=None,ident='call1'):
 
 
 def answer(messages):
-    outputs=[json.loads(m.content) for m in messages if isinstance(m,ToolMessage)]
+    # Retain legacy ID-copying coverage against trusted artifacts, not wire payloads.
+    outputs=[m.artifact or json.loads(m.content) for m in messages if isinstance(m,ToolMessage)]
     ids=[k for o in outputs for k in o.get('_evidence',{})]
     return AIMessage(content='Fuel evidence ['+ids[0]+']' if ids else '证据不足。')
 

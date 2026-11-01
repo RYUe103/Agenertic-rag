@@ -21,8 +21,8 @@ def test_opt_in_api_legacy_and_stream(tmp_path):
         response=client.post('/api/v2/agent/stream',json={'question':'你好','agent_id':agent.profile.agent_id,'conversation_id':'stream'})
         assert response.status_code==200
         events=[json.loads(line[6:]) for line in response.text.splitlines() if line.startswith('data: ')]
-        assert [e['type'] for e in events]==['run_started','thinking','answer_started','answer_delta','completed','result']
-        assert len({e['event_id'] for e in events if 'event_id' in e})==5
+        assert [e['type'] for e in events]==['run_started','thinking','model_metrics','citation_context','answer_started','answer_delta','citation_validation','completed','result']
+        assert len({e['event_id'] for e in events if 'event_id' in e})==8
         assert events[-1]['data']['response']['answer']=='你好'
         assert client.delete('/api/v2/agent/threads/'+value['thread_id']).status_code==200
 

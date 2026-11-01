@@ -14,6 +14,9 @@ class ExecutionBudget(StrictModel):
     evidence_count: int = Field(default=12, ge=1, le=50)
     output_chars: int = Field(default=16000, ge=500, le=50000)
     consecutive_failures: int = Field(default=3, ge=1, le=10)
+    citation_repair: bool = True
+    total_tokens: int = Field(default=120000, ge=1000, le=1000000)
+    completion_tokens: int = Field(default=2000, ge=100, le=8000)
 
 
 class AgentState(TypedDict, total=False):
@@ -39,3 +42,8 @@ class AgentState(TypedDict, total=False):
     elapsed_seconds: float
     calculations: list[dict]
     scope_checks: list[dict]
+    sources: dict
+    visible_evidence: list[str]
+    metrics: dict
+    repair_attempted: bool
+    draft: str

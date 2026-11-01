@@ -189,6 +189,13 @@ export interface Evidence {
 }
 
 export interface AskResponse {
+  runtime_mode?: string;
+  citation_validation?: string;
+  answer_correctness?: string;
+  answer_validation?: string;
+  answer_displayable?: boolean;
+  trusted_evidence_count?: number;
+  citation_metadata?: Array<{number: number; source_id: string; evidence_id: string; title: string; excerpt: string; url: string; version_id: string; page_numbers: number[]}>;
   answer: string;
   agent_id: string;
   agent_name: string;

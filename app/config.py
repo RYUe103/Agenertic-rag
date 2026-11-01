@@ -50,6 +50,9 @@ class Settings(BaseSettings):
     agent_context_chars: int = Field(default=48000, ge=1000, le=200000)
     agent_output_chars: int = Field(default=16000, ge=500, le=50000)
     agent_consecutive_failures: int = Field(default=3, ge=1, le=10)
+    agent_citation_repair: bool = True
+    agent_total_tokens: int = Field(default=120000, ge=1000, le=1000000)
+    agent_completion_tokens: int = Field(default=2000, ge=100, le=8000)
     request_timeout_seconds: float = 30.0
     grep_timeout_seconds: float = 5.0
     auth_enabled: bool = True
