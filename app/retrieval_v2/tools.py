@@ -3,7 +3,7 @@ import json
 import time
 import uuid
 from typing import Any
-from pydantic import Field
+from pydantic import Field, model_validator
 from .models import StrictModel, Scope, Filters, RetrievalRequest
 from .evidence import EvidenceResolver, text_window
 from .calculations import CalculationInput, calculate
@@ -11,7 +11,9 @@ from .calculations import CalculationInput, calculate
 
 class ReadInput(StrictModel):
     knowledge_base_id: str = Field(min_length=1,max_length=200)
-    document_id: str = Field(min_length=1,max_length=200)
+    document_id: str | None = Field(default=None,min_length=1,max_length=200)
+    source_id: str | None = Field(default=None,pattern=r'^S[1-9][0-9]*$',description='当前 Run 已注册来源；仅 read_document 支持受控复读')
+    number_start: int = Field(default=0,ge=0,le=1000,description='Source 复读的数值候选起始序号')
     version_id: str | None = Field(default=None,max_length=300)
     node_id: str | None = Field(default=None,max_length=400)
     section_id: str | None = Field(default=None,max_length=400)
@@ -24,6 +26,12 @@ class ReadInput(StrictModel):
     neighbors: int = Field(default=1,ge=0,le=5)
     row: int | None = Field(default=None,ge=0)
     column: int | None = Field(default=None,ge=0)
+
+    @model_validator(mode='after')
+    def identity_required(self):
+        if not self.document_id and not self.source_id:
+            raise ValueError('document_id_or_source_id_required')
+        return self
 
 
 class ToolOutput(StrictModel):
@@ -39,7 +47,7 @@ HIGH = {
     'calculate':'使用已验证 evidence.content 或本轮用户给定数字进行 Decimal 运算。值唯一时省略 start/end，由服务器精确定位；重复值才提供偏移。不知道单位时不要编造。',
     'search_knowledge':'自动规划并检索知识，返回已验证原文证据',
     'find_document':'检索并聚合候选文档，返回来源排名',
-    'read_document':'按 Unicode 偏移分页读取指定文档版本',
+    'read_document':'按偏移读取文档；或用当前 Run 的 source_id 复读已注册来源（含压缩后的来源）。number_start 分页读取可信数值候选',
     'read_document_section':'读取指定章节的原文 Block',
     'read_document_table':'查找或读取版本化结构表格',
     'find_exact_text':'精确原文搜索，保留匹配位置和续查令牌',
@@ -62,6 +70,18 @@ def input_schema(name):
     return CalculationInput if name == 'v2.calculate' else RetrievalRequest if name[3:] in SEARCH else ReadInput
 
 
+def canonical_arguments(model):
+    """Additive optional fields do not invalidate pre-upgrade approval/receipt hashes."""
+    value=model.model_dump()
+    if isinstance(model,ReadInput):
+        if value.get('source_id') is None:value.pop('source_id',None)
+        if value.get('number_start')==0:value.pop('number_start',None)
+    if isinstance(model,CalculationInput):
+        for operand in value['operands']:
+            if operand.get('candidate_id') is None:operand.pop('candidate_id',None)
+    return value
+
+
 def catalog():
     return [dict(name=name,version='2',description=desc,
         layer='high' if name[3:] in HIGH else 'low',risk='read',
@@ -79,6 +99,8 @@ class ToolService:
 
     def preflight(self, name, arguments):
         model=input_schema(name).model_validate(arguments)
+        if isinstance(model,ReadInput) and model.source_id and name!='v2.read_document':
+            raise ValueError('source_reread_requires_read_document')
         kbs=[s.knowledge_base_id for s in model.scopes] if isinstance(model,RetrievalRequest) else [model.knowledge_base_id]
         config=self.configurations.get(name)
         if not config['enabled']:
@@ -89,13 +111,19 @@ class ToolService:
             self.retrieval.access.authorize_kb(kb)
         return model, kbs, config
 
-    def invoke(self, name, arguments, approval_id=None, *, calculation_context=None):
+    def invoke(self, name, arguments, approval_id=None, *, calculation_context=None, evidence_context=None):
         started=time.monotonic(); status='failed'; kbs=[]
         try:
             model, kbs, config=self.preflight(name,arguments)
             if config.get('requires_approval'):
-                if len(kbs)!=1 or not self.approvals or not approval_id or not self.approvals.consume(
-                        approval_id,self.actor,kbs[0],name,model.model_dump()):
+                if len(kbs)!=1 or not self.approvals or not approval_id:
+                    raise PermissionError('approval_required')
+                approved=self.approvals.get(approval_id)['arguments']
+                # Accept equivalent old/new default encodings, then atomically consume
+                # the exact stored hash with actor/KB/tool/status/expiry checks.
+                approved_model=input_schema(name).model_validate(approved)
+                if canonical_arguments(approved_model)!=canonical_arguments(model) or not self.approvals.consume(
+                        approval_id,self.actor,kbs[0],name,approved):
                     raise PermissionError('approval_required')
             tool=name[3:]
             if isinstance(model,CalculationInput):
@@ -108,6 +136,9 @@ class ToolService:
                 data=response.model_dump()
                 if tool=='find_document':
                     data={'documents':data['documents'],'document_start':model.document_start,'diagnostics':data['diagnostics'],'plan':data['plan'],'status':data['status']}
+            elif model.source_id:
+                if evidence_context is None: raise PermissionError('source_requires_run_context')
+                data=evidence_context(model)
             else:
                 data=self.read(tool,model,started+5)
             for kb in kbs:
@@ -176,7 +207,7 @@ class ToolService:
                         if time.monotonic()>=deadline: raise TimeoutError()
                         outline.append({'id':row['id'],'kind':row['kind'],'title':row['title'] or '',
                                         'block_id':row['block_id'],'ordinal':row['ordinal']})
-                    result.update(outline=outline[:min(value.limit,12)],outline_partial=len(outline)>min(value.limit,12),
+                    result.update(outline_start=value.outline_after+1,outline=outline[:min(value.limit,12)],outline_partial=len(outline)>min(value.limit,12),
                         outline_next_after=value.outline_after+min(value.limit,12) if len(outline)>min(value.limit,12) else None)
                 else:
                     kind={'read_document_section':'blocks','get_document_page':'blocks',

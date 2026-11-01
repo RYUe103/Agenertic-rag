@@ -31,22 +31,24 @@ def observation(output, sources, admitted, tool_name="", seen_documents=None):
         if ident not in admitted or ident not in reverse:
             continue
         visible['evidence'].append(dict(source_id=reverse[ident], evidence_id=ident,
-            content=snippet['content'], document_id=snippet.get('document_id'),
+            content=snippet['content'], numeric_candidates=snippet.get('numeric_candidates',[]),
+            next_number_start=snippet.get('next_number_start'),document_id=snippet.get('document_id'),
+            knowledge_base_id=snippet.get('knowledge_base_id'),version_id=snippet.get('version_id'),
             title=snippet.get('document_name'), page_numbers=snippet.get('page_numbers', []),
             locator=snippet.get('locator'), continuation=snippet.get('continuation'), content_truncated=snippet.get('content_truncated', False)))
     from .context import profile
     _, limits = profile(tool_name)
     seen_documents = seen_documents if seen_documents is not None else set()
     visible['data'] = {k:v for k,v in data.items() if k in {
-        'status','partial','next_start','next_after','document_id', 'outline_next_after',
+        'status','partial','next_start','next_after','document_id', 'outline_next_after','outline_start','document_start',
         'knowledge_base_id','version_id','operation','result','unit','precision','operands',
         'table_page','headers','table_id','continuation','units'}}
     documents=[]
     start=data.get('document_start',0)
     for doc in data.get('documents',[])[start:start+limits['navigation_limit']]:
         identity=(doc.get('knowledge_base_id'),doc.get('document_id'),doc.get('version_id'))
-        fields=('knowledge_base_id','document_id','version_id') if identity in seen_documents else (
-            'knowledge_base_id','document_id','version_id','document_name','title','filename','rank','score')
+        fields=('knowledge_base_id','document_id','version_id','document_name','filename','standard_no','standard_year') if identity in seen_documents else (
+            'knowledge_base_id','document_id','version_id','document_name','title','filename','rank','score','standard_title','standard_no','standard_year','metadata_scope')
         documents.append({k:v for k,v in doc.items() if k in fields})
         seen_documents.add(identity)
     if documents: visible['data']['documents']=documents

@@ -24,14 +24,14 @@ class EvidenceRegistry:
             raise PermissionError('evidence_stale_or_unavailable')
         return repo, requested, scope
 
-    def resolve(self, ref):
+    def resolve(self, ref, deadline=None):
         kb, doc, vid = (ref[k] for k in ('knowledge_base_id','document_id','version_id'))
         repo, requested, scope = self.scope(kb, doc, vid)
         request = RetrievalRequest(query='evidence', scopes=[requested], budget={'item_chars':12000})
         loc = ref['locator']
         candidate = dict(document_id=doc, version_id=vid, chunk_id=ref.get('chunk_id'),
                          start=loc.get('start'), end=loc.get('end'))
-        hits = EvidenceResolver(repo, scope, request, time.monotonic()+5).resolve([candidate], 'repository')
+        hits = EvidenceResolver(repo, scope, request, deadline if deadline is not None else time.monotonic()+5).resolve([candidate], 'repository')
         if len(hits) != 1:
             raise ValueError('evidence_unavailable')
         return hits[0], scope[doc]
@@ -48,9 +48,14 @@ class EvidenceRegistry:
             'fused_score':ref.get('fused_score',0),'index_generation':ref.get('index_generation'),
             'content_truncated':ref.get('content_truncated',False)})
 
-    def collect(self, output, limit, diagnostics=None, item_chars=4000):
+    def collect(self, output, limit, diagnostics=None, item_chars=4000, *, max_candidates_examined=100, seconds=5):
         diagnostics = diagnostics if diagnostics is not None else {}
-        diagnostics.update(tool_candidate_count=0, registered_evidence_count=0, registration_rejections={})
+        max_candidates_examined=max(0,min(200,max_candidates_examined))
+        deadline=time.monotonic()+max(0,min(5,seconds))
+        diagnostics.update(tool_candidate_count=0, registered_evidence_count=0, registration_rejections={},
+            examined=0,rejected=0,duplicate=0,registered=0,budget_exhausted=False,budget_reason=None,
+            max_candidates_examined=max_candidates_examined,max_evidence_registered=limit)
+        seen=set()
         if output.get('status') != 'success':
             return {}, []
         data = output.get('data') or {}
@@ -95,24 +100,40 @@ class EvidenceRegistry:
                     table=repo.node(base['document_id'],item['table_id'],base['version_id'])
                     block=repo.node(base['document_id'],table['block_id'],base['version_id'])
                     candidates.append({**base,'locator':block['locator']})
-        output['_navigation']=output.get('_deferred_tables',[])+[{k:v for k,v in item.items() if k in {'knowledge_base_id','document_id','version_id','chunk_id','locator','table_ids'}} for item in candidates]
+        output['_navigation']=list(output.get('_deferred_tables',[]))
         refs, snippets = {}, []
         diagnostics['tool_candidate_count'] = len(candidates)
         def rejected(reason):
             counts = diagnostics['registration_rejections']
             counts[reason] = counts.get(reason, 0) + 1
-        if len(candidates)>limit:
-            diagnostics['registration_rejections']['evidence_budget'] = len(candidates)-limit
-        for item in candidates[:limit]:
+            diagnostics['rejected']+=1
+        for item in candidates:
+            if len(refs)>=limit: break
+            if diagnostics['examined']>=max_candidates_examined or time.monotonic()>=deadline:
+                diagnostics.update(budget_exhausted=True,budget_reason='candidate_count' if diagnostics['examined']>=max_candidates_examined else 'deadline')
+                break
+            diagnostics['examined']+=1
+            identity=digest({k:item.get(k) for k in ('knowledge_base_id','document_id','version_id','chunk_id','locator','content','verification_status')})
+            if identity in seen:
+                diagnostics['duplicate']+=1
+                continue
+            seen.add(identity)
             if item.get('verification_status') not in (None,'verified_current','verified_historical'):
                 rejected('unverified_candidate')
                 continue
             try:
-                hit, spec = self.resolve(item)
+                hit, spec = self.resolve(item,deadline)
             except (KeyError, ValueError, PermissionError, TimeoutError) as exc:
-                rejected({KeyError:'missing_identity', ValueError:'content_or_locator_invalid',
-                    PermissionError:'scope_or_version_invalid', TimeoutError:'resolution_timeout'}[type(exc)])
+                rejected('scope_or_version_invalid' if isinstance(exc,PermissionError) else
+                    'resolution_timeout' if isinstance(exc,TimeoutError) else
+                    'missing_identity' if isinstance(exc,KeyError) else 'content_or_locator_invalid')
+                if isinstance(exc,TimeoutError) or time.monotonic()>=deadline:
+                    diagnostics.update(budget_exhausted=True,budget_reason='deadline');break
                 continue
+            if time.monotonic()>=deadline:
+                rejected('resolution_timeout');diagnostics.update(budget_exhausted=True,budget_reason='deadline');break
+            output['_navigation'].append({k:v for k,v in hit.model_dump().items() if k in {
+                'knowledge_base_id','document_id','version_id','chunk_id','locator','table_ids'}})
             content=hit.content[:min(item_chars,len(item.get('content',hit.content)))]
             # A prefix is a new exact source range, never the original full locator.
             partial=hit.content_truncated or len(content)<len(hit.content)
@@ -125,7 +146,11 @@ class EvidenceRegistry:
             if not hit.content_is_projection and (partial or hit.locator.get('end',0)-hit.locator.get('start',0)!=len(content)):
                 original_end=hit.locator['end']
                 exact={**item,'chunk_id':None,'locator':{'start':hit.locator['start'],'end':hit.locator['start']+len(content)}}
-                hit,spec=self.resolve(exact)
+                try: hit,spec=self.resolve(exact,deadline)
+                except (KeyError,ValueError,PermissionError,TimeoutError):
+                    rejected('prefix_verification_failed');continue
+                if time.monotonic()>=deadline:
+                    rejected('resolution_timeout');diagnostics.update(budget_exhausted=True,budget_reason='deadline');break
                 content=hit.content
             else:
                 original_end=hit.locator.get('end')
@@ -136,11 +161,16 @@ class EvidenceRegistry:
                          source_rank=item.get('source_rank',hit.source_rank),fused_score=item.get('fused_score',0),
                          index_generation=item.get('index_generation'),
                          content_truncated=partial,
+                         table_context=data.get('table_page'),
                          continuation={'start':hit.locator['end'],'end':original_end} if partial and not hit.content_is_projection else None)
             ident = 'ev_' + digest([hit.key(), value['content_hash']])[:16]
+            if ident in refs:
+                diagnostics['duplicate']+=1;continue
             refs[ident] = value
             snippets.append(dict(evidence_id=ident, content=content, **value))
-        diagnostics['registered_evidence_count'] = len(refs)
+        diagnostics['registered_evidence_count'] = diagnostics['registered'] = len(refs)
+        diagnostics['quota_filled']=len(refs)>=limit
+        diagnostics['unexamined']=len(candidates)-diagnostics['examined']
         return refs, snippets
 
     def validate_answer(self, text, refs, *, allow_unreferenced=False):

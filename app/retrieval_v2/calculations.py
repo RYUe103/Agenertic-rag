@@ -2,12 +2,13 @@
 import re
 from decimal import Decimal, localcontext, InvalidOperation
 from typing import Literal
-from pydantic import Field
+from pydantic import Field, model_validator
 from .models import StrictModel
 
 
 class Operand(StrictModel):
-    value: str = Field(min_length=1,max_length=64)
+    value: str | None = Field(default=None,min_length=1,max_length=64)
+    candidate_id: str | None = Field(default=None,pattern=r'^num_[a-f0-9]{20}$',description='当前模型可见 numeric_candidates 的可信数值 ID；由 Agent 解析为原文值和偏移')
     unit: str = Field(default='',max_length=32)
     source: Literal['user','evidence']
     evidence_id: str | None = None
@@ -16,6 +17,12 @@ class Operand(StrictModel):
     end: int | None = Field(default=None,gt=0,le=200000)
     unit_start: int | None = Field(default=None,ge=0,le=200000)
     unit_end: int | None = Field(default=None,ge=0,le=200000)
+
+    @model_validator(mode='after')
+    def value_or_candidate(self):
+        if self.value is None and self.candidate_id is None: raise ValueError('operand_value_required')
+        if self.candidate_id and self.source!='evidence': raise ValueError('candidate_requires_evidence')
+        return self
 
 
 class CalculationInput(StrictModel):
@@ -37,6 +44,7 @@ def calculate(value, context):
     values, units, sources = [], [], []
     for item in value.operands:
         item=item.model_copy()
+        if item.candidate_id or item.value is None: raise PermissionError('candidate_requires_run_context')
         text = context(item.source, item.evidence_id)
         if item.start is None and item.end is None:
             positions=list(re.finditer(r'(?<![0-9,.eE+−\-])'+re.escape(item.value)+r'(?![0-9eE]|[.,][0-9])',text))

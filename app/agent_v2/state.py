@@ -48,3 +48,6 @@ class AgentState(TypedDict, total=False):
     metrics: dict
     repair_attempted: bool
     draft: str
+
+    numeric_candidates: dict
+    visible_numeric_candidates: list[str]

@@ -76,9 +76,9 @@ class TokenBudgetManager:
             try: body=json.loads(message.content)
             except (TypeError,ValueError): continue
             if body.get('data',{}).get('operation'): continue
-            navigation=[{k:e[k] for k in ('source_id','document_id','locator') if k in e}
+            navigation=[{k:e[k] for k in ('source_id','knowledge_base_id','document_id','version_id','locator') if k in e}
                         for e in body.get('evidence',[])]
-            compact=dict(status=body.get('status'),evidence=[],navigation=navigation,
+            compact=dict(status=body.get('status'),evidence=[],navigation=[{'action':'read_document',**n} for n in navigation],
                          requires_reread=True,data={k:v for k,v in body.get('data',{}).items()
                          if k in {'document_id','version_id','knowledge_base_id','next_start','next_after','operation','result','unit'}})
             if body.get('error'): compact['error']=body['error']
@@ -98,3 +98,77 @@ class TokenBudgetManager:
         c=completion if isinstance(completion,int) and completion>=0 else self.tokens(str(response.content)+str(response.tool_calls))
         total=raw.get('total_tokens')
         return dict(prompt_tokens=p,completion_tokens=c,total_tokens=max(p+c,total or 0)),prompt
+
+
+def pack_observation(visible, cap, kind):
+    """Whole verified snippets, independent navigation budget, bounded best-fit.
+
+    Search keeps first ranked evidence then alternates documents before additional
+    hits from the same source. No rewriting of original text or table projections.
+    """
+    original=visible
+    result={'status':visible.get('status'),'evidence':[],'data':{}}
+    if visible.get('error'): result['error']=visible['error']
+    data=visible.get('data',{})
+    metadata_budget=min(3000,max(100,cap//5))
+    navigation=[];metadata_omitted=False
+    for key,value in data.items():
+        if key in {'documents','outline','tables'}:
+            result['data'][key]=[]
+            for item in value:
+                proposed={**result['data'],key:[*result['data'][key],item]}
+                if size(proposed)>metadata_budget:
+                    metadata_omitted=True;break
+                result['data']=proposed
+            if len(result['data'][key])<len(value): metadata_omitted=True
+        elif key=='table_page':
+            # Header/units/cell coordinates are inseparable from row evidence.
+            if size(value)+size(result)+128>cap:
+                metadata_omitted=True
+            else: result['data'][key]=value
+        elif key in {'operation','result','unit','precision','operands'}:
+            result['data'][key]=value
+        elif size({**result['data'],key:value})<=metadata_budget:
+            result['data'][key]=value
+        else: metadata_omitted=True
+    if 'outline' in data and len(result['data'].get('outline',[]))<len(data['outline']):
+        start=data.get('outline_start',0)
+        result['data']['outline_next_after']=start+len(result['data'].get('outline',[]))-1
+    if 'documents' in data and len(result['data'].get('documents',[]))<len(data['documents']):
+        start=data.get('document_start',data.get('next_document_start',len(data['documents']))-len(data['documents']))
+        result['data']['next_document_start']=max(0,start)+len(result['data'].get('documents',[]))
+    if metadata_omitted:
+        navigation.append({'action':'repeat_read_with_pagination',**{k:data[k] for k in (
+            'knowledge_base_id','document_id','version_id','next_start','next_after','outline_next_after') if k in data}})
+    snippets=visible.get('evidence',[])
+    if kind=='search':
+        first=[];extra=[];docs=set()
+        for snippet in snippets:
+            doc=(snippet.get('knowledge_base_id'),snippet.get('document_id'))
+            (extra if doc in docs else first).append(snippet);docs.add(doc)
+        ordered=first+extra
+    else: ordered=snippets
+    reserved=min(1200,cap//8)
+    for snippet in ordered:
+        proposed={**result,'evidence':[*result['evidence'],snippet]}
+        # A table page must retain its structural companion or be reread as a unit.
+        structure_ok='table_page' not in data or 'table_page' in result['data']
+        if structure_ok and size(proposed)<=cap-reserved:
+            result['evidence'].append(snippet)
+        else:
+            navigation.append({'action':'read_document','source_id':snippet['source_id'],
+                **{k:snippet[k] for k in ('knowledge_base_id','document_id','version_id') if snippet.get(k)}})
+    navigation.extend(visible.get('navigation',[]))
+    for item in navigation:
+        proposed={**result,'navigation':[*result.get('navigation',[]),item]}
+        if size(proposed)+180<=cap:result=proposed
+        else: break
+    omitted=len(snippets)-len(result['evidence'])
+    if omitted or metadata_omitted:
+        result['partial']=True
+        result['selection']={'evidence_omitted':omitted,'metadata_omitted':metadata_omitted}
+    if size(result)>cap:
+        # Calculation receipt too large: no invented result, exact retry guidance.
+        result={'status':'error','error':{'code':'observation_budget'},'evidence':[],
+                'data':{},'navigation':[{'action':'narrow_read_or_operands'}]}
+    return result,bool(omitted or metadata_omitted or result.get('status')!=original.get('status'))

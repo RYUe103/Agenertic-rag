@@ -30,7 +30,7 @@ def fuse(channels, config):
     for item in ranked:
         key = item.knowledge_base_id,item.document_id,item.version_id
         doc = docs.setdefault(key,dict(knowledge_base_id=key[0],document_id=key[1],version_id=key[2],
-            score=item.fused_score,chunk_ids=[],table_ids=[],section_ids=[],candidate_count=0))
+            document_name=item.document_name,rank=len(docs)+1,score=item.fused_score,chunk_ids=[],table_ids=[],section_ids=[],candidate_count=0))
         doc['candidate_count'] += 1
         if item.chunk_id:
             doc['chunk_ids'].append(item.chunk_id)

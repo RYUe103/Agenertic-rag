@@ -12,13 +12,13 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.graph.message import REMOVE_ALL_MESSAGES
 from langgraph.prebuilt import ToolNode
 from langgraph.types import interrupt, Command
-from app.retrieval_v2.tools import catalog, input_schema, SEARCH
+from app.retrieval_v2.tools import catalog, input_schema, SEARCH, canonical_arguments
 from app.retrieval_v2.models import Scope, Filters, RetrievalRequest
 from .checkpoint import digest
 from .evidence import EvidenceRegistry
 from .state import AgentState, ExecutionBudget
-from . import citations
-from .context import TokenBudgetManager, profile, size
+from . import citations, numbers
+from .context import TokenBudgetManager, profile, size, pack_observation
 
 
 _pool = ThreadPoolExecutor(max_workers=8, thread_name_prefix='react-v2-bounded')
@@ -77,7 +77,22 @@ class ReActRuntime:
         if self.store.cancelled(self.thread_id): raise InterruptedError('cancelled')
         if self.remaining()<=0: raise TimeoutError('total_budget')
 
+    def source_ref(self,state,label,kb):
+        # State is supplied by this owned LangGraph execution, never by tool input.
+        ident=state.get('sources',{}).get(label)
+        ref=state.get('evidence',{}).get(ident)
+        if not ref or ref['knowledge_base_id']!=kb:
+            raise PermissionError('source_not_registered_in_run')
+        self.registry.load(ref)
+        return ref
+
     def scoped_arguments(self, name, arguments, state=None):
+        if arguments.get('source_id') and name=='v2.read_document':
+            if state is None: raise PermissionError('source_requires_run_context')
+            ref=self.source_ref(state,arguments['source_id'],arguments['knowledge_base_id'])
+            for field in ('document_id','version_id'):
+                if arguments.get(field) and arguments[field]!=ref[field]: raise PermissionError('source_identity_mismatch')
+            arguments={**arguments,'document_id':ref['document_id'],'version_id':ref['version_id']}
         if name=='v2.calculate' and state is not None:
             arguments=json.loads(json.dumps(arguments))
             for operand in arguments.get('operands',[]):
@@ -92,7 +107,24 @@ class ReActRuntime:
                 if ident not in state.get('visible_evidence',[]): raise PermissionError('calculation_source_not_visible')
                 ref=state['evidence'][ident]
                 if ref['knowledge_base_id']!=arguments['knowledge_base_id']: raise PermissionError('calculation_scope_mismatch')
-                self.registry.load(ref)
+                hit=self.registry.load(ref)
+                candidate_id=operand.get('candidate_id')
+                if candidate_id:
+                    if candidate_id not in state.get('visible_numeric_candidates',[]):
+                        raise PermissionError('numeric_candidate_not_visible')
+                    candidate=state.get('numeric_candidates',{}).get(candidate_id)
+                    if not candidate or candidate['evidence_id']!=ident:
+                        raise PermissionError('numeric_candidate_source_mismatch')
+                    verified={n['candidate_id']:n for n in numbers.extract(
+                        {**hit.model_dump(),'evidence_id':ident},state['run_id'],candidate['source_id'])}
+                    if verified.get(candidate_id)!=candidate: raise PermissionError('numeric_candidate_changed')
+                    canonical={'value':candidate['raw_text'],'start':candidate['start'],'end':candidate['end'],
+                               'unit':candidate['unit'],'unit_start':candidate['unit_start'],'unit_end':candidate['unit_end']}
+                    for field,value in canonical.items():
+                        if field in operand and operand[field] not in (None,'') and operand[field]!=value:
+                            raise PermissionError('numeric_candidate_override')
+                        operand[field]=value
+                    operand['candidate_id']=None
                 operand['evidence_id']=ident
                 operand['source_id']=None
         model,kbs,config=self.service.preflight(name,arguments)
@@ -125,7 +157,7 @@ class ReActRuntime:
             model.budget.item_chars=min(model.budget.item_chars,profile(name)[1]['item_chars'])
         if hasattr(model,'max_chars'):
             model.max_chars=min(model.max_chars,32000 if name=='v2.read_document' else 24000)
-        return model.model_dump(), config, requested
+        return canonical_arguments(model), config, requested
 
     def approval_binding(self, name, args, config, requested):
         snapshots={s.knowledge_base_id:self.service.retrieval.access.scope(
@@ -154,7 +186,12 @@ class ReActRuntime:
                     if ref['knowledge_base_id']!=arguments['knowledge_base_id']:
                         raise PermissionError('calculation_scope_mismatch')
                     return self.registry.load(ref).content
-                return self.service.invoke(_name,arguments,approval,calculation_context=source).model_dump()
+                def reread(value):
+                    ref=self.source_ref(state,value.source_id,value.knowledge_base_id)
+                    hit=self.registry.load(ref)
+                    return {'results':[hit.model_dump()], 'reread_source_id':value.source_id,
+                            'number_start':value.number_start,**({'table_page':ref['table_context']} if ref.get('table_context') else {})}
+                return self.service.invoke(_name,arguments,approval,calculation_context=source,evidence_context=reread).model_dump()
             tools.append(StructuredTool.from_function(invoke,name=alias,description=item['description'],
                                                      args_schema=input_schema(name)))
         graph=StateGraph(AgentState)
@@ -202,13 +239,7 @@ class ReActRuntime:
     def compact_observation(self, output, sources, refs, name='', seen_documents=None):
         visible=citations.observation(output,sources,refs,name,seen_documents)
         cap=min(self.budget.output_chars,profile(name)[1]['output_chars'])
-        truncated=False
-        while len(json.dumps(visible,ensure_ascii=False))>cap and visible['evidence']:
-            visible['evidence'].pop();truncated=True
-        if len(json.dumps(visible,ensure_ascii=False))>cap:
-            visible={'status':'error','error':{'code':'output_budget'},'evidence':[],'data':{}};truncated=True
-        if truncated: visible['partial']=True
-        return visible,truncated
+        return pack_observation(visible,cap,profile(name)[0])
 
     def agent(self,state):
         reason=''
@@ -242,7 +273,7 @@ class ReActRuntime:
             '默认优先 search_knowledge 获取内容证据，不要将 find_document 当作全文读取。'
             '已明确文档 ID 时可以直接 read_document，其 outline 给出可读取的章节和表格 ID。'
             '长表格用 read_document_table 的 node_id 指定表格 ID，start 使用 next_start 按行续读。'
-            '被压缩的 navigation 不是证据，必须重新读取，不能仅凭旧 Source 编号引用。'
+            '被压缩的 navigation 不是证据。使用 read_document(knowledge_base_id,source_id) 复读 S 编号后再引用或计算。'
             '中文问题查英文文档无结果时尝试英文概念，或读取授权范围内已知文档。'
             '工具 success 内的 degraded/empty/insufficient_evidence 有区别：服务失败不证明没有答案。'
             '工具 evidence 中 source_id 是本轮来源编号 S1、S2。最终优先输出 JSON：'
@@ -250,6 +281,7 @@ class ReActRuntime:
             '不能输出 JSON 时可使用正文 [S1]。不要使用 [1] 或内部 ev_ 哈希作为正文引用。'
             '不带引用的知识回答会被服务器拒绝。不要自己生成链接或页码、章节号。'
             '普通闲聊可以直接回答；文件问题没有证据就说明证据不足。'
+            'calculate 优先选择 numeric_candidates 中的 candidate_id 和 source_id；重复数字不需要猜偏移。next_number_start 可用 read_document(source_id,number_start) 续读候选。'
             'calculate 可以使用 source_id:S1；不要把 S1 当作原文文字。percentage_change 的操作数顺序为旧值、新值；subtract 为被减数、减数。'
             '计算错误时按 reason 修正参数，重复数字先精读定位，不要重复相同失败调用。'
             '表格计算必须调用 calculate，数值和单位来自本轮用户问题或 evidence.content。唯一值省略偏移，服务器精确定位；重复才填写偏移。'
@@ -299,7 +331,9 @@ class ReActRuntime:
             metrics['context_compaction_count']=state.get('metrics',{}).get('context_compaction_count',0)+self.last_model_stats['context_compaction_count']
             self.emit('citation_context',model_visible_evidence_count=len(visible),context_chars=context_chars)
             return {'messages':[*migrated,response],'sources':sources,'iterations':state['iterations']+1,'usage':usage,
-                'visible_evidence':sorted(visible),'metrics':metrics,'elapsed_seconds':self.elapsed()}
+                'visible_evidence':sorted(visible),
+                'visible_numeric_candidates':sorted({n['candidate_id'] for m in self.last_model_messages if isinstance(m,ToolMessage)
+                    for e in json.loads(m.content).get('evidence',[]) for n in e.get('numeric_candidates',[])}),'metrics':metrics,'elapsed_seconds':self.elapsed()}
         except (InterruptedError,TimeoutError,RuntimeError,ValueError,KeyError,IndexError) as exc:
             reason=str(exc) if str(exc) in {'context_budget','token_budget','cancelled','total_budget'} else 'model_unavailable'
             return {'stop_reason':reason,'iterations':state['iterations']+1,'elapsed_seconds':self.elapsed(),
@@ -378,7 +412,7 @@ class ReActRuntime:
                 if current_config!=config: raise PermissionError('tool_configuration_changed')
                 if not isinstance(output,dict): raise ValueError('invalid_tool_output')
                 diagnostics={}
-                refs,snippets=self.registry.collect(output,self.budget.evidence_count,diagnostics,profile(name)[1]['item_chars'] or 4000)
+                refs,snippets=self.registry.collect(output,self.budget.evidence_count,diagnostics,profile(name)[1]['item_chars'] or 4000,seconds=min(5,self.remaining()))
                 output['_metrics']=diagnostics
                 output['_evidence']=refs
                 output['evidence']=snippets
@@ -396,6 +430,7 @@ class ReActRuntime:
         return ToolMessage(content='{}',artifact=output,tool_call_id=call['id'],name=call['name'])
 
     def observe(self,state):
+        numeric=dict(state.get('numeric_candidates',{}))
         refs=dict(state['evidence']);failures=state['failures'];calls=0;rounds=0
         calculations=list(state.get('calculations',[]))
         checks=list(state.get('scope_checks',[]))
@@ -420,6 +455,16 @@ class ReActRuntime:
             for ident,ref in output.get('_evidence',{}).items():
                 if ident in refs or len(refs)<self.budget.evidence_count*self.budget.tool_calls: refs[ident]=ref
             sources=citations.assign_sources(refs,sources)
+            reverse={ident:label for label,ident in sources.items()}
+            for snippet in output.get('evidence',[]):
+                ident=snippet['evidence_id']
+                if ident not in reverse: continue
+                candidates=numbers.extract(snippet,state['run_id'],reverse[ident])
+                start=(output.get('data') or {}).get('number_start',0)
+                selected=candidates[start:start+12]
+                for candidate in selected:numeric[candidate['candidate_id']]=candidate
+                snippet['numeric_candidates']=selected
+                snippet['next_number_start']=start+len(selected) if start+len(selected)<len(candidates) else None
             duplicate_chars=sum(size(d) for d in (output.get('data') or {}).get('documents',[])
                 if (d.get('knowledge_base_id'),d.get('document_id'),d.get('version_id')) in seen_documents)
             visible,truncated=self.compact_observation(output,sources,refs,message.name,seen_documents)
@@ -433,16 +478,21 @@ class ReActRuntime:
             metadata_chars=size(raw_documents)+size(data.get('outline',[]))
             evidence_cut=any(e.get('content_truncated',False) for e in output.get('evidence',[])) or bool(diagnostic.get('registration_rejections',{}).get('table_requires_structured_read')) or bool(output.get('_deferred_tables'))
             result_partial=bool(data.get('partial') or data.get('next_start') is not None or data.get('next_after') is not None)
-            observation_cut=truncated or len(visible['data'].get('documents',[]))<len(raw_documents)
-            continuation=bool(result_partial or data.get('outline_next_after') is not None or evidence_cut or observation_cut or raw_documents)
+            candidate_selection=len(visible['data'].get('documents',[]))<len(raw_documents)
+            observation_cut=truncated
+            navigation_available=bool(visible.get('navigation') or any(visible['data'].get(k) is not None for k in ('next_start','next_after','next_document_start','outline_next_after')))
+            continuation=navigation_available
             per_call=dict(tool_name=self.names.get(message.name,message.name),tool_call_id=message.tool_call_id,
                 tool_output_profile=profile(message.name)[0],candidate_count=diagnostic.get('tool_candidate_count',0),
+                evidence_examined=diagnostic.get('examined',0),evidence_registered=diagnostic.get('registered',0),
+                registration_rejected=diagnostic.get('rejected',0),registration_duplicate=diagnostic.get('duplicate',0),
+                registration_budget_exhausted=diagnostic.get('budget_exhausted',False),registration_budget_reason=diagnostic.get('budget_reason'),
                 evidence_count_before=len(output.get('evidence',[])),evidence_count_after=len(visible['evidence']),
                 output_chars_before=size(output),output_chars_after=size(visible),removed_chars=max(0,size(output)-size(visible)),document_metadata_chars=metadata_chars,
                 duplicate_metadata_chars=duplicate_chars,metadata_chars_removed=max(0,metadata_chars-size(visible['data'].get('documents',[]))-size(visible['data'].get('outline',[]))),
-                result_partial=result_partial,evidence_content_truncated=evidence_cut,
+                result_partial=result_partial,evidence_content_truncated=evidence_cut,candidate_selection=candidate_selection,
                 observation_budget_truncated=observation_cut,continuation_available=continuation,
-                truncation_reason=[k for k,v in [('result_page',result_partial),('evidence_prefix_or_table_deferred',evidence_cut),('observation_budget',observation_cut)] if v])
+                truncation_reason=[k for k,v in [('result_page',result_partial),('evidence_prefix_or_table_deferred',evidence_cut),('candidate_selection',candidate_selection),('observation_budget',observation_cut)] if v])
             metrics['tool_outputs']=[*metrics.get('tool_outputs',[]),per_call]
             metrics['output_truncated']=metrics.get('output_truncated',False) or evidence_cut or observation_cut
             self.emit('tool_evidence_metrics',**per_call)
@@ -450,7 +500,7 @@ class ReActRuntime:
             if self.names.get(message.name)=='v2.calculate' and output.get('status')=='success':
                 calculations.append(output['data'])
         self.emit('evidence_updated',evidence_count=len(refs))
-        return {'evidence':refs,'sources':sources,'messages':replacements,'metrics':metrics,
+        return {'evidence':refs,'sources':sources,'numeric_candidates':numeric,'messages':replacements,'metrics':metrics,
                 'calculations':calculations,'scope_checks':checks,'failures':failures,
                 'tool_call_count':state['tool_call_count']+calls,'retrieval_rounds':state['retrieval_rounds']+rounds,
                 'elapsed_seconds':self.elapsed()}
@@ -603,7 +653,7 @@ class ReActRuntime:
                     scopes=self.scopes,allowed_tools=sorted(self.allowed),budget=self.budget.model_dump(),
                     question=question,evidence={},approvals={},blocked={},iterations=0,tool_call_count=0,
                     retrieval_rounds=0,failures=0,usage={},stop_reason='',final_answer={},calculations=[],scope_checks=[],elapsed_seconds=0,
-                    sources={},visible_evidence=[],metrics={},repair_attempted=False,draft='')
+                    sources={},visible_evidence=[],numeric_candidates={},visible_numeric_candidates=[],metrics={},repair_attempted=False,draft='')
                 self.store.status(self.thread_id,'running',reset=True);self.emit('run_started')
             try:
                 self.check()

@@ -136,6 +136,13 @@ class UnifiedRetrievalService:
                 if any(k==kb for k,_ in changed):
                     exact[kb].update(continuation=None,partial=True,reason='scope_changed_restart')
             rejected['concurrent_scope_change']+=len(changed)
+        # Only expose metadata from the authorized scope, never adapter-authored titles.
+        for doc in documents:
+            spec=scopes[doc['knowledge_base_id']][doc['document_id']]
+            meta=spec['metadata']
+            doc.update({k:meta.get(k) for k in ('filename','standard_title','standard_no','standard_year')})
+            doc['document_name']=meta.get('filename') or ''
+            doc['metadata_scope']='current_source_metadata'  # Historical identity remains version_id.
         # Raw occurrence bodies share the response budget; results hold their text only once.
         for value in exact.values():
             for hit in value['matches']:
