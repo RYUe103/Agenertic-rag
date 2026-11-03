@@ -1,0 +1,1 @@
+import{j as e}from"./semi-CJu-D-rD.js";function r({items:a}){return e.jsx("section",{className:"overview-stats","aria-label":"页面概览",children:a.map(s=>e.jsxs("article",{className:"overview-stat",children:[e.jsx("span",{children:s.label}),e.jsx("strong",{children:s.value??"—"}),s.note&&e.jsx("small",{children:s.note})]},s.label))})}export{r as O};

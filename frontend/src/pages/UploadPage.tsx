@@ -150,14 +150,15 @@ export function UploadPage() {
       </div>
       {files.length > 0 && <section className="content-section"><Typography.Title heading={6}>待上传文件</Typography.Title><Table dataSource={files.map((file, position) => ({position, name: file.name, size: file.size, duplicate: files.findIndex(item => item.name === file.name) !== position}))} rowKey="position" size="small" pagination={files.length > 10 ? {pageSize: 10} : false}><Table.Column title="文件" dataIndex="name" /><Table.Column title="大小" dataIndex="size" render={value => formatBytes(Number(value))} /><Table.Column title="提示" dataIndex="duplicate" render={value => value ? '文件名重复' : '—'} /></Table></section>}
 
-      <section className="upload-options-panel">
+      <div className="upload-submit">{job?.status === 'uploading' ? <Button theme="solid" type="primary" size="large" icon={<IconUpload />} loading={submitting} disabled={jobAgentId !== activeAgentId || !canWriteDocuments} onClick={() => void resumeUpload()}>继续上传</Button> : <Button theme="solid" type="primary" size="large" icon={<IconUpload />} loading={submitting} disabled={!files.length || submitting || !canWriteDocuments} onClick={() => void startUpload()}>开始入库</Button>}<span>{!canWriteDocuments && activeAgentId ? '当前知识库为只读，无法上传文档' : job?.status === 'uploading' && jobAgentId !== activeAgentId ? '请切回创建任务的知识库' : '上传完成后可安全离开，任务不会中断'}</span></div>
+    </section>
+
+    <aside className="upload-guide content-section"><h3>处理设置</h3><p className="resource-subtle">目标知识库</p><strong>{agents.find(item => item.agent_id === activeAgentId)?.name || '请先选择知识库'}</strong>      <section className="upload-options-panel">
         <div className="section-heading"><div><Typography.Title heading={6}>处理选项</Typography.Title><Typography.Text type="tertiary">所有文件使用当前知识库的解析与分块配置</Typography.Text></div></div>
         <div className="option-row"><Checkbox checked={rewriteEnabled} onChange={event => {setRewriteEnabled(Boolean(event.target.checked)); if (!event.target.checked) setRewriteReview(false);}}>使用 AI 改写 Markdown</Checkbox><Checkbox checked={rewriteReview} disabled={!rewriteEnabled} onChange={event => setRewriteReview(Boolean(event.target.checked))}>改写后需人工预览确认</Checkbox><Checkbox checked={workflowEnabled} onChange={event => setWorkflowEnabled(Boolean(event.target.checked))}>调用已配置的 Workflow</Checkbox></div>
         {rewriteEnabled && <TextArea value={rewritePrompt} onChange={setRewritePrompt} placeholder="输入改写规则；留空时使用系统默认规则" autosize rows={4} />}
       </section>
-      <div className="upload-submit">{job?.status === 'uploading' ? <Button theme="solid" type="primary" size="large" icon={<IconUpload />} loading={submitting} disabled={jobAgentId !== activeAgentId || !canWriteDocuments} onClick={() => void resumeUpload()}>继续上传</Button> : <Button theme="solid" type="primary" size="large" icon={<IconUpload />} loading={submitting} disabled={!files.length || submitting || !canWriteDocuments} onClick={() => void startUpload()}>开始入库</Button>}<span>{!canWriteDocuments && activeAgentId ? '当前知识库为只读，无法上传文档' : job?.status === 'uploading' && jobAgentId !== activeAgentId ? '请切回创建任务的知识库' : '上传完成后可安全离开，任务不会中断'}</span></div>
-    </section>
-
+<h3>文件处理流程</h3><ol className="process-guide"><li>上传原始文件</li><li>按知识库配置解析与索引</li><li>通过检索查看内容与引用</li></ol></aside>
     {job && <aside className="active-job-panel">
       <div className="section-heading"><div><Typography.Title heading={6}>当前入库任务</Typography.Title><code>{job.job_id}</code></div><StatusTag status={job.status} /></div>
       <Progress percent={job.status === 'uploading' ? taskProgress(uploadCount, job.total) : taskProgress(job.completed, job.total)} showInfo />

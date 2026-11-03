@@ -1,4 +1,5 @@
-import { Table, Tag, Typography } from '@douyinfe/semi-ui';
+import { OverviewStats } from '../components/OverviewStats';
+import { Tag } from '@douyinfe/semi-ui';
 import { useEffect, useState } from 'react';
 import { api } from '../api/client';
 import type { Health } from '../types';
@@ -15,5 +16,5 @@ export function CapabilitiesPage() {
   const [health, setHealth] = useState<Health | null>(null);
   useEffect(() => {void api<Health>('/api/health').then(setHealth).catch(() => setHealth(null));}, []);
   const rows = [...capabilities, {area: 'MCP 与外部 AI', capability: 'REST、MCP、工具授权、密钥轮换与调用记录', status: '部分可用', note: health ? (health.mcp_available ? 'MCP 服务已启用；完整审计仍待实现' : 'REST 可用；MCP 组件未启用') : '服务状态未获取'}];
-  return <div className="page-stack"><section className="capability-intro"><Typography.Title heading={5}>平台能力</Typography.Title></section><section className="content-section flush-section"><Table dataSource={rows} pagination={false} rowKey="area"><Table.Column title="领域" dataIndex="area" width={150} render={value => <strong>{String(value)}</strong>} /><Table.Column title="能力" dataIndex="capability" /><Table.Column title="实现状态" dataIndex="status" width={130} render={value => <Tag color={value === '已可用' ? 'green' : value === '部分可用' ? 'amber' : 'grey'}>{String(value)}</Tag>} /><Table.Column title="当前边界" dataIndex="note" /></Table></section></div>;
+  return <div className="page-stack"><OverviewStats items={[{label:'能力领域',value:rows.length,note:'当前实现说明'},{label:'已可用',value:rows.filter(x => x.status === '已可用').length,note:'功能范围'},{label:'部分可用',value:rows.filter(x => x.status === '部分可用').length,note:'请留意边界说明'},{label:'MCP 服务',value:health ? (health.mcp_available ? '已启用' : '未启用') : '—',note:'实际服务配置'}]} /><section className="resource-grid">{rows.map(item => <article className="resource-card" key={item.area}><div className="resource-top"><span className="resource-symbol">◇</span><Tag color={item.status === '已可用' ? 'green' : 'amber'}>{item.status}</Tag></div><h3>{item.area}</h3><p>{item.capability}</p><div className="capability-boundary">{item.note}</div></article>)}</section></div>;
 }

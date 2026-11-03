@@ -1,3 +1,4 @@
+import { OverviewStats } from '../components/OverviewStats';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { Button, Modal, Progress, Select, SideSheet, Table, Toast, Typography } from '@douyinfe/semi-ui';
 import { IconPause, IconRefresh, IconRestart, IconSpin } from '@douyinfe/semi-icons';
@@ -90,7 +91,7 @@ export function TasksPage() {
     return () => {active = false;};
   }, [selected?.task_id, selected?.raw_status, selected?.updated_at]);
 
-  return <div className="page-stack">
+  return <div className="page-stack"><OverviewStats items={[{label:'匹配任务', value:data.total, note:'当前筛选范围'},{label:'本页运行中', value:data.items.filter(x => x.status === 'RUNNING').length, note:'当前列表'},{label:'本页已完成', value:data.items.filter(x => x.status === 'SUCCEEDED').length, note:'当前列表'},{label:'本页失败', value:data.items.filter(x => x.status === 'FAILED').length, note:'当前列表'}]} />
     <section className="toolbar-row">
       <div className="filter-cluster">
         <Select value={taskType} onChange={value => setTaskType(String(value))} style={{width: 160}}>

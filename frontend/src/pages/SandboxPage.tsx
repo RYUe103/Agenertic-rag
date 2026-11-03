@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Button, Form, Select, SideSheet, Table, Toast, Typography } from '@douyinfe/semi-ui';
+import { Button, Collapse, Form, Select, SideSheet, Table, Toast, Typography } from '@douyinfe/semi-ui';
 import { IconPlay, IconRefresh } from '@douyinfe/semi-icons';
 import { api } from '../api/client';
 import { StatusTag } from '../components/StatusTag';
@@ -52,8 +52,8 @@ export function SandboxPage() {
     finally { setRunning(false); }
   }
 
-  return <div className="page-stack">
-    {session.is_admin && <section className="content-section"><div className="section-heading"><div><Typography.Title heading={5}>Sandbox 策略</Typography.Title><Typography.Text type="tertiary">执行在独立 Docker 容器中进行，默认无网络且不能访问知识库文件。</Typography.Text></div><Button icon={<IconRefresh />} onClick={() => void load()} loading={loading}>刷新</Button></div>
+  return <div className="page-stack sandbox-page">
+    {session.is_admin && <Collapse className="sandbox-policy"><Collapse.Panel header="执行策略与资源限制" itemKey="policy"><section className="content-section"><div className="section-heading"><div><Typography.Title heading={5}>Sandbox 策略</Typography.Title><Typography.Text type="tertiary">执行在独立 Docker 容器中进行，默认无网络且不能访问知识库文件。</Typography.Text></div><Button icon={<IconRefresh />} onClick={() => void load()} loading={loading}>刷新</Button></div>
       <Form form={form} layout="horizontal" labelPosition="left" onSubmit={value => void save(value as Record<string, unknown>)} initValues={policy ? {...policy} : undefined}>
         <Form.Switch field="enabled" label="允许代码执行" />
         <Form.Switch field="allow_users" label="允许普通用户执行" />
@@ -66,8 +66,8 @@ export function SandboxPage() {
         <Form.InputNumber field="workspace_mb" label="临时空间（MB）" min={1} max={128} />
         <Button theme="solid" htmlType="submit">保存策略</Button>
       </Form>
-    </section>}
-    <section className="content-section"><div className="section-heading"><div><Typography.Title heading={5}>执行测试</Typography.Title><Typography.Text type="tertiary">将输出文件写入 /tmp/output；单次最多保存 20 个文件、共 2 MB。</Typography.Text></div></div>
+    </section></Collapse.Panel></Collapse>}
+    <section className="content-section sandbox-editor"><div className="section-heading"><div><Typography.Title heading={5}>代码执行</Typography.Title><Typography.Text type="tertiary">将输出文件写入 /tmp/output；单次最多保存 20 个文件、共 2 MB。</Typography.Text></div></div>
       <Form layout="vertical" onSubmit={value => void execute(value as Record<string, unknown>)} initValues={{name: '手动分析', language: 'python', code: 'print(1 + 1)'}}>
         <Form.Input field="name" label="任务名称" /><Form.Select field="language" label="语言"><Form.Select.Option value="python">Python</Form.Select.Option><Form.Select.Option value="shell">Shell</Form.Select.Option></Form.Select>
         <div><Typography.Text>授权文档</Typography.Text><br /><Select multiple filter showClear maxTagCount={3} value={sourceIds} onSearch={setSourceQuery} onChange={value => setSourceIds((value as string[]).slice(0, 10))} placeholder="搜索当前知识库的文档（最多 10 个）" style={{width: '100%', maxWidth: 600}}>{sources.map(source => <Select.Option key={source.source_id} value={source.source_id}>{source.filename}</Select.Option>)}</Select></div>
@@ -75,6 +75,7 @@ export function SandboxPage() {
         <Form.TextArea field="code" label="代码" rows={8} maxLength={32768} showClear /><Button htmlType="submit" theme="solid" icon={<IconPlay />} loading={running}>执行</Button>
       </Form>
     </section>
+    <section className="content-section sandbox-output"><div className="section-heading"><Typography.Title heading={5}>执行结果</Typography.Title>{selected && <StatusTag status={selected.status} />}</div>{selected ? <><pre className="code-block">{selected.stdout || '无标准输出'}</pre>{selected.stderr && <pre className="code-block">{selected.stderr}</pre>}<Typography.Paragraph>耗时 {selected.duration_ms ?? '—'} ms</Typography.Paragraph><h4>输出文件</h4>{selected.artifacts?.length ? selected.artifacts.map(file => <p key={file.id}><a href={`/api/sandbox/runs/${selected.id}/artifacts/${file.id}`}>{file.name}</a></p>) : <p className="resource-subtle">本次执行未生成文件</p>}</> : <div className="catalog-empty">执行后在这里查看输出、耗时与生成文件。</div>}</section>
     <section className="content-section flush-section"><div className="section-heading"><Typography.Title heading={5}>执行记录</Typography.Title><Button icon={<IconRefresh />} onClick={() => void load()} loading={loading}>刷新</Button></div><Table dataSource={runs} rowKey="id" loading={loading} onRow={record => ({onClick: () => { if (record) api<Run>(`/api/sandbox/runs/${record.id}`).then(setSelected).catch(error => Toast.error(error.message)); }})} empty="暂无执行记录"><Table.Column title="任务" dataIndex="name" /><Table.Column title="用户" dataIndex="owner" /><Table.Column title="语言" dataIndex="language" width={100} /><Table.Column title="状态" dataIndex="status" width={110} render={value => <StatusTag status={String(value)} />} /><Table.Column title="耗时" dataIndex="duration_ms" width={110} render={value => value ? `${value} ms` : '—'} /><Table.Column title="时间" dataIndex="created_at" width={180} render={value => formatDate(String(value))} /></Table></section>
     <SideSheet title={selected?.name || '执行详情'} visible={Boolean(selected)} onCancel={() => setSelected(null)} width={760}>{selected && <div className="task-detail"><Typography.Title heading={6}>代码</Typography.Title><pre className="code-block">{selected.code}</pre><Typography.Title heading={6}>标准输出</Typography.Title><pre className="code-block">{selected.stdout || '—'}</pre><Typography.Title heading={6}>错误输出</Typography.Title><pre className="code-block">{selected.stderr || '—'}</pre><Typography.Title heading={6}>资源使用</Typography.Title><Typography.Text type="tertiary">{selected.resource_usage?.status === 'collected' || selected.resource_usage?.status === 'partial' ? `CPU 峰值 ${selected.resource_usage.cpu_percent_peak?.toFixed(1) || 0}% · 内存峰值 ${Math.round((selected.resource_usage.memory_bytes_peak || 0) / 1024 / 1024)} MB · 进程峰值 ${selected.resource_usage.pids_peak || 0}` : '未采集'}</Typography.Text><Typography.Title heading={6}>输出文件</Typography.Title>{selected.artifacts?.length ? selected.artifacts.map(file => <div key={file.id}><a href={`/api/sandbox/runs/${selected.id}/artifacts/${file.id}`}>{file.name}</a> <Typography.Text type="tertiary">{file.size} B</Typography.Text></div>) : <Typography.Text type="tertiary">无输出文件</Typography.Text>}</div>}</SideSheet>
   </div>;

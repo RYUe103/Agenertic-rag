@@ -1,3 +1,4 @@
+import { OverviewStats } from '../components/OverviewStats';
 import { useEffect, useState } from 'react';
 import { Button, Form, Modal, SideSheet, Table, Tag, Toast, Typography } from '@douyinfe/semi-ui';
 import { IconEdit, IconEyeOpened, IconPlus, IconRefresh } from '@douyinfe/semi-icons';
@@ -73,7 +74,7 @@ export function IntegrationsPage() {
       }});
   }
 
-  return <div className="page-stack">
+  return <div className="page-stack"><OverviewStats items={[{label:'接入配置', value:items.length, note:'当前可见接入'},{label:'有效接入', value:items.filter(x => !x.revoked_at).length, note:'尚未撤销'},{label:'可授权知识库', value:bases.length, note:'当前用户范围'},{label:'MCP', value:mcpAvailable ? '已启用' : '未启用', note:'服务能力'}]} />
     <section className="toolbar-row"><Typography.Text type="tertiary">{items.length} 个接入 · REST API · MCP {mcpAvailable ? '已启用' : '未启用'}</Typography.Text><div><Button icon={<IconRefresh />} onClick={() => void load()}>刷新</Button> <Button icon={<IconPlus />} theme="solid" type="primary" onClick={() => setCreating(true)}>新建接入</Button></div></section>
     <section className="content-section flush-section"><Table<Integration> dataSource={items} rowKey="id" pagination={false} empty="暂无接入">
       <Table.Column title="名称" dataIndex="name" render={(_, item) => <div className="primary-cell"><strong>{(item as Integration).name}</strong><small>{(item as Integration).id}</small></div>} />

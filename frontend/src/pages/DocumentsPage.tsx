@@ -1,3 +1,4 @@
+import { OverviewStats } from '../components/OverviewStats';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import DOMPurify from 'dompurify';
 import { marked } from 'marked';
@@ -161,7 +162,7 @@ export function DocumentsPage() {
 
   const parsedMarkdown = useMemo(() => markdown ? DOMPurify.sanitize(marked.parse(markdown.markdown) as string) : '', [markdown]);
 
-  return <div className="page-stack documents-page">
+  return <div className="page-stack documents-page"><OverviewStats items={[{label:'匹配文档', value:data.total, note:'当前筛选范围'},{label:'本页文档', value:data.items.length, note:'当前列表'},{label:'已选文档', value:selectedIds.length, note:'批量操作范围'},{label:'访问权限', value:canWriteDocuments ? '可管理' : '只读', note:'当前知识库'}]} />
     <section className="toolbar-row document-toolbar">
       <div className="filter-cluster filter-wrap">
         <Input prefix={<IconSearch />} placeholder="搜索文件名或标题" value={filters.query} onChange={value => setFilters(current => ({...current, query: value}))} onEnterPress={() => setApplied(filters)} showClear style={{width: 260}} />
@@ -187,7 +188,7 @@ export function DocumentsPage() {
     <section className="content-section flush-section">
       <Table<Source> dataSource={data.items} loading={loading} rowKey="source_id" rowSelection={canWriteDocuments ? {selectedRowKeys: selectedIds, onChange: keys => setSelectedIds(keys || [])} : undefined}
         pagination={{currentPage: data.page, pageSize: data.page_size, total: data.total, showSizeChanger: true, pageSizeOpts: [15, 30, 50, 100], onPageChange: page => void load(page), onPageSizeChange: size => void load(1, size)}}>
-        <Table.Column title="文件" dataIndex="filename" render={(_, record) => { const source = record as Source; return <button className="filename-button" onClick={() => void openSource(source)}><span className={`file-type file-${source.document_type}`}>{source.document_type.toUpperCase()}</span><span><strong>{source.filename}</strong><small>{source.standard_title || source.source_id}</small></span></button>; }} />
+        <Table.Column title="文件" dataIndex="filename" width={300} render={(_, record) => { const source = record as Source; return <button className="filename-button" onClick={() => void openSource(source)}><span className={`file-type file-${source.document_type}`}>{source.document_type.toUpperCase()}</span><span><strong>{source.filename}</strong><small>{source.standard_title || source.source_id}</small></span></button>; }} />
         <Table.Column title="大小" dataIndex="file_size" width={100} render={value => value == null ? '未采集' : formatBytes(Number(value))} />
         <Table.Column title="页数" dataIndex="page_count" width={80} render={value => value == null ? '未采集' : String(value)} />
         <Table.Column title="上传人" dataIndex="uploaded_by" width={120} render={value => value || '未采集'} />

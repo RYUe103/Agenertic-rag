@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter } from 'react-router-dom';
 import '@douyinfe/semi-ui/react19-adapter';
 import './styles/index.css';
+import './styles/redesign.css';
 import { App } from './App';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(

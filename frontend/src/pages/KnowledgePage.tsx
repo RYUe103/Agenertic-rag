@@ -1,5 +1,6 @@
+import { OverviewStats } from '../components/OverviewStats';
 import { useEffect, useState } from 'react';
-import { Button, Form, Input, Modal, Select, SideSheet, Switch, Table, Tag, TextArea, Toast, Typography } from '@douyinfe/semi-ui';
+import { Button, Form, Input, Modal, Select, SideSheet, Switch, Tag, TextArea, Toast, Typography } from '@douyinfe/semi-ui';
 import { IconCopy, IconDelete, IconEdit, IconPlus, IconRefresh, IconSearch, IconSetting } from '@douyinfe/semi-icons';
 import { RetrievalTest } from '../components/RetrievalTest';
 import { api } from '../api/client';
@@ -29,6 +30,7 @@ export function KnowledgePage() {
   const {reloadAgents, session} = usePlatform();
   const location = useLocation();
   const navigate = useNavigate();
+  const [search, setSearch] = useState('');
   const [items, setItems] = useState<KnowledgeBase[]>([]);
   const [stats, setStats] = useState<Record<string, KnowledgeStats>>({});
   const [loading, setLoading] = useState(false);
@@ -106,20 +108,16 @@ export function KnowledgePage() {
     chunk_max_tokens: 800, pdf_parser: 'default', enabled: true,
   };
 
-  return <div className="page-stack">
+  return <div className="page-stack"><OverviewStats items={[{label:'知识库', value:items.length, note:'可访问的知识连接'},{label:'已启用', value:items.filter(x => x.enabled).length, note:'平台配置'},{label:'Dify 已配置', value:items.filter(x => x.api_key_configured).length, note:'仅代表凭证配置'},{label:'已采集文档', value:Object.values(stats).reduce((n,x) => n + (x.documents?.total || 0), 0), note:'已返回的统计'}]} />
     <section className="toolbar-row"><Typography.Text type="tertiary">共 {items.length} 个知识库连接</Typography.Text><div><Button icon={<IconRefresh />} onClick={() => void load()} loading={loading}>刷新</Button> <Button icon={<IconPlus />} theme="solid" type="primary" onClick={() => setEditing(null)}>新建知识库</Button></div></section>
-    <section className="content-section flush-section"><Table<KnowledgeBase> dataSource={items} loading={loading} rowKey="knowledge_base_id" pagination={false}>
-      <Table.Column title="知识库" dataIndex="name" render={(_, record) => { const item = record as KnowledgeBase; return <div className="primary-cell"><strong>{item.name}</strong>{item.description && <small>{item.description}</small>}<small className="kb-identity"><span>平台 ID：{item.knowledge_base_id}</span><Button size="small" theme="borderless" icon={<IconCopy />} aria-label="复制平台知识库 ID" onClick={() => void navigator.clipboard.writeText(item.knowledge_base_id).then(() => Toast.success('平台知识库 ID 已复制')).catch(() => Toast.error('复制失败，请手动选择 ID 复制'))} /></small></div>; }} />
-      <Table.Column title="所有者" dataIndex="owner_username" width={130} />
-      <Table.Column title="文档数" width={90} render={(_, record) => stats[record.knowledge_base_id]?.documents?.total ?? '未采集'} />
-      <Table.Column title="分段数" width={90} render={(_, record) => stats[record.knowledge_base_id]?.chunk_count ?? '未采集'} />
-      <Table.Column title="文档索引" width={150} render={(_, record) => {const value = stats[record.knowledge_base_id]?.documents; return value ? `${value.indexed} / ${value.total} 已索引` : '未采集';}} />
-      <Table.Column title="解析器" dataIndex="pdf_parser" width={120} render={value => <Tag>{String(value)}</Tag>} />
-      <Table.Column title="分块" dataIndex="chunking_mode" width={120} render={(_, record) => { const item = record as KnowledgeBase; return item.chunking_mode === 'automatic' ? '自动分块' : `自定义 · ${item.chunk_max_tokens}`; }} />
-      <Table.Column title="Dify" dataIndex="api_key_configured" width={100} render={value => <Tag color={value ? 'green' : 'grey'}>{value ? '已配置' : '未配置'}</Tag>} />
-      <Table.Column title="状态" dataIndex="enabled" width={90} render={value => <Tag color={value ? 'green' : 'grey'}>{value ? '已启用' : '已禁用'}</Tag>} />
-      <Table.Column title="" width={180} render={(_, record) => { const item = record as KnowledgeBase; return <><Button icon={<IconSearch />} theme="borderless" onClick={() => setTesting(item)} aria-label="检索测试" title="检索测试" /><Button icon={<IconSetting />} theme="borderless" onClick={() => openMetadata(item)} aria-label="元数据配置" title="元数据配置" /><Button icon={<IconEdit />} theme="borderless" onClick={() => setEditing(item)} aria-label="编辑" title="编辑" /><Button icon={<IconDelete />} type="danger" theme="borderless" onClick={() => remove(item)} aria-label="删除" title="删除" /></>; }} />
-    </Table></section>
+    <div className="catalog-filter"><Input prefix={<IconSearch />} aria-label="搜索知识库" placeholder="搜索名称或平台知识库 ID" value={search} onChange={setSearch} showClear /></div>
+    <section className="resource-grid" aria-label="知识库列表" aria-busy={loading}>{items.filter(item => `${item.name} ${item.knowledge_base_id}`.toLowerCase().includes(search.toLowerCase())).map(item => <article className="resource-card" key={item.knowledge_base_id}>
+      <div className="resource-top"><span className="resource-symbol"><IconSetting /></span><Tag color={item.enabled ? 'green' : 'grey'}>{item.enabled ? '已启用' : '已禁用'}</Tag></div>
+      <h3>{item.name}</h3><p>{item.description || `由 ${item.owner_username || '管理员'} 管理`}</p>
+      <div className="resource-id"><span title={item.knowledge_base_id}>平台 ID：{item.knowledge_base_id}</span><Button size="small" theme="borderless" icon={<IconCopy />} aria-label="复制平台知识库 ID" onClick={() => void navigator.clipboard.writeText(item.knowledge_base_id).then(() => Toast.success('平台知识库 ID 已复制')).catch(() => Toast.error('复制失败，请手动选择 ID 复制'))} /></div>
+      <div className="resource-meta"><span>{stats[item.knowledge_base_id]?.documents?.total ?? '—'} 份文档 · {stats[item.knowledge_base_id]?.chunk_count ?? '—'} 个分段</span><Tag color={item.api_key_configured ? 'green' : 'grey'}>Dify {item.api_key_configured ? '已配置' : '未配置'}</Tag></div>
+      <div className="resource-actions"><Button icon={<IconSearch />} theme="borderless" onClick={() => setTesting(item)}>检索测试</Button><Button icon={<IconSetting />} theme="borderless" onClick={() => openMetadata(item)} aria-label="元数据配置" /><Button icon={<IconEdit />} theme="borderless" onClick={() => setEditing(item)}>管理</Button><Button icon={<IconDelete />} type="danger" theme="borderless" onClick={() => remove(item)} aria-label="删除知识库" /></div>
+    </article>)}{!loading && !items.some(item => `${item.name} ${item.knowledge_base_id}`.toLowerCase().includes(search.toLowerCase())) && <div className="catalog-empty">{search ? '没有匹配的知识库，请调整搜索条件。' : '暂无知识库。点击“新建知识库”连接你的 Dify 知识库。'}</div>}</section>
     <SideSheet visible={Boolean(testing)} onCancel={() => setTesting(null)} title={`检索测试 · ${testing?.name || ''}`} width={680}>{testing && <RetrievalTest key={testing.knowledge_base_id} knowledgeBaseId={testing.knowledge_base_id} />}</SideSheet>
     <SideSheet visible={editing !== undefined} onCancel={() => setEditing(undefined)} title={editing ? `编辑·${editing.name}` : '新建知识库'} width={640}>
       <div className="kb-form-note">{editing ? `平台知识库 ID：${editing.knowledge_base_id}` : '平台知识库 ID 将在创建后自动生成，可在列表中查看和复制。'}</div>

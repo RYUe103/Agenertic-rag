@@ -3,7 +3,7 @@ import {
   IconArticle, IconBriefcase, IconChevronDown, IconCloud, IconExit,
   IconFile, IconHome, IconList, IconMoon, IconSearch, IconServer, IconSetting, IconSun, IconUpload,
 } from '@douyinfe/semi-icons';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { api } from '../api/client';
 import { usePlatform } from '../context/PlatformContext';
@@ -53,6 +53,7 @@ const pageTitles: Record<string, [string, string]> = {
 
 export function AppShell({onLogout}: {onLogout: () => void}) {
   const location = useLocation();
+  const navigate = useNavigate();
   const {session, agents, activeAgentId, setActiveAgentId, loadingAgents} = usePlatform();
   const title = pageTitles[location.pathname] || pageTitles['/'];
   const [dark, setDark] = useState(localStorage.getItem('theme-mode') === 'dark');
@@ -73,8 +74,10 @@ export function AppShell({onLogout}: {onLogout: () => void}) {
         <div className="brand-lockup"><div className="brand-symbol">S</div><div><strong>SANSUO AI</strong><span>Knowledge Platform</span></div></div>
         <nav className="side-nav" aria-label="主导航">
           <div className="nav-group-label">工作台</div>
-          {navItems.map(item => <NavLink key={item.to} to={item.to} end={item.to === '/'} aria-label={item.label} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>{item.icon}<span className="nav-label">{item.label}</span></NavLink>)}
-          <div className="nav-group-label">配置与能力</div>
+          {navItems.slice(0, 6).map(item => <NavLink key={item.to} to={item.to} end={item.to === '/'} aria-label={item.label} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>{item.icon}<span className="nav-label">{item.label}</span></NavLink>)}
+          <div className="nav-group-label">AI 能力</div>
+          {navItems.slice(6).map(item => <NavLink key={item.to} to={item.to} aria-label={item.label} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>{item.icon}<span className="nav-label">{item.label}</span></NavLink>)}
+          <div className="nav-group-label">配置与管理</div>
           {adminItems.filter(item => !item.adminOnly || session.is_admin).map(item => <NavLink key={item.to} to={item.to} aria-label={item.label} className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>{item.icon}<span className="nav-label">{item.label}</span></NavLink>)}
         </nav>
         <div className="sidebar-footer">
@@ -91,8 +94,9 @@ export function AppShell({onLogout}: {onLogout: () => void}) {
       </aside>
       <section className="app-main">
         <header className="topbar">
-          <div className="page-heading"><Typography.Title heading={4}>{title[0]}</Typography.Title><Typography.Text type="tertiary">{title[1]}</Typography.Text></div>
+          <div className="breadcrumb"><span>工作台</span><span aria-hidden="true">/</span><strong>{title[0]}</strong></div>
           <div className="topbar-actions">
+            <Select className="feature-search" aria-label="搜索功能页面" placeholder="搜索功能页面" filter value={undefined} onChange={value => navigate(String(value))} optionList={[...navItems, ...adminItems.filter(item => !item.adminOnly || session.is_admin)].map(item => ({value:item.to,label:item.label}))} />
             <span className="agent-label">当前知识库</span>
             <Select placeholder={agents.length ? '请选择知识库' : '暂无可用知识库'} value={activeAgentId || undefined} loading={loadingAgents} onChange={value => setActiveAgentId(String(value))} className="agent-select" emptyContent="暂无知识库">
               {agents.map(agent => <Select.Option key={agent.agent_id} value={agent.agent_id}>{agent.name}</Select.Option>)}
@@ -100,7 +104,7 @@ export function AppShell({onLogout}: {onLogout: () => void}) {
             <Tooltip content={dark ? '切换为浅色主题' : '切换为深色主题'}><Button icon={dark ? <IconSun /> : <IconMoon />} theme="borderless" onClick={() => setDark(value => !value)} aria-label="切换主题" /></Tooltip>
           </div>
         </header>
-        <div className="page-content"><Outlet /></div>
+        <div className="page-content"><div className="page-heading"><span className="page-eyebrow">WORKSPACE / {location.pathname === '/' ? 'DASHBOARD' : location.pathname.slice(1).toUpperCase()}</span><Typography.Title heading={2}>{title[0]}</Typography.Title><Typography.Text type="tertiary">{title[1]}</Typography.Text></div><Outlet /></div>
       </section>
     </div>
   );

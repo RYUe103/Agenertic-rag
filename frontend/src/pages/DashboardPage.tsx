@@ -35,18 +35,15 @@ export function DashboardPage() {
     {label: '文档', value: data?.documents.total, note: `${data?.documents.indexed ?? '—'} 份已建立索引`},
     {label: '处理中', value: data?.documents.processing, note: '解析或索引未完成'},
     {label: '异常文档', value: data?.documents.failed, note: '解析、索引或文件平台失败', danger: Boolean(data?.documents.failed)},
-    {label: '可用工具', value: data?.tools, note: '当前可访问知识库'},
-    {label: 'AI 接入', value: data?.active_integrations, note: '未撤销的接入'},
-    {label: 'Agent 执行', value: data?.agent_run_total, note: '可访问的执行记录'},
-    {label: '已解析', value: data?.documents.parsed, note: '成功完成文档解析'},
   ];
 
   return <div className="page-stack dashboard-page">
     <section className="metric-strip" aria-label="核心指标">{metrics.map(item => <div key={item.label} className={`metric-item${item.danger ? ' metric-danger' : ''}`}><span>{item.label}</span><strong>{item.value ?? '—'}</strong><small>{item.note}</small></div>)}</section>
+    <div className="dashboard-insights"><section className="content-section"><div className="section-heading"><Typography.Title heading={5}>文档处理概况</Typography.Title><Typography.Text type="tertiary">当前可访问范围</Typography.Text></div><div className="document-bars">{[{label:'全部文档', value:data.documents.total},{label:'已解析',value:data.documents.parsed},{label:'已索引',value:data.documents.indexed},{label:'处理中',value:data.documents.processing},{label:'失败',value:data.documents.failed}].map(item => <div className="document-bar" key={item.label}><strong>{item.value}</strong><div className="document-bar-track"><span style={{height:`${data.documents.total ? Math.max(0, item.value / data.documents.total * 100) : 0}%`}} /></div><small>{item.label}</small></div>)}</div></section>
     <section className="content-section service-overview">
       <div className="section-heading"><Typography.Title heading={5}>服务运行状态</Typography.Title><Button icon={<IconRefresh />} theme="borderless" loading={loading} onClick={() => void load()}>刷新</Button></div>
       <div className="service-line"><div><span className="live-dot" /><strong>API 服务</strong><Tag color={health ? 'green' : 'grey'} size="small">{health ? '正常' : '不可用'}</Tag></div><div><span>LLM</span><StatusTag status={health ? (health.llm_configured ? 'success' : 'disabled') : 'unknown'} /></div><div><span>外部 API</span><StatusTag status={health ? (health.external_api_configured ? 'success' : 'disabled') : 'unknown'} /></div><div><span>问答并发</span><strong>{health?.ask_active ?? '—'} / {health?.ask_concurrency_limit ?? '—'}</strong></div><div><span>版本</span><code>{health?.build_version || '—'}</code></div></div>
-    </section>
+    </section></div>
     <section className="content-section"><div className="section-heading"><Typography.Title heading={5}>最近任务</Typography.Title><Button theme="borderless" icon={<IconArrowRight />} iconPosition="right" onClick={() => navigate('/tasks')}>查看全部</Button></div>
       <Table<TaskSummary> dataSource={data?.recent_tasks || []} pagination={false} rowKey="task_id" size="small" empty="暂无任务记录"><Table.Column title="任务" dataIndex="title" /><Table.Column title="状态" dataIndex="status" width={110} render={value => <StatusTag status={String(value)} />} /><Table.Column title="进度" width={180} render={(_, item) => <div className="progress-cell"><Progress percent={taskProgress(item.completed, item.total)} size="small" showInfo={false} /><span>{item.completed}/{item.total}</span></div>} /><Table.Column title="更新时间" dataIndex="updated_at" width={170} render={value => formatDate(String(value))} /></Table>
     </section>

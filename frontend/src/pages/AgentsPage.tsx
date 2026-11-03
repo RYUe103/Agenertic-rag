@@ -1,5 +1,6 @@
+import { OverviewStats } from '../components/OverviewStats';
 import { useEffect, useState } from 'react';
-import { Button, Form, Modal, SideSheet, Table, Tag, Toast, Typography } from '@douyinfe/semi-ui';
+import { Button, Form, Modal, SideSheet, Input, Tag, Toast, Typography } from '@douyinfe/semi-ui';
 import { IconDelete, IconEdit, IconPlus, IconRefresh } from '@douyinfe/semi-icons';
 import { api } from '../api/client';
 import { usePlatform } from '../context/PlatformContext';
@@ -39,6 +40,7 @@ const reactTools = ['search_knowledge','find_document','read_document','read_doc
 
 export function AgentsPage() {
   const {reloadAgents} = usePlatform();
+  const [search, setSearch] = useState('');
   const [items, setItems] = useState<AgentConfig[]>([]);
   const [knowledgeBases, setKnowledgeBases] = useState<KnowledgeBase[]>([]);
   const [models, setModels] = useState<ModelConnection[]>([]);
@@ -77,16 +79,10 @@ export function AgentsPage() {
 
   const initialValues = editing || {agent_id: '', name: '', description: '', knowledge_base_id: knowledgeBases[0]?.knowledge_base_id, agent_type: 'knowledge', member_agent_ids: [], supervisor_routing: 'all', supervisor_synthesis: 'separate', planner_prompt: '', planner_model_ids: [], answer_model_ids: [], allowed_tools: toolOptions, max_tool_calls: 6, max_retrieval_rounds: 3, max_evidence_for_answer: 12, enabled: true, is_default: false};
 
-  return <div className="page-stack">
+  return <div className="page-stack"><OverviewStats items={[{label:'Agent', value:items.length, note:'当前配置'},{label:'已启用', value:items.filter(x => x.enabled).length, note:'可用配置'},{label:'智能推理', value:items.filter(x => x.runtime_mode === 'react_v2').length, note:'ReAct 执行模式'},{label:'可用模型', value:models.filter(x => x.enabled).length, note:'模型连接'}]} />
     <section className="toolbar-row"><Typography.Text type="tertiary">共 {items.length} 个 Agent</Typography.Text><div><Button icon={<IconRefresh />} onClick={() => void load()} loading={loading}>刷新</Button> <Button icon={<IconPlus />} theme="solid" type="primary" onClick={() => setEditing(null)}>新建 Agent</Button></div></section>
-    <section className="content-section flush-section"><Table<AgentConfig> dataSource={items} loading={loading} rowKey="agent_id" pagination={false}>
-      <Table.Column title="Agent" dataIndex="name" render={(_, record) => { const item = record as AgentConfig; return <div className="primary-cell"><strong>{item.name}{item.is_default && <Tag color="blue">默认</Tag>}</strong><small>{item.description || item.agent_id}</small></div>; }} />
-      <Table.Column title="类型" dataIndex="agent_type" render={value => value === 'supervisor' ? 'Supervisor' : value === 'research' ? 'Research' : value === 'data_analysis' ? 'Data Analysis' : value === 'coding' ? 'Coding' : 'Knowledge'} />
-      <Table.Column title="工具" dataIndex="allowed_tools" width={90} render={value => `${(value as string[]).length} 个`} />
-      <Table.Column title="模型链" width={150} render={(_, record) => { const item = record as AgentConfig; return `Planner ${item.planner_model_ids.length} / Answer ${item.answer_model_ids.length}`; }} />
-      <Table.Column title="状态" dataIndex="enabled" width={90} render={value => <Tag color={value ? 'green' : 'grey'}>{value ? '已启用' : '已禁用'}</Tag>} />
-      <Table.Column title="" width={110} render={(_, record) => { const item = record as AgentConfig; return <><Button icon={<IconEdit />} theme="borderless" onClick={() => setEditing(item)} /><Button icon={<IconDelete />} type="danger" theme="borderless" onClick={() => remove(item)} /></>; }} />
-    </Table></section>
+    <div className="catalog-filter"><Input aria-label="搜索 Agent" placeholder="搜索 Agent 名称或描述" value={search} onChange={setSearch} showClear /></div>
+    <section className="resource-grid" aria-label="Agent 列表">{items.filter(item => `${item.name} ${item.description}`.toLowerCase().includes(search.toLowerCase())).map(item => <article className="resource-card" key={item.agent_id}><div className="resource-top"><span className="resource-symbol">A</span><Tag color={item.enabled ? 'green' : 'grey'}>{item.enabled ? '已启用' : '已禁用'}</Tag></div><h3>{item.name} {item.is_default && <Tag>默认</Tag>}</h3><p>{item.description || '尚未填写 Agent 描述'}</p><div className="resource-meta"><span>{item.allowed_tools.length} 个工具</span><span>{item.runtime_mode === 'react_v2' ? '智能推理' : '标准执行'} · {item.agent_type}</span></div><div className="resource-actions"><span className="resource-subtle">{item.agent_id}</span><Button icon={<IconEdit />} theme="borderless" onClick={() => setEditing(item)}>配置</Button><Button icon={<IconDelete />} type="danger" theme="borderless" aria-label="删除 Agent" onClick={() => remove(item)} /></div></article>)}{!loading && !items.filter(item => `${item.name} ${item.description}`.toLowerCase().includes(search.toLowerCase())).length && <div className="catalog-empty">暂无匹配的 Agent</div>}</section>
     <SideSheet visible={editing !== undefined} onCancel={() => setEditing(undefined)} title={editing ? `编辑·${editing.name}` : '新建 Agent'} width={680}>
       <Form key={editing?.agent_id || 'new'} initValues={initialValues} onSubmit={values => void save(values as Record<string, unknown>)} labelPosition="top">
         <div className="form-grid two-columns">

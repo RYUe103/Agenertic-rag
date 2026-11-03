@@ -1,3 +1,4 @@
+import { OverviewStats } from '../components/OverviewStats';
 import { useEffect, useState } from 'react';
 import { Button, Select, SideSheet, Table, Tag, Toast, Typography } from '@douyinfe/semi-ui';
 import { IconEyeOpened, IconRefresh } from '@douyinfe/semi-icons';
@@ -37,7 +38,7 @@ export function AgentRunsPage() {
   }
   useEffect(() => {void load();}, [page, status, operation, knowledgeBaseId]);
 
-  return <div className="page-stack">
+  return <div className="page-stack"><OverviewStats items={[{label:'匹配执行', value:total, note:'当前筛选范围'},{label:'本页已完成', value:runs.filter(x => x.status === 'succeeded').length, note:'当前列表'},{label:'本页失败', value:runs.filter(x => x.status === 'failed').length, note:'当前列表'},{label:'本页待审批', value:runs.filter(x => x.status === 'waiting_approval').length, note:'当前列表'}]} />
     <section className="toolbar-row"><div className="filter-cluster">
       <Select value={knowledgeBaseId} style={{width: 180}} onChange={value => {setKnowledgeBaseId(String(value)); setPage(1);}}><Select.Option value="">全部知识库</Select.Option>{agents.map(item => <Select.Option key={item.agent_id} value={item.agent_id.replace(/^@kb:/, '')}>{item.name}</Select.Option>)}</Select>
       <Select value={operation} style={{width: 120}} onChange={value => {setOperation(String(value)); setPage(1);}}><Select.Option value="">全部类型</Select.Option><Select.Option value="ask">问答</Select.Option><Select.Option value="retrieve">检索</Select.Option></Select>

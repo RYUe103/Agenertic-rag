@@ -70,8 +70,8 @@ export function QaPage() {
   }
 
   const suggestions = ['这份资料的主要内容是什么？', '相关要求和适用范围是什么？', '不同文件的规定有哪些差异？'];
-  return <div className="qa-workspace">
-    <section className="query-panel qa-composer">
+  return <div className={`qa-workspace${response || events.length ? ' has-result' : ''}`}>
+    <section className="query-panel qa-composer"><h3 className="composer-title">向你的知识库提问</h3>
       <div className="qa-mode-row"><strong>检索模式</strong><Select aria-label="检索模式" value={reactMode ? 'reasoning' : 'standard'} disabled={loading || !!pending} onChange={value => setReactMode(value === 'reasoning')} optionList={[{label: '智能推理（推荐）', value: 'reasoning'}, {label: '标准问答', value: 'standard'}]} /><Tag color="green">{activeAgent?.name || '未选择知识库'}</Tag></div>
       <p className="qa-help">{reactMode ? '根据问题自主检索、补读原文，并提供来源证据。' : '通过标准问答接口检索知识库并生成回答。'}</p>
       <TextArea aria-label="知识库问题" value={question} onChange={setQuestion} disabled={loading || !!pending} placeholder="输入具体问题，例如：不同文件对验收流程有哪些要求？" rows={4} onEnterPress={event => {if ((event.metaKey || event.ctrlKey) && !loading) {event.preventDefault(); void ask();}}} />
@@ -89,5 +89,6 @@ export function QaPage() {
         <TabPane tab="执行轨迹" itemKey="trace"><pre className="trace-json">{JSON.stringify(events.length ? events : response?.trace || [], null, 2)}</pre></TabPane>
       </Tabs>}
     </section>
+    {(response || events.length > 0) && <aside className="qa-timeline content-section"><div className="section-heading"><h3>检索执行轨迹</h3><Tag>{(events.length ? events : response?.trace || []).length} 条记录</Tag></div>{(events.length ? events : response?.trace || []).length ? <ol>{(events.length ? events : response?.trace || []).map((item, i) => <li key={i}><span>{i + 1}</span><div><strong>{String(item.title || item.tool_name || item.tool || item.type || item.kind || '执行事件')}</strong><small>{String(item.status || (item.type === 'tool_finished' ? '工具返回' : ''))}</small></div></li>)}</ol> : <p className="qa-help">本次响应未返回执行事件。可在引用来源中核对证据。</p>}</aside>}
   </div>;
 }

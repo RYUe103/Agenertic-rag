@@ -1,3 +1,4 @@
+import { OverviewStats } from '../components/OverviewStats';
 import { useEffect, useState } from 'react';
 import { Button, DatePicker, Input, Select, Table, Tag, Toast } from '@douyinfe/semi-ui';
 import { IconRefresh } from '@douyinfe/semi-icons';
@@ -30,7 +31,7 @@ export function AuditPage() {
     return () => {active = false;};
   }, [page, actor, action, resourceType, start, end, refresh]);
 
-  return <div className="page-stack">
+  return <div className="page-stack"><OverviewStats items={[{label:'匹配记录', value:data.total, note:'当前筛选范围'},{label:'本页记录', value:data.items.length, note:'当前列表'},{label:'本页异常', value:data.items.filter(x => x.status_code >= 400).length, note:'HTTP 状态 ≥ 400'},{label:'本页操作者', value:new Set(data.items.map(x => x.actor)).size, note:'按操作者统计'}]} />
     <section className="toolbar-row"><div className="filter-cluster filter-wrap">
       <Input placeholder="完整用户 ID" value={actor} onChange={value => {setActor(value); setPage(1);}} showClear style={{width: 180}} />
       <Select value={resourceType} onChange={value => {setResourceType(String(value)); setPage(1);}} style={{width: 140}}><Select.Option value="">全部资源</Select.Option>{Object.entries(resources).map(([key, label]) => <Select.Option key={key} value={key}>{label}</Select.Option>)}</Select>

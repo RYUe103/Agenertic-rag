@@ -11,7 +11,7 @@ const labels: Record<string, string> = {
 export function StatusTag({status}: {status?: string | null}) {
   const value = (status || 'pending').toLowerCase();
   const color = value.includes('fail') ? 'red'
-    : value.includes('success') || value === 'completed' || value === 'confirmed' ? 'green'
+    : value.includes('success') || value === 'succeeded' || value === 'completed' || value === 'confirmed' ? 'green'
       : value.includes('running') || value.includes('processing') || value.includes('retry') ? 'blue'
         : value.includes('cancel') || value === 'disabled' ? 'grey' : 'amber';
   return <Tag type="light" color={color} size="small">{labels[value] || status}</Tag>;
