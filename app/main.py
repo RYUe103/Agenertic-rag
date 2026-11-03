@@ -23,6 +23,7 @@ from fastapi import BackgroundTasks, FastAPI, File, Form, HTTPException, Request
 from fastapi.responses import FileResponse, JSONResponse
 from fastapi.staticfiles import StaticFiles
 
+from app.schemas import MetadataFieldDefinition
 from app.agent_registry import AgentRegistry, AgentRuntime
 from app.agent import ToolApprovalRequired, agent_execution_context
 from app.agent_runs import AgentRunStore
@@ -90,6 +91,11 @@ def _source_base_url(request: Request, settings: Settings) -> str:
     return str(request.base_url)
 
 
+class KnowledgeBaseCreateInput(KnowledgeBaseInput):
+    # Optional only on creation; existing clients may still send their legacy IDs.
+    knowledge_base_id: str = ""
+
+
 def create_app(settings: Settings | None = None) -> FastAPI:
     settings = settings or get_settings()
     settings.ensure_directories()
@@ -128,6 +134,8 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     delete_queue_repository = DeleteQueueRepository(settings.delete_queue_database_path)
     delete_queue = DeleteQueueManager(delete_queue_repository, registry.get)
+    from app.local_accounts import LocalAccountStore
+    local_accounts = LocalAccountStore(settings.app_data_dir / "local-accounts.db")
     sessions = SessionManager(settings.admin_username, settings.admin_password_hash, settings.auth_session_hours)
     ldap = LdapAuthenticator(
         settings.ldap_enabled, settings.ldap_server_url, settings.ldap_user_dn_template,
@@ -259,6 +267,10 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         username_ok = __import__("hmac").compare_digest(value.username, settings.admin_username)
         if username_ok and verify_password(value.password, settings.admin_password_hash):
             user = AuthenticatedUser(settings.admin_username, True, "local")
+        elif not username_ok and local_accounts.exists(value.username.strip()):
+            if not local_accounts.authenticate(value.username.strip(), value.password):
+                raise HTTPException(401, "账号或密码错误")
+            user = AuthenticatedUser(value.username.strip(), False, "local_user")
         else:
             ldap_result = ldap.authenticate_with_groups(value.username.strip(), value.password)
             if ldap_result is None and ldap.authenticate(value.username.strip(), value.password):
@@ -1098,10 +1110,13 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             raise HTTPException(400, str(exc)) from None
 
     @app.post("/api/admin/knowledge-bases", response_model=KnowledgeBaseView)
-    def create_knowledge_base(value: KnowledgeBaseInput, request: Request) -> KnowledgeBaseView:
+    def create_knowledge_base(value: KnowledgeBaseCreateInput, request: Request) -> KnowledgeBaseView:
         user = current_user(request)
+        if not value.knowledge_base_id or not user.is_admin:
+            value = value.model_copy(update={"knowledge_base_id": f"kb-{uuid.uuid4()}"})
         if not user.is_admin:
             value = value.model_copy(update={
+                "embedding_model": "",
                 "tenant_key": "",
                 "base_url": settings.dify_base_url or value.base_url,
                 "pdf_parser": "default", "qwenvl_base_url": "",
@@ -1131,6 +1146,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             if str(existing.get("owner_user_id") or "") != user_id(user):
                 raise HTTPException(403, "只有所有者或管理员可以修改知识库配置")
             value = value.model_copy(update={
+                "embedding_model": str(existing.get("embedding_model") or ""),
                 "tenant_key": str(existing.get("tenant_key") or ""),
                 "base_url": str(existing["base_url"]),
                 "pdf_parser": str(existing["pdf_parser"]), "qwenvl_base_url": str(existing["qwenvl_base_url"]), "qwenvl_api_key": None,

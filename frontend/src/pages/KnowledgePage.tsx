@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Button, Form, Input, Modal, Select, SideSheet, Switch, Table, Tag, TextArea, Toast, Typography } from '@douyinfe/semi-ui';
-import { IconDelete, IconEdit, IconPlus, IconRefresh, IconSearch, IconSetting } from '@douyinfe/semi-icons';
+import { IconCopy, IconDelete, IconEdit, IconPlus, IconRefresh, IconSearch, IconSetting } from '@douyinfe/semi-icons';
 import { RetrievalTest } from '../components/RetrievalTest';
 import { api } from '../api/client';
 import { usePlatform } from '../context/PlatformContext';
@@ -56,7 +56,7 @@ export function KnowledgePage() {
   async function save(values: FormValues) {
     setSaving(true);
     try {
-      const id = editing?.knowledge_base_id || `kb-${crypto.randomUUID()}`;
+      const id = editing?.knowledge_base_id || '';
       values = {...values, knowledge_base_id: id, base_url: editing?.base_url || difyBaseUrl};
       await api<KnowledgeBase>(editing ? `/api/admin/knowledge-bases/${encodeURIComponent(id)}` : '/api/admin/knowledge-bases', {
         method: editing ? 'PUT' : 'POST', body: JSON.stringify(payload(values, editing || null)),
@@ -109,7 +109,7 @@ export function KnowledgePage() {
   return <div className="page-stack">
     <section className="toolbar-row"><Typography.Text type="tertiary">共 {items.length} 个知识库连接</Typography.Text><div><Button icon={<IconRefresh />} onClick={() => void load()} loading={loading}>刷新</Button> <Button icon={<IconPlus />} theme="solid" type="primary" onClick={() => setEditing(null)}>新建知识库</Button></div></section>
     <section className="content-section flush-section"><Table<KnowledgeBase> dataSource={items} loading={loading} rowKey="knowledge_base_id" pagination={false}>
-      <Table.Column title="知识库" dataIndex="name" render={(_, record) => { const item = record as KnowledgeBase; return <div className="primary-cell"><strong>{item.name}</strong><small>{item.description || item.knowledge_base_id}</small></div>; }} />
+      <Table.Column title="知识库" dataIndex="name" render={(_, record) => { const item = record as KnowledgeBase; return <div className="primary-cell"><strong>{item.name}</strong>{item.description && <small>{item.description}</small>}<small className="kb-identity"><span>平台 ID：{item.knowledge_base_id}</span><Button size="small" theme="borderless" icon={<IconCopy />} aria-label="复制平台知识库 ID" onClick={() => void navigator.clipboard.writeText(item.knowledge_base_id).then(() => Toast.success('平台知识库 ID 已复制')).catch(() => Toast.error('复制失败，请手动选择 ID 复制'))} /></small></div>; }} />
       <Table.Column title="所有者" dataIndex="owner_username" width={130} />
       <Table.Column title="文档数" width={90} render={(_, record) => stats[record.knowledge_base_id]?.documents?.total ?? '未采集'} />
       <Table.Column title="分段数" width={90} render={(_, record) => stats[record.knowledge_base_id]?.chunk_count ?? '未采集'} />
@@ -122,13 +122,15 @@ export function KnowledgePage() {
     </Table></section>
     <SideSheet visible={Boolean(testing)} onCancel={() => setTesting(null)} title={`检索测试 · ${testing?.name || ''}`} width={680}>{testing && <RetrievalTest key={testing.knowledge_base_id} knowledgeBaseId={testing.knowledge_base_id} />}</SideSheet>
     <SideSheet visible={editing !== undefined} onCancel={() => setEditing(undefined)} title={editing ? `编辑·${editing.name}` : '新建知识库'} width={640}>
+      <div className="kb-form-note">{editing ? `平台知识库 ID：${editing.knowledge_base_id}` : '平台知识库 ID 将在创建后自动生成，可在列表中查看和复制。'}</div>
+      {!session.is_admin && <div className="kb-form-note">组织归属、Embedding 模型和文档解析由管理员统一配置。</div>}
       <Form key={editing?.knowledge_base_id || 'new'} initValues={initialValues} onSubmit={values => void save(values as FormValues)} labelPosition="top">
-        <div className="form-grid two-columns">
+        <div className={session.is_admin ? "form-grid two-columns" : "form-grid"}>
           <Form.Input field="name" label="名称" rules={[{required: true}]} />
           {session.is_admin && <Form.Input field="tenant_key" label="组织租户（可选）" placeholder="绑定后仅组织成员可访问" />}
-          <Form.Input field="dataset_id" label="Dataset ID" rules={[{required: true}]} />
-          <Form.Input field="embedding_model" label="Embedding 模型标识（可选）" placeholder="例如 text-embedding-3-large；未配置则显示未采集" />
-          <Form.Input field="api_key" label="API Key" mode="password" className="full-span" rules={editing?.api_key_configured ? [] : [{required: true}]} placeholder={editing?.api_key_configured ? '留空保持当前密钥' : '输入 Dify API Key'} />
+          <Form.Input field="dataset_id" className="full-span" label="Dify 知识库 ID（Dataset ID）" extraText="填写已有 Dify 知识库的 Dataset ID，并非本平台知识库 ID。" rules={[{required: true, message: '请填写 Dify 知识库 ID'}]} />
+          {session.is_admin && <Form.Input field="embedding_model" label="Embedding 模型标识（可选）" placeholder="填写 Dify 知识库实际使用的模型标识" />}
+          <Form.Input field="api_key" label="Dify 知识库 API Key" extraText="用于访问 Dify 知识库，不是连接三所小智的 MCP 接入 Key。" mode="password" className="full-span" rules={editing?.api_key_configured ? [] : [{required: true}]} placeholder={editing?.api_key_configured ? '留空保持当前密钥' : '输入 Dify API Key'} />
           {session.is_admin && <Form.Select field="pdf_parser" label="统一文档解析器" className="full-span" extraText="选择 MinerU 后，PDF、DOC、DOCX 和 TXT 都先提交 MinerU；服务失败行为由 MINERU_FALLBACK_ON_ERROR 控制。"><Form.Select.Option value="default">按平台默认配置</Form.Select.Option><Form.Select.Option value="mineru">MinerU（所有支持格式）</Form.Select.Option><Form.Select.Option value="local">本地解析（显式回退）</Form.Select.Option><Form.Select.Option value="qwenvl">Qwen-VL（仅 PDF）</Form.Select.Option></Form.Select>}
           {editing && session.is_admin && <Form.Select field="source_platform_mode" label="源文件展示平台" className="full-span"><Form.Select.Option value="inherit">使用管理员统一配置</Form.Select.Option><Form.Select.Option value="local">本地文件</Form.Select.Option><Form.Select.Option value="http">HTTP 文件平台</Form.Select.Option><Form.Select.Option value="command">命令行平台</Form.Select.Option></Form.Select>}
           {editing && session.is_admin && <Form.Input field="source_platform_base_url" label="HTTP 平台地址" className="full-span" />}

@@ -35,7 +35,7 @@ export function LoginPage({onLogin}: {onLogin: (session: Session) => void}) {
           {error && <div className="form-error" role="alert">{error}</div>}
           <Button htmlType="submit" theme="solid" type="primary" loading={loading} block>登录平台</Button>
         </Form>
-        <p className="login-footnote">支持管理员账号与组织域账号</p>
+        <p className="login-footnote">支持管理员、本地用户与组织域账号</p>
       </section>
     </main>
   );

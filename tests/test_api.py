@@ -159,12 +159,14 @@ def test_sandbox_document_selection_checks_knowledge_base_authorization(tmp_path
         policy.update(enabled=True, allow_users=True, allow_documents=True)
         assert client.put('/api/admin/sandbox/policy', json=policy).status_code == 200
         client.cookies.set(sessions.cookie_name, sessions.create('alice', False, 'ldap'))
-        assert client.post('/api/admin/knowledge-bases', json={'knowledge_base_id': 'alice-kb', 'name': 'Alice', 'dataset_id': 'dataset', 'api_key': 'key'}).status_code == 200
+        created = client.post('/api/admin/knowledge-bases', json={'name': 'Alice', 'dataset_id': 'dataset', 'api_key': 'key'})
+        assert created.status_code == 200
+        kb = created.json()['knowledge_base_id']
         directory = tmp_path / 'document'
         directory.mkdir()
         (directory / 'document.md').write_text('secret document', encoding='utf-8')
-        app.state.registry.get('@kb:alice-kb').repository.create({'source_id': 'src_one', 'filename': 'one.pdf', 'normalized_filename': 'one.pdf', 'file_hash': 'one', 'local_pdf_path': str(directory / 'source.pdf'), 'local_md_path': str(directory / 'document.md')})
-        payload = {'name': 'read', 'language': 'python', 'code': 'pass', 'agent_id': '@kb:alice-kb', 'source_ids': ['src_one']}
+        app.state.registry.get(f'@kb:{kb}').repository.create({'source_id': 'src_one', 'filename': 'one.pdf', 'normalized_filename': 'one.pdf', 'file_hash': 'one', 'local_pdf_path': str(directory / 'source.pdf'), 'local_md_path': str(directory / 'document.md')})
+        payload = {'name': 'read', 'language': 'python', 'code': 'pass', 'agent_id': f'@kb:{kb}', 'source_ids': ['src_one']}
         assert client.post('/api/sandbox/runs', json=payload).status_code == 201
         assert 'secret document' in captured[0]
         client.cookies.set(sessions.cookie_name, sessions.create('bob', False, 'ldap'))
@@ -184,17 +186,19 @@ def test_knowledge_base_owner_and_dify_credentials(tmp_path) -> None:
         client.cookies.set(sessions.cookie_name, sessions.create("alice", False, "ldap"))
         created = client.post("/api/admin/knowledge-bases", json=value)
         assert created.status_code == 200
+        kb = created.json()["knowledge_base_id"]
+        value["knowledge_base_id"] = kb
         assert created.json()["dataset_id"] == "alice-dataset"
         assert created.json()["owner_username"] == "alice"
         assert client.get("/api/knowledge-bases").json()[0]["can_write_documents"] is True
-        row = app.state.registry.store.get_knowledge_base("alice-kb")
+        row = app.state.registry.store.get_knowledge_base(kb)
         assert not row["use_legacy_data"]
-        assert app.state.registry.store.secrets.get("alice-kb") == "alice-key"
+        assert app.state.registry.store.secrets.get(kb) == "alice-key"
         client.cookies.set(sessions.cookie_name, sessions.create("bob", False, "ldap"))
-        assert client.post("/api/admin/knowledge-bases", json=value).status_code == 400
-        assert client.put("/api/admin/knowledge-bases/alice-kb", json=value).status_code == 403
+        assert client.post("/api/admin/knowledge-bases", json=value).json()["knowledge_base_id"] != kb
+        assert client.put(f"/api/admin/knowledge-bases/{kb}", json=value).status_code == 403
         client.cookies.set(sessions.cookie_name, sessions.create("sansuokb", True, "local"))
-        updated = client.put("/api/admin/knowledge-bases/alice-kb", json=value)
+        updated = client.put(f"/api/admin/knowledge-bases/{kb}", json=value)
         assert updated.status_code == 200
         assert updated.json()["owner_username"] == "alice"
 
@@ -210,37 +214,38 @@ def test_shared_agent_routes_are_scoped_to_selected_knowledge_base(tmp_path) -> 
             "knowledge_base_id": "alice-kb", "name": "Alice", "dataset_id": "alice-dataset", "api_key": "alice-key",
         })
         assert created.status_code == 200
+        kb = created.json()["knowledge_base_id"]
         bases = client.get("/api/knowledge-bases").json()
-        assert bases == [{"knowledge_base_id": "alice-kb", "name": "Alice", "runtime_id": "@kb:alice-kb", "can_write_documents": True}]
-        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/page").status_code == 200
-        response = client.post("/api/agents/%40kb%3Aalice-kb/retrieve", json={"question": "测试"})
+        assert bases == [{"knowledge_base_id": kb, "name": "Alice", "runtime_id": f"@kb:{kb}", "can_write_documents": True}]
+        assert client.get(f"/api/agents/%40kb%3A{kb}/sources/page").status_code == 200
+        response = client.post(f"/api/agents/%40kb%3A{kb}/retrieve", json={"question": "测试"})
         assert response.status_code == 200
-        assert response.json()["knowledge_base_id"] == "alice-kb"
-        tools = client.get("/api/knowledge-bases/alice-kb/tools")
+        assert response.json()["knowledge_base_id"] == kb
+        tools = client.get(f"/api/knowledge-bases/{kb}/tools")
         assert tools.status_code == 200
         assert any(item["name"] == "find_files" and item["read_only"] for item in tools.json())
-        tested = client.post("/api/knowledge-bases/alice-kb/tools/find_files/test", json={"query": "不存在"})
+        tested = client.post(f"/api/knowledge-bases/{kb}/tools/find_files/test", json={"query": "不存在"})
         assert tested.status_code == 200
         assert tested.json() == {"items": [], "count": 0}
-        assert client.post("/api/knowledge-bases/alice-kb/tools/find_files/test", json={"unexpected": 1}).status_code == 422
-        job = client.post("/api/agents/%40kb%3Aalice-kb/ingest-jobs", json={"filenames": ["test.txt"]})
+        assert client.post(f"/api/knowledge-bases/{kb}/tools/find_files/test", json={"unexpected": 1}).status_code == 422
+        job = client.post(f"/api/agents/%40kb%3A{kb}/ingest-jobs", json={"filenames": ["test.txt"]})
         assert job.status_code == 201
         job_id = job.json()["job_id"]
-        assert app.state.ingest_queue_repository.job_record(job_id)["agent_id"] == "@kb:alice-kb"
+        assert app.state.ingest_queue_repository.job_record(job_id)["agent_id"] == f"@kb:{kb}"
         assert client.get(f"/api/jobs/{job_id}").status_code == 200
         client.cookies.set(sessions.cookie_name, sessions.create("bob", False, "ldap"))
         assert client.get("/api/knowledge-bases").json() == []
-        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/page").status_code == 403
-        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/any/segments").status_code == 403
-        assert client.get("/api/agents/%40kb%3Aalice-kb/sources/any/outline").status_code == 403
-        assert client.get("/api/knowledge-bases/alice-kb/tools").status_code == 403
+        assert client.get(f"/api/agents/%40kb%3A{kb}/sources/page").status_code == 403
+        assert client.get(f"/api/agents/%40kb%3A{kb}/sources/any/segments").status_code == 403
+        assert client.get(f"/api/agents/%40kb%3A{kb}/sources/any/outline").status_code == 403
+        assert client.get(f"/api/knowledge-bases/{kb}/tools").status_code == 403
         assert client.get(f"/api/jobs/{job_id}").status_code == 403
         assert client.post(f"/api/jobs/{job_id}/cancel").status_code == 403
         assert client.get("/api/sources").status_code == 403
         assert client.post("/api/ask", json={"question": "测试"}).status_code == 403
         assert client.delete("/api/admin/agents/default").status_code == 403
     restarted = create_app(settings)
-    assert restarted.state.registry.get("@kb:alice-kb").profile.knowledge_base_id == "alice-kb"
+    assert restarted.state.registry.get(f"@kb:{kb}").profile.knowledge_base_id == kb
 
 
 def test_external_api_key_is_scoped_to_read_only_qa(tmp_path) -> None:

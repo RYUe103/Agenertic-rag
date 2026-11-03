@@ -37,7 +37,7 @@ const pageTitles: Record<string, [string, string]> = {
   '/upload': ['上传文档', '批量提交文件，后台完成解析与索引'],
   '/tasks': ['任务中心', '跟踪入库、重试和删除任务'],
   '/knowledge': ['知识库', '管理知识连接、解析与分块策略'],
-  '/qa': ['问答检索', '检索当前知识库并查看引用'],
+  '/qa': ['问答检索', '基于知识库提问，查看回答、来源与执行轨迹'],
   '/tools': ['工具中心', '查看和测试当前知识库授权的检索工具'],
   '/integrations': ['AI 接入', '管理外部客户端及授权范围'],
   '/agent-runs': ['Agent 执行', '查看问答与检索的执行记录'],
@@ -80,7 +80,7 @@ export function AppShell({onLogout}: {onLogout: () => void}) {
         <div className="sidebar-footer">
           <Dropdown trigger="click" position="topLeft" render={
             <Dropdown.Menu>
-              <Dropdown.Item icon={<IconSetting />} disabled>{session.is_admin ? '管理员' : '域账号用户'}</Dropdown.Item>
+              <Dropdown.Item icon={<IconSetting />} disabled>{session.is_admin ? '管理员' : '普通用户'}</Dropdown.Item>
               <Dropdown.Divider />
               <Dropdown.Item icon={<IconExit />} onClick={() => void logout()}>退出登录</Dropdown.Item>
             </Dropdown.Menu>
@@ -94,7 +94,7 @@ export function AppShell({onLogout}: {onLogout: () => void}) {
           <div className="page-heading"><Typography.Title heading={4}>{title[0]}</Typography.Title><Typography.Text type="tertiary">{title[1]}</Typography.Text></div>
           <div className="topbar-actions">
             <span className="agent-label">当前知识库</span>
-            <Select value={activeAgentId || undefined} loading={loadingAgents} onChange={value => setActiveAgentId(String(value))} className="agent-select" emptyContent="暂无知识库">
+            <Select placeholder={agents.length ? '请选择知识库' : '暂无可用知识库'} value={activeAgentId || undefined} loading={loadingAgents} onChange={value => setActiveAgentId(String(value))} className="agent-select" emptyContent="暂无知识库">
               {agents.map(agent => <Select.Option key={agent.agent_id} value={agent.agent_id}>{agent.name}</Select.Option>)}
             </Select>
             <Tooltip content={dark ? '切换为浅色主题' : '切换为深色主题'}><Button icon={dark ? <IconSun /> : <IconMoon />} theme="borderless" onClick={() => setDark(value => !value)} aria-label="切换主题" /></Tooltip>
